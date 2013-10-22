@@ -7,6 +7,9 @@ dependencies[] = migrate
 
 files[] = migrate_d2d.migrate.inc
 
+; Custom addition of content_taxonomy fields
+files[] = content_taxonomy.inc
+
 ; Base classes
 files[] = comment.inc
 files[] = file.inc

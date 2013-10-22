@@ -113,32 +113,6 @@ class CommerceMigrateUbercartNodeMigration extends DynamicMigration {
     if (!empty($url_alias->alias)) {
       $row->path = $url_alias->alias;
     }
-
-    // ------------ START MODIFICATION ------------
-    // THIS IS MEANT FOR DRUPAL 6 TERMS!!
-    // @see https://drupal.org/node/1212172#comment-7094342
-    // --------------------------------------------
-
-  // Get the product categories
-  $catalog_vid = 1;
- 
-  $query = $connection->select('term_node', 'tn');
-  $query->innerJoin('term_data', 'td', 'td.tid = tn.tid AND td.vid = ' . $catalog_vid);
-  $query->addField('td', 'tid', 'category');
-  $query->condition('tn.nid', $row->nid);
-  $query->distinct();
-
-  // Execute query
-  $result = $query->execute();
-  // Fetch all the results and add the category tids to our field
-  foreach ($result as $category_row) {
-    $row->category[] = $category_row->category;
-  }
-  // debugging purposes
-  //dpm(__METHOD__);
-  //dpm($row);
-  // ------------ END MODIFICATION ------------
-  
   }
 
   // Map friendly name of format (key) to machine name (format).
