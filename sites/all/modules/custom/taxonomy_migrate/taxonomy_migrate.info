@@ -1,7 +1,0 @@
-name = Taxonomy Commerce Migrate Ubercart
-description = Provides an upgrade path from Ubercart (D6) to Commerce Taxonomy.
-core = 7.x
-package = Commerce (contrib)
-
-; Migrations
-files[] = vocabularies.inc
