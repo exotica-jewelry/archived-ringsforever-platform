@@ -115,9 +115,9 @@ class CommerceKickstartNode extends DynamicMigration {
           ->separator(', ');
     $this->addFieldMapping('field_collection:create_term')
       ->defaultValue(TRUE);
-    // @todo: Make sure this adding-terms-to-existing-taxonomy works
-    $this->addFieldMapping('field_elements_addl', 'elements_addl');
-    $this->addFieldMapping('field_elements_addl:create_term')
+    // @todo: Figure out how to add the same taxonomy to a different field (hiding for now)
+    // $this->addFieldMapping('field_elements_addl', 'elements_addl');
+    // $this->addFieldMapping('field_elements_addl:create_term')
       ->defaultValue(TRUE);
     // @todo: Move image fields here
     $this->addFieldMapping('field_product', 'skus');
@@ -140,8 +140,8 @@ class CommerceKickstartNode extends DynamicMigration {
     $columns[5] = array('featuring', 'Featuring');
     $columns[6] = array('sku', 'SKU');
     $columns[7] = array('product', 'Product');
-    // @todo: Make sure this adding-terms-to-existing-taxonomy works
-    $columns[8] = array('elements_addl', 'Addelements');
+    // @todo: Figure out how to add the same taxonomy to a different field (hiding for now)
+    // $columns[8] = array('elements_addl', 'Addelements');
     // @todo: Include image fields here
     return $columns;
   }

@@ -32,7 +32,6 @@ features[commerce_product_type][] = rings
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[field][] = commerce_product-rings-commerce_price
-features[field][] = commerce_product-rings-field_color
 features[field][] = commerce_product-rings-field_images
 features[field][] = commerce_product-rings-field_width
 features[field][] = commerce_product-rings-title_field
