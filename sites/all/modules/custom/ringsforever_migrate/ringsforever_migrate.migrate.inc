@@ -200,3 +200,69 @@ class CommerceKickstartCollection extends Migration {
     return $columns;
   }
 }
+
+class CommerceKickstartFeaturing extends Migration {
+
+  public function __construct() {
+    parent::__construct();
+    $this->description = t('Import featuring terms.');
+
+    // Create a map object for tracking the relationships between source rows
+    $this->map = new MigrateSQLMap($this->machineName,
+      array(
+        'name' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ),
+      ),
+      MigrateDestinationTerm::getKeySchema()
+    );
+
+    // Create a MigrateSource object.
+    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/featuring.csv', $this->csvcolumns(), array('header_rows' => 1));
+
+    $this->destination = new MigrateDestinationTerm('featuring');
+
+    $this->addFieldMapping('name', 'name');
+  }
+
+  function csvcolumns() {
+    // "Name"
+    $columns[0] = array('name', 'Name');
+    return $columns;
+  }
+}
+
+class CommerceKickstartElements extends Migration {
+
+  public function __construct() {
+    parent::__construct();
+    $this->description = t('Import elements terms.');
+
+    // Create a map object for tracking the relationships between source rows
+    $this->map = new MigrateSQLMap($this->machineName,
+      array(
+        'name' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ),
+      ),
+      MigrateDestinationTerm::getKeySchema()
+    );
+
+    // Create a MigrateSource object.
+    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/elements.csv', $this->csvcolumns(), array('header_rows' => 1));
+
+    $this->destination = new MigrateDestinationTerm('elements');
+
+    $this->addFieldMapping('name', 'name');
+  }
+
+  function csvcolumns() {
+    // "Name"
+    $columns[0] = array('name', 'Name');
+    return $columns;
+  }
+}
