@@ -23,6 +23,7 @@ dependencies[] = image
 dependencies[] = image_delta_formatter
 dependencies[] = inline_entity_form
 dependencies[] = menu
+dependencies[] = migrate_ui
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
