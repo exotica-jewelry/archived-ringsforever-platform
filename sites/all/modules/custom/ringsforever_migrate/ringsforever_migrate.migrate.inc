@@ -73,7 +73,7 @@ class CommerceKickstartRings extends CommerceKickstartMigration {
   }
 }
 
-class CommerceKickstartNode extends DynamicMigration {
+class CommerceKickstartRingsNode extends DynamicMigration {
 
   public function __construct(array $arguments) {
     $this->arguments = $arguments;
