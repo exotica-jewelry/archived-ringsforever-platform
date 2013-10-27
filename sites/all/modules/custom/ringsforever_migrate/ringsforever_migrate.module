@@ -16,6 +16,8 @@ function ringsforever_migrate_migrate_api() {
     'migrations' => array(
       'CommerceKickstartRings' => array('class_name' => 'CommerceKickstartRings'),
       'CommerceKickstartCollection' => array('class_name' => 'CommerceKickstartCollection'),
+      'CommerceKickstartElements' => array('class_name' => 'CommerceKickstartElements'),
+      'CommerceKickstartFeaturing' => array('class_name' => 'CommerceKickstartFeaturing'),
     ),
   );
   $types = array(
