@@ -118,7 +118,7 @@ class CommerceKickstartNode extends DynamicMigration {
     // @todo: Figure out how to add the same taxonomy to a different field (hiding for now)
     // $this->addFieldMapping('field_elements_addl', 'elements_addl');
     // $this->addFieldMapping('field_elements_addl:create_term')
-      ->defaultValue(TRUE);
+    // ->defaultValue(TRUE);
     // @todo: Move image fields here
     $this->addFieldMapping('field_product', 'skus');
   }
