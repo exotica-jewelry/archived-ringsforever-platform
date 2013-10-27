@@ -5,84 +5,11 @@
  *  Migrations for ringsforever_migrate.
  */
 
-class CommerceKickstartBagsCases extends CommerceKickstartMigration {
+class CommerceKickstartRings extends CommerceKickstartMigration {
 
   public function __construct() {
     parent::__construct();
-    $this->description = t('Import bags cases from CSV file.');
-
-    // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'sku' => array(
-          'type' => 'varchar',
-          'length' => 32,
-          'not null' => TRUE,
-        ),
-      ),
-      MigrateDestinationEntityAPI::getKeySchema('commerce_product', 'bags_cases')
-    );
-
-    // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/bags_cases.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
-
-    $this->destination = new MigrateDestinationEntityAPI('commerce_product', 'bags_cases');
-
-    $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('sku', 'sku');
-    $this->addFieldMapping('commerce_price', 'price');
-
-    // Size
-    $this->addFieldMapping('field_bag_size', 'size');
-    $this->addFieldMapping('field_bag_size:create_term')
-      ->defaultValue(TRUE);
-
-    // Images
-    $this->addFieldMapping('field_images', 'product_images');
-    $this->addFieldMapping('field_images:file_replace')
-      ->defaultValue(FILE_EXISTS_REPLACE);
-    $this->addFieldMapping('field_images:source_dir')
-      ->defaultValue(drupal_get_path('module', 'ringsforever_migrate') . '/import/images');
-
-    // Color
-    $this->addFieldMapping('field_color', 'color');
-    $this->addFieldMapping('field_color:additional_field', 'hexadecimal');
-    $this->addFieldMapping('field_color:create_term')
-      ->defaultValue(TRUE);
-
-    $this->addFieldMapping('uid', 'uid');
-    $this->addFieldMapping('language', 'language');
-  }
-
-  function csvcolumns() {
-    $columns[0] = array('title', 'Title');
-    $columns[1] = array('sku', 'SKU');
-    $columns[2] = array('color', 'Color');
-    $columns[3] = array('size', 'Size');
-    $columns[4] = array('price', 'Price');
-    $columns[5] = array('images', 'Images');
-    $columns[6] = array('hexadecimal', 'Hexadecimal');
-    return $columns;
-  }
-
-  function fields() {
-    return array(
-      'product_images' => 'An array of images, populated during prepareRow().',
-    );
-  }
-
-  function prepareRow($row) {
-    $row->product_images = explode(', ', $row->images);
-    $row->uid = 1;
-    $row->language = LANGUAGE_NONE;
-  }
-}
-
-class CommerceKickstartDrinks extends CommerceKickstartMigration {
-
-  public function __construct() {
-    parent::__construct();
-    $this->description = t('Import drinks from CSV file.');
+    $this->description = t('Import rings from CSV file.');
 
     // Create a map object for tracking the relationships between source rows
     $this->map = new MigrateSQLMap($this->machineName,
@@ -97,172 +24,25 @@ class CommerceKickstartDrinks extends CommerceKickstartMigration {
     );
 
     // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/drinks.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
+    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/rings.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
 
-    $this->destination = new MigrateDestinationEntityAPI('commerce_product', 'drinks');
-
-    $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('sku', 'sku');
-    $this->addFieldMapping('commerce_price', 'price');
-
-    // Images
-    $this->addFieldMapping('field_images', 'product_images');
-    $this->addFieldMapping('field_images:file_replace')
-      ->defaultValue(FILE_EXISTS_REPLACE);
-    $this->addFieldMapping('field_images:source_dir')
-      ->defaultValue(drupal_get_path('module', 'ringsforever_migrate') . '/import/images');
-
-    // Color
-    $this->addFieldMapping('field_color', 'color');
-    $this->addFieldMapping('field_color:additional_field', 'hexadecimal');
-    $this->addFieldMapping('field_color:create_term')
-      ->defaultValue(TRUE);
-
-    $this->addFieldMapping('uid', 'uid');
-    $this->addFieldMapping('language', 'language');
-  }
-
-  function csvcolumns() {
-    // "Title","SKU","Color","Price","Images"
-    $columns[0] = array('title', 'Title');
-    $columns[1] = array('sku', 'SKU');
-    $columns[2] = array('color', 'Color');
-    $columns[3] = array('price', 'Price');
-    $columns[4] = array('images', 'Images');
-    $columns[5] = array('hexadecimal', 'Hexadecimal');
-    return $columns;
-  }
-
-  function fields() {
-    return array(
-      'product_images' => 'An array of images, populated during prepareRow().',
-    );
-  }
-
-  function prepareRow($row) {
-    $row->product_images = explode(', ', $row->images);
-    $row->uid = 1;
-    $row->language = LANGUAGE_NONE;
-  }
-}
-
-class CommerceKickstartHats extends CommerceKickstartMigration {
-
-  public function __construct() {
-    parent::__construct();
-    $this->description = t('Import hats from CSV file.');
-
-    // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'sku' => array(
-          'type' => 'varchar',
-          'length' => 32,
-          'not null' => TRUE,
-        ),
-      ),
-      MigrateDestinationEntityAPI::getKeySchema('commerce_product')
-    );
-
-    // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/hats.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
-
-    $this->destination = new MigrateDestinationEntityAPI('commerce_product', 'hats');
-
-    $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('sku', 'sku');
-    $this->addFieldMapping('commerce_price', 'price');
-
-    // Images
-    $this->addFieldMapping('field_images', 'product_images');
-    $this->addFieldMapping('field_images:file_replace')
-      ->defaultValue(FILE_EXISTS_REPLACE);
-    $this->addFieldMapping('field_images:source_dir')
-      ->defaultValue(drupal_get_path('module', 'ringsforever_migrate') . '/import/images');
-
-    // Size
-    $this->addFieldMapping('field_hat_size', 'size');
-    $this->addFieldMapping('field_hat_size:create_term')
-      ->defaultValue(TRUE);
-
-    // Color
-    $this->addFieldMapping('field_color', 'color');
-    $this->addFieldMapping('field_color:additional_field', 'hexadecimal');
-    $this->addFieldMapping('field_color:create_term')
-      ->defaultValue(TRUE);
-
-    $this->addFieldMapping('uid', 'uid');
-    $this->addFieldMapping('language', 'language');
-  }
-
-  function csvcolumns() {
-    // "title","SKU","Color","Size","Price","Images"
-    $columns[0] = array('title', 'Title');
-    $columns[1] = array('sku', 'SKU');
-    $columns[2] = array('color', 'Color');
-    $columns[3] = array('size', 'Size');
-    $columns[4] = array('price', 'Price');
-    $columns[5] = array('images', 'Images');
-    $columns[6] = array('hexadecimal', 'Hexadecimal');
-    return $columns;
-  }
-
-  function fields() {
-    return array(
-      'product_images' => 'An array of images, populated during prepareRow().',
-    );
-  }
-
-  function prepareRow($row) {
-    $row->product_images = explode(', ', $row->images);
-    $row->uid = 1;
-    $row->language = LANGUAGE_NONE;
-  }
-}
-
-class CommerceKickstartTops extends CommerceKickstartMigration {
-
-  public function __construct() {
-    parent::__construct();
-    $this->description = t('Import tops from CSV file.');
-
-    // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'sku' => array(
-          'type' => 'varchar',
-          'length' => 32,
-          'not null' => TRUE,
-        ),
-      ),
-      MigrateDestinationEntityAPI::getKeySchema('commerce_product')
-    );
-
-    // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/tops.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
-
-    $this->destination = new MigrateDestinationEntityAPI('commerce_product', 'tops');
+    $this->destination = new MigrateDestinationEntityAPI('commerce_product', 'rings');
 
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('sku', 'sku');
     $this->addFieldMapping('commerce_price', 'price');
 
     // images
+    // @todo: move to product node
     $this->addFieldMapping('field_images', 'product_images');
     $this->addFieldMapping('field_images:file_replace')
       ->defaultValue(FILE_EXISTS_REPLACE);
     $this->addFieldMapping('field_images:source_dir')
       ->defaultValue(drupal_get_path('module', 'ringsforever_migrate') . '/import/images');
 
-    // Size
-    $this->addFieldMapping('field_top_size', 'size');
-    $this->addFieldMapping('field_top_size:create_term')
-      ->defaultValue(TRUE);
-
-    // Color
-    $this->addFieldMapping('field_color', 'color');
-    $this->addFieldMapping('field_color:additional_field', 'hexadecimal');
-    $this->addFieldMapping('field_color:create_term')
+    // Width
+    $this->addFieldMapping('field_ring_width', 'width');
+    $this->addFieldMapping('field_ring_width:create_term')
       ->defaultValue(TRUE);
 
     $this->addFieldMapping('uid', 'uid');
@@ -270,167 +50,16 @@ class CommerceKickstartTops extends CommerceKickstartMigration {
   }
 
   function csvcolumns() {
-    // "Title","SKU","Color","Size","Price","Images"
+    // "Title","SKU","Width","Price"
+    // Original CK: "Title","SKU","Color","Size","Price","Images"
     $columns[0] = array('title', 'Title');
     $columns[1] = array('sku', 'SKU');
-    $columns[2] = array('color', 'Color');
-    $columns[3] = array('size', 'Size');
+    $columns[3] = array('width', 'Width');
     $columns[4] = array('price', 'Price');
-    $columns[5] = array('images', 'Images');
-    $columns[6] = array('hexadecimal', 'Hexadecimal');
     return $columns;
   }
 
-  function fields() {
-    return array(
-      'product_images' => 'An array of images, populated during prepareRow().',
-    );
-  }
-
-  function prepareRow($row) {
-    $row->product_images = explode(', ', $row->images);
-    $row->uid = 1;
-    $row->language = LANGUAGE_NONE;
-  }
-}
-
-class CommerceKickstartShoes extends CommerceKickstartMigration {
-
-  public function __construct() {
-    parent::__construct();
-    $this->description = t('Import shoes from CSV file.');
-
-    // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'sku' => array(
-          'type' => 'varchar',
-          'length' => 32,
-          'not null' => TRUE,
-        ),
-      ),
-      MigrateDestinationEntityAPI::getKeySchema('commerce_product')
-    );
-
-    // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/shoes.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
-
-    $this->destination = new MigrateDestinationEntityAPI('commerce_product', 'shoes');
-
-    $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('sku', 'sku');
-    $this->addFieldMapping('commerce_price', 'price');
-
-    // Images
-    $this->addFieldMapping('field_images', 'product_images');
-    $this->addFieldMapping('field_images:file_replace')
-      ->defaultValue(FILE_EXISTS_REPLACE);
-    $this->addFieldMapping('field_images:source_dir')
-      ->defaultValue(drupal_get_path('module', 'ringsforever_migrate') . '/import/images');
-
-    // Size
-    $this->addFieldMapping('field_shoe_size', 'size');
-    $this->addFieldMapping('field_shoe_size:create_term')
-      ->defaultValue(TRUE);
-
-    // Color
-    $this->addFieldMapping('field_color', 'color');
-    $this->addFieldMapping('field_color:additional_field', 'hexadecimal');
-    $this->addFieldMapping('field_color:create_term')
-      ->defaultValue(TRUE);
-
-    $this->addFieldMapping('uid', 'uid');
-    $this->addFieldMapping('language', 'language');
-  }
-
-  function csvcolumns() {
-    // "Title","SKU","Color","Size","Price","Images"
-    $columns[0] = array('title', 'Title');
-    $columns[1] = array('sku', 'SKU');
-    $columns[2] = array('color', 'Color');
-    $columns[3] = array('size', 'Size');
-    $columns[4] = array('price', 'Price');
-    $columns[5] = array('images', 'Images');
-    $columns[6] = array('hexadecimal', 'Hexadecimal');
-    return $columns;
-  }
-
-  function fields() {
-    return array(
-      'product_images' => 'An array of images, populated during prepareRow().',
-    );
-  }
-
-  function prepareRow($row) {
-    $row->product_images = explode(', ', $row->images);
-    $row->uid = 1;
-    $row->language = LANGUAGE_NONE;
-  }
-}
-
-class CommerceKickstartStorage extends CommerceKickstartMigration {
-
-  public function __construct() {
-    parent::__construct();
-    $this->description = t('Import storage from CSV file.');
-
-    // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'sku' => array(
-          'type' => 'varchar',
-          'length' => 32,
-          'not null' => TRUE,
-        ),
-      ),
-      MigrateDestinationEntityAPI::getKeySchema('commerce_product')
-    );
-
-    // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'ringsforever_migrate') . '/import/storage_devices.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
-
-    $this->destination = new MigrateDestinationEntityAPI('commerce_product', 'storage_devices');
-
-    $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('sku', 'sku');
-    $this->addFieldMapping('commerce_price', 'price');
-
-    // Images
-    $this->addFieldMapping('field_images', 'product_images');
-    $this->addFieldMapping('field_images:file_replace')
-      ->defaultValue(FILE_EXISTS_REPLACE);
-    $this->addFieldMapping('field_images:source_dir')
-      ->defaultValue(drupal_get_path('module', 'ringsforever_migrate') . '/import/images');
-
-    // Capacity ("size")
-    $this->addFieldMapping('field_storage_capacity', 'capacity');
-    $this->addFieldMapping('field_storage_capacity:weight', 'weight');
-    $this->addFieldMapping('field_storage_capacity:create_term')
-      ->defaultValue(TRUE);
-
-    // Color
-    $this->addFieldMapping('field_color', 'color');
-    $this->addFieldMapping('field_color:additional_field', 'hexadecimal');
-    $this->addFieldMapping('field_color:create_term')
-      ->defaultValue(TRUE);
-
-    $this->addFieldMapping('uid', 'uid');
-    $this->addFieldMapping('language', 'language');
-  }
-
-  function csvcolumns() {
-    // "Title","SKU","Color","Capacity","Price","Images"
-    $columns[0] = array('title', 'Title');
-    $columns[1] = array('sku', 'SKU');
-    $columns[2] = array('color', 'Color');
-    $columns[3] = array('capacity', 'Capacity');
-    $columns[4] = array('price', 'Price');
-    $columns[5] = array('images', 'Images');
-    $columns[6] = array('hexadecimal', 'Hexadecimal');
-    $columns[7] = array('weight', 'Weight');
-    return $columns;
-  }
-
+  // @todo: move to product node
   function fields() {
     return array(
       'product_images' => 'An array of images, populated during prepareRow().',
@@ -450,7 +79,7 @@ class CommerceKickstartNode extends DynamicMigration {
     $this->arguments = $arguments;
     parent::__construct();
     $this->description = t('Import product nodes.');
-    $this->dependencies = array('CommerceKickstartBagsCases', 'CommerceKickstartDrinks', 'CommerceKickstartHats', 'CommerceKickstartShoes', 'CommerceKickstartStorage', 'CommerceKickstartTops', 'CommerceKickstartPages');
+    $this->dependencies = array('CommerceKickstartRings');
 
     // Create a map object for tracking the relationships between source rows
     $this->map = new MigrateSQLMap($this->machineName,
@@ -471,22 +100,26 @@ class CommerceKickstartNode extends DynamicMigration {
 
     $this->addFieldMapping('uid', 'uid')->defaultValue(1);
 
+    // Title  Description Collection  Elements  Featuring SKU Product Additional elements Images
+
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('body', 'description');
     $this->addFieldMapping('body:summary', 'excerpt');
-    $this->addFieldMapping('field_brand', 'brand');
-    $this->addFieldMapping('field_brand:create_term')
+    $this->addFieldMapping('field_featuring', 'featuring');
+    $this->addFieldMapping('field_featuring:create_term')
       ->defaultValue(TRUE);
-    $this->addFieldMapping('field_category', 'category');
-    $this->addFieldMapping('field_category:create_term')
+    $this->addFieldMapping('field_elements', 'elements');
+    $this->addFieldMapping('field_elements:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_collection', 'collection')
           ->separator(', ');
     $this->addFieldMapping('field_collection:create_term')
       ->defaultValue(TRUE);
-    $this->addFieldMapping('field_gender', 'gender');
-    $this->addFieldMapping('field_gender:create_term')
+    // @todo: Make sure this adding-terms-to-existing-taxonomy works
+    $this->addFieldMapping('field_elements_addl', 'elements_addl');
+    $this->addFieldMapping('field_elements_addl:create_term')
       ->defaultValue(TRUE);
+    // @todo: Move image fields here
     $this->addFieldMapping('field_product', 'skus');
   }
 
@@ -503,11 +136,13 @@ class CommerceKickstartNode extends DynamicMigration {
     $columns[0] = array('title', 'Title');
     $columns[1] = array('description', 'Description');
     $columns[2] = array('collection', 'Collection');
-    $columns[3] = array('category', 'Category');
-    $columns[4] = array('gender', 'Gender');
-    $columns[5] = array('brand', 'Brand');
+    $columns[3] = array('elements', 'Elements');
+    $columns[5] = array('featuring', 'Featuring');
     $columns[6] = array('sku', 'SKU');
     $columns[7] = array('product', 'Product');
+    // @todo: Make sure this adding-terms-to-existing-taxonomy works
+    $columns[8] = array('elements_addl', 'Addelements');
+    // @todo: Include image fields here
     return $columns;
   }
 
