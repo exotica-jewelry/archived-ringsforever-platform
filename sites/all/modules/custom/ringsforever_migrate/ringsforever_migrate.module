@@ -14,17 +14,17 @@ function ringsforever_migrate_migrate_api() {
   $api = array(
     'api' => 2,
     'migrations' => array(
-      'CommerceKickstartRings' => array('class_name' => 'CommerceKickstartRings'),
-      'CommerceKickstartCollection' => array('class_name' => 'CommerceKickstartCollection'),
-      'CommerceKickstartElements' => array('class_name' => 'CommerceKickstartElements'),
-      'CommerceKickstartFeaturing' => array('class_name' => 'CommerceKickstartFeaturing'),
+      'CommerceRings' => array('class_name' => 'CommerceRings'),
+      'CommerceRingsCollection' => array('class_name' => 'CommerceRingsCollection'),
+      'CommerceRingsElements' => array('class_name' => 'CommerceRingsElements'),
+      'CommerceRingsFeaturing' => array('class_name' => 'CommerceRingsFeaturing'),
     ),
   );
   $types = array(
     'rings',
   );
   foreach ($types as $type) {
-    $api['migrations']['CommerceKickstartNode' . $type] = array('class_name' => 'CommerceKickstartNode', 'type' => $type);
+    $api['migrations']['CommerceRingsNode' . $type] = array('class_name' => 'CommerceRingsNode', 'type' => $type);
   }
   return $api;
 }
