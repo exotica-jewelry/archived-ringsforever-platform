@@ -1103,7 +1103,6 @@ function ringsforever_migrate_field_default_fields() {
     ),
   );
 
-  // @todo: Ensure this is in the product node.
   // CK exported field: 'taxonomy_term-collection-field_image'.
   $fields['taxonomy_term-collection-field_image'] = array(
     'field_config' => array(

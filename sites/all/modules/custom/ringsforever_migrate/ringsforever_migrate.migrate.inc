@@ -5,7 +5,7 @@
  *  Migrations for ringsforever_migrate.
  */
 
-class CommerceKickstartRings extends CommerceKickstartMigration {
+class CommerceRings extends CommerceKickstartMigration {
 
   public function __construct() {
     parent::__construct();
@@ -73,7 +73,7 @@ class CommerceKickstartRings extends CommerceKickstartMigration {
   }
 }
 
-class CommerceKickstartRingsNode extends DynamicMigration {
+class CommerceRingsNode extends DynamicMigration {
 
   public function __construct(array $arguments) {
     $this->arguments = $arguments;
@@ -161,7 +161,7 @@ class CommerceKickstartRingsNode extends DynamicMigration {
   }
 }
 
-class CommerceKickstartCollection extends Migration {
+class CommerceRingsCollection extends Migration {
 
   public function __construct() {
     parent::__construct();
@@ -201,7 +201,7 @@ class CommerceKickstartCollection extends Migration {
   }
 }
 
-class CommerceKickstartFeaturing extends Migration {
+class CommerceRingsFeaturing extends Migration {
 
   public function __construct() {
     parent::__construct();
@@ -234,7 +234,7 @@ class CommerceKickstartFeaturing extends Migration {
   }
 }
 
-class CommerceKickstartElements extends Migration {
+class CommerceRingsElements extends Migration {
 
   public function __construct() {
     parent::__construct();
