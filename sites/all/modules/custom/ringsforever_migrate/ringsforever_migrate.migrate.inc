@@ -94,7 +94,7 @@ class CommerceRingsNode extends DynamicMigration {
     $this->arguments = $arguments;
     parent::__construct();
     $this->description = t('Import product nodes.');
-    $this->dependencies = array('CommerceKickstartRings');
+    $this->dependencies = array('CommerceRings');
 
     // Create a map object for tracking the relationships between source rows
     $this->map = new MigrateSQLMap($this->machineName,
@@ -165,7 +165,7 @@ class CommerceRingsNode extends DynamicMigration {
    * Construct the machine name from the source file name.
    */
   protected function generateMachineName($class_name = NULL) {
-    return drupal_strtolower('CommerceKickstartNode' . $this->arguments['type']);
+    return drupal_strtolower('CommerceRingsNode' . $this->arguments['type']);
   }
 
   public function processImport(array $options = array()) {
