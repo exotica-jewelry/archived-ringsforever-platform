@@ -44,10 +44,10 @@ function ringsforever_migrate_commerce_kickstart_crumb_info() {
 /**
  * Implements hook_commerce_product_type_info_alter().
  */
-// function commerce_product_commerce_product_type_info_alter(&$product_types) {
-//   // Remove the default product type.
-//   unset($product_types['product']);
-// }
+function ringsforever_product_commerce_product_type_info_alter(&$product_types) {
+  // Remove the default product type.
+  unset($product_types['product']);
+}
 
 /**
  * Implements hook_block_info_alter().

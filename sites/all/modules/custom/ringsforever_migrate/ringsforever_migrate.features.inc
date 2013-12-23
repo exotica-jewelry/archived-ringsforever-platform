@@ -5,6 +5,49 @@
  */
 
 /**
+ * Implements hook_commerce_product_default_types().
+ */
+function ringsforever_migrate_commerce_product_default_types() {
+  $items = array(
+    'rings' => array(
+      'type' => 'rings',
+      'name' => 'Rings',
+      'description' => '<em>Rings</em> are titanium wedding rings with particular elements and sizes.',
+      'help' => '',
+      'revision' => '1',
+    ),
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function ringsforever_migrate_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function ringsforever_migrate_node_info() {
+  $items = array(
+    'tops' => array(
+      'name' => t('Rings'),
+      'base' => 'node_content',
+      'description' => t('A <em>Ring</em> is a content type which contains product variations.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implements hook_commerce_flat_rate_default_services().
  */
 function ringsforever_migrate_commerce_flat_rate_default_services() {
@@ -36,32 +79,6 @@ function ringsforever_migrate_commerce_flat_rate_default_services() {
     ),
   );
   return $items;
-}
-
-/**
- * Implements hook_commerce_product_default_types().
- */
-function ringsforever_migrate_commerce_product_default_types() {
-  $items = array(
-    'rings' => array(
-      'type' => 'rings',
-      'name' => 'Rings',
-      'description' => '<em>Rings</em> are titanium wedding rings with particular elements and sizes.',
-      'help' => '',
-      'revision' => '1',
-    ),
-  );
-  return $items;
-}
-
-/**
- * Implements hook_ctools_plugin_api().
- */
-function ringsforever_migrate_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "strongarm" && $api == "strongarm") {
-    return array("version" => "1");
-  }
 }
 
 /**
@@ -137,21 +154,4 @@ function ringsforever_migrate_image_default_styles() {
   );
 
   return $styles;
-}
-
-/**
- * Implements hook_node_info().
- */
-function ringsforever_migrate_node_info() {
-  $items = array(
-    'tops' => array(
-      'name' => t('Rings'),
-      'base' => 'node_content',
-      'description' => t('A <em>Ring</em> is a content type which contains product variations.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-  );
-  return $items;
 }
