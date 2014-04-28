@@ -3,26 +3,51 @@
 * Implements hook_inline_entity_form_table_fields_alter().
 */
 function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $context) {
-    $is_my_content_type = FALSE;
-    foreach ($context['allowed_bundles'] as $bundle) {
-      if ($bundle=='rings') {
-        $is_my_content_type = TRUE;
+  $is_my_content_type = FALSE;
+  foreach ($context['allowed_bundles'] as $bundle) {
+    if ($bundle=='rings') {
+      $is_my_content_type = TRUE;
+    }
+  }
+  if ($is_my_content_type) {
+
+    // Remove 'Status' field
+    unset($fields['status']);
+
+    // Add 'Image' if it exists
+
+    // Logic taken from profiles/commerce_kickstart/modules/contrib/inline_entity_form/includes/commerce_product.inline_entity_form.inc
+    if ($field['type'] == 'image') {
+      // Determine the correct image style to use.
+      $image_style = 'thumbnail';
+      if (!empty($instance['widget']['settings']['preview_image_style'])) {
+        $image_style = $instance['widget']['settings']['preview_image_style'];
       }
-    }
-    if ($is_my_content_type) {
-      // Remove 'Status' field
-      unset($fields['status']);
-      // Add 'Description' field
-      $fields['field_description'] = array(
+
+      $fields[$field_name] = array(
         'type' => 'field',
-        'label' => t('Description'),
-        'weight' => 101,
-      );
-      // Add product listing
-      $fields['field_product'] = array(
-        'type' => 'field',
-        'label' => t('Product'),
-        'weight' => 102,
-      );
+        'label' => $instance['label'],
+        'formatter' => 'image',
+        'settings' => array('image_style' => $image_style),
+        'delta' => 0,
+        'weight' => -10,
+        );
+      // Don't add any other imagefields. One is enough.
+      break;
     }
+
+    // Add 'Description' field
+    $fields['field_description'] = array(
+      'type' => 'field',
+      'label' => t('Description'),
+      'weight' => 101,
+      );
+
+    // Add product listing
+    $fields['field_product'] = array(
+      'type' => 'field',
+      'label' => t('Product'),
+      'weight' => 102,
+      );
+  }
 }
