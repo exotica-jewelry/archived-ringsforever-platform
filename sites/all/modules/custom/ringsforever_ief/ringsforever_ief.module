@@ -46,7 +46,7 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
       'type' => 'field',
       'label' => t('Price'),
       'formatter' => 'commerce_price_formatted_amount',
-      'weight' => 2,
+      'weight' => 1,
     );
 
     // Add 'Width shown in image' field
