@@ -2,6 +2,9 @@
 /**
 * Implements hook_inline_entity_form_table_fields_alter().
 */
+
+// cf https://drupal.org/node/2091585#comment-7876517
+
 function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $context) {
   $is_my_content_type = FALSE;
   foreach ($context['allowed_bundles'] as $bundle) {
