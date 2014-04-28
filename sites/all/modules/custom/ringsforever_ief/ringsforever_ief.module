@@ -11,10 +11,10 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
       }
     }
     if ($is_my_content_type) {
-      unset($fields['title']);                       // This line removes the title field. you're looking to do this, just with the status instead of title field
+      unset($fields['status']);                       // This line removes the title field. you're looking to do this, just with the status instead of title field
       $fields['description'] = array(                   // This part adds the body field with a label 'description'
-        'type' => 'field',
-        'label' => t('Description Field'),
+        'type' => 'field_description',
+        'label' => t('Description'),
         'weight' => 101,
       );
     }
