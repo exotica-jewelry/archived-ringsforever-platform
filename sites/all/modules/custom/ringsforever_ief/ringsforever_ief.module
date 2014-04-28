@@ -14,7 +14,7 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
       unset($fields['status']);
       // Add 'Description' field
       $fields['field_description'] = array(
-        'type' => 'field_description',
+        'type' => 'field',
         'label' => t('Description'),
         'weight' => 101,
       );
