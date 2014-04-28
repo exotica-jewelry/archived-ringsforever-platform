@@ -42,9 +42,10 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
 
     // Add 'Width shown in image' field
     $fields['field_ring_width_shown'] = array(
-      'type' => 'taxonomy_term_reference_plain',
+      'type' => 'field',
       'label' => t('Width shown'),
       'weight' => 101,
+      'markup' => check_plain($name),
     );
   }
 }
