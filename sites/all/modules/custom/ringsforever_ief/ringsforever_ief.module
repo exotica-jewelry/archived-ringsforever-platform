@@ -18,5 +18,11 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
         'label' => t('Description'),
         'weight' => 101,
       );
+      // Add product listing
+      $fields['field_product'] = array(
+        'type' => 'field',
+        'label' => t('Product'),
+        'weight' => 102,
+      );
     }
 }
