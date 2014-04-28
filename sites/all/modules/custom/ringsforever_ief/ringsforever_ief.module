@@ -35,14 +35,14 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
   // Product variations
   if ($context['parent_entity_type'] == 'node' && $context['entity_type'] == 'commerce_product') {
     // Remove 'Variation title' field
-    unset($fields['title_field']);
+    unset($fields['title']);
 
     // Remove 'Description' field
     unset($fields['field_description']);
 
     // Add 'Width shown in image' field
     $fields['field_ring_width_shown'] = array(
-      'type' => 'field',
+      'type' => 'taxonomy_term_reference_plain',
       'label' => t('Width shown'),
       'weight' => 101,
     );
