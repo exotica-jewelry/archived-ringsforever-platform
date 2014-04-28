@@ -41,26 +41,18 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
     // Remove 'Description' field
     unset($fields['field_description']);
 
-    // Move 'Price' to the beginning
-    $fields['commerce_price'] = array(
-      'type' => 'field',
-      'label' => t('Price'),
-      'formatter' => 'commerce_price_formatted_amount',
-      'weight' => -5,
-    );
-
     // Add 'Width shown in image' field
     $fields['field_ring_width_shown'] = array(
       'type' => 'field',
       'label' => t('Width shown'),
-      'weight' => 101,
+      'weight' => 0,
     );
 
-    // Move 'SKU' to the end
+    // Move 'SKU' last
     $fields['sku'] = array(
       'type' => 'property',
       'label' => t('SKU'),
-      'weight' => 102,
+      'weight' => 100,
     );
   }
 }
