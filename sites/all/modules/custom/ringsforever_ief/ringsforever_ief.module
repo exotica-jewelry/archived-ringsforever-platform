@@ -43,7 +43,10 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
 
     // Move 'Price' to the beginning
     $fields['commerce_price'] = array(
-      'weight' => 10,
+      'type' => 'field',
+      'label' => t('Price'),
+      'formatter' => 'commerce_price_formatted_amount',
+      'weight' => 2,
     );
 
     // Add 'Width shown in image' field
@@ -55,6 +58,8 @@ function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $conte
 
     // Move 'SKU' to the end
     $fields['sku'] = array(
+      'type' => 'property',
+      'label' => t('SKU'),
       'weight' => 102,
     );
   }
