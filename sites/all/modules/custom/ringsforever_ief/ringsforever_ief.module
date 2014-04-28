@@ -1,0 +1,21 @@
+<?php
+/**
+* Implements hook_inline_entity_form_table_fields_alter().
+*/
+function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $context) {
+    // Make sure there's a stock field on each of the allowed product types.
+    $is_my_content_type = FALSE;
+    foreach ($context['allowed_bundles'] as $bundle) {
+      if ($bundle=='rings') {
+        $is_my_content_type = TRUE;
+      }
+    }
+    if ($is_my_content_type) {
+      unset($fields['title']);                       // This line removes the title field. you're looking to do this, just with the status instead of title field
+      $fields['description'] = array(                   // This part adds the body field with a label 'description'
+        'type' => 'field',
+        'label' => t('Description Field'),
+        'weight' => 101,
+      );
+    }
+}
