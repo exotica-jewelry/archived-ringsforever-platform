@@ -1,12 +1,12 @@
 <?php
 /**
  * @file
- * similarproducts.features.inc
+ * trf_feature_similarproducts.features.inc
  */
 
 /**
  * Implements hook_views_api().
  */
-function similarproducts_views_api() {
+function trf_feature_similarproducts_views_api() {
   return array("version" => "3.0");
 }
