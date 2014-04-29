@@ -1,4 +1,4 @@
-name = Similar products
+name = TRF similar products
 description = Displays related products based on single-value tag fields.
 core = 7.x
 package = Exotica Jewelry
