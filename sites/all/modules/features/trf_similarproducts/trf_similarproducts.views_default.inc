@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * trf_feature_similarproducts.views_default.inc
+ * trf_similarproducts.views_default.inc
  */
 
 /**
@@ -13,7 +13,7 @@ function trf_similarproducts_views_default_views() {
   $view = new view();
   $view->name = 'similarproducts';
   $view->description = 'Displays related products based on single-value tag fields.';
-  $view->tag = 'default';
+  $view->tag = 'taxonomy';
   $view->base_table = 'node';
   $view->human_name = 'Similar products';
   $view->core = 7;
