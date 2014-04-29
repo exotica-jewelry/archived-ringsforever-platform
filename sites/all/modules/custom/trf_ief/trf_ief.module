@@ -10,7 +10,7 @@
  * Implements hook_inline_entity_form_table_fields_alter().
  */
 
-function ringsforever_ief_inline_entity_form_table_fields_alter(&$fields, $context) {
+function trf_ief_inline_entity_form_table_fields_alter(&$fields, $context) {
 
   // "Related Rings" field
   $is_my_content_type = FALSE;

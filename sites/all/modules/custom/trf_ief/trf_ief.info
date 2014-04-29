@@ -3,4 +3,4 @@ description = Customizes the display of IEF for referenced rings.
 core = 7.x
 package = Exotica Jewelry
 version = 7.x-1.0-alpha1
-project = ringsforever_ief
+project = trf_ief
