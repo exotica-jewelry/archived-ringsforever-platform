@@ -104,7 +104,7 @@ function trf_similarproducts_views_default_views() {
   $handler->display->display_options['link_url'] = 'taxonomy/term/!1';
 
   /* Display: Related rings by collection block */
-  $handler = $view->new_display('block', 'Related rings by collection block', 'similarproducts_collection');
+  $handler = $view->new_display('block', 'Related rings by collection block', 'sp_collection');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -135,7 +135,7 @@ function trf_similarproducts_views_default_views() {
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
 
   /* Display: Related rings by color block */
-  $handler = $view->new_display('block', 'Related rings by color block', 'similarproducts_color');
+  $handler = $view->new_display('block', 'Related rings by color block', 'sp_color');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -166,7 +166,7 @@ function trf_similarproducts_views_default_views() {
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
 
   /* Display: Related rings by feature block */
-  $handler = $view->new_display('block', 'Related rings by feature block', 'similarproducts_feature');
+  $handler = $view->new_display('block', 'Related rings by feature block', 'sp_feature');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
