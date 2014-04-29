@@ -2,12 +2,11 @@ name = TRF similar products
 description = Displays related products based on single-value tag fields.
 core = 7.x
 package = Exotica Jewelry
-version = 7.x-0.2
+php = 5.2.4
+version = 7.x-0.3
 project = trf_feature_similarproducts
-
 dependencies[] = ctools
 dependencies[] = views
-
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[views_view][] = similarproducts

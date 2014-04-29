@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * similarproducts.views_default.inc
+ * trf_feature_similarproducts.views_default.inc
  */
 
 /**
