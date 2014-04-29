@@ -4,4 +4,4 @@
  * Code for the Similar products feature.
  */
 
-include_once 'trf_feature_similarproducts.features.inc';
+include_once 'trf_similarproducts.features.inc';
