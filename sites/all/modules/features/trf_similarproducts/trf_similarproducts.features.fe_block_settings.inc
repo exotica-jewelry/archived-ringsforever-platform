@@ -17,9 +17,7 @@ function trf_similarproducts_default_fe_block_settings() {
     'custom' => '0',
     'delta' => 'similarproducts-sp_collection',
     'module' => 'views',
-    'node_types' => array(
-      'rings' => TRUE,
-    ),
+    'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -51,9 +49,7 @@ function trf_similarproducts_default_fe_block_settings() {
     'custom' => '0',
     'delta' => 'similarproducts-sp_color',
     'module' => 'views',
-    'node_types' => array(
-      'rings' => TRUE,
-    ),
+    'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -85,9 +81,7 @@ function trf_similarproducts_default_fe_block_settings() {
     'custom' => '0',
     'delta' => 'similarproducts-sp_feature',
     'module' => 'views',
-    'node_types' => array(
-      'rings' => TRUE,
-    ),
+    'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
