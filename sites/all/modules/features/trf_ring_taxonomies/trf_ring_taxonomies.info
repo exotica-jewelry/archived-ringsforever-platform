@@ -1,5 +1,5 @@
 name = TRF ring taxonomies
-description = Sets up taxonomies for ring products.
+description = Taxonomies for ring products.
 core = 7.x
 package = Exotica Jewelry
 version = 7.x-0.1
