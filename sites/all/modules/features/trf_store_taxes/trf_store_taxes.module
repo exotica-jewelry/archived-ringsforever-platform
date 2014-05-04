@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TRF store taxes feature.
+ */
+
+include_once 'trf_store_taxes.features.inc';
