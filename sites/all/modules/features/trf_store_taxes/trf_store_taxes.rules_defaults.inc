@@ -21,7 +21,7 @@ function trf_store_taxes_default_rules_configuration() {
             "commerce_order" : [ "commerce-line-item:order" ],
             "address_field" : "commerce_customer_shipping|commerce_customer_address",
             "address_component" : "administrative_area",
-            "value" : "az"
+            "value" : "AZ"
           }
         }
       ],
