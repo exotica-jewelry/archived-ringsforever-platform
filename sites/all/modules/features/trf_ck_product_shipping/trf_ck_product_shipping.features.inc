@@ -9,8 +9,8 @@
  */
 function trf_ck_product_shipping_commerce_flat_rate_default_services_alter(&$data) {
   if (isset($data['free_shipping'])) {
-    $data['free_shipping']['description'] = 'Free shipping on all orders.'; \/* WAS: 'A free shipping service for an order over a certain amount.' */
-    $data['free_shipping']['display_title'] = 'Free shipping!'; \/* WAS: 'Free shipping: 5 - 8 business days' */
+    $data['free_shipping']['description'] = 'Free shipping on all orders.'; /* WAS: 'A free shipping service for an order over a certain amount.' */
+    $data['free_shipping']['display_title'] = 'Free shipping!'; /* WAS: 'Free shipping: 5 - 8 business days' */
   }
 }
 
