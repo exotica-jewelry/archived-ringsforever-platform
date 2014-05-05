@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TRF CK product - shipping feature.
+ */
+
+include_once 'trf_ck_product_shipping.features.inc';
