@@ -1,10 +1,10 @@
 <?php
-\/**
+/**
  * @file
  * trf_ck_product_shipping.features.inc
  */
 
-\/**
+/**
  * Implements hook_commerce_flat_rate_default_services_alter().
  */
 function trf_ck_product_shipping_commerce_flat_rate_default_services_alter(&$data) {
@@ -14,7 +14,7 @@ function trf_ck_product_shipping_commerce_flat_rate_default_services_alter(&$dat
   }
 }
 
-\/**
+/**
  * Implements hook_default_rules_configuration_alter().
  */
 function trf_ck_product_shipping_default_rules_configuration_alter(&$data) {
