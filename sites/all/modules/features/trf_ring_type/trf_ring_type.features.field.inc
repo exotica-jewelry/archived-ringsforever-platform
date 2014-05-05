@@ -155,7 +155,7 @@ function trf_ring_type_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'reference_view' => array(
           'label' => 'above',
@@ -537,7 +537,7 @@ function trf_ring_type_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'reference_view' => array(
           'label' => 'above',
@@ -724,7 +724,7 @@ function trf_ring_type_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'reference_view' => array(
           'label' => 'inline',

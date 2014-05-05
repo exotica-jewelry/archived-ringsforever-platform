@@ -198,6 +198,10 @@ function trf_ring_type_strongarm() {
             'weight' => '7',
             'visible' => FALSE,
           ),
+          'product_list' => array(
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
