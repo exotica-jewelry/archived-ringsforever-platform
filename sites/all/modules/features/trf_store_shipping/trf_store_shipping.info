@@ -1,5 +1,5 @@
 name = TRF store shipping
-description = Sets shipping rates. At this time the associated rules cannot be exported (see issue #1402762).
+description = Sets shipping rates. At this time the associated rules cannot be exported (see issue #1402762) and are instead stored in the trf_ck_product_shipping override feature.
 core = 7.x
 package = Exotica Jewelry
 version = 7.x-0.2
