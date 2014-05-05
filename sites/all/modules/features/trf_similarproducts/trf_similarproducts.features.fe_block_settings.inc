@@ -21,12 +21,6 @@ function trf_similarproducts_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
       'commerce_kickstart_admin' => array(
         'region' => '',
         'status' => 0,
@@ -53,12 +47,6 @@ function trf_similarproducts_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
       'commerce_kickstart_admin' => array(
         'region' => '',
         'status' => 0,
@@ -85,12 +73,6 @@ function trf_similarproducts_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
       'commerce_kickstart_admin' => array(
         'region' => '',
         'status' => 0,
