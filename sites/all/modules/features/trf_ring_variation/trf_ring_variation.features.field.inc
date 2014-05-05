@@ -121,7 +121,7 @@ function trf_ring_variation_field_default_fields() {
             'calculation' => 'calculated_sell_price',
           ),
           'type' => 'commerce_price_formatted_amount',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'node_product_list' => array(
           'label' => 'hidden',
@@ -130,7 +130,7 @@ function trf_ring_variation_field_default_fields() {
             'calculation' => 'calculated_sell_price',
           ),
           'type' => 'commerce_price_formatted_amount',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'node_reference_view' => array(
           'label' => 'hidden',
@@ -285,6 +285,46 @@ function trf_ring_variation_field_default_fields() {
           'type' => 'hidden',
           'weight' => '0',
         ),
+        'node_full' => array(
+          'label' => 'hidden',
+          'module' => 'cloud_zoom',
+          'settings' => array(
+            'gallery_filedset' => array(
+              'gallery_mode' => 1,
+              'thumb_style' => 'product_thumbnail',
+            ),
+            'slide_style' => 'product_full',
+            'zoom_position_fieldset' => array(
+              'adjust_x' => '0',
+              'adjust_y' => '0',
+              'position' => 'inside',
+              'zoom_height' => 'auto',
+              'zoom_width' => 'auto',
+            ),
+            'zoom_style' => '0',
+            'zoom_style_fieldset' => array(
+              'Show title' => 1,
+              'lens_opacity' => '0.5',
+              'smooth_move' => '3',
+              'soft_focus' => 0,
+              'tint' => 'false',
+              'tint_opacity' => '0.5',
+              'title_opacity' => '0',
+            ),
+          ),
+          'type' => 'cloud_zoom',
+          'weight' => '1',
+        ),
+        'node_product_list' => array(
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => '1',
+        ),
         'node_reference_view' => array(
           'label' => 'hidden',
           'module' => 'image',
@@ -422,6 +462,20 @@ function trf_ring_variation_field_default_fields() {
           'type' => 'hidden',
           'weight' => '0',
         ),
+        'node_full' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '3',
+        ),
+        'node_product_list' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '3',
+        ),
         'node_reference_view' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
@@ -527,6 +581,20 @@ function trf_ring_variation_field_default_fields() {
           'type' => 'hidden',
           'weight' => '0',
         ),
+        'node_full' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '4',
+        ),
+        'node_product_list' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '4',
+        ),
         'node_reference_view' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
@@ -620,6 +688,20 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
+          'weight' => '0',
+        ),
+        'node_full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '0',
+        ),
+        'node_product_list' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
           'weight' => '0',
         ),
         'node_reference_view' => array(
