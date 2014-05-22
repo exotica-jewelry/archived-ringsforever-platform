@@ -402,7 +402,7 @@ function trf_ring_type_field_default_fields() {
             'combine' => 1,
             'default_quantity' => '1',
             'line_item_type' => 'product_discount',
-            'show_quantity' => 1,
+            'show_quantity' => 0,
             'show_single_product_attributes' => 1,
           ),
           'type' => 'commerce_cart_add_to_cart_form',
