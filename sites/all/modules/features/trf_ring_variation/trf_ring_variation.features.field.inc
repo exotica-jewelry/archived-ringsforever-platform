@@ -320,7 +320,7 @@ function trf_ring_variation_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => 'content',
-            'image_style' => '',
+            'image_style' => 'product_medium',
           ),
           'type' => 'image',
           'weight' => '1',
@@ -389,6 +389,26 @@ function trf_ring_variation_field_default_fields() {
         'settings' => array(
           'file_entity_inline' => '1',
           'file_entity_inline_fields' => array(),
+          'filefield_sources' => array(
+            'filefield_sources' => array(
+              'attach' => 0,
+              'clipboard' => 0,
+              'reference' => 0,
+              'remote' => 'remote',
+              'upload' => 'upload',
+            ),
+            'source_attach' => array(
+              'absolute' => '0',
+              'attach_mode' => 'move',
+              'path' => 'file_attach',
+            ),
+            'source_imce' => array(
+              'imce_mode' => 0,
+            ),
+            'source_reference' => array(
+              'autocomplete' => '0',
+            ),
+          ),
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
