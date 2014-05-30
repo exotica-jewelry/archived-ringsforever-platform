@@ -10,7 +10,7 @@
 function trf_price_variations_default_rules_configuration() {
   $items = array();
   $items['rules_price_variations'] = entity_import('rules_config', '{ "rules_price_variations" : {
-      "LABEL" : "Update prices on variations",
+      "LABEL" : "Commerce Product: Update variation prices",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "TAGS" : [ "Commerce Product" ],
@@ -36,7 +36,7 @@ function trf_price_variations_default_rules_configuration() {
     }
   }');
   $items['rules_price_variations_set'] = entity_import('rules_config', '{ "rules_price_variations_set" : {
-      "LABEL" : "Create prices for variations",
+      "LABEL" : "Commerce Product: Set variation prices",
       "PLUGIN" : "rule",
       "OWNER" : "rules",
       "REQUIRES" : [ "rules" ],
@@ -55,47 +55,6 @@ function trf_price_variations_default_rules_configuration() {
           }
         },
         { "entity_save" : { "data" : [ "commerce-product" ], "immediate" : 1 } }
-      ]
-    }
-  }');
-  $items['rules_ring_width_12mm'] = entity_import('rules_config', '{ "rules_ring_width_12mm" : {
-      "LABEL" : "Ring width is 12mm",
-      "PLUGIN" : "and",
-      "OWNER" : "rules",
-      "TAGS" : [ "Commerce Product" ],
-      "REQUIRES" : [ "rules" ],
-      "USES VARIABLES" : { "commerce_product" : { "label" : "Product", "type" : "commerce_product" } },
-      "AND" : [
-        { "entity_has_field" : { "entity" : [ "commerce-product" ], "field" : "field_ring_width" } },
-        { "NOT data_is_empty" : { "data" : [ "commerce-product:field-ring-width" ] } },
-        { "NOT data_is_empty" : { "data" : [ "commerce-product:field-ring-width:tid" ] } },
-        { "data_is" : {
-            "data" : [ "commerce-product:field-ring-width:name" ],
-            "value" : "12mm"
-          }
-        }
-      ]
-    }
-  }');
-  $items['rules_price_12mm_rings'] = entity_import('rules_config', '{ "rules_price_12mm_rings" : {
-      "LABEL" : "Price 12mm rings",
-      "PLUGIN" : "reaction rule",
-      "OWNER" : "rules",
-      "TAGS" : [ "Commerce Product" ],
-      "REQUIRES" : [ "rules", "commerce_line_item", "commerce_product_reference" ],
-      "ON" : { "commerce_product_calculate_sell_price" : [] },
-      "IF" : [
-        { "entity_has_field" : { "entity" : [ "commerce-line-item" ], "field" : "commerce_product" } },
-        { "component_rules_ring_width_12mm" : { "commerce_product" : [ "commerce-line-item:commerce-product" ] } }
-      ],
-      "DO" : [
-        { "commerce_line_item_unit_price_add" : {
-            "commerce_line_item" : [ "commerce_line_item" ],
-            "amount" : "5000",
-            "component_name" : "base_price",
-            "round_mode" : "0"
-          }
-        }
       ]
     }
   }');
