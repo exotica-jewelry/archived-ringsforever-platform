@@ -49,8 +49,9 @@ function trf_price_variations_default_rules_configuration() {
         { "LOOP" : {
             "USING" : { "list" : [ "node:field-product" ] },
             "ITEM" : { "list_item" : "Current list item" },
-            "DO" : [ { "component_rules_price_variations_create" : [] } ]
-          }
+            "DO" : [
+              { "component_rules_price_variations_create" : { "commerce_product" : [ "list-item" ], "product_display" : [ "node" ] } }
+            ]
         }
       ]
     }
