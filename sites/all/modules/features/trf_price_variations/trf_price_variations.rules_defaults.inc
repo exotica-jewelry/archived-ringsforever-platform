@@ -55,7 +55,7 @@ function trf_price_variations_default_rules_configuration() {
       ]
     }
   }');
-  $items['rules_price_variations_set'] = entity_import('rules_config', '{ "rules_price_variations_set" : {
+  $items['rules_price_variations_create'] = entity_import('rules_config', '{ "rules_price_variations_create" : {
       "LABEL" : "Create prices for variations",
       "PLUGIN" : "rule",
       "OWNER" : "rules",
