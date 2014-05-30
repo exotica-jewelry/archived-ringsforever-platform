@@ -44,7 +44,10 @@ function trf_ring_type_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '9',
+          'weight' => '10',
+        ),
+        'redirect' => array(
+          'weight' => '11',
         ),
       ),
       'display' => array(

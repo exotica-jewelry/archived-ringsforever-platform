@@ -92,7 +92,7 @@ function trf_ring_type_field_default_fields() {
           'apply_chosen' => 1,
         ),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -186,7 +186,7 @@ function trf_ring_type_field_default_fields() {
           'apply_chosen' => 0,
         ),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -269,7 +269,7 @@ function trf_ring_type_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -356,7 +356,79 @@ function trf_ring_type_field_default_fields() {
           'apply_chosen' => 1,
         ),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '6',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-rings-field_price_base'.
+  $fields['node-rings-field_price_base'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_price_base',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'currency_price' => array(
+          0 => 'amount',
+          1 => 'currency_code',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'commerce_price',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'commerce_price',
+    ),
+    'field_instance' => array(
+      'bundle' => 'rings',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
+        ),
+        'product_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'reference_view' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'no_wrapper',
+      'field_name' => 'field_price_base',
+      'label' => 'Base price',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'commerce_price',
+        'settings' => array(
+          'currency_code' => 'default',
+        ),
+        'type' => 'commerce_price_full',
+        'weight' => '1',
       ),
     ),
   );
@@ -470,7 +542,7 @@ function trf_ring_type_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -577,7 +649,7 @@ function trf_ring_type_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -668,7 +740,7 @@ function trf_ring_type_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'autocomplete_deluxe_taxonomy',
-        'weight' => '8',
+        'weight' => '9',
       ),
     ),
   );
@@ -759,7 +831,7 @@ function trf_ring_type_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'autocomplete_deluxe_taxonomy',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -868,11 +940,13 @@ function trf_ring_type_field_default_fields() {
   // Included for use with string extractors like potx.
   t('<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.</p>');
   t('<p>Select the dominant color in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal.</p>');
+  t('Base price');
   t('Collection');
   t('Color');
   t('Description');
   t('Elements');
   t('Enter <strong>one</strong> tag for this ring\'s primary element.');
+  t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
   t('Enter tags identifying various secondary elements. For example: gold, platinum, diamonds.');
   t('Featured category');
   t('Primary element');
