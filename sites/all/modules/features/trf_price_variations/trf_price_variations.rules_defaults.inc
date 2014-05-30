@@ -9,7 +9,7 @@
  */
 function trf_price_variations_default_rules_configuration() {
   $items = array();
-  $items['rules_price_variations'] = entity_import('rules_config', '{ "rules_price_variations" : {
+  $items['rules_price_variations_update'] = entity_import('rules_config', '{ "rules_price_variations_update" : {
       "LABEL" : "Update prices on variations",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
@@ -28,14 +28,14 @@ function trf_price_variations_default_rules_configuration() {
             "USING" : { "list" : [ "node:field-product" ] },
             "ITEM" : { "list_item" : "Current list item" },
             "DO" : [
-              { "component_rules_price_variations_set" : { "commerce_product" : [ "list-item" ], "product_display" : [ "node" ] } }
+              { "component_rules_price_variations_create" : { "commerce_product" : [ "list-item" ], "product_display" : [ "node" ] } }
             ]
           }
         }
       ]
     }
   }');
-  $items['rules_price_variations_set'] = entity_import('rules_config', '{ "rules_price_variations_set" : {
+  $items['rules_price_variations_create'] = entity_import('rules_config', '{ "rules_price_variations_create" : {
       "LABEL" : "Create prices for variations",
       "PLUGIN" : "rule",
       "OWNER" : "rules",
@@ -77,7 +77,7 @@ function trf_price_variations_default_rules_configuration() {
       ]
     }
   }');
-  $items['rules_price_12mm_rings'] = entity_import('rules_config', '{ "rules_price_12mm_rings" : {
+  $items['rules_ring_width_12mm_price'] = entity_import('rules_config', '{ "rules_ring_width_12mm_price" : {
       "LABEL" : "Price 12mm rings",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
