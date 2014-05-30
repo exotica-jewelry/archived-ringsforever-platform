@@ -39,6 +39,11 @@ abstract class RulesConditionalContainer extends RulesContainerPlugin implements
     }
   }
 
+  public function destroy() {
+    $this->fluentElement = NULL;
+    parent::destroy();
+  }
+
   /**
    * Adds an action to the active fluent statement.
    *
