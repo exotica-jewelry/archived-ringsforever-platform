@@ -9,8 +9,8 @@
  */
 function trf_price_variations_default_rules_configuration() {
   $items = array();
-  $items['rules_price_variations'] = entity_import('rules_config', '{ "rules_price_variations" : {
-      "LABEL" : "Commerce Product: Update variation prices",
+  $items['rules_price_variations'] = entity_import('rules_config', '{ "rules_price_variations_update" : {
+      "LABEL" : "Update prices on variations",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "TAGS" : [ "Commerce Product" ],
@@ -28,15 +28,15 @@ function trf_price_variations_default_rules_configuration() {
             "USING" : { "list" : [ "node:field-product" ] },
             "ITEM" : { "list_item" : "Current list item" },
             "DO" : [
-              { "component_rules_price_variations_set" : { "commerce_product" : [ "list-item" ], "product_display" : [ "node" ] } }
+              { "component_rules_price_variations_create" : { "commerce_product" : [ "list-item" ], "product_display" : [ "node" ] } }
             ]
           }
         }
       ]
     }
   }');
-  $items['rules_price_variations_set'] = entity_import('rules_config', '{ "rules_price_variations_set" : {
-      "LABEL" : "Commerce Product: Set variation prices",
+  $items['rules_price_variations_set'] = entity_import('rules_config', '{ "rules_price_variations_create" : {
+      "LABEL" : "Create prices for variations",
       "PLUGIN" : "rule",
       "OWNER" : "rules",
       "REQUIRES" : [ "rules" ],
