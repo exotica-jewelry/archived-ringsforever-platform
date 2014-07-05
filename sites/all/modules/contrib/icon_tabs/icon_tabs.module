@@ -185,9 +185,6 @@ function icon_tabs_preprocess_html(&$variables) {
       // Adds the default icon font to the page if it is to be used.
       _icon_tabs_add_font();
 
-      // Add general icon tabs css file.
-      drupal_add_css(drupal_get_path('module', 'icon_tabs') . '/css/icon-tabs.css');
-
       // If the Fred Tabs theme is enabled.
       if (variable_get('icon_tabs_fred_tabs_theme', 0)) {
         drupal_add_css(drupal_get_path('module', 'icon_tabs') . '/css/fred-tabs-theme.css');
@@ -242,10 +239,9 @@ function icon_tabs_preprocess_html(&$variables) {
         $media = ($vertical_width > 0) ? '(min-width: ' . $vertical_width . 'px)' : 'screen';
         // Add the vertical styles to the page.
         drupal_add_css($css, array(
-          'group' => CSS_THEME,
+          'group' => CSS_DEFAULT,
           'type' => 'inline',
           'media' => $media,
-          'preprocess' => FALSE,
           'weight' => '9999',
         ));
       }
@@ -260,10 +256,8 @@ function icon_tabs_preprocess_html(&$variables) {
             drupal_add_css(
               'body ul.tabs li a:after {content: "\\' . $tab['code'] . '"}',
               array(
-                'group' => CSS_THEME,
+                'group' => CSS_DEFAULT,
                 'type' => 'inline',
-                'media' => 'screen',
-                'preprocess' => FALSE,
                 'weight' => '9999',
               )
             );
@@ -272,10 +266,8 @@ function icon_tabs_preprocess_html(&$variables) {
             drupal_add_css(
               'body ul.tabs li a.' . $key . ':after {content: "\\' . $tab['code'] . '"}',
               array(
-                'group' => CSS_THEME,
+                'group' => CSS_DEFAULT,
                 'type' => 'inline',
-                'media' => 'screen',
-                'preprocess' => FALSE,
                 'weight' => '9999',
               )
             );
@@ -297,23 +289,22 @@ function icon_tabs_preprocess_html(&$variables) {
  */
 function _icon_tabs_add_font() {
   $css = '';
+  $css_name = 'icontabs';
+
   if (!variable_get('icon_tabs_custom_icon_font', 0)) {
-    // No need to add on admin pages as font is already declared.
-    if (!path_is_admin(current_path())) {
-      // Path to the icon tabs module.
-      $module_path = drupal_get_path('module', 'icon_tabs');
-      // The css for declaring the default icon font.
-      $css .= "@font-face {\n
-        font-family: 'icontabs';\n
-        src: url('/" . $module_path . "/font/icontabs.eot');\n
-        src: url('/" . $module_path . "/font/icontabs.eot#iefix') format('embedded-opentype'),\n
-          url('/" . $module_path . "/font/icontabs.ttf') format('truetype'),\n
-          url('/" . $module_path . "/font/icontabs.woff) format('woff'),\n
-          url('/" . $module_path . "/font/icontabs.svg#fredtabs') format('svg');\n
-        font-weight: normal;\n
-        font-style: normal;\n
-      }";
-    }
+    // Path to the icon tabs module.
+    $module_path = drupal_get_path('module', 'icon_tabs');
+    // The css for declaring the default icon font.
+    $css .= '@font-face {
+      font-family: "icontabs";
+      src: url("/' . $module_path . 'font/icontabs.eot");
+      src: url("/' . $module_path . '/font/icontabs.eot#iefix") format("embedded-opentype"),
+        url("/' . $module_path . '/font/icontabs.ttf") format("truetype"),
+        url("/' . $module_path . '/font/icontabs.woff") format("woff"),
+        url("/' . $module_path . '/font/icontabs.svg#fredtabs") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }';
   }
   else {
     // Get the CSS name and svg of the custom font.
@@ -327,40 +318,52 @@ function _icon_tabs_add_font() {
       $file = $path_info['dirname'] . '/' . $path_info['filename'];
 
       // Begin the font stack.
-      $css .= "@font-face {\nfont-family: '" . $css_name . "';src: ";
+      $css .= '@font-face {
+        font-family: "' . $css_name . '";src: ';
 
       // If there are other font files with the same name.
       if (file_exists($file . '.eot')) {
-        $css .= "url('/" . $file . ".eot');\n
-          src: url('/" . $file . ".eot#iefix') format('embedded-opentype'),\n";
+        $css .= 'url("/' . $file . '.eot");
+          src: url("/' . $file . '.eot#iefix") format("embedded-opentype"),';
       }
       if (file_exists($file . '.ttf')) {
-        $css .= "url('/" . $file . ".ttf') format('truetype'),\n";
+        $css .= 'url("/' . $file . '.ttf") format("truetype"),';
       }
       if (file_exists($file . '.woff')) {
-        $css .= "url('/" . $file . ".woff') format('woff'),\n";
+        $css .= 'url("/' . $file . '.woff") format("woff"),';
       }
 
       // Finish the font stack.
-      $css .= "url('/" . $svg_file . "#customfont') format('svg');\n
-        font-weight: normal;\n
-        font-style: normal;\n
-      }";
+      $css .= 'url("/' . $svg_file . '#customfont") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }';
     }
-    // Apply the other font to the things that need it.
-    $css .= "#edit-icons .selected-icon,
-      body .icon-cell,
-      body ul.tabs li a:after {
-        font-family: '" . $css_name . "' !important;'
-      }";
   }
+
+  // Apply the other font to the things that need it.
+  $css .= "body ul.tabs li a:after {
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-left: 10px;
+    }
+    body ul.tabs li a:after,
+    .icon-selector-default-icon,
+    #icon-dialog .icon-wrapper,
+    body .icon-cell,
+    body ul.tabs li a:after {
+      font-family: '" . $css_name . "' !important;'
+    }";
 
   // Add the font css to the page.
   drupal_add_css($css, array(
     'group' => CSS_THEME,
     'type' => 'inline',
-    'media' => 'screen',
-    'preprocess' => FALSE,
     'weight' => '9999',
   ));
 }

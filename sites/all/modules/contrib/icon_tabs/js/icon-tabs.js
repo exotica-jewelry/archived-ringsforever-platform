@@ -1,47 +1,54 @@
-/**
- * @file
- * Attaches behaviors for the Icon Tabs.
- */
-
 (function ($) {
 
-/**
- * Attaches behaviour for icon tabs icon select.
- */
-Drupal.behaviors.iconTabs = {
-  attach: function (context) {
-    speed = 200;
+  Drupal.behaviors.iconSelector = {
+    attach: function (context) {
+      var $iconDialog = $("#icon-dialog");
 
-    $('#edit-icons .form-item input').each(function() {
-      if ($(this).attr('value') != '') {
-        iconCode = $(this).attr('value');
-        icon = $(this).closest('.icon-select-wrapper').find('#' + iconCode).html();
+      $('.icon-input').hide();
 
-        $(this).closest('.icon-select-wrapper').find('input.selected-icon').val(icon).attr('title', iconCode)
-      }
-    });
+      $iconDialog.once('icon-selector', function() {
+        // Dialog settings.
+        $(this).dialog({
+          autoOpen: false,
+          width: $(window).width() * 0.8,
+          height: $(window).height() * 0.8
+        });
+      });
 
-    $('#edit-icons input').focus(function() {
-      $(this).closest('.icon-select-wrapper').find('table').fadeIn(speed);
-    });
-    $('#edit-icons input').blur(function() {
-      $(this).closest('.icon-select-wrapper').find('table').fadeOut(speed);
-    });
-    $('#edit-icons .icon-clear').click(function(e) {
-      e.preventDefault();
-      $(this).closest('.icon-select-wrapper').find('input').val('');
-      $(this).closest('.icon-select-wrapper').find('input.selected-icon').val('').attr('title', '');
-    });
+      // Button to open icon select dialog.
+      $(".icon-dialog-opener, .icon-selector-default-icon").click(function(e) {
+        e.preventDefault();
 
-    $('#edit-icons table td').click(function() {
-      iconCode = $(this).attr('id');
-      icon = $(this).html();
-      $(this).closest('.icon-select-wrapper').find('.form-item input').val(iconCode);
-      $(this).closest('.icon-select-wrapper').find('input.selected-icon').val(icon).attr('title', iconCode);
-      $(this).closest('.icon-select-wrapper').find('table').fadeOut(speed);
-    });
+        // Get the correct select menu and default icon slot.
+        $iconInput = $(this).siblings('.form-item').find('.icon-input');
+        $defaultSlot = $(this).parent().find('.icon-selector-default-icon');
 
+        // Open the dialog.
+        $iconDialog.dialog('open');
+      });
+
+      // When an icon is selected.
+      $('.icon-wrapper').click(function() {
+        // Get the correct option key from the icon.
+        var option = $(this).data("option");
+
+        // Update the default icon slot with the new icon.
+        $defaultSlot.empty();
+        $defaultSlot.append($(this).text());
+
+        // Update the select menu and close the dialog.
+        $iconInput.val(option);
+        $iconDialog.dialog('close');
+
+      });
+
+      $('#edit-icons .icon-clear').click(function(e) {
+        e.preventDefault();
+        $(this).siblings('.form-item').find('.icon-input').val('');
+        $(this).siblings('.icon-selector-default-icon').empty();
+      });
+
+    }
   }
-}
 
 })(jQuery);

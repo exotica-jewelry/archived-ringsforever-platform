@@ -128,19 +128,6 @@ function icon_tabs_admin() {
   // Get the current list of tabs that we know about.
   $tab_classes = _icon_tabs_get_tab_classes();
 
-  // Placeholder input displays the icon. The actual form input holds the
-  // icon code value which is what is actually stored but not displayed to
-  // the user.
-  $icon_input = theme('textfield', array(
-    'element' => array(
-      '#size' => 1,
-      '#autocomplete_path' => FALSE,
-      '#attributes' => array(
-        'type' => 'text',
-        'class' => array('selected-icon'),
-        'readonly' => TRUE,
-      ),
-    )));
   // Clear input link.
   $clear_link = l(t('Clear'), '', array(
     'attributes' => array(
@@ -175,8 +162,9 @@ function icon_tabs_admin() {
         '#type' => 'textfield',
         '#title' => $tab['title'] . ' (' . $key . ')',
         '#default_value' => $tab['code'],
+        '#attributes' => array('class' => array('icon-input')),
         '#prefix' => '<div class="icon-select-wrapper">',
-        '#suffix' => $icon_input . $clear_link . _icon_tabs_generate_icon_table() . '</div>',
+        '#suffix' => _icon_tabs_generate_icon_dialog($tab['code']) . $clear_link . '</div>',
       );
     }
     else {
@@ -185,8 +173,9 @@ function icon_tabs_admin() {
         '#title' => $tab['title'] . ' (' . $key . ')',
         '#weight' => 2,
         '#default_value' => $tab['code'],
+        '#attributes' => array('class' => array('icon-input')),
         '#prefix' => '<div class="icon-select-wrapper">',
-        '#suffix' => $icon_input . $clear_link . _icon_tabs_generate_icon_table() . '</div>',
+        '#suffix' => _icon_tabs_generate_icon_dialog($tab['code']) . $clear_link . '</div>',
       );
     }
   }
@@ -211,6 +200,7 @@ function icon_tabs_admin() {
   // Add CSS and JS to admin page to allow display of icons table.
   $form['#attached']['css'] = array(drupal_get_path('module', 'icon_tabs') . '/css/icon-tabs-admin.css');
   $form['#attached']['js'] = array(drupal_get_path('module', 'icon_tabs') . '/js/icon-tabs.js');
+  $form['#attached']['library'] = array(array('system', 'ui.dialog'));
 
   // Custom submit and validate handlers to update icon codes.
   $form['#submit'][] = '_icon_tabs_admin_submit';
@@ -288,44 +278,40 @@ function _icon_tabs_admin_submit($form, &$form_state) {
 /**
  * Custom function to generate table of icons.
  */
-function _icon_tabs_generate_icon_table() {
-  // Desired number of cells per row.
-  $cells = 20;
-
+function _icon_tabs_generate_icon_dialog($selected) {
   // Get the icon array.
   $icons = _icon_tabs_get_icons();
 
-  $count = $cells;
-  // Go through icon array and generate table rows.
-  foreach ($icons as $icon) {
-    if ($count == $cells) {
-      $rows[] = array(
-        'data' => array(
-          array(
-            'data' => $icon['icon'],
-            'class' => 'icon-cell',
-            'id' => $icon['code'],
-          ),
-        ),
-      );
-      $count = 1;
-    }
-    else {
-      // Work out last row.
-      $keys = array_keys($rows);
-      $last = end($keys);
+ // Used to ensure dialog is only rendered once.
+  $static = &drupal_static('icon_dialog_rendered');
 
-      $rows[$last]['data'][] = array(
-        'data' => $icon['icon'],
-        'title' => $icon['code'],
-        'class' => 'icon-cell',
-        'id' => $icon['code'],
-      );
+  $default = isset($icons[$selected]) ? $icons[$selected]['icon'] : '';
 
-      $count++;
+  $return = '<div class="icon-selector-default-icon">' . $default . '</div>';
+  $icon_selection = '';
+
+  // Add the dialog if it has not already been rendered.
+  if (!isset($static['dialog_rendered'])) {
+    foreach ($icons as $icon) {
+      $icon_selection[] = array(
+        '#type' => 'markup',
+        '#markup' => $icon['icon'],
+        '#prefix' => '<span class="icon-wrapper" data-option="' . $icon['code'] . '">',
+        '#suffix' => '</span>',
+      );
     }
+
+    // Generate the dialog wrapper and filter input.
+    $return .= '<div id="icon-dialog">';
+    $return .= render($icon_selection) . '</div>';
+
+    // Set this to show that the dialog has already been rendered.
+    $static['dialog_rendered'] = TRUE;
   }
+  // Add the dialog opener button.
+  $return .= '<a class="icon-dialog-opener button">Select Icon</a>';
 
-  // Return rendered table of icons.
-  return theme('table', array('rows' => $rows));
+  return $return;
 }
+
+

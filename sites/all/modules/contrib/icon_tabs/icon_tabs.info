@@ -5,9 +5,9 @@ package = User interface
 
 configure = admin/config/user-interface/fred-tabs
 
-; Information added by Drupal.org packaging script on 2014-05-07
-version = "7.x-1.4+1-dev"
+; Information added by Drupal.org packaging script on 2014-06-09
+version = "7.x-1.5"
 core = "7.x"
 project = "icon_tabs"
-datestamp = "1399463928"
+datestamp = "1402311231"
 

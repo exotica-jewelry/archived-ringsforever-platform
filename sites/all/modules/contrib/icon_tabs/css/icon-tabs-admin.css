@@ -1,73 +1,23 @@
 /**
  * Admin styles.
  */
-@font-face {
-  font-family: 'icontabs';
-  src: url('../font/icontabs.eot?-dunsiv');
-  src: url('../font/icontabs.eot?#iefix-dunsiv') format('embedded-opentype'),
-    url('../font/icontabs.ttf?-dunsiv') format('truetype'),
-    url('../font/icontabs.woff?-dunsiv') format('woff'),
-    url('../font/icontabs.svg?-dunsiv#fredtabs') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-#edit-icons .selected-icon {
-  font-family: 'icontabs';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
-  width: 1.2em;
-  line-height: 1.2em;
+.icon-selector-default-icon,
+#icon-dialog .icon-wrapper {
+  padding: 10px;
+  margin: 3px;
+  background: #ddd;
   text-align: center;
-}
-body .icon-cell {
-  font-family: 'icontabs';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
-  padding: 5px;
-}
-#edit-icons .fieldset-wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#edit-icons .icon-select-wrapper {
-  position: relative;
-  width: 50%;
-  float: left;
-  min-width: 420px;
-}
-#edit-icons .icon-clear {
-  vertical-align: middle;
-}
-#edit-icons input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 40px;
+  height: 40px;
+  line-height: 20px;
   cursor: pointer;
+}
+.icon-selector-default-icon {
   vertical-align: middle;
-  margin-right: 5px;
-}
-#edit-icons .form-item input {
-  display: none;
-}
-#edit-icons table {
-  display: none;
-  width: 327px;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  margin-top: -1px;
-  z-index: 100;
-}
-#edit-icons table td {
-  cursor: pointer;
 }
