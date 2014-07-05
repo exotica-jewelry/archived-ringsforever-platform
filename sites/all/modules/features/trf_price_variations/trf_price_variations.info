@@ -1,9 +1,9 @@
 name = TRF price variation rules
 description = Uses rules to take a product base price and set variation prices automatically.
 core = 7.x
-package = Exotica Jewelry
+package = TRF Store
 php = 5.2.4
-version = 7.x-0.10
+version = 7.x-0.11
 project = trf_price_variations
 dependencies[] = commerce
 dependencies[] = commerce_price

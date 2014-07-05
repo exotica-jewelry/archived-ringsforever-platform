@@ -1,9 +1,9 @@
 name = TRF ring product variation
 description = Ring (product) variation type, fields and display.
 core = 7.x
-package = Exotica Jewelry
+package = TRF Products
 php = 5.2.4
-version = 7.x-0.4
+version = 7.x-0.5
 project = trf_ring_variation
 dependencies[] = cloud_zoom
 dependencies[] = commerce_autosku

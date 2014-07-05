@@ -1,8 +1,8 @@
 name = TRF store shipping
 description = Sets shipping rates. At this time the associated rules cannot be exported (see issue #1402762).
 core = 7.x
-package = Exotica Jewelry
-version = 7.x-0.2
+package = TRF Store
+version = 7.x-0.3
 project = trf_store_shipping
 dependencies[] = commerce_features
 dependencies[] = commerce_flat_rate
