@@ -1,0 +1,14 @@
+name = TRF site images
+description = Settings for core Drupal image forms and displays.
+core = 7.x
+package = TRF Site
+version = 7.x-0.1
+project = trf_site_images
+dependencies[] = ds
+dependencies[] = trf_ring_taxonomies
+features[ctools][] = ds:ds:1
+features[ds_layout_settings][] = file|image|form
+features[features_api][] = api:1
+features[field][] = file-image-field_file_image_alt_text
+features[field][] = file-image-field_file_image_ring_width
+features[field][] = file-image-field_file_image_title_text
