@@ -1,0 +1,16 @@
+name = Titanium Rings Forever Admin
+description = A subtheme of Commerce Kickstart Admin Theme with some minor customizations.
+core = 7.x
+version = "7.x-0.1"
+base theme  = commerce_kickstart_admin
+
+stylesheets[screen][] = css/overrides.css
+
+settings[shortcut_module_link] = 1
+regions[content] = Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[sidebar_first] = First sidebar
+regions[footer] = Footer
+regions_hidden[] = sidebar_first

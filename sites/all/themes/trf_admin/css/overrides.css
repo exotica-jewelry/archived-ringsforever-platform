@@ -1,0 +1,9 @@
+
+/* 
+ * Hide variation price field, because we set it based on the "base price" 
+ * field in the parent product using rules.
+ */
+
+#edit-field-product-und-form-commerce-price {
+	display: none;
+}
