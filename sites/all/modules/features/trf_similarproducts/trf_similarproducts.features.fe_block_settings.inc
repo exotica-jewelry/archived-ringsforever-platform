@@ -21,16 +21,16 @@ function trf_similarproducts_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'commerce_kickstart_admin' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'commerce_kickstart_admin',
-        'weight' => '0',
-      ),
       'commerce_kickstart_theme' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'commerce_kickstart_theme',
+        'weight' => '-30',
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
         'weight' => '-30',
       ),
     ),
@@ -47,17 +47,17 @@ function trf_similarproducts_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'commerce_kickstart_admin' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'commerce_kickstart_admin',
-        'weight' => '0',
-      ),
       'commerce_kickstart_theme' => array(
         'region' => 'content',
         'status' => '1',
         'theme' => 'commerce_kickstart_theme',
         'weight' => '-31',
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => '-36',
       ),
     ),
     'title' => '',
@@ -73,16 +73,16 @@ function trf_similarproducts_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'commerce_kickstart_admin' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'commerce_kickstart_admin',
-        'weight' => '0',
-      ),
       'commerce_kickstart_theme' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'commerce_kickstart_theme',
+        'weight' => '-29',
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
         'weight' => '-29',
       ),
     ),
