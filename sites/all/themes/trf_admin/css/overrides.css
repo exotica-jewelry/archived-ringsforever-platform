@@ -4,6 +4,6 @@
  * field in the parent product using rules.
  */
 
-#edit-field-product-und-form-commerce-price {
+.ief-form .field-type-commerce-price {
 	display: none;
 }
