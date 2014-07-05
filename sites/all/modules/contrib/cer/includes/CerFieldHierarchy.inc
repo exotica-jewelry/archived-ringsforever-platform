@@ -107,18 +107,18 @@ class CerFieldHierarchy implements Countable {
     }
 
     $field_key = "{$bundle_key}:{$field->name}";
-    $this->add($field_key, $field->instanceInfo('label'), $bundle_key);
+    $this->add($field_key, $field->label, $bundle_key);
   }
 
   public function addChain(CerFieldChain $chain) {
     $parents = array();
 
     foreach ($chain as $field) {
-      if ($field->pluginInfo('require parent')) {
+      if ($field->plugin['require parent']) {
         $parent_key = implode('::', $parents);
         $field_key = "{$parent_key}::{$field}";
 
-        $this->add($field_key, $field->instanceInfo('label'), $parent_key);
+        $this->add($field_key, $field->label, $parent_key);
       }
       else {
         $this->addField($field);

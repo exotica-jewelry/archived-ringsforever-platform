@@ -12,9 +12,7 @@
  * that's what this returns.
  */ 
 function cer_get_cer_struct($entity, array $options, $property, $entity_type, array $info) {
-  return array(
-    $entity_type, $entity,
-  );
+  return array( $entity_type, $entity );
 }
 
 /**
@@ -66,20 +64,22 @@ function cer_get_field_collection_lineage(array $data, array $options, $property
  * Gets a field collection's lineage as an array.
  */
 function cer_get_field_collection_lineage_array(array $data, array $options, $property, $data_type, array $info) {
+  $collection = $data[1];
+
+  // If this is the innermost entity, $options['lineage'] will be empty.
   if (! isset($options['lineage'])) {
-    $options['lineage'] = array( 'field_collection_item:' . $data[1]->field_name . ':' );
+    $options['lineage'][] = "field_collection_item:{$collection->field_name}:";
   }
 
-  $host_type = $data[1]->hostEntityType();
-  $host = $data[1]->hostEntity();
-  list(, , $host_bundle) = entity_extract_IDs($host_type, $host);
-  array_unshift($options['lineage'], "{$host_type}:{$host_bundle}:" . $data[1]->field_name);
+  $data[0] = $collection->hostEntityType();
+  $data[1] = $collection->hostEntity();
+  list (, , $host_bundle) = entity_extract_IDs($data[0], $data[1]);
+  array_unshift($options['lineage'], $data[0] . ":{$host_bundle}:{$collection->field_name}");
 
   // If this field collection is hosted in another field collection, recurse upwards.
-  // Otherwise, return the lineage array.
-  if ($host_type == 'field_collection_item') {
-    $self = __FUNCTION__;
-    return $self($data, $options, $property, $data_type, $info);
+  // Otherwise, we're done; return the lineage array.
+  if ($data[0] == 'field_collection_item') {
+    return cer_get_field_collection_lineage_array($data, $options, $property, $data_type, $info);
   }
   else {
     return $options['lineage'];

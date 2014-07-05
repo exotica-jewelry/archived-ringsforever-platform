@@ -23,9 +23,9 @@ files[] = includes/fields/node_reference.inc
 files[] = includes/fields/taxonomy_term_reference.inc
 files[] = includes/fields/user_reference.inc
 
-; Information added by Drupal.org packaging script on 2014-04-15
-version = "7.x-3.0-alpha4"
+; Information added by Drupal.org packaging script on 2014-05-25
+version = "7.x-3.0-alpha5"
 core = "7.x"
 project = "cer"
-datestamp = "1397521154"
+datestamp = "1401055728"
 

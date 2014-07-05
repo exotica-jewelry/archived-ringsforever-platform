@@ -14,11 +14,18 @@ class CerProfile2Field extends CerField implements CerEntityContainerInterface {
   /**
    * @override CerField::__construct().
    */
-  public function __construct($entity_type, $bundle, $field) {
-    parent::__construct($entity_type, $bundle, $field);
+  public function __construct(array $plugin) {
+    $this->plugin = $plugin;
+    list ($this->entityType, $this->bundle, $this->name) = explode(':', $plugin['identifier']);
+
+    $this->fieldTypeLabel = t('Profile');
 
     // Load the Profile2 type information
-    $this->profileType = profile2_get_types(subStr($field, 8));
+    $this->profileType = profile2_get_types(subStr($this->name, 8));
+    $this->label = $this->profileType->label;
+
+    // A user account can only have one profile of this type.
+    $this->cardinality = 1;
   }
 
   /**
@@ -39,35 +46,13 @@ class CerProfile2Field extends CerField implements CerEntityContainerInterface {
   }
 
   /**
-   * @override CerField::fieldTypeInfo().
-   */
-  public function fieldTypeInfo() {
-    // Profile2 'fields' aren't really fields, so I'll only provide the information
-    // that I know is used by CER's core.
-    $info = array(
-      'label' => t('Profile2'),
-    );
-    return drupal_array_get_nested_value($info, func_get_args());
-  }
-
-  /**
    * @override CerField::fieldInfo().
    */
   public function fieldInfo() {
     $info = array(
-      'field_name' => $this->field,
+      'field_name' => $this->name,
       // Each user account can only have one profile of each type.
       'cardinality' => 1,
-    );
-    return drupal_array_get_nested_value($info, func_get_args());
-  }
-
-  /**
-   * @override CerField::instanceInfo().
-   */
-  public function instanceInfo() {
-    $info = array(
-      'label' => $this->profileType->label,
     );
     return drupal_array_get_nested_value($info, func_get_args());
   }

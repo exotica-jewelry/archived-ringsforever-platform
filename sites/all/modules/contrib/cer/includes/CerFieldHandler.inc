@@ -136,14 +136,7 @@ class CerFieldHandler implements Countable, SeekableIterator {
    * @return boolean
    */
   protected function checkCardinality() {
-    $cardinality = $this->field->fieldInfo('cardinality');
-
-    if ($cardinality == FIELD_CARDINALITY_UNLIMITED) {
-      return TRUE;
-    }
-    else {
-      return ($cardinality > $this->count());
-    }
+    return ($this->field->cardinality == FIELD_CARDINALITY_UNLIMITED ? TRUE : ($this->field->cardinality > $this->count()));
   }
 
   protected function write() {
@@ -168,22 +161,32 @@ class CerFieldHandler implements Countable, SeekableIterator {
   protected function logError($message, EntityDrupalWrapper $entity = NULL) {
     $variables = array(
       '!field_name' => $this->field->name,
-      '!field_type' => $this->field->fieldTypeInfo('label'),
-      '!field_label' => $this->field->instanceInfo('label'),
+      '!field_type' => $this->field->fieldTypeLabel,
+      '!field_label' => $this->field->label,
     );
 
     $variables['!this_type'] = $this->entity->type();
     $variables['!this_label'] = $this->entity->label();
 
-    $variables['!this_url'] = $this->entity->url->value();
-    $variables['!this_link'] = '<a href="' . $variables['!this_url'] . '">' . $variables['!this_label'] . '</a>';
+    if ($this->entity->getPropertyInfo('url')) {
+      $variables['!this_url'] = $this->entity->url->value();
+      $variables['!this_link'] = '<a href="' . $variables['!this_url'] . '">' . $variables['!this_label'] . '</a>';
+    }
+    else {
+      $variables['!this_link'] = $variables['!this_label'];
+    }
 
     if ($entity) {
       $variables['!that_type'] = $entity->type();
       $variables['!that_label'] = $entity->label();
 
-      $variables['!that_url'] = $entity->url->value();
-      $variables['!that_link'] = '<a href="' . $variables['!that_url'] . '">' . $variables['!that_label'] . '</a>';
+      if ($entity->getPropertyInfo('url')) {
+        $variables['!that_url'] = $entity->url->value();
+        $variables['!that_link'] = '<a href="' . $variables['!that_url'] . '">' . $variables['!that_label'] . '</a>';
+      }
+      else {
+        $variables['!that_link'] = $variables['!that_label'];
+      }
     }
 
     watchdog('cer', $message, $variables, WATCHDOG_ERROR);

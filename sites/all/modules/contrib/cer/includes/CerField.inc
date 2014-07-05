@@ -19,6 +19,12 @@
 abstract class CerField {
 
   /**
+   * @var array
+   * The plugin definition.
+   */
+  protected $plugin;
+
+  /**
    * @var string
    *  The entity type this instance is bound to.
    */
@@ -35,18 +41,34 @@ abstract class CerField {
    *  The internal name of the field.
    */
   protected $name;
-  
+
   /**
    * @var CerField
    *  The field instance which contains this one, if any.
    */
   protected $parent;
-  
+
   /**
    * @var CerField
    *  Field instance contained by this one, if any.
    */
   protected $child;
+
+  /**
+   * @var string
+   * The field instance's label.
+   */
+  protected $label;
+
+  /**
+   * @var integer
+   */
+  protected $cardinality;
+
+  /**
+   * @var string
+   */
+  protected $fieldTypeLabel;
 
   /**
    * Gets the type of entity that can be referenced by this field, e.g. 'node'.
@@ -58,10 +80,18 @@ abstract class CerField {
   /**
    * Constructor. Pretty self-explanatory!
    */
-  public function __construct($entityType, $bundle, $field) {
-    $this->entityType = $entityType;
-    $this->bundle = $bundle;
-    $this->name = $field;
+  public function __construct(array $plugin) {
+    $this->plugin = $plugin;
+    list ($this->entityType, $this->bundle, $this->name) = explode(':', $plugin['identifier']);
+
+    $fieldInfo = field_info_field($this->name);
+    $this->cardinality = $fieldInfo['cardinality'];
+
+    $fieldType = field_info_field_types($fieldInfo['type']);
+    $this->fieldTypeLabel = $fieldType['label'];
+
+    $instance = field_info_instance($this->entityType, $this->name, $this->bundle);
+    $this->label = $instance['label'];
   }
 
   /**
@@ -89,7 +119,7 @@ abstract class CerField {
    * @return CerFieldHandler
    */
   public function getHandler(EntityDrupalWrapper $entity) {
-    return new CerFieldHandler($this, $entity);
+    return new $this->plugin['handler']($this, $entity);
   }
 
   /**
@@ -101,7 +131,7 @@ abstract class CerField {
     $info = entity_get_info($this->getTargetType());
     return array_keys($info['bundles']);
   }
-  
+
   /**
    * Gets or sets the parent of this field.
    *
@@ -133,32 +163,6 @@ abstract class CerField {
   }
 
   /**
-   * Gets information about this particular plugin.
-   *
-   * @param [string...]
-   *  Array keys to fetch, or nothing to return all plugin info.
-   *
-   * @return mixed
-   */
-  public function pluginInfo() {
-    $info = self::getPluginInfo($this->__toString());
-    return drupal_array_get_nested_value($info, func_get_args());
-  }
-
-  /**
-   * Gets information about this field type.
-   *
-   * @param [string...]
-   *  Array keys to fetch, or nothing to return all field type info.
-   *
-   * @return mixed
-   */
-  public function fieldTypeInfo() {
-    $info = field_info_field_types($this->fieldInfo('type'));
-    return drupal_array_get_nested_value($info, func_get_args());
-  }
-
-  /**
    * Gets information about the entity type this field instance is bound to.
    *
    * @param [string...]
@@ -167,8 +171,12 @@ abstract class CerField {
    * @return mixed
    */
   public function entityInfo() {
+    // We can't pass func_get_args() directly into drupal_array_get_nested_value(),
+    // because PHP 5.2 and older will throw a fatal error. Ugh.
+    $keys = func_get_args();
     $info = entity_get_info($this->entityType);
-    return drupal_array_get_nested_value($info, func_get_args());
+
+    return drupal_array_get_nested_value($info, $keys);
   }
   
   /**
@@ -180,21 +188,11 @@ abstract class CerField {
    * @return mixed
    */
   public function fieldInfo() {
+    // See the comment in $this->entityInfo().
+    $keys = func_get_args();
     $info = field_info_field($this->name);
-    return drupal_array_get_nested_value($info, func_get_args());
-  }
 
-  /**
-   * Gets information about the field instance definition.
-   *
-   * @param [...]
-   *  The array keys to fetch, or nothing to fetch all instance info.
-   *
-   * @return mixed
-   */
-  public function instanceInfo() {
-    $info = field_info_instance($this->entityType, $this->name, $this->bundle);
-    return drupal_array_get_nested_value($info, func_get_args());
+    return drupal_array_get_nested_value($info, $keys);
   }
 
   /**
@@ -206,7 +204,7 @@ abstract class CerField {
   public function getLabel() {
     $label = '';
 
-    if (! $this->pluginInfo('require parent')) {
+    if (! $this->plugin['require parent']) {
       $label .= $this->entityInfo('label');
       $label .= ' &raquo; ';
 
@@ -215,7 +213,7 @@ abstract class CerField {
         $label .= ' &raquo; ';
       }
     }    
-    $label .= $this->instanceInfo('label');
+    $label .= $this->label;
 
     return $label;
   }
@@ -236,7 +234,7 @@ abstract class CerField {
 
     return $pipe;
   }
-  
+
   /**
    * Returns information about a particular field plugin, by its identifier, or all
    * available plugins (i.e., defined by hook_cer_fields()) if no identifier is given.
@@ -244,14 +242,20 @@ abstract class CerField {
    */
   public static function getPluginInfo($identifier = NULL) {
     $info = &drupal_static(__METHOD__);
-    
+
     if (! isset($info)) {
       $info = module_invoke_all('cer_fields');
 
-      foreach ($info as &$field) {
+      foreach ($info as $key => &$field) {
         $field += array(
-          'parents' => array(),
-          'require parent' => FALSE,
+          'identifier' =>
+            $key,
+          'parents' =>
+            array(),
+          'require parent' =>
+            FALSE,
+          'handler' =>
+            'CerFieldHandler',
         );
       }
       drupal_alter('cer_fields', $info);
@@ -282,7 +286,7 @@ abstract class CerField {
 
       $info = self::getPluginInfo($identifier);
       if ($info) {
-        $instances[$identifier] = new $info['class']($entity_type, $bundle, $field);
+        $instances[$identifier] = new $info['class']($info);
       }
       else {
         throw new Exception(t('Cannot get instance of invalid plugin %identifier.', array('%identifier' => $identifier)));

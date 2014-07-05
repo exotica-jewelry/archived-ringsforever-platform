@@ -30,9 +30,9 @@ features[taxonomy][] = tags
 project path = sites/all/modules/cer
 
 files[] = tests/CerInternals.test
-; Information added by Drupal.org packaging script on 2014-04-15
-version = "7.x-3.0-alpha4"
+; Information added by Drupal.org packaging script on 2014-05-25
+version = "7.x-3.0-alpha5"
 core = "7.x"
 project = "cer"
-datestamp = "1397521154"
+datestamp = "1401055728"
 
