@@ -3,7 +3,7 @@
 /**
  * Display only one image on product listings
  */
-function trf_admin_preprocess_node(&$variables) {
+function trf_admin_preprocess_node(&$variables)
 
 if(isset($variables['content']['product:field_images']) && !empty($variables['content']['product:field_images'])) {
 	if ($variables['content']['product:field_images']['#view_mode'] == 'node_product_list') {
@@ -16,4 +16,5 @@ if(isset($variables['content']['product:field_images']) && !empty($variables['co
 			}
 		}
 	}
+}
 }
