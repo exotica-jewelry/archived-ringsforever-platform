@@ -53,7 +53,10 @@ function trf_ring_type_field_default_fields() {
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
@@ -145,6 +148,8 @@ function trf_ring_type_field_default_fields() {
           'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'links' => 0,
             'view_mode' => 'add_to_cart_form',
           ),
@@ -227,7 +232,10 @@ function trf_ring_type_field_default_fields() {
         'default' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'text_default',
           'weight' => '2',
         ),
@@ -246,7 +254,10 @@ function trf_ring_type_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'text_default',
           'weight' => '2',
         ),
@@ -317,7 +328,10 @@ function trf_ring_type_field_default_fields() {
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '5',
         ),
@@ -473,6 +487,8 @@ function trf_ring_type_field_default_fields() {
           'settings' => array(
             'combine' => 1,
             'default_quantity' => '1',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'line_item_type' => 'product_discount',
             'show_quantity' => 0,
             'show_single_product_attributes' => 1,
@@ -486,6 +502,8 @@ function trf_ring_type_field_default_fields() {
           'settings' => array(
             'combine' => 1,
             'default_quantity' => '1',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'line_item_type' => 0,
             'show_quantity' => 1,
             'show_single_product_attributes' => FALSE,
@@ -497,6 +515,8 @@ function trf_ring_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'field_extractor',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'field_name' => '',
             'formatter' => '',
             'settings' => array(),
@@ -599,6 +619,8 @@ function trf_ring_type_field_default_fields() {
           'label' => 'above',
           'module' => 'entityreference',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'links' => 0,
             'view_mode' => 'reference_view',
           ),
@@ -697,7 +719,10 @@ function trf_ring_type_field_default_fields() {
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '6',
         ),
@@ -788,7 +813,10 @@ function trf_ring_type_field_default_fields() {
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '9',
         ),
@@ -875,6 +903,8 @@ function trf_ring_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'title',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'title_class' => '',
             'title_link' => 'content',
             'title_style' => '',
@@ -886,6 +916,8 @@ function trf_ring_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'title',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'title_class' => '',
             'title_link' => 'content',
             'title_style' => '',
@@ -903,6 +935,8 @@ function trf_ring_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'title',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'title_class' => '',
             'title_link' => 'content',
             'title_style' => '',
