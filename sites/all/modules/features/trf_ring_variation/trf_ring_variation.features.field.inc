@@ -40,26 +40,18 @@ function trf_ring_variation_field_default_fields() {
       'description' => 'Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.',
       'display' => array(
         'add_to_cart_confirmation_view' => array(
-          'label' => 'hidden',
-          'module' => 'commerce_price_decimals_formatter',
-          'settings' => array(
-            'calculation' => 'calculated_sell_price',
-            'currencies' => array(
-              'USD' => array(
-                'decimals' => '0',
-                'force' => 0,
-                'zero' => 0,
-              ),
-            ),
-          ),
-          'type' => 'commerce_price_decimals_formatter',
-          'weight' => '0',
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'commerce_line_item_display' => array(
           'label' => 'hidden',
           'module' => 'commerce_price',
           'settings' => array(
             'calculation' => 'calculated_sell_price',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
           ),
           'type' => 'commerce_price_formatted_amount',
           'weight' => 0,
@@ -69,24 +61,24 @@ function trf_ring_variation_field_default_fields() {
           'module' => 'commerce_price',
           'settings' => array(
             'calculation' => 'calculated_sell_price',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
           ),
           'type' => 'commerce_price_formatted_amount',
           'weight' => 0,
         ),
         'default' => array(
           'label' => 'hidden',
-          'module' => 'commerce_price_decimals_formatter',
+          'module' => 'commerce_extra_price_formatters',
           'settings' => array(
+            'alternative_text_for_zero_price' => '',
             'calculation' => 'calculated_sell_price',
-            'currencies' => array(
-              'USD' => array(
-                'decimals' => '0',
-                'force' => 0,
-                'zero' => 0,
-              ),
-            ),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'raw' => FALSE,
+            'text_format' => NULL,
           ),
-          'type' => 'commerce_price_decimals_formatter',
+          'type' => 'commerce_price_no_decimals',
           'weight' => '0',
         ),
         'full' => array(
@@ -94,58 +86,66 @@ function trf_ring_variation_field_default_fields() {
           'module' => 'commerce_price',
           'settings' => array(
             'calculation' => 'calculated_sell_price',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
           ),
           'type' => 'commerce_price_formatted_amount',
           'weight' => 0,
         ),
         'line_item' => array(
           'label' => 'hidden',
-          'module' => 'commerce_price_decimals_formatter',
+          'module' => 'commerce_extra_price_formatters',
           'settings' => array(
+            'alternative_text_for_zero_price' => '',
             'calculation' => 'calculated_sell_price',
-            'currencies' => array(
-              'USD' => array(
-                'decimals' => '0',
-                'force' => 0,
-                'zero' => 0,
-              ),
-            ),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'raw' => FALSE,
+            'text_format' => NULL,
           ),
-          'type' => 'commerce_price_decimals_formatter',
+          'type' => 'commerce_price_no_decimals',
           'weight' => '0',
         ),
         'node_full' => array(
           'label' => 'hidden',
-          'module' => 'commerce_price',
+          'module' => 'commerce_extra_price_formatters',
           'settings' => array(
+            'alternative_text_for_zero_price' => '',
             'calculation' => 'calculated_sell_price',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'raw' => FALSE,
+            'text_format' => NULL,
           ),
-          'type' => 'commerce_price_formatted_amount',
+          'type' => 'commerce_price_no_decimals',
           'weight' => '0',
         ),
         'node_product_list' => array(
           'label' => 'hidden',
-          'module' => 'commerce_price',
+          'module' => 'commerce_extra_price_formatters',
           'settings' => array(
-            'calculation' => 'calculated_sell_price',
+            'alternative_text_for_zero_price' => '',
+            'calculation' => TRUE,
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'raw' => 0,
+            'text_format' => 'filtered_html',
           ),
-          'type' => 'commerce_price_formatted_amount',
+          'type' => 'commerce_price_no_decimals',
           'weight' => '0',
         ),
         'node_reference_view' => array(
           'label' => 'hidden',
-          'module' => 'commerce_price_decimals_formatter',
+          'module' => 'commerce_extra_price_formatters',
           'settings' => array(
+            'alternative_text_for_zero_price' => '',
             'calculation' => 'calculated_sell_price',
-            'currencies' => array(
-              'USD' => array(
-                'decimals' => '0',
-                'force' => 0,
-                'zero' => 0,
-              ),
-            ),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'raw' => FALSE,
+            'text_format' => NULL,
           ),
-          'type' => 'commerce_price_decimals_formatter',
+          'type' => 'commerce_price_no_decimals',
           'weight' => '0',
         ),
         'node_rss' => array(
@@ -153,24 +153,24 @@ function trf_ring_variation_field_default_fields() {
           'module' => 'commerce_price',
           'settings' => array(
             'calculation' => 'calculated_sell_price',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
           ),
           'type' => 'commerce_price_formatted_amount',
           'weight' => 0,
         ),
         'node_teaser' => array(
           'label' => 'hidden',
-          'module' => 'commerce_price_decimals_formatter',
+          'module' => 'commerce_extra_price_formatters',
           'settings' => array(
+            'alternative_text_for_zero_price' => '',
             'calculation' => 'calculated_sell_price',
-            'currencies' => array(
-              'USD' => array(
-                'decimals' => '0',
-                'force' => 0,
-                'zero' => 0,
-              ),
-            ),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'raw' => FALSE,
+            'text_format' => NULL,
           ),
-          'type' => 'commerce_price_decimals_formatter',
+          'type' => 'commerce_price_no_decimals',
           'weight' => '2',
         ),
         'node_token' => array(
@@ -178,24 +178,24 @@ function trf_ring_variation_field_default_fields() {
           'module' => 'commerce_price',
           'settings' => array(
             'calculation' => 'calculated_sell_price',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
           ),
           'type' => 'commerce_price_formatted_amount',
           'weight' => 0,
         ),
         'product_in_cart' => array(
           'label' => 'hidden',
-          'module' => 'commerce_price_decimals_formatter',
+          'module' => 'commerce_extra_price_formatters',
           'settings' => array(
+            'alternative_text_for_zero_price' => '',
             'calculation' => 'calculated_sell_price',
-            'currencies' => array(
-              'USD' => array(
-                'decimals' => '0',
-                'force' => 0,
-                'zero' => 0,
-              ),
-            ),
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'raw' => FALSE,
+            'text_format' => NULL,
           ),
-          'type' => 'commerce_price_decimals_formatter',
+          'type' => 'commerce_price_no_decimals',
           'weight' => '0',
         ),
         'token' => array(
@@ -203,6 +203,8 @@ function trf_ring_variation_field_default_fields() {
           'module' => 'commerce_price',
           'settings' => array(
             'calculation' => 'calculated_sell_price',
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
           ),
           'type' => 'commerce_price_formatted_amount',
           'weight' => 0,
@@ -212,7 +214,7 @@ function trf_ring_variation_field_default_fields() {
       'fences_wrapper' => '',
       'field_name' => 'commerce_price',
       'label' => 'Price',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -264,15 +266,23 @@ function trf_ring_variation_field_default_fields() {
       'description' => 'Upload one or more images that should be displayed when this width is selected.',
       'display' => array(
         'add_to_cart_confirmation_view' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'field_multiple_limit' => '1',
+            'field_multiple_limit_offset' => '0',
+            'image_link' => '',
+            'image_style' => 'product_thumbnail',
+          ),
+          'type' => 'image',
           'weight' => '0',
         ),
         'default' => array(
           'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'image_link' => '',
             'image_style' => '',
           ),
@@ -289,6 +299,8 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'hidden',
           'module' => 'cloud_zoom',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'gallery_filedset' => array(
               'gallery_mode' => 1,
               'thumb_style' => 'product_thumbnail',
@@ -319,6 +331,8 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
+            'field_multiple_limit' => '1',
+            'field_multiple_limit_offset' => '0',
             'image_link' => 'content',
             'image_style' => 'product_medium',
           ),
@@ -329,6 +343,8 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
             'image_link' => 'content',
             'image_style' => 'product_thumbnail',
           ),
@@ -413,7 +429,7 @@ function trf_ring_variation_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -467,12 +483,15 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '0',
+          'weight' => '6',
         ),
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '3',
         ),
@@ -485,21 +504,30 @@ function trf_ring_variation_field_default_fields() {
         'node_full' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '3',
         ),
         'node_product_list' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '3',
         ),
         'node_reference_view' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '3',
         ),
@@ -586,12 +614,15 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '0',
+          'weight' => '5',
         ),
         'default' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
@@ -604,21 +635,30 @@ function trf_ring_variation_field_default_fields() {
         'node_full' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
         'node_product_list' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
         'node_reference_view' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
@@ -651,7 +691,7 @@ function trf_ring_variation_field_default_fields() {
           'apply_chosen' => 0,
         ),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '6',
       ),
     ),
   );
@@ -692,15 +732,25 @@ function trf_ring_variation_field_default_fields() {
       'description' => '',
       'display' => array(
         'add_to_cart_confirmation_view' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
+          'label' => 'hidden',
+          'module' => 'title',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'title_class' => '',
+            'title_link' => '',
+            'title_style' => 'h5',
+          ),
+          'type' => 'title_linked',
+          'weight' => '1',
         ),
         'default' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'text_default',
           'weight' => '0',
         ),
@@ -713,21 +763,30 @@ function trf_ring_variation_field_default_fields() {
         'node_full' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'text_default',
           'weight' => '0',
         ),
         'node_product_list' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'text_default',
           'weight' => '0',
         ),
         'node_reference_view' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'text_default',
           'weight' => '0',
         ),
