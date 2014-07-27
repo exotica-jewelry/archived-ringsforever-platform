@@ -60,6 +60,16 @@ function trf_ring_type_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '4',
+        ),
         'product_list' => array(
           'label' => 'above',
           'settings' => array(),
@@ -156,6 +166,18 @@ function trf_ring_type_field_default_fields() {
           'type' => 'entityreference_entity_view',
           'weight' => '11',
         ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'entityreference',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'links' => 0,
+            'view_mode' => 'add_to_cart_form',
+          ),
+          'type' => 'entityreference_entity_view',
+          'weight' => '11',
+        ),
         'product_list' => array(
           'label' => 'above',
           'settings' => array(),
@@ -230,6 +252,16 @@ function trf_ring_type_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
+          'type' => 'text_default',
+          'weight' => '2',
+        ),
+        'full' => array(
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(
@@ -335,6 +367,16 @@ function trf_ring_type_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '5',
         ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '5',
+        ),
         'product_list' => array(
           'label' => 'above',
           'settings' => array(),
@@ -403,6 +445,12 @@ function trf_ring_type_field_default_fields() {
       'description' => 'Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.',
       'display' => array(
         'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
+        ),
+        'full' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -482,16 +530,16 @@ function trf_ring_type_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'commerce_cart',
           'settings' => array(
             'combine' => 1,
             'default_quantity' => '1',
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-            'line_item_type' => 'product_discount',
+            'field_multiple_limit' => '-1',
+            'field_multiple_limit_offset' => '0',
+            'line_item_type' => 'product',
             'show_quantity' => 0,
-            'show_single_product_attributes' => 1,
+            'show_single_product_attributes' => 0,
           ),
           'type' => 'commerce_cart_add_to_cart_form',
           'weight' => '3',
@@ -502,11 +550,11 @@ function trf_ring_type_field_default_fields() {
           'settings' => array(
             'combine' => 1,
             'default_quantity' => '1',
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-            'line_item_type' => 0,
+            'field_multiple_limit' => '-1',
+            'field_multiple_limit_offset' => '0',
+            'line_item_type' => 'product',
             'show_quantity' => 1,
-            'show_single_product_attributes' => FALSE,
+            'show_single_product_attributes' => 0,
           ),
           'type' => 'commerce_cart_add_to_cart_form',
           'weight' => '5',
@@ -627,6 +675,18 @@ function trf_ring_type_field_default_fields() {
           'type' => 'entityreference_entity_view',
           'weight' => '12',
         ),
+        'full' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'links' => 0,
+            'view_mode' => 'reference_view',
+          ),
+          'type' => 'entityreference_entity_view',
+          'weight' => '12',
+        ),
         'product_list' => array(
           'label' => 'above',
           'settings' => array(),
@@ -717,6 +777,16 @@ function trf_ring_type_field_default_fields() {
       'description' => 'Enter tags identifying various secondary elements. For example: gold, platinum, diamonds.',
       'display' => array(
         'default' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '6',
+        ),
+        'full' => array(
           'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(
@@ -820,6 +890,16 @@ function trf_ring_type_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '9',
         ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '9',
+        ),
         'product_list' => array(
           'label' => 'above',
           'settings' => array(),
@@ -900,6 +980,19 @@ function trf_ring_type_field_default_fields() {
       'description' => '﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.',
       'display' => array(
         'default' => array(
+          'label' => 'hidden',
+          'module' => 'title',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'title_class' => '',
+            'title_link' => 'content',
+            'title_style' => '',
+          ),
+          'type' => 'title_linked',
+          'weight' => '0',
+        ),
+        'full' => array(
           'label' => 'hidden',
           'module' => 'title',
           'settings' => array(
