@@ -1,9 +1,0 @@
-name = Commerce-Coffee integration
-description = Provides rapid admin interface for Commerce using Coffee.
-core = 7.x
-package = Commerce
-dependencies[] = coffee
-dependencies[] = commerce
-version = "7.x-2.x-dev"
-core = "7.x"
-project = "commerce_coffee"
