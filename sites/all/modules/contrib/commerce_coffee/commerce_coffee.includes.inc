@@ -2,16 +2,20 @@
 
 /**
  * @file
- * Contains the code used by commerce_coffee_coffee_command().
+ * Sets up functionality of commerce_coffee_coffee_command().
  */
 
 /**
- * Switchboard. Returns specific command array.
+ * Switchboard: Returns specific command array.
+ * 
+ * Implements hook_coffee_commands().
  */
-function commerce_coffee_get_commands($op) {
-  $command = strstr($op, ' ', TRUE);
-  $param = drupal_substr($op, (drupal_strlen($command)) + 1, drupal_strlen($op));
-  switch ($command) {
+function commerce_coffee_coffee_commands() {
+  $commands = strstr($op, ' ', TRUE);
+  $param = drupal_substr($op, (drupal_strlen($commands)) + 1, 
+    drupal_strlen($op));
+
+  switch ($commands) {
     case 'u':
       return _commerce_coffee_getuser($param);
       break;
@@ -41,7 +45,7 @@ function _commerce_coffee_getuser($param) {
         'title' => t('View @user\'s user page', array('@user' => $s_user->name)),
       );
 
-      // Let's see if we can get the latest order...
+      // Check for the latest order.
       $query = new EntityFieldQuery();
 
       $query
@@ -63,7 +67,7 @@ function _commerce_coffee_getuser($param) {
 }
 
 /**
- * Retrieve products & displays for a given SKU.
+ * Retrieve products and displays for a given SKU.
  *
  * @param string $param
  * The parameter to use for search.
@@ -79,7 +83,7 @@ function _commerce_coffee_getsku($sku) {
       // If we found a product, we can try to find product displays.
       $product_display_types = _commerce_coffee_get_product_display_types(FALSE);
       if (!empty($product_display_types)) {
-        // Get all product reference fields
+        // Get all product reference fields.
         $product_fields = _commerce_coffee_get_product_reference_fields();
         $nodes_query = db_select('node', 'n');
         $field_conditions = db_and();
@@ -126,7 +130,7 @@ function _commerce_coffee_getorder($order_id) { {
     $return = array();
     if (is_numeric($order_id)) {
 
-      // Let's see if we can get the latest order...
+      // Check for the latest order.
       $query = new EntityFieldQuery();
 
       $query
@@ -169,12 +173,12 @@ function _commerce_coffee_get_product_display_types() {
 }
 
 /**
- * Return all product reference fields in the drupal installation.
+ * Return all product reference fields in the Drupal installation.
  */
 function _commerce_coffee_get_product_reference_fields() {
   $product_reference_fields = array();
   foreach (field_info_fields() as $field) {
-    // Do not include the commerce_product field, why?
+    // Do not include the commerce_product field.
     if ($field['type'] == 'commerce_product_reference' && $field['field_name'] != 'commerce_product') {
       $product_reference_fields[] = $field['field_name'];
     }

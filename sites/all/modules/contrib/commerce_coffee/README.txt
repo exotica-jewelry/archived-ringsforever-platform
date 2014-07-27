@@ -1,18 +1,19 @@
-Commerce Coffee
+Commerce Coffee 2.x
 
 ABOUT
 -----
-Hooks into Coffee and creates an interface for quick & effective management 
-of any Commerce store.
+Provides Commerce-related commands to the Coffee interface.
 
 REQUIREMENTS
 ------------
-Commerce
-Coffee
+Commerce 1.x
+Coffee 2.x
 
 USAGE
 -----
-Using Coffee + Commerce Coffee, press Alt+d wherever you are on site, and:
+Using Coffee and Commerce Coffee, press Alt+d wherever you are on site, and:
+
 - type :o {Order ID} to quickly move to an order.
 - type :sku {Product SKU} to quickly move to a product or product display.
-- type :u {User mail or username} to quickly visit user page or latest 2 orders.
+- type :u {User email or username} to quickly visit user page or latest two
+  orders.
