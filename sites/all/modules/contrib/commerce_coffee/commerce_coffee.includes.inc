@@ -2,14 +2,79 @@
 
 /**
  * @file
- * Sets up functionality of commerce_coffee_coffee_command().
+ * Sets up Commerce Coffee commands.
  */
 
 /**
- * Switchboard: Returns specific command array.
- * 
  * Implements hook_coffee_commands().
  */
+function commerce_coffee_coffee_commands($op) {
+  $commands = array();
+
+  // :o - Retrieve an order by order ID.
+
+  if (is_numeric($order_id)) {
+
+    // Check for the latest order.
+    $query = new EntityFieldQuery();
+
+    $query
+    ->entityCondition('entity_type', 'commerce_order', '=')
+    ->entityOrderBy('entity_id', 'DESC')
+    ->range(0, 1)
+    ->propertyCondition('order_id', $order_id, '=');
+    $result = $query->execute();
+
+    foreach ($result['commerce_order'] as $order_id => $order) {
+      $order = commerce_order_load($order_id);
+      $return[] = array(
+        'path' => 'admin/commerce/orders/' . $order_id,
+        'title' =>
+        t("Show order @id dated @date", array('@id' => $order_id, '@date' => format_date($order->created, 'custom', 'd-m-Y'))),
+        );
+      $return[] = array(
+        'path' => 'admin/commerce/orders/' . $order_id . "/edit",
+        'title' => t("Edit order @id dated @date", array('@id' => $order_id, '@date' => format_date($order->created, 'custom', 'd-m-Y'))),
+        );
+    }
+  }
+
+
+/*
+
+  // Example
+  if ($view) {
+    $view->set_display('default');
+    $view->pre_execute();
+    $view->execute();
+  
+    if (count($view->result) > 0) {
+      foreach ($view->result as $row) {
+        $commands[] = array(
+          'value' => ltrim(url('node/' . $row->nid), '/'),
+          'label' => check_plain('Pub: ' . $row->node_title),
+          // You can also specify commands that if the user enters, this command should show.
+          'command' => ':x',
+        );
+      }
+    }
+  }
+*/
+
+
+
+  return $commands;
+}
+
+
+
+
+
+/*
+
+// Switchboard: Returns specific command array.
+// Implements hook_coffee_commands().
+
 function commerce_coffee_coffee_commands() {
   $commands = strstr($op, ' ', TRUE);
   $param = drupal_substr($op, (drupal_strlen($commands)) + 1, 
@@ -29,12 +94,11 @@ function commerce_coffee_coffee_commands() {
   }
 }
 
-/**
- * Retrieve link for a given user, either by name or email.
- *
- * @param string $param
- * The parameter to use for search.
- */
+
+
+
+// Retrieve link for a given user, either by name or email.
+
 function _commerce_coffee_getuser($param) {
   $email = $param;
   $return = array();
@@ -66,12 +130,13 @@ function _commerce_coffee_getuser($param) {
   return $return;
 }
 
-/**
- * Retrieve products and displays for a given SKU.
- *
- * @param string $param
- * The parameter to use for search.
- */
+
+
+
+
+
+// Retrieve products and displays for a given SKU.
+
 function _commerce_coffee_getsku($sku) {
   $return = array();
   if (!empty($sku)) {
@@ -120,42 +185,7 @@ function _commerce_coffee_getsku($sku) {
   return $return;
 }
 
-/**
- * Retrieve a specific order ID.
- *
- * @param string $order_id
- * The parameter to use for search.
- */
-function _commerce_coffee_getorder($order_id) { {
-    $return = array();
-    if (is_numeric($order_id)) {
-
-      // Check for the latest order.
-      $query = new EntityFieldQuery();
-
-      $query
-          ->entityCondition('entity_type', 'commerce_order', '=')
-          ->entityOrderBy('entity_id', 'DESC')
-          ->range(0, 1)
-          ->propertyCondition('order_id', $order_id, '=');
-      $result = $query->execute();
-
-      foreach ($result['commerce_order'] as $order_id => $order) {
-        $order = commerce_order_load($order_id);
-        $return[] = array(
-          'path' => 'admin/commerce/orders/' . $order_id,
-          'title' =>
-          t("Show order @id dated @date", array('@id' => $order_id, '@date' => format_date($order->created, 'custom', 'd-m-Y'))),
-        );
-        $return[] = array(
-          'path' => 'admin/commerce/orders/' . $order_id . "/edit",
-          'title' => t("Edit order @id dated @date", array('@id' => $order_id, '@date' => format_date($order->created, 'custom', 'd-m-Y'))),
-        );
-      }
-    }
-  }
-  return $return;
-}
+// Return product display types.
 
 function _commerce_coffee_get_product_display_types() {
   $entities = array();
@@ -172,9 +202,8 @@ function _commerce_coffee_get_product_display_types() {
   return $entities;
 }
 
-/**
- * Return all product reference fields in the Drupal installation.
- */
+// Return all product reference fields in the Drupal installation.
+
 function _commerce_coffee_get_product_reference_fields() {
   $product_reference_fields = array();
   foreach (field_info_fields() as $field) {
@@ -185,3 +214,6 @@ function _commerce_coffee_get_product_reference_fields() {
   }
   return $product_reference_fields;
 }
+
+*/
+
