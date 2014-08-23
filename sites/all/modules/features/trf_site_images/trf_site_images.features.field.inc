@@ -138,7 +138,10 @@ function trf_site_images_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => 2,
         ),
@@ -262,9 +265,9 @@ function trf_site_images_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('For ring images, select the width shown in the image being displayed.');
   t('Alt text');
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
+  t('For ring images, select the width shown in the image being displayed.');
   t('Ring width');
   t('Title text');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
