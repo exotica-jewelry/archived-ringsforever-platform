@@ -220,7 +220,7 @@ function trf_ring_variation_field_default_fields() {
           'currency_code' => 'default',
         ),
         'type' => 'commerce_price_full',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -353,7 +353,7 @@ function trf_ring_variation_field_default_fields() {
           'apply_chosen' => '0',
         ),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '9',
       ),
     ),
   );
@@ -539,7 +539,7 @@ function trf_ring_variation_field_default_fields() {
               'pathauto' => 1,
               'transliterate' => 1,
             ),
-            'value' => '[commerce-product:title].[file:ffp-extension-original]',
+            'value' => '[commerce-product:field-title-parent].[file:ffp-extension-original]',
           ),
           'file_path' => array(
             'options' => array(
@@ -561,7 +561,7 @@ function trf_ring_variation_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'file_entity_inline' => '1',
+          'file_entity_inline' => '0',
           'file_entity_inline_fields' => array(),
           'filefield_sources' => array(
             'filefield_sources' => array(
@@ -587,7 +587,7 @@ function trf_ring_variation_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -894,6 +894,123 @@ function trf_ring_variation_field_default_fields() {
     ),
   );
 
+  // Exported field: 'commerce_product-rings-field_title_parent'.
+  $fields['commerce_product-rings-field_title_parent'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_title_parent',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'rings',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Name of the parent product.',
+      'display' => array(
+        'add_to_cart_confirmation_view' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'commerce_line_item_display' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '6',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'line_item' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_product_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_reference_view' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'product_in_cart' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'commerce_product',
+      'fences_wrapper' => 'no_wrapper',
+      'field_name' => 'field_title_parent',
+      'label' => 'Parent title',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => 0,
+      ),
+    ),
+  );
+
   // Exported field: 'commerce_product-rings-title_field'.
   $fields['commerce_product-rings-title_field'] = array(
     'field_config' => array(
@@ -1046,7 +1163,7 @@ function trf_ring_variation_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -1058,6 +1175,8 @@ function trf_ring_variation_field_default_fields() {
   t('Color');
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
   t('Images');
+  t('Name of the parent product.');
+  t('Parent title');
   t('Price');
   t('Title');
   t('Upload one or more images that should be displayed when this width is selected.');
