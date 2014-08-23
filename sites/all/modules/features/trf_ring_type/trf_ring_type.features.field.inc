@@ -105,7 +105,7 @@ function trf_ring_type_field_default_fields() {
           'apply_chosen' => 1,
         ),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '6',
       ),
     ),
   );
@@ -213,7 +213,7 @@ function trf_ring_type_field_default_fields() {
           'apply_chosen' => 0,
         ),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -312,7 +312,7 @@ function trf_ring_type_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -412,7 +412,145 @@ function trf_ring_type_field_default_fields() {
           'apply_chosen' => 1,
         ),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-rings-field_images'.
+  $fields['node-rings-field_images'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_images',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '1',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'rings',
+      'deleted' => '0',
+      'description' => 'Upload one or more images that should be displayed when this width is selected.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '14',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'product_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'reference_view' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'figcaption',
+      'field_name' => 'field_images',
+      'label' => 'Images',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 0,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'filefield_paths' => array(
+          'active_updating' => 0,
+          'file_name' => array(
+            'options' => array(
+              'pathauto' => 1,
+              'transliterate' => 1,
+            ),
+            'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          ),
+          'file_path' => array(
+            'options' => array(
+              'pathauto' => 1,
+              'transliterate' => 1,
+            ),
+            'value' => 'rings',
+          ),
+          'retroactive_update' => 0,
+        ),
+        'filefield_paths_enabled' => 1,
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'file_entity_inline' => '2',
+          'file_entity_inline_fields' => array(
+            0 => 'field_file_image_ring_width',
+          ),
+          'filefield_sources' => array(
+            'filefield_sources' => array(
+              'attach' => 0,
+              'clipboard' => 0,
+              'reference' => 0,
+              'remote' => 'remote',
+              'upload' => 'upload',
+            ),
+            'source_attach' => array(
+              'absolute' => '0',
+              'attach_mode' => 'move',
+              'path' => 'file_attach',
+            ),
+            'source_imce' => array(
+              'imce_mode' => 0,
+            ),
+            'source_reference' => array(
+              'autocomplete' => '0',
+            ),
+          ),
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '2',
       ),
     ),
   );
@@ -610,7 +748,7 @@ function trf_ring_type_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
-        'weight' => '3',
+        'weight' => '9',
       ),
     ),
   );
@@ -731,7 +869,7 @@ function trf_ring_type_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
-        'weight' => '4',
+        'weight' => '10',
       ),
     ),
   );
@@ -835,7 +973,7 @@ function trf_ring_type_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'autocomplete_deluxe_taxonomy',
-        'weight' => '9',
+        'weight' => '8',
       ),
     ),
   );
@@ -939,7 +1077,7 @@ function trf_ring_type_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'autocomplete_deluxe_taxonomy',
-        'weight' => '8',
+        'weight' => '7',
       ),
     ),
   );
@@ -1076,10 +1214,12 @@ function trf_ring_type_field_default_fields() {
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
   t('Enter tags identifying various secondary elements. For example: gold, platinum, diamonds.');
   t('Featured category');
+  t('Images');
   t('Primary element');
   t('Product variations');
   t('Related rings');
   t('Title');
+  t('Upload one or more images that should be displayed when this width is selected.');
   t('﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.');
 
   return $fields;
