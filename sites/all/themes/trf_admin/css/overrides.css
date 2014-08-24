@@ -54,6 +54,18 @@
 }
 
 /* 
+ * Improvements to operations field.
+ */
+
+.ief-entity-operations {
+  margin: 1em 0;
+}
+
+.ief-entity-operations .form-submit {
+  margin: 0 1em 0 0;
+}
+
+/* 
  * Add padding to related rings fieldset.
  */
 
