@@ -1,9 +1,74 @@
-
-/* 
- * Hide variation price field, because we set it based on the "base price" 
- * field in the parent product using rules.
+/*
+ * IMAGE ENTITIES
  */
 
-.ief-form .field-type-commerce-price {
+/* 
+ * Hide width field in image entities
+ */
+
+.image-widget .field-name-field-file-image-ring-width {
+  display: none;
+}
+
+/*
+ * RING NODE EDITING FORM
+ */
+
+/* 
+ * Hide format tips for description.
+ */
+
+.node-rings-form .field-name-field-description .filter-wrapper {
+  display: none;
+}
+
+/* 
+ * Show width field in image entities on rings
+ */
+
+.image-widget .field-name-field-file-image-ring-width {
+  display: block;
+}
+
+/*
+ * INLINE ENTITY FORM
+ */
+
+/*
+ * Highlight width value.
+ */
+
+.ief-form .field-name-field-ring-width {
+  font-weight: bold;
+}
+
+/* 
+ * Hide fields that are copied or set based on the parent product.
+ */
+
+.ief-form .field-type-commerce-price,
+.ief-form .field-name-field-title-parent,
+.ief-form .field-name-field-images,
+.ief-form .field-name-field-color {
 	display: none;
+}
+
+/* 
+ * Add padding to related rings fieldset.
+ */
+
+.field-name-field-related-rings fieldset {
+  padding: 1em;
+}
+
+.field-name-field-related-rings .fieldset-legend {
+  padding: 0 0.75em;
+}
+
+/* 
+ * Hide "add new" option in related rings fieldset.
+ */
+
+.field-name-field-related-rings #edit-field-related-rings-und-actions-ief-add {
+  display: none;
 }
