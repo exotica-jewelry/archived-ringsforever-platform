@@ -69,7 +69,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '14',
+            'weight' => '17',
             'visible' => FALSE,
           ),
         ),
@@ -91,7 +91,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '15',
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -113,7 +113,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '16',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
@@ -135,7 +135,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '13',
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),
@@ -201,7 +201,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '9',
+            'weight' => '10',
             'visible' => TRUE,
           ),
         ),
@@ -223,7 +223,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '10',
+            'weight' => '11',
             'visible' => TRUE,
           ),
         ),
@@ -243,6 +243,28 @@ function trf_ring_type_strongarm() {
           'full' => array(
             'weight' => '7',
             'visible' => TRUE,
+          ),
+        ),
+        'product:field_title_parent' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'reference_view' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'product_list' => array(
+            'weight' => '0',
+            'visible' => FALSE,
           ),
         ),
       ),
