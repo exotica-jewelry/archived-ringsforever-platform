@@ -41,13 +41,6 @@ function trf_ief_inline_entity_form_table_fields_alter(&$fields, $context) {
     // Remove 'Description' field
     unset($fields['field_description']);
 
-    // Add 'Width shown in image' field
-    $fields['field_ring_width_shown'] = array(
-      'type' => 'field',
-      'label' => t('Width shown'),
-      'weight' => 0,
-    );
-
     // Move 'SKU' last
     $fields['sku'] = array(
       'type' => 'property',
