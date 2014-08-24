@@ -35,6 +35,9 @@ function trf_ief_inline_entity_form_table_fields_alter(&$fields, $context) {
   // Product variations
   if ($context['parent_entity_type'] == 'node' && $context['entity_type'] == 'commerce_product') {
 
+    // Remove 'Images' field (because all images are inherited)
+    unset($fields['field_images']); 
+
     // Remove 'Variation title' field
     unset($fields['title']);
 
