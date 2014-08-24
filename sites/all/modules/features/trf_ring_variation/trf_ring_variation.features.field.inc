@@ -743,157 +743,6 @@ function trf_ring_variation_field_default_fields() {
     ),
   );
 
-  // Exported field: 'commerce_product-rings-field_ring_width_shown'.
-  $fields['commerce_product-rings-field_ring_width_shown'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_ring_width_shown',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'width',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'rings',
-      'commerce_cart_settings' => array(
-        'attribute_field' => 0,
-        'attribute_widget' => 'select',
-        'attribute_widget_title' => 'Width',
-      ),
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '<p>Select the width shown in the image being displayed (which may differ from the width that can be bought).</p>',
-      'display' => array(
-        'add_to_cart_confirmation_view' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '5',
-        ),
-        'commerce_line_item_display' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
-        ),
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
-        ),
-        'full' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
-        ),
-        'line_item' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
-        'node_full' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
-        ),
-        'node_product_list' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
-        ),
-        'node_reference_view' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
-        ),
-        'node_teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '4',
-        ),
-        'product_in_cart' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '4',
-        ),
-      ),
-      'entity_type' => 'commerce_product',
-      'fences_wrapper' => '',
-      'field_name' => 'field_ring_width_shown',
-      'label' => 'Width shown in image',
-      'product_catalog' => 1,
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(
-          'apply_chosen' => 0,
-        ),
-        'type' => 'options_select',
-        'weight' => '6',
-      ),
-    ),
-  );
-
   // Exported field: 'commerce_product-rings-field_title_parent'.
   $fields['commerce_product-rings-field_title_parent'] = array(
     'field_config' => array(
@@ -1171,7 +1020,6 @@ function trf_ring_variation_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('<p>Select the width of the ring that can be bought at the price below (which may differ from the width of the ring in the image you use).</p>');
-  t('<p>Select the width shown in the image being displayed (which may differ from the width that can be bought).</p>');
   t('Color');
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
   t('Images');
@@ -1181,7 +1029,6 @@ function trf_ring_variation_field_default_fields() {
   t('Title');
   t('Upload one or more images that should be displayed when this width is selected.');
   t('Width');
-  t('Width shown in image');
 
   return $fields;
 }
