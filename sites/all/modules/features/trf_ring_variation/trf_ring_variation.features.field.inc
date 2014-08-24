@@ -635,7 +635,7 @@ function trf_ring_variation_field_default_fields() {
       ),
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '<p>Select the width of the ring that can be bought at the price below (which may differ from the width of the ring in the image you use).</p>',
+      'description' => '<p>Select a width to add it to the options for this ring.</p>',
       'display' => array(
         'add_to_cart_confirmation_view' => array(
           'label' => 'above',
