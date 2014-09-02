@@ -9,3 +9,4 @@ function trf_commerce_fancy_attributes_field_widget_form_alter(&$element, &$form
     ($field['type'] == 'taxonomy_term_reference' || $field['type'] == 'entityreference')) {
       $element['#type'] = 'commerce_fancy_attributes'; // rendering as 'fancy attributes' display
   }
+}
