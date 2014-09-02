@@ -6,7 +6,7 @@ function trf_commerce_fancy_attributes_field_widget_form_alter(&$element, &$form
   $field = $context['field'];
   $instance = $context['instance'];
   if (empty($field['locked']) && $instance['entity_type'] == 'node' &&
-    ($field['type'] == 'taxonomy_term_reference' || $field['type'] == 'entityreference')) && $field['field_name'] == 'field_color' {
+    ($field['type'] == 'taxonomy_term_reference' || $field['type'] == 'entityreference') && $field['field_name'] == 'field_color') {
       $element['#type'] = 'commerce_fancy_attributes'; // rendering as 'fancy attributes' display
   }
 }
