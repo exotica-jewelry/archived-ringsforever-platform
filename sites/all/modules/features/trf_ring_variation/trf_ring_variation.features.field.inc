@@ -322,7 +322,7 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'node_teaser' => array(
           'label' => 'above',
@@ -495,8 +495,8 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
+            'field_multiple_limit' => '1',
+            'field_multiple_limit_offset' => '0',
             'image_link' => 'content',
             'image_style' => 'product_thumbnail',
           ),
@@ -824,7 +824,7 @@ function trf_ring_variation_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'node_teaser' => array(
           'label' => 'above',
@@ -1019,7 +1019,7 @@ function trf_ring_variation_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('<p>Select the width of the ring that can be bought at the price below (which may differ from the width of the ring in the image you use).</p>');
+  t('<p>Select a width to add it to the options for this ring.</p>');
   t('Color');
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
   t('Images');
