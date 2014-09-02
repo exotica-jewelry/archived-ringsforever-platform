@@ -16,7 +16,7 @@
  * @class
  * Represents a single field instance.
  */
-abstract class CerField {
+abstract class CerField extends FieldInstance {
 
   /**
    * @var array
@@ -25,50 +25,14 @@ abstract class CerField {
   protected $plugin;
 
   /**
-   * @var string
-   *  The entity type this instance is bound to.
+   * @var array
    */
-  protected $entityType;
+  protected $settings = array();
   
   /**
    * @var string
-   *  The bundle this instance is bound to.
    */
-  protected $bundle;
-  
-  /**
-   * @var string
-   *  The internal name of the field.
-   */
-  protected $name;
-
-  /**
-   * @var CerField
-   *  The field instance which contains this one, if any.
-   */
-  protected $parent;
-
-  /**
-   * @var CerField
-   *  Field instance contained by this one, if any.
-   */
-  protected $child;
-
-  /**
-   * @var string
-   * The field instance's label.
-   */
-  protected $label;
-
-  /**
-   * @var integer
-   */
-  protected $cardinality;
-
-  /**
-   * @var string
-   */
-  protected $fieldTypeLabel;
+  public $fieldTypeLabel;
 
   /**
    * Gets the type of entity that can be referenced by this field, e.g. 'node'.
@@ -81,33 +45,20 @@ abstract class CerField {
    * Constructor. Pretty self-explanatory!
    */
   public function __construct(array $plugin) {
+    // Store a copy of our plugin definition.
     $this->plugin = $plugin;
-    list ($this->entityType, $this->bundle, $this->name) = explode(':', $plugin['identifier']);
 
-    $fieldInfo = field_info_field($this->name);
-    $this->cardinality = $fieldInfo['cardinality'];
+    list ($entity_type, $bundle, $field_name) = explode(':', $plugin['identifier']);
+    parent::__construct($entity_type, $bundle, $field_name);
 
-    $fieldType = field_info_field_types($fieldInfo['type']);
-    $this->fieldTypeLabel = $fieldType['label'];
+    // Store a copy of the field settings for convenience. At the time of this
+    // writing, this is needed by the Entity Reference, Node Reference,
+    // and Term Reference plugins.
+    $info = field_info_field($this->name);
+    $this->settings = $info['settings'];
 
-    $instance = field_info_instance($this->entityType, $this->name, $this->bundle);
-    $this->label = $instance['label'];
-  }
-
-  /**
-   * Generates an identifier for this field instance.
-   * 
-   * @return string
-   */
-  public function __toString() {
-    return "{$this->entityType}:{$this->bundle}:{$this->name}";
-  }
-
-  /**
-   * Magic getter to allow read-only access to protected properties.
-   */
-  public function __get($property) {
-    return $this->{$property};
+    $type_info = field_info_field_types($info['type']);
+    $this->fieldTypeLabel = $type_info['label'];
   }
 
   /**
@@ -133,110 +84,21 @@ abstract class CerField {
   }
 
   /**
-   * Gets or sets the parent of this field.
-   *
-   * @param CerField
-   *  (optional) The field to set as this one's parent.
-   *
-   * @return CerField
+   * Overridden.
    */
-  public function parent(CerField $parent = NULL) {
-    if ($parent) {
-      $this->parent = $parent;
-    }
-    return $this->parent;
+  public function requireParent() {
+    return $this->plugin['require parent'];
   }
 
   /**
-   * Gets or sets the child of this field.
-   *
-   * @param CerField
-   *  (optional) The field to set as this one's child.
-   *
-   * @return CerField
+   * Overridden.
    */
-  public function child(CerField $child = NULL) {
-    if ($child) {
-      $this->child = $child;
-    }
-    return $this->child;
+  public function getParents() {
+    return array_map('CerField::getPlugin', $this->plugin['parents']);
   }
 
   /**
-   * Gets information about the entity type this field instance is bound to.
-   *
-   * @param [string...]
-   *  Array keys to fetch, or nothing to fetch all entity type info.
-   *
-   * @return mixed
-   */
-  public function entityInfo() {
-    // We can't pass func_get_args() directly into drupal_array_get_nested_value(),
-    // because PHP 5.2 and older will throw a fatal error. Ugh.
-    $keys = func_get_args();
-    $info = entity_get_info($this->entityType);
-
-    return drupal_array_get_nested_value($info, $keys);
-  }
-  
-  /**
-   * Gets information about the global field definition.
-   *
-   * @param [string...]
-   *  Array keys to fetch, or nothing to fetch all field info.
-   *
-   * @return mixed
-   */
-  public function fieldInfo() {
-    // See the comment in $this->entityInfo().
-    $keys = func_get_args();
-    $info = field_info_field($this->name);
-
-    return drupal_array_get_nested_value($info, $keys);
-  }
-
-  /**
-   * Generates a human-readable label for this field instance. By default,
-   * this is in the form of Entity Type >> Bundle >> Label.
-   *
-   * @return string
-   */
-  public function getLabel() {
-    $label = '';
-
-    if (! $this->plugin['require parent']) {
-      $label .= $this->entityInfo('label');
-      $label .= ' &raquo; ';
-
-      if ($this->entityInfo('entity keys', 'bundle')) {
-        $label .= $this->entityInfo('bundles', $this->bundle, 'label');
-        $label .= ' &raquo; ';
-      }
-    }    
-    $label .= $this->label;
-
-    return $label;
-  }
-
-  /**
-   * Returns the export pipe for this field when exporting to Features. Anything
-   * this particular field needs in order to be properly exported, it should add
-   * to the pipe. The full export definition is passed by reference so dependencies
-   * can be added.
-   *
-   * @return array
-   */
-  public function getExportPipe(array &$export) {
-    $pipe = array();
-
-    $pipe['field_base'][] = $this->name;
-    $pipe['field_instance'][] = "{$this->entityType}-{$this->bundle}-{$this->name}";
-
-    return $pipe;
-  }
-
-  /**
-   * Returns information about a particular field plugin, by its identifier, or all
+   * Returns information about a particular field plugin by its identifier, or all
    * available plugins (i.e., defined by hook_cer_fields()) if no identifier is given.
    * The aggregated result of hook_cer_fields() is statically cached.
    */

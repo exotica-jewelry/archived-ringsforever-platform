@@ -21,7 +21,7 @@ class CerPresetHandler {
    * @var CerFieldChain
    */
   protected $right;
-  
+
   /**
    * @var EntityDrupalWrapper
    */
@@ -33,8 +33,8 @@ class CerPresetHandler {
   protected $refIDs;
 
   public function __construct(CerPreset $preset, EntityDrupalWrapper $entity) {
-    $this->left = $preset->left;
-    $this->right = $preset->right;
+    $this->left = $preset->wrapper->cer_left->chain->value();
+    $this->right = $preset->wrapper->cer_right->chain->value();
     $this->entity = $entity;
 
     // Store the current set of reference IDs so that we only need to instantiate
@@ -133,7 +133,7 @@ class CerPresetHandler {
     // we could run into a bug where, if the left field can reference multiple bundles,
     // we might try to modify the wrong entity. Essentially, the loading of referenced
     // entities should be as targeted as possible to prevent ambiguities and buggery.
-    if ($right->entityInfo('entity keys', 'bundle')) {
+    if ($right->isBundleable) {
       $query->entityCondition('bundle', $right->bundle);
     }
 
