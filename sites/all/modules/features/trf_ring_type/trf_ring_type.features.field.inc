@@ -799,14 +799,14 @@ function trf_ring_type_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'rings',
       'deleted' => '0',
-      'description' => '<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.</p>',
+      'description' => '<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.).</p><p>Selecting <em>Remove</em> from an existing ring will only remove it as a related ring, it will not delete the ring itself unless you choose to do so.</p>',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'entityreference',
           'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
+            'field_multiple_limit' => '-1',
+            'field_multiple_limit_offset' => '0',
             'links' => 0,
             'view_mode' => 'reference_view',
           ),
@@ -817,8 +817,8 @@ function trf_ring_type_field_default_fields() {
           'label' => 'above',
           'module' => 'entityreference',
           'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
+            'field_multiple_limit' => '-1',
+            'field_multiple_limit_offset' => '0',
             'links' => 0,
             'view_mode' => 'reference_view',
           ),
@@ -1203,7 +1203,7 @@ function trf_ring_type_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.</p>');
+  t('<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.).</p><p>Selecting <em>Remove</em> from an existing ring will only remove it as a related ring, it will not delete the ring itself unless you choose to do so.</p>');
   t('<p>Select the dominant color in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal.</p>');
   t('Base price');
   t('Collection');
