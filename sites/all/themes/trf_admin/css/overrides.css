@@ -81,6 +81,15 @@
  * Hide "add new" option in related rings fieldset.
  */
 
-.field-name-field-related-rings #edit-field-related-rings-und-actions-ief-add {
+.field-name-field-related-rings .container-inline input[value="Add new ring"] {
+  display: none;
+}
+
+/* 
+ * Hide "edit" operation next to existing related rings to prevent
+ * going down the rabbit hole.
+ */
+
+.field-name-field-related-rings .ief-entity-operations input[value="Edit"] {
   display: none;
 }
