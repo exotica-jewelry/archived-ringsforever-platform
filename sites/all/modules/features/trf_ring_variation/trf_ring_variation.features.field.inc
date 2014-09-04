@@ -229,7 +229,7 @@ function trf_ring_variation_field_default_fields() {
   $fields['commerce_product-rings-field_color'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_color',
@@ -284,14 +284,12 @@ function trf_ring_variation_field_default_fields() {
         ),
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
+          'module' => 'taxonomy',
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
-            'links' => 0,
-            'view_mode' => 'add_to_cart_form',
           ),
-          'type' => 'entityreference_entity_view',
+          'type' => 'taxonomy_term_reference_link',
           'weight' => '5',
         ),
         'full' => array(
