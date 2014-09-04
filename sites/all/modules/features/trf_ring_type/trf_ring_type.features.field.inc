@@ -114,7 +114,7 @@ function trf_ring_type_field_default_fields() {
   $fields['node-rings-field_color'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_color',
@@ -146,36 +146,28 @@ function trf_ring_type_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'rings',
-      'default_value' => array(
-        0 => array(
-          'tid' => '13',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '<p>Select the dominant color in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal.</p>',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
+          'module' => 'taxonomy',
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
-            'links' => 0,
-            'view_mode' => 'add_to_cart_form',
           ),
-          'type' => 'entityreference_entity_view',
+          'type' => 'taxonomy_term_reference_link',
           'weight' => '11',
         ),
         'full' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
+          'module' => 'taxonomy',
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
-            'links' => 0,
-            'view_mode' => 'add_to_cart_form',
           ),
-          'type' => 'entityreference_entity_view',
+          'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
         'product_list' => array(
@@ -200,9 +192,9 @@ function trf_ring_type_field_default_fields() {
       'entity_type' => 'node',
       'fences_wrapper' => '',
       'field_name' => 'field_color',
-      'label' => 'Color',
+      'label' => 'Colors',
       'product_catalog' => 1,
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -210,7 +202,7 @@ function trf_ring_type_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(
-          'apply_chosen' => '0',
+          'apply_chosen' => '1',
         ),
         'type' => 'options_select',
         'weight' => '4',
@@ -1207,7 +1199,7 @@ function trf_ring_type_field_default_fields() {
   t('<p>Select the dominant color in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal.</p>');
   t('Base price');
   t('Collection');
-  t('Color');
+  t('Colors');
   t('Description');
   t('Elements');
   t('Enter <strong>one</strong> tag for this ring\'s primary element.');
