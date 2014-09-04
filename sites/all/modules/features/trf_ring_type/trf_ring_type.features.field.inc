@@ -210,7 +210,7 @@ function trf_ring_type_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(
-          'apply_chosen' => 0,
+          'apply_chosen' => '0',
         ),
         'type' => 'options_select',
         'weight' => '4',
@@ -295,12 +295,12 @@ function trf_ring_type_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'fences_wrapper' => '',
+      'fences_wrapper' => 'article',
       'field_name' => 'field_description',
       'label' => 'Description',
       'required' => 0,
       'settings' => array(
-        'display_summary' => 1,
+        'display_summary' => 0,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
