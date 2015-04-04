@@ -14,9 +14,9 @@
   padding-right: 0.75em !important;
 }
 
-.toolbar .toolbar-icon-escape-admin:hover,
-.toolbar .toolbar-icon-escape-admin:active,
-.toolbar .toolbar-icon-escape-admin:focus {
+body.toolbar #toolbar-home .toolbar-icon-escape-admin:hover,
+body.toolbar #toolbar-home .toolbar-icon-escape-admin:active,
+body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
   /* overrides escape_admin specificity which uses !important (sigh) */
   background-color: #2f88cd !important;
   box-shadow: 0 0 5px #1a6bdf inset !important;
