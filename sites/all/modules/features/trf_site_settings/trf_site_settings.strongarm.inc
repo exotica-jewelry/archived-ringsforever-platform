@@ -63,7 +63,7 @@ function trf_site_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'file_private_path';
-  $strongarm->value = '/home/members/ivanb/sites/dev.titaniumringsforever.com/users/ringsfor-dev/drupal-private';
+  $strongarm->value = '/home/members/ivanb/sites/new.titaniumringsforever.com/users/exonewtrf/drupal-private';
   $export['file_private_path'] = $strongarm;
 
   $strongarm = new stdClass();
