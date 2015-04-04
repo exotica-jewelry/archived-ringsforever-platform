@@ -17,8 +17,13 @@
 .toolbar .toolbar-icon-escape-admin:hover,
 .toolbar .toolbar-icon-escape-admin:active,
 .toolbar .toolbar-icon-escape-admin:focus {
-  background-color: #2f88cd;
-  box-shadow: 0 0 5px #1a6bdf inset;
+  /* overrides escape_admin specificity which uses !important (sigh) */
+  background-color: #2f88cd !important;
+  box-shadow: 0 0 5px #1a6bdf inset !important;
+}
+
+.toolbar .toolbar-icon-escape-admin::before {
+  width: 16px;
 }
 
 /*
