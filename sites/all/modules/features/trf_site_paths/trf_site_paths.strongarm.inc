@@ -13,6 +13,17 @@ function trf_site_paths_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'globalredirect_settings';
+  $strongarm->value = array(
+    'trailing_zero' => 2,
+    'canonical' => 1,
+    'content_location_header' => 1,
+  );
+  $export['globalredirect_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_blog_pattern';
   $strongarm->value = 'blogs/[user:name]';
   $export['pathauto_blog_pattern'] = $strongarm;
