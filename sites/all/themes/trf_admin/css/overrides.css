@@ -124,3 +124,15 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
 .field-name-field-related-rings .ief-entity-operations input[value="Edit"] {
   display: none;
 }
+
+/*
+ * COMMERCE KICKSTART UPSELLING
+ */
+
+/*
+ * Shamelessly remove Commerce Kickstart's upselling attempts
+ */
+
+.toolbar-menu-marketplace {
+  display: none !important;
+}
