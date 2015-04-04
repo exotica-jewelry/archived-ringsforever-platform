@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TRF site path settings feature.
+ */
+
+include_once 'trf_site_paths.features.inc';
