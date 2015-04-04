@@ -30,20 +30,17 @@ function trf_site_text_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => '2',
         'toolbar' => '[
-    [\'Source\'],
-    [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
-    [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
-    [\'Image\',\'MediaEmbed\',\'Table\',\'HorizontalRule\',\'Smiley\',\'SpecialChar\',\'Iframe\'],
-    \'/\',
-    [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'RemoveFormat\'],
-    [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\',\'CreateDiv\'],
-    [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\',\'-\',\'Language\'],
+    [\'Format\',\'Bold\',\'Italic\',\'RemoveFormat\',\'-\',\'BulletedList\',\'NumberedList\',\'Outdent\',\'Indent\',\'Blockquote\'],
+    [\'Copy\',\'Cut\',\'PasteFromWord\'],
     [\'linkit\',\'Unlink\',\'Anchor\'],
+    [\'Image\',\'MediaEmbed\'],
     \'/\',
-    [\'Format\',\'Font\',\'FontSize\'],
-    [\'TextColor\',\'BGColor\'],
-    [\'Maximize\',\'ShowBlocks\'],
-    [\'DrupalBreak\']
+    [\'Subscript\',\'Superscript\',\'-\',\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'HorizontalRule\'],
+    [\'Table\'],
+    [\'SpecialChar\'],
+    [\'Find\',\'Replace\',\'-\',\'SpellChecker\',\'Scayt\'],
+    [\'ShowBlocks\',\'DrupalBreak\'],
+    [\'Source\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -81,7 +78,7 @@ function trf_site_text_ckeditor_profile_defaults() {
         'UserFilesAbsolutePath' => '%d%b%f/',
         'forcePasteAsPlainText' => 'f',
         'html_entities' => 'f',
-        'scayt_autoStartup' => 'f',
+        'scayt_autoStartup' => 't',
         'theme_config_js' => 'f',
         'js_conf' => '',
         'loadPlugins' => array(
@@ -152,7 +149,12 @@ function trf_site_text_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => '2',
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'linkit\',\'Unlink\',\'Image\',\'MediaEmbed\',\'Blockquote\']
+    [\'Format\',\'Bold\',\'Italic\',\'RemoveFormat\',\'-\',\'BulletedList\',\'NumberedList\',\'Blockquote\'],
+    [\'PasteFromWord\'],
+    [\'linkit\',\'Unlink\',\'Anchor\'],
+    [\'Image\',\'MediaEmbed\'],
+    [\'SpellChecker\',\'Scayt\'],
+    [\'Source\']
 ]',
         'expand' => 't',
         'default' => 't',
