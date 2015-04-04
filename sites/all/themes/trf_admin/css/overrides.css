@@ -13,7 +13,6 @@
 .toolbar .toolbar-icon-escape-admin {
   white-space: nowrap;
   /* overrides escape_admin specificity which uses !important (sigh) */
-  padding-top: 7px !important;
   padding-left: 2.25em !important;
   padding-right: 0.75em !important;
 }
