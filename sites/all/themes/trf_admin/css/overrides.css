@@ -6,6 +6,10 @@
  * Accommodate escape_admin link
  */
 
+#toolbar-home > .first {
+  padding-top: 7px;
+}
+
 .toolbar .toolbar-icon-escape-admin {
   white-space: nowrap;
   /* overrides escape_admin specificity which uses !important (sigh) */
