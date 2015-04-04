@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the TRF site path settings feature.
  */
+
+include_once 'trf_ring_taxonomies.features.inc';
