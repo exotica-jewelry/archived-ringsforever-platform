@@ -1,5 +1,5 @@
 /*!
- * Expander - v1.4.11 - 2014-07-16
+ * jQuery Expander Plugin - v1.4.13 - 2014-10-05
  * http://plugins.learningjquery.com/expander/
  * Copyright (c) 2014 Karl Swedberg
  * Licensed MIT (http://www.opensource.org/licenses/mit-license.php)
@@ -7,7 +7,7 @@
 
 (function($) {
   $.expander = {
-    version: '1.4.11',
+    version: '1.4.13',
     defaults: {
       // the number of characters at which the contents will be sliced into two parts.
       slicePoint: 100,
@@ -37,6 +37,9 @@
       expandPrefix: '&hellip; ',
 
       expandAfterSummary: false,
+
+      // Possible word endings to test against for when preserveWords: true
+      wordEnd: /(&(?:[^;]+;)?|[a-zA-Z\u00C0-\u0100]+|[^\u0000-\u007F]+)$/,
 
       // class names for summary element and detail element
       summaryClass: 'summary',
@@ -88,7 +91,7 @@
 
     var opts = $.extend({}, $.expander.defaults, options),
         rSelfClose = /^<(?:area|br|col|embed|hr|img|input|link|meta|param).*>$/i,
-        rAmpWordEnd = opts.wordEnd || /(&(?:[^;]+;)?|[a-zA-Z\u00C0-\u0100]+)$/,
+        rAmpWordEnd = opts.wordEnd,
         rOpenCloseTag = /<\/?(\w+)[^>]*>/g,
         rOpenTag = /<(\w+)[^>]*>/g,
         rCloseTag = /<\/(\w+)>/g,
@@ -107,6 +110,7 @@
           var i, l, tmp, newChar, summTagless, summOpens, summCloses,
               lastCloseTag, detailText, detailTagless, html, expand,
               $thisDetails, $readMore,
+              slicePointChanged,
               openTagsForDetails = [],
               closeTagsForsummaryText = [],
               strayChars = '',
@@ -159,18 +163,20 @@
             summTagless++;
           }
 
-          //SliceOn script, Closes #16, resolves #59
-          //Original SliceEarlierAt code (since modfied): Sascha Peilicke @saschpe
+          // SliceOn script, Closes #16, resolves #59
+          // Original SliceEarlierAt code (since modfied): Sascha Peilicke @saschpe
           if (o.sliceOn) {
-            var sliceOnIndex = summaryText.indexOf(o.sliceOn);
+            slicePointChanged = changeSlicePoint({
+              sliceOn: o.sliceOn,
+              slicePoint: o.slicePoint,
+              allHtml: allHtml,
+              summaryText: summaryText
+            });
 
-            if (sliceOnIndex !== -1 && sliceOnIndex < o.slicePoint) {
-              o.slicePoint = sliceOnIndex;
-              summaryText = allHtml.slice(0, o.slicePoint);
-            }
+            summaryText = slicePointChanged.summaryText;
           }
 
-          summaryText = backup(summaryText, o.preserveWords);
+          summaryText = backup(summaryText, o.preserveWords && allHtml.slice(summaryText.length).length);
 
           // separate open tags from close tags and clean up the lists
           summOpens = summaryText.match(rOpenTag) || [];
@@ -440,6 +446,29 @@
           }
         }, option.collapseTimer);
       }
+    }
+
+    function changeSlicePoint(info) {
+      // Create placeholder string text
+      var sliceOnTemp = 'ExpandMoreHere374216623';
+
+      // Replace sliceOn with placeholder unaffected by .text() cleaning
+      // (in case sliceOn contains html)
+      var summaryTextClean = info.summaryText.replace(info.sliceOn, sliceOnTemp);
+      summaryTextClean = $('<div>' + summaryTextClean + '</div>').text();
+
+      // Find true location of sliceOn placeholder
+      var sliceOnIndexClean = summaryTextClean.indexOf(sliceOnTemp);
+
+      // Store location of html version too
+      var sliceOnIndexHtml = info.summaryText.indexOf(info.sliceOn);
+
+      // Base condition off of true sliceOn location...
+      if (sliceOnIndexClean !== -1 && sliceOnIndexClean < info.slicePoint) {
+        // ...but keep html in summaryText
+        info.summaryText = info.allHtml.slice(0, sliceOnIndexHtml);
+      }
+      return info;
     }
 
     return this;
