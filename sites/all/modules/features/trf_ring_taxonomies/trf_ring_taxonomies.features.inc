@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * trf_site_paths.features.inc
+ * trf_ring_taxonomies.features.inc
  */
 
 /**

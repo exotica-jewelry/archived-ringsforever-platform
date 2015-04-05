@@ -17,14 +17,6 @@ function trf_ring_taxonomies_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '0',
     ),
-    'featuring' => array(
-      'name' => 'Featuring',
-      'machine_name' => 'featuring',
-      'description' => 'Most notable features, such as inlays, gemstones, color, etc.',
-      'hierarchy' => '0',
-      'module' => 'taxonomy',
-      'weight' => '0',
-    ),
     'width' => array(
       'name' => 'Width',
       'machine_name' => 'width',

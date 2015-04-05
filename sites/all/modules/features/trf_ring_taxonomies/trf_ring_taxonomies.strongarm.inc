@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * trf_site_paths.strongarm.inc
+ * trf_ring_taxonomies.strongarm.inc
  */
 
 /**
@@ -20,15 +20,8 @@ function trf_ring_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_featuring_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_featuring_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_width_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'titanium-rings/width/[term:name]';
   $export['pathauto_taxonomy_term_width_pattern'] = $strongarm;
 
   return $export;
