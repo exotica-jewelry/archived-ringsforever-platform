@@ -568,7 +568,7 @@ function trf_ring_type_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'commerce_cart',
           'settings' => array(
             'combine' => 1,
@@ -591,7 +591,7 @@ function trf_ring_type_field_default_fields() {
             'field_multiple_limit' => '-1',
             'field_multiple_limit_offset' => '0',
             'line_item_type' => 'product',
-            'show_quantity' => 1,
+            'show_quantity' => 0,
             'show_single_product_attributes' => 0,
           ),
           'type' => 'commerce_cart_add_to_cart_form',
