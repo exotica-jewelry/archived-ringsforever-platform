@@ -34,10 +34,20 @@ function trf_site_text_filter_default_formats() {
   $formats['filtered_html'] = array(
     'format' => 'filtered_html',
     'name' => 'Filtered HTML',
-    'cache' => '1',
+    'cache' => '0',
     'status' => '1',
     'weight' => '0',
     'filters' => array(
+      'entity_embed' => array(
+        'weight' => '0',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'filter_align' => array(
+        'weight' => '0',
+        'status' => '1',
+        'settings' => array(),
+      ),
       'filter_url' => array(
         'weight' => '0',
         'status' => '1',
@@ -49,7 +59,7 @@ function trf_site_text_filter_default_formats() {
         'weight' => '1',
         'status' => '1',
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h3> <h4> <h5>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h3> <h4> <h5> <drupal-entity>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
@@ -71,24 +81,34 @@ function trf_site_text_filter_default_formats() {
   $formats['full_html'] = array(
     'format' => 'full_html',
     'name' => 'Full HTML',
-    'cache' => '1',
+    'cache' => '0',
     'status' => '1',
     'weight' => '1',
     'filters' => array(
+      'entity_embed' => array(
+        'weight' => '-48',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'filter_align' => array(
+        'weight' => '-46',
+        'status' => '1',
+        'settings' => array(),
+      ),
       'filter_url' => array(
-        'weight' => '0',
+        'weight' => '-45',
         'status' => '1',
         'settings' => array(
-          'filter_url_length' => 72,
+          'filter_url_length' => '72',
         ),
       ),
       'filter_autop' => array(
-        'weight' => '1',
+        'weight' => '-44',
         'status' => '1',
         'settings' => array(),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => '10',
+        'weight' => '-43',
         'status' => '1',
         'settings' => array(),
       ),

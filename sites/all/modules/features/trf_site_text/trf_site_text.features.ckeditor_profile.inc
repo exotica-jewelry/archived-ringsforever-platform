@@ -108,6 +108,34 @@ function trf_site_text_ckeditor_profile_defaults() {
             ),
             'default' => 't',
           ),
+          'drupalentity' => array(
+            'name' => 'drupalentity',
+            'desc' => 'Plugin for embedding entities',
+            'path' => '/sites/all/modules/contrib/entity_embed/js/plugins/drupalentity/',
+            'default' => 'f',
+            'buttons' => array(
+              'ring' => array(
+                'label' => 'Ring',
+                'icon' => 'entity.png',
+              ),
+              'node' => array(
+                'label' => 'Content',
+                'icon' => 'entity.png',
+              ),
+            ),
+          ),
+          'image2' => array(
+            'name' => 'image2',
+            'desc' => 'Enhanced Image plugin. See <a href="http://ckeditor.com/addon/image2">addon page</a> for more details.',
+            'path' => '//cdn.ckeditor.com/4.4.3/full-all/plugins/image2/',
+            'buttons' => array(
+              'Enhanced Image' => array(
+                'icon' => 'icons/image.png',
+                'label' => 'Insert Enhanced Image',
+              ),
+            ),
+            'default' => 't',
+          ),
           'linkit' => array(
             'name' => 'linkit',
             'desc' => 'Support for Linkit module',
@@ -121,7 +149,7 @@ function trf_site_text_ckeditor_profile_defaults() {
           ),
           'mediaembed' => array(
             'name' => 'mediaembed',
-            'desc' => 'Plugin for inserting Drupal embeded media',
+            'desc' => 'Plugin for embedding HTML snippets',
             'path' => '%plugin_dir%mediaembed/',
             'buttons' => array(
               'MediaEmbed' => array(
@@ -203,6 +231,22 @@ function trf_site_text_ckeditor_profile_defaults() {
             'buttons' => FALSE,
             'default' => 'f',
           ),
+          'drupalentity' => array(
+            'name' => 'drupalentity',
+            'desc' => 'Plugin for embedding entities',
+            'path' => '/sites/all/modules/contrib/entity_embed/js/plugins/drupalentity/',
+            'default' => 'f',
+            'buttons' => array(
+              'ring' => array(
+                'label' => 'Embed ring',
+                'icon' => 'entity.png',
+              ),
+              'node' => array(
+                'label' => 'Embed content',
+                'icon' => 'entity.png',
+              ),
+            ),
+          ),
           'linkit' => array(
             'name' => 'linkit',
             'desc' => 'Support for Linkit module',
@@ -216,7 +260,7 @@ function trf_site_text_ckeditor_profile_defaults() {
           ),
           'mediaembed' => array(
             'name' => 'mediaembed',
-            'desc' => 'Plugin for inserting Drupal embeded media',
+            'desc' => 'Plugin for embedding HTML snippets',
             'path' => '%plugin_dir%mediaembed/',
             'buttons' => array(
               'MediaEmbed' => array(
