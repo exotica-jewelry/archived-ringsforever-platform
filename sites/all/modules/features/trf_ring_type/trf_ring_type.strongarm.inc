@@ -44,16 +44,16 @@ function trf_ring_type_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '11',
+          'weight' => '12',
         ),
         'redirect' => array(
-          'weight' => '12',
+          'weight' => '13',
         ),
       ),
       'display' => array(
         'product:sku' => array(
           'default' => array(
-            'weight' => '14',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -69,13 +69,13 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '17',
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
         'product:title' => array(
           'default' => array(
-            'weight' => '15',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -91,13 +91,13 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '18',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
         'product:status' => array(
           'default' => array(
-            'weight' => '16',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -113,13 +113,13 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '19',
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
         'product:title_field' => array(
           'default' => array(
-            'weight' => '13',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -135,7 +135,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '16',
+            'weight' => '17',
             'visible' => FALSE,
           ),
         ),
@@ -163,7 +163,7 @@ function trf_ring_type_strongarm() {
         ),
         'product:field_images' => array(
           'default' => array(
-            'weight' => '8',
+            'weight' => '7',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -179,13 +179,13 @@ function trf_ring_type_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '8',
+            'weight' => '10',
             'visible' => TRUE,
           ),
         ),
         'product:field_color' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '8',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -201,7 +201,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '10',
+            'weight' => '11',
             'visible' => TRUE,
           ),
         ),
@@ -223,7 +223,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '11',
+            'weight' => '4',
             'visible' => TRUE,
           ),
         ),
@@ -247,11 +247,11 @@ function trf_ring_type_strongarm() {
         ),
         'product:field_title_parent' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '13',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -313,7 +313,7 @@ function trf_ring_type_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_rings_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '[node:field-product-type]/[node:field-ring-elements-primary]/[node:title]';
   $export['pathauto_node_rings_pattern'] = $strongarm;
 
   return $export;

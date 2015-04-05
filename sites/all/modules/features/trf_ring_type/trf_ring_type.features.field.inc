@@ -48,26 +48,30 @@ function trf_ring_type_field_default_fields() {
       'bundle' => 'rings',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Collections by feature, such as inlays, gemstones, color, etc.',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
+          'module' => 'ds',
           'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
+            'field_multiple_limit' => '-1',
+            'field_multiple_limit_offset' => '0',
+            'taxonomy_term_link' => 1,
+            'taxonomy_term_separator' => ', ',
           ),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'ds_taxonomy_separator',
           'weight' => '4',
         ),
         'full' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
+          'module' => 'ds',
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_separator' => ', ',
           ),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'ds_taxonomy_separator',
           'weight' => '5',
         ),
         'product_list' => array(
@@ -102,10 +106,10 @@ function trf_ring_type_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(
-          'apply_chosen' => 1,
+          'apply_chosen' => '1',
         ),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '5',
       ),
     ),
   );
@@ -152,23 +156,27 @@ function trf_ring_type_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
+          'module' => 'ds',
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_separator' => ', ',
           ),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'ds_taxonomy_separator',
           'weight' => '11',
         ),
         'full' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
+          'module' => 'ds',
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_separator' => ', ',
           ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'type' => 'ds_taxonomy_separator',
+          'weight' => '7',
         ),
         'product_list' => array(
           'label' => 'above',
@@ -309,106 +317,6 @@ function trf_ring_type_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-rings-field_featured_category'.
-  $fields['node-rings-field_featured_category'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_featured_category',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'featuring',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'rings',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
-        ),
-        'full' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'field_multiple_limit' => -1,
-            'field_multiple_limit_offset' => 0,
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
-        ),
-        'product_list' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '9',
-        ),
-        'reference_view' => array(
-          'label' => 'inline',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '6',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '11',
-        ),
-      ),
-      'entity_type' => 'node',
-      'fences_wrapper' => '',
-      'field_name' => 'field_featured_category',
-      'label' => 'Featured category',
-      'product_catalog' => 1,
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(
-          'apply_chosen' => 1,
-        ),
-        'type' => 'options_select',
-        'weight' => '5',
-      ),
-    ),
-  );
-
   // Exported field: 'node-rings-field_images'.
   $fields['node-rings-field_images'] = array(
     'field_config' => array(
@@ -448,13 +356,13 @@ function trf_ring_type_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '14',
+          'weight' => '17',
         ),
         'full' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '14',
+          'weight' => '15',
         ),
         'product_list' => array(
           'label' => 'above',
@@ -578,13 +486,13 @@ function trf_ring_type_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '13',
+          'weight' => '15',
         ),
         'full' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '15',
+          'weight' => '16',
         ),
         'product_list' => array(
           'label' => 'above',
@@ -740,6 +648,102 @@ function trf_ring_type_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
+        'weight' => '10',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-rings-field_product_type'.
+  $fields['node-rings-field_product_type'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_product_type',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'category',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'rings',
+      'default_value' => array(
+        0 => array(
+          'tid' => '234',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '18',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
+        ),
+        'product_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'reference_view' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => '',
+      'field_name' => 'field_product_type',
+      'label' => 'Product type',
+      'product_catalog' => 1,
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'apply_chosen' => '0',
+        ),
+        'type' => 'options_select',
         'weight' => '9',
       ),
     ),
@@ -861,7 +865,7 @@ function trf_ring_type_field_default_fields() {
           ),
         ),
         'type' => 'inline_entity_form',
-        'weight' => '10',
+        'weight' => '11',
       ),
     ),
   );
@@ -908,23 +912,27 @@ function trf_ring_type_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
+          'module' => 'ds',
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_separator' => ', ',
           ),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'ds_taxonomy_separator',
           'weight' => '6',
         ),
         'full' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
+          'module' => 'ds',
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_separator' => ', ',
           ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '7',
+          'type' => 'ds_taxonomy_separator',
+          'weight' => '8',
         ),
         'product_list' => array(
           'label' => 'above',
@@ -1021,7 +1029,7 @@ function trf_ring_type_field_default_fields() {
           'weight' => '9',
         ),
         'full' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'taxonomy',
           'settings' => array(
             'field_multiple_limit' => -1,
@@ -1062,6 +1070,7 @@ function trf_ring_type_field_default_fields() {
         'active' => 1,
         'module' => 'autocomplete_deluxe',
         'settings' => array(
+          'apply_chosen' => '',
           'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
           'delimiter' => '',
           'limit' => '10',
@@ -1070,6 +1079,110 @@ function trf_ring_type_field_default_fields() {
         ),
         'type' => 'autocomplete_deluxe_taxonomy',
         'weight' => '7',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-rings-field_theme'.
+  $fields['node-rings-field_theme'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_theme',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'brand',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'rings',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Thematic collection, such as men\'s and women\'s rings, promise rings, and commitment rings.',
+      'display' => array(
+        'default' => array(
+          'label' => 'inline',
+          'module' => 'ds',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_separator' => ', ',
+          ),
+          'type' => 'ds_taxonomy_separator',
+          'weight' => '5',
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'ds',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_separator' => ', ',
+          ),
+          'type' => 'ds_taxonomy_separator',
+          'weight' => '6',
+        ),
+        'product_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'reference_view' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => '',
+      'field_name' => 'field_theme',
+      'label' => 'Theme',
+      'product_catalog' => 1,
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'apply_chosen' => '1',
+        ),
+        'type' => 'options_select',
+        'weight' => '6',
       ),
     ),
   );
@@ -1199,17 +1312,20 @@ function trf_ring_type_field_default_fields() {
   t('<p>Select the primary colors in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal. Rings that <em>can</em> have color but are not anodized should be tagged with <em>uncolored</em>.</p>');
   t('Base price');
   t('Collection');
+  t('Collections by feature, such as inlays, gemstones, color, etc.');
   t('Colors');
   t('Description');
   t('Elements');
   t('Enter <strong>one</strong> tag for this ring\'s primary element.');
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
   t('Enter tags identifying various secondary elements. For example: gold, platinum, diamonds.');
-  t('Featured category');
   t('Images');
   t('Primary element');
+  t('Product type');
   t('Product variations');
   t('Related rings');
+  t('Thematic collection, such as men\'s and women\'s rings, promise rings, and commitment rings.');
+  t('Theme');
   t('Title');
   t('Upload one or more images that should be displayed when this width is selected.');
   t('﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.');
