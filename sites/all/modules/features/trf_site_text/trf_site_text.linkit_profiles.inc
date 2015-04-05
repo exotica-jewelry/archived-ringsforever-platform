@@ -91,7 +91,6 @@ function trf_site_text_default_linkit_profiles() {
         'category' => 'category',
         'collection' => 'collection',
         'color' => 'color',
-        'featuring' => 'featuring',
         'elements' => 'elements',
         'tags' => 0,
         'bag_size' => 0,
@@ -172,11 +171,19 @@ function trf_site_text_default_linkit_profiles() {
       'url_method' => '2',
     ),
     'attribute_plugins' => array(
-      'class' => array(
+      'id' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
-      'id' => array(
+      'accesskey' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'target' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'class' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
@@ -185,14 +192,6 @@ function trf_site_text_default_linkit_profiles() {
         'weight' => '-10',
       ),
       'rel' => array(
-        'enabled' => 0,
-        'weight' => '-10',
-      ),
-      'target' => array(
-        'enabled' => 0,
-        'weight' => '-10',
-      ),
-      'accesskey' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
