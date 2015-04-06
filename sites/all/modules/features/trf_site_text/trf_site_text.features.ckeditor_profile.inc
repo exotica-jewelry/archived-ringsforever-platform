@@ -71,7 +71,7 @@ function trf_site_text_ckeditor_profile_defaults() {
         'css_path' => '',
         'css_style' => 'theme',
         'styles_path' => '',
-        'filebrowser' => 'none',
+        'filebrowser' => 'imce',
         'filebrowser_image' => '',
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
@@ -115,11 +115,11 @@ function trf_site_text_ckeditor_profile_defaults() {
             'default' => 'f',
             'buttons' => array(
               'ring' => array(
-                'label' => 'Ring',
+                'label' => 'Embed ring',
                 'icon' => 'entity.png',
               ),
               'node' => array(
-                'label' => 'Content',
+                'label' => 'Embed content',
                 'icon' => 'entity.png',
               ),
             ),
@@ -135,6 +135,18 @@ function trf_site_text_ckeditor_profile_defaults() {
               ),
             ),
             'default' => 't',
+          ),
+          'imce' => array(
+            'name' => 'imce',
+            'desc' => 'Plugin for inserting files from IMCE without image dialog',
+            'path' => '%plugin_dir%imce/',
+            'buttons' => array(
+              'IMCE' => array(
+                'label' => 'IMCE',
+                'icon' => 'images/icon.png',
+              ),
+            ),
+            'default' => 'f',
           ),
           'linkit' => array(
             'name' => 'linkit',
@@ -213,7 +225,7 @@ function trf_site_text_ckeditor_profile_defaults() {
         'css_path' => '',
         'css_style' => 'default',
         'styles_path' => '',
-        'filebrowser' => 'none',
+        'filebrowser' => 'imce',
         'filebrowser_image' => '',
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
@@ -246,6 +258,18 @@ function trf_site_text_ckeditor_profile_defaults() {
                 'icon' => 'entity.png',
               ),
             ),
+          ),
+          'imce' => array(
+            'name' => 'imce',
+            'desc' => 'Plugin for inserting files from IMCE without image dialog',
+            'path' => '%plugin_dir%imce/',
+            'buttons' => array(
+              'IMCE' => array(
+                'label' => 'IMCE',
+                'icon' => 'images/icon.png',
+              ),
+            ),
+            'default' => 'f',
           ),
           'linkit' => array(
             'name' => 'linkit',

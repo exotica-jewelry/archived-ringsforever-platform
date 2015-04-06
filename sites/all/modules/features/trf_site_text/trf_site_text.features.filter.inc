@@ -59,7 +59,7 @@ function trf_site_text_filter_default_formats() {
         'weight' => '1',
         'status' => '1',
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h3> <h4> <h5> <drupal-entity>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <h3> <h4> <h5> <drupal-entity>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
