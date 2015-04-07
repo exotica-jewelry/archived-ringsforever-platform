@@ -52,13 +52,19 @@ zones[postscript] = Postscript
 zones[footer] = Footer first
 zones[footer2] = Footer second
 
-
 ; OPTIONAL STYLESHEETS
 
 css[overrides.css][name] = TRF overrides of Commerce Kickstart Theme.
 css[overrides.css][description] = Selected overrides of Commerce Kickstart's default theme.
 css[overrides.css][options][weight] = 12
 settings[alpha_css][overrides.css] = 'overrides.css'
+
+; BREAKPOINTS
+
+breakpoints[tv] = only screen and (min-width: 3456px)
+breakpoints[wide] = (min-width: 851px)
+breakpoints[narrow] = (min-width: 560px)
+breakpoints[mobile] = (min-width: 0px)
 
 ; THEME SETTINGS (DEFAULTS)
 
