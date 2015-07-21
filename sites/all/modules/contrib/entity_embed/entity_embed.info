@@ -16,9 +16,9 @@ files[] = entity_embed.test
 
 configure = admin/config/content/embed-button
 
-; Information added by Drupal.org packaging script on 2015-04-01
-version = "7.x-1.x-dev"
+; Information added by Drupal.org packaging script on 2015-07-14
+version = "7.x-1.0-alpha2"
 core = "7.x"
 project = "entity_embed"
-datestamp = "1427854682"
+datestamp = "1436897050"
 
