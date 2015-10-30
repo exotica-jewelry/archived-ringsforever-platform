@@ -1,8 +1,8 @@
 name = TRF store shipping
-description = Sets shipping rates. At this time the associated rules cannot be exported (see issue #1402762).
+description = Sets shipping rates.
 core = 7.x
 package = TRF Store
-version = 7.x-0.4
+version = 7.x-1.0
 project = trf_store_shipping
 dependencies[] = commerce_features
 dependencies[] = commerce_flat_rate
