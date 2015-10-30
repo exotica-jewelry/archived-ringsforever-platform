@@ -28,7 +28,7 @@ function trf_site_text_ckeditor_profile_defaults() {
     'Full' => array(
       'name' => 'Full',
       'settings' => array(
-        'ss' => '2',
+        'ss' => 2,
         'toolbar' => '[
     [\'Format\',\'Bold\',\'Italic\',\'RemoveFormat\',\'-\',\'BulletedList\',\'NumberedList\',\'Outdent\',\'Indent\',\'Blockquote\'],
     [\'Copy\',\'Cut\',\'PasteFromWord\'],
@@ -187,7 +187,7 @@ function trf_site_text_ckeditor_profile_defaults() {
     'Standard' => array(
       'name' => 'Standard',
       'settings' => array(
-        'ss' => '2',
+        'ss' => 2,
         'toolbar' => '[
     [\'Format\',\'Bold\',\'Italic\',\'RemoveFormat\',\'-\',\'BulletedList\',\'NumberedList\',\'Blockquote\'],
     [\'PasteFromWord\'],
