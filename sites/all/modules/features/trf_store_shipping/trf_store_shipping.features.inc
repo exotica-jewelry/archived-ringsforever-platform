@@ -27,12 +27,13 @@ function trf_store_shipping_commerce_flat_rate_default_services() {
       'module' => 'commerce_flat_rate',
       'title' => 'Standard Shipping (Canada)',
       'base_rate' => array(
-        'amount' => '4000',
+        'amount' => 4000,
         'currency_code' => 'USD',
         'data' => array(),
       ),
       'data' => array(),
       'admin_list' => TRUE,
+      'is_features' => TRUE,
     ),
   );
   return $items;
