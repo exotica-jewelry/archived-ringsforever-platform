@@ -14,7 +14,7 @@ function trf_ring_variation_commerce_product_default_types() {
       'name' => 'Rings',
       'description' => '',
       'help' => '',
-      'revision' => '1',
+      'revision' => 1,
     ),
   );
   return $items;
@@ -23,8 +23,7 @@ function trf_ring_variation_commerce_product_default_types() {
 /**
  * Implements hook_ctools_plugin_api().
  */
-function trf_ring_variation_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function trf_ring_variation_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "commerce_autosku" && $api == "autosku_pattern") {
     return array("version" => "1");
   }
