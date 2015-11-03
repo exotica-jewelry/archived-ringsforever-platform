@@ -559,12 +559,8 @@ function trf_ring_variation_field_default_field_instances() {
       ),
       'node_full' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'taxonomy_term_reference_link',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'node_product_list' => array(
@@ -766,12 +762,8 @@ function trf_ring_variation_field_default_field_instances() {
       ),
       'node_full' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'text_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'node_product_list' => array(
