@@ -39,7 +39,7 @@ function trf_ring_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -238,7 +238,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 19,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -347,7 +347,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 20,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -499,7 +499,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 18,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -638,7 +638,7 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 6,
       ),
       'full' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'ds',
         'settings' => array(
           'field_multiple_limit' => -1,
@@ -647,7 +647,7 @@ function trf_ring_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -717,7 +717,7 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -792,7 +792,7 @@ function trf_ring_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'product_list' => array(
         'label' => 'above',
