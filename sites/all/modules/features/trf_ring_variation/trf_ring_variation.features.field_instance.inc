@@ -377,7 +377,7 @@ function trf_ring_variation_field_default_field_instances() {
             'zoom_height' => 'auto',
             'zoom_width' => 'auto',
           ),
-          'zoom_style' => 0,
+          'zoom_style' => 'product_zoom',
           'zoom_style_fieldset' => array(
             'Show title' => 1,
             'lens_opacity' => 0.5,
