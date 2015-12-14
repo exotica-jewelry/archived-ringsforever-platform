@@ -1,4 +1,16 @@
-/* The "user wrapper," which for visitors is just the shopping cart */
+/* Page background */
+
+body {
+  background-color: #98ccfe;
+}
+
+/* Logo */
+
+.zone-branding .region-branding .logo-img {
+  width: 600px;
+}
+
+/* "User wrapper," which for visitors is just the shopping cart */
 
 .zone-user-wrapper {
   background-color: #848484;
