@@ -252,7 +252,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'node_product_list' => array(
         'label' => 'above',
@@ -379,13 +379,13 @@ function trf_ring_variation_field_default_field_instances() {
           ),
           'zoom_style' => 'product_zoom',
           'zoom_style_fieldset' => array(
-            'Show title' => 1,
+            'Show title' => 0,
             'lens_opacity' => 0.5,
             'smooth_move' => 3,
             'soft_focus' => 0,
             'tint' => 'false',
             'tint_opacity' => 0.5,
-            'title_opacity' => 0,
+            'title_opacity' => 1,
           ),
         ),
         'type' => 'cloud_zoom',
@@ -657,7 +657,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'node_product_list' => array(
         'label' => 'above',
@@ -764,7 +764,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'node_product_list' => array(
         'label' => 'hidden',
