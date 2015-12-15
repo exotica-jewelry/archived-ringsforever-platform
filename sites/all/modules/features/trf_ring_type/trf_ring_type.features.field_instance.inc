@@ -418,7 +418,7 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
           'line_item_type' => 'product',
           'show_quantity' => 0,
-          'show_single_product_attributes' => 0,
+          'show_single_product_attributes' => 1,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
         'weight' => 3,
