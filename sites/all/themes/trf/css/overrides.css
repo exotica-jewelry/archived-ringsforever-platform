@@ -10,6 +10,12 @@ body {
   width: 600px;
 }
 
+/* Popular (featured) themes menu */
+
+.block-menu-themes {
+  clear: left;
+}
+
 /* "User wrapper," which for visitors is just the shopping cart */
 
 .zone-user-wrapper {
