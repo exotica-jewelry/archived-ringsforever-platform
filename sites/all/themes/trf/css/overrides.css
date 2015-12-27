@@ -16,6 +16,43 @@ body {
   clear: left;
 }
 
+.block-menu-themes .block-title,
+.block-menu-themes .content {
+  display: inline-block;
+}
+
+.block-menu-themes ul.menu li {
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+.block-menu-themes ul.menu li.leaf {
+  padding: 0;
+  list-style-image: none;
+  list-style-type: none;
+}
+
+.block-menu-themes ul.menu li.leaf a {
+  padding: 0.5em 1em;
+  background-color: #fff;
+  border: 2px #000 solid;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+.block-menu-themes ul.menu li.leaf a:hover,
+.block-menu-themes ul.menu li.leaf a:active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Primary menu */
+
+.navigation .primary-menu ul li.last a, .navigation .second-menu ul li.last a {
+  border-left: 1px dotted #fff;
+}
+
 /* "User wrapper," which for visitors is just the shopping cart */
 
 .zone-user-wrapper {
