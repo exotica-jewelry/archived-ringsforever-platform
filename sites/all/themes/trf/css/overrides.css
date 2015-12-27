@@ -14,6 +14,8 @@ body {
 
 .block-menu-themes {
   clear: left;
+  padding-top: 2em;
+  line-height: 0.5em;
 }
 
 .block-menu-themes .block-title,
