@@ -33,7 +33,7 @@ function trf_site_text_ckeditor_profile_defaults() {
     [\'Format\',\'Bold\',\'Italic\',\'RemoveFormat\',\'-\',\'BulletedList\',\'NumberedList\',\'Outdent\',\'Indent\',\'Blockquote\'],
     [\'Copy\',\'Cut\',\'PasteFromWord\'],
     [\'linkit\',\'Unlink\',\'Anchor\'],
-    [\'Image\',\'MediaEmbed\'],
+    [\'ring\',\'Image\',\'IMCE\',\'MediaEmbed\',\'node\'],
     \'/\',
     [\'Subscript\',\'Superscript\',\'-\',\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'HorizontalRule\'],
     [\'Table\'],
@@ -55,7 +55,7 @@ function trf_site_text_ckeditor_profile_defaults() {
         'extraAllowedContent' => '',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
-        'font_format' => 'p;div;pre;h1;h2;h3;h4;h5;h6',
+        'font_format' => 'p;h3;h4;h5;pre;div',
         'custom_formatting' => 'f',
         'formatting' => array(
           'custom_formatting_options' => array(
@@ -155,7 +155,7 @@ function trf_site_text_ckeditor_profile_defaults() {
             'buttons' => array(
               'linkit' => array(
                 'label' => 'Linkit',
-                'icon' => 'linkit.png',
+                'icon' => 'icons/linkit.png',
               ),
             ),
           ),
@@ -192,7 +192,7 @@ function trf_site_text_ckeditor_profile_defaults() {
     [\'Format\',\'Bold\',\'Italic\',\'RemoveFormat\',\'-\',\'BulletedList\',\'NumberedList\',\'Blockquote\'],
     [\'PasteFromWord\'],
     [\'linkit\',\'Unlink\',\'Anchor\'],
-    [\'Image\',\'MediaEmbed\'],
+    [\'ring\',\'Image\',\'IMCE\',\'MediaEmbed\',\'node\'],
     [\'SpellChecker\',\'Scayt\'],
     [\'Source\']
 ]',
@@ -278,7 +278,7 @@ function trf_site_text_ckeditor_profile_defaults() {
             'buttons' => array(
               'linkit' => array(
                 'label' => 'Linkit',
-                'icon' => 'linkit.png',
+                'icon' => 'icons/linkit.png',
               ),
             ),
           ),
