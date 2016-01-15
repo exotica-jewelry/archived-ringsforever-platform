@@ -49,10 +49,17 @@ body {
   color: #fff;
 }
 
-/* Primary menu */
+/* Main menus */
 
-.navigation .primary-menu ul li.last a, .navigation .second-menu ul li.last a {
+.navigation .primary-menu ul li.last a,
+.navigation .second-menu ul li.last a {
   border-left: 1px dotted #fff;
+}
+
+/* Secondary menu */
+
+.navigation .second-menu  ul li.last a {
+  padding: 12px 6px;
 }
 
 /* "User wrapper," which for visitors is just the shopping cart */
@@ -60,6 +67,58 @@ body {
 .zone-user-wrapper {
   background-color: #848484;
   background-color: rgba(132, 132, 132, 0.7);
+}
+
+/* Home page: Nodes */
+
+.front .grid-24 {
+  margin: 0;
+  width: 960px !important;
+}
+
+.front .node {
+  border: none;
+}
+
+/* Home page: Featured grid */
+
+.view-home-featured-categories {
+  background-color: rgba(255,255,255,0.25);
+  padding-top: 2em;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.view-home-featured-categories .views-row {
+  width: 250px;
+  display: inline-block;
+  padding: 1em;
+  text-align: center;
+}
+
+.view-home-featured-categories h2 {
+  margin-bottom: 0;
+  padding-left: 3px;
+  font-size: 1.5em;
+}
+
+.view-home-featured-categories a:link,
+.view-home-featured-categories a:visited {
+  color: #000;
+}
+
+.view-home-featured-categories .node {
+  margin-top: 0;
+  padding: 0;
+}
+
+.view-home-featured-categories .container-24 {
+  padding-left: 70px !important;
+  width: auto !important;
+}
+
+.view-home-featured-categories .node img {
+  border: 3px rgba(255,255,255,0.5) solid;
 }
 
 /* Product lists: Faceted search */
