@@ -78,7 +78,7 @@ function trf_ring_type_field_default_field_bases() {
   // Exported field_base: 'field_related_rings'.
   $field_bases['field_related_rings'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 9,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_related_rings',
@@ -127,7 +127,7 @@ function trf_ring_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'elements',
+          'vocabulary' => 'brand',
           'parent' => 0,
         ),
       ),
@@ -153,7 +153,7 @@ function trf_ring_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'elements',
+          'vocabulary' => 'brand',
           'parent' => 0,
         ),
       ),

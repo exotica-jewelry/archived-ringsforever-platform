@@ -15,7 +15,7 @@ function trf_ring_type_field_default_field_instances() {
     'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Collections by feature, such as inlays, gemstones, color, etc.',
+    'description' => 'Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -39,7 +39,7 @@ function trf_ring_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -60,10 +60,11 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 12,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => '',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_collection',
-    'label' => 'Collection',
+    'label' => 'Collections',
     'product_catalog' => 1,
     'required' => 0,
     'settings' => array(
@@ -109,7 +110,7 @@ function trf_ring_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 7,
+        'weight' => 10,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -175,7 +176,7 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -238,7 +239,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 25,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -347,7 +348,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 27,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -421,7 +422,7 @@ function trf_ring_type_field_default_field_instances() {
           'show_single_product_attributes' => 1,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'product_list' => array(
         'label' => 'hidden',
@@ -499,7 +500,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 26,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -568,7 +569,7 @@ function trf_ring_type_field_default_field_instances() {
           'view_mode' => 'reference_view',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -589,6 +590,7 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
@@ -606,6 +608,7 @@ function trf_ring_type_field_default_field_instances() {
         'fields' => array(),
         'type_settings' => array(
           'allow_existing' => 1,
+          'allow_new' => 1,
           'delete_references' => 0,
           'label_plural' => 'rings',
           'label_singular' => 'ring',
@@ -623,7 +626,7 @@ function trf_ring_type_field_default_field_instances() {
     'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter tags identifying various secondary elements. For example: gold, platinum, diamonds.',
+    'description' => 'Enter other secondary elements of this ring, one at a time.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -647,7 +650,7 @@ function trf_ring_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 9,
+        'weight' => 12,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -668,8 +671,9 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 10,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => '',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_ring_elements',
     'label' => 'Elements',
     'product_catalog' => 1,
@@ -685,6 +689,7 @@ function trf_ring_type_field_default_field_instances() {
         'delimiter' => '',
         'limit' => 10,
         'min_length' => 0,
+        'not_found_message' => 'The term \'@term\' will be added.',
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
@@ -697,7 +702,7 @@ function trf_ring_type_field_default_field_instances() {
     'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter <strong>one</strong> tag for this ring\'s primary element.',
+    'description' => 'Enter <em>one</em> primary element by which to categorize this ring (in particular, in its URL). It should be the single most important element about this ring, such as mountains, leaves, gold, diamonds, blue diamonds, etc. (Elements are always in plural form for categorization purposes.)',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -717,7 +722,7 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 11,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -738,8 +743,9 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => '',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_ring_elements_primary',
     'label' => 'Primary element',
     'product_catalog' => 1,
@@ -756,80 +762,11 @@ function trf_ring_type_field_default_field_instances() {
         'delimiter' => '',
         'limit' => 10,
         'min_length' => 0,
+        'not_found_message' => 'The term \'@term\' will be added.',
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
       'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-rings-field_theme'.
-  $field_instances['node-rings-field_theme'] = array(
-    'bundle' => 'rings',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Thematic collection, such as men\'s and women\'s rings, promise rings, and commitment rings.',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'ds',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'taxonomy_term_link' => TRUE,
-          'taxonomy_term_separator' => ', ',
-        ),
-        'type' => 'ds_taxonomy_separator',
-        'weight' => 5,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'module' => 'ds',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'taxonomy_term_link' => TRUE,
-          'taxonomy_term_separator' => ', ',
-        ),
-        'type' => 'ds_taxonomy_separator',
-        'weight' => 5,
-      ),
-      'product_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'reference_view' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => '',
-    'field_name' => 'field_theme',
-    'label' => 'Theme',
-    'product_catalog' => 1,
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
-      'type' => 'options_select',
-      'weight' => 6,
     ),
   );
 
@@ -855,15 +792,12 @@ function trf_ring_type_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'title',
+        'module' => 'text',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'title_class' => '',
-          'title_link' => 'content',
-          'title_style' => '',
         ),
-        'type' => 'title_linked',
+        'type' => 'text_default',
         'weight' => 0,
       ),
       'product_list' => array(
@@ -928,21 +862,19 @@ function trf_ring_type_field_default_field_instances() {
   t('<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.).</p><p>Selecting <em>Remove</em> from an existing ring will only remove it as a related ring, it will not delete the ring itself unless you choose to do so.</p>');
   t('<p>Select the primary colors in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal. Rings that <em>can</em> have color but are not anodized should be tagged with <em>uncolored</em>.</p>');
   t('Base price');
-  t('Collection');
-  t('Collections by feature, such as inlays, gemstones, color, etc.');
+  t('Collections');
+  t('Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.');
   t('Colors');
   t('Description');
   t('Elements');
-  t('Enter <strong>one</strong> tag for this ring\'s primary element.');
+  t('Enter <em>one</em> primary element by which to categorize this ring (in particular, in its URL). It should be the single most important element about this ring, such as mountains, leaves, gold, diamonds, blue diamonds, etc. (Elements are always in plural form for categorization purposes.)');
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
-  t('Enter tags identifying various secondary elements. For example: gold, platinum, diamonds.');
+  t('Enter other secondary elements of this ring, one at a time.');
   t('Images');
   t('Primary element');
   t('Product type');
   t('Product variations');
   t('Related rings');
-  t('Thematic collection, such as men\'s and women\'s rings, promise rings, and commitment rings.');
-  t('Theme');
   t('Title');
   t('Upload one or more images that should be displayed when this width is selected.');
   t('﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.');
