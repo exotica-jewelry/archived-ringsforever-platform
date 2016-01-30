@@ -29,6 +29,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'ds_taxonomy_separator',
         'weight' => 4,
       ),
+      'featured' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'full' => array(
         'label' => 'inline',
         'module' => 'ds',
@@ -100,6 +106,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'ds_taxonomy_separator',
         'weight' => 11,
       ),
+      'featured' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'full' => array(
         'label' => 'inline',
         'module' => 'ds',
@@ -168,6 +180,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'featured' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -230,6 +248,12 @@ function trf_ring_type_field_default_field_instances() {
     'description' => 'Upload one or more images that should be displayed when this width is selected.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
+      'featured' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -344,6 +368,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
@@ -407,6 +437,12 @@ function trf_ring_type_field_default_field_instances() {
           'show_single_product_attributes' => 0,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
+        'weight' => 3,
+      ),
+      'featured' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'full' => array(
@@ -496,6 +532,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
@@ -557,6 +599,12 @@ function trf_ring_type_field_default_field_instances() {
           'view_mode' => 'reference_view',
         ),
         'type' => 'entityreference_entity_view',
+        'weight' => 12,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 12,
       ),
       'full' => array(
@@ -640,6 +688,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'ds_taxonomy_separator',
         'weight' => 6,
       ),
+      'featured' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'ds',
@@ -713,6 +767,12 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'featured' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 9,
       ),
       'full' => array(
@@ -789,6 +849,12 @@ function trf_ring_type_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
+        'weight' => 0,
+      ),
+      'featured' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'full' => array(
