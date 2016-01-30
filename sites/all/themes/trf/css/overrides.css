@@ -233,6 +233,7 @@ body.toolbar {
   display: inline-block;
   padding: 1em;
   text-align: center;
+  vertical-align: top;
 }
 
 .view-home-featured-categories h2 {
@@ -256,8 +257,21 @@ body.toolbar {
   width: auto !important;
 }
 
+.view-home-featured-categories .container-24.prefix-1 {
+  padding-left: 10px !important;
+}
+
+.view-home-featured-categories .node {
+  margin-bottom: 0;
+}
+
 .view-home-featured-categories .node img {
   border: 3px rgba(255,255,255,0.5) solid;
+}
+
+.view-home-featured-categories .taxonomy-term-description {
+  margin: 0 5px 10px 10px;
+  text-align: left;
 }
 
 /* Product lists: Faceted search */
