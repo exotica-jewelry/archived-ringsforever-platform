@@ -31,7 +31,7 @@ function trf_similarproducts_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => -30,
+        'weight' => -42,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -63,7 +63,7 @@ function trf_similarproducts_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'trf',
-        'weight' => -31,
+        'weight' => -42,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -92,10 +92,10 @@ function trf_similarproducts_default_fe_block_settings() {
         'weight' => -29,
       ),
       'trf' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content',
+        'status' => 1,
         'theme' => 'trf',
-        'weight' => -29,
+        'weight' => -41,
       ),
       'trf_admin' => array(
         'region' => '',
