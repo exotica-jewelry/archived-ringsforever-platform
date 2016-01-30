@@ -685,6 +685,7 @@ function trf_ring_type_field_default_field_instances() {
       'active' => 1,
       'module' => 'autocomplete_deluxe',
       'settings' => array(
+        'apply_chosen' => '',
         'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
         'delimiter' => '',
         'limit' => 10,
