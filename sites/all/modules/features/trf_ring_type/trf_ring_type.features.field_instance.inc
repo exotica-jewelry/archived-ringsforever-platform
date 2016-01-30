@@ -83,7 +83,7 @@ function trf_ring_type_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -159,7 +159,7 @@ function trf_ring_type_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -237,7 +237,7 @@ function trf_ring_type_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -351,7 +351,7 @@ function trf_ring_type_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -414,7 +414,7 @@ function trf_ring_type_field_default_field_instances() {
         'currency_code' => 'default',
       ),
       'type' => 'commerce_price_full',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -831,12 +831,82 @@ function trf_ring_type_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-rings-field_ring_name'.
+  $field_instances['node-rings-field_ring_name'] = array(
+    'bundle' => 'rings',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'product_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'reference_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_ring_name',
+    'label' => 'Ring name',
+    'required' => 1,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-rings-title_field'.
   $field_instances['node-rings-title_field'] = array(
     'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -900,8 +970,9 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => '',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'title_field',
     'label' => 'Title',
     'required' => 1,
@@ -909,6 +980,11 @@ function trf_ring_type_field_default_field_instances() {
       'hide_label' => array(
         'entity' => 'entity',
         'page' => 0,
+      ),
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -942,6 +1018,7 @@ function trf_ring_type_field_default_field_instances() {
   t('Product type');
   t('Product variations');
   t('Related rings');
+  t('Ring name');
   t('Title');
   t('Upload one or more images that should be displayed when this width is selected.');
   t('﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.');

@@ -13,6 +13,27 @@ function trf_ring_type_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_rings';
+  $strongarm->value = '1';
+  $export['auto_entitylabel_node_rings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_rings';
+  $strongarm->value = '[node:field-ring-name] titanium ring with [node:field-ring-elements-primary]';
+  $export['auto_entitylabel_pattern_node_rings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_rings';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_rings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__rings';
   $strongarm->value = array(
     'view_modes' => array(
@@ -356,7 +377,7 @@ function trf_ring_type_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_rings_pattern';
-  $strongarm->value = '[node:field-product-type]/[node:field-ring-elements-primary:name]/[node:title]';
+  $strongarm->value = '[node:field-product-type]/[node:field-ring-elements-primary:name]/[node:field-ring-name]';
   $export['pathauto_node_rings_pattern'] = $strongarm;
 
   return $export;
