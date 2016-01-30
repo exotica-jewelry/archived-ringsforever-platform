@@ -87,6 +87,12 @@ function trf_ring_variation_field_default_field_instances() {
         'type' => 'commerce_price_no_decimals',
         'weight' => 0,
       ),
+      'node_featured' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'node_full' => array(
         'label' => 'hidden',
         'module' => 'commerce_extra_price_formatters',
@@ -248,6 +254,12 @@ function trf_ring_variation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_featured' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'node_full' => array(
         'label' => 'above',
         'settings' => array(),
@@ -358,6 +370,18 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'node_featured' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_multiple_limit' => 1,
+          'field_multiple_limit_offset' => 0,
+          'image_link' => '',
+          'image_style' => 'product_medium',
+        ),
+        'type' => 'image',
+        'weight' => 1,
       ),
       'node_full' => array(
         'label' => 'hidden',
@@ -557,6 +581,12 @@ function trf_ring_variation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_featured' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'node_full' => array(
         'label' => 'inline',
         'settings' => array(),
@@ -652,6 +682,12 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'node_featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'node_full' => array(
         'label' => 'above',
@@ -756,6 +792,12 @@ function trf_ring_variation_field_default_field_instances() {
       ),
       'line_item' => array(
         'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_featured' => array(
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
