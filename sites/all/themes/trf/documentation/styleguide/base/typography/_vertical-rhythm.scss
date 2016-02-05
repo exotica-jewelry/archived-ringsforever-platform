@@ -1,0 +1,15 @@
+//
+// Vertical rhythm
+//
+
+main {
+  h1, h2, h3, h4, h5, h6, hgroup,
+  ul, ol, dl,
+  blockquote, p, address,
+  table,
+  form,
+  pre,
+  hr {
+    margin-bottom: 2rem;
+  }
+}

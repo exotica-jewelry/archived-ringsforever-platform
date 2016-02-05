@@ -1,0 +1,111 @@
+//
+// "Sign up for our newsletter" banner
+//
+
+.is-reading #block-email-signup {
+
+  @include mq(smallish) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: blurIn 0.75s, scaleIn 0.75s;
+
+    // &::before {
+    //   content: "\00D7";
+    //   position: absolute;
+    //   top: 5px;
+    //   right: 5px;
+    //   display: block;
+    //   width: 20px;
+    //   height: 20px;
+    //   @include font-size(24px);
+    //   font-weight: bold;
+    // }
+
+    // &:hover::before {
+    //   color: $white;
+    //   transition: all 0.2s;
+    // }
+  }
+}
+
+#block-email-signup {
+  @include clearfix;
+  margin-top: 1em;
+  background-color: $yellow;
+  border-top: 3px solid $yellow;
+  @include card(1);
+
+  h2,
+  .field-block-content--body {
+    @include horizontal-center;
+    padding: 0 1rem;
+    @include mq(mediumish) {
+      width: 80%;
+      padding: 0;
+    }
+
+    @include mq(largeish) {
+      width: 70%;
+    }
+  }
+
+  h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @include font-size(20px);
+    font-weight: bold;
+  }
+
+  form {
+    margin: 0 0 1rem 0;
+    @include no-block-padding;
+  }
+
+  .input-text {
+    width: 55%;
+    margin-right: 5%;
+    float: left;
+    padding: 0.5rem;
+
+    @include mq(mediumish) {
+      width: 65%;
+    }
+  }
+
+  .signup-submit {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0.5rem;
+
+    @include mq(mediumish) {
+      width: 30%;
+    }
+  }
+
+  .signup-icon {
+    display: none;
+
+    @include mq(mediumish) {
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      fill: $blue;
+      opacity: 0;
+    }
+  }
+
+  .signup-submit:hover .signup-icon {
+    @include mq(mediumish) {
+      left: 25px;
+      opacity: 1;
+      transition: all 0.5s;
+    }
+  }
+}

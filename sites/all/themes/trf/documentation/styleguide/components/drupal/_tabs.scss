@@ -1,0 +1,48 @@
+//
+// Drupal "local" action tabs
+//
+// markup:
+// <div class="tabs"><ul><li><a href="#" class="is-active">Active tab</a></li><li><a href="#">Inactive tab</a></li><li><a href="#">Inactive tab</a></li></div>
+//
+// Styleguide 4.2.0
+
+#block-dove-local-tasks {
+  // provides space for negative margin of tabs
+  margin-top: $padding * 4;
+}
+
+.tabs {
+  margin-top: ($padding * -3);
+  background-color: $yellow;
+
+  ul {
+    margin-left: 0;
+    @include no-block-padding;
+  }
+
+  ul li {
+    display: inline;
+    margin: 0;
+    padding-left: 0;
+    position: relative;
+    border-right: 1px solid $yellow;
+
+    a {
+      display: inline-block;
+      padding: 0.7rem 1rem;
+      @include font-size(15px);
+      font-weight: $normal;
+      color: $black;
+
+      &.is-active {
+        background-color: $blue;
+        color: $white;
+      }
+
+      @include is-on {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}

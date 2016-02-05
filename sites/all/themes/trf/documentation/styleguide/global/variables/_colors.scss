@@ -1,0 +1,39 @@
+// Colors
+//
+// Styleguide 1.1.0
+
+// Main colors
+//
+// $black - Black
+// $white - White
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.1.1
+
+$black: #111;
+$white: #fff;
+
+$blue: #54b2fc;
+$blue_light: #98ccfe;
+
+// Color map
+//
+// @todo Move other color values into this map and update styleguide.
+
+$colors: (
+  page_bg: $blue_light,
+  highlight_bg: $blue,
+);
+
+// Minor colors
+//
+// $red - Red (for errors)
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.1.2
+
+$red: #a00;

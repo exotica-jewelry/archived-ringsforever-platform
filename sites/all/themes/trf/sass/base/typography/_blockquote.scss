@@ -1,0 +1,45 @@
+// Blockquotes
+//
+// markup:
+// <p>In context.</p>
+// <blockquote>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+// lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad
+// litora torquent per conubia nostra, per inceptos himenaeos. In adipiscing
+// pulvinar eros, vitae dictum elit cursus a. Praesent a hendrerit urna.</p>
+// <p>Maecenas neque libero, viverra in neque at, posuere tempor metus.
+// Vestibulum neque nisi, malesuada sed ipsum varius, bibendum ornare nisl.
+// Aliquam adipiscing vehicula varius. Morbi a interdum lacus. Integer luctus
+// lobortis magna, nec vulputate augue blandit ac.</p>
+// </blockquote>
+// <p>In context.</p>
+//
+// Styleguide 2.4.0
+
+blockquote {
+  // display: block;
+  // margin-bottom: 1rem;
+  // padding: 1rem 1rem 0.1rem 2.5rem;
+  // position: relative;
+  // @include font-size(20px);
+  // line-height: 1.3;
+  // background-color: $white;
+  // border-radius: 10px;
+}
+
+blockquote::before {
+  // font-family: $fontHighlight;
+  // font-style: italic;
+  // content: "\201C";
+  // @include font-size(60px);
+  // font-weight: $bold;
+  // color: $blue;
+  // font-style: normal;
+  // position: absolute;
+  // left: 5px;
+  // top: 5px;
+}
+
+blockquote::after {
+  // content: "";
+}

@@ -1,0 +1,31 @@
+// Inline styles
+//
+// Styleguide 2.3.0
+
+// Strong
+//
+// markup:
+// <p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipiscing.</p>
+//
+// Styleguide 2.3.1
+
+strong {
+  font-weight: $bold;
+}
+
+// Emphasis
+//
+// markup:
+// <p>Lorem ipsum <em>dolor sit amet</em>, consectetur adipiscing.</p>
+//
+// Styleguide 2.3.2
+
+em {
+  // font-family: $fontHighlight;
+  // font-style: italic;
+  // color: $grey-shade800;
+
+  // a & {
+  //   color: inherit;
+  // }
+}

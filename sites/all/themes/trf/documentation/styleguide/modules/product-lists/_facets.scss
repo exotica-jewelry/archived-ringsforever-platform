@@ -1,0 +1,21 @@
+//
+// Faceted search elements
+//
+
+.region-sidebar-first .block-facetapi {
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 15px;
+}
+
+.region-sidebar-first .block-facetapi ul li a {
+  color: #555;
+}
+
+ul.facetapi-commerce-search-api-fancy li {
+  border: none;
+}
+
+.region-sidebar-first .block-facetapi ul li a.facetapi-inactive {
+  padding-left: 0;
+}

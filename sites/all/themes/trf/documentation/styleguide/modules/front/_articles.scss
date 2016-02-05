@@ -1,0 +1,21 @@
+//
+// Front featured articles
+//
+
+.front-section.articles {
+  border-bottom: 1px solid $dkblue;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  padding: 1.5rem 0;
+  @extend %pattern--ltblue;
+
+  @include mq(mediumish) {
+    padding: 2.5rem 0;
+  }
+
+  .block__title {
+    @extend %headline--block;
+  }
+}

@@ -1,0 +1,9 @@
+//
+// Article byline (author entityreference)
+//
+
+.node--type-article {
+  .node--view-mode-byline {
+    @extend %author-card;
+  }
+}

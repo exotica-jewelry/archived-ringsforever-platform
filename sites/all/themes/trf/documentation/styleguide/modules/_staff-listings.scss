@@ -1,0 +1,59 @@
+//
+// Staff listings view of authors
+//
+
+// Blocks
+
+.view-display-id-block_staff {
+  @include clearfix;
+  text-align: center;
+
+  .views-row {
+    display: inline-block;
+    vertical-align: top;
+    width: $imagestyle-portrait_width;
+    height: auto;
+    margin-right: ($padding / 2);
+    margin-bottom: ($padding / 2);
+    @include no-block-padding;
+  }
+
+  // Groupby headers (sadly no way to class them)
+  .view-content > h3 {
+    margin: $padding;
+    @include font-size(36px);
+    text-align: left;
+    color: $blue;
+
+    &:nth-of-type(3):after {
+      content: "s";
+    }
+
+    &:nth-of-type(4):after {
+      content: "s";
+    }
+  }
+}
+
+// Pages
+
+.view-staff-listings.view-display-id-master {
+  @extend %author;
+  @extend clearfix;
+
+  .node__title {
+    margin: 0 0 $padding 0;
+    @include font-size(30px);
+  }
+
+  .field-node--field-image-author-picture {
+    float: right;
+    margin: 0 0 $padding $padding;
+  }
+
+  .field-node--field-taxonomy-author-location {
+    top: $padding;
+    right: $padding;
+    padding: 0;
+  }
+}

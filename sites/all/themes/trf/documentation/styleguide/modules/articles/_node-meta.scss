@@ -1,0 +1,19 @@
+//
+// Article meta data
+//
+
+.node-content--article .node__meta {
+  margin: (2 * $padding) 0;
+  padding: 0 $padding;
+  font-family: $fontHighlight;
+  font-style: italic;
+  color: $grey-shade700;
+
+  @include mq(smallish) {
+    padding: 0;
+  }
+
+  @include mq(mediumish) {
+    @include font-size(20px);
+  }
+}

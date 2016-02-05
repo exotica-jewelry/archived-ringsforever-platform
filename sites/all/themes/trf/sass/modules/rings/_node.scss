@@ -1,0 +1,34 @@
+//
+// Individual ring nodes
+//
+
+// Wrapper around image zoom and thumbnails
+.page-node.node-type-rings .commerce-product-field-field-images {
+  padding-right: 2em;
+}
+
+// Elements (keywords)
+.page-node.node-type-rings .field-name-field-ring-elements-primary {
+  display: inline-block;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements-primary .field-items::before {
+  content: 'Keywords: ';
+  font-weight: bold;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements-primary .field-item::after {
+  content: ',';
+  padding-right: 0.3em;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements {
+  display: inline-block;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements-primary .field-items,
+.page-node.node-type-rings .field-name-field-ring-elements-primary .field-item,
+.page-node.node-type-rings .field-name-field-ring-elements .field-items,
+.page-node.node-type-rings .field-name-field-ring-elements .field-item {
+  display: inline;
+}

@@ -1,0 +1,77 @@
+//
+// Work category overview elements
+//
+// Until D8 Twig replacement tokens work in class names, we have to target
+// individual items with CSS nth-of-type pseudoselectors.
+// @see https://www.drupal.org/node/2543796
+//
+
+.work-overview {
+  display: inline-block;
+  width: $work-category-width;
+  vertical-align: top;
+  margin-bottom: 2rem;
+}
+
+.work-overview__link {
+  display: block;
+  @include card(1);
+
+  @include is-on {
+    background-color: $yellow;
+    @include grow($duration: "0.1s");
+  }
+}
+
+.view-content > .work-overview__link.tooltipstered {
+  display: inline;
+}
+
+.work-overview__title {
+  @extend %work-title;
+  @extend %work-title--icon;
+  border-bottom: none;
+  color: $black;
+}
+
+.work-overview__description {
+  height: $work-category-height;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 $padding;
+  @include font-size(18px);
+  color: $black;
+  text-align: left;
+}
+
+// Organize
+.work-overview:nth-of-type(1) {
+  background-color: $blue-bg;
+
+  .work-overview__title {
+    @extend %work-title--icon--organize;
+  }
+}
+
+// Train
+.work-overview:nth-of-type(2) {
+  background-color: $blue-bg2;
+
+  .work-overview__title {
+    @extend %work-title--icon--train;
+  }
+}
+
+// Grow
+.work-overview:nth-of-type(3) {
+  background-color: $blue-bg3;
+
+  .work-overview__title {
+    @extend %work-title--icon--grow;
+  }
+}
+
+// Centennial
+.work-overview:nth-of-type(4) {
+  display: none;
+}

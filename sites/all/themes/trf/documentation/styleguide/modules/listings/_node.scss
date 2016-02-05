@@ -1,0 +1,15 @@
+//
+// Listing content type
+//
+
+.node-content--listing.node--view-mode-full {
+  // @todo: This is the same as %author-card without the relative positioning;
+  // we should abstract this into one placeholder and then add the %author-card
+  // positioning in a separate placeholder extend.
+  background: $white;
+  margin: 2rem 0;
+  padding: $padding;
+  border-top: $line-width $blue solid;
+  border-bottom: $line-width $blue solid;
+  @include card(2);
+}

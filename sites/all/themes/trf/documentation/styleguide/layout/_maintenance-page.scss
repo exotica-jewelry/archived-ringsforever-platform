@@ -1,0 +1,34 @@
+//
+// Maintenance (and error) page styles
+//
+
+.maintenance-page {
+
+  .header-container {
+    @extend %pattern--blue;
+  }
+
+  .page-content {
+    margin: ($page-top - (2 * $padding)) auto 2rem auto;
+
+    @include mq(mediumish) {
+      margin-top: $page-top;
+    }
+  }
+
+  .region-footer-middle-first,
+  .region-footer-middle-second {
+    width: 100%;
+    margin: $padding 0;
+    padding: 0 $padding;
+  }
+
+  .block--mission-small__content p {
+    @include font-size(20px);
+    text-align: center;
+  }
+
+  .block--contact-us__content {
+    text-align: center;
+  }
+}

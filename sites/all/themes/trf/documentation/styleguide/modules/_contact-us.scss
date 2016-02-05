@@ -1,0 +1,21 @@
+//
+// Contact us block
+//
+
+.block--contact-us {
+  color: $white;
+}
+
+.block--contact-us__content {
+  @extend %content--small;
+
+  a {
+    color: $yellow;
+    border-bottom: 1px $yellow dotted;
+
+    @include is-on {
+      color: $white;
+      border-bottom-color: $white;
+    }
+  }
+}

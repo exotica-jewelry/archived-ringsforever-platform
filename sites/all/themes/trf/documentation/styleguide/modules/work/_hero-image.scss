@@ -1,0 +1,11 @@
+//
+// Hero image headline
+//
+
+.node--view-mode-full .field-node--field-image-work-featured {
+  @extend %hero-image__image;
+}
+
+.node--view-mode-full .field-node--field-text-work-headerimagecap {
+  @extend %hero-image__caption;
+}

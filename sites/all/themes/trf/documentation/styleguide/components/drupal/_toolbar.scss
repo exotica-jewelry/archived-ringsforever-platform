@@ -1,0 +1,12 @@
+//
+// Drupal toolbar adjustment
+//
+
+.header-container {
+  .toolbar-fixed & {
+    top: 39px;
+  }
+  .toolbar-fixed.toolbar-tray-open & {
+    top: 79px;
+  }
+}

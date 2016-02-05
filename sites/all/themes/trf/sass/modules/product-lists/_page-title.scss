@@ -1,0 +1,18 @@
+//
+// Page title (header)
+//
+
+.view-collection-products .view-header,
+.view-collection-taxonomy-term .view-header {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+.view-collection-products .view-header .taxonomy-title,
+.view-collection-taxonomy-term .view-header .taxonomy-title {
+  color: #333;
+  line-height: 1em;
+  text-shadow: none;
+  top: -10px;
+  border-bottom: 1px #333 solid;
+}

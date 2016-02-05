@@ -1,0 +1,28 @@
+//
+// Article image header
+//
+
+.node--type-article {
+  .field-node--field-image-article-header {
+    width: 100%;
+    margin-bottom: $padding;
+
+    img {
+      width: 100%;
+
+      &::after {
+        content: attr(alt);
+      }
+    }
+
+    @include mq(smallish) {
+      width: 50%;
+      float: right;
+      margin-left: $padding;
+    }
+
+    @include mq(mediumish) {
+      width: 360px;
+    }
+  }
+}

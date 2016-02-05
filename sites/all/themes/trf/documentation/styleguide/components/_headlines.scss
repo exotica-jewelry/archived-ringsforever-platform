@@ -1,0 +1,42 @@
+//
+// Entity titles
+//
+
+%headline--xl {
+  color: $white;
+  @include font-size(54px);
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+  text-shadow: rgba($black, 0.75) 0 1px 3px;
+}
+
+%headline--large {
+  width: 100%;
+  padding: 0 $padding;
+  color: $dkblue;
+  z-index: 5;
+  animation: blurIn 1s;
+
+  @include mq(smallish) {
+    padding: 0;
+  }
+
+  @include mq(largeish) {
+    width: 800px;
+  }
+}
+
+%headline--small {
+  @include font-size(22px);
+  font-weight: $bold;
+  text-align: left;
+}
+
+%headline--block {
+  padding: $padding ($padding * 1.5);
+  @include font-size(36px);
+  font-weight: $normal;
+  color: $black;
+  background-color: rgba($white, 0.8);
+}

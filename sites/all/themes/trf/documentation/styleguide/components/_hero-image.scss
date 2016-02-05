@@ -1,0 +1,90 @@
+//
+// Hero image headline at the top of pages
+//
+
+%hero-image-container {
+  // background: linear-gradient(to bottom, $blue, $blue $hero-background-height, $paper $hero-background-height) no-repeat;
+
+  // .content-container {
+  //   @include mq(mediumish) {
+  //     padding-top: $imagestyle-hero_height;
+  //   }
+  // }
+
+  // .node-content--page > .node__content {
+  //   @include mq(largeish) {
+  //     padding: $padding (2 * $padding);
+  //     background-color: rgba($white,0.75);
+  //     @include card(1);
+  //   }
+  // }
+}
+
+%hero-image {
+  @include mq(largeish) {
+    display: table; // allows for full-width .title__inline
+    width: 100%;
+    margin-bottom: 0;
+    color: $white;
+    text-shadow:
+      rgba($black, 0.75) -1px 3px 5px,
+      rgba(black, 1) 0 0 5px;
+  }
+}
+
+%hero-image__text {
+  @include mq(largeish) {
+    display: table-cell;
+    height: $imagestyle-hero_height;
+    vertical-align: bottom;
+    padding: 0 $padding;
+  }
+}
+
+%hero-image__image {
+  width: 100%;
+  animation: blurIn 1s;
+
+  @include mq(largeish) {
+    height: $imagestyle-hero_height;
+    overflow: hidden;
+  }
+
+  // &::before {
+  //   @include mq(largeish) {
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     background-color: rgba(255, 255, 255, 0.35);
+  //   }
+  // }
+
+  // .field-item {
+  //   font-size: 0;
+  // }
+
+  img {
+    width: 100%;
+  }
+}
+
+%hero-image__caption {
+  width: 100%;
+  margin-bottom: 3rem;
+  text-align: right;
+  @include font-size(14px);
+  z-index: 10;
+  animation: blurIn 1s;
+
+  @include mq(largeish) {
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+
+  .field-item {
+    margin-right: -0.5ex; // hanging punctuation
+  }
+}

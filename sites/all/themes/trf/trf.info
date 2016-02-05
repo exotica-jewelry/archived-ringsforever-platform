@@ -1,5 +1,5 @@
 name = Titanium Rings Forever
-description = A subtheme of Commerce Kickstart Theme with some minor customizations.
+description = A subtheme of Commerce Kickstart Theme with customizations.
 core = 7.x
 version = "7.x-0.1"
 base theme  = commerce_kickstart_theme
@@ -54,12 +54,13 @@ zones[footer2] = Footer second
 
 ; OPTIONAL STYLESHEETS
 
-css[overrides.css][name] = TRF overrides of Commerce Kickstart Theme.
-css[overrides.css][description] = Selected overrides of Commerce Kickstart's default theme.
-css[overrides.css][options][weight] = 12
-settings[alpha_css][overrides.css] = 'overrides.css'
+css[styles.css][name] = Styles
+css[styles.css][description] = TRF styles, overriding Commerce Kickstart Theme.
+css[styles.css][options][weight] = 12
+settings[alpha_css][styles.css] = 'styles.css'
 
 ; BREAKPOINTS
+; Also see sass/global/vendor/_mq.scss for mixins with mq().
 
 breakpoints[tv] = only screen and (min-width: 3456px)
 breakpoints[wide] = (min-width: 851px)

@@ -1,0 +1,15 @@
+//
+// Tooltipster overrides of CSS in global/vendor
+//
+
+.tooltipster-default {
+  border: none;
+  background-color: rgba($black, 0.6);
+}
+
+.tooltipster-default .tooltipster-content {
+  font-family: $fontDefault;
+  @include font-size(14px);
+  font-weight: $normal;
+  text-align: center;
+}

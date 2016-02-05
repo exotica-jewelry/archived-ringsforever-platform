@@ -1,0 +1,11 @@
+//
+// Small mission statement, currently appearing in the footer
+//
+
+.block--mission-small {
+  color: $white;
+}
+
+.block--mission-small__content {
+  @extend %content--small;
+}

@@ -1,0 +1,30 @@
+//
+// Lists (views) of multiple articles
+//
+
+.view-articles {
+}
+
+.view-articles--full {
+}
+
+.view-articles--panel {
+  max-width: 100%;
+  background-color: $white;
+  text-align: center;
+  @include horizontal-center;
+  @include card(2);
+
+  @include mq(smallish) {
+    max-width: $imagestyle-view_article + $padding-px;
+    @include no-block-padding;
+  }
+
+  @include mq(mediumish) {
+    max-width: (2 * $imagestyle-view_article) + $padding-px;
+  }
+
+  @include mq(largeish) {
+    max-width: (3 * $imagestyle-view_article) + (2 * $padding-px);
+  }
+}

@@ -1,0 +1,34 @@
+// Lists
+//
+// markup:
+// <div class="region-content">
+// <p>Unordered list in context:</p>
+// <ul>
+// <li>Lorem ipsum dolor sit amet</li>
+// <li>Consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra
+// iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+// per inceptos himenaeos.</li>
+// <li>In adipiscing pulvinar eros.</li>
+// <li>Vitae dictum elit cursus a.</li>
+// </ul>
+// <p>Ordered list in context:</p>
+// <ol>
+// <li>Lorem ipsum dolor sit amet</li>
+// <li>Consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra
+// iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+// per inceptos himenaeos.</li>
+// <li>In adipiscing pulvinar eros.</li>
+// <li>Vitae dictum elit cursus a.</li>
+// </ol>
+// <p>In context.</p>
+// </div>
+//
+// Styleguide 2.5.0
+
+ul, ol {
+  list-style-position: outside;
+}
+
+ul {
+  list-style-type: disc;
+}

@@ -1,0 +1,28 @@
+//
+// Featured store items
+//
+
+.store--block {
+  margin-top: $padding;
+  text-align: center;
+
+  .store__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: ($padding / 2);
+    margin-bottom: ($padding / 2);
+    @include no-block-padding;
+    opacity: 0.9;
+    @include card(1);
+    transition: all 0.3s;
+
+    @include is-on {
+      opacity: 1;
+      @include card(2);
+    }
+  }
+
+  .store__link {
+    display: block;
+  }
+}

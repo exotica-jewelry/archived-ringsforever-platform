@@ -1,0 +1,64 @@
+//
+// Footer
+//
+
+.footer-container {
+  position: relative;
+  min-height: 100vh;
+  padding: ($padding * 4) 0;
+  z-index: 100;
+  @extend %pattern--dkblue;
+
+  .contain {
+    position: relative;
+  }
+}
+
+.region-footer-top,
+.region-footer-middle,
+.region-footer-bottom {
+  @include clearfix;
+  margin-bottom: ($padding * 4);
+}
+
+.region-footer-middle-first,
+.region-footer-middle-second,
+.region-footer-middle-third,
+.region-footer-middle-fourth {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include mq(mediumish) {
+
+  .region-footer-middle {
+    text-align: center;
+  }
+
+  .region-footer-middle-first,
+  .region-footer-middle-second,
+  .region-footer-middle-third,
+  .region-footer-middle-fourth {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .region-footer-middle-first {
+    width: 18%;
+    margin: 0 2% 0 0;
+  }
+
+  .region-footer-middle-second {
+    width: 18%;
+    margin: 0 2% 0 0;
+  }
+
+  .region-footer-middle-third {
+    width: 18%;
+    margin: 0 2% 0 0;
+  }
+
+  .region-footer-middle-fourth {
+    width: 38%;
+  }
+}

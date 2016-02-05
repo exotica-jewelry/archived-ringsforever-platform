@@ -1,0 +1,19 @@
+//
+// General page layout
+//
+// Note that the vast majority of this is done in Commerce Kickstart Theme and
+// its parent theme, Omega. These are just specific overrides.
+//
+
+// Top margin
+
+.zone-branding-wrapper {
+  padding-top: $page-padding-top;
+}
+
+// Top margin with admin menu
+
+body.toolbar {
+  padding-top: 0 !important;
+  margin-top: ($page-padding-top * 2);
+}

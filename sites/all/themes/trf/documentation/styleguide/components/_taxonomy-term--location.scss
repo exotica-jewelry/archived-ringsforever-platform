@@ -1,0 +1,91 @@
+//
+// Location (state) taxonomy terms
+//
+
+$location-size: 2 * $icon-size;
+$location-size-text: 4 * $icon-size;
+
+%location-element {
+  display: block;
+  float: right;
+  right: $padding;
+  margin: 0 0 0 (2 * $padding);
+  text-align: center;
+
+  @include mq(smallish) {
+    float: left;
+    right: auto;
+    margin: 0 $padding 0 0;
+  }
+}
+
+%location-icon {
+  width: $location-size;
+  padding: 0;
+  background-color: transparent;
+  @include font-size($location-size);
+  line-height: 1;
+  @extend %state;
+  @extend %state-replace;
+}
+
+%location-icon-text {
+  width: $location-size-text;
+  padding: $padding;
+  background-color: $yellow;
+  font-weight: $bold;
+}
+
+$states: (
+  "al": "alabama",
+  "ak": "alaska",
+  "az": "arizona",
+  "ar": "arkansas",
+  "ca": "california",
+  "co": "colorado",
+  "ct": "connecticut",
+  "de": "delaware",
+  "dc": "district-of-columbia",
+  "fl": "florida",
+  "ga": "georgia",
+  "hi": "hawaii",
+  "id": "idaho",
+  "il": "illinois",
+  "in": "indiana",
+  "ia": "iowa",
+  "ks": "kansas",
+  "ky": "kentucky",
+  "la": "louisiana",
+  "me": "maine",
+  "md": "maryland",
+  "ma": "massachusetts",
+  "mi": "michigan",
+  "mn": "minnesota",
+  "ms": "mississippi",
+  "mo": "missouri",
+  "mt": "montana",
+  "ne": "nebraska",
+  "nv": "nevada",
+  "nh": "new-hampshire",
+  "nj": "new-jersey",
+  "nm": "new-mexico",
+  "ny": "new-york",
+  "nc": "north-carolina",
+  "nd": "north-dakota",
+  "oh": "ohio",
+  "ok": "oklahoma",
+  "or": "oregon",
+  "pa": "pennsylvania",
+  "ri": "rhode-island",
+  "sc": "south-carolina",
+  "sd": "south-dakota",
+  "tn": "tennessee",
+  "tx": "texas",
+  "ut": "utah",
+  "vt": "vermont",
+  "va": "virginia",
+  "wa": "washington",
+  "wv": "west-virginia",
+  "wi": "wisconsin",
+  "wy": "wyoming"
+);

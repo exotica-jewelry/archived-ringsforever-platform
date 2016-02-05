@@ -1,0 +1,23 @@
+//
+// Taxonomy term pages (views)
+//
+
+%taxonomy-list {
+
+}
+
+%taxonomy-list--inline {
+
+}
+
+%taxonomy-list--page {
+  margin-bottom: 2rem;
+  background-color: $white;
+  @include card(1);
+}
+
+.view-taxonomy-term {
+  .taxonomy-term-item {
+    @extend %taxonomy-list--page;
+  }
+}

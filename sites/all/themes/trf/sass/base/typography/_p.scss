@@ -1,0 +1,18 @@
+// Paragraph text
+//
+// markup:
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+// lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad
+// litora torquent per conubia nostra, per inceptos himenaeos. In adipiscing
+// pulvinar eros, vitae dictum elit cursus a. Praesent a hendrerit urna.</p>
+// <p>Maecenas neque libero, viverra in neque at, posuere tempor metus.
+// Vestibulum neque nisi, malesuada sed ipsum varius, bibendum ornare nisl.
+// Aliquam adipiscing vehicula varius. Morbi a interdum lacus. Integer luctus
+// lobortis magna, nec vulputate augue blandit ac.</p>
+//
+// Styleguide 2.2.0
+
+p {
+  margin: 0 0 2rem 0;
+  @include font-size(20px);
+}

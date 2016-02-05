@@ -1,0 +1,47 @@
+//
+// Front mission statement
+//
+
+.front-section.mission {
+  background: $white;
+  border-top: 1px solid $grey-shade500;
+  border-bottom: 1px solid $grey-shade500;
+  padding: 1.5rem 0;
+  @include mq(mediumish) {
+    padding: 2.5rem 0;
+  }
+}
+
+.block--mission__content {
+  @include font-size(36px);
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: inherit;
+  }
+
+  p:last-of-type {
+    margin-top: ($padding * 2);
+    @include font-size(24px);
+  }
+
+  a {
+    padding: 0.1rem 0.35rem;
+    border-radius: 5px;
+    background-color: $yellow;
+    color: $black;
+
+    @include is-on {
+      background-color: $blue;
+      color: $white;
+    }
+    // Anchor tag (thus the ID)
+    &#mission {
+      position: relative; // prevents scrolling overlap with the navigation bar
+      top: -75px;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+}

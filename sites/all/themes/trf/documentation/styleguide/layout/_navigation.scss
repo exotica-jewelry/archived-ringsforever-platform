@@ -1,0 +1,12 @@
+//
+// Layout for the "nav" region. Most of the styles are contained in
+// modules/menu/_menu--main-header.scss
+//
+
+@include mq(mediumish) {
+  .region-nav {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 7rem;
+  }
+}

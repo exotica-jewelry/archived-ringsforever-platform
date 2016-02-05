@@ -1,0 +1,36 @@
+{
+  "name": "Titanium Rings Forever",
+  "homepage": "https://github.com/rootwork/ringsforever",
+  "description": "Titanium Rings Forever's Drupal theme, a subtheme of Commerce Kickstart Theme, itself a subtheme of Omega.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "authors": [
+    "Ivan Boothe <ivan@rootwork.org>"
+  ],
+  "license": "",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.2",
+    "gulp-filter": "^3.0.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jsdoc": "^0.1.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-bulk-import": "^1.0.0",
+    "gulp-shell": "^0.5.2",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "kss": "^2.0.2",
+    "node-sass": "^3.4.2",
+    "sassdoc": "^2.1.9",
+    "sc5-styleguide": "^0.3.41"
+  }
+}

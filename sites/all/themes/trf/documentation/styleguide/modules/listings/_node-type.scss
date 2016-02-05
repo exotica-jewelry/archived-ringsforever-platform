@@ -1,0 +1,24 @@
+//
+// Listing type (chapter, affiliate, RPF)
+//
+
+.field-node--field-taxonomy-listing-type {
+  margin-bottom: $padding;
+  @include font-size(18px);
+  font-style: italic;
+  color: $dkblue;
+
+  .field__label {
+    display: inline;
+    font-weight: $normal;
+
+    &::after {
+      content: ': ';
+    }
+  }
+
+  .field__wrapper,
+  .field__item {
+    display: inline;
+  }
+}

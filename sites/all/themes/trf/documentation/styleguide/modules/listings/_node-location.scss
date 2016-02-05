@@ -1,0 +1,16 @@
+//
+// Listing location (address)
+//
+
+.field-node--field-address-listing-location {
+  margin: $padding 0;
+  font-weight: $bold;
+
+  .address {
+    @include font-size(16px);
+  }
+
+  .country {
+    display: none;
+  }
+}
