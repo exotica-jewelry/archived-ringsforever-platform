@@ -322,3 +322,35 @@ ul.facetapi-commerce-search-api-fancy li {
   top: -10px;
   border-bottom: 1px #333 solid;
 }
+
+/* Individual ring pages */
+
+/* wrapper around zoom image and thumbnails */
+.page-node.node-type-rings .commerce-product-field-field-images {
+  padding-right: 2em;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements-primary {
+  display: inline-block;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements-primary .field-items::before {
+  content: 'Keywords: ';
+  font-weight: bold;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements-primary .field-item::after {
+  content: ',';
+  padding-right: 0.3em;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements {
+  display: inline-block;
+}
+
+.page-node.node-type-rings .field-name-field-ring-elements-primary .field-items,
+.page-node.node-type-rings .field-name-field-ring-elements-primary .field-item,
+.page-node.node-type-rings .field-name-field-ring-elements .field-items,
+.page-node.node-type-rings .field-name-field-ring-elements .field-item {
+  display: inline;
+}
