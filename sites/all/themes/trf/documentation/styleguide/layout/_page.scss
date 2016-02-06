@@ -17,3 +17,20 @@ body.toolbar {
   padding-top: 0 !important;
   margin-top: ($page-padding-top * 2);
 }
+
+// Content area
+
+.zone-content {
+  background-color: $blue_verylight;
+  border-radius: $border-radius;
+  @include card(1);
+}
+
+.region-content {
+  position: relative;
+}
+
+.region-content-inner {
+  padding-left: $padding;
+  padding-right: $padding;
+}

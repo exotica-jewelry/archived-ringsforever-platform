@@ -14,9 +14,12 @@
 
 $black: #111;
 $white: #fff;
+$white-off: #eeeefe;
 
 $blue: #54b2fc;
-$blue_light: #98ccfe;
+$blue_light: lighten($blue, 13%);
+$blue_verylight: lighten($blue, 20%);
+$blue_dark: darken($blue, 13%);
 
 // Color map
 //

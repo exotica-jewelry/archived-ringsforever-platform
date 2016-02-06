@@ -1,0 +1,19 @@
+//
+// Drupal's "local action" (view, edit, etc.) tabs
+//
+
+body div.tabs {
+  position: absolute;
+  top: 0;
+  left: 100%; // positioned just to the right of the main content area
+
+  ul.tabs {
+    width: 150px;
+
+    li {
+      width: 100%;
+      margin: 0 !important;
+      padding: ($padding / 3) !important;
+    }
+  }
+}

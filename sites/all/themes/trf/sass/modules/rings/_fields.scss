@@ -1,0 +1,89 @@
+//
+// Fields
+//
+
+.page-node.node-type-rings {
+
+  // Wrapper around image zoom and thumbnails
+  .commerce-product-field-field-images {
+    padding-right: ($padding * 4);
+  }
+
+  // Thumbnails
+  .cloud-zoom-container .cloud-zoom-gallery-thumbs .cloud-zoom-gallery {
+    margin-top: ($padding / 2);
+    border: 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  // Price
+  .field-name-commerce-price {
+    margin-top: ($padding * -0.5);
+    @include font-size(48px);
+    font-family: $fontDefault;
+    font-weight: $thin;
+  }
+
+  // Add to cart area
+  .field-type-commerce-product-reference form.commerce-add-to-cart,
+  .field-name-field-product {
+    padding: 0;
+    background-image: none;
+  }
+
+  .field-type-commerce-product-reference form.commerce-add-to-cart .form-submit {
+    padding: 0.5rem 50px 0.5rem 1rem;
+    background-color: $blue;
+    background-position: 95% 55%;
+    @include font-size(24px);
+    font-family: $fontDefault;
+    font-weight: $thin;
+    border-radius: $border-radius;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    @include card(1);
+
+    &:hover,
+    &:focus {
+      background-color: $blue_dark;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      @include card(0);
+      text-shadow: none;
+    }
+  }
+
+  // Elements (keywords)
+  .field-name-field-ring-elements-primary {
+    display: inline-block;
+
+    .field-items,
+    .field-item {
+      display: inline;
+    }
+
+    .field-items::before {
+      content: 'Keywords: ';
+      font-weight: bold;
+    }
+
+    .field-item::after {
+      content: ',';
+      padding-right: 0.3em;
+    }
+  }
+
+  .field-name-field-ring-elements {
+    display: inline-block;
+
+    .field-items,
+    .field-item {
+      display: inline;
+    }
+  }
+
+}
