@@ -214,7 +214,7 @@ gulp.task('styleguide:generate', function() {
   return gulp.src(['sass/**/*.scss'])
 
   .pipe(styleguide.generate({
-      title: 'Exotica Style Guide: TRF theme',
+      title: 'Titanium Rings Forever style guide',
       server: false,
       rootPath: styleguidePath,
       appRoot: themePath + styleguidePath,
