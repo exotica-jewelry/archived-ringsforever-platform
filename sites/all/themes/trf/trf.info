@@ -54,8 +54,8 @@ zones[footer2] = Footer second
 
 ; OPTIONAL STYLESHEETS
 
-css[styles.css][name] = Styles
-css[styles.css][description] = TRF styles, overriding Commerce Kickstart Theme.
+css[styles.css][name] = TRF styles
+css[styles.css][description] = Theme styles overriding default Commerce Kickstart Theme and Omega styles.
 css[styles.css][options][weight] = 12
 settings[alpha_css][styles.css] = 'styles.css'
 
