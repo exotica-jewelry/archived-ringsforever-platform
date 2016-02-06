@@ -53,11 +53,15 @@ zones[footer] = Footer first
 zones[footer2] = Footer second
 
 ; OPTIONAL STYLESHEETS
+; Note Google Fonts stylesheets are also added in template.php
 
 css[styles.css][name] = TRF styles
 css[styles.css][description] = Theme styles overriding default Commerce Kickstart Theme and Omega styles.
 css[styles.css][options][weight] = 12
 settings[alpha_css][styles.css] = 'styles.css'
+
+; OPTIONAL SCRIPTS
+; Rather than doing this through Omega settings, this is done in template.php.
 
 ; BREAKPOINTS
 ; Also see sass/global/vendor/_mq.scss for mixins with mq().

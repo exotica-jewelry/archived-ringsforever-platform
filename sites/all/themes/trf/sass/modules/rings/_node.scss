@@ -7,6 +7,13 @@
   padding-right: 2em;
 }
 
+// Price
+.page-node.node-type-rings .field-name-commerce-price {
+  font-family: $fontDefault;
+  font-weight: $thin;
+  font-size: 3rem;
+}
+
 // Elements (keywords)
 .page-node.node-type-rings .field-name-field-ring-elements-primary {
   display: inline-block;

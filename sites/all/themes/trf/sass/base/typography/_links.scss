@@ -60,25 +60,25 @@
   }
 }
 
-// a {
-//   @extend %link;
-// }
+a {
+  @extend %link;
+}
 
-// a[href^=mailto] {
-// }
+a[href^=mailto] {
+}
 
-// a[href^=tel] {
-//   color: inherit;
-//   border-bottom: 1px $blue dotted;
-// }
+a[href^=tel] {
+  color: inherit;
+  border-bottom: 1px $blue dotted;
+}
 
-// .field-node--body {
-//   p,
-//   ul,
-//   ol,
-//   dl {
-//     a {
-//       @extend %link-highlight;
-//     }
-//   }
-// }
+.field-node--body {
+  p,
+  ul,
+  ol,
+  dl {
+    a {
+      @extend %link-highlight;
+    }
+  }
+}

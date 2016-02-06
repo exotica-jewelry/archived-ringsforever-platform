@@ -21,11 +21,11 @@ strong {
 // Styleguide 2.3.2
 
 em {
-  // font-family: $fontHighlight;
-  // font-style: italic;
-  // color: $grey-shade800;
+  font-family: $fontHighlight;
+  font-style: italic;
+  color: #999;
 
-  // a & {
-  //   color: inherit;
-  // }
+  a & {
+    color: inherit;
+  }
 }
