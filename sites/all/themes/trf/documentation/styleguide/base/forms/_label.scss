@@ -1,0 +1,15 @@
+// Form elements
+//
+// Styleguide 3.3.0
+
+// Form label
+//
+// markup:
+// <div class="form-item"><label>Label</label> <input type="text"></div>
+//
+// Styleguide 3.3.1
+label {
+  @include font-size(16px);
+  line-height: 2.25rem; // aligns with inputs' and selects' padding
+  font-weight: $bold;
+}

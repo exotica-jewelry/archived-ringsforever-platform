@@ -34,7 +34,19 @@
     background-image: none;
   }
 
+  // Width selection
+  .field-type-commerce-product-reference form.commerce-add-to-cart label {
+    font-family: $fontDefault;
+    width: auto;
+  }
+  .field-type-commerce-product-reference form.commerce-add-to-cart label::after {
+    content: "";
+  }
+
+  // Add to cart button
   .field-type-commerce-product-reference form.commerce-add-to-cart .form-submit {
+    width: 90%;
+    margin: 1rem 0 0 0;
     padding: 0.5rem 50px 0.5rem 1rem;
     background-color: $blue;
     background-position: 95% 55%;

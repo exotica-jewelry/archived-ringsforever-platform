@@ -1,0 +1,111 @@
+// Buttons
+//
+// Styleguide 3.2.0
+
+// Standard button
+//
+// markup:
+// <button>Button</button>
+//
+// Styleguide 3.2.1
+%button {
+  display: block;
+  border: none;
+  background: $blue;
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0 0 1rem;
+  cursor: pointer;
+  color: $white;
+  font-family: $fontDefault;
+  @include font-size(18px);
+  font-weight: $thin;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  user-select: none;
+  @include card(1);
+
+  @include is-on {
+    background: $blue_dark;
+    color: $white;
+    outline: 0;
+    @include grow;
+  }
+
+  &:active {
+    @include card(0);
+  }
+}
+
+button,
+.button,
+input[type="submit"] {
+  @extend %button;
+}
+
+// Inline button
+//
+// markup:
+// <button class="button--inline">Button</button>
+//
+// Styleguide 3.2.2
+
+.button--inline {
+  @extend %button;
+  display: inline-block;
+  width: auto;
+  margin: 0;
+}
+
+// Call to action button
+//
+// markup:
+// <button class="button--cta">Button</button>
+//
+// Styleguide 3.2.3
+
+.button--cta {
+  @extend %button;
+  display: inline-block;
+  width: auto;
+  padding: 0.25rem 1rem;
+  font-weight: $normal;
+  border-radius: 10px;
+  border: 1px $blue solid;
+
+  @include is-on {
+    background: $white;
+    color: $blue_dark;
+    outline: 0;
+    border: 1px #666 solid;
+  }
+}
+
+// Ghost button
+//
+// markup:
+// <button class="button--ghost">Button</button>
+//
+// Styleguide 3.2.4
+.button--ghost {
+  @extend %button;
+  display: inline-block;
+  width: auto;
+  padding: 0.5rem 1.5rem;
+  border-radius: 40px;
+  background: rgba($blue_dark, 0.25);
+  color: $blue_dark;
+  font-weight: $normal;
+  letter-spacing: 1px;
+
+  @include mq(mediumish) {
+    border: 2px solid $blue_dark;
+    background: none;
+  }
+
+  @include is-on {
+    background: rgba($blue_dark, 0.25);
+    color: $blue_dark;
+    outline: 0;
+  }
+}

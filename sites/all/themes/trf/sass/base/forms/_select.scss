@@ -1,0 +1,29 @@
+// Select elements
+//
+// markup:
+// <div class="form-item"><select name="select"><option value="value1">Value 1</option><option value="value2" selected>Value 2</option><option value="value3">Value 3</option></select></div>
+//
+// Styleguide 3.3.3
+
+select {
+  padding: 0.25rem 1.25rem 0.25rem 0.25rem;
+  border: 1px solid #aaa;
+  border-radius: $border-radius;
+  background: url('/sites/all/themes/trf/images/min/chevron-down.svg') no-repeat 97.5% 50%;
+  background-color: $white_off;
+  color: $blue;
+  font-family: $fontDefault;
+  @include font-size(16px);
+  box-shadow: none;
+  border-radius: none;
+  transition: border 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $blue;
+  }
+}
