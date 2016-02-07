@@ -106,7 +106,7 @@ gulp.task('js', function () {
 // Compress images
 //
 gulp.task('images', function() {
-  gulp.src('images/*.{gif,jpg,png}')
+  gulp.src('images/*')
 
   .pipe(cache(images({
     optimizationLevel: 4,
