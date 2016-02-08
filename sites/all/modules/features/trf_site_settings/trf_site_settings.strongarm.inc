@@ -55,6 +55,38 @@ function trf_site_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'environment_indicator_favicon_overlay';
+  $strongarm->value = 1;
+  $export['environment_indicator_favicon_overlay'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'environment_indicator_git_support';
+  $strongarm->value = 1;
+  $export['environment_indicator_git_support'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'environment_indicator_integration';
+  $strongarm->value = array(
+    'toolbar' => 0,
+    'admin_menu' => 0,
+    'navbar' => 0,
+  );
+  $export['environment_indicator_integration'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'environment_indicator_suppress_pages';
+  $strongarm->value = '';
+  $export['environment_indicator_suppress_pages'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'file_default_scheme';
   $strongarm->value = 'public';
   $export['file_default_scheme'] = $strongarm;

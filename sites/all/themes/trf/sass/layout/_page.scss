@@ -5,17 +5,10 @@
 // its parent theme, Omega. These are just specific overrides.
 //
 
-// Top margin
+// Environment indicator position
 
-.zone-branding-wrapper {
-  padding-top: $page-padding-top;
-}
-
-// Top margin with admin menu
-
-body.toolbar {
-  padding-top: 0 !important;
-  margin-top: ($page-padding-top * 2);
+#environment-indicator {
+  top: $topbar-size;
 }
 
 // Content area
