@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * env.features.user_permission.inc
+ * trf_site_settings.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function env_user_default_permissions() {
+function trf_site_settings_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'access environment indicator'.
