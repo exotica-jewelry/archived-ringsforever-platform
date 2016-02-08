@@ -24,7 +24,7 @@ function trf_ring_type_default_fe_block_boxes() {
   $fe_block_boxes->machine_name = 'ring_sizing';
   $fe_block_boxes->body = 'We\'re committed to a <a href="#">guaranteed perfect fit</a> for your titanium wedding ring.
 
-Surprisingly, the sizing equipment used by jewelers can vary a lot. That\'s why when you order, we\'ll send <a href="#">finger sizers to you in the mail</a> to ensure your ring has a perfect fit.';
+Surprisingly, the sizing equipment used by jewelers can vary a lot. That\'s why when you order, we\'ll send <a href="#">finger sizers to you in the mail</a> to ensure your ring fits perfectly.';
 
   $export['ring_sizing'] = $fe_block_boxes;
 

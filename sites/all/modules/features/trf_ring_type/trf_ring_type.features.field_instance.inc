@@ -37,14 +37,12 @@ function trf_ring_type_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'ds',
+        'module' => 'taxonomy',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'taxonomy_term_link' => TRUE,
-          'taxonomy_term_separator' => ', ',
         ),
-        'type' => 'ds_taxonomy_separator',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 10,
       ),
       'product_list' => array(
@@ -114,14 +112,12 @@ function trf_ring_type_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'ds',
+        'module' => 'taxonomy',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'taxonomy_term_link' => TRUE,
-          'taxonomy_term_separator' => ', ',
         ),
-        'type' => 'ds_taxonomy_separator',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 11,
       ),
       'product_list' => array(
@@ -696,14 +692,12 @@ function trf_ring_type_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'ds',
+        'module' => 'taxonomy',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'taxonomy_term_link' => TRUE,
-          'taxonomy_term_separator' => ', ',
         ),
-        'type' => 'ds_taxonomy_separator',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 13,
       ),
       'product_list' => array(
