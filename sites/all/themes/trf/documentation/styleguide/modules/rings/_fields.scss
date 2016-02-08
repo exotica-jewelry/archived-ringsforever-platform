@@ -21,10 +21,20 @@
 
   // Price
   .field-name-commerce-price {
-    margin-top: ($padding * -0.5);
+    margin: ($padding * -0.5) 0 0 0;
     @include font-size(48px);
     font-family: $fontDefault;
     font-weight: $thin;
+  }
+
+  // "Free"
+  .field-name-ring-free p {
+    @include font-size(14px);
+
+    a {
+      font-weight: $bold;
+      white-space: nowrap;
+    }
   }
 
   // Add to cart area
@@ -69,9 +79,37 @@
     }
   }
 
+  // Sizing note
+  .field-name-ring-sizing {
+    margin-top: 1.5rem;
+
+    p {
+      margin: 0.5rem 0;
+      @include font-size(14px);
+
+      a {
+        font-weight: $bold;
+      }
+    }
+  }
+
+  // All tags
+  .field-name-field-collection,
+  .field-name-field-color,
+  .field-name-field-ring-elements-primary,
+  .field-name-field-ring-elements {
+    margin-bottom: 0.5rem;
+    @include font-size(16px);
+
+    a {
+      @extend .button--tag;
+    }
+  }
+
   // Elements (keywords)
   .field-name-field-ring-elements-primary {
     display: inline-block;
+    margin-bottom: 2rem;
 
     .field-items,
     .field-item {
@@ -84,7 +122,6 @@
     }
 
     .field-item::after {
-      content: ',';
       padding-right: 0.3em;
     }
   }
@@ -95,6 +132,13 @@
     .field-items,
     .field-item {
       display: inline;
+    }
+  }
+
+  // Related rings
+  .field-name-field-related-rings {
+    .container-24.prefix-1 {
+      padding-left: 0;
     }
   }
 

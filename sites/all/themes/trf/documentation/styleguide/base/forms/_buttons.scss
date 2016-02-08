@@ -70,7 +70,7 @@ input[type="submit"] {
   width: auto;
   padding: 0.25rem 1rem;
   font-weight: $normal;
-  border-radius: 10px;
+  border-radius: $border_radius;
   border: 1px $blue solid;
 
   @include is-on {
@@ -107,5 +107,33 @@ input[type="submit"] {
     background: rgba($blue_dark, 0.25);
     color: $blue_dark;
     outline: 0;
+  }
+}
+
+// Tag button
+//
+// markup:
+// <button class="button--tag">Button</button>
+//
+// Styleguide 3.2.5
+
+.button--tag {
+  @extend %button;
+  display: inline-block;
+  width: auto;
+  margin: 0 0.5rem;
+  padding: 0.15rem 0.5rem;
+  @include font-size(14px);
+  font-weight: $normal;
+  border-radius: $border_radius;
+  border: 1px $blue solid;
+  @include card(0);
+
+  @include is-on {
+    @include grow($scale: 1, $duration: 0);
+    background: $white;
+    color: $blue_dark;
+    outline: 0;
+    border: 1px #666 solid;
   }
 }
