@@ -5,10 +5,11 @@
 // its parent theme, Omega. These are just specific overrides.
 //
 
-// Environment indicator position
+// Environment indicator
 
 #environment-indicator {
   top: $topbar-size;
+  text-shadow: none;
 }
 
 // Content area

@@ -3,11 +3,12 @@
  */
 
 /*
- * Environment indicator position
+ * Environment indicator
  */
 
 #environment-indicator {
   top: 59px; /* See $topbar-size in themes/trf/sass/global/variables */
+  text-shadow: none;
 }
 
 
