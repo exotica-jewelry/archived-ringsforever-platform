@@ -18,10 +18,30 @@ function trf_preprocess_html(&$variables) {
 }
 
 /**
- * Implementation of hook_form_FORM_ID_alter()
+ * Implements hook_form_FORM_ID_alter()
  * @see https://drupal.org/node/853266#comment-4609888
  */
 function trf_form_contact_site_form_alter(&$form, &$form_state) {
   $site_name = $GLOBALS['conf']['site_name'];
   drupal_set_title('Contact ' . $site_name);
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ *
+ * Overrides commerce_kickstart_taxonomy to add "title to display" in
+ * view header
+ */
+function trf_preprocess_views_view(&$vars) {
+  $view = $vars['view'];
+  if ($view->name == 'collection_products') {
+    if ($view->current_display == 'page') {
+      // Keep the previous theming.
+      $vars['classes_array'][] = 'view-collection-taxonomy-term';
+      $tid = $view->args['0'];
+      $term = taxonomy_term_load($tid);
+      $vars['collection_title'] = $term->name;
+      $vars['collection_title_display'] = $term->field_cat_title['und'][0]['safe_value'];
+    }
+  }
 }

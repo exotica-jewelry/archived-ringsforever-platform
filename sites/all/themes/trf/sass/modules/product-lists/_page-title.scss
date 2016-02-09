@@ -10,9 +10,11 @@
 
 .view-collection-products .view-header .taxonomy-title,
 .view-collection-taxonomy-term .view-header .taxonomy-title {
-  color: #333;
-  line-height: 1em;
-  text-shadow: none;
   top: -10px;
+  font-family: $fontDefault;
+  line-height: 1em;
+  text-transform: none;
+  text-shadow: none;
+  color: #333;
   border-bottom: 1px #333 solid;
 }
