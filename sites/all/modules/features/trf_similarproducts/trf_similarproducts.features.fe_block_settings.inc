@@ -60,8 +60,8 @@ function trf_similarproducts_default_fe_block_settings() {
         'weight' => -31,
       ),
       'trf' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'trf',
         'weight' => -42,
       ),
@@ -70,38 +70,6 @@ function trf_similarproducts_default_fe_block_settings() {
         'status' => 0,
         'theme' => 'trf_admin',
         'weight' => -36,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['views-similarproducts-sp_feature'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'similarproducts-sp_feature',
-    'module' => 'views',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'commerce_kickstart_theme' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'commerce_kickstart_theme',
-        'weight' => -29,
-      ),
-      'trf' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'trf',
-        'weight' => -41,
-      ),
-      'trf_admin' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'trf_admin',
-        'weight' => -29,
       ),
     ),
     'title' => '',
