@@ -121,8 +121,8 @@ input[type="submit"] {
   @extend %button;
   display: inline-block;
   width: auto;
-  margin: 0 0.5rem;
-  padding: 0.15rem 0.5rem;
+  margin: 0 ($padding / 3);
+  padding: ($padding / 6) ($padding / 2);
   @include font-size(14px);
   font-weight: $normal;
   border-radius: $border_radius;
