@@ -43,7 +43,7 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'weight' => 3,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -118,7 +118,7 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 11,
+        'weight' => 4,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -259,7 +259,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 30,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -374,7 +374,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 32,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -454,7 +454,7 @@ function trf_ring_type_field_default_field_instances() {
           'show_single_product_attributes' => 1,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 5,
+        'weight' => 9,
       ),
       'product_list' => array(
         'label' => 'hidden',
@@ -538,7 +538,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 31,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -698,7 +698,7 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 13,
+        'weight' => 6,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -777,7 +777,7 @@ function trf_ring_type_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 12,
+        'weight' => 5,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -848,7 +848,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 25,
       ),
       'product_list' => array(
         'label' => 'above',
