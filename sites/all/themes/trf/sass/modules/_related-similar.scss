@@ -1,0 +1,69 @@
+//
+// Related and similar rings, displayed on individual ring pages.
+//
+// These are created differently, but appear very similarly on the front-end.
+//
+
+%otherrings {
+  @include clearfix;
+}
+
+%otherrings__label {
+  margin-bottom: $padding;
+  @include font-size(24px);
+  line-height: 1.5;
+  font-weight: $thin;
+  border-bottom: 1px $black solid;
+}
+
+%otherrings__items {
+  @include clearfix;
+}
+
+%otherrings__item {
+  display: inline-block;
+  width: $imagestyle-product_thumbnail;
+  margin-right: $padding;
+
+  .container-24.prefix-1 {
+    padding-left: 0;
+
+    .commerce-product-field-field-images {
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+
+    .field-name-field-images a {
+      display: block;
+      width: $imagestyle-product_thumbnail;
+
+      @include is-on {
+        box-shadow: 0 0 10px $blue;
+      }
+    }
+  }
+}
+
+
+// Related rings
+.field-name-field-related-rings,
+.block-similarproducts-sp-collection,
+.block-similarproducts-sp-color {
+  @extend %otherrings;
+}
+
+.field-name-field-related-rings__label,
+.block-similarproducts-sp-collection .block-title,
+.block-similarproducts-sp-color .block-title {
+  @extend %otherrings__label;
+}
+
+.field-name-field-related-rings__items,
+.sp {
+  @extend %otherrings__items;
+}
+
+.field-name-field-related-rings__item,
+.sp__item {
+  @extend %otherrings__item;
+}
