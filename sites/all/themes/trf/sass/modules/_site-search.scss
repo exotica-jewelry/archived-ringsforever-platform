@@ -1,0 +1,17 @@
+//
+// Site-wide search
+//
+
+#views-exposed-form-display-products-page {
+
+  .form-submit {
+    width: auto;
+    padding: 5px 8px;
+    font-size: inherit;
+    @include card(0);
+
+    @include is-on {
+      @include grow(1, 0);
+    }
+  }
+}
