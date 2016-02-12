@@ -2,15 +2,17 @@
 // Faceted search elements
 //
 
+.page-products .zone-content-wrapper .region-content-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .region-sidebar-first .block-facetapi {
   margin: 0 0.25rem 1rem 0;
   padding: 0;
   border-top: none;
 
-  &:first-of-type {
-    margin-top: 3rem;
-  }
-
+  // Section titles
   .block-title {
     margin-bottom: 0.5rem;
     padding-bottom: 0;
@@ -19,36 +21,10 @@
     border-bottom: 1px $black dotted;
   }
 
-  .text-range {
-    margin-bottom: 1rem;
-    @include font-size(14px);
-    font-style: italic;
-
-    &::first-letter {
-      text-transform: uppercase;
-    }
-  }
-
-  .form-item-range-from,
-  .form-item-range-to {
-    margin-top: 0;
-
-    label,
-    input {
-      display: inline-block;
-      vertical-align: bottom;
-    }
-
-    input {
-      width: auto;
-    }
-  }
-
-  .range-slider-box {
-    margin: 0.5em 1rem;
-  }
-
+  // Checkbox-link facets
   ul li a {
+    font-family: $fontDefault;
+    font-weight: $normal;
     color: #555;
 
     &.facetapi-inactive {
@@ -56,12 +32,75 @@
     }
   }
 
-  ul.facetapi-commerce-search-api-fancy li {
-    border: none;
+  // Price slider
+  &:first-of-type {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
   }
-}
 
-.page-products .zone-content-wrapper .region-content-inner {
-  padding-left: 0;
-  padding-right: 0;
+  #search-api-ranges-block-slider-view-form-field-productcommerce-priceamount-decimal {
+    .text-range {
+      margin-bottom: 1rem;
+      @include font-size(14px);
+      font-style: italic;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    // slider wrapper
+    .yui3-g {
+      position: relative;
+    }
+
+    .form-item-range-from,
+    .form-item-range-to {
+      margin-top: 0;
+
+      label,
+      input {
+        display: inline-block;
+        vertical-align: bottom;
+      }
+
+      input {
+        width: auto;
+      }
+    }
+
+    .form-item-range-to {
+      margin-bottom: 0;
+    }
+
+    .range-slider-box {
+      margin: 0.5em 1rem;
+    }
+
+    .form-submit {
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+      @extend .button--tag;
+      padding: ($padding / 3) ($padding / 2);
+    }
+  }
+
+  // Colors
+  &.field_product_field_color {
+    margin-bottom: 1.5rem;
+
+    ul.facetapi-commerce-search-api-fancy li {
+      border: none;
+
+      .commerce-search-api-fancy-attributes-color {
+        border: 3px solid #fff;
+        transition: all 0.3s;
+
+        @include is-on {
+          border-color: $blue_dark;
+        }
+      }
+    }
+  }
 }

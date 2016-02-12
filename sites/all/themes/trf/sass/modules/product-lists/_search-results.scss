@@ -1,0 +1,18 @@
+//
+// Search results (from facets)
+//
+
+#region-breadcrumb .pseudo-breadcrumb-total-results {
+  color: $black;
+  font-family: $fontDefault;
+
+  em {
+    color: $blue;
+    font-family: $fontDefault;
+    font-weight: $ultra-bold;
+  }
+}
+
+#region-breadcrumb .pseudo-breadcrumb {
+  background-color: #eeeefe;
+}
