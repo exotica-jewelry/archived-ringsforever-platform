@@ -5,6 +5,137 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function trf_ring_type_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'commerce_product|rings|node_full';
+  $ds_fieldsetting->entity_type = 'commerce_product';
+  $ds_fieldsetting->bundle = 'rings';
+  $ds_fieldsetting->view_mode = 'node_full';
+  $ds_fieldsetting->settings = array(
+    'width_displayed' => array(
+      'weight' => '2',
+      'label' => 'inline',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:10:{s:5:"label";s:5:"title";s:9:"formatter";s:5:"image";s:11:"delta_limit";s:1:"0";s:12:"delta_offset";s:1:"0";s:14:"delta_reversed";i:0;s:18:"formatter_settings";a:4:{s:20:"field_multiple_limit";s:2:"-1";s:27:"field_multiple_limit_offset";s:1:"0";s:11:"image_style";s:17:"product_thumbnail";s:10:"image_link";s:0:"";}s:7:"context";s:37:"argument_entity_id:commerce_product_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:12:"entity_field";s:7:"subtype";s:29:"commerce_product:field_images";}',
+        'load_terms' => 0,
+        'ft' => array(
+          'lb' => 'Width displayed',
+        ),
+      ),
+    ),
+  );
+  $export['commerce_product|rings|node_full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'commerce_product|rings|node_reference_view';
+  $ds_fieldsetting->entity_type = 'commerce_product';
+  $ds_fieldsetting->bundle = 'rings';
+  $ds_fieldsetting->view_mode = 'node_reference_view';
+  $ds_fieldsetting->settings = array(
+    'field_images' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['commerce_product|rings|node_reference_view'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|rings|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'rings';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'similar_products_collection' => array(
+      'weight' => '15',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_reset',
+          'lbw' => 1,
+        ),
+      ),
+    ),
+    'similar_products_color' => array(
+      'weight' => '16',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_reset',
+        ),
+      ),
+    ),
+    'similar_products_element' => array(
+      'weight' => '17',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_reset',
+        ),
+      ),
+    ),
+    'ring_free' => array(
+      'weight' => '8',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'ring_sizing' => array(
+      'weight' => '10',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'field_related_rings' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-col' => TRUE,
+          'lbw' => 1,
+          'lbw-el' => 'h4',
+          'lbw-cl' => 'field-name-field-related-rings__label',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field-name-field-related-rings',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fis' => TRUE,
+          'fis-el' => 'div',
+          'fis-cl' => 'field-name-field-related-rings__items',
+          'fis-at' => '',
+          'fis-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field-name-field-related-rings__item',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|rings|full'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_custom_fields_info().
  */
 function trf_ring_type_ds_custom_fields_info() {
@@ -46,10 +177,220 @@ function trf_ring_type_ds_custom_fields_info() {
 }
 
 /**
+ * Implements hook_ds_layout_settings_info().
+ */
+function trf_ring_type_ds_layout_settings_info() {
+  $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'commerce_product|rings|form';
+  $ds_layout->entity_type = 'commerce_product';
+  $ds_layout->bundle = 'rings';
+  $ds_layout->view_mode = 'form';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'sku',
+        1 => 'title_field',
+        2 => 'commerce_price',
+        3 => 'field_images',
+        4 => 'field_ring_width',
+        5 => 'field_ring_width_shown',
+        6 => 'status',
+        7 => '_add_existing_field',
+      ),
+      'hidden' => array(
+        8 => 'field_color',
+        9 => 'redirect',
+      ),
+    ),
+    'fields' => array(
+      'sku' => 'ds_content',
+      'title_field' => 'ds_content',
+      'commerce_price' => 'ds_content',
+      'field_images' => 'ds_content',
+      'field_ring_width' => 'ds_content',
+      'field_ring_width_shown' => 'ds_content',
+      'status' => 'ds_content',
+      '_add_existing_field' => 'ds_content',
+      'field_color' => 'hidden',
+      'redirect' => 'hidden',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['commerce_product|rings|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'commerce_product|rings|node_full';
+  $ds_layout->entity_type = 'commerce_product';
+  $ds_layout->bundle = 'rings';
+  $ds_layout->view_mode = 'node_full';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'commerce_price',
+        1 => 'field_images',
+        2 => 'width_displayed',
+      ),
+    ),
+    'fields' => array(
+      'commerce_price' => 'ds_content',
+      'field_images' => 'ds_content',
+      'width_displayed' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['commerce_product|rings|node_full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'commerce_product|rings|node_reference_view';
+  $ds_layout->entity_type = 'commerce_product';
+  $ds_layout->bundle = 'rings';
+  $ds_layout->view_mode = 'node_reference_view';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'sku',
+        1 => 'title_field',
+        2 => 'commerce_price',
+        3 => 'field_images',
+        4 => 'field_ring_width',
+        5 => 'status',
+      ),
+    ),
+    'fields' => array(
+      'sku' => 'ds_content',
+      'title_field' => 'ds_content',
+      'commerce_price' => 'ds_content',
+      'field_images' => 'ds_content',
+      'field_ring_width' => 'ds_content',
+      'status' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['commerce_product|rings|node_reference_view'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|rings|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'rings';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'two_column_stacked_66_33';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'header' => array(
+        0 => 'title_field',
+        1 => 'field_description',
+      ),
+      'left' => array(
+        2 => 'product:field_images',
+        3 => 'field_collection',
+        4 => 'field_color',
+        5 => 'field_ring_elements_primary',
+        6 => 'field_ring_elements',
+      ),
+      'right' => array(
+        7 => 'product:commerce_price',
+        8 => 'ring_free',
+        9 => 'field_product',
+        10 => 'ring_sizing',
+        11 => 'product:field_ring_width',
+        12 => 'product:field_color',
+        13 => 'product:sku',
+      ),
+      'footer' => array(
+        14 => 'field_related_rings',
+        15 => 'similar_products_collection',
+        16 => 'similar_products_color',
+        17 => 'similar_products_element',
+      ),
+    ),
+    'fields' => array(
+      'title_field' => 'header',
+      'field_description' => 'header',
+      'product:field_images' => 'left',
+      'field_collection' => 'left',
+      'field_color' => 'left',
+      'field_ring_elements_primary' => 'left',
+      'field_ring_elements' => 'left',
+      'product:commerce_price' => 'right',
+      'ring_free' => 'right',
+      'field_product' => 'right',
+      'ring_sizing' => 'right',
+      'product:field_ring_width' => 'right',
+      'product:field_color' => 'right',
+      'product:sku' => 'right',
+      'field_related_rings' => 'footer',
+      'similar_products_collection' => 'footer',
+      'similar_products_color' => 'footer',
+      'similar_products_element' => 'footer',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => 0,
+  );
+  $export['node|rings|full'] = $ds_layout;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_view_modes_info().
  */
 function trf_ring_type_ds_view_modes_info() {
   $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'featured';
+  $ds_view_mode->label = 'Featured';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+    'taxonomy_term' => 'taxonomy_term',
+  );
+  $export['featured'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
@@ -59,6 +400,15 @@ function trf_ring_type_ds_view_modes_info() {
     'node' => 'node',
   );
   $export['reference_view'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'width_only';
+  $ds_view_mode->label = 'Width only';
+  $ds_view_mode->entities = array(
+    'file' => 'file',
+  );
+  $export['width_only'] = $ds_view_mode;
 
   return $export;
 }
