@@ -6,149 +6,189 @@
   font-family: $fontDefault;
 }
 
+//
+// PRIMARY NAVIGATION
+//
+// Collections, "all rings"
+//
+
 .navigation .primary-menu.inline {
+  @include clearfix;
   float: none;
   margin: 1em 0 0 0;
-  padding: 0 1em;
+  padding: 0;
   position: relative;
-  top: 2.5em;
-  background-color: #137dd1;
+  top: ($padding * 1.5);
+  background-color: transparent;
+
+  ul {
+    margin: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      a {
+        display: block;
+        margin-right: $padding;
+        padding: 0;
+        font-family: $fontDefault;
+        font-weight: $thin;
+        @include font-size(18px);
+        background-color: transparent;
+        color: $black;
+        border: 0;
+
+        &:after {
+          clear: both;
+          display: block;
+          content: "";
+          position: relative;
+          width: 0;
+          left: 0;
+          height: 1px;
+          background-color: $white;
+          transition: width 0.4s;
+        }
+
+        @include is-on {
+          color: $white;
+          background-color: transparent;
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+
+      &.first a {
+        border-left: none;
+        border-radius: 0;
+      }
+
+      &.last a {
+        padding: 0;
+        font-weight: $normal;
+        border-right: none;
+        border-radius: 0;
+        color: $blue_verydark;
+        background-color: transparent;
+
+        @include is-on {
+          color: $white;
+        }
+      }
+    }
+  }
 }
 
-.navigation .primary-menu.inline::after { /* clearfix */
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  font-size: 0;
-  visibility: hidden;
-}
+//
+// SECONDARY NAVIGATION
+//
+// Popular themes, "all themes"
+//
 
 .navigation .second-menu.inline {
+  @include clearfix;
   float: none;
   margin: 0 0 1em 0;
-  padding: 0 1em;
+  padding: 0;
   position: relative;
-  top: -2.5em;
-  background-color: #54b2fc;
+  top: ($padding * -2);
+
+  ul {
+    margin: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      a {
+        display: block;
+        padding: 0 ($padding / 2);
+        @include font-size(16px);
+        font-family: $fontDefault;
+        font-weight: $normal;
+        color: $black;
+        background-color: transparent;
+        border: 0;
+
+        &:after {
+          clear: both;
+          display: block;
+          content: "";
+          position: relative;
+          width: 0;
+          left: 50%;
+          height: 3px;
+          background-color: $blue;
+          border-radius: $border-radius;
+          transition: width 0.4s, left 0.4s;
+        }
+
+        @include is-on {
+          color: $blue_dark;
+          background-color: transparent;
+
+          &:after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+
+      &.first a {
+        margin-left: ($padding / 2);
+        border-left: none;
+        border-radius: 0;
+      }
+
+      &.last a {
+        padding: 0 ($padding / 2);
+        border-right: none;
+        border-radius: 0;
+        color: $blue_verydark;
+
+        &:after {
+          background-color: $white;;
+        }
+
+        @include is-on {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .links::before {
+    content: "Popular »";
+    @include font-size(16px);
+    font-weight: $bold;
+    color: $black;
+  }
 }
 
-.navigation .second-menu.inline::after { /* clearfix */
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  font-size: 0;
-  visibility: hidden;
-}
-
-.block-menu-tertiary-navigation {
-}
-
-/* Primary navigation */
-
-.navigation .primary-menu.inline ul {
-  margin: 0;
-}
-
-.navigation .primary-menu.inline ul li {
-  margin: 0;
-  padding: 5px 0;
-}
-
-.navigation .primary-menu.inline ul li a {
-  margin-right: 1.5em;
-  padding: 5px 0;
-  font-family: $fontDefault;
-  background-color: transparent;
-  border: 0;
-}
-
-.navigation .primary-menu.inline ul li a:hover,
-.navigation .primary-menu.inline ul li a:active,
-.navigation .primary-menu.inline ul li a:focus {
-  background-color: transparent;
-}
-
-.navigation .primary-menu.inline ul li.first a {
-  border-left: none;
-  border-radius: 0;
-}
-
-.navigation .primary-menu.inline ul li.last a {
-  padding: 0 5px;
-  /*border-left: 1px dotted #fff;*/
-  border-right: none;
-  border-radius: 0;
-  background-color: #fff;
-  color: #137dd1;
-}
-
-/* Secondary navigation */
-
-.navigation .second-menu.inline ul {
-  margin: 0;
-}
-
-.navigation .second-menu.inline ul li {
-  margin: 0;
-  padding: 5px 0;
-}
-
-.navigation .second-menu.inline ul li a {
-  margin-right: 1.5em;
-  padding: 5px 0;
-  font-family: $fontDefault;
-  background-color: transparent;
-  border: 0;
-}
-
-.navigation .second-menu.inline ul li a:hover,
-.navigation .second-menu.inline ul li a:active,
-.navigation .second-menu.inline ul li a:focus {
-  background-color: transparent;
-}
-
-.navigation .second-menu .links::before {
-  content: "Popular »";
-  margin-right: 1em;
-  font-size: 1.1em;
-  font-weight: $bold;
-}
-
-.navigation .second-menu.inline ul li.first a {
-  border-left: none;
-  border-radius: 0;
-}
-
-.navigation .second-menu.inline ul li.last a {
-  padding: 0 5px;
-  /*border-left: 1px dotted #000;*/
-  border-right: none;
-  border-radius: 0;
-  background-color: #fff;
-  color: #54b2fc;
-}
-
-/* Tertiary menu */
+//
+// TERTIARY NAVIGATION
+//
+// Blog, contact, about
+//
 
 .block-menu-tertiary-navigation {
   font-family: $fontDefault;
-}
 
-.block-menu-tertiary-navigation ul.menu li.collapsed,
-.block-menu-tertiary-navigation ul.menu li.leaf {
-  list-style-type: none;
-  list-style-image: none;
-  display: inline-block;
-}
+  ul.menu li.collapsed,
+  ul.menu li.leaf {
+    list-style-type: none;
+    list-style-image: none;
+    display: inline-block;
 
-.block-menu-tertiary-navigation ul.menu li.collapsed a,
-.block-menu-tertiary-navigation ul.menu li.leaf a {
-  background-color: #fff;
-  padding: 10px 10px 11px 10px;
-  font-family: $fontDefault;
-  font-weight: $bold;
-  opacity: 0.8;
+    a {
+      background-color: #fff;
+      padding: 10px 10px 11px 10px;
+      font-family: $fontDefault;
+      font-weight: $bold;
+      opacity: 0.8;
+    }
+  }
 }
-
