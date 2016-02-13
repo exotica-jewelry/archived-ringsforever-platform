@@ -5,6 +5,22 @@
  */
 
 /**
+ * Implements hook_default_cer().
+ */
+function trf_ring_type_default_cer() {
+  $items = array();
+  $items['node:rings:field_related_rings*node:rings:field_related_rings'] = entity_import('cer', '{
+    "identifier" : "node:rings:field_related_rings*node:rings:field_related_rings",
+    "cer_bidirectional" : { "und" : [ { "value" : "1" } ] },
+    "cer_enabled" : { "und" : [ { "value" : "1" } ] },
+    "cer_weight" : { "und" : [ { "value" : "0" } ] },
+    "cer_left" : { "und" : [ { "path" : "node:rings:field_related_rings" } ] },
+    "cer_right" : { "und" : [ { "path" : "node:rings:field_related_rings" } ] }
+  }');
+  return $items;
+}
+
+/**
  * Implements hook_ctools_plugin_api().
  */
 function trf_ring_type_ctools_plugin_api($module = NULL, $api = NULL) {
