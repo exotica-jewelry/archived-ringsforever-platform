@@ -57,7 +57,7 @@ function trf_ring_type_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'similar_products_collection' => array(
-      'weight' => '15',
+      'weight' => '16',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -68,7 +68,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'similar_products_color' => array(
-      'weight' => '16',
+      'weight' => '17',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -78,7 +78,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'similar_products_element' => array(
-      'weight' => '17',
+      'weight' => '14',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -357,10 +357,10 @@ function trf_ring_type_ds_layout_settings_info() {
         13 => 'product:sku',
       ),
       'footer' => array(
-        14 => 'field_related_rings',
-        15 => 'similar_products_collection',
-        16 => 'similar_products_color',
-        17 => 'similar_products_element',
+        14 => 'similar_products_element',
+        15 => 'field_related_rings',
+        16 => 'similar_products_collection',
+        17 => 'similar_products_color',
       ),
     ),
     'fields' => array(
@@ -378,10 +378,10 @@ function trf_ring_type_ds_layout_settings_info() {
       'product:field_ring_width' => 'right',
       'product:field_color' => 'right',
       'product:sku' => 'right',
+      'similar_products_element' => 'footer',
       'field_related_rings' => 'footer',
       'similar_products_collection' => 'footer',
       'similar_products_color' => 'footer',
-      'similar_products_element' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
