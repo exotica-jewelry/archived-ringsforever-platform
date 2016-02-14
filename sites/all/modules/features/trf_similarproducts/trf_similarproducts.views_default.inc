@@ -23,6 +23,7 @@ function trf_similarproducts_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Related rings';
+  $handler->display->display_options['css_class'] = 'sp';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'View all %1 titanium wedding rings';
@@ -33,7 +34,7 @@ function trf_similarproducts_views_default_views() {
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '7';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'sp__item';
@@ -160,6 +161,8 @@ function trf_similarproducts_views_default_views() {
 
   /* Display: Related rings by color block */
   $handler = $view->new_display('block', 'Related rings by color block', 'sp_color');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'sp sp-color';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -226,6 +229,8 @@ function trf_similarproducts_views_default_views() {
 
   /* Display: Related rings by element block */
   $handler = $view->new_display('block', 'Related rings by element block', 'sp_element');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'sp sp-element';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -272,6 +277,13 @@ function trf_similarproducts_views_default_views() {
     'rings' => 'rings',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Primary element (field_ring_elements_primary) */
+  $handler->display->display_options['filters']['field_ring_elements_primary_tid']['id'] = 'field_ring_elements_primary_tid';
+  $handler->display->display_options['filters']['field_ring_elements_primary_tid']['table'] = 'field_data_field_ring_elements_primary';
+  $handler->display->display_options['filters']['field_ring_elements_primary_tid']['field'] = 'field_ring_elements_primary_tid';
+  $handler->display->display_options['filters']['field_ring_elements_primary_tid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_ring_elements_primary_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ring_elements_primary_tid']['vocabulary'] = 'brand';
   $export['similarproducts'] = $view;
 
   return $export;
