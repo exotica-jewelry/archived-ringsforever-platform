@@ -109,10 +109,14 @@
     }
   }
 
+  // Colors
+  .field-name-field-color {
+    margin-bottom: (2 * $padding);
+  }
+
   // Elements (keywords)
   .field-name-field-ring-elements-primary {
     display: inline-block;
-    margin-bottom: ($padding * 2);
 
     .field-items,
     .field-item {
