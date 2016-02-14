@@ -235,7 +235,7 @@ titanium-rings/collections/*',
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['facetapi-Nm4CRgtowO1tVgxZjXwsqLYvUReoez0Q'] = array(
