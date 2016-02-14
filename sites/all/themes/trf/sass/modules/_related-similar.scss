@@ -18,6 +18,7 @@
 
 %otherrings__items {
   @include clearfix;
+  @include no-block-padding;
 }
 
 %otherrings__item {
@@ -25,21 +26,48 @@
   width: $imagestyle-product_thumbnail;
   margin-right: $padding;
 
+  @include is-on {
+    background-color: rgba($blue_dark, 0.2);
+  }
+
   .container-24.prefix-1 {
+    width: $imagestyle-product_thumbnail;
     padding-left: 0;
 
     .commerce-product-field-field-images {
       padding-right: 0;
       padding-bottom: 0;
+
+      a {
+        display: block;
+        width: $imagestyle-product_thumbnail;
+
+        @include is-on {
+          box-shadow: 0 0 10px $blue;
+        }
+      }
     }
 
-    .field-name-field-images a {
-      display: block;
-      width: $imagestyle-product_thumbnail;
+    .field-name-field-ring-name {
+      margin-top: ($padding / 4);
+      text-align: center;
 
-      @include is-on {
-        box-shadow: 0 0 10px $blue;
+      a {
+        @include font-size(14px);
+        font-weight: $bold;
+        color: $blue_dark;
+
+        @include is-on {
+          color: $black;
+        }
       }
+    }
+
+    .field-name-commerce-price {
+      margin-top: ($padding / 4);
+      @include font-size(16px);
+      font-weight: $bold;
+      text-align: center;
     }
   }
 }
