@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Similar products feature.
- */
-
-include_once 'trf_similarproducts.features.inc';

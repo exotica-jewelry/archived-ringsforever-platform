@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TRF similar rings feature.
+ */
+
+include_once 'trf_ring_similar.features.inc';

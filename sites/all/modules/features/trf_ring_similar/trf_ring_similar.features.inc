@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * trf_similarproducts.features.inc
+ * trf_ring_similar.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function trf_similarproducts_ctools_plugin_api($module = NULL, $api = NULL) {
+function trf_ring_similar_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
@@ -16,6 +16,6 @@ function trf_similarproducts_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function trf_similarproducts_views_api($module = NULL, $api = NULL) {
+function trf_ring_similar_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }

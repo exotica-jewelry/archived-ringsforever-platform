@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * trf_similarproducts.ds.inc
+ * trf_ring_similar.ds.inc
  */
 
 /**
  * Implements hook_ds_custom_fields_info().
  */
-function trf_similarproducts_ds_custom_fields_info() {
+function trf_ring_similar_ds_custom_fields_info() {
   $export = array();
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
-  $ds_field->field = 'similar_products_collection';
-  $ds_field->label = 'Similar products: Collection';
+  $ds_field->field = 'similar_rings_collections';
+  $ds_field->label = 'Similar rings: Collections';
   $ds_field->field_type = 6;
   $ds_field->entities = array(
     'node' => 'node',
@@ -21,15 +21,15 @@ function trf_similarproducts_ds_custom_fields_info() {
   );
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
-    'block' => 'views|similarproducts-sp_collection',
+    'block' => 'views|similar_rings-sr_collections',
     'block_render' => '1',
   );
-  $export['similar_products_collection'] = $ds_field;
+  $export['similar_rings_collections'] = $ds_field;
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
-  $ds_field->field = 'similar_products_color';
-  $ds_field->label = 'Similar products: Color';
+  $ds_field->field = 'similar_rings_colors';
+  $ds_field->label = 'Similar rings: Colors';
   $ds_field->field_type = 6;
   $ds_field->entities = array(
     'node' => 'node',
@@ -37,15 +37,15 @@ function trf_similarproducts_ds_custom_fields_info() {
   );
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
-    'block' => 'views|similarproducts-sp_color',
+    'block' => 'views|similar_rings-sr_colors',
     'block_render' => '1',
   );
-  $export['similar_products_color'] = $ds_field;
+  $export['similar_rings_colors'] = $ds_field;
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
-  $ds_field->field = 'similar_products_element';
-  $ds_field->label = 'Similar products: Element';
+  $ds_field->field = 'similar_rings_elements';
+  $ds_field->label = 'Similar rings: Elements';
   $ds_field->field_type = 6;
   $ds_field->entities = array(
     'node' => 'node',
@@ -53,10 +53,10 @@ function trf_similarproducts_ds_custom_fields_info() {
   );
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
-    'block' => 'views|similarproducts-sp_element',
+    'block' => 'views|similar_rings-sr_elements',
     'block_render' => '1',
   );
-  $export['similar_products_element'] = $ds_field;
+  $export['similar_rings_elements'] = $ds_field;
 
   return $export;
 }
