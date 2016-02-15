@@ -461,5 +461,26 @@ function trf_site_paths_strongarm() {
   $strongarm->value = FALSE;
   $export['redirect_warning'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_path_brand';
+  $strongarm->value = 'commerce_kickstart_taxonomy_term_path';
+  $export['taxonomy_menu_path_brand'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_path_collection';
+  $strongarm->value = 'commerce_kickstart_taxonomy_term_path';
+  $export['taxonomy_menu_path_collection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_path_width';
+  $strongarm->value = 'commerce_kickstart_taxonomy_term_path';
+  $export['taxonomy_menu_path_width'] = $strongarm;
+
   return $export;
 }
