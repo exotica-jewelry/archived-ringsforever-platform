@@ -73,25 +73,26 @@
 }
 
 
-// Related rings
+.block-similar-rings-sr-elements,
 .field-name-field-related-rings,
-.block-similarproducts-sp-collection,
-.block-similarproducts-sp-color {
+.block-similar-rings-sr-collections,
+.block-similar-rings-sr-colors {
   @extend %otherrings;
 }
 
+.block-similar-rings-sr-elements .block-title,
 .field-name-field-related-rings__label,
-.block-similarproducts-sp-collection .block-title,
-.block-similarproducts-sp-color .block-title {
+.block-similar-rings-sr-collections .block-title,
+.block-similar-rings-sr-colors .block-title {
   @extend %otherrings__label;
 }
 
 .field-name-field-related-rings__items,
-.sp {
+.sr {
   @extend %otherrings__items;
 }
 
 .field-name-field-related-rings__item,
-.sp__item {
+.sr__item {
   @extend %otherrings__item;
 }
