@@ -471,6 +471,13 @@ function trf_site_paths_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'taxonomy_menu_path_category';
+  $strongarm->value = 'commerce_kickstart_taxonomy_term_path';
+  $export['taxonomy_menu_path_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'taxonomy_menu_path_collection';
   $strongarm->value = 'commerce_kickstart_taxonomy_term_path';
   $export['taxonomy_menu_path_collection'] = $strongarm;

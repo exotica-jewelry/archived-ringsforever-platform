@@ -12,6 +12,9 @@ function trf_site_paths_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: variable
+  $overrides["variable.pathauto_taxonomy_term_brand_pattern.value"] = 'titanium-rings/keywords/[term:name]';
+  $overrides["variable.pathauto_taxonomy_term_category_pattern.value"] = '[term:name]';
+  $overrides["variable.pathauto_taxonomy_term_collection_pattern.value"] = 'titanium-rings/collections/[term:name]';
   $overrides["variable.pathauto_taxonomy_term_color_pattern.value"] = 'titanium-rings/colors/[term:name]';
 
  return $overrides;
