@@ -56,18 +56,17 @@ function trf_ring_type_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'rings';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'similar_products_collection' => array(
+    'similar_rings_collections' => array(
       'weight' => '16',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_reset',
-          'lbw' => 1,
         ),
       ),
     ),
-    'similar_products_color' => array(
+    'similar_rings_colors' => array(
       'weight' => '17',
       'label' => 'hidden',
       'format' => 'default',
@@ -77,7 +76,7 @@ function trf_ring_type_ds_field_settings_info() {
         ),
       ),
     ),
-    'similar_products_element' => array(
+    'similar_rings_elements' => array(
       'weight' => '14',
       'label' => 'hidden',
       'format' => 'default',
@@ -127,6 +126,11 @@ function trf_ring_type_ds_field_settings_info() {
           'fi-odd-even' => FALSE,
           'fi-first-last' => FALSE,
         ),
+      ),
+    ),
+    'field_ring_elements_primary' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
       ),
     ),
   );
@@ -342,10 +346,10 @@ function trf_ring_type_ds_layout_settings_info() {
       ),
       'left' => array(
         2 => 'product:field_images',
-        3 => 'field_collection',
-        4 => 'field_color',
-        5 => 'field_ring_elements_primary',
-        6 => 'field_ring_elements',
+        3 => 'field_ring_elements_primary',
+        4 => 'field_ring_elements',
+        5 => 'field_collection',
+        6 => 'field_color',
       ),
       'right' => array(
         7 => 'product:commerce_price',
@@ -357,20 +361,20 @@ function trf_ring_type_ds_layout_settings_info() {
         13 => 'product:sku',
       ),
       'footer' => array(
-        14 => 'similar_products_element',
+        14 => 'similar_rings_elements',
         15 => 'field_related_rings',
-        16 => 'similar_products_collection',
-        17 => 'similar_products_color',
+        16 => 'similar_rings_collections',
+        17 => 'similar_rings_colors',
       ),
     ),
     'fields' => array(
       'title_field' => 'header',
       'field_description' => 'header',
       'product:field_images' => 'left',
-      'field_collection' => 'left',
-      'field_color' => 'left',
       'field_ring_elements_primary' => 'left',
       'field_ring_elements' => 'left',
+      'field_collection' => 'left',
+      'field_color' => 'left',
       'product:commerce_price' => 'right',
       'ring_free' => 'right',
       'field_product' => 'right',
@@ -378,10 +382,10 @@ function trf_ring_type_ds_layout_settings_info() {
       'product:field_ring_width' => 'right',
       'product:field_color' => 'right',
       'product:sku' => 'right',
-      'similar_products_element' => 'footer',
+      'similar_rings_elements' => 'footer',
       'field_related_rings' => 'footer',
-      'similar_products_collection' => 'footer',
-      'similar_products_color' => 'footer',
+      'similar_rings_collections' => 'footer',
+      'similar_rings_colors' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
