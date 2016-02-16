@@ -3,9 +3,9 @@
 //
 
 .page-node.node-type-rings .field-name-title-field {
+  @extend %header;
   margin-top: (2 * $padding);
   @include font-size(60px);
-  font-family: $fontDefault;
   font-weight: $thin;
   letter-spacing: -0.1rem;
   word-spacing: 0.5rem;

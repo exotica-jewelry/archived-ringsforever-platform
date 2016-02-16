@@ -11,10 +11,11 @@
 
 .view-collection-products .view-header .taxonomy-title,
 .view-collection-taxonomy-term .view-header .taxonomy-title {
+  @extend %header;
   top: -10px;
   left: 2px;
   margin-bottom: $padding;
-  font-family: $fontDefault;
+  font-weight: $normal;
   line-height: 1em;
   text-transform: none;
   text-shadow: none;

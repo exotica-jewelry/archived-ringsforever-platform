@@ -9,6 +9,7 @@
 
   // Section titles
   .block-title {
+    @extend %header;
     margin-bottom: 0.5rem;
     padding-bottom: 0;
     @include font-size(28px);

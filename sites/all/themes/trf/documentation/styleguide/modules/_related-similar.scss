@@ -9,6 +9,7 @@
 }
 
 %otherrings__label {
+  @extend %header;
   margin-bottom: $padding;
   @include font-size(24px);
   line-height: 1.5;

@@ -2,16 +2,21 @@
 //
 // Styleguide 2.1.0
 
+%header {
+  font-family: $fontDefault;
+  text-rendering: optimizeLegibility;
+}
+
 // markup:
 // <main><h1>H1 header</h1></main>
 //
 // Styleguide 2.1.1
 
 %h1 {
+  @extend %header;
   @include font-size(36px);
   line-height: 1;
   margin: 0 0 1rem 0;
-  font-family: $fontDefault;
 
   @include mq(smallish) {
     @include font-size(48px);
@@ -29,10 +34,10 @@
 // Styleguide 2.1.2
 
 %h2 {
+  @extend %header;
   @include font-size(32px);
-  line-height: .9;
+  line-height: 0.9;
   margin: 0 0 2rem 0;
-  font-family: $fontDefault;
 
   @include mq(smallish) {
     @include font-size(48px);
@@ -45,8 +50,8 @@
 // Styleguide 2.1.3
 
 %h3 {
+  @extend %header;
   @include font-size(28px);
-  font-family: $fontDefault;
 
   @include mq(smallish) {
     @include font-size(36px);
@@ -59,9 +64,9 @@
 // Styleguide 2.1.4
 
 %h4 {
+  @extend %header;
   @include font-size(24px);
   font-weight: $bold;
-  font-family: $fontDefault;
 
   @include mq(smallish) {
     @include font-size(26px);
@@ -74,10 +79,10 @@
 // Styleguide 2.1.5
 
 %h5 {
+  @extend %header;
   @include font-size(22px);
   font-weight: $ultra-bold;
   letter-spacing: 1px;
-  font-family: $fontDefault;
 }
 
 // markup:
@@ -86,9 +91,9 @@
 // Styleguide 2.1.6
 
 %h6 {
+  @extend %header;
   @include font-size(20px);
   font-weight: $bold;
-  font-family: $fontDefault;
 }
 
 h1 {
