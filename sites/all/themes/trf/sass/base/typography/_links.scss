@@ -17,13 +17,13 @@
   text-decoration: none;
 
   &:visited {
-    color: $blue_light;
+    color: $blue_verydark;
     text-decoration: none;
     outline: 0;
   }
 
   @include is-on {
-    color: $blue_light;
+    color: $blue_verydark;
   }
 }
 
