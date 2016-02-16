@@ -11,4 +11,13 @@
   border-top-right-radius: $border-radius;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+
+  a {
+    color: $blue_verydark;
+
+    @include is-on {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
 }

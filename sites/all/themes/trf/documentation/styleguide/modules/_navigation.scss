@@ -59,6 +59,26 @@
             width: 100%;
           }
         }
+
+        &.active,
+        &.active-trail {
+          background-color: transparent;
+          color: $white;
+
+          &:after {
+            background-color: $white;
+            width: 100%;
+            left: 0;
+          }
+
+          @include is-on {
+            color: $white;
+
+            &:after {
+              width: 0;
+            }
+          }
+        }
       }
 
       &.first a {
@@ -71,10 +91,15 @@
         font-weight: $normal;
         border-right: none;
         border-radius: 0;
-        color: $blue_verydark;
+        color: $blue_dark;
         background-color: transparent;
 
         @include is-on {
+          color: $white;
+        }
+
+        &.active,
+        &.active-trail {
           color: $white;
         }
       }
@@ -135,6 +160,27 @@
             left: 0;
           }
         }
+
+        &.active,
+        &.active-trail {
+          background-color: transparent;
+          color: $blue_dark;
+
+          &:after {
+            background-color: $blue;
+            width: 100%;
+            left: 0;
+          }
+
+          @include is-on {
+            color: $white;
+
+            &:after {
+              width: 0;
+              left: 50%;
+            }
+          }
+        }
       }
 
       &.first a {
@@ -147,13 +193,18 @@
         padding: 0 ($padding / 2);
         border-right: none;
         border-radius: 0;
-        color: $blue_verydark;
+        color: $blue_dark;
 
         &:after {
-          background-color: $white;;
+          background-color: $white;
         }
 
         @include is-on {
+          color: $white;
+        }
+
+        &.active,
+        &.active-trail {
           color: $white;
         }
       }
