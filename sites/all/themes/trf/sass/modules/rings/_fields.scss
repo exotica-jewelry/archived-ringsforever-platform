@@ -81,6 +81,8 @@
     }
   }
 
+  // Colors note
+  .field-name-ring-colors,
   // Sizing note
   .field-name-ring-sizing {
     margin-top: 1.5rem;
@@ -100,8 +102,7 @@
   .field-name-field-color,
   .field-name-field-ring-elements-primary,
   .field-name-field-ring-elements {
-    margin-bottom: ($padding / 2);
-    padding-left: 125px; // thumbnail + padding width
+    margin: ($padding / 2) $padding ($padding / 2) 0;
     @include font-size(16px);
 
     a {
@@ -117,6 +118,7 @@
   // Elements (keywords)
   .field-name-field-ring-elements-primary {
     display: inline-block;
+    margin-right: 0;
 
     .field-items,
     .field-item {
@@ -134,7 +136,7 @@
   }
 
   .field-name-field-ring-elements {
-    display: inline-block;
+    display: inline;
     padding-left: 0;
 
     .field-items,
