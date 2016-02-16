@@ -11,6 +11,14 @@ function trf_ring_type_default_fe_block_boxes() {
   $export = array();
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Ring pages: Colors';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'ring_colors';
+  $fe_block_boxes->body = 'A <a href="#">variety of colors</a> are available on this ring.';
+
+  $export['ring_colors'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Ring pages: Free';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'ring_free';

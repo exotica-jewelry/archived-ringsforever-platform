@@ -29,6 +29,7 @@ function trf_ring_type_ds_field_settings_info() {
         'ft' => array(
           'lb' => 'Width displayed',
         ),
+        'conditions' => array(),
       ),
     ),
   );
@@ -56,6 +57,23 @@ function trf_ring_type_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'rings';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
+    'ring_colors' => array(
+      'weight' => '10',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(),
+        'conditions' => array(
+          0 => array(
+            'condition' => 'hide_no_string',
+            'configuration' => array(
+              'target' => 'field_collection',
+              'string' => 'Color',
+            ),
+          ),
+        ),
+      ),
+    ),
     'similar_rings_collections' => array(
       'weight' => '16',
       'label' => 'hidden',
@@ -64,6 +82,7 @@ function trf_ring_type_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_reset',
         ),
+        'conditions' => array(),
       ),
     ),
     'similar_rings_colors' => array(
@@ -74,6 +93,7 @@ function trf_ring_type_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_reset',
         ),
+        'conditions' => array(),
       ),
     ),
     'similar_rings_elements' => array(
@@ -84,6 +104,7 @@ function trf_ring_type_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_reset',
         ),
+        'conditions' => array(),
       ),
     ),
     'ring_free' => array(
@@ -92,11 +113,12 @@ function trf_ring_type_ds_field_settings_info() {
       'format' => 'default',
     ),
     'ring_sizing' => array(
-      'weight' => '10',
+      'weight' => '11',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
         'ft' => array(),
+        'conditions' => array(),
       ),
     ),
     'field_related_rings' => array(
@@ -128,11 +150,6 @@ function trf_ring_type_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_ring_elements_primary' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|rings|full'] = $ds_fieldsetting;
 
@@ -144,6 +161,22 @@ function trf_ring_type_ds_field_settings_info() {
  */
 function trf_ring_type_ds_custom_fields_info() {
   $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'ring_colors';
+  $ds_field->label = 'Ring: Colors';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+    'commerce_product' => 'commerce_product',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'block|4',
+    'block_render' => '1',
+  );
+  $export['ring_colors'] = $ds_field;
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
@@ -289,6 +322,7 @@ function trf_ring_type_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['commerce_product|rings|node_full'] = $ds_layout;
 
@@ -355,10 +389,10 @@ function trf_ring_type_ds_layout_settings_info() {
         7 => 'product:commerce_price',
         8 => 'ring_free',
         9 => 'field_product',
-        10 => 'ring_sizing',
-        11 => 'product:field_ring_width',
-        12 => 'product:field_color',
-        13 => 'product:sku',
+        10 => 'ring_colors',
+        11 => 'ring_sizing',
+        12 => 'product:field_ring_width',
+        13 => 'product:field_color',
       ),
       'footer' => array(
         14 => 'similar_rings_elements',
@@ -378,10 +412,10 @@ function trf_ring_type_ds_layout_settings_info() {
       'product:commerce_price' => 'right',
       'ring_free' => 'right',
       'field_product' => 'right',
+      'ring_colors' => 'right',
       'ring_sizing' => 'right',
       'product:field_ring_width' => 'right',
       'product:field_color' => 'right',
-      'product:sku' => 'right',
       'similar_rings_elements' => 'footer',
       'field_related_rings' => 'footer',
       'similar_rings_collections' => 'footer',
