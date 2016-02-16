@@ -28,6 +28,7 @@ $blue_verydark: darken($blue, 25%);
 // @todo Move other color values into this map and update styleguide.
 
 $colors: (
+  content_bg: $blue_verylight,
   page_bg: $blue_light,
   highlight_bg: $blue,
 );

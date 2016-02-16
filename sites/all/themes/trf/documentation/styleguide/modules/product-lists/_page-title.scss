@@ -20,4 +20,5 @@
   text-shadow: none;
   color: $black;
   border-bottom: 1px $black solid;
+  @include descenders;
 }
