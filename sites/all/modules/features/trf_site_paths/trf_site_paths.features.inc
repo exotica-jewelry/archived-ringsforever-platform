@@ -18,7 +18,7 @@ function trf_site_paths_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function trf_site_paths_strongarm_alter(&$data) {
   if (isset($data['pathauto_taxonomy_term_brand_pattern'])) {
-    $data['pathauto_taxonomy_term_brand_pattern']->value = 'titanium-rings/keywords/[term:name]'; /* WAS: 'brand/[term:name]' */
+    $data['pathauto_taxonomy_term_brand_pattern']->value = 'titanium-rings/[term:name]'; /* WAS: 'brand/[term:name]' */
   }
   if (isset($data['pathauto_taxonomy_term_category_pattern'])) {
     $data['pathauto_taxonomy_term_category_pattern']->value = '[term:name]'; /* WAS: 'category/[term:name]' */
