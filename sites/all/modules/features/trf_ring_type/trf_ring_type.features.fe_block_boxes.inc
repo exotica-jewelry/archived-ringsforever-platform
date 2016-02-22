@@ -27,6 +27,22 @@ function trf_ring_type_default_fe_block_boxes() {
   $export['ring_free'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Ring pages: Gemstones (add)';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'ring_gemstones_add';
+  $fe_block_boxes->body = 'You can <a href="#">add one or more gemstones</a> to this ring. <a href="#">Contact us</a> for details.';
+
+  $export['ring_gemstones_add'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Ring pages: Gemstones (other)';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'ring_gemstones_other';
+  $fe_block_boxes->body = 'Other <a href="#">types and sizes of gemstones are available</a> for this ring. <a href="#">Contact us</a> for details.';
+
+  $export['ring_gemstones_other'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Ring pages: Sizing';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'ring_sizing';

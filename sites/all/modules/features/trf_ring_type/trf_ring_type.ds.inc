@@ -185,6 +185,38 @@ function trf_ring_type_ds_custom_fields_info() {
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
+  $ds_field->field = 'ring_gemstones_add';
+  $ds_field->label = 'Ring: Gemstones (add)';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+    'commerce_product' => 'commerce_product',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'block|6',
+    'block_render' => '1',
+  );
+  $export['ring_gemstones_add'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'ring_gemstones_other';
+  $ds_field->label = 'Ring: Gemstones (other)';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+    'commerce_product' => 'commerce_product',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'block|5',
+    'block_render' => '1',
+  );
+  $export['ring_gemstones_other'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
   $ds_field->field = 'ring_sizing';
   $ds_field->label = 'Ring: Sizing';
   $ds_field->field_type = 6;
