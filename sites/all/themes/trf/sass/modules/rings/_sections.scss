@@ -1,0 +1,11 @@
+//
+// Display Suite sections (header, left, right, footer)
+//
+
+.page-node.node-type-rings {
+
+  .ds-footer {
+    padding-top: $padding;
+    border-top: 1px $black solid;
+  }
+}

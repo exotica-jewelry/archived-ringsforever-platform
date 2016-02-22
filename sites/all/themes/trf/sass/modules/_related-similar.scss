@@ -14,7 +14,6 @@
   @include font-size(24px);
   line-height: 1.5;
   font-weight: $thin;
-  border-bottom: 1px $black solid;
 }
 
 %otherrings__items {
@@ -96,4 +95,25 @@
 .field-name-field-related-rings__item,
 .sr__item {
   @extend %otherrings__item;
+}
+
+// Combining similar (automatically chosen, based on elements) and related
+// (manually chosen, with entityreference) into one block.
+
+.field-name-field-related-rings__label {
+  @extend %visuallyhidden;
+}
+
+.block-similar-rings-sr-elements,
+.block-similar-rings-sr-elements .block-inner,
+.block-similar-rings-sr-elements .content,
+.block-similar-rings-sr-elements .view-similar-rings,
+.block-similar-rings-sr-elements .view-content,
+.field-name-field-related-rings,
+.field-name-field-related-rings__items {
+  display: inline-block;
+  @include no-block-padding;
+}
+
+.field-name-field-related-rings__item {
 }
