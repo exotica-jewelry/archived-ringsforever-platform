@@ -84,8 +84,15 @@ function trf_ring_type_ds_field_settings_info() {
           0 => array(
             'condition' => 'hide_no_string',
             'configuration' => array(
+              'target' => 'field_gemstones_bool',
+              'string' => '1',
+            ),
+          ),
+          1 => array(
+            'condition' => 'hide_if_string',
+            'configuration' => array(
               'target' => 'field_ring_elements',
-              'string' => 'gemstones-available',
+              'string' => 'gemstones',
             ),
           ),
         ),

@@ -83,7 +83,7 @@ function trf_ring_type_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -159,7 +159,7 @@ function trf_ring_type_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -241,6 +241,74 @@ function trf_ring_type_field_default_field_instances() {
       ),
       'type' => 'text_textarea_with_summary',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-rings-field_gemstones_bool'.
+  $field_instances['node-rings-field_gemstones_bool'] = array(
+    'bundle' => 'rings',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Display a note that gemstones can be added to this ring.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'product_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'reference_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_gemstones_bool',
+    'label' => 'Gemstones can be added',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 5,
     ),
   );
 
@@ -517,7 +585,7 @@ function trf_ring_type_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -585,7 +653,7 @@ function trf_ring_type_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -673,7 +741,7 @@ function trf_ring_type_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -756,7 +824,7 @@ function trf_ring_type_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -837,7 +905,7 @@ function trf_ring_type_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -1031,10 +1099,12 @@ function trf_ring_type_field_default_field_instances() {
   t('Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.');
   t('Colors');
   t('Description');
+  t('Display a note that gemstones can be added to this ring.');
   t('Elements');
   t('Enter <em>one</em> primary element by which to categorize this ring (in particular, in its URL). It should be the single most important element about this ring, such as mountains, leaves, gold, diamonds, blue diamonds, etc. (Elements are always in plural form for categorization purposes.)');
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
   t('Enter other secondary elements of this ring, one at a time.');
+  t('Gemstones can be added');
   t('Images');
   t('Other related rings');
   t('Primary element');
