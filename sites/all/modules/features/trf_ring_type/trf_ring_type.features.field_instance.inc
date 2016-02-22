@@ -625,7 +625,7 @@ function trf_ring_type_field_default_field_instances() {
           'view_mode' => 'reference_view',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 15,
+        'weight' => 17,
       ),
       'product_list' => array(
         'label' => 'above',

@@ -104,7 +104,7 @@ function trf_ring_type_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => 'Gemstones',
     'visibility' => 0,
   );
 
@@ -136,7 +136,7 @@ function trf_ring_type_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => 'Gemstones',
     'visibility' => 0,
   );
 

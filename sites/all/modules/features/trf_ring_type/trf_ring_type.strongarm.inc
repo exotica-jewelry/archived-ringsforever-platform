@@ -249,7 +249,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '13',
+            'weight' => '15',
             'visible' => TRUE,
           ),
           'featured' => array(
@@ -275,7 +275,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '12',
+            'weight' => '14',
             'visible' => TRUE,
           ),
           'featured' => array(
