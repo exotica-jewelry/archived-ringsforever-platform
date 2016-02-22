@@ -28,9 +28,13 @@ function ffc_form_field_ui_display_overview_form_alter(&$form, &$form_state) {
 function ffc_validate_field_display_overview(&$form, &$form_state) {
   if (!empty($form_state['formatter_settings']) && is_array($form_state['formatter_settings'])) {
     foreach ($form_state['formatter_settings'] as $key => $info) {
-      if (empty($info['conditions'][0]['condition'])) {
-        $form_state['formatter_settings'][$key]['conditions'] = array();
+      foreach ($info['conditions'] as $condition_key => $condition_item) {
+        if (empty($condition_item['condition'])) {
+          unset($form_state['formatter_settings'][$key]['conditions'][$condition_key]);
+        }
       }
+      // re-index the array to normalize integer keys
+      $form_state['formatter_settings'][$key]['conditions'] = array_values($form_state['formatter_settings'][$key]['conditions']);
     }
   }
 }
