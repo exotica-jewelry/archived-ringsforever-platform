@@ -1,0 +1,45 @@
+//
+// DS block fields
+//
+
+%ring-block-field {
+  p {
+    margin: ($padding / 2) 0;
+    @include font-size(14px);
+
+    a {
+      font-weight: $bold;
+    }
+  }
+}
+
+.page-node.node-type-rings {
+
+  // "Free"
+  .field-name-ring-free {
+    @extend %ring-block-field;
+    margin-top: ($padding * -0.5);
+    margin-bottom: $padding;
+  }
+
+  // Colors note
+  .field-name-ring-colors {
+    @extend %ring-block-field;
+  }
+
+  // Sizing note
+  .field-name-ring-sizing {
+    @extend %ring-block-field;
+    margin-top: $padding;
+  }
+
+  // Gemstones (changing to other stones)
+  .field-name-ring-gemstones-other {
+    @extend %ring-block-field;
+  }
+
+  // Gemstones (adding stones)
+  .field-name-ring-gemstones-add {
+    @extend %ring-block-field;
+  }
+}

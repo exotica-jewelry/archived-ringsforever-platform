@@ -1,0 +1,14 @@
+//
+// Price
+//
+
+.page-node.node-type-rings {
+
+  // Price
+  .field-name-commerce-price {
+    margin: ($padding * -0.5) 0 0 0;
+    @include font-size(48px);
+    font-family: $fontDefault;
+    font-weight: $thin;
+  }
+}
