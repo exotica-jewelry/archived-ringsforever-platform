@@ -74,17 +74,6 @@ function trf_ring_type_ds_field_settings_info() {
         ),
       ),
     ),
-    'similar_rings_collections' => array(
-      'weight' => '16',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_reset',
-        ),
-        'conditions' => array(),
-      ),
-    ),
     'similar_rings_colors' => array(
       'weight' => '17',
       'label' => 'hidden',
@@ -397,8 +386,7 @@ function trf_ring_type_ds_layout_settings_info() {
       'footer' => array(
         14 => 'similar_rings_elements',
         15 => 'field_related_rings',
-        16 => 'similar_rings_collections',
-        17 => 'similar_rings_colors',
+        16 => 'similar_rings_colors',
       ),
     ),
     'fields' => array(
@@ -418,7 +406,6 @@ function trf_ring_type_ds_layout_settings_info() {
       'product:field_color' => 'right',
       'similar_rings_elements' => 'footer',
       'field_related_rings' => 'footer',
-      'similar_rings_collections' => 'footer',
       'similar_rings_colors' => 'footer',
     ),
     'classes' => array(),
