@@ -3,6 +3,10 @@
 //
 
 %ring-block-field {
+  .block-title {
+    margin-top: $padding;
+  }
+
   p {
     margin: ($padding / 2) 0;
     @include font-size(14px);
@@ -30,7 +34,6 @@
   // Sizing note
   .field-name-ring-sizing {
     @extend %ring-block-field;
-    margin-top: $padding;
   }
 
   // Gemstones (changing to other stones)
