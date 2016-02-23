@@ -14,6 +14,7 @@
   @include font-size(24px);
   line-height: 1.5;
   font-weight: $thin;
+  border-bottom: 1px $black solid;
 }
 
 %otherrings__items {
@@ -72,7 +73,6 @@
   }
 }
 
-
 .block-similar-rings-sr-elements,
 .field-name-field-related-rings,
 .block-similar-rings-sr-collections,
@@ -80,6 +80,7 @@
   @extend %otherrings;
 }
 
+.field-name-ring-similar-rings-header .block-title,
 .block-similar-rings-sr-elements .block-title,
 .field-name-field-related-rings__label,
 .block-similar-rings-sr-collections .block-title,
@@ -100,10 +101,6 @@
 // Combining similar (automatically chosen, based on elements) and related
 // (manually chosen, with entityreference) into one block.
 
-.field-name-field-related-rings__label {
-  @extend %visuallyhidden;
-}
-
 .block-similar-rings-sr-elements,
 .block-similar-rings-sr-elements .block-inner,
 .block-similar-rings-sr-elements .content,
@@ -113,7 +110,4 @@
 .field-name-field-related-rings__items {
   display: inline-block;
   @include no-block-padding;
-}
-
-.field-name-field-related-rings__item {
 }
