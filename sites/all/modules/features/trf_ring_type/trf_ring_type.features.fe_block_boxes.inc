@@ -43,6 +43,14 @@ function trf_ring_type_default_fe_block_boxes() {
   $export['ring_gemstones_other'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Ring pages: Similar rings header';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'ring_similar_header';
+  $fe_block_boxes->body = '<h2 class="block-title">Other titanium rings you may like</h2>';
+
+  $export['ring_similar_header'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Ring pages: Sizing';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'ring_sizing';

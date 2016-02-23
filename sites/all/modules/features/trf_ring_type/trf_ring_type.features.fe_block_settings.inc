@@ -140,6 +140,38 @@ function trf_ring_type_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-ring_similar_header'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'ring_similar_header',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf',
+        'weight' => 0,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['block-ring_sizing'] = array(
     'cache' => -1,
     'custom' => 0,
