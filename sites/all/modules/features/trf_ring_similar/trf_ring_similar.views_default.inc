@@ -110,6 +110,7 @@ function trf_ring_similar_views_default_views() {
 
   /* Display: Block: Elements */
   $handler = $view->new_display('block', 'Block: Elements', 'sr_elements');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'sr sr--elements';
   $handler->display->display_options['display_description'] = 'Related rings by elements (keywords).';
@@ -121,7 +122,6 @@ function trf_ring_similar_views_default_views() {
   $handler->display->display_options['arguments']['field_ring_elements_primary_tid']['field'] = 'field_ring_elements_primary_tid';
   $handler->display->display_options['arguments']['field_ring_elements_primary_tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_ring_elements_primary_tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['field_ring_elements_primary_tid']['title'] = 'Other titanium rings you may like';
   $handler->display->display_options['arguments']['field_ring_elements_primary_tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['field_ring_elements_primary_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_ring_elements_primary_tid']['default_argument_options']['anyall'] = '+';
