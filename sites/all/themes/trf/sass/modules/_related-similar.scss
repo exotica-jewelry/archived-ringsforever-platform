@@ -42,6 +42,7 @@
   .container-24.prefix-1 {
     width: $imagestyle-product_thumbnail;
     padding-left: 0;
+    text-align: center;
 
     .commerce-product-field-field-images {
       padding-right: 0;
@@ -55,7 +56,6 @@
 
     .field-name-field-ring-name {
       margin-top: ($padding / 4);
-      text-align: center;
 
       a {
         @include font-size(14px);
@@ -68,7 +68,6 @@
       margin-top: ($padding / 4);
       @include font-size(16px);
       font-weight: $bold;
-      text-align: center;
     }
   }
 }
