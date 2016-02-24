@@ -18,7 +18,7 @@
   }
 
   // Checkbox-link facets
-  ul li a {
+  .facetapi-checkbox {
     font-family: $fontDefault;
     font-weight: $normal;
     color: $black;
@@ -61,12 +61,12 @@
       margin-top: 0;
 
       label,
-      input {
+      .form-text {
         display: inline-block;
         vertical-align: bottom;
       }
 
-      input {
+      .form-text {
         width: auto;
       }
     }
@@ -92,15 +92,25 @@
   &.field_product_field_color {
     margin-bottom: 1.5rem;
 
-    ul.facetapi-commerce-search-api-fancy li {
-      border: none;
+    ul.facetapi-commerce-search-api-fancy {
+      margin-bottom: 0;
 
-      .commerce-search-api-fancy-attributes-color {
-        border: 3px solid #fff;
-        transition: all 0.3s;
+      .leaf {
+        border: none;
+        line-height: 0;
 
-        @include is-on {
-          border-color: $blue_dark;
+        // link element
+        .facetapi-inactive {
+        }
+
+        // span element (colored box)
+        .commerce-search-api-fancy-attributes-color {
+          border: 3px solid #fff;
+          transition: all 0.3s;
+
+          @include is-on {
+            border-color: $blue_dark;
+          }
         }
       }
     }
