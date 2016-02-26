@@ -33,6 +33,18 @@ function trf_ring_type_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_file_default_displays_alter().
+ */
+function trf_ring_type_file_default_displays_alter(&$data) {
+  if (isset($data['image__default__file_field_file_default'])) {
+    $data['image__default__file_field_file_default']->weight = -42; /* WAS: 50 */
+  }
+  if (isset($data['image__default__file_field_image'])) {
+    $data['image__default__file_field_image']->weight = -44; /* WAS: 48 */
+  }
+}
+
+/**
  * Implements hook_node_info().
  */
 function trf_ring_type_node_info() {

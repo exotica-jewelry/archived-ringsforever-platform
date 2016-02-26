@@ -321,7 +321,7 @@ function trf_ring_type_field_default_field_instances() {
   $field_instances['node-rings-field_images'] = array(
     'bundle' => 'rings',
     'deleted' => 0,
-    'description' => 'Upload one or more images that should be displayed when this width is selected.',
+    'description' => 'Upload one or more images that should be displayed when this width is selected. Images must be at least <strong>500 pixels wide</strong>, and at least <strong>800 pixels wide</strong> is recommended.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -360,6 +360,7 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'fences_wrapper' => 'figcaption',
     'field_name' => 'field_images',
@@ -375,6 +376,7 @@ function trf_ring_type_field_default_field_instances() {
         'file_name' => array(
           'options' => array(
             'pathauto' => 1,
+            'slashes' => 0,
             'transliterate' => 1,
           ),
           'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
@@ -382,16 +384,18 @@ function trf_ring_type_field_default_field_instances() {
         'file_path' => array(
           'options' => array(
             'pathauto' => 1,
+            'slashes' => 0,
             'transliterate' => 1,
           ),
           'value' => 'rings',
         ),
+        'redirect' => 0,
         'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '500x100',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -407,6 +411,7 @@ function trf_ring_type_field_default_field_instances() {
           'filefield_sources' => array(
             'attach' => 0,
             'clipboard' => 0,
+            'imce' => 0,
             'reference' => 0,
             'remote' => 'remote',
             'upload' => 'upload',
@@ -421,9 +426,10 @@ function trf_ring_type_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => 'product_thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
@@ -1117,7 +1123,7 @@ function trf_ring_type_field_default_field_instances() {
   t('Product variations');
   t('Ring name');
   t('Title');
-  t('Upload one or more images that should be displayed when this width is selected.');
+  t('Upload one or more images that should be displayed when this width is selected. Images must be at least <strong>500 pixels wide</strong>, and at least <strong>800 pixels wide</strong> is recommended.');
   t('﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.');
 
   return $field_instances;
