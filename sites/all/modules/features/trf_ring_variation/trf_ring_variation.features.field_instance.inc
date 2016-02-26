@@ -29,6 +29,7 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(
           'alternative_text_for_zero_price' => '',
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'raw' => FALSE,
@@ -42,6 +43,7 @@ function trf_ring_variation_field_default_field_instances() {
         'module' => 'commerce_price',
         'settings' => array(
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -54,6 +56,7 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(
           'alternative_text_for_zero_price' => '',
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'raw' => FALSE,
@@ -67,6 +70,7 @@ function trf_ring_variation_field_default_field_instances() {
         'module' => 'commerce_price',
         'settings' => array(
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -79,6 +83,7 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(
           'alternative_text_for_zero_price' => '',
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'raw' => FALSE,
@@ -99,6 +104,7 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(
           'alternative_text_for_zero_price' => '',
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'raw' => FALSE,
@@ -113,6 +119,7 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(
           'alternative_text_for_zero_price' => '',
           'calculation' => TRUE,
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'raw' => 0,
@@ -127,6 +134,7 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(
           'alternative_text_for_zero_price' => '',
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'raw' => FALSE,
@@ -140,6 +148,7 @@ function trf_ring_variation_field_default_field_instances() {
         'module' => 'commerce_price',
         'settings' => array(
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -152,6 +161,7 @@ function trf_ring_variation_field_default_field_instances() {
         'settings' => array(
           'alternative_text_for_zero_price' => '',
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'raw' => FALSE,
@@ -165,6 +175,7 @@ function trf_ring_variation_field_default_field_instances() {
         'module' => 'commerce_price',
         'settings' => array(
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -182,6 +193,7 @@ function trf_ring_variation_field_default_field_instances() {
         'module' => 'commerce_price',
         'settings' => array(
           'calculation' => 'calculated_sell_price',
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -236,6 +248,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -321,6 +334,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
@@ -333,10 +347,11 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'field_multiple_limit' => -1,
+          'conditions' => array(),
+          'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'product_thumbnail',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -345,10 +360,11 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'product_medium',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -357,10 +373,11 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'field_multiple_limit' => -1,
+          'conditions' => array(),
+          'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'product_thumbnail',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -375,6 +392,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
@@ -387,6 +405,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'cloud_zoom',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'gallery_filedset' => array(
@@ -419,6 +438,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'image_link' => 'content',
@@ -431,6 +451,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'image_link' => 'content',
@@ -449,6 +470,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
@@ -549,6 +571,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -559,6 +582,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -569,6 +593,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -597,6 +622,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -607,6 +633,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -751,6 +778,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'title_class' => '',
@@ -764,6 +792,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -774,6 +803,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -784,6 +814,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -812,6 +843,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -822,6 +854,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
@@ -838,6 +871,7 @@ function trf_ring_variation_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'title_class' => '',
