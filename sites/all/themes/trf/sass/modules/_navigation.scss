@@ -48,7 +48,7 @@
           left: 0;
           height: 1px;
           background-color: $white;
-          transition: width 0.4s;
+          transition: $transition_short;
         }
 
         @include is-on {
@@ -148,7 +148,7 @@
           height: 3px;
           background-color: $blue;
           border-radius: $border-radius;
-          transition: width 0.4s, left 0.4s;
+          transition: $transition_short;
         }
 
         @include is-on {

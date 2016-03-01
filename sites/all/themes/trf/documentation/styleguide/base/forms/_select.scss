@@ -16,7 +16,7 @@ select {
   @include font-size(16px);
   box-shadow: none;
   border-radius: none;
-  transition: border 0.3s;
+  transition: $transition_short;
   appearance: none;
   -webkit-appearance: none;
 

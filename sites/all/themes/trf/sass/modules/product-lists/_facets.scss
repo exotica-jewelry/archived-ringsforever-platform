@@ -106,7 +106,7 @@
         // span element (colored box)
         .commerce-search-api-fancy-attributes-color {
           border: 3px solid #fff;
-          transition: all 0.3s;
+          transition: $transition_short;
 
           @include is-on {
             border-color: $blue_dark;

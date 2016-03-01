@@ -186,7 +186,7 @@
 ///
 ///   .item:hover {
 ///     transform: scale(0.75);
-///     transition: all 0.3s easeIn;
+///     transition: all 0.3s ease;
 ///   }
 ///
 ///   .is-scrolled .item {
@@ -203,7 +203,7 @@
 ///
 ///   .item:hover {
 ///     height: 75px;
-///     transition: all 0.3s easeIn;
+///     transition: all 0.3s ease;
 ///   }
 ///
 ///   .is-scrolled .item {

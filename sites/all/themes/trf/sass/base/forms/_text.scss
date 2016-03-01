@@ -20,7 +20,7 @@ textarea {
   appearance: none;
   box-shadow: none;
   border-radius: none;
-  transition: border 0.3s;
+  transition: $transition_short;
   @include font-size(18px);
   color: $blue;
   font-family: $fontDefault;

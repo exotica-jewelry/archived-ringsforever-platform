@@ -21,7 +21,7 @@
   @include font-size(18px);
   font-weight: $thin;
   letter-spacing: 1px;
-  transition: all 0.3s;
+  transition: $transition_short;
   user-select: none;
   @include card(1);
 
