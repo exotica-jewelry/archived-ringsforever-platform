@@ -27,6 +27,7 @@ function trf_ring_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'link' => FALSE,
@@ -38,6 +39,7 @@ function trf_ring_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'links' => 0,
@@ -50,6 +52,7 @@ function trf_ring_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'links' => 0,
@@ -120,6 +123,7 @@ function trf_ring_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
+          'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'title_class' => 'page-title',

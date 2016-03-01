@@ -21,6 +21,13 @@ function trf_ring_taxonomies_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => 'featured-categories__title',
+        'ft' => array(),
+        'conditions' => array(),
+      ),
     ),
   );
   $export['taxonomy_term|collection|featured'] = $ds_fieldsetting;
