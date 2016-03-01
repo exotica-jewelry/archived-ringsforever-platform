@@ -279,7 +279,7 @@ function trf_site_images_image_default_styles() {
   $styles['product_zoom'] = array(
     'label' => 'product_zoom',
     'effects' => array(
-      7 => array(
+      17 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 800,
