@@ -2,61 +2,60 @@
 // Ring categories featured on the home page
 //
 
-.view-home-featured-categories {
-  background-color: rgba(255,255,255,0.25);
+.featured-categories {
   padding-top: 2em;
   text-align: center;
-  border-radius: 8px;
+
+  .taxonomy-term {
+    padding: $padding;
+    cursor: pointer;
+    border: 1px rgba(255,255,255,0.5) solid;
+    border-radius: $border-radius;
+
+    @include is-on {
+      background-color: rgba(255,255,255,0.5);
+    }
+  }
 }
 
-.view-home-featured-categories .views-row {
-  width: 250px;
+.featured-categories__title {
+  margin-bottom: $padding;
+  @include font-size(24px);
+  font-weight: $thin;
+}
+
+.featured-categories__item {
+  margin: 0 $padding $padding $padding;
+  width: ($imagestyle-product_medium + (2 * $padding-px) + (2px));
   display: inline-block;
-  padding: 1em;
   text-align: center;
   vertical-align: top;
-}
 
-.view-home-featured-categories .taxonomy-term {
-  cursor: pointer;
-  padding: 7px;
-}
+  .field-name-field-cat-featured-rings {
 
-.view-home-featured-categories .taxonomy-term:hover,
-.view-home-featured-categories .taxonomy-term:active,
-.view-home-featured-categories .taxonomy-term:focus {
-  background-color: rgba(255,255,255,0.5);
-}
+    .node {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
 
-.view-home-featured-categories h2 {
-  margin-bottom: 0;
-  font-size: 1.5em;
-}
+    .container-24 {
+      padding-left: 0 !important;
+      width: auto !important;
+    }
+  }
 
-.view-home-featured-categories a:link,
-.view-home-featured-categories a:visited {
-  color: #000;
-}
+  .taxonomy-term-description {
+    margin: 0;
+    text-align: left;
 
-.view-home-featured-categories .node {
-  margin-top: 0;
-  padding: 0;
-}
+    p {
+      margin-bottom: $padding;
+      @include font-size(18px);
 
-.view-home-featured-categories .container-24 {
-  padding-left: 0 !important;
-  width: auto !important;
-}
-
-.view-home-featured-categories .node {
-  margin-bottom: 0;
-}
-
-.view-home-featured-categories .node img {
-  border: 3px rgba(255,255,255,0.5) solid;
-}
-
-.view-home-featured-categories .taxonomy-term-description {
-  margin: 0;
-  text-align: left;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

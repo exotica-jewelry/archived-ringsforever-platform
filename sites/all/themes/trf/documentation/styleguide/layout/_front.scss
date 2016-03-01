@@ -2,13 +2,20 @@
 // Front page layout
 //
 
-// Nodes
+.front {
 
-.front .grid-24 {
-  margin: 0;
-  width: 960px !important;
-}
+  // Layout
+  .zone-content {
+    margin-bottom: (2 * $padding);
+  }
 
-.front .node {
-  border: none;
+  // Nodes
+  .grid-24 {
+    margin: 0;
+    width: 960px !important;
+  }
+
+  .node {
+    border: none;
+  }
 }
