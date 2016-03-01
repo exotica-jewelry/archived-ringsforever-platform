@@ -6,6 +6,7 @@ version = 7.x-0.11
 project = trf_site_images
 dependencies[] = breakpoints
 dependencies[] = commerce_kickstart_product
+dependencies[] = ctools
 dependencies[] = features_override
 dependencies[] = file_entity
 dependencies[] = image_styles_admin
