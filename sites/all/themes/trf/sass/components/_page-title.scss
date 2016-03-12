@@ -1,0 +1,12 @@
+//
+// Page title <h1>
+//
+
+h1#page-title {
+  @extend %h1;
+  font-weight: $normal;
+
+  // unset Omega styles
+  margin: (2 * $padding) 10px $padding;
+  text-transform: none;
+}
