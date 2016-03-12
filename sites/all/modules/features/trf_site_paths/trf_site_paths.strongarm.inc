@@ -81,7 +81,7 @@ function trf_site_paths_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_ignore_words';
-  $strongarm->value = 'a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with';
+  $strongarm->value = 'a, an, and, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with';
   $export['pathauto_ignore_words'] = $strongarm;
 
   $strongarm = new stdClass();
