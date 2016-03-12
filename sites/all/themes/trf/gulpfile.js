@@ -60,7 +60,7 @@ gulp.task('sass', function () {
 
   // Autoprefix properties
   .pipe(autoprefixer({
-    browsers: ['last 2 versions']
+    browsers: ['last 2 versions', '> 5%']
   }))
 
   // Write final .map file
