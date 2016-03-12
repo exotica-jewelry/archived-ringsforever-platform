@@ -25,6 +25,12 @@
   background-color: $blue_verylight;
   border-radius: $border-radius;
   @include card(1);
+  background-image:
+    radial-gradient(
+      at top left,
+      rgba($white_off, 0.4),
+      transparent
+    );
 }
 
 .region-content {
