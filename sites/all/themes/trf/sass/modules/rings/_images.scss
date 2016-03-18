@@ -1,20 +1,35 @@
 //
-// Images and Cloud Zoom
+// Images and Image Zoom
 //
 
 .page-node.node-type-rings {
 
   // Wrapper around image zoom and thumbnails
   .commerce-product-field-field-images {
-    @include clearfix;
+    position: relative;
     padding-right: ($padding * 4);
     padding-bottom: ($padding * 2);
+    min-height: $imagestyle-product_full;
+    @include clearfix;
+  }
+
+  .imagezoom-image {
+    position: absolute;
+    top: 0;
+    right: ($padding * 4);
+  }
+
+  // Thumbnail wrapper
+  .imagezoom-thumbs {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 
   // Thumbnails
-  .cloud-zoom-container .cloud-zoom-gallery-thumbs .cloud-zoom-gallery {
-    margin-top: ($padding / 2);
-    border: 0;
+  .imagezoom-thumb {
+    margin-top: $padding;
+    margin-left: 0;
 
     &:first-of-type {
       margin-top: 0;
