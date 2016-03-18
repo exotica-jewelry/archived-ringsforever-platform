@@ -12,37 +12,6 @@ function trf_site_images_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
-  $file_display->name = 'image__default__file_field_cloud_zoom';
-  $file_display->weight = -43;
-  $file_display->status = FALSE;
-  $file_display->settings = array(
-    'slide_style' => 'product_full',
-    'zoom_style' => '0',
-    'gallery_filedset' => array(
-      'gallery_mode' => 0,
-      'thumb_style' => '0',
-    ),
-    'zoom_position_fieldset' => array(
-      'zoom_width' => 'auto',
-      'zoom_height' => 'auto',
-      'position' => 'right',
-      'adjust_x' => '0',
-      'adjust_y' => '0',
-    ),
-    'zoom_style_fieldset' => array(
-      'tint' => 'false',
-      'tint_opacity' => '0.5',
-      'lens_opacity' => '0.5',
-      'soft_focus' => 0,
-      'smooth_move' => '3',
-      'Show title' => 1,
-      'title_opacity' => '0.5',
-    ),
-  );
-  $export['image__default__file_field_cloud_zoom'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
   $file_display->name = 'image__default__file_field_editable';
   $file_display->weight = -46;
   $file_display->status = FALSE;

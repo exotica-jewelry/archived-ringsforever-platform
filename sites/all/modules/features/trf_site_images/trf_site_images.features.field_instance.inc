@@ -21,6 +21,12 @@ function trf_site_images_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.',
     'display' => array(
+      'caption_only' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -79,6 +85,12 @@ function trf_site_images_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'For ring images, select the width shown in the image being displayed.',
     'display' => array(
+      'caption_only' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
@@ -160,6 +172,12 @@ function trf_site_images_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.',
     'display' => array(
+      'caption_only' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
