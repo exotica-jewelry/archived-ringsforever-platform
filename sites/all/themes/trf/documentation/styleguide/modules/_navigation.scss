@@ -248,13 +248,50 @@
 // FOOTER NAVIGATION
 //
 
-.section-footer ul.menu li.expanded {
+.section-footer .region-footer-first {
+  margin-left: 0;
 
-  @include mq(mediumish) {
-    max-width: 175px;
+  ul.menu li,
+  .section-footer .region-footer-first ul.menu li.expanded {
+    @include font-size(14px);
+    margin-bottom: ($padding / 4);
+
+    @include mq(mediumish) {
+      max-width: 175px;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+    .nolink {
+      display: block;
+      width: 100%;
+      padding: ($padding / 4) ($padding / 2);
+      color: $white;
+      background-color: $blue_verydark;
+      border-radius: $border-radius;
+      @include card(1);
+    }
+
+    a {
+      padding: ($padding / 4) ($padding / 2);
+      border-radius: $border-radius;
+
+      @include is-on {
+        color: $black !important;
+        background-color: $blue_verylight;
+        text-decoration: none !important;
+      }
+    }
   }
+}
 
-  &:last-of-type {
-    padding-right: 0;
+#block-menu-menu-social-connection .content ul.menu li {
+
+  @include is-on {
+    color: $black;
+    background-color: $blue_verylight;
+    border-radius: $border-radius;
   }
 }
