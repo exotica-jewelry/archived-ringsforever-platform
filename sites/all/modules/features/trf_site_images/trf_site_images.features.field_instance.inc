@@ -25,19 +25,19 @@ function trf_site_images_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'preview' => array(
         'label' => 'above',
@@ -50,12 +50,6 @@ function trf_site_images_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
-      ),
-      'width_only' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
       ),
     ),
     'entity_type' => 'file',
@@ -78,89 +72,6 @@ function trf_site_images_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'file-image-field_file_image_ring_width'.
-  $field_instances['file-image-field_file_image_ring_width'] = array(
-    'bundle' => 'image',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'For ring images, select the width shown in the image being displayed.',
-    'display' => array(
-      'caption_only' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 2,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 2,
-      ),
-      'preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 1,
-      ),
-      'width_only' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'file',
-    'fences_wrapper' => '',
-    'field_name' => 'field_file_image_ring_width',
-    'label' => 'Width of ring in image',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
-      'type' => 'options_select',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'file-image-field_file_image_title_text'.
   $field_instances['file-image-field_file_image_title_text'] = array(
     'bundle' => 'image',
@@ -174,21 +85,37 @@ function trf_site_images_field_default_field_instances() {
     'display' => array(
       'caption_only' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'conditions' => array(),
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'title_class' => 'image__caption',
+          'title_link' => '',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 1,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'conditions' => array(),
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'title_class' => 'image__caption',
+          'title_link' => '',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'preview' => array(
         'label' => 'above',
@@ -201,12 +128,6 @@ function trf_site_images_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 2,
-      ),
-      'width_only' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
       ),
     ),
     'entity_type' => 'file',
@@ -233,10 +154,8 @@ function trf_site_images_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Alt text');
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
-  t('For ring images, select the width shown in the image being displayed.');
   t('Title text');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
-  t('Width of ring in image');
 
   return $field_instances;
 }

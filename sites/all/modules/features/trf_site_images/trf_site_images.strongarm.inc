@@ -31,9 +31,6 @@ function trf_site_images_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
-      'width_only' => array(
-        'custom_settings' => FALSE,
-      ),
       'caption_only' => array(
         'custom_settings' => TRUE,
       ),
@@ -64,12 +61,8 @@ function trf_site_images_strongarm() {
             'weight' => '0',
             'visible' => TRUE,
           ),
-          'width_only' => array(
-            'weight' => '1',
-            'visible' => FALSE,
-          ),
           'caption_only' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),

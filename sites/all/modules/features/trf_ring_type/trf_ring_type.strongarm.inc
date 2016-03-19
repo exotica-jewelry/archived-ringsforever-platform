@@ -93,7 +93,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '29',
+            'weight' => '30',
             'visible' => FALSE,
           ),
           'featured' => array(
@@ -119,7 +119,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '31',
+            'weight' => '32',
             'visible' => FALSE,
           ),
           'featured' => array(
@@ -145,7 +145,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '32',
+            'weight' => '33',
             'visible' => FALSE,
           ),
           'featured' => array(
@@ -171,7 +171,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '33',
+            'weight' => '34',
             'visible' => FALSE,
           ),
           'featured' => array(
@@ -197,7 +197,7 @@ function trf_ring_type_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '7',
+            'weight' => '8',
             'visible' => TRUE,
           ),
           'featured' => array(
@@ -249,7 +249,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '15',
+            'weight' => '16',
             'visible' => TRUE,
           ),
           'featured' => array(
@@ -275,7 +275,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '14',
+            'weight' => '15',
             'visible' => TRUE,
           ),
           'featured' => array(
@@ -311,7 +311,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '34',
+            'weight' => '35',
             'visible' => FALSE,
           ),
           'teaser' => array(

@@ -17,19 +17,9 @@ function trf_ring_type_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'rings';
   $ds_fieldsetting->view_mode = 'node_full';
   $ds_fieldsetting->settings = array(
-    'width_displayed' => array(
-      'weight' => '2',
-      'label' => 'inline',
-      'format' => 'default',
+    'field_images' => array(
       'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:10:{s:5:"label";s:5:"title";s:9:"formatter";s:5:"image";s:11:"delta_limit";s:1:"0";s:12:"delta_offset";s:1:"0";s:14:"delta_reversed";i:0;s:18:"formatter_settings";a:4:{s:20:"field_multiple_limit";s:2:"-1";s:27:"field_multiple_limit_offset";s:1:"0";s:11:"image_style";s:17:"product_thumbnail";s:10:"image_link";s:0:"";}s:7:"context";s:37:"argument_entity_id:commerce_product_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:12:"entity_field";s:7:"subtype";s:29:"commerce_product:field_images";}',
-        'load_terms' => 0,
-        'ft' => array(
-          'lb' => 'Width displayed',
-        ),
-        'conditions' => array(),
+        'ft' => array(),
       ),
     ),
   );
@@ -58,7 +48,7 @@ function trf_ring_type_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'ring_colors' => array(
-      'weight' => '10',
+      'weight' => '11',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -75,7 +65,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'ring_gemstones_add' => array(
-      'weight' => '13',
+      'weight' => '14',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -99,7 +89,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'ring_gemstones_other' => array(
-      'weight' => '12',
+      'weight' => '13',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -116,7 +106,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'ring_similar_rings_header' => array(
-      'weight' => '16',
+      'weight' => '17',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -132,7 +122,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'similar_rings_colors' => array(
-      'weight' => '19',
+      'weight' => '20',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -143,7 +133,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'similar_rings_elements' => array(
-      'weight' => '17',
+      'weight' => '18',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -154,12 +144,12 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'ring_free' => array(
-      'weight' => '8',
+      'weight' => '9',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'ring_sizing' => array(
-      'weight' => '11',
+      'weight' => '12',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -304,32 +294,6 @@ function trf_ring_type_ds_custom_fields_info() {
   );
   $export['ring_sizing'] = $ds_field;
 
-  $ds_field = new stdClass();
-  $ds_field->api_version = 1;
-  $ds_field->field = 'width_displayed';
-  $ds_field->label = 'Width displayed';
-  $ds_field->field_type = 7;
-  $ds_field->entities = array(
-    'commerce_product' => 'commerce_product',
-  );
-  $ds_field->ui_limit = '';
-  $ds_field->properties = array(
-    'default' => array(),
-    'settings' => array(
-      'show_title' => array(
-        'type' => 'checkbox',
-      ),
-      'title_wrapper' => array(
-        'type' => 'textfield',
-        'description' => 'Eg: h1, h2, p',
-      ),
-      'ctools' => array(
-        'type' => 'ctools',
-      ),
-    ),
-  );
-  $export['width_displayed'] = $ds_field;
-
   return $export;
 }
 
@@ -399,13 +363,11 @@ function trf_ring_type_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'commerce_price',
         1 => 'field_images',
-        2 => 'width_displayed',
       ),
     ),
     'fields' => array(
       'commerce_price' => 'ds_content',
       'field_images' => 'ds_content',
-      'width_displayed' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -480,21 +442,21 @@ function trf_ring_type_ds_layout_settings_info() {
         6 => 'field_color',
       ),
       'right' => array(
-        7 => 'product:commerce_price',
-        8 => 'ring_free',
-        9 => 'field_product',
-        10 => 'ring_colors',
-        11 => 'ring_sizing',
-        12 => 'ring_gemstones_other',
-        13 => 'ring_gemstones_add',
-        14 => 'product:field_ring_width',
-        15 => 'product:field_color',
+        8 => 'product:commerce_price',
+        9 => 'ring_free',
+        10 => 'field_product',
+        11 => 'ring_colors',
+        12 => 'ring_sizing',
+        13 => 'ring_gemstones_other',
+        14 => 'ring_gemstones_add',
+        15 => 'product:field_ring_width',
+        16 => 'product:field_color',
       ),
       'footer' => array(
-        16 => 'ring_similar_rings_header',
-        17 => 'similar_rings_elements',
-        18 => 'field_related_rings',
-        19 => 'similar_rings_colors',
+        17 => 'ring_similar_rings_header',
+        18 => 'similar_rings_elements',
+        19 => 'field_related_rings',
+        20 => 'similar_rings_colors',
       ),
     ),
     'fields' => array(
@@ -562,15 +524,6 @@ function trf_ring_type_ds_view_modes_info() {
     'node' => 'node',
   );
   $export['reference_view'] = $ds_view_mode;
-
-  $ds_view_mode = new stdClass();
-  $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'width_only';
-  $ds_view_mode->label = 'Width only';
-  $ds_view_mode->entities = array(
-    'file' => 'file',
-  );
-  $export['width_only'] = $ds_view_mode;
 
   return $export;
 }
