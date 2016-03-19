@@ -1,0 +1,53 @@
+//
+// "Free" banner on the home page
+//
+
+.home-free {
+  width: 80%;
+  margin: $padding auto;
+  padding: $padding;
+  background-color: rgba($white, 0.5);
+  border-radius: $border-radius;
+}
+
+.home-free__intro {
+  font-weight: $bold;
+}
+
+.home-free__list {
+  margin: 0;
+}
+
+.home-free__item {
+  display: inline-block;
+  width: 33%;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+  font-weight: $bold;
+}
+
+.home-free__link {
+  display: block;
+  padding: 128px $padding $padding $padding;
+  @include font-size(20px);
+  border-radius: $border-radius;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @include is-on {
+    background-color: $white;
+  }
+}
+
+.home-free__link--shipping {
+  background-image: url('../images/min/ruler.svg');
+}
+
+.home-free__link--resizing {
+  background-image: url('../images/min/ruler.svg');
+}
+
+.home-free__link--engraving {
+  background-image: url('../images/min/ruler.svg');
+}
