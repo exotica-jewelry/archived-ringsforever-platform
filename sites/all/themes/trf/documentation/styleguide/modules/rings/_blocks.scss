@@ -13,6 +13,10 @@
 
     a {
       font-weight: $bold;
+
+      &:visited {
+        color: inherit;
+      }
     }
   }
 }
