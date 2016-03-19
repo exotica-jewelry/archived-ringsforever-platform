@@ -27,6 +27,10 @@ function trf_ring_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
