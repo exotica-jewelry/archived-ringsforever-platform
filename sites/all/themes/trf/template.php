@@ -11,10 +11,10 @@ function trf_preprocess_html(&$variables) {
     'weight' => '-1'
   ));
   // Adding theme scripts
-  // drupal_add_js(drupal_get_path('theme', 'trf') . '/scripts/webbykat.js', array(
-  //   'scope' => 'header',
-  //   'weight' => '15'
-  // ));
+  drupal_add_js(drupal_get_path('theme', 'trf') . '/js/trf.js', array(
+    'scope' => 'header',
+    'weight' => '15'
+  ));
 }
 
 /**
