@@ -19,7 +19,7 @@ function trf_site_images_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.',
+    'description' => 'Alternative text is used by screen readers, search engines, and when the image cannot be loaded. It improves accessibility and search engine optimization.',
     'display' => array(
       'caption_only' => array(
         'label' => 'above',
@@ -52,12 +52,18 @@ function trf_site_images_field_default_field_instances() {
         'weight' => 3,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'file',
-    'fences_wrapper' => '',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_file_image_alt_text',
     'label' => 'Alt text',
     'required' => 0,
     'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -75,13 +81,9 @@ function trf_site_images_field_default_field_instances() {
   // Exported field_instance: 'file-image-field_file_image_title_text'.
   $field_instances['file-image-field_file_image_title_text'] = array(
     'bundle' => 'image',
-    'default_value' => array(
-      0 => array(
-        'value' => 'Titanium Wedding Ring by Exotica Jewelry',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.',
+    'description' => 'Title text is used as an image caption on ring pages, as well as a tooltip when a visitor hovers their mouse over any image.',
     'display' => array(
       'caption_only' => array(
         'label' => 'above',
@@ -130,12 +132,18 @@ function trf_site_images_field_default_field_instances() {
         'weight' => 2,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'file',
-    'fences_wrapper' => '',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_file_image_title_text',
     'label' => 'Title text',
     'required' => 0,
     'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -153,9 +161,9 @@ function trf_site_images_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Alt text');
-  t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
+  t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. It improves accessibility and search engine optimization.');
   t('Title text');
-  t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
+  t('Title text is used as an image caption on ring pages, as well as a tooltip when a visitor hovers their mouse over any image.');
 
   return $field_instances;
 }
