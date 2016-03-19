@@ -243,3 +243,18 @@
     }
   }
 }
+
+//
+// FOOTER NAVIGATION
+//
+
+.section-footer ul.menu li.expanded {
+
+  @include mq(mediumish) {
+    max-width: 175px;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
