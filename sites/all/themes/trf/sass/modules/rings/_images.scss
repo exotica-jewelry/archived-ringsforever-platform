@@ -20,6 +20,9 @@
   }
 
   // Thumbnail wrapper
+  #imagezoom-thumb-wrapper {
+    width: $imagestyle-product_thumbnail;
+  }
   .imagezoom-thumbs {
     margin: 0;
     padding: 0;
