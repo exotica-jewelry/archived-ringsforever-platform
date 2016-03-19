@@ -14,12 +14,8 @@
 
     // Zoom image
     > figure {
-      position: absolute;
-      top: 0;
-      right: ($padding * 4);
-      display: block;
       width: $imagestyle-product_full;
-      height: $imagestyle-product_full;
+      float: right;
     }
 
     // Zoom image caption
