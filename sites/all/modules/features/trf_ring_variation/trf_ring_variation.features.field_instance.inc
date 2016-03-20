@@ -12,7 +12,7 @@ function trf_ring_variation_field_default_field_instances() {
 
   // Exported field_instance: 'commerce_product-rings-commerce_price'.
   $field_instances['commerce_product-rings-commerce_price'] = array(
-    'bundle' => 'rings',
+    'bundle' => 'ring',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.',
@@ -222,7 +222,7 @@ function trf_ring_variation_field_default_field_instances() {
 
   // Exported field_instance: 'commerce_product-rings-field_color'.
   $field_instances['commerce_product-rings-field_color'] = array(
-    'bundle' => 'rings',
+    'bundle' => 'ring',
     'commerce_cart_settings' => array(
       'attribute_field' => 0,
       'attribute_widget' => 'select',
@@ -326,7 +326,7 @@ function trf_ring_variation_field_default_field_instances() {
 
   // Exported field_instance: 'commerce_product-rings-field_images'.
   $field_instances['commerce_product-rings-field_images'] = array(
-    'bundle' => 'rings',
+    'bundle' => 'ring',
     'deleted' => 0,
     'description' => 'Upload one or more images that should be displayed when this width is selected.',
     'display' => array(
@@ -533,7 +533,7 @@ function trf_ring_variation_field_default_field_instances() {
 
   // Exported field_instance: 'commerce_product-rings-field_title_parent'.
   $field_instances['commerce_product-rings-field_title_parent'] = array(
-    'bundle' => 'rings',
+    'bundle' => 'ring',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Name of the parent product.',
@@ -627,7 +627,7 @@ function trf_ring_variation_field_default_field_instances() {
 
   // Exported field_instance: 'commerce_product-rings-title_field'.
   $field_instances['commerce_product-rings-title_field'] = array(
-    'bundle' => 'rings',
+    'bundle' => 'ring',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',

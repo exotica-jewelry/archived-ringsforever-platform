@@ -9,13 +9,13 @@
  */
 function trf_ring_type_default_cer() {
   $items = array();
-  $items['node:rings:field_related_rings*node:rings:field_related_rings'] = entity_import('cer', '{
-    "identifier" : "node:rings:field_related_rings*node:rings:field_related_rings",
+  $items['node:ring:field_related_rings*node:ring:field_related_rings'] = entity_import('cer', '{
+    "identifier" : "node:ring:field_related_rings*node:ring:field_related_rings",
     "cer_bidirectional" : { "und" : [ { "value" : "1" } ] },
     "cer_enabled" : { "und" : [ { "value" : "1" } ] },
     "cer_weight" : { "und" : [ { "value" : "0" } ] },
-    "cer_left" : { "und" : [ { "path" : "node:rings:field_related_rings" } ] },
-    "cer_right" : { "und" : [ { "path" : "node:rings:field_related_rings" } ] }
+    "cer_left" : { "und" : [ { "path" : "node:ring:field_related_rings" } ] },
+    "cer_right" : { "und" : [ { "path" : "node:ring:field_related_rings" } ] }
   }');
   return $items;
 }
@@ -49,7 +49,7 @@ function trf_ring_type_file_default_displays_alter(&$data) {
  */
 function trf_ring_type_node_info() {
   $items = array(
-    'rings' => array(
+    'ring' => array(
       'name' => t('Rings'),
       'base' => 'node_content',
       'description' => t('<em>Rings</em> are titanium wedding rings with particular elements and sizes.'),

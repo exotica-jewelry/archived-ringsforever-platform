@@ -12,9 +12,9 @@ function trf_ring_type_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'commerce_product|rings|node_full';
+  $ds_fieldsetting->id = 'commerce_product|ring|node_full';
   $ds_fieldsetting->entity_type = 'commerce_product';
-  $ds_fieldsetting->bundle = 'rings';
+  $ds_fieldsetting->bundle = 'ring';
   $ds_fieldsetting->view_mode = 'node_full';
   $ds_fieldsetting->settings = array(
     'field_images' => array(
@@ -23,13 +23,13 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
   );
-  $export['commerce_product|rings|node_full'] = $ds_fieldsetting;
+  $export['commerce_product|ring|node_full'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'commerce_product|rings|node_reference_view';
+  $ds_fieldsetting->id = 'commerce_product|ring|node_reference_view';
   $ds_fieldsetting->entity_type = 'commerce_product';
-  $ds_fieldsetting->bundle = 'rings';
+  $ds_fieldsetting->bundle = 'ring';
   $ds_fieldsetting->view_mode = 'node_reference_view';
   $ds_fieldsetting->settings = array(
     'field_images' => array(
@@ -38,13 +38,13 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
   );
-  $export['commerce_product|rings|node_reference_view'] = $ds_fieldsetting;
+  $export['commerce_product|ring|node_reference_view'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'node|rings|full';
+  $ds_fieldsetting->id = 'node|ring|full';
   $ds_fieldsetting->entity_type = 'node';
-  $ds_fieldsetting->bundle = 'rings';
+  $ds_fieldsetting->bundle = 'ring';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'ring_colors' => array(
@@ -187,7 +187,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
   );
-  $export['node|rings|full'] = $ds_fieldsetting;
+  $export['node|ring|full'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -305,9 +305,9 @@ function trf_ring_type_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'commerce_product|rings|form';
+  $ds_layout->id = 'commerce_product|ring|form';
   $ds_layout->entity_type = 'commerce_product';
-  $ds_layout->bundle = 'rings';
+  $ds_layout->bundle = 'ring';
   $ds_layout->view_mode = 'form';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
@@ -349,13 +349,13 @@ function trf_ring_type_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
-  $export['commerce_product|rings|form'] = $ds_layout;
+  $export['commerce_product|ring|form'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'commerce_product|rings|node_full';
+  $ds_layout->id = 'commerce_product|ring|node_full';
   $ds_layout->entity_type = 'commerce_product';
-  $ds_layout->bundle = 'rings';
+  $ds_layout->bundle = 'ring';
   $ds_layout->view_mode = 'node_full';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
@@ -380,13 +380,13 @@ function trf_ring_type_ds_layout_settings_info() {
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
   );
-  $export['commerce_product|rings|node_full'] = $ds_layout;
+  $export['commerce_product|ring|node_full'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'commerce_product|rings|node_reference_view';
+  $ds_layout->id = 'commerce_product|ring|node_reference_view';
   $ds_layout->entity_type = 'commerce_product';
-  $ds_layout->bundle = 'rings';
+  $ds_layout->bundle = 'ring';
   $ds_layout->view_mode = 'node_reference_view';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
@@ -419,13 +419,13 @@ function trf_ring_type_ds_layout_settings_info() {
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
   );
-  $export['commerce_product|rings|node_reference_view'] = $ds_layout;
+  $export['commerce_product|ring|node_reference_view'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|rings|full';
+  $ds_layout->id = 'node|ring|full';
   $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'rings';
+  $ds_layout->bundle = 'ring';
   $ds_layout->view_mode = 'full';
   $ds_layout->layout = 'two_column_stacked_66_33';
   $ds_layout->settings = array(
@@ -495,7 +495,7 @@ function trf_ring_type_ds_layout_settings_info() {
     'layout_link_custom' => '',
     'layout_disable_css' => 0,
   );
-  $export['node|rings|full'] = $ds_layout;
+  $export['node|ring|full'] = $ds_layout;
 
   return $export;
 }
