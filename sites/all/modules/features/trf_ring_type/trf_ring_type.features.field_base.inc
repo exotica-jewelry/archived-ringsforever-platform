@@ -126,7 +126,7 @@ function trf_ring_type_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'ring' => 'ring',
+          'rings' => 'rings',
         ),
       ),
       'target_type' => 'node',

@@ -9,8 +9,8 @@
  */
 function trf_ring_variation_commerce_product_default_types() {
   $items = array(
-    'ring' => array(
-      'type' => 'ring',
+    'rings' => array(
+      'type' => 'rings',
       'name' => 'Rings',
       'description' => '',
       'help' => '',

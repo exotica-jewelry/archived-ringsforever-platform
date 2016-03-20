@@ -13,28 +13,28 @@ function trf_ring_type_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'auto_entitylabel_node_ring';
+  $strongarm->name = 'auto_entitylabel_node_rings';
   $strongarm->value = '1';
-  $export['auto_entitylabel_node_ring'] = $strongarm;
+  $export['auto_entitylabel_node_rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'auto_entitylabel_pattern_node_ring';
+  $strongarm->name = 'auto_entitylabel_pattern_node_rings';
   $strongarm->value = '[node:field-ring-name] titanium ring with [node:field-ring-elements-primary]';
-  $export['auto_entitylabel_pattern_node_ring'] = $strongarm;
+  $export['auto_entitylabel_pattern_node_rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'auto_entitylabel_php_node_ring';
+  $strongarm->name = 'auto_entitylabel_php_node_rings';
   $strongarm->value = 0;
-  $export['auto_entitylabel_php_node_ring'] = $strongarm;
+  $export['auto_entitylabel_php_node_rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__ring';
+  $strongarm->name = 'field_bundle_settings_node__rings';
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
@@ -334,51 +334,51 @@ function trf_ring_type_strongarm() {
       ),
     ),
   );
-  $export['field_bundle_settings_node__ring'] = $strongarm;
+  $export['field_bundle_settings_node__rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_ring';
+  $strongarm->name = 'menu_options_rings';
   $strongarm->value = array();
-  $export['menu_options_ring'] = $strongarm;
+  $export['menu_options_rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_ring';
+  $strongarm->name = 'menu_parent_rings';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_ring'] = $strongarm;
+  $export['menu_parent_rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_ring';
+  $strongarm->name = 'node_options_rings';
   $strongarm->value = array(
     0 => 'status',
   );
-  $export['node_options_ring'] = $strongarm;
+  $export['node_options_rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_ring';
+  $strongarm->name = 'node_preview_rings';
   $strongarm->value = '1';
-  $export['node_preview_ring'] = $strongarm;
+  $export['node_preview_rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_ring';
+  $strongarm->name = 'node_submitted_rings';
   $strongarm->value = 0;
-  $export['node_submitted_ring'] = $strongarm;
+  $export['node_submitted_rings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_ring_pattern';
+  $strongarm->name = 'pathauto_node_rings_pattern';
   $strongarm->value = '[node:field-product-type]/[node:field-ring-elements-primary:name]/[node:field-ring-name]';
-  $export['pathauto_node_ring_pattern'] = $strongarm;
+  $export['pathauto_node_rings_pattern'] = $strongarm;
 
   return $export;
 }

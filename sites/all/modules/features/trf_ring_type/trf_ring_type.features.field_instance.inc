@@ -12,7 +12,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_collection'.
   $field_instances['node-rings-field_collection'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.',
@@ -89,7 +89,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_color'.
   $field_instances['node-rings-field_color'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '<p>Select the primary colors in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal. Rings that <em>can</em> have color but are not anodized should be tagged with <em>uncolored</em>.</p>',
@@ -165,7 +165,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_description'.
   $field_instances['node-rings-field_description'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -251,7 +251,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_gemstones_bool'.
   $field_instances['node-rings-field_gemstones_bool'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => array(
       0 => array(
         'value' => 0,
@@ -319,7 +319,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_images'.
   $field_instances['node-rings-field_images'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'deleted' => 0,
     'description' => 'Upload one or more images that should be displayed when this width is selected. Images must be at least <strong>500 pixels wide</strong>, and at least <strong>800 pixels wide</strong> is recommended.',
     'display' => array(
@@ -437,7 +437,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_price_base'.
   $field_instances['node-rings-field_price_base'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.',
@@ -500,7 +500,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_product'.
   $field_instances['node-rings-field_product'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -576,7 +576,7 @@ function trf_ring_type_field_default_field_instances() {
     'settings' => array(
       'field_injection' => 1,
       'referenceable_types' => array(
-        'ring' => 'ring',
+        'rings' => 'rings',
       ),
       'user_register_form' => FALSE,
     ),
@@ -600,7 +600,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_product_type'.
   $field_instances['node-rings-field_product_type'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => array(
       0 => array(
         'tid' => 234,
@@ -668,7 +668,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_related_rings'.
   $field_instances['node-rings-field_related_rings'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'deleted' => 0,
     'description' => '<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.).</p><p>Selecting <em>Remove</em> from an existing ring will only remove it as a related ring, it will not delete the ring itself unless you choose to do so.</p>',
     'display' => array(
@@ -756,7 +756,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_ring_elements'.
   $field_instances['node-rings-field_ring_elements'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Enter other secondary elements of this ring, one at a time.',
@@ -839,7 +839,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_ring_elements_primary'.
   $field_instances['node-rings-field_ring_elements_primary'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Enter <em>one</em> primary element by which to categorize this ring (in particular, in its URL). It should be the single most important element about this ring, such as mountains, leaves, gold, diamonds, blue diamonds, etc. (Elements are always in plural form for categorization purposes.)',
@@ -920,7 +920,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-field_ring_name'.
   $field_instances['node-rings-field_ring_name'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.',
@@ -998,7 +998,7 @@ function trf_ring_type_field_default_field_instances() {
 
   // Exported field_instance: 'node-rings-title_field'.
   $field_instances['node-rings-title_field'] = array(
-    'bundle' => 'ring',
+    'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
