@@ -9,12 +9,13 @@
   .taxonomy-term {
     padding: $padding;
     cursor: pointer;
-    border: 1px rgba(255,255,255,0.5) solid;
+    border: 1px $white-off solid;
     border-radius: $border-radius;
     transition: $transition;
 
     @include is-on {
-      background-color: rgba(255,255,255,0.5);
+      background-color: $white-off;
+      border-color: transparent;
     }
   }
 }
