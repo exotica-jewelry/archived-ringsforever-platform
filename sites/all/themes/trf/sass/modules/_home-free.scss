@@ -3,37 +3,41 @@
 //
 
 .home-free {
-  width: 80%;
-  margin: $padding auto;
+  margin: 0 auto;
   padding: $padding;
   background-color: rgba($white, 0.5);
   border-radius: $border-radius;
 }
 
 .home-free__intro {
-  font-weight: $bold;
+  margin-bottom: $padding;
+  @include font-size(28px);
+  font-weight: $thin;
+  text-align: center;
 }
 
 .home-free__list {
   margin: 0;
+  text-align: center;
 }
 
 .home-free__item {
   display: inline-block;
-  width: 33%;
-  margin: 0;
+  width: ($imagestyle-product_thumbnail * 2);
+  margin: 0 $padding;
   list-style-type: none;
-  text-align: center;
-  font-weight: $bold;
+  border-radius: $border-radius;
 }
 
 .home-free__link {
   display: block;
-  padding: 128px $padding $padding $padding;
-  @include font-size(20px);
+  padding: $padding $padding $padding $imagestyle-product_thumbnail;
+  @include font-size(16px);
+  font-weight: $normal;
+  text-align: left;
   border-radius: $border-radius;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: 10% 50%;
 
   @include is-on {
     background-color: $white;
@@ -41,7 +45,7 @@
 }
 
 .home-free__link--shipping {
-  background-image: url('../images/min/ruler.svg');
+  background-image: url('../images/min/box.svg');
 }
 
 .home-free__link--resizing {
@@ -49,5 +53,5 @@
 }
 
 .home-free__link--engraving {
-  background-image: url('../images/min/ruler.svg');
+  background-image: url('../images/min/pen.svg');
 }
