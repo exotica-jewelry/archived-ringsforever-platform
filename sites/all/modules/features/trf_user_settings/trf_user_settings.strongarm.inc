@@ -60,6 +60,13 @@ This link expires in one day and nothing will happen if it is not used.
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_cancel_confirm_notify';
+  $strongarm->value = 0;
+  $export['user_mail_cancel_confirm_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_cancel_confirm_subject';
   $strongarm->value = 'Account cancellation request for [user:name] at [site:name]';
   $export['user_mail_cancel_confirm_subject'] = $strongarm;
@@ -78,6 +85,13 @@ You may now log in by clicking this link or copying and pasting it to your brows
 
 This link can only be used once to log in and will lead you to a page where you can set your password. It expires after one day and nothing will happen if it\'s not used.';
   $export['user_mail_password_reset_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_password_reset_notify';
+  $strongarm->value = 1;
+  $export['user_mail_password_reset_notify'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -109,6 +123,13 @@ password: Your password
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_admin_created_notify';
+  $strongarm->value = 0;
+  $export['user_mail_register_admin_created_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_admin_created_subject';
   $strongarm->value = 'An administrator created an account for you at [site:name]';
   $export['user_mail_register_admin_created_subject'] = $strongarm;
@@ -136,6 +157,13 @@ password: Your password
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_no_approval_required_notify';
+  $strongarm->value = 0;
+  $export['user_mail_register_no_approval_required_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_no_approval_required_subject';
   $strongarm->value = 'Account details for [user:name] at [site:name]';
   $export['user_mail_register_no_approval_required_subject'] = $strongarm;
@@ -151,6 +179,13 @@ Thank you for registering at [site:name]. Your application for an account is cur
 
 --  [site:name] team';
   $export['user_mail_register_pending_approval_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_pending_approval_notify';
+  $strongarm->value = 0;
+  $export['user_mail_register_pending_approval_notify'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -185,7 +220,7 @@ password: Your password
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_status_activated_notify';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['user_mail_status_activated_notify'] = $strongarm;
 
   $strongarm = new stdClass();
