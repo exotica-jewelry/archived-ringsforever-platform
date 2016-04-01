@@ -569,14 +569,22 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 9,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_product',
-    'label' => 'Product variations',
-    'required' => TRUE,
+    'label' => 'Available sizes',
+    'required' => 1,
     'settings' => array(
       'field_injection' => 1,
       'referenceable_types' => array(
+        'bags_cases' => 0,
+        'drinks' => 0,
+        'hats' => 0,
         'rings' => 'rings',
+        'shoes' => 0,
+        'storage_devices' => 0,
+        'tops' => 0,
       ),
       'user_register_form' => FALSE,
     ),
@@ -587,10 +595,13 @@ function trf_ring_type_field_default_field_instances() {
         'fields' => array(),
         'type_settings' => array(
           'allow_existing' => 0,
+          'allow_new' => 1,
           'autogenerate_title' => 1,
           'delete_references' => 1,
+          'label_plural' => 'sizes',
+          'label_singular' => 'size',
           'match_operator' => 'CONTAINS',
-          'use_variation_language' => 1,
+          'override_labels' => 1,
         ),
       ),
       'type' => 'inline_entity_form',
@@ -646,8 +657,9 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => '',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_product_type',
     'label' => 'Product type',
     'product_catalog' => 1,
@@ -1103,6 +1115,7 @@ function trf_ring_type_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.).</p><p>Selecting <em>Remove</em> from an existing ring will only remove it as a related ring, it will not delete the ring itself unless you choose to do so.</p>');
   t('<p>Select the primary colors in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal. Rings that <em>can</em> have color but are not anodized should be tagged with <em>uncolored</em>.</p>');
+  t('Available sizes');
   t('Base price');
   t('Collections');
   t('Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.');
@@ -1118,7 +1131,6 @@ function trf_ring_type_field_default_field_instances() {
   t('Other related rings');
   t('Primary element');
   t('Product type');
-  t('Product variations');
   t('Ring name');
   t('Title');
   t('Upload one or more images that should be displayed when this width is selected. Images must be at least <strong>500 pixels wide</strong>, and at least <strong>800 pixels wide</strong> is recommended.');

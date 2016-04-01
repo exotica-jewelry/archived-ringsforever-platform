@@ -14,6 +14,7 @@ function trf_ring_type_default_fe_block_settings() {
 
   $export['block-ring_colors'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'ring_colors',
     'module' => 'block',
@@ -46,6 +47,7 @@ function trf_ring_type_default_fe_block_settings() {
 
   $export['block-ring_free'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'ring_free',
     'module' => 'block',
@@ -78,6 +80,7 @@ function trf_ring_type_default_fe_block_settings() {
 
   $export['block-ring_gemstones_add'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'ring_gemstones_add',
     'module' => 'block',
@@ -110,6 +113,7 @@ function trf_ring_type_default_fe_block_settings() {
 
   $export['block-ring_gemstones_other'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'ring_gemstones_other',
     'module' => 'block',
@@ -142,6 +146,7 @@ function trf_ring_type_default_fe_block_settings() {
 
   $export['block-ring_similar_header'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'ring_similar_header',
     'module' => 'block',
@@ -174,6 +179,7 @@ function trf_ring_type_default_fe_block_settings() {
 
   $export['block-ring_sizing'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'ring_sizing',
     'module' => 'block',
