@@ -12,7 +12,7 @@ function trf_ring_variation_commerce_product_default_types() {
     'rings' => array(
       'type' => 'rings',
       'name' => 'Rings',
-      'description' => '',
+      'description' => '<em>Rings</em> are titanium wedding rings with particular elements and sizes.',
       'help' => '',
       'revision' => 1,
     ),

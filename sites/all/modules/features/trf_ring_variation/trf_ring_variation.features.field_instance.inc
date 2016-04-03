@@ -531,6 +531,130 @@ function trf_ring_variation_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'commerce_product-rings-field_ring_width'.
+  $field_instances['commerce_product-rings-field_ring_width'] = array(
+    'bundle' => 'rings',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 1,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Width',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '<p>Select a width to add it to the options for this ring.</p>',
+    'display' => array(
+      'add_to_cart_confirmation_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'commerce_line_item_display' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_featured' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'node_full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'node_product_list' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'node_reference_view' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'product_in_cart' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'fences_wrapper' => '',
+    'field_name' => 'field_ring_width',
+    'label' => 'Width',
+    'product_catalog' => 1,
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'commerce_product-rings-field_title_parent'.
   $field_instances['commerce_product-rings-field_title_parent'] = array(
     'bundle' => 'rings',
@@ -764,6 +888,7 @@ function trf_ring_variation_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<p>Select a width to add it to the options for this ring.</p>');
   t('Color');
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
   t('Images');
@@ -772,6 +897,7 @@ function trf_ring_variation_field_default_field_instances() {
   t('Price');
   t('Title');
   t('Upload one or more images that should be displayed when this width is selected.');
+  t('Width');
 
   return $field_instances;
 }
