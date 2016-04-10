@@ -77,6 +77,20 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  */
 
 /*
+ * Clearfix
+ */
+
+.ief-form:before,
+.ief-form:after {
+  content: " ";
+  display: table;
+}
+
+.ief-form:after {
+  clear: both;
+}
+
+/*
  * Highlight width value.
  */
 
@@ -115,16 +129,6 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
   width: 80%;
   float: right;
   padding-top: 0;
-}
-
-#edit-field-product-und-form-product-attributes:before,
-#edit-field-product-und-form-product-attributes:after {
-  content: " ";
-  display: table;
-}
-
-#edit-field-product-und-form-product-attributes:after {
-  clear: both;
 }
 
 #edit-field-product-und-form-product-attributes .fieldset-wrapper {
