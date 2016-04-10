@@ -107,9 +107,29 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Throw action button to the right by floating width settings left.
  */
 
+.ief-form .ief-product-attributes legend {
+  display: none;
+}
+
 #edit-field-product-und-form-product-attributes {
-  width: 50%;
-  float: left;
+  width: 80%;
+  float: right;
+  padding-top: 0;
+}
+
+#edit-field-product-und-form-product-attributes:before,
+#edit-field-product-und-form-product-attributes:after {
+  content: " ";
+  display: table;
+}
+
+#edit-field-product-und-form-product-attributes:after {
+  clear: both;
+}
+
+#edit-field-product-und-form-product-attributes .fieldset-wrapper {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /*
