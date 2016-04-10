@@ -77,16 +77,20 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  */
 
 /*
- * Clearfix
+ * Setup and clearfix for wrapper
  */
 
-.ief-form .fieldset-wrapper:before,
-.ief-form .fieldset-wrapper:after {
+.ief-form > .fieldset-wrapper {
+  padding: 1em 1em 0;
+}
+
+.ief-form > .fieldset-wrapper:before,
+.ief-form > .fieldset-wrapper:after {
   content: " ";
   display: table;
 }
 
-.ief-form .fieldset-wrapper:after {
+.ief-form > .fieldset-wrapper:after {
   clear: both;
 }
 
