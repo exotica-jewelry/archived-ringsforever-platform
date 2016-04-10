@@ -80,13 +80,13 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Clearfix
  */
 
-.ief-form:before,
-.ief-form:after {
+.ief-form .fieldset-wrapper:before,
+.ief-form .fieldset-wrapper:after {
   content: " ";
   display: table;
 }
 
-.ief-form:after {
+.ief-form .fieldset-wrapper:after {
   clear: both;
 }
 
