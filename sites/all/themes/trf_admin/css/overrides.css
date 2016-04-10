@@ -104,6 +104,15 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
 }
 
 /*
+ * Throw action button to the right by floating width settings left.
+ */
+
+#edit-field-product-und-form-product-attributes {
+  width: 50%;
+  float: left;
+}
+
+/*
  * Improvements to operations field.
  */
 
