@@ -57,6 +57,22 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  */
 
 /*
+ * Hide alt text on images since it will always be the same for rings.
+ */
+
+.node-rings-form .field-name-field-file-image-alt-text {
+  display: none;
+}
+
+/*
+ * Hide redirects on images.
+ */
+
+.node-rings-form .redirect-list {
+  display: none;
+}
+
+/*
  * Hide format tips for description.
  */
 
@@ -64,13 +80,6 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
   display: none;
 }
 
-/*
- * Show width field in image entities on rings
- */
-
-.image-widget .field-name-field-file-image-ring-width {
-  display: block;
-}
 
 /*
  * INLINE ENTITY FORM
