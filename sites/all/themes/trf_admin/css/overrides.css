@@ -96,6 +96,14 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
 }
 
 /*
+ * Hide status field since this can be accomplished in quick edit.
+ */
+
+.ief-form .ief-product-details {
+  display: none;
+}
+
+/*
  * Improvements to operations field.
  */
 
