@@ -4,9 +4,9 @@
  *
  * @link https://drupal.org/node/2091585#comment-7876517
  *
- * 
+ *
  * @see profiles/commerce_kickstart/modules/contrib/inline_entity_form/inline_entity_form.api.php line 59
- * 
+ *
  * Implements hook_inline_entity_form_table_fields_alter().
  */
 
@@ -36,7 +36,11 @@ function trf_ief_inline_entity_form_table_fields_alter(&$fields, $context) {
   if ($context['parent_entity_type'] == 'node' && $context['entity_type'] == 'commerce_product') {
 
     // Remove 'Images' field (because all images are inherited)
-    unset($fields['field_images']); 
+    unset($fields['field_images']);
+
+    // Remove 'Price' field (because all prices are the same and/or calculated
+    // by rules)
+    unset($fields['commerce_price']);
 
     // Remove 'Variation title' field
     unset($fields['title']);
