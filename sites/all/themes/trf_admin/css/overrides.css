@@ -151,6 +151,14 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
 }
 
 /*
+ * Remove "Edit" option on (width) attributes since you'd only ever remove it.
+ */
+
+.node-rings-form .ief-entity-operations .edit-field-product-und-entities-0-actions-ief-entity-edit {
+  display: none;
+}
+
+/*
  * Improvements to operations field.
  */
 
