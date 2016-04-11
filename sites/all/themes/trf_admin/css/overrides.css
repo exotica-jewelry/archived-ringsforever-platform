@@ -89,17 +89,17 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Setup and clearfix for wrapper
  */
 
-.ief-form > .fieldset-wrapper {
+.node-rings-form .ief-form > .fieldset-wrapper {
   padding: 1em 1em 0 !important;
 }
 
-.ief-form > .fieldset-wrapper:before,
-.ief-form > .fieldset-wrapper:after {
+.node-rings-form .ief-form > .fieldset-wrapper:before,
+.node-rings-form .ief-form > .fieldset-wrapper:after {
   content: " ";
   display: table;
 }
 
-.ief-form > .fieldset-wrapper:after {
+.node-rings-form .ief-form > .fieldset-wrapper:after {
   clear: both;
 }
 
@@ -107,7 +107,7 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Highlight width value.
  */
 
-.field-widget-inline-entity-form .field-name-field-ring-width {
+.node-rings-form .field-widget-inline-entity-form .field-name-field-ring-width {
   font-weight: bold;
 }
 
@@ -115,10 +115,10 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Hide fields that are copied or set based on the parent product.
  */
 
-.ief-form .field-type-commerce-price,
-.ief-form .field-name-field-title-parent,
-.ief-form .field-name-field-images,
-.ief-form .field-name-field-color {
+.node-rings-form .ief-form .field-type-commerce-price,
+.node-rings-form .ief-form .field-name-field-title-parent,
+.node-rings-form .ief-form .field-name-field-images,
+.node-rings-form .ief-form .field-name-field-color {
   display: none;
 }
 
@@ -126,7 +126,7 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Hide status field since this can be accomplished in quick edit.
  */
 
-.ief-form .ief-product-details {
+.node-rings-form .ief-form .ief-product-details {
   display: none;
 }
 
@@ -134,17 +134,17 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Throw action button to the right by floating width settings left.
  */
 
-.ief-form .ief-product-attributes legend {
+.node-rings-form .ief-form .ief-product-attributes legend {
   display: none;
 }
 
-#edit-field-product-und-form-product-attributes {
+.node-rings-form #edit-field-product-und-form-product-attributes {
   width: 80%;
   float: right;
   padding-top: 0;
 }
 
-#edit-field-product-und-form-product-attributes .fieldset-wrapper {
+.node-rings-form #edit-field-product-und-form-product-attributes .fieldset-wrapper {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -154,11 +154,11 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Improvements to operations field.
  */
 
-.ief-entity-operations {
+.node-rings-form .ief-entity-operations {
   margin: 1em 0;
 }
 
-.ief-entity-operations .form-submit {
+.node-rings-form .ief-entity-operations .form-submit {
   margin: 0 1em 0 0;
 }
 
@@ -166,20 +166,12 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Add padding to related rings fieldset.
  */
 
-.field-name-field-related-rings fieldset {
+.node-rings-form .field-name-field-related-rings fieldset {
   padding: 1em;
 }
 
-.field-name-field-related-rings .fieldset-legend {
+.node-rings-form .field-name-field-related-rings .fieldset-legend {
   padding: 0 0.75em;
-}
-
-/*
- * Hide "add new" option in related rings fieldset.
- */
-
-.field-name-field-related-rings .container-inline input[value="Add new ring"] {
-  display: none;
 }
 
 /*
@@ -187,7 +179,7 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * going down the rabbit hole.
  */
 
-.field-name-field-related-rings .ief-entity-operations input[value="Edit"] {
+.node-rings-form .field-name-field-related-rings .ief-entity-operations input[value="Edit"] {
   display: none;
 }
 
