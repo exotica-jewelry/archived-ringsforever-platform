@@ -12,7 +12,6 @@ function trf_ring_taxonomies_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: field_instance
-  $overrides["field_instance.taxonomy_term-collection-field_image.taxonomy_term-collection-field_image"]["DELETED"] = TRUE;
 
   // Exported overrides for: taxonomy
   $overrides["taxonomy.collection.description"] = 'Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.';
@@ -25,13 +24,13 @@ function trf_ring_taxonomies_features_override_default_overrides() {
     'visible' => TRUE,
   );
   $overrides["variable.field_bundle_settings_taxonomy_term__collection.value|extra_fields|form|description"] = array(
-    'weight' => 4,
+    'weight' => 3,
   );
   $overrides["variable.field_bundle_settings_taxonomy_term__collection.value|extra_fields|form|name"] = array(
     'weight' => 0,
   );
   $overrides["variable.field_bundle_settings_taxonomy_term__collection.value|extra_fields|form|path"] = array(
-    'weight' => 6,
+    'weight' => 5,
   );
   $overrides["variable.field_bundle_settings_taxonomy_term__collection.value|view_modes|add_to_cart_form"] = array(
     'custom_settings' => TRUE,
