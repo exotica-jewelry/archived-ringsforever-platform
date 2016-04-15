@@ -31,3 +31,13 @@ function trf_ring_variation_ctools_plugin_api($module = NULL, $api = NULL) {
     return array("version" => "1");
   }
 }
+
+/**
+ * Implements hook_default_commerce_autosku_patterns_alter().
+ */
+function trf_ring_variation_default_commerce_autosku_patterns_alter(&$data) {
+  if (isset($data['rings'])) {
+    $data['rings']->advanced['case'] = 'original'; /* WAS: 'lowercase' */
+    $data['rings']->pattern = '[commerce-product:field-product-node:0:field-sku-master]-[commerce-product:field-ring-width:name]'; /* WAS: '[commerce-product:field-product-node:0:field-ring-name]-[commerce-product:field-ring-width:name]' */
+  }
+}
