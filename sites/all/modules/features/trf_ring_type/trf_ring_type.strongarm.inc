@@ -71,14 +71,17 @@ function trf_ring_type_strongarm() {
       'featured' => array(
         'custom_settings' => TRUE,
       ),
+      'colorbox' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '13',
+          'weight' => '15',
         ),
         'redirect' => array(
-          'weight' => '14',
+          'weight' => '16',
         ),
       ),
       'display' => array(

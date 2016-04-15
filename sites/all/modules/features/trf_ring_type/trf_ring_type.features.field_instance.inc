@@ -83,7 +83,7 @@ function trf_ring_type_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
@@ -92,7 +92,7 @@ function trf_ring_type_field_default_field_instances() {
     'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '<p>Select the primary colors in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal. Rings that <em>can</em> have color but are not anodized should be tagged with <em>uncolored</em>.</p>',
+    'description' => '<p>Select the primary colors in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal. If the ring has an ambiguous color or more than one color, you can add multiple color tags.</p>',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -143,8 +143,9 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => '',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_color',
     'label' => 'Colors',
     'product_catalog' => 1,
@@ -159,7 +160,7 @@ function trf_ring_type_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
@@ -227,6 +228,7 @@ function trf_ring_type_field_default_field_instances() {
         'weight' => 2,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'fences_wrapper' => 'article',
     'field_name' => 'field_description',
@@ -234,6 +236,11 @@ function trf_ring_type_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -245,7 +252,7 @@ function trf_ring_type_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -313,6 +320,76 @@ function trf_ring_type_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-rings-field_image_caption'.
+  $field_instances['node-rings-field_image_caption'] = array(
+    'bundle' => 'rings',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'product_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'reference_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_image_caption',
+    'label' => 'Image caption',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 5,
     ),
   );
@@ -367,7 +444,7 @@ function trf_ring_type_field_default_field_instances() {
     'label' => 'Images',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -379,7 +456,7 @@ function trf_ring_type_field_default_field_instances() {
             'slashes' => 0,
             'transliterate' => 1,
           ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          'value' => '[node:field-ring-name].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
@@ -396,7 +473,7 @@ function trf_ring_type_field_default_field_instances() {
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '500x100',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -431,7 +508,7 @@ function trf_ring_type_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -494,7 +571,7 @@ function trf_ring_type_field_default_field_instances() {
         'currency_code' => 'default',
       ),
       'type' => 'commerce_price_full',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -502,7 +579,7 @@ function trf_ring_type_field_default_field_instances() {
   $field_instances['node-rings-field_product'] = array(
     'bundle' => 'rings',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The drop-down menu will be ordered in ascending widths, but <strong>the first width listed will be set as the default selection</strong>. You can use the crosshairs at left to drag a different existing width into the first position.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -573,7 +650,7 @@ function trf_ring_type_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_product',
-    'label' => 'Available sizes',
+    'label' => 'Available widths',
     'required' => 1,
     'settings' => array(
       'field_injection' => 1,
@@ -598,14 +675,14 @@ function trf_ring_type_field_default_field_instances() {
           'allow_new' => 1,
           'autogenerate_title' => 1,
           'delete_references' => 1,
-          'label_plural' => 'sizes',
-          'label_singular' => 'size',
-          'match_operator' => 'CONTAINS',
+          'label_plural' => 'widths',
+          'label_singular' => 'width',
+          'match_operator' => 'STARTS_WITH',
           'override_labels' => 1,
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 11,
+      'weight' => 8,
     ),
   );
 
@@ -674,7 +751,7 @@ function trf_ring_type_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 14,
     ),
   );
 
@@ -753,7 +830,7 @@ function trf_ring_type_field_default_field_instances() {
         'fields' => array(),
         'type_settings' => array(
           'allow_existing' => 1,
-          'allow_new' => 1,
+          'allow_new' => 0,
           'delete_references' => 0,
           'label_plural' => 'rings',
           'label_singular' => 'ring',
@@ -762,7 +839,7 @@ function trf_ring_type_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 12,
+      'weight' => 9,
     ),
   );
 
@@ -771,7 +848,7 @@ function trf_ring_type_field_default_field_instances() {
     'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter other secondary elements of this ring, one at a time.',
+    'description' => 'Enter <em>other</em> secondary elements of this ring, one at a time. Do <strong>not</strong> include the primary element.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -845,7 +922,7 @@ function trf_ring_type_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 9,
+      'weight' => 13,
     ),
   );
 
@@ -854,7 +931,7 @@ function trf_ring_type_field_default_field_instances() {
     'bundle' => 'rings',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter <em>one</em> primary element by which to categorize this ring (in particular, in its URL). It should be the single most important element about this ring, such as mountains, leaves, gold, diamonds, blue diamonds, etc. (Elements are always in plural form for categorization purposes.)',
+    'description' => 'Enter <em>one</em> primary element for this ring. <strong>This should be the most likely term people would be searching for on a search engine and want this ring to show up.</strong> For instance, it\'s more useful to use specific terms like "wrenches" or "hockey theme" than "tools" or "sports." Because of the way categories are created, elements should always be in plural form — e.g. use "flowers" even if there is only one flower on this ring.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -926,7 +1003,7 @@ function trf_ring_type_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 8,
+      'weight' => 12,
     ),
   );
 
@@ -1005,6 +1082,76 @@ function trf_ring_type_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-rings-field_sku_master'.
+  $field_instances['node-rings-field_sku_master'] = array(
+    'bundle' => 'rings',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter a ring product ID. This must be unique to this ring.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'product_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'reference_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_sku_master',
+    'label' => 'SKU',
+    'required' => 1,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 30,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
     ),
   );
 
@@ -1114,8 +1261,8 @@ function trf_ring_type_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('<p>Select any corresponding rings that should be featured as related to this ring. Note that rings with the same categories or color will be automatically displayed — this field is designed for nearly-identical rings with variations in colors or stones (e.g. <em>Smith 1</em>, <em>Smith 2</em>, etc.).</p><p>Selecting <em>Remove</em> from an existing ring will only remove it as a related ring, it will not delete the ring itself unless you choose to do so.</p>');
-  t('<p>Select the primary colors in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal. Rings that <em>can</em> have color but are not anodized should be tagged with <em>uncolored</em>.</p>');
-  t('Available sizes');
+  t('<p>Select the primary colors in this ring. For rings with no anodized color, you may want to choose the color of any stones or inlaid metal. If the ring has an ambiguous color or more than one color, you can add multiple color tags.</p>');
+  t('Available widths');
   t('Base price');
   t('Collections');
   t('Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.');
@@ -1123,15 +1270,19 @@ function trf_ring_type_field_default_field_instances() {
   t('Description');
   t('Display a note that gemstones can be added to this ring.');
   t('Elements');
-  t('Enter <em>one</em> primary element by which to categorize this ring (in particular, in its URL). It should be the single most important element about this ring, such as mountains, leaves, gold, diamonds, blue diamonds, etc. (Elements are always in plural form for categorization purposes.)');
+  t('Enter <em>one</em> primary element for this ring. <strong>This should be the most likely term people would be searching for on a search engine and want this ring to show up.</strong> For instance, it\'s more useful to use specific terms like "wrenches" or "hockey theme" than "tools" or "sports." Because of the way categories are created, elements should always be in plural form — e.g. use "flowers" even if there is only one flower on this ring.');
+  t('Enter <em>other</em> secondary elements of this ring, one at a time. Do <strong>not</strong> include the primary element.');
+  t('Enter a ring product ID. This must be unique to this ring.');
   t('Enter a whole dollar amount without commas, e.g. <em>205</em> or <em>1095</em>.');
-  t('Enter other secondary elements of this ring, one at a time.');
   t('Gemstones can be added');
+  t('Image caption');
   t('Images');
   t('Other related rings');
   t('Primary element');
   t('Product type');
   t('Ring name');
+  t('SKU');
+  t('The drop-down menu will be ordered in ascending widths, but <strong>the first width listed will be set as the default selection</strong>. You can use the crosshairs at left to drag a different existing width into the first position.');
   t('Title');
   t('Upload one or more images that should be displayed when this width is selected. Images must be at least <strong>500 pixels wide</strong>, and at least <strong>800 pixels wide</strong> is recommended.');
   t('﻿Enter only the name of the ring itself, e.g. <em>Baldwin</em> or <em>Montana 2</em>.');
