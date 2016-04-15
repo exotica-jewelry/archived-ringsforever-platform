@@ -24,6 +24,7 @@ function trf_site_search_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -752,7 +753,7 @@ function trf_site_search_facetapi_default_facet_settings() {
   $facet->enabled = TRUE;
   $facet->settings = array(
     'weight' => 0,
-    'widget' => 'commerce_search_api_fancy',
+    'widget' => 'facetapi_checkbox_links',
     'filters' => array(
       'current_depth' => array(
         'status' => 0,
@@ -792,7 +793,7 @@ function trf_site_search_facetapi_default_facet_settings() {
     'empty_behavior' => 'none',
     'facet_more_text' => 'Show more',
     'facet_fewer_text' => 'Show fewer',
-    'soft_limit' => '20',
+    'soft_limit' => '0',
     'nofollow' => 1,
     'show_expanded' => 0,
     'name' => '',

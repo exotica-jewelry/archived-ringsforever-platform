@@ -14,6 +14,7 @@ function trf_site_search_default_fe_block_settings() {
 
   $export['current_search-kickstart_search'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'kickstart_search',
     'module' => 'current_search',
@@ -46,6 +47,7 @@ function trf_site_search_default_fe_block_settings() {
 
   $export['current_search-standard'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'standard',
     'module' => 'current_search',
@@ -78,6 +80,7 @@ function trf_site_search_default_fe_block_settings() {
 
   $export['facetapi-4MnuqsU9U0F81nBMXnQt67Y06gEKf0TG'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => '4MnuqsU9U0F81nBMXnQt67Y06gEKf0TG',
     'module' => 'facetapi',
@@ -110,6 +113,7 @@ function trf_site_search_default_fe_block_settings() {
 
   $export['facetapi-ARkvnenCSdjpeJ0Du1THMhhmYXUcRKIZ'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'ARkvnenCSdjpeJ0Du1THMhhmYXUcRKIZ',
     'module' => 'facetapi',
@@ -142,6 +146,7 @@ function trf_site_search_default_fe_block_settings() {
 
   $export['facetapi-HfJZL5dTPBfTFWKGwiEbeOwXzN1I2c72'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'HfJZL5dTPBfTFWKGwiEbeOwXzN1I2c72',
     'module' => 'facetapi',
@@ -174,6 +179,7 @@ function trf_site_search_default_fe_block_settings() {
 
   $export['facetapi-KAx5oauQc7V1T59j32aqbHSfIoIPGRDY'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'KAx5oauQc7V1T59j32aqbHSfIoIPGRDY',
     'module' => 'facetapi',
@@ -206,6 +212,7 @@ function trf_site_search_default_fe_block_settings() {
 
   $export['facetapi-MjplL8YFjgfpB0BofBtFkGCDuU73WZbo'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'MjplL8YFjgfpB0BofBtFkGCDuU73WZbo',
     'module' => 'facetapi',
@@ -240,6 +247,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-Nm4CRgtowO1tVgxZjXwsqLYvUReoez0Q'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'Nm4CRgtowO1tVgxZjXwsqLYvUReoez0Q',
     'module' => 'facetapi',
@@ -272,6 +280,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-PkQ0BcHQAoCQ0kNLdvPxh1jd20OztqL3'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'PkQ0BcHQAoCQ0kNLdvPxh1jd20OztqL3',
     'module' => 'facetapi',
@@ -304,6 +313,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-RaRggymYJWiRdxA9HqiEmx2BSbtQZSdk'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'RaRggymYJWiRdxA9HqiEmx2BSbtQZSdk',
     'module' => 'facetapi',
@@ -338,6 +348,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-TFVaQKSORCPdrULxfXDnLQZ40xH0Nper'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'TFVaQKSORCPdrULxfXDnLQZ40xH0Nper',
     'module' => 'facetapi',
@@ -372,6 +383,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-WdSr4XKt0SrUv225hgcm2Iy1SQmdtGO8'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'WdSr4XKt0SrUv225hgcm2Iy1SQmdtGO8',
     'module' => 'facetapi',
@@ -404,6 +416,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-jz9zjwz2szWr1worAU9IyJvIlUtWbzEj'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'jz9zjwz2szWr1worAU9IyJvIlUtWbzEj',
     'module' => 'facetapi',
@@ -436,6 +449,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-k2i1LZFEaYtSE0qAIOjO2ht0a7HlC8Vr'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'k2i1LZFEaYtSE0qAIOjO2ht0a7HlC8Vr',
     'module' => 'facetapi',
@@ -468,6 +482,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-kzV6cVQWPWigoxvJX1AmTZSDoEgBakN3'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'kzV6cVQWPWigoxvJX1AmTZSDoEgBakN3',
     'module' => 'facetapi',
@@ -502,6 +517,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-ljmT8Ts69OP0ErEpRJXGjkCr6c79Qs0Z'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'ljmT8Ts69OP0ErEpRJXGjkCr6c79Qs0Z',
     'module' => 'facetapi',
@@ -534,6 +550,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-qROfiZEtQEAfwoMRWSGPpKFBROMPdjks'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'qROfiZEtQEAfwoMRWSGPpKFBROMPdjks',
     'module' => 'facetapi',
@@ -566,6 +583,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-qaiJFFWcONPdab410d19wMBxBLUpWihn'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'qaiJFFWcONPdab410d19wMBxBLUpWihn',
     'module' => 'facetapi',
@@ -600,6 +618,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-vUYGSexnUUscrjhcUt8k5AIsnGVrjJho'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'vUYGSexnUUscrjhcUt8k5AIsnGVrjJho',
     'module' => 'facetapi',
@@ -634,6 +653,7 @@ titanium-rings/collections/*',
 
   $export['facetapi-zdzpxOsVNBUrRCx1INU01vdSfFgSPuP0'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'zdzpxOsVNBUrRCx1INU01vdSfFgSPuP0',
     'module' => 'facetapi',
@@ -668,6 +688,7 @@ titanium-rings/collections/*',
 
   $export['search_api_sorts-search-sorts'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'search-sorts',
     'module' => 'search_api_sorts',
