@@ -51,7 +51,10 @@ function trf_site_images_ds_layout_settings_info() {
         1 => 'preview',
         2 => 'field_file_image_alt_text',
         3 => 'field_file_image_title_text',
+      ),
+      'hidden' => array(
         4 => 'redirect',
+        5 => '_add_existing_field',
       ),
     ),
     'fields' => array(
@@ -59,15 +62,19 @@ function trf_site_images_ds_layout_settings_info() {
       'preview' => 'ds_content',
       'field_file_image_alt_text' => 'ds_content',
       'field_file_image_title_text' => 'ds_content',
-      'redirect' => 'ds_content',
+      'redirect' => 'hidden',
+      '_add_existing_field' => 'hidden',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['file|image|form'] = $ds_layout;
 
