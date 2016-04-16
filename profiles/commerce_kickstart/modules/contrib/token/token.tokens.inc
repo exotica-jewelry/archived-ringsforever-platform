@@ -170,6 +170,10 @@ function token_token_info() {
     'name' => t('Base name'),
     'description' => t('The base name of the file.'),
   );
+  $info['tokens']['file']['filename'] = array(
+    'name' => t('Filename'),
+    'description' => t('The name of the file.'),
+  );
   $info['tokens']['file']['extension'] = array(
     'name' => t('Extension'),
     'description' => t('The extension of the file.'),
@@ -542,6 +546,10 @@ function token_tokens($type, $tokens, array $data = array(), array $options = ar
         case 'basename':
           $basename = pathinfo($file->uri, PATHINFO_BASENAME);
           $replacements[$original] = $sanitize ? check_plain($basename) : $basename;
+          break;
+        case 'filename':
+          $filename = pathinfo($file->uri, PATHINFO_FILENAME);
+          $replacements[$original] = $sanitize ? check_plain($filename) : $filename;
           break;
         case 'extension':
           $extension = pathinfo($file->uri, PATHINFO_EXTENSION);
