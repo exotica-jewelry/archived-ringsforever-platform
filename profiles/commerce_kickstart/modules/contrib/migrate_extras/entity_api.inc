@@ -207,12 +207,6 @@ class MigrateDestinationEntityAPI extends MigrateDestinationEntity {
         throw new MigrateException(t("Failed to load entity of type %type and id %id", array('%type' => $this->entityType, '%id' => $entity->{$this->id})));
       }
 
-      // Make sure the $entity has a bundle type as prepare() needs correctly-
-      // formed entity since it calls entity_extract_ids().
-      if (!empty($this->bundle) && !empty($this->info['entity keys']['bundle'])) {
-        $entity->{$this->info['entity keys']['bundle']} = $this->bundle;
-      }
-
       // Prepare the entity to get the right array structure.
       $this->prepare($entity, $row);
 
