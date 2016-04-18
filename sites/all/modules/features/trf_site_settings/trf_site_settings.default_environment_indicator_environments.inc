@@ -44,7 +44,7 @@ function trf_site_settings_default_environment_indicator_environment() {
   $environment->disabled = FALSE; /* Edit this to true to make a default environment disabled initially */
   $environment->api_version = 1;
   $environment->machine = 'staging';
-  $environment->name = 'Staging';
+  $environment->name = 'Staging: MFPL';
   $environment->regexurl = 'new.titaniumringsforever.com';
   $environment->settings = array(
     'color' => '#fff439',
@@ -54,6 +54,21 @@ function trf_site_settings_default_environment_indicator_environment() {
     'fixed' => 1,
   );
   $export['staging'] = $environment;
+
+  $environment = new stdClass();
+  $environment->disabled = FALSE; /* Edit this to true to make a default environment disabled initially */
+  $environment->api_version = 1;
+  $environment->machine = 'staging_platform';
+  $environment->name = 'Staging: Platform.sh';
+  $environment->regexurl = '^[\\w.-]+\\.us.platform.sh';
+  $environment->settings = array(
+    'color' => '#fff439',
+    'text_color' => '#000000',
+    'weight' => '',
+    'position' => 'top',
+    'fixed' => 1,
+  );
+  $export['staging_platform'] = $environment;
 
   return $export;
 }
