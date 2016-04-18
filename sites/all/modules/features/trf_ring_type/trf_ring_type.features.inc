@@ -33,18 +33,6 @@ function trf_ring_type_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_field_default_field_instances_alter().
- */
-function trf_ring_type_field_default_field_instances_alter(&$data) {
-  if (isset($data['node-rings-field_images'])) {
-    $data['node-rings-field_images']['settings']['alt_field'] = 1; /* WAS: 0 */
-    $data['node-rings-field_images']['settings']['filefield_paths']['file_name']['value'] = '[node:field-ring-name].[file:ffp-extension-original]'; /* WAS: '[file:ffp-name-only-original].[file:ffp-extension-original]' */
-    $data['node-rings-field_images']['settings']['title_field'] = 1; /* WAS: 0 */
-    $data['node-rings-field_images']['widget']['weight'] = 4; /* WAS: 3 */
-  }
-}
-
-/**
  * Implements hook_file_default_displays_alter().
  */
 function trf_ring_type_file_default_displays_alter(&$data) {
