@@ -23,6 +23,7 @@ function trf_image_variations_strongarm() {
       # error like this ever does occurr.
       'The specified file %file could not be copied, because no file by that name exists. Please check that you supplied the correct filename.' => 'File %file updated.',
 
+      'The title is used as a tool tip when the user hovers the mouse over the image.' => 'This text is used as an image caption on ring pages, as well as a tooltip when a visitor hovers their mouse over any image.',
     ),
   );
   $export['locale_custom_strings_en'] = $strongarm;
