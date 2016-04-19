@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * trf_ring_variation.features.field_base.inc
+ * trf_ring_variations.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function trf_ring_variation_field_default_field_bases() {
+function trf_ring_variations_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_ring_width'.

@@ -4,4 +4,4 @@
  * Code for the TRF ring product variation feature.
  */
 
-include_once 'trf_ring_variation.features.inc';
+include_once 'trf_ring_variations.features.inc';

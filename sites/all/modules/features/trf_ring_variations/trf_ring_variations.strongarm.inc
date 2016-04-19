@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * trf_ring_variation.strongarm.inc
+ * trf_ring_variations.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function trf_ring_variation_strongarm() {
+function trf_ring_variations_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

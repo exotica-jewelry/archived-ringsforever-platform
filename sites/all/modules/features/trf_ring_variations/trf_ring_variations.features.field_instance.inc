@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * trf_ring_variation.features.field_instance.inc
+ * trf_ring_variations.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function trf_ring_variation_field_default_field_instances() {
+function trf_ring_variations_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'commerce_product-rings-commerce_price'.

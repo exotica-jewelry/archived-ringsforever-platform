@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * trf_ring_variation.autosku_pattern.inc
+ * trf_ring_variations.autosku_pattern.inc
  */
 
 /**
  * Implements hook_default_commerce_autosku_patterns().
  */
-function trf_ring_variation_default_commerce_autosku_patterns() {
+function trf_ring_variations_default_commerce_autosku_patterns() {
   $export = array();
 
   $commerce_autosku_patterns = new stdClass();

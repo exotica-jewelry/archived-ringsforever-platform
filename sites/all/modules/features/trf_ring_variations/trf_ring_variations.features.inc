@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * trf_ring_variation.features.inc
+ * trf_ring_variations.features.inc
  */
 
 /**
  * Implements hook_commerce_product_default_types().
  */
-function trf_ring_variation_commerce_product_default_types() {
+function trf_ring_variations_commerce_product_default_types() {
   $items = array(
     'rings' => array(
       'type' => 'rings',
@@ -23,7 +23,7 @@ function trf_ring_variation_commerce_product_default_types() {
 /**
  * Implements hook_ctools_plugin_api().
  */
-function trf_ring_variation_ctools_plugin_api($module = NULL, $api = NULL) {
+function trf_ring_variations_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "commerce_autosku" && $api == "autosku_pattern") {
     return array("version" => "1");
   }
@@ -35,7 +35,7 @@ function trf_ring_variation_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_default_commerce_autosku_patterns_alter().
  */
-function trf_ring_variation_default_commerce_autosku_patterns_alter(&$data) {
+function trf_ring_variations_default_commerce_autosku_patterns_alter(&$data) {
   if (isset($data['rings'])) {
     $data['rings']->advanced['case'] = 'original'; /* WAS: '' */
     $data['rings']->advanced['hide_sku'] = 1; /* WAS: '' */
