@@ -12,8 +12,8 @@ function trf_ring_variation_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: commerce_autosku_patterns
-  $overrides["commerce_autosku_patterns.rings.advanced|case"] = 'original';
-  $overrides["commerce_autosku_patterns.rings.pattern"] = '[commerce-product:field-product-node:0:field-sku-master]-[commerce-product:field-ring-width:name]';
+  $overrides["commerce_autosku_patterns.rings.advanced"] = '';
+  $overrides["commerce_autosku_patterns.rings.pattern"] = '';
 
  return $overrides;
 }
