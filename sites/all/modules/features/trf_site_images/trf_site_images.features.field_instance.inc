@@ -83,7 +83,7 @@ function trf_site_images_field_default_field_instances() {
     'bundle' => 'image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Title text is used as an image caption on ring pages, as well as a tooltip when a visitor hovers their mouse over any image.',
+    'description' => 'The title is used as a tool tip when the user hovers the mouse over the image.',
     'display' => array(
       'caption_only' => array(
         'label' => 'above',
@@ -162,8 +162,8 @@ function trf_site_images_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Alt text');
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. It improves accessibility and search engine optimization.');
+  t('The title is used as a tool tip when the user hovers the mouse over the image.');
   t('Title text');
-  t('Title text is used as an image caption on ring pages, as well as a tooltip when a visitor hovers their mouse over any image.');
 
   return $field_instances;
 }
