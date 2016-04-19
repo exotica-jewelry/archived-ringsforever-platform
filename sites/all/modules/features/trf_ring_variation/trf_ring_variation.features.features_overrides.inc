@@ -12,8 +12,10 @@ function trf_ring_variation_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: commerce_autosku_patterns
-  $overrides["commerce_autosku_patterns.rings.advanced"] = '';
-  $overrides["commerce_autosku_patterns.rings.pattern"] = '';
+  $overrides["commerce_autosku_patterns.rings.advanced|case"] = 'original';
+  $overrides["commerce_autosku_patterns.rings.advanced|hide_sku"] = 1;
+  $overrides["commerce_autosku_patterns.rings.advanced|update_existing"] = 1;
+  $overrides["commerce_autosku_patterns.rings.pattern"] = '[commerce-product:field-product-node:0:field-sku-master]-[commerce-product:field-ring-width:name]';
 
  return $overrides;
 }
