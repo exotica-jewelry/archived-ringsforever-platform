@@ -11,7 +11,9 @@ function trf_ring_type_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
-  // Exported overrides for: field_instance
+  // Exported overrides for: field_base
+  $overrides["field_base.field_collection.cardinality"] = -1;
+  $overrides["field_base.field_color.cardinality"] = -1;
 
   // Exported overrides for: file_display
   $overrides["file_display.image__default__file_field_file_default.weight"] = -42;

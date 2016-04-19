@@ -33,6 +33,18 @@ function trf_ring_type_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_field_default_field_bases_alter().
+ */
+function trf_ring_type_field_default_field_bases_alter(&$data) {
+  if (isset($data['field_collection'])) {
+    $data['field_collection']['cardinality'] = -1; /* WAS: 1 */
+  }
+  if (isset($data['field_color'])) {
+    $data['field_color']['cardinality'] = -1; /* WAS: 1 */
+  }
+}
+
+/**
  * Implements hook_file_default_displays_alter().
  */
 function trf_ring_type_file_default_displays_alter(&$data) {
