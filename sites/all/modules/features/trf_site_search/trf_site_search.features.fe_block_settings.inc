@@ -78,6 +78,179 @@ function trf_site_search_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['facetapi-MjplL8YFjgfpB0BofBtFkGCDuU73WZbo'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'MjplL8YFjgfpB0BofBtFkGCDuU73WZbo',
+    'module' => 'facetapi',
+    'node_types' => array(),
+    'pages' => 'products
+titanium-rings/collections
+titanium-rings/collections/*',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => -41,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['facetapi-RaRggymYJWiRdxA9HqiEmx2BSbtQZSdk'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'RaRggymYJWiRdxA9HqiEmx2BSbtQZSdk',
+    'module' => 'facetapi',
+    'node_types' => array(),
+    'pages' => 'products
+titanium-rings/collections
+titanium-rings/collections/*',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => -43,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => -23,
+      ),
+    ),
+    'title' => 'Colors',
+    'visibility' => 1,
+  );
+
+  $export['facetapi-TFVaQKSORCPdrULxfXDnLQZ40xH0Nper'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'TFVaQKSORCPdrULxfXDnLQZ40xH0Nper',
+    'module' => 'facetapi',
+    'node_types' => array(),
+    'pages' => 'products
+titanium-rings/collections
+titanium-rings/collections/*',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => -1,
+      ),
+      'trf' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => -45,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => -22,
+      ),
+    ),
+    'title' => 'Price',
+    'visibility' => 1,
+  );
+
+  $export['facetapi-vUYGSexnUUscrjhcUt8k5AIsnGVrjJho'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'vUYGSexnUUscrjhcUt8k5AIsnGVrjJho',
+    'module' => 'facetapi',
+    'node_types' => array(),
+    'pages' => 'products
+titanium-rings/collections
+titanium-rings/collections/*',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => -42,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Available widths',
+    'visibility' => 1,
+  );
+
+  $export['search-form'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'form',
+    'module' => 'search',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf',
+        'weight' => 0,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['search_api_sorts-search-sorts'] = array(
     'cache' => -1,
     'css_class' => '',
