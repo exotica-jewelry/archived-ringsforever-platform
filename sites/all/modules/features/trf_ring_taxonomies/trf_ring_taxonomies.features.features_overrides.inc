@@ -11,12 +11,70 @@ function trf_ring_taxonomies_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
-  // Exported overrides for: field_instance
-
   // Exported overrides for: taxonomy
   $overrides["taxonomy.collection.description"] = 'Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.';
+  $overrides["taxonomy.collection.rdf_mapping"] = array(
+    'description' => array(
+      'predicates' => array(
+        0 => 'rdfs:comment',
+      ),
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'rdftype' => array(
+      0 => 'skos:ConceptScheme',
+    ),
+  );
   $overrides["taxonomy.collection.weight"] = -10;
+  $overrides["taxonomy.color.rdf_mapping"] = array(
+    'description' => array(
+      'predicates' => array(
+        0 => 'rdfs:comment',
+      ),
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'rdftype' => array(
+      0 => 'skos:ConceptScheme',
+    ),
+  );
   $overrides["taxonomy.color.weight"] = -8;
+  $overrides["taxonomy.elements.rdf_mapping"] = array(
+    'description' => array(
+      'predicates' => array(
+        0 => 'rdfs:comment',
+      ),
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'rdftype' => array(
+      0 => 'skos:ConceptScheme',
+    ),
+  );
+  $overrides["taxonomy.width.rdf_mapping"] = array(
+    'description' => array(
+      'predicates' => array(
+        0 => 'rdfs:comment',
+      ),
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'rdftype' => array(
+      0 => 'skos:ConceptScheme',
+    ),
+  );
 
   // Exported overrides for: variable
   $overrides["variable.field_bundle_settings_taxonomy_term__collection.value|extra_fields|display|description|featured"] = array(

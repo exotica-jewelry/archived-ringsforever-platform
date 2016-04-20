@@ -29,10 +29,74 @@ function trf_ring_taxonomies_views_api($module = NULL, $api = NULL) {
 function trf_ring_taxonomies_taxonomy_default_vocabularies_alter(&$data) {
   if (isset($data['collection'])) {
     $data['collection']['description'] = 'Collections such as themes, men\'s and women\'s, gemstones, color, commitment rings, etc.'; /* WAS: '' */
+    $data['collection']['rdf_mapping'] = array(
+      'description' => array(
+        'predicates' => array(
+          0 => 'rdfs:comment',
+        ),
+      ),
+      'name' => array(
+        'predicates' => array(
+          0 => 'dc:title',
+        ),
+      ),
+      'rdftype' => array(
+        0 => 'skos:ConceptScheme',
+      ),
+    ); /* WAS: '' */
     $data['collection']['weight'] = -10; /* WAS: 0 */
   }
   if (isset($data['color'])) {
+    $data['color']['rdf_mapping'] = array(
+      'description' => array(
+        'predicates' => array(
+          0 => 'rdfs:comment',
+        ),
+      ),
+      'name' => array(
+        'predicates' => array(
+          0 => 'dc:title',
+        ),
+      ),
+      'rdftype' => array(
+        0 => 'skos:ConceptScheme',
+      ),
+    ); /* WAS: '' */
     $data['color']['weight'] = -8; /* WAS: 0 */
+  }
+  if (isset($data['elements'])) {
+    $data['elements']['rdf_mapping'] = array(
+      'description' => array(
+        'predicates' => array(
+          0 => 'rdfs:comment',
+        ),
+      ),
+      'name' => array(
+        'predicates' => array(
+          0 => 'dc:title',
+        ),
+      ),
+      'rdftype' => array(
+        0 => 'skos:ConceptScheme',
+      ),
+    ); /* WAS: '' */
+  }
+  if (isset($data['width'])) {
+    $data['width']['rdf_mapping'] = array(
+      'description' => array(
+        'predicates' => array(
+          0 => 'rdfs:comment',
+        ),
+      ),
+      'name' => array(
+        'predicates' => array(
+          0 => 'dc:title',
+        ),
+      ),
+      'rdftype' => array(
+        0 => 'skos:ConceptScheme',
+      ),
+    ); /* WAS: '' */
   }
 }
 
