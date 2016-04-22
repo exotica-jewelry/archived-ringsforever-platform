@@ -183,6 +183,39 @@ titanium-rings/collections/*',
     'visibility' => 1,
   );
 
+  $export['facetapi-ljmT8Ts69OP0ErEpRJXGjkCr6c79Qs0Z'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'ljmT8Ts69OP0ErEpRJXGjkCr6c79Qs0Z',
+    'module' => 'facetapi',
+    'node_types' => array(),
+    'pages' => 'products',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf',
+        'weight' => -27,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => -29,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
   $export['facetapi-vUYGSexnUUscrjhcUt8k5AIsnGVrjJho'] = array(
     'cache' => -1,
     'css_class' => '',
