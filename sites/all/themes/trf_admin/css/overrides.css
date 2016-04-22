@@ -80,6 +80,14 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
   display: none;
 }
 
+/*
+ * Make bolding in help text more visibly bold.
+ */
+
+.form-item .description strong {
+  font-weight: 800;
+}
+
 
 /*
  * INLINE ENTITY FORM
