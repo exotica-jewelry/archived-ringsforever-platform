@@ -64,40 +64,6 @@ function trf_ring_taxonomies_taxonomy_default_vocabularies_alter(&$data) {
     ); /* WAS: '' */
     $data['color']['weight'] = -8; /* WAS: 0 */
   }
-  if (isset($data['elements'])) {
-    $data['elements']['rdf_mapping'] = array(
-      'description' => array(
-        'predicates' => array(
-          0 => 'rdfs:comment',
-        ),
-      ),
-      'name' => array(
-        'predicates' => array(
-          0 => 'dc:title',
-        ),
-      ),
-      'rdftype' => array(
-        0 => 'skos:ConceptScheme',
-      ),
-    ); /* WAS: '' */
-  }
-  if (isset($data['width'])) {
-    $data['width']['rdf_mapping'] = array(
-      'description' => array(
-        'predicates' => array(
-          0 => 'rdfs:comment',
-        ),
-      ),
-      'name' => array(
-        'predicates' => array(
-          0 => 'dc:title',
-        ),
-      ),
-      'rdftype' => array(
-        0 => 'skos:ConceptScheme',
-      ),
-    ); /* WAS: '' */
-  }
 }
 
 /**

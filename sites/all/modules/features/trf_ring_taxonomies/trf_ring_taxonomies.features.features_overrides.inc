@@ -45,36 +45,6 @@ function trf_ring_taxonomies_features_override_default_overrides() {
     ),
   );
   $overrides["taxonomy.color.weight"] = -8;
-  $overrides["taxonomy.elements.rdf_mapping"] = array(
-    'description' => array(
-      'predicates' => array(
-        0 => 'rdfs:comment',
-      ),
-    ),
-    'name' => array(
-      'predicates' => array(
-        0 => 'dc:title',
-      ),
-    ),
-    'rdftype' => array(
-      0 => 'skos:ConceptScheme',
-    ),
-  );
-  $overrides["taxonomy.width.rdf_mapping"] = array(
-    'description' => array(
-      'predicates' => array(
-        0 => 'rdfs:comment',
-      ),
-    ),
-    'name' => array(
-      'predicates' => array(
-        0 => 'dc:title',
-      ),
-    ),
-    'rdftype' => array(
-      0 => 'skos:ConceptScheme',
-    ),
-  );
 
   // Exported overrides for: variable
   $overrides["variable.field_bundle_settings_taxonomy_term__collection.value|extra_fields|display|description|featured"] = array(
