@@ -60,7 +60,16 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * Hide alt text on images since it will always be the same for rings.
  */
 
-.node-rings-form .field-name-field-file-image-alt-text {
+.node-rings-form .field-name-field-file-image-alt-text,
+.node-rings-form .form-item-field-images-und-0-alt {
+  display: none;
+}
+
+/*
+ * Hide duplicate title text on images if image module inserts it.
+ */
+
+.node-rings-form .field-name-field-file-image-title-text {
   display: none;
 }
 
