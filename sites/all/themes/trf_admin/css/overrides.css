@@ -61,7 +61,17 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  */
 
 .node-rings-form .field-name-field-file-image-alt-text,
-.node-rings-form .form-item-field-images-und-0-alt {
+/* Stupidly, there's no common type class to the following fields */
+.node-rings-form .form-item-field-images-und-0-alt,
+.node-rings-form .form-item-field-images-und-1-alt,
+.node-rings-form .form-item-field-images-und-2-alt,
+.node-rings-form .form-item-field-images-und-3-alt,
+.node-rings-form .form-item-field-images-und-4-alt,
+.node-rings-form .form-item-field-images-und-5-alt,
+.node-rings-form .form-item-field-images-und-6-alt,
+.node-rings-form .form-item-field-images-und-7-alt,
+.node-rings-form .form-item-field-images-und-8-alt,
+.node-rings-form .form-item-field-images-und-9-alt {
   display: none;
 }
 
