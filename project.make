@@ -168,7 +168,6 @@ libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/arch
 libraries[plupload][destination] = "libraries"
 
 libraries[predis][directory_name] = "predis"
-libraries[predis][type] = "libraries"
+libraries[predis][type] = "get"
 libraries[plupload][download][type] = "file"
 libraries[predis][download][url] = https://github.com/nrk/predis/archive/v1.0.tar.gz
-libraries[predis][destination] = "libraries"
