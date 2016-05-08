@@ -129,6 +129,8 @@ projects[plupload][version] = "1.7"
 
 projects[redirect][version] = "1.0-rc3"
 
+projects[redis][version] = "3.12"
+
 projects[searchapimultiaggregate][version] = "1.2"
 
 projects[stringoverrides][version] = "1.8"
@@ -161,3 +163,8 @@ libraries[plupload][directory_name] = "plupload"
 libraries[plupload][type] = "libraries"
 libraries[plupload][download][type] = "file"
 libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
+
+libraries[predis][directory_name] = "predis"
+libraries[predis][type] = "libraries"
+libraries[plupload][download][type] = "file"
+libraries[predis][download][url] = https://github.com/nrk/predis/archive/v1.0.tar.gz

@@ -20,6 +20,11 @@ dependencies:
     php:
         "drush/drush": "8.0.5"
 
+# Additional extensions
+runtime:
+    extensions:
+        - redis
+
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
