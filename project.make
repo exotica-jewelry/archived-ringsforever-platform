@@ -54,6 +54,11 @@ projects[ds][version] = "2.14"
 
 projects[ds_extra_layouts][version] = "1.1"
 
+projects[editablefields][version] = "3.x-dev"
+projects[editablefields][download][type] = "git"
+projects[editablefields][download][url] = "http://cgit.drupalcode.org/editablefields"
+projects[editablefields][download][revision] = "9c618d43974476db8a94ba7dcc4bf59df0b28363"
+
 projects[elements][version] = "1.4"
 
 projects[entity_embed][version] = "1.0-alpha4"
