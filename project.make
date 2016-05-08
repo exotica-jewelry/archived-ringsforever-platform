@@ -10,6 +10,12 @@ projects[commerce_kickstart][type] = core
 ; Drush make allows a default sub directory for all contributed projects.
 defaults[projects][subdir] = contrib
 
+; Patches against Commerce Kickstart modules.
+projects[cloud_zoom][patches][] = "https://www.drupal.org/files/issues/cloud_zoom-1.0.3-touch-enable-1568270-3.patch"
+projects[rules][patches][] = "http://cgit.drupalcode.org/rules/patch/?id=b79bbb97dbc0e9bd0fa20c17bfaf62dc8f9bf7b7"
+projects[token][patches][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
+projects[views][patches][] = "https://www.drupal.org/files/issues/views-row-class-underscores-1371118-27.patch"
+
 ; ================
 ; Contrib modules.
 ; ================
