@@ -153,18 +153,22 @@ libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "libraries"
 libraries[ckeditor][download][type] = "file"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.8/ckeditor_4.5.8_standard.zip"
+libraries[ckeditor][destination] = "libraries"
 
 libraries[elevatezoom][directory_name] = "elevatezoom"
 libraries[elevatezoom][type] = "libraries"
 libraries[elevatezoom][download][type] = "git"
 libraries[elevatezoom][download][url] = "https://github.com/elevateweb/elevatezoom.git"
+libraries[elevatezoom][destination] = "libraries"
 
 libraries[plupload][directory_name] = "plupload"
 libraries[plupload][type] = "libraries"
 libraries[plupload][download][type] = "file"
 libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
+libraries[plupload][destination] = "libraries"
 
 libraries[predis][directory_name] = "predis"
 libraries[predis][type] = "libraries"
 libraries[plupload][download][type] = "file"
 libraries[predis][download][url] = https://github.com/nrk/predis/archive/v1.0.tar.gz
+libraries[predis][destination] = "libraries"
