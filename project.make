@@ -48,8 +48,6 @@ projects[ds][version] = "2.14"
 
 projects[ds_extra_layouts][version] = "1.1"
 
-projects[editablefields][version] = "1.0-alpha2+14-dev"
-
 projects[elements][version] = "1.4"
 
 projects[entity_embed][version] = "1.0-alpha4"
@@ -68,9 +66,6 @@ projects[ffc][version] = "1.0-beta2"
 projects[ffc][patches][] = "https://www.drupal.org/files/issues/ffc-allow-multiple-conditions-2215567-2.patch"
 
 projects[field_formatter_settings][version] = "1.1"
-
-projects[field_multiple_limit][version] = "1.0-alpha4+2-dev"
-projects[field_multiple_limit][patches][] = "https://www.drupal.org/files/field_multiple_limit-ignore_missing_cardinality-1958614-1.patch"
 
 projects[field_validation][version] = "2.6"
 
