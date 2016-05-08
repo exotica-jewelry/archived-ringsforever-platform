@@ -76,6 +76,9 @@ projects[ffc][patches][] = "https://www.drupal.org/files/issues/ffc-allow-multip
 
 projects[field_formatter_settings][version] = "1.1"
 
+projects[field_multiple_limit][download][branch] = "7.x-1.x"
+projects[field_multiple_limit][download][revision] = "6bbcd72"
+
 projects[field_validation][version] = "2.6"
 
 projects[file_entity][version] = "2.0-beta2"
