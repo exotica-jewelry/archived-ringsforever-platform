@@ -30,8 +30,6 @@ projects[charts][version] = "2.0-rc1"
 
 projects[ckeditor][version] = "1.17"
 
-projects[cloud_zoom][version] = "1.1+1-dev"
-
 projects[coffee][version] = "2.2"
 
 projects[colorbox][version] = "2.10"
