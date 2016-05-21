@@ -20,7 +20,7 @@ var images = require('gulp-imagemin');
 
 // Documentation
 var sassdoc = require('sassdoc');
-var jsdoc = require("gulp-jsdoc");
+var jsdoc = require("gulp-jsdoc3");
 var styleguide = require('sc5-styleguide');
 
 // Gulp plugins
@@ -158,34 +158,21 @@ gulp.task('browser-sync', function() {
 //
 // Compile JSDoc
 //
-// @todo Template syntax for gulp-jsdoc doesn't appear to work. Figure
-// out some mechanism for removing footer (and setting a better theme).
-// @see https://www.npmjs.com/package/gulp-jsdoc#template
-gulp.task('jsdoc', function () {
-  return gulp.src('scripts/*.js')
+// @todo Currently this isn't working after upgrading to JSDoc3, which was
+// necessary because of a fatal bug in JSDoc. Investigate and fix.
 
-  .pipe(jsdoc.parser({
-    version: '1.0',
-    template: {
-      path: 'ink-docstrap',
-      systemName: '',
-      footer: '',
-      copyright: '',
-      navType: 'vertical',
-      theme: 'cosmo',
-      linenums: true,
-      collapseSymbols: false,
-      inverseNav: false
-    }
-  }))
+gulp.task('jsdoc', function (cb) {
+//  return gulp.src('scripts/*.js')
 
-  .pipe(jsdoc.generator('./documentation/jsdoc'))
+//  .pipe(jsdoc(cb))
+
+//  .pipe(jsdoc.generator('./documentation/jsdoc'))
 
   // Notify to say the task has complete
-  .pipe(notify({
-    message: 'JSDoc update complete',
-    onLast: true
-  }))
+//  .pipe(notify({
+//    message: 'JSDoc update complete',
+//    onLast: true
+//  }))
 });
 
 
