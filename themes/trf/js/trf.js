@@ -18,4 +18,18 @@ document.addEventListener("DOMContentLoaded", function() {
     temp.appendChild(content);
   }
 
+  /**
+  * Tooltips
+  * @class tooltips
+  */
+
+  /**
+  * Adding Tooltipster tooltips for links with titles
+  * @name tooltipster
+  *
+  * @memberOf tooltips
+  * @author Caleb Jacob and Louis Ameline
+  */
+  $('a[title]').tooltipster();
+
 });
