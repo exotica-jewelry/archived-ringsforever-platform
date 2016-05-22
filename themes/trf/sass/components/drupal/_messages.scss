@@ -9,10 +9,12 @@
 .messages.messages {
   padding: $padding $padding $padding (2 * $padding);
   margin: $padding;
+  @include font-size(16px);
   border: 5px solid $black;
   border-radius: $border-radius;
   box-shadow: none;
   color: $black;
+  background-position: 0.25rem 50%;
 
   em {
     color: $black;
