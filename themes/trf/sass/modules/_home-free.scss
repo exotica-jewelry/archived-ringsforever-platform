@@ -23,7 +23,6 @@
 
 .home-free__item {
   display: inline-block;
-  width: ($imagestyle-product_thumbnail * 2);
   margin: 0 $padding;
   list-style-type: none;
   border-radius: $border-radius;
@@ -31,7 +30,7 @@
 
 .home-free__link {
   display: block;
-  padding: $padding $padding $padding $imagestyle-product_thumbnail;
+  padding: $padding;
   @include font-size(16px);
   font-weight: $normal;
   text-align: left;
@@ -42,16 +41,4 @@
   @include is-on {
     background-color: $white;
   }
-}
-
-.home-free__link--shipping {
-  background-image: url('../images/min/box.svg');
-}
-
-.home-free__link--resizing {
-  background-image: url('../images/min/ruler.svg');
-}
-
-.home-free__link--engraving {
-  background-image: url('../images/min/pen.svg');
 }
