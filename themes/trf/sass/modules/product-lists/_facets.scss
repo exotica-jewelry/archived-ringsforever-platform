@@ -23,11 +23,6 @@
     font-family: $fontDefault;
     font-weight: $normal;
     color: $black;
-
-    @include is-on {
-      text-decoration: none;
-      border-bottom: 1px $black solid;
-    }
   }
 
   .facetapi-checkbox.facetapi-inactive,
@@ -36,6 +31,11 @@
     font-weight: $normal; // Needs an override since these are <a> elements.
     padding-left: ($padding / 10);
     color: $black;
+
+    @include is-on {
+      text-decoration: none;
+      border-bottom: 1px $black solid;
+    }
   }
 
   // Price slider
@@ -127,8 +127,13 @@
     // "Show more"/"Show fewer" link
     .facetapi-limit-link {
       font-family: $fontDefault;
-      font-weight: $normal;
+      color: $blue_dark;
       font-style: italic;
+      text-decoration: underline;
+
+      @include is-on {
+        text-decoration: none;
+      }
     }
   }
 }
