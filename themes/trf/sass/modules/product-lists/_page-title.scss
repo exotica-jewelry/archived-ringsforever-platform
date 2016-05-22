@@ -10,7 +10,8 @@
 }
 
 .view-collection-products .view-header .taxonomy-title,
-.view-collection-taxonomy-term .view-header .taxonomy-title {
+.view-collection-taxonomy-term .view-header .taxonomy-title,
+.page-taxonomy-term h1.title {
   @extend %header;
   top: -10px;
   left: 2px;
