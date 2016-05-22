@@ -18,14 +18,15 @@
   }
 
   // Checkbox-link facets
-  .facetapi-checkbox {
+  .facetapi-checkbox,
+  .facetapi-facetapi-links {
     font-family: $fontDefault;
     font-weight: $normal;
     color: $black;
-    @include descenders(1px);
 
     &.facetapi-inactive {
       padding-left: 0;
+      color: $black;
     }
 
     @include is-on {
@@ -113,6 +114,16 @@
           }
         }
       }
+    }
+  }
+
+  // Keywords (elements)
+  &.search_api_multi_aggregation_1 {
+
+    // "Show more"/"Show fewer" link
+    .facetapi-limit-link {
+      font-weight: $bold;
+      font-style: italic;
     }
   }
 }
