@@ -60,7 +60,7 @@ function trf_site_paths_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_file_pattern';
-  $strongarm->value = 'file/[file:filename]';
+  $strongarm->value = 'file/[file:name]';
   $export['pathauto_file_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
