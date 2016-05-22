@@ -32,7 +32,9 @@
 
   .facetapi-checkbox.facetapi-inactive,
   .facetapi-facetapi-links .facetapi-inactive {
-    padding-left: 0;
+    font-family: $fontDefault;
+    font-weight: $normal; // Needs an override since these are <a> elements.
+    padding-left: ($padding / 10);
     color: $black;
   }
 
@@ -124,7 +126,8 @@
 
     // "Show more"/"Show fewer" link
     .facetapi-limit-link {
-      font-weight: $bold;
+      font-family: $fontDefault;
+      font-weight: $normal;
       font-style: italic;
     }
   }
