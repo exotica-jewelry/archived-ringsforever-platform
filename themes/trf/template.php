@@ -16,13 +16,13 @@ function trf_preprocess_html(&$variables) {
 
     // jQuery Tooltipster
     drupal_add_js(drupal_get_path('theme', 'trf') . '/js/jquery.tooltipster.min.js', array(
-      'scope' => 'footer',
+      'scope' => 'header',
       'weight' => '10'
     ));
 
     // Theme JS: this should be last.
     drupal_add_js(drupal_get_path('theme', 'trf') . '/js/trf.js', array(
-      'scope' => 'footer',
+      'scope' => 'header',
       'weight' => '15'
     ));
 }

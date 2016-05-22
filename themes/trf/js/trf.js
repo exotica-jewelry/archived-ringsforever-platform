@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
 
   // Add captions to images with zoom set, based on their title attribute.
   var images = document.querySelectorAll( ".imagezoom-image" ),
