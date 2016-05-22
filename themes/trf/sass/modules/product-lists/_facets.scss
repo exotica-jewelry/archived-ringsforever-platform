@@ -24,15 +24,16 @@
     font-weight: $normal;
     color: $black;
 
-    &.facetapi-inactive {
-      padding-left: 0;
-      color: $black;
-    }
-
     @include is-on {
       text-decoration: none;
       border-bottom: 1px $black solid;
     }
+  }
+
+  .facetapi-checkbox.facetapi-inactive,
+  .facetapi-facetapi-links .facetapi-inactive {
+    padding-left: 0;
+    color: $black;
   }
 
   // Price slider
