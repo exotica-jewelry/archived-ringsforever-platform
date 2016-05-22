@@ -36,12 +36,13 @@ var reload = browserSync.reload;
 // Compile Sass
 //
 gulp.task('sass', function () {
-  return gulp.src('sass/**/*.scss')
+  return gulp.src('sass/styles.scss')
 
   .pipe(bulkSass())
 
   // Convert sass into css
   .pipe(sass({
+    includePaths: ['sass'],
     sourcemap: true,
     sourceComments: 'normal',
     onError: function(err) {
