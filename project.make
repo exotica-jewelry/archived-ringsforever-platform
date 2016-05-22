@@ -141,6 +141,8 @@ projects[table_element][version] = "1.0-beta5"
 
 projects[transliteration][version] = "3.2"
 
+projects[tvi][version] = "1.0-beta6"
+
 projects[typogrify][version] = "1.0-rc10"
 
 projects[views_data_export][version] = "3.0-beta9"
