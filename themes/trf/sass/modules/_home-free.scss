@@ -31,12 +31,10 @@
 .home-free__link {
   display: block;
   padding: $padding;
-  @include font-size(16px);
+  @include font-size(24px);
   font-weight: $normal;
-  text-align: left;
+  text-align: center;
   border-radius: $border-radius;
-  background-repeat: no-repeat;
-  background-position: 10% 50%;
 
   @include is-on {
     background-color: $white;
