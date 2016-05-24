@@ -28,9 +28,9 @@ function trf_site_settings_user_default_permissions() {
     'module' => 'environment_indicator',
   );
 
-  // Exported permission: 'access environment indicator development'.
-  $permissions['access environment indicator development'] = array(
-    'name' => 'access environment indicator development',
+  // Exported permission: 'access environment indicator development_vagrant'.
+  $permissions['access environment indicator development_vagrant'] = array(
+    'name' => 'access environment indicator development_vagrant',
     'roles' => array(),
     'module' => 'environment_indicator',
   );
@@ -38,6 +38,13 @@ function trf_site_settings_user_default_permissions() {
   // Exported permission: 'access environment indicator live'.
   $permissions['access environment indicator live'] = array(
     'name' => 'access environment indicator live',
+    'roles' => array(),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator live_platform'.
+  $permissions['access environment indicator live_platform'] = array(
+    'name' => 'access environment indicator live_platform',
     'roles' => array(),
     'module' => 'environment_indicator',
   );
@@ -51,9 +58,16 @@ function trf_site_settings_user_default_permissions() {
     'module' => 'environment_indicator',
   );
 
-  // Exported permission: 'access environment indicator staging'.
-  $permissions['access environment indicator staging'] = array(
-    'name' => 'access environment indicator staging',
+  // Exported permission: 'access environment indicator staging_mfpl'.
+  $permissions['access environment indicator staging_mfpl'] = array(
+    'name' => 'access environment indicator staging_mfpl',
+    'roles' => array(),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator staging_platform'.
+  $permissions['access environment indicator staging_platform'] = array(
+    'name' => 'access environment indicator staging_platform',
     'roles' => array(),
     'module' => 'environment_indicator',
   );

@@ -18,4 +18,32 @@ document.addEventListener("DOMContentLoaded", function() {
     temp.appendChild(content);
   }
 
+/**
+ * The jQuery plugin namespace.
+ * @external "jQuery.fn"
+ * @see {@link http://learn.jquery.com/plugins/|jQuery Plugins}
+ */
+
+/**
+ * Tooltips
+ * @function external:"jQuery.fn".tooltipster
+ * @class tooltips
+ */
+
+  /**
+  * Adding Tooltipster tooltips for links with titles
+  * @name tooltipster
+  *
+  * @memberOf tooltips
+  * @author Caleb Jacob and Louis Ameline
+  */
+
+  // Main menu
+  jQuery('.main-menu a').tooltipster({
+    position: 'bottom'
+  });
+
+  // All other links
+  jQuery('a[title]').tooltipster();
+
 });

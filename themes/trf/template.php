@@ -4,17 +4,27 @@
  * HTML preprocess hook
  */
 function trf_preprocess_html(&$variables) {
+
   // Adding Google fonts
   drupal_add_css('//fonts.googleapis.com/css?family=Lora:400italic|Roboto:500,300,700,900', array(
     'type' => 'external',
     'scope' => 'header',
     'weight' => '-1'
   ));
+
   // Adding theme scripts
-  drupal_add_js(drupal_get_path('theme', 'trf') . '/js/trf.js', array(
-    'scope' => 'header',
-    'weight' => '15'
-  ));
+
+    // jQuery Tooltipster
+    drupal_add_js(drupal_get_path('theme', 'trf') . '/js/jquery.tooltipster.min.js', array(
+      'scope' => 'header',
+      'weight' => '10'
+    ));
+
+    // Theme JS: this should be last.
+    drupal_add_js(drupal_get_path('theme', 'trf') . '/js/trf.js', array(
+      'scope' => 'header',
+      'weight' => '15'
+    ));
 }
 
 /**
