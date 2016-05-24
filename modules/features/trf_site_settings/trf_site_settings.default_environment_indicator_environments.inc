@@ -30,7 +30,7 @@ function trf_site_settings_default_environment_indicator_environment() {
   $environment->api_version = 1;
   $environment->machine = 'live_platform';
   $environment->name = 'Live: Platform.sh';
-  $environment->regexurl = '^master-[\\w.-]+\\.us.platform.sh';
+  $environment->regexurl = 'master-44icmnpta2qxy.us.platform.sh';
   $environment->settings = array(
     'color' => '#d12d1f',
     'text_color' => '#ffffff',
@@ -75,7 +75,7 @@ function trf_site_settings_default_environment_indicator_environment() {
   $environment->api_version = 1;
   $environment->machine = 'staging_platform';
   $environment->name = 'Staging: Platform.sh';
-  $environment->regexurl = '^dev-[\\w.-]+\\.us.platform.sh';
+  $environment->regexurl = 'dev-44icmnpta2qxy.us.platform.sh';
   $environment->settings = array(
     'color' => '#fff104',
     'text_color' => '#000000',
