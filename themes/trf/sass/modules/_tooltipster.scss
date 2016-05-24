@@ -4,8 +4,12 @@
 
 .tooltipster-default {
   background-color: rgba($black, 0.9);
+
+  .tooltipster-content {
+    font-family: $fontDefault;
+  }
 }
 
-.tooltipster-default .tooltipster-content {
-  font-family: $fontDefault;
+.tooltipster-blue {
+  background-color: $blue;
 }

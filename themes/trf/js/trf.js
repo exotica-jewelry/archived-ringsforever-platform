@@ -37,10 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
   * @memberOf tooltips
   * @author Caleb Jacob and Louis Ameline
   */
+
+  // Main menu
   jQuery('.main-menu a').tooltipster({
     position: 'bottom'
   });
 
+  // All other links
   jQuery('a[title]').tooltipster();
 
 });
