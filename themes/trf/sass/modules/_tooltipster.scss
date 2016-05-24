@@ -1,0 +1,11 @@
+//
+// Overrides to the Tooltipster partial in sass/global/vendor.
+//
+
+.tooltipster-default {
+  background-color: rgba($black, 0.9);
+}
+
+.tooltipster-default .tooltipster-content {
+  font-family: $fontDefault;
+}

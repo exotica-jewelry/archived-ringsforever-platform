@@ -1,4 +1,4 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
 
   // Add captions to images with zoom set, based on their title attribute.
   var images = document.querySelectorAll( ".imagezoom-image" ),
@@ -18,10 +18,17 @@ $(document).ready(function() {
     temp.appendChild(content);
   }
 
-  /**
-  * Tooltips
-  * @class tooltips
-  */
+/**
+ * The jQuery plugin namespace.
+ * @external "jQuery.fn"
+ * @see {@link http://learn.jquery.com/plugins/|jQuery Plugins}
+ */
+
+/**
+ * Tooltips
+ * @function external:"jQuery.fn".tooltipster
+ * @class tooltips
+ */
 
   /**
   * Adding Tooltipster tooltips for links with titles
@@ -30,6 +37,10 @@ $(document).ready(function() {
   * @memberOf tooltips
   * @author Caleb Jacob and Louis Ameline
   */
-  $('a[title]').tooltipster();
+  jQuery('.main-menu a').tooltipster({
+    position: 'bottom'
+  });
+
+  jQuery('a[title]').tooltipster();
 
 });
