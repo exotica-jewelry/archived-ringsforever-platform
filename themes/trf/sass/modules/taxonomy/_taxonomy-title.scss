@@ -1,0 +1,10 @@
+//
+// Taxonomy page title displays.
+//
+// Note that product displays configured through Commerce Kickstart also use
+// taxonomy, but are configured in modules/product-lists/_page.title.scss
+//
+
+.page-taxonomy-term h1.title {
+  @extend %page-title--product-list;
+}
