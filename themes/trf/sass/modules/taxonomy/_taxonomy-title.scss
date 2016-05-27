@@ -5,6 +5,6 @@
 // taxonomy, but are configured in modules/product-lists/_page.title.scss
 //
 
-.page-taxonomy-term h1.title {
+.page-taxonomy-term h1#page-title {
   @extend %page-title--product-list;
 }

@@ -18,7 +18,9 @@
   @extend %page-title;
   top: -10px;
   left: 2px;
+  margin-left: 0;
   margin-bottom: $padding;
+  @include font-size(42px);
   font-weight: $normal;
   line-height: 1em;
   text-shadow: none;
