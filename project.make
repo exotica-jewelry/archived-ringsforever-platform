@@ -58,9 +58,6 @@ projects[ds][version] = "2.14"
 
 projects[ds_extra_layouts][version] = "1.1"
 
-projects[editablefields][download][branch] = "7.x-1.x"
-projects[editablefields][download][revision] = "9c618d4"
-
 projects[elements][version] = "1.4"
 
 projects[entity_embed][version] = "1.0-alpha4"
@@ -176,5 +173,5 @@ libraries[plupload][destination] = "libraries"
 libraries[predis][directory_name] = "predis"
 libraries[predis][type] = "libraries"
 libraries[predis][download][type] = "file"
-libraries[predis][download][url] = https://github.com/nrk/predis/archive/v1.0.tar.gz
+libraries[predis][download][url] = "https://github.com/nrk/predis/archive/v1.0.tar.gz"
 libraries[predis][destination] = "libraries"
