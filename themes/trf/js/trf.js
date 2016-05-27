@@ -40,13 +40,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Main menu
   jQuery('.main-menu a').tooltipster({
-    position: 'bottom',
-    animation: 'grow'
+    position: 'bottom'
   });
 
   // Secondary menu
   jQuery('.secondary-menu a').tooltipster({
-    animation: 'grow'
   });
 
   // Exclusion list
