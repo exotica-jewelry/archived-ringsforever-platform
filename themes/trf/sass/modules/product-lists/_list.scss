@@ -45,11 +45,13 @@
 
       h2 {
         margin: 0 ($padding / 10);
-        padding-top: ($padding / 2);
+        padding: 0;
         @include font-size(16px);
       }
 
       a {
+        display: block;
+        padding-top: ($padding / 2);
         color: $black;
         font-weight: $normal;
         font-size: inherit;
