@@ -40,8 +40,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Main menu
   jQuery('.main-menu a').tooltipster({
-    position: 'bottom'
+    position: 'bottom',
+    animation: 'grow'
   });
+
+  // Secondary menu
+  jQuery('.secondary-menu a').tooltipster({
+    animation: 'grow'
+  });
+
+  // Exclusion list
+  jQuery('.toolbar-menu a').tooltipster('disable'); // Admin menu
+  jQuery('.logo-img > a').tooltipster('disable'); // Logo
 
   // All other links
   jQuery('a[title]').tooltipster();
