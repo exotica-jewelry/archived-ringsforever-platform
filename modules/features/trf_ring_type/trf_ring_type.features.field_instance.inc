@@ -190,18 +190,13 @@ function trf_ring_type_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'editablefields',
+        'module' => 'text',
         'settings' => array(
-          'click_to_edit' => 1,
-          'click_to_edit_style' => 'hover',
           'conditions' => array(),
-          'empty_text' => '',
-          'fallback_format' => 'text_default',
-          'fallback_settings' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
-        'type' => 'editable',
+        'type' => 'text_default',
         'weight' => 1,
       ),
       'product_list' => array(
