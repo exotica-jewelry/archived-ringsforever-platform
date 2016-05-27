@@ -14,6 +14,19 @@
   text-transform: none;
 }
 
+%page-title--product-list {
+  @extend %page-title;
+  top: -10px;
+  left: 2px;
+  margin-bottom: $padding;
+  font-weight: $normal;
+  line-height: 1em;
+  text-shadow: none;
+  color: $black;
+  border-bottom: 1px $black solid;
+  @include descenders;
+}
+
 h1#page-title {
   @extend %page-title;
   margin-left: ($padding * 0.4);

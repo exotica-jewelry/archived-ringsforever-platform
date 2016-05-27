@@ -11,15 +11,5 @@
 
 .view-collection-products .view-header .taxonomy-title,
 .view-collection-taxonomy-term .view-header .taxonomy-title {
-  @extend %header;
-  top: -10px;
-  left: 2px;
-  margin-bottom: $padding;
-  font-weight: $normal;
-  line-height: 1em;
-  text-transform: none;
-  text-shadow: none;
-  color: $black;
-  border-bottom: 1px $black solid;
-  @include descenders;
+  @extend %page-title--product-list;
 }
