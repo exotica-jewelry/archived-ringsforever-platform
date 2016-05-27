@@ -40,6 +40,7 @@
       background-image: none;
 
       h2 {
+        margin: 0 ($padding / 10);
         padding-top: ($padding / 2);
         @include font-size(16px);
       }
@@ -47,6 +48,7 @@
       a {
         color: $black;
         font-weight: $normal;
+        font-size: inherit;
       }
     }
 
