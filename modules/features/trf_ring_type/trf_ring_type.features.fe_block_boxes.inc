@@ -22,7 +22,7 @@ function trf_ring_type_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Ring pages: Free';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'ring_free';
-  $fe_block_boxes->body = 'Includes <a class="colorbox-node" href="/shipping-information">free shipping</a>, <a class="colorbox-node" href="/engraving-inside-outside-your-titanium-wedding-ring">free engraving</a> and <a class="colorbox-node" href="/sizing-resizing-our-guarantee">free resizing</a>.';
+  $fe_block_boxes->body = 'Includes <a class="colorbox-node" href="/shipping-information" title="Every order comes with free shipping in the U.S.">free shipping</a>, <a class="colorbox-node" href="/engraving-inside-outside-your-titanium-wedding-ring" title="Free inside-ring engraving makes a ring your own!">free engraving</a> and <a class="colorbox-node" href="/sizing-resizing-our-guarantee" title="Our rings are guaranteed to fit, and we\'ll resize any that don\'t">free resizing</a>.';
 
   $export['ring_free'] = $fe_block_boxes;
 
