@@ -47,11 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
   jQuery('.secondary-menu a').tooltipster({
   });
 
-  // Exclusion list
-  jQuery('.toolbar-menu a').tooltipster('disable'); // Admin menu
-  jQuery('.logo-img > a').tooltipster('disable'); // Logo
-
-  // All other links
-  jQuery('a[title]').tooltipster();
+  // All other links in content and footer areas
+  jQuery('.section-content a[title], .section-footer a[title]').tooltipster();
 
 });
