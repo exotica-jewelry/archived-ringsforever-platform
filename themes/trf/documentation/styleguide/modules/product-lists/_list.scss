@@ -34,19 +34,27 @@
       }
     }
 
+    .item-list .products-per-collection li .commerce-product-field {
+      margin-bottom: 0;
+    }
+
     // Title header
     li header {
       padding-top: 0;
       background-image: none;
 
       h2 {
-        padding-top: ($padding / 2);
+        margin: 0 ($padding / 10);
+        padding: 0;
+        @include font-size(16px);
       }
 
       a {
+        display: block;
+        padding-top: ($padding / 2);
         color: $black;
-        @include font-size(16px);
         font-weight: $normal;
+        font-size: inherit;
       }
     }
 

@@ -72,7 +72,7 @@
 
 ///  Create an optimized SVG URL for embedding.
 ///
-///  @link http://codepen.io/Tigt/blog/optimizing-svgs-in-data-uris
+///  @link http://codepen.io/tigt/post/optimizing-svgs-in-data-uris
 ///  @author Jakob Eriksen
 ///
 /// @group Utilities
@@ -97,7 +97,7 @@
     $encoded: #{$encoded}#{$chunk};
     $index: $index + $slice;
   }
-  @return url("data:image/svg+xml;charset=utf8,#{$encoded}");
+  @return url("data:image/svg+xml,#{$encoded}");
 }
 
 ///  Replace characters in a string.
