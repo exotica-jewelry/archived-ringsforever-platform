@@ -23,7 +23,7 @@ $featured-categories__item-width: $imagestyle-product_medium;
 
     @include is-on {
       @include card(1);
-      background-color: $blue_light;
+      background-color: $blue;
 
       .featured-categories__title {
         color: $white;
