@@ -7,33 +7,38 @@
   text-align: center;
 
   .taxonomy-term {
-    padding: $padding;
+    padding: $padding 0;
     cursor: pointer;
     border: 1px $white-off solid;
     border-radius: $border-radius;
     transition: $transition;
+    @include card(0);
 
     @include is-on {
       background-color: $white-off;
       border-color: transparent;
+      @include card(1);
     }
   }
 }
 
 .featured-categories__title {
   margin-bottom: $padding;
+  padding: 0 $padding;
   @include font-size(24px);
   font-weight: $thin;
 }
 
 .featured-categories__item {
   margin: 0 $padding $padding $padding;
-  width: ($imagestyle-product_medium + (2 * $padding-px) + (2px));
+  width: ($imagestyle-product_medium + 2px);
   display: inline-block;
   text-align: center;
   vertical-align: top;
 
   .field-name-field-cat-featured-rings {
+    border-top: $line-width $blue_light solid;
+    border-bottom: $line-width $blue_light solid;
 
     .node {
       margin-top: 0;
@@ -47,8 +52,13 @@
     }
   }
 
+  .links.node-links {
+    display: none;
+  }
+
   .taxonomy-term-description {
     margin: 0;
+    padding: 0 $padding;
     text-align: left;
 
     p {
