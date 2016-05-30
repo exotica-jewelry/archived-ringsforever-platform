@@ -114,6 +114,12 @@ function trf_ring_similar_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'sr sr--elements';
   $handler->display->display_options['display_description'] = 'Related rings by elements (keywords).';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'view more rings »';
   $handler->display->display_options['link_url'] = 'taxonomy/term/!1';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Primary element (field_ring_elements_primary) */
