@@ -19,7 +19,6 @@
 
 %otherrings__items {
   @include clearfix;
-  @include no-block-padding;
 }
 
 %otherrings__item {
@@ -109,5 +108,4 @@
 .field-name-field-related-rings,
 .field-name-field-related-rings__items {
   display: inline-block;
-  @include no-block-padding;
 }
