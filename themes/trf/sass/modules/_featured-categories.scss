@@ -16,14 +16,12 @@ $featured-categories__item-width: ($imagestyle-product_medium + 2px);
     position: relative;
     padding: $padding 0 0 0;
     cursor: pointer;
-    border: 1px $white-off solid;
+    background-color: $white;
     border-radius: $border-radius;
     transition: $transition;
     @include card(0);
 
     @include is-on {
-      background-color: $white;
-      border-color: transparent;
       @include card(1);
     }
   }
