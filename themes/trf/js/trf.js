@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
  * @see {@link http://learn.jquery.com/plugins/|jQuery Plugins}
  */
 
+  // Add title attribute to home page featured ring blocks.
+  jQuery('.featured-categories__item').attr('title', 'View all titanium rings in this category');
+
 /**
  * Tooltips
  * @function external:"jQuery.fn".tooltipster
@@ -31,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 
   /**
-  * Adding Tooltipster tooltips for links with titles
+  * Adding Tooltipster tooltip overlays.
   * @name tooltipster
   *
   * @memberOf tooltips
@@ -45,6 +48,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Secondary menu
   jQuery('.secondary-menu a').tooltipster({
+  });
+
+  // Home page featured rings
+  jQuery('.featured-categories__item').tooltipster({
   });
 
   // All other links in content and footer areas
