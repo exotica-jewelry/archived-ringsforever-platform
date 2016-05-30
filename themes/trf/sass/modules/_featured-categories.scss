@@ -7,7 +7,8 @@
   text-align: center;
 
   .taxonomy-term {
-    padding: $padding 0;
+    position: relative;
+    padding: $padding 0 0 0;
     cursor: pointer;
     border: 1px $white-off solid;
     border-radius: $border-radius;
@@ -48,6 +49,11 @@
       padding-left: 0 !important;
       width: auto !important;
     }
+
+    .field-name-field-images > img {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
   }
 
   .links.node-links {
@@ -55,14 +61,18 @@
   }
 
   .taxonomy-term-description {
+    position: absolute;
+    bottom: 0;
     margin: 0;
-    padding: 0 $padding;
+    padding: ($padding / 4) $padding;
     text-align: left;
+    background-color: rgba($black, 0.5);
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
 
     p {
-      margin-top: $padding;
-      margin-bottom: $padding;
-      @include font-size(18px);
+      @include font-size(16px);
+      line-height: 1.25;
 
       &:last-of-type {
         margin-bottom: 0;
