@@ -26,7 +26,7 @@ function trf_ring_similar_views_default_views() {
   $handler->display->display_options['css_class'] = 'sr';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'view all »';
+  $handler->display->display_options['use_more_text'] = 'view more rings »';
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
