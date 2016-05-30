@@ -2,7 +2,7 @@
 // Ring categories featured on the home page
 //
 
-$featured-categories__item-width: ($imagestyle-product_medium + 2px);
+$featured-categories__item-width: $imagestyle-product_medium;
 
 .featured-categories {
   padding-top: 2em;
@@ -23,10 +23,14 @@ $featured-categories__item-width: ($imagestyle-product_medium + 2px);
 
     @include is-on {
       @include card(1);
+      background-color: $blue_light;
 
       .featured-categories__title {
-        color: $blue;
-        border-bottom-color: $blue;
+        color: $white;
+      }
+
+      .taxonomy-term-description {
+        opacity: 1;
       }
     }
   }
@@ -37,7 +41,6 @@ $featured-categories__item-width: ($imagestyle-product_medium + 2px);
   padding: 0 $padding ($padding / 4) $padding;
   @include font-size(24px);
   font-weight: $thin;
-  border-bottom: 3px $white solid;
   transition: $transition;
 }
 
@@ -82,6 +85,8 @@ $featured-categories__item-width: ($imagestyle-product_medium + 2px);
     background-color: rgba($black, 0.5);
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+    transition: $transition;
+    opacity: 0;
 
     p {
       @include font-size(16px);
