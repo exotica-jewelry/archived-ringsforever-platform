@@ -6,6 +6,11 @@
 
 %otherrings {
   @include clearfix;
+
+  .more-link > a {
+    font-weight: $bold;
+    color: $blue_verydark;
+  }
 }
 
 %otherrings__label {
