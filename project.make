@@ -8,14 +8,13 @@ projects[platform][version] = 1.3
 projects[commerce_kickstart][type] = core
 
 ; Patches against Drupal core.
-projects[commerce_kickstart][patches][] = "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-111.patch"
-projects[commerce_kickstart][patches][] = "https://www.drupal.org/files/issues/drupal-remove_double_underscore_from_css_filter-1109854-43.patch"
+projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-111.patch"
+projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-remove_double_underscore_from_css_filter-1109854-43.patch"
 
 ; Patches against Commerce Kickstart modules.
-projects[cloud_zoom][patches][] = "https://www.drupal.org/files/issues/cloud_zoom-1.0.3-touch-enable-1568270-3.patch"
-projects[rules][patches][] = "http://cgit.drupalcode.org/rules/patch/?id=b79bbb97dbc0e9bd0fa20c17bfaf62dc8f9bf7b7"
-projects[token][patches][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
-projects[views][patches][] = "https://www.drupal.org/files/issues/views-row-class-underscores-1371118-27.patch"
+projects[rules][patch][] = "http://cgit.drupalcode.org/rules/patch/?id=b79bbb97dbc0e9bd0fa20c17bfaf62dc8f9bf7b7"
+projects[token][patch][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
+projects[views][patch][] = "https://www.drupal.org/files/issues/views-row-class-underscores-1371118-31.patch"
 
 ; Drush make allows a default sub directory for all contributed projects.
 defaults[projects][subdir] = contrib
@@ -73,7 +72,7 @@ projects[feeds][version] = "2.0-beta2"
 projects[feeds_tamper][version] = "1.1"
 
 projects[ffc][version] = "1.0-beta2"
-projects[ffc][patches][] = "https://www.drupal.org/files/issues/ffc-allow-multiple-conditions-2215567-2.patch"
+projects[ffc][patch][] = "https://www.drupal.org/files/issues/ffc-allow-multiple-conditions-2215567-2.patch"
 
 projects[field_formatter_settings][version] = "1.1"
 
@@ -101,10 +100,10 @@ projects[icon_tabs][version] = "1.5"
 projects[imagecache_actions][version] = "1.7"
 
 projects[imageapi_optimize][version] = "1.2"
-projects[imageapi_optimize][patches][] = "https://www.drupal.org/files/issues/imageapi_optimize-add-resmushit-service-2458453-25.patch"
+projects[imageapi_optimize][patch][] = "https://www.drupal.org/files/issues/imageapi_optimize-add-resmushit-service-2458453-25.patch"
 
 projects[imagezoom][version] = "2.0-beta2"
-projects[imagezoom][patches][] = "https://www.drupal.org/files/issues/imagezoom-image_thumbnails_are-2623896-2.patch"
+projects[imagezoom][patch][] = "https://www.drupal.org/files/issues/imagezoom-image_thumbnails_are-2623896-2.patch"
 
 projects[imce][version] = "1.10"
 
