@@ -23,15 +23,22 @@ $featured-categories__item-width: ($imagestyle-product_medium + 2px);
 
     @include is-on {
       @include card(1);
+
+      .featured-categories__title {
+        color: $blue;
+        border-bottom-color: $blue;
+      }
     }
   }
 }
 
 .featured-categories__title {
   margin-bottom: $padding;
-  padding: 0 $padding;
+  padding: 0 $padding ($padding / 4) $padding;
   @include font-size(24px);
   font-weight: $thin;
+  border-bottom: 3px $white solid;
+  transition: $transition;
 }
 
 .featured-categories__item {
@@ -69,7 +76,7 @@ $featured-categories__item-width: ($imagestyle-product_medium + 2px);
     bottom: 0;
     margin: 0;
     padding: ($padding / 4) $padding;
-    width: ($featured-categories__item-width - 2px);
+    width: $featured-categories__item-width;
     text-align: left;
     color: $white;
     background-color: rgba($black, 0.5);
