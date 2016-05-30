@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // Add title attribute to home page featured ring blocks.
   jQuery('.featured-categories__item').attr('title', 'View all titanium rings in this category');
 
+  // Remove image titles when they appear in home page featured ring blocks.
+  jQuery('.field-name-field-cat-featured-rings img').attr('title', '');
+
 /**
  * Tooltips
  * @function external:"jQuery.fn".tooltipster
