@@ -60,6 +60,7 @@
     text-align: left;
 
     p {
+      margin-top: $padding;
       margin-bottom: $padding;
       @include font-size(18px);
 
