@@ -73,7 +73,6 @@ projects[feeds_tamper][version] = "1.1"
 
 projects[ffc][version] = "1.0-beta2"
 projects[ffc][patch][] = "https://www.drupal.org/files/issues/ffc-allow-multiple-conditions-2215567-2.patch"
-projects[ffc][patch][] = "https://www.drupal.org/files/issues/views_integration_for_ffc-1983004-9.patch"
 
 projects[field_formatter_settings][version] = "1.1"
 
