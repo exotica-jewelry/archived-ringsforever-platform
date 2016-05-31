@@ -94,7 +94,7 @@ projects[globalredirect][version] = "1.5"
 
 projects[hide_submit][version] = "2.4"
 
-projects[hierarchical_select][version] = "3.0-beta4"
+projects[hierarchical_select][version] = "3.0-beta6"
 
 projects[icon_tabs][version] = "1.5"
 
