@@ -9,8 +9,10 @@
 
 // Via Bower + sass-module-importer
 @import "saffron";
+@import "sass-mq";
 
 // Utils
+@import "global/variables/breakpoints";
 @import "global/variables/colors";
 @import "global/variables/fonts";
 @import "global/variables/patterns";

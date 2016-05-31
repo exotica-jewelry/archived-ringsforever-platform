@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "saffron": "~0.2.3"
+    "saffron": "~0.2.3",
+    "sass-mq": "~3.2.9"
   }
 }
