@@ -31,6 +31,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "kss": "^2.0.2",
     "node-sass": "^3.4.2",
+    "sass-module-importer": "^1.2.1",
     "sassdoc": "^2.1.9",
     "sc5-styleguide": "^0.3.41"
   }

@@ -9,10 +9,11 @@ var styleguidePath = 'documentation/styleguide';
 // Sass
 var sass = require("gulp-sass");
 var bulkSass = require('gulp-sass-bulk-import');
+var moduleImporter = require('sass-module-importer');
 
 // Preprocess plugins
 var autoprefixer = require('gulp-autoprefixer');
-var filter = require('gulp-filter')
+var filter = require('gulp-filter');
 var sourcemaps = require('gulp-sourcemaps');
 
 // Images
@@ -39,6 +40,8 @@ gulp.task('sass', function () {
   return gulp.src('sass/styles.scss')
 
   .pipe(bulkSass())
+
+  .pipe(sass({ importer: moduleImporter() }))
 
   // Convert sass into css
   .pipe(sass({
