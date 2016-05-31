@@ -1,0 +1,25 @@
+//
+// Preface zone: Regions one, two and three
+//
+
+.zone-preface {
+  margin-bottom: 0;
+  padding-top: 0;
+  min-height: 2rem;
+  background-color: transparent;
+  @include clearfix;
+}
+
+#region-preface-first {
+  margin-left: 0;
+}
+
+#region-preface-second {
+
+}
+
+#region-preface-third {
+  position: absolute;
+  right: 0;
+  margin-right: 0;
+}
