@@ -226,7 +226,6 @@
 //
 
 .block-menu-tertiary-navigation {
-  font-family: $fontDefault;
 
   ul.menu li.collapsed,
   ul.menu li.leaf {
@@ -235,11 +234,13 @@
     display: inline-block;
 
     a {
-      background-color: #fff;
-      padding: 10px 10px 11px 10px;
+      color: $white;
+      background-color: $blue;
+      padding: ($padding / 2) $padding $padding $padding;
       font-family: $fontDefault;
       font-weight: $bold;
-      opacity: 0.8;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
     }
   }
 }

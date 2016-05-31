@@ -41,6 +41,7 @@ $featured-categories__item-width: $imagestyle-product_medium;
   padding: 0 $padding ($padding / 4) $padding;
   @include font-size(24px);
   font-weight: $thin;
+  text-transform: capitalize;
   transition: $transition;
 }
 
