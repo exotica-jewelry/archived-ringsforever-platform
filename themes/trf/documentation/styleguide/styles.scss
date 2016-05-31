@@ -4,8 +4,13 @@
 // Imports
 //
 
-// Utils
+// Third-party
 @import "global/vendor/*";
+
+// Via Bower + sass-module-importer
+@import "saffron";
+
+// Utils
 @import "global/variables/colors";
 @import "global/variables/fonts";
 @import "global/variables/patterns";
