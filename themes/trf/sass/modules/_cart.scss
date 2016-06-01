@@ -1,0 +1,61 @@
+//
+// Shopping cart block
+//
+
+.block-shopping-cart-block {
+  .content {
+    background-color: $white;
+    background-position: 5px 5px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    @include card(1);
+
+    .view-shopping-cart {
+
+      .view-empty p {
+        @include font-size(14px);
+        font-family: $fontDefault;
+        font-weight: $normal;
+      }
+
+      .line-item-summary {
+
+        // "1 item"
+        .line-item-quantity {
+          @include font-size(14px);
+          font-family: $fontDefault;
+          font-weight: $normal;
+          color: $blue_verydark;
+        }
+
+        // total
+        .line-item-total {
+          @include font-size(14px);
+          font-family: $fontDefault;
+          font-weight: $thin;
+        }
+
+        // checkout
+        ul.links {
+          padding: 0;
+          background-color: transparent;
+          @include font-size(16px);
+
+          li a {
+            display: block;
+            padding: 0 $padding $padding $padding;
+            background-color: $blue_verydark;
+            border-top-right-radius: $border-radius;
+            font-family: $fontDefault;
+            font-weight: $bold;
+
+            @include is-on {
+              background-color: $blue;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

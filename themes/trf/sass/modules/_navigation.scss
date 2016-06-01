@@ -241,6 +241,10 @@
       font-weight: $bold;
       border-top-left-radius: $border-radius;
       border-top-right-radius: $border-radius;
+
+      @include is-on {
+        background-color: $blue_dark;
+      }
     }
   }
 }
