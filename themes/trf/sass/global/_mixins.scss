@@ -122,19 +122,6 @@
   overflow: hidden;
 }
 
-/// Provides a small scale-up effect.
-///
-/// @param {Number} $scale - scale amount (1 = 100%)
-/// @param {String} $duration - length of transition (in the format 0.1s)
-///
-/// @author Ivan Boothe
-///
-/// @group Utilities
-@mixin grow($scale: 1.05, $duration: 0.3s) {
-  transform: scale($scale);
-  transition: transform $duration linear;
-}
-
 /// Gives a card depth effect.
 ///
 /// @param {Number} $depth - depth level (between 1 and 5)
