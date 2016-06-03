@@ -5,23 +5,27 @@
 .block-shopping-cart-block {
   .content {
     background-color: $white;
-    background-position: 5px 5px;
+    background-position: 5px ($padding / 2);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     @include card(1);
 
     .view-shopping-cart {
 
+      // empty
       .view-empty p {
+        padding-top: ($padding / 4);
         @include font-size(14px);
         font-family: $fontDefault;
         font-weight: $normal;
       }
 
       .line-item-summary {
+        height: auto;
 
         // "1 item"
         .line-item-quantity {
+          padding-top: ($padding / 4);
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $normal;
@@ -30,6 +34,7 @@
 
         // total
         .line-item-total {
+          padding-top: ($padding / 4);
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $thin;
@@ -43,11 +48,15 @@
 
           li a {
             display: block;
-            padding: 0 $padding $padding $padding;
+            margin-top: ($padding / 2 * -1);
+            padding: ($padding * 2/3) $padding ($padding * 2) $padding;
             background-color: $blue_verydark;
+            border-top-left-radius: $border-radius;
             border-top-right-radius: $border-radius;
             font-family: $fontDefault;
-            font-weight: $bold;
+            font-weight: $normal;
+            @include a-slidehover("up");
+            @include card(1);
 
             @include is-on {
               background-color: $blue;

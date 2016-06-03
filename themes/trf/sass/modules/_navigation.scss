@@ -38,26 +38,11 @@
         background-color: transparent;
         color: $black;
         border: 0;
-
-        &:after {
-          clear: both;
-          display: block;
-          content: "";
-          position: relative;
-          width: 0;
-          left: 0;
-          height: 1px;
-          background-color: $white;
-          transition: $transition_short;
-        }
+        @include a-border-bottom();
 
         @include is-on {
           color: $white;
           background-color: transparent;
-
-          &:after {
-            width: 100%;
-          }
         }
 
         &.active,
@@ -65,18 +50,8 @@
           background-color: transparent;
           color: $white;
 
-          &:after {
-            background-color: $white;
-            width: 100%;
-            left: 0;
-          }
-
           @include is-on {
             color: $white;
-
-            &:after {
-              width: 0;
-            }
           }
         }
       }
@@ -137,28 +112,11 @@
         color: $black;
         background-color: transparent;
         border: 0;
-
-        &:after {
-          clear: both;
-          display: block;
-          content: "";
-          position: relative;
-          width: 0;
-          left: 50%;
-          height: 3px;
-          background-color: $blue;
-          border-radius: $border-radius;
-          transition: $transition_short;
-        }
+        @include a-border-bottom($blue, 3px, center);
 
         @include is-on {
           color: $blue_dark;
           background-color: transparent;
-
-          &:after {
-            width: 100%;
-            left: 0;
-          }
         }
 
         &.active,
@@ -166,19 +124,8 @@
           background-color: transparent;
           color: $blue_dark;
 
-          &:after {
-            background-color: $blue;
-            width: 100%;
-            left: 0;
-          }
-
           @include is-on {
             color: $white;
-
-            &:after {
-              width: 0;
-              left: 50%;
-            }
           }
         }
       }
@@ -234,13 +181,17 @@
     display: inline-block;
 
     a {
-      color: $white;
-      background-color: $blue;
+      display: block;
+      position: relative;
+      margin-bottom: ($padding * -0.5);
       padding: ($padding / 2) $padding $padding $padding;
       font-family: $fontDefault;
-      font-weight: $bold;
+      font-weight: $normal;
+      color: $white;
+      background-color: $blue;
       border-top-left-radius: $border-radius;
       border-top-right-radius: $border-radius;
+      @include a-slidehover("up");
 
       @include is-on {
         background-color: $blue_dark;
