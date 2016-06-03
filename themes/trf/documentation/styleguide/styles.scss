@@ -5,11 +5,15 @@
 //
 
 // Third-party
-@import "global/vendor/*";
 
-// Via Bower + sass-module-importer
-@import "saffron";
-@import "sass-mq";
+  // Via Bower + sass-module-importer
+  @import "sass-mq";
+
+  // Via Bower alone
+  @import "../bower_components/motion-ui/motion-ui.scss";
+
+  // Via vendor folder
+  @import "global/vendor/*";
 
 // Utils
 @import "global/variables/breakpoints";
@@ -18,9 +22,9 @@
 @import "global/variables/patterns";
 @import "global/variables/icons";
 @import "global/variables/sizes";
-@import "global/variables/transitions";
 @import "global/functions";
 @import "global/mixins";
+@import "global/animations";
 
 // Base
 @import "base/html";

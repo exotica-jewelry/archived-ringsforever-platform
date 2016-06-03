@@ -1,0 +1,140 @@
+//
+// Transitions and animations
+//
+
+// Transition durations
+$t_s: 0.3s;
+$t_m: 0.5s;
+$t_l: 0.75s;
+
+// Transition defaults
+$transition: all $t_m ease;
+$transition_short: all $t_s ease;
+$transition_long: all $t_l ease;
+
+/// Animation: Grow
+///
+/// Provides a small scale-up effect.
+///
+/// @param {Number} $scale - scale amount (1 = 100%)
+/// @param {String} $duration - duration of transition (in the format 0.1s)
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin grow($scale: 1.05, $duration: $t_s) {
+  transform: scale($scale);
+  transition: transform $duration linear;
+}
+
+/// Animation: Slide on hover
+///
+/// Slides an item on hover.
+///
+/// @param {String} $direction - direction of slide: up, down, left, right
+/// @param {Length} $distance - distance of slide
+/// @param {String} $duration - duration of transition (in the format 0.1s)
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-slidehover($direction: "up", $distance: ($padding / 4), $duration: $t_s) {
+
+  $x: 0;
+  $y: 0;
+
+  @if $direction == "up" {
+    $x: 0;
+    $y: -1 * $distance;
+  }
+
+  @if $direction == "down" {
+    $x: 0;
+    $y: $distance;
+  }
+
+  @if $direction == "right" {
+    $x: $distance;
+    $y: 0;
+  }
+
+  @if $direction == "left" {
+    $x: -1 * $distance;
+    $y: 0;
+  }
+
+  transition-property: transform;
+  transition-timing-function: ease;
+  transition-duration: $duration;
+
+  @include is-on {
+    transform: translate($x, $y);
+  }
+
+}
+
+/// Animation: Bottom border
+///
+/// Creates a moving bottom border.
+///
+/// @param {Color} $color - color
+/// @param {Length} $height - height
+/// @param {String} $starting_point - the starting point, of: left, center
+/// @param {Length of time} $duration - duration of animation
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-border-bottom($color: $white, $height: 1px, $starting_point: 'left', $duration: $t_s) {
+
+  &:after {
+    clear: both;
+    display: block;
+    content: "";
+    position: relative;
+    width: 0;
+    @if $starting_point == "left" {
+      left: 0;
+    } @else if $starting_point == "center" {
+      left: 50%
+    }
+    height: $height;
+    border-radius: $border-radius;
+    background-color: $color;
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: $duration;
+  }
+
+  @include is-on {
+    &:after {
+      width: 100%;
+      @if $starting_point == "center" {
+        left: 0;
+      }
+    }
+  }
+
+  &.active,
+  &.active-trail {
+
+    &:after {
+      background-color: $color;
+      width: 100%;
+      left: 0;
+    }
+
+    @include is-on {
+
+      &:after {
+        width: 0;
+        @if $starting_point == "center" {
+          left: 50%;
+        }
+      }
+    }
+  }
+}
