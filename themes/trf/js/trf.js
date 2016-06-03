@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /**
  * Tooltips
- * @function external:"jQuery.fn".tooltipster
+ * @function external: "jQuery.fn".tooltipster
  * @class tooltips
  */
 
@@ -59,5 +59,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // All other links in content and footer areas
   jQuery('.section-content a[title], .section-footer a[title]').tooltipster();
+
+
+/**
+ * Shopping cart manipulations
+ * @function external: "jQuery.fn".tooltipster
+ * @class cart
+ *
+ * @author Ivan Boothe
+ */
+
+  // Add 'empty' and 'full' classes
+  if (jQuery('.block-shopping-cart-block .view-shopping-cart .view-empty').length) {
+    jQuery('.block-shopping-cart-block .view-shopping-cart').addClass('is-empty');
+  }
+  if (jQuery('.line-item-quantity').length) {
+    jQuery('.block-shopping-cart-block .view-shopping-cart').addClass('is-full');
+  }
 
 });
