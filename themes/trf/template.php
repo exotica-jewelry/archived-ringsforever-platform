@@ -3,7 +3,7 @@
 /**
  * HTML preprocess hook
  */
-function trf_preprocess_html(&$variables) {
+function trf_preprocess_html(&$vars) {
 
   // Adding Google fonts
   drupal_add_css('//fonts.googleapis.com/css?family=Lora:400italic|Roboto:500,300,700,900', array(
@@ -20,7 +20,7 @@ function trf_preprocess_html(&$variables) {
       'weight' => '10'
     ));
 
-    // Theme JS: this should be last.
+    // Theme JS: this should be last
     drupal_add_js(drupal_get_path('theme', 'trf') . '/js/trf.js', array(
       'scope' => 'header',
       'weight' => '15'
@@ -28,6 +28,8 @@ function trf_preprocess_html(&$variables) {
 }
 
 /**
+ * Retitle the contact page.
+ *
  * Implements hook_form_FORM_ID_alter()
  * @see https://drupal.org/node/853266#comment-4609888
  */

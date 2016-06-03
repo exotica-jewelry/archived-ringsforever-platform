@@ -1,3 +1,7 @@
+//
+// Footer scripts to run last
+//
+
 document.addEventListener("DOMContentLoaded", function() {
 
   // Add captions to images with zoom set, based on their title attribute.
@@ -31,6 +35,32 @@ document.addEventListener("DOMContentLoaded", function() {
   jQuery('.field-name-field-cat-featured-rings img').attr('title', '');
 
 /**
+ * Shopping cart manipulations
+ * @function external: "jQuery.fn".tooltipster
+ * @class cart
+ *
+ * @author Ivan Boothe
+ */
+
+  // Add class to indicate items in the cart
+  if (jQuery('.line-item-quantity').length) {
+    jQuery('body').addClass('has-items');
+  }
+
+  // Replace 'item' with 'ring' in cart block
+  jQuery('.line-item-quantity-label').text(function(index, text) {
+    return text.replace('item', 'ring');
+  });
+
+  // Strip the cents from the total in cart block
+  jQuery('.line-item-total-raw').text(function(index, text) {
+    return text.replace('.00', '');
+  });
+
+  // Add a title attribute to the checkout button
+  jQuery('.block-shopping-cart-block .line-item-summary-checkout a').attr('title', 'View your cart and checkout');
+
+/**
  * Tooltips
  * @function external: "jQuery.fn".tooltipster
  * @class tooltips
@@ -53,6 +83,10 @@ document.addEventListener("DOMContentLoaded", function() {
   jQuery('.secondary-menu a').tooltipster({
   });
 
+  // Cart block
+  jQuery('.block-shopping-cart-block .content a').tooltipster({
+  });
+
   // Home page featured rings
   jQuery('.featured-categories__item').tooltipster({
   });
@@ -60,21 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // All other links in content and footer areas
   jQuery('.section-content a[title], .section-footer a[title]').tooltipster();
 
-
-/**
- * Shopping cart manipulations
- * @function external: "jQuery.fn".tooltipster
- * @class cart
- *
- * @author Ivan Boothe
- */
-
-  // Add 'empty' and 'full' classes
-  if (jQuery('.block-shopping-cart-block .view-shopping-cart .view-empty').length) {
-    jQuery('.block-shopping-cart-block .view-shopping-cart').addClass('is-empty');
-  }
-  if (jQuery('.line-item-quantity').length) {
-    jQuery('.block-shopping-cart-block .view-shopping-cart').addClass('is-full');
-  }
-
+//
+// Closing tag
+//
 });

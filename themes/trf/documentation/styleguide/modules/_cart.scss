@@ -4,6 +4,8 @@
 
 .block-shopping-cart-block {
   .content {
+    position: relative;
+    margin-right: $padding;
     background-color: $white;
     background-position: 5px ($padding / 2);
     border-top-left-radius: $border-radius;
@@ -12,12 +14,16 @@
 
     .view-shopping-cart {
 
-      // empty
-      .view-empty p {
-        padding-top: ($padding / 4);
-        @include font-size(14px);
-        font-family: $fontDefault;
-        font-weight: $normal;
+      // Empty cartmessage
+      .view-empty {
+        padding-right: $padding;
+
+        p {
+          padding-top: ($padding / 4);
+          @include font-size(14px);
+          font-family: $fontDefault;
+          font-weight: $thin;
+        }
       }
 
       .line-item-summary {
@@ -29,25 +35,33 @@
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $normal;
-          color: $blue_verydark;
+          color: $black;
         }
 
         // total
         .line-item-total {
           padding-top: ($padding / 4);
+          padding-left: $padding;
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $thin;
         }
 
-        // checkout
         ul.links {
+          margin: 0;
           padding: 0;
           background-color: transparent;
           @include font-size(16px);
 
-          li a {
+          // view cart
+          .line-item-summary-view-cart a {
+          }
+
+          // checkout
+          .line-item-summary-checkout a {
             display: block;
+            position: relative;
+            right: ($padding * -1);
             margin-top: ($padding / 2 * -1);
             padding: ($padding * 2/3) $padding ($padding * 2) $padding;
             background-color: $blue_verydark;
