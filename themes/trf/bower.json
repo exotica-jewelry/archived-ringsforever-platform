@@ -19,7 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "saffron": "~0.2.3",
-    "sass-mq": "~3.2.9"
+    "sass-mq": "~3.2.9",
+    "motion-ui": "^1.2.2"
   }
 }
