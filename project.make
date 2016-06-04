@@ -12,6 +12,7 @@ projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ign
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-remove_double_underscore_from_css_filter-1109854-43.patch"
 
 ; Patches against Commerce Kickstart modules.
+projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
 projects[rules][patch][] = "http://cgit.drupalcode.org/rules/patch/?id=b79bbb97dbc0e9bd0fa20c17bfaf62dc8f9bf7b7"
 projects[token][patch][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
 projects[views][patch][] = "https://www.drupal.org/files/issues/views-row-class-underscores-1371118-31.patch"
