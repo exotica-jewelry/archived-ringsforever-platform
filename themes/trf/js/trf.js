@@ -47,16 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
     jQuery('body').addClass('has-items');
   }
 
-  // Replace 'item' with 'ring' in cart block
-  jQuery('.line-item-quantity-label').text(function(index, text) {
-    return text.replace('item', 'ring');
-  });
-
-  // Strip the cents from the total in cart block
-  jQuery('.line-item-total-raw').text(function(index, text) {
-    return text.replace('.00', '');
-  });
-
   // Add a title attribute to the checkout button
   jQuery('.block-shopping-cart-block .line-item-summary-checkout a').attr('title', 'View your cart and checkout');
 
