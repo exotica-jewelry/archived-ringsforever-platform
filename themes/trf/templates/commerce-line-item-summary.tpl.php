@@ -28,6 +28,7 @@
   </div>
   <?php endif; ?>
   <?php if ($total): ?>
+  <?php /* Added: Modifying total variable to strip decimals. */ ?><?php $total = str_replace(".00", "", $total); ?>
   <div class="line-item-total">
     <span class="line-item-total-label"><?php print $total_label; ?></span> <span class="line-item-total-raw"><?php print $total; ?></span>
   </div>
