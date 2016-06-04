@@ -33,14 +33,16 @@
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     @include card(1);
 
+    @include is-on {
+      @include card(0);
+    }
+
     &:hover,
     &:focus {
       background-color: $blue_dark;
-      text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
     }
 
     &:active {
-      @include card(0);
       text-shadow: none;
     }
   }
