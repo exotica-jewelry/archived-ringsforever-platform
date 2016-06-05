@@ -11,7 +11,7 @@
     @include card(0);
 
     @include is-on {
-      @include grow(1, 0);
+      @include a-grow(1, 0);
     }
   }
 }

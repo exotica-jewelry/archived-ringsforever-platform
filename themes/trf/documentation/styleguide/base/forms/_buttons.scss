@@ -29,7 +29,7 @@
     background: $blue_dark;
     color: $white;
     outline: 0;
-    @include grow;
+    @include a-grow;
   }
 
   &:active {
@@ -130,7 +130,7 @@ input[type="submit"] {
   @include card(0);
 
   @include is-on {
-    @include grow($scale: 1, $duration: 0);
+    @include a-grow($scale: 1, $duration: 0);
     background: $white;
     color: $blue_dark;
     outline: 0;

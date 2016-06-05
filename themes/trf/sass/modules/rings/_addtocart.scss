@@ -23,18 +23,20 @@
   .field-type-commerce-product-reference form.commerce-add-to-cart .form-submit {
     width: 90%;
     margin: $padding 0 0 0;
-    padding: ($padding / 2) 50px ($padding / 2) $padding;
+    padding: ($padding / 2) $padding;
     background-color: $blue;
-    background-position: 95% 55%;
+    background-image: none;
     @include font-size(24px);
     font-family: $fontDefault;
     font-weight: $thin;
     border-radius: $border-radius;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     @include card(1);
+    @include i-heart(30px, 8px);
 
     @include is-on {
       @include card(0);
+      @include i-heart(30px, 8px, $color: $red);
     }
 
     &:hover,

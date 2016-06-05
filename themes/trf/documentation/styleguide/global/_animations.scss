@@ -23,7 +23,7 @@ $transition_long: all $t_l ease;
 ///
 /// @group Animations
 
-@mixin grow($scale: 1.05, $duration: $t_s) {
+@mixin a-grow($scale: 1.05, $duration: $t_s) {
   @include no-scale-flash;
   transform: scale($scale);
   transition: transform $duration linear;
