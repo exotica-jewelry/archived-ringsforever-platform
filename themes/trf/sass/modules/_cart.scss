@@ -84,6 +84,7 @@
               margin-left: ($padding / 2);
               @include i-heart(15px, $top: 60%, $color: $white);
               height: 15px;
+              @include a-pulse;
             }
 
             @include is-on {
@@ -93,8 +94,14 @@
 
               &::after {
                 @include i-heart(15px, $color: $red);
-                @include a-pulse;
               }
+            }
+
+            &.is-clicked::after {
+              @include mui-animation(zoom(1, 2.5), fade(1, 0));
+              animation-duration: $t_s;
+              animation-iteration-count: 1;
+              animation-fill-mode: forwards;
             }
           }
         }
