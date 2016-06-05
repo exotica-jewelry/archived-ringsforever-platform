@@ -12,11 +12,9 @@
     border-top-right-radius: $border-radius;
     @include card(1);
     @include i-ringbox-empty(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $blue_verydark);
-    // @include i-heart-empty(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $red);
 
     .has-items & {
       @include i-ringbox(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $blue_verydark);
-      // @include i-heart(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 3), $red);
     }
 
     .view-shopping-cart {
@@ -30,6 +28,7 @@
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $thin;
+          color: $blue_verydark;
         }
       }
 
@@ -85,6 +84,7 @@
               margin-left: ($padding / 2);
               @include i-heart(15px, $top: 60%, $color: $white);
               height: 15px;
+              @include a-pulse;
             }
 
             @include is-on {
@@ -94,8 +94,14 @@
 
               &::after {
                 @include i-heart(15px, $color: $red);
-                @include a-pulse;
               }
+            }
+
+            &.is-clicked::after {
+              @include mui-animation(zoom(1, 2.5), fade(1, 0));
+              animation-duration: $t_s;
+              animation-iteration-count: 1;
+              animation-fill-mode: forwards;
             }
           }
         }

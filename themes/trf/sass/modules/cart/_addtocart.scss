@@ -2,21 +2,13 @@
 // Add to cart area styles
 //
 
-.page-node.node-type-rings {
+.page-node {
+
   // Add to cart area
   .field-type-commerce-product-reference form.commerce-add-to-cart,
   .field-name-field-product {
     padding: 0;
     background-image: none;
-  }
-
-  // Width selection
-  .field-type-commerce-product-reference form.commerce-add-to-cart label {
-    font-family: $fontDefault;
-    width: auto;
-  }
-  .field-type-commerce-product-reference form.commerce-add-to-cart label::after {
-    content: "";
   }
 
   // Add to cart button
