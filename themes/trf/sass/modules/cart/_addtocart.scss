@@ -39,5 +39,9 @@
     &:active {
       text-shadow: none;
     }
+
+    &.is-clicked {
+      @include a-zoomfade(1.25);
+    }
   }
 }

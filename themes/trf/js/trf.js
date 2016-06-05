@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", function() {
     jQuery('body').addClass('has-items');
   }
 
+  // Add class to add-to-cart button click
+  jQuery(".field-type-commerce-product-reference form.commerce-add-to-cart .form-submit").click(function(){
+    jQuery(this).addClass("is-clicked");
+  });
+
   // Add a title attribute to the checkout button
   jQuery('.block-shopping-cart-block .line-item-summary-checkout a').attr('title', 'View your cart and checkout');
 

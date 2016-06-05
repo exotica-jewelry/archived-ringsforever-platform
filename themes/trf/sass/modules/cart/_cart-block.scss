@@ -98,10 +98,7 @@
             }
 
             &.is-clicked::after {
-              @include mui-animation(zoom(1, 2.5), fade(1, 0));
-              animation-duration: $t_s;
-              animation-iteration-count: 1;
-              animation-fill-mode: forwards;
+              @include a-zoomfade;
             }
           }
         }
