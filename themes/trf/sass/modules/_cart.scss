@@ -12,11 +12,9 @@
     border-top-right-radius: $border-radius;
     @include card(1);
     @include i-ringbox-empty(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $blue_verydark);
-    // @include i-heart-empty(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $red);
 
     .has-items & {
       @include i-ringbox(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $blue_verydark);
-      // @include i-heart(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 3), $red);
     }
 
     .view-shopping-cart {
@@ -30,6 +28,7 @@
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $thin;
+          color: $blue_verydark;
         }
       }
 
