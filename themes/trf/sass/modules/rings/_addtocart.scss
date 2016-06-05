@@ -36,7 +36,7 @@
 
     @include is-on {
       @include card(0);
-      @include i-heart(30px, 8px, $color: $red);
+      @include i-heart(30px, ($padding-px / 2), $color: $red);
     }
 
     &:hover,

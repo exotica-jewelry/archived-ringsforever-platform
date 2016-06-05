@@ -29,6 +29,34 @@ $transition_long: all $t_l ease;
   transition: transform $duration linear;
 }
 
+/// Animation: Pulse
+///
+/// Provides a pulsing or heartbeat effect.
+///
+/// @param {String} $duration - duration of one pulse (in the format 1s)
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-pulse($duration: 1s) {
+  animation: pulse $duration infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 /// Animation: Slide on hover
 ///
 /// Slides an item on hover.
