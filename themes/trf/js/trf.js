@@ -47,17 +47,17 @@ document.addEventListener("DOMContentLoaded", function() {
     jQuery('body').addClass('has-items');
   }
 
-  // Add class to add-to-cart button click
-  jQuery(".field-type-commerce-product-reference form.commerce-add-to-cart .form-submit").click(function(){
-    jQuery(this).addClass("is-clicked");
-  });
-
   // Add a title attribute to the checkout button
   jQuery('.block-shopping-cart-block .line-item-summary-checkout a').attr('title', 'View your cart and checkout');
 
   // Add class to select buttons on click
-  jQuery(".block-shopping-cart-block .line-item-summary-checkout a, .commerce-add-to-cart-confirmation .button.checkout a").click(function(){
-    jQuery(this).addClass("is-clicked");
+  jQuery('.block-shopping-cart-block .line-item-summary-checkout a, .commerce-add-to-cart-confirmation .button.checkout a, .field-type-commerce-product-reference form.commerce-add-to-cart .form-submit').click(function(){
+    jQuery(this).addClass('is-clicked');
+  });
+
+  // Display message when add-to-cart button is clicked
+  jQuery('.field-type-commerce-product-reference form.commerce-add-to-cart .form-submit').click(function(){
+    jQuery(this).after('<p class="is-adding">Adding this ring to your cart...</p>');
   });
 
 /**

@@ -13,6 +13,7 @@
 
   // Add to cart button
   .field-type-commerce-product-reference form.commerce-add-to-cart .form-submit {
+    display: block;
     width: 90%;
     margin: $padding 0 0 0;
     padding: ($padding / 2) $padding;
@@ -43,5 +44,12 @@
     &.is-clicked {
       @include a-zoomfade(1.25);
     }
+  }
+
+  .is-adding {
+    margin-top: ($padding * -2);
+    @include font-size(16px);
+    font-weight: $normal;
+    @include a-loading;
   }
 }

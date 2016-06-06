@@ -77,7 +77,7 @@
             font-weight: $normal;
             @include a-slidehover("up");
             @include card(1);
-            @extend %heart-click;
+            @include heart-click;
 
             @include is-on {
               color: $red;

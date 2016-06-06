@@ -25,7 +25,7 @@
 
     &.checkout a {
       text-decoration: none;
-      @extend %heart-click;
+      @include heart-click;
 
       @include is-on {
         @include card(0);

@@ -2,20 +2,20 @@
 // Pulsing heart with fade-click animation
 //
 
-%heart-click {
+@mixin heart-click($size: 15px) {
 
   &::after {
     display: inline-block;
     content: '';
     margin-left: ($padding / 2);
-    @include i-heart(15px, $top: 60%, $color: $white);
-    height: 15px;
+    @include i-heart($size, $top: 60%, $color: $white);
+    height: $size;
     @include a-pulse;
   }
 
   @include is-on {
     &::after {
-      @include i-heart(15px, $color: $red);
+      @include i-heart($size, $color: $red);
     }
   }
 
