@@ -77,31 +77,12 @@
             font-weight: $normal;
             @include a-slidehover("up");
             @include card(1);
-
-            &::after {
-              display: inline-block;
-              content: '';
-              margin-left: ($padding / 2);
-              @include i-heart(15px, $top: 60%, $color: $white);
-              height: 15px;
-              @include a-pulse;
-            }
+            @extend %heart-click;
 
             @include is-on {
               color: $red;
               background-color: $blue;
               text-decoration: none;
-
-              &::after {
-                @include i-heart(15px, $color: $red);
-              }
-            }
-
-            &.is-clicked::after {
-              @include mui-animation(zoom(1, 2.5), fade(1, 0));
-              animation-duration: $t_s;
-              animation-iteration-count: 1;
-              animation-fill-mode: forwards;
             }
           }
         }

@@ -1,0 +1,25 @@
+//
+// Pulsing heart with fade-click animation
+//
+
+%heart-click {
+
+  &::after {
+    display: inline-block;
+    content: '';
+    margin-left: ($padding / 2);
+    @include i-heart(15px, $top: 60%, $color: $white);
+    height: 15px;
+    @include a-pulse;
+  }
+
+  @include is-on {
+    &::after {
+      @include i-heart(15px, $color: $red);
+    }
+  }
+
+  &.is-clicked::after {
+    @include a-zoomfade;
+  }
+}

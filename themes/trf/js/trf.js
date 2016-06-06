@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Add a title attribute to the checkout button
   jQuery('.block-shopping-cart-block .line-item-summary-checkout a').attr('title', 'View your cart and checkout');
 
-  // Add class to checkout button on click
-  jQuery(".block-shopping-cart-block .line-item-summary-checkout a").click(function(){
+  // Add class to select buttons on click
+  jQuery(".block-shopping-cart-block .line-item-summary-checkout a, .commerce-add-to-cart-confirmation .button.checkout a").click(function(){
     jQuery(this).addClass("is-clicked");
   });
 
