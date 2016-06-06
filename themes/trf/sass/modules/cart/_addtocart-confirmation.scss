@@ -5,9 +5,11 @@
 .commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation {
   width: 70%;
   margin-left: -35% !important;
+  padding-bottom: $padding;
 
   // Title
   .added-product-title {
+    @include font-size(16px);
     font-family: $fontHighlight;
     font-style: italic;
     text-transform: none;
@@ -19,16 +21,20 @@
 
     @include is-on {
       @include a-grow(1);
-      @include card(0);
     }
 
     &.checkout a {
       text-decoration: none;
       @extend %heart-click;
+
+      @include is-on {
+        @include card(0);
+      }
     }
 
     &.continue {
-      font-weight: $thin;
+      font-weight: $normal;
+      @include card(0);
     }
   }
 
