@@ -83,7 +83,7 @@ projects[field_multiple_limit][patch][] = "https://www.drupal.org/files/field_mu
 
 projects[field_validation][version] = "2.6"
 
-projects[file_entity][version] = "2.0-beta2"
+projects[file_entity][version] = "2.0-beta3"
 
 projects[file_entity_inline][version] = "1.0-beta1"
 
@@ -95,7 +95,7 @@ projects[globalredirect][version] = "1.5"
 
 projects[hide_submit][version] = "2.4"
 
-projects[hierarchical_select][version] = "3.0-beta6"
+projects[hierarchical_select][version] = "3.0-beta7"
 
 projects[icon_tabs][version] = "1.5"
 
