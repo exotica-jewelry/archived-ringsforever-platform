@@ -1,0 +1,27 @@
+//
+// Shopping cart page and first step of checkout process
+//
+
+.page-cart {
+
+  // Table header
+  .views-row-1 .views-field .views-label {
+    background-color: $blue_verydark;
+  }
+
+  // Quantity
+  .views-field-edit-quantity .form-item {
+    margin-top: 0;
+  }
+
+  // Checkout
+  #edit-checkout {
+    @extend .button--inline;
+    margin: 0 $padding;
+  }
+
+  // Order total
+  .field-name-commerce-order-total .field-items {
+    background-color: $white;
+  }
+}
