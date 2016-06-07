@@ -38,8 +38,7 @@
 }
 
 button,
-.button,
-input[type="submit"] {
+.button {
   @extend %button;
 }
 
