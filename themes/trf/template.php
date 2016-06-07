@@ -14,6 +14,12 @@ function trf_preprocess_html(&$vars) {
 
   // Adding theme scripts
 
+    // fastclick.js
+    drupal_add_js(drupal_get_path('theme', 'trf') . '/js/fastclick.min.js', array(
+      'scope' => 'header',
+      'weight' => '5'
+    ));
+
     // jQuery Tooltipster
     drupal_add_js(drupal_get_path('theme', 'trf') . '/js/jquery.tooltipster.min.js', array(
       'scope' => 'header',

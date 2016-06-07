@@ -4,6 +4,9 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
+  // Instantiate fastclick.js
+  FastClick.attach(document.body);
+
   // Add captions to images with zoom set, based on their title attribute.
   var images = document.querySelectorAll( ".imagezoom-image" ),
   L = images.length,
