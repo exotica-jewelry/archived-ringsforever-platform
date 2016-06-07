@@ -1,0 +1,62 @@
+//
+// Checkout process pages
+//
+
+// Progress block
+.block-commerce-checkout-progress {
+  padding-top: ($padding / 3);
+  background-color: $white;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.commerce-checkout-progress .first {
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+.page-checkout {
+
+  #commerce-checkout-form-checkout,
+  #commerce-checkout-form-review {
+
+    // Section headers
+    fieldset legend {
+      border-bottom-color: $black;
+    }
+
+    // Checkout buttons
+    fieldset.checkout-buttons .fieldset-wrapper {
+      margin: 0 0 $padding 0;
+    }
+
+    // Continue checkout button
+    .checkout-continue {
+      @extend .button--inline;
+
+      @include is-on {
+        @include card(0);
+      }
+    }
+  }
+
+}
+
+// Line items
+.commerce-responsive-table .views-row .field-content {
+}
+
+// Total
+.field-name-commerce-order-total .field-items {
+  background-color: $white;
+}
+
+// Are billing and shipping addresses the same?
+.commerce-customer-profile-copy {
+  .placeholder {
+    font-weight: $bold;
+    font-style: normal;
+    font-family: $fontDefault;
+    color: $blue_verydark;
+  }
+}

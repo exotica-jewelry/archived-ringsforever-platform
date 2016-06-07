@@ -25,11 +25,11 @@
     border-radius: $border-radius;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     @include card(1);
-    @include i-heart(30px, 8px);
+    @include i-heart(($padding-px * 2), ($padding-px / 2));
 
     @include is-on {
       @include card(0);
-      @include i-heart(30px, ($padding-px / 2), $color: $red);
+      @include i-heart(($padding-px * 2), ($padding-px / 2), $color: $red);
     }
 
     &:hover,

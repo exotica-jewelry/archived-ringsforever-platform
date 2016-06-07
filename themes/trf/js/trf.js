@@ -66,6 +66,17 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 /**
+ * Form manipulations
+ * @function external: "jQuery.fn".tooltipster
+ * @class form
+ *
+ * @author Ivan Boothe
+ */
+
+  // Preselect 'United States' in all country lists
+  jQuery('select.country option[value="US"]').attr('selected','selected');
+
+/**
  * Tooltips
  * @function external: "jQuery.fn".tooltipster
  * @class tooltips

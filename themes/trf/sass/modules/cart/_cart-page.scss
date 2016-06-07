@@ -32,6 +32,10 @@
   #edit-checkout {
     @extend .button--inline;
     margin: 0 $padding;
+
+    @include is-on {
+      @include card(0);
+    }
   }
 
   // Order total
