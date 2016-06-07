@@ -1,11 +1,13 @@
-//
-// Footer scripts to run last
-//
 
+// Instantiate fastclick.js
+if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+}
+
+// Scripts to add once the page has loaded.
 document.addEventListener("DOMContentLoaded", function() {
-
-  // Instantiate fastclick.js
-  FastClick.attach(document.body);
 
   // Add captions to images with zoom set, based on their title attribute.
   var images = document.querySelectorAll( ".imagezoom-image" ),
