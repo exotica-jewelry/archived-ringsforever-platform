@@ -9,9 +9,23 @@
     background-color: $blue_verydark;
   }
 
+  // Ring name
+  .views-field-line-item-title .field-content {
+    font-family: $fontHighlight;
+    font-style: italic;
+    @include font-size(18px);
+  }
+
   // Quantity
-  .views-field-edit-quantity .form-item {
-    margin-top: 0;
+  .views-field-edit-quantity {
+
+    .form-item {
+      margin-top: 0;
+    }
+
+    .form-text {
+      width: auto;
+    }
   }
 
   // Checkout
