@@ -31,11 +31,23 @@
     }
 
     // Continue checkout button
-    .checkout-continue {
+    .checkout-continue.checkout-continue.checkout-continue {
       @extend .button--inline;
+      @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2));
 
       @include is-on {
         @include card(0);
+        @include a-grow(1);
+        @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2), $color: $red);
+      }
+    }
+
+    // Cancel checkout button
+    .checkout-cancel {
+      font-family: $fontDefault;
+
+      @include is-on {
+        text-decoration: none;
       }
     }
   }
@@ -44,6 +56,7 @@
 
 // Line items
 .commerce-responsive-table .views-row .field-content {
+  @include font-size(18px);
 }
 
 // Total

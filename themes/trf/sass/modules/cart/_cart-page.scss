@@ -9,11 +9,15 @@
     background-color: $blue_verydark;
   }
 
+  // Line items
+  .view-commerce-cart-form-responsive .views-field .field-content {
+    @include font-size(18px);
+  }
+
   // Ring name
   .views-field-line-item-title .field-content {
     font-family: $fontHighlight;
     font-style: italic;
-    @include font-size(18px);
   }
 
   // Quantity
@@ -28,18 +32,41 @@
     }
   }
 
-  // Checkout
-  #edit-checkout {
-    @extend .button--inline;
-    margin: 0 $padding;
-
-    @include is-on {
-      @include card(0);
-    }
+  // Remove item
+  .commerce-line-item-views-form input.delete-line-item {
+    font-family: $fontDefault;
+    font-weight: $normal;
   }
 
   // Order total
   .field-name-commerce-order-total .field-items {
+    min-width: ($padding * 17.5);
+    width: ($padding * 17.5);
     background-color: $white;
+  }
+
+  // Action buttons
+  .commerce-line-item-views-form .commerce-line-item-actions {
+    margin: 0;
+    clear: both;
+    float: right;
+
+    // Update cart
+    #edit-submit {
+      margin-right: (2 * $padding);
+      font-family: $fontDefault;
+    }
+
+    // Checkout
+    #edit-checkout {
+      @extend .button--inline;
+      @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2));
+
+      @include is-on {
+        @include card(0);
+        @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2), $color: $red);
+      }
+    }
+
   }
 }
