@@ -68,7 +68,7 @@ $transition_long: all $t_l ease;
 ///
 /// Enlarges and fades, Tumblr-style.
 ///
-/// @param {String} $duration - duration of one pulse (in the format 1s)
+/// @param {Number} $zoom - amount of zoom; 1 = no zoom
 ///
 /// @author Ivan Boothe
 ///
@@ -208,9 +208,9 @@ $transition_long: all $t_l ease;
   padding-left: (($size * 2) + $padding);
 
   &::before {
+    position: absolute;
     display: block;
     content: '';
-    position: absolute;
     top: 50%;
     left: $size;
     color: $color;

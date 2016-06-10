@@ -91,6 +91,35 @@
   }
 }
 
+/// Allows for setting disabled state with simpler syntax
+///
+/// @author Ivan Boothe
+///
+/// @example scss - Sass
+///   a {
+///     color: blue;
+///
+///      @include disabled {
+///        color: grey;
+///      }
+///    }
+///
+/// @example scss - CSS output
+///   a {
+///     color: blue;
+///   }
+///
+///   a[disabled="disabled"] {
+///     color: grey;
+///   }
+/// @group Utilities
+
+@mixin disabled {
+  &[disabled="disabled"] {
+    @content;
+  }
+}
+
 /// Image replacement.
 ///
 /// @param {String} $imageURL - location of the image to use

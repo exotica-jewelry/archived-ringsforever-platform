@@ -12,44 +12,43 @@
   }
 
   // Add to cart button
-  .field-type-commerce-product-reference form.commerce-add-to-cart .form-submit {
-    display: block;
-    width: 90%;
-    margin: $padding 0 0 0;
-    padding: ($padding / 2) $padding;
-    background-color: $blue;
-    background-image: none;
-    @include font-size(24px);
-    font-family: $fontDefault;
-    font-weight: $thin;
-    border-radius: $border-radius;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-    @include card(1);
-    @include i-heart(($padding-px * 2), ($padding-px / 2));
-
-    @include is-on {
-      @include card(0);
-      @include i-heart(($padding-px * 2), ($padding-px / 2), $color: $red);
+  .field-type-commerce-product-reference form.commerce-add-to-cart {
+    .form-actions {
+      position: relative;
     }
 
-    &:hover,
-    &:focus {
-      background-color: $blue_dark;
-    }
+    .form-submit {
+      display: block;
+      width: 90%;
+      margin: $padding 0 0 0;
+      padding: ($padding / 2) $padding;
+      background-color: $blue;
+      background-image: none;
+      @include font-size(24px);
+      font-family: $fontDefault;
+      font-weight: $thin;
+      border-radius: $border-radius;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+      @include card(1);
+      @include i-heart(($padding-px * 2), ($padding-px / 2));
 
-    &:active {
-      text-shadow: none;
-    }
+      @include is-on {
+        @include card(0);
+        @include i-heart(($padding-px * 2), ($padding-px / 2), $color: $red);
+      }
 
-    &.is-clicked {
-      @include a-zoomfade(1.25);
-    }
-  }
+      &:hover,
+      &:focus {
+        background-color: $blue_dark;
+      }
 
-  .is-adding {
-    margin-top: ($padding * -2);
-    @include font-size(16px);
-    font-weight: $normal;
-    @include a-loading;
+      &:active {
+        text-shadow: none;
+      }
+
+      @include disabled {
+        @include a-zoomfade(1.25);
+      }
+    }
   }
 }

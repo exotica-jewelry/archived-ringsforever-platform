@@ -56,13 +56,18 @@ document.addEventListener("DOMContentLoaded", function() {
   jQuery('.block-shopping-cart-block .line-item-summary-checkout a').attr('title', 'View your cart and checkout');
 
   // Add class to select buttons on click
-  jQuery('.block-shopping-cart-block .line-item-summary-checkout a, .commerce-add-to-cart-confirmation .button.checkout a, .field-type-commerce-product-reference form.commerce-add-to-cart .form-submit').click(function(){
+  jQuery('.block-shopping-cart-block .line-item-summary-checkout a, .commerce-add-to-cart-confirmation .button.checkout a').click(function(){
     jQuery(this).addClass('is-clicked');
   });
 
   // Display message when add-to-cart button is clicked
   jQuery('.field-type-commerce-product-reference form.commerce-add-to-cart .form-submit').click(function(){
-    jQuery(this).after('<p class="is-adding">Adding this ring to your cart...</p>');
+    jQuery(this).after('<p class="is-loading">Adding this ring to your cart...</p>');
+  });
+
+  // Display message when checkout button is clicked
+  jQuery('.page-cart #edit-checkout').click(function(){
+    jQuery(this).after('<p class="is-loading">Loading...</p>');
   });
 
 /**
