@@ -25,6 +25,11 @@
       border-bottom-color: $black;
     }
 
+    // State dropdowns
+    .form-select.state {
+      max-width: 280px;
+    }
+
     // Checkout buttons
     fieldset.checkout-buttons .fieldset-wrapper {
       margin: 0 0 $padding 0;
