@@ -42,8 +42,6 @@ projects[ckeditor][version] = "1.17"
 
 projects[coffee][version] = "2.2"
 
-projects[colorbox][version] = "2.10"
-
 projects[colorbox_node][version] = "3.5"
 
 projects[commerce_feeds][version] = "1.4"
