@@ -25,7 +25,8 @@
 .page-checkout {
 
   #commerce-checkout-form-checkout,
-  #commerce-checkout-form-review {
+  #commerce-checkout-form-review,
+  #commerce-checkout-form-shipping {
 
     // Section headers
     fieldset legend {
@@ -93,10 +94,33 @@
 }
 
 // Shipping choices
-.commerce_shipping {
-  margin-bottom: $padding;
+.page-checkout-shipping {
 
-  legend {
-    display: none; // No need for this to be visible, even accessibly.
+  .commerce_shipping {
+    margin: $padding 0;
+
+    legend {
+      display: none; // No need for this to be visible, even accessibly.
+    }
+  }
+
+  .form-item-commerce-shipping-shipping-service {
+
+    @include is-on {
+      background-color: transparent;
+    }
+
+    label {
+      margin-left: ($padding / 2);
+      padding: 0 ($padding / 2);
+
+      @include is-on {
+        background-color: $white;
+      }
+    }
+
+    .description {
+      @include font-size(14px);
+    }
   }
 }
