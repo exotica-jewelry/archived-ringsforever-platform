@@ -4,7 +4,7 @@
 
 // Progress block
 .block-commerce-checkout-progress {
-  padding-top: ($padding / 3);
+  padding-top: (0.6 * $padding);
   background-color: $white;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
@@ -23,6 +23,11 @@
     // Section headers
     fieldset legend {
       border-bottom-color: $black;
+    }
+
+    // State dropdowns
+    .form-select.state {
+      max-width: 280px;
     }
 
     // Checkout buttons

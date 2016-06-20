@@ -16,19 +16,23 @@ textarea {
   border: 1px solid $blue_light;
   background-color: $white;
   width: 100%;
-  padding: 0.3rem;
+  padding: ($padding / 4);
   appearance: none;
   box-shadow: none;
   border-radius: none;
   transition: $transition_short;
   @include font-size(18px);
-  color: $blue;
+  color: $blue_verydark;
   font-family: $fontDefault;
   font-weight: $thin;
 
-  &:focus {
+  @include is-on {
     outline: none;
     border-color: $blue;
+  }
+
+  &::selection {
+    background: $blue_verydark;
   }
 }
 
