@@ -10,9 +10,16 @@
   border-top-right-radius: $border-radius;
 }
 
-.commerce-checkout-progress .first {
-  border-top-left-radius: $border-radius;
-  border-bottom-left-radius: $border-radius;
+.commerce-checkout-progress {
+
+  .first {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  .visited {
+    color: $blue;
+  }
 }
 
 .page-checkout {
@@ -52,8 +59,9 @@
       }
     }
 
-    // Cancel checkout button
-    .checkout-cancel {
+    // Cancel checkout buttons
+    .checkout-cancel,
+    .checkout-back {
       font-family: $fontDefault;
 
       @include is-on {
@@ -81,5 +89,14 @@
     font-style: normal;
     font-family: $fontDefault;
     color: $blue_verydark;
+  }
+}
+
+// Shipping choices
+.commerce_shipping {
+  margin-bottom: $padding;
+
+  legend {
+    display: none; // No need for this to be visible, even accessibly.
   }
 }
