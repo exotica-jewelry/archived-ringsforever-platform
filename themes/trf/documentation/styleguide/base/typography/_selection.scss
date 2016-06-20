@@ -3,12 +3,12 @@
 //
 
 ::selection {
-  background: color(page_bg);
+  background: $blue;
   color: $white;
 }
 
 body {
-  -webkit-tap-highlight-color: color(page_bg);
+  -webkit-tap-highlight-color: $blue;
 }
 
 img::selection {
