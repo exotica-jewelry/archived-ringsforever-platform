@@ -1,0 +1,23 @@
+//
+// Progress bar at the top of checkout pages
+//
+
+.block-commerce-checkout-progress {
+  padding-top: (0.6 * $padding);
+  background-color: $white;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+ul.inline.commerce-checkout-progress,
+ol.inline.commerce-checkout-progress {
+
+  li.first {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  li.visited {
+    color: $blue_verydark;
+  }
+}

@@ -165,8 +165,8 @@ angular.module('sgApp', [
     };
   })
   // Replace $variables with values found in variables object
-  .filter('setVariables', function() {
-    return function(str, variables) {
+  .filter('setVariables', ['lodash', function(_) {
+    function filterFn(str, variables) {
       if (!str) {
         return '';
       }
@@ -193,17 +193,19 @@ angular.module('sgApp', [
         str = str.replace(new RegExp('\[\$\@]' + variable.name, 'g'), cleanedValue);
       });
       return str;
-    };
-  });
+    }
+    return _.memoize(filterFn);
+  }]);
 
 'use strict';
 
 angular.module('sgApp')
-  .controller('AppCtrl', ["$scope", "ngProgress", function($scope, ngProgress) {
+  .controller('AppCtrl', ["$scope", "ngProgressFactory", function($scope, ngProgressFactory) {
+    var ngProgress = ngProgressFactory.createInstance();
     // ngProgress do not respect styles assigned via CSS if we do not pass empty parameters
     // See: https://github.com/VictorBjelkholm/ngProgress/issues/33
-    ngProgress.height('');
-    ngProgress.color('');
+    ngProgress.setHeight('');
+    ngProgress.setColor('');
 
     // Scroll top when page is changed
     $scope.$on('$viewContentLoaded', function() {

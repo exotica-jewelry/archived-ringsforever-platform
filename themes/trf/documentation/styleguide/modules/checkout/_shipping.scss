@@ -1,0 +1,49 @@
+//
+// Shipping pane (page)
+//
+
+.page-checkout-shipping {
+
+  .commerce_shipping {
+    margin: $padding 0;
+
+    legend {
+      display: none; // No need for this to be visible, even accessibly.
+    }
+  }
+
+  .form-item-commerce-shipping-shipping-service {
+
+    @include is-on {
+      background-color: transparent;
+
+      .option {
+        background-color: transparent;
+        color: $blue_verydark;
+      }
+    }
+
+    label {
+      margin-left: ($padding / 2);
+      padding: 0 ($padding / 2);
+
+      @include is-on {
+        background-color: $white;
+      }
+    }
+
+    .description {
+      @include font-size(14px);
+      margin-left: ($padding * 3.25);
+    }
+
+    .ajax-progress {
+      right: 0;
+      margin: $padding 0;
+      padding: ($padding * 2) ($padding * 4);
+      background-color: $blue_verylight;
+      border: $blue_verydark ($line-width / 2) solid;
+      border-radius: $border-radius;
+    }
+  }
+}

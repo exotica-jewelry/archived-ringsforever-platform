@@ -1,0 +1,36 @@
+//
+// Form items (for instance, for line items and addresses)
+//
+
+.page-checkout form {
+
+  // Section headers
+  fieldset legend {
+    border-bottom-color: $black;
+  }
+
+  // State dropdowns
+  .form-select.state {
+    max-width: 280px;
+  }
+
+  // Line items
+  .commerce-responsive-table .views-row .field-content {
+    @include font-size(18px);
+  }
+
+  // Total
+  .field-name-commerce-order-total .field-items {
+    background-color: $white;
+  }
+
+  // Are billing and shipping addresses the same?
+  .commerce-customer-profile-copy {
+    .placeholder {
+      font-weight: $bold;
+      font-style: normal;
+      font-family: $fontDefault;
+      color: $blue_verydark;
+    }
+  }
+}
