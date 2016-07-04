@@ -9,6 +9,11 @@
 // Title, e.g. "There are 7 titanium rings"
 #region-breadcrumb .pseudo-breadcrumb-total-results {
   margin-left: 0;
+
+  // Number
+  em {
+    color: $blue_verydark;
+  }
 }
 
 // Search terms, e.g. "gold"

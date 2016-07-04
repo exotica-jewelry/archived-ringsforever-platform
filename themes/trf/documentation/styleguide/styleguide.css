@@ -2776,6 +2776,9 @@ ol.inline.commerce-checkout-progress li.visited {
 #region-breadcrumb .pseudo-breadcrumb-total-results {
   margin-left: 0; }
 
+#region-breadcrumb .pseudo-breadcrumb-total-results em {
+  color: #0474cd; }
+
 .current-search-item {
   position: relative;
   margin-top: -0.5rem;
