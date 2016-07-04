@@ -57,8 +57,29 @@
       width: auto;
     }
 
+    // Wrapper for credit card icons
+    .commerce-paypal-icons {
+      margin: ($padding / 4) 0;
+
+      .label {
+        padding-left: ($padding * 2.25);
+      }
+    }
+
+    // Icon images
+    .commerce-paypal-icon {
+      position: static;
+      top: 0;
+      padding-bottom: 6px;
+    }
+
     .commerce-credit-card-expiration select {
       padding: 0.25rem 2rem 0.25rem 0.5rem;
     }
+  }
+
+  // Payment option help text
+  #payment-details {
+    font-weight: $bold;
   }
 }

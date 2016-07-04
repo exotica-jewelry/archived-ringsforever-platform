@@ -2400,10 +2400,32 @@ body div.tabs ul.tabs li {
 .page-checkout #commerce-checkout-form-review .commerce_payment label {
   width: auto; }
 
+.page-checkout form .commerce_payment .commerce-paypal-icons,
+.page-checkout #commerce-checkout-form-checkout .commerce_payment .commerce-paypal-icons,
+.page-checkout #commerce-checkout-form-review .commerce_payment .commerce-paypal-icons {
+  margin: 0.25rem 0; }
+
+.page-checkout form .commerce_payment .commerce-paypal-icons .label,
+.page-checkout #commerce-checkout-form-checkout .commerce_payment .commerce-paypal-icons .label,
+.page-checkout #commerce-checkout-form-review .commerce_payment .commerce-paypal-icons .label {
+  padding-left: 2.25rem; }
+
+.page-checkout form .commerce_payment .commerce-paypal-icon,
+.page-checkout #commerce-checkout-form-checkout .commerce_payment .commerce-paypal-icon,
+.page-checkout #commerce-checkout-form-review .commerce_payment .commerce-paypal-icon {
+  position: static;
+  top: 0;
+  padding-bottom: 6px; }
+
 .page-checkout form .commerce_payment .commerce-credit-card-expiration select,
 .page-checkout #commerce-checkout-form-checkout .commerce_payment .commerce-credit-card-expiration select,
 .page-checkout #commerce-checkout-form-review .commerce_payment .commerce-credit-card-expiration select {
   padding: 0.25rem 2rem 0.25rem 0.5rem; }
+
+.page-checkout form #payment-details,
+.page-checkout #commerce-checkout-form-checkout #payment-details,
+.page-checkout #commerce-checkout-form-review #payment-details {
+  font-weight: 700; }
 
 .page-checkout .region-inner {
   padding-bottom: 2rem; }
