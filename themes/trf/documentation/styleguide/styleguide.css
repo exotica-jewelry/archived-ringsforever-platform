@@ -2760,3 +2760,31 @@ ol.inline.commerce-checkout-progress li.visited {
 
 .page-node .field-type-commerce-product-reference form.commerce-add-to-cart label::after {
   content: ""; }
+
+.block .form-item-search-api-views-fulltext .form-text,
+#block-views-exp-display-products-page .form-item-search-api-views-fulltext .form-text {
+  border-color: #0474cd;
+  border-width: 3px;
+  border-radius: 0.5rem;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #0474cd; }
+
+.block-current-search {
+  margin-top: -1rem; }
+
+#region-breadcrumb .pseudo-breadcrumb-total-results {
+  margin-left: 0; }
+
+.current-search-item {
+  position: relative;
+  height: 4rem; }
+
+#region-breadcrumb .pseudo-breadcrumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -0.5rem;
+  z-index: 1;
+  margin: 0;
+  padding-bottom: 0.5rem; }

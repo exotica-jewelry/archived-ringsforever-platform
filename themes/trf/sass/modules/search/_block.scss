@@ -1,0 +1,16 @@
+//
+// Search block at the top of every page
+//
+
+.block .form-item-search-api-views-fulltext,
+#block-views-exp-display-products-page .form-item-search-api-views-fulltext {
+
+  .form-text {
+    border-color: $blue_verydark;
+    border-width: ($line-width / 2);
+    border-radius: $border-radius;
+    font-family: $fontDefault;
+    font-weight: $thin;
+    color: $blue_verydark;
+  }
+}

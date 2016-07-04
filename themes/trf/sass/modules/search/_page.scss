@@ -1,0 +1,27 @@
+//
+// Search results page
+//
+
+.block-current-search {
+  margin-top: ($padding * -1);
+}
+
+// Title, e.g. "There are 7 titanium rings"
+#region-breadcrumb .pseudo-breadcrumb-total-results {
+  margin-left: 0;
+}
+
+// Search terms, e.g. "gold"
+.current-search-item {
+  position: relative;
+  height: ($padding * 4);
+}
+#region-breadcrumb .pseudo-breadcrumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: ($padding * -0.5);
+  z-index: 1;
+  margin: 0;
+  padding-bottom: ($padding / 2);
+}
