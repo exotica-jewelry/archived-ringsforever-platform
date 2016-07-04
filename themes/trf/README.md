@@ -11,9 +11,10 @@ First, you will need to install Node.js and Gulp; ample documentation exists
 online to guide you.
 
 To compile the Sass into updated CSS, from the command line, `cd` into the theme
-directory and run `npm install` to fetch all dependencies. Then, run `gulp` to
-start watching and compiling. The default gulp task will update documentation as
-necessary, as well as minify images and scripts, and auto-prefix CSS rulesets.
+directory and run `npm install` and `bower install` to fetch all dependencies.
+Then, run `gulp` to start watching and compiling. The default gulp task will
+update documentation as necessary, as well as minify images and scripts, and
+auto-prefix CSS rulesets.
 
 ## Version control
 

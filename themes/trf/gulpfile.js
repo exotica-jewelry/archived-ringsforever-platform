@@ -4,6 +4,9 @@ var gulp = require("gulp");
 var urlPath = 'http://www.titaniumringsforever.com';
 var themePath = '/sites/all/themes/trf/';
 var cssPath = 'css';
+var sassPath = 'sass';
+var jsPath = 'js';
+var imgPath = 'images';
 var styleguidePath = 'documentation/styleguide';
 
 // Sass
@@ -12,9 +15,10 @@ var bulkSass = require('gulp-sass-bulk-import');
 var moduleImporter = require('sass-module-importer');
 
 // Preprocess plugins
-var autoprefixer = require('gulp-autoprefixer');
+var postcss = require('gulp-postcss');
 var filter = require('gulp-filter');
 var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('autoprefixer');
 
 // Images
 var images = require('gulp-imagemin');
@@ -33,17 +37,21 @@ var rename = require('gulp-rename');
 var browserSync = require("browser-sync");
 var reload = browserSync.reload;
 
+
 //
 // Compile Sass
 //
-gulp.task('sass', function () {
-  return gulp.src('sass/styles.scss')
 
+gulp.task('sass', function () {
+  return gulp.src(sassPath + '/styles.scss')
+
+  // Get Sass inside folders ("folder/*" syntax")
   .pipe(bulkSass())
 
+  // Import Sass from Bower and Node modules
   .pipe(sass({ importer: moduleImporter() }))
 
-  // Convert sass into css
+  // Convert Sass into CSS
   .pipe(sass({
     includePaths: ['sass'],
     sourcemap: true,
@@ -53,7 +61,7 @@ gulp.task('sass', function () {
     }
   }))
 
-  // Catch any SCSS errors and prevent them from crashing gulp
+  // Catch any Sass errors and prevent them from crashing gulp
   .on('error', function (error) {
     console.error(error);
     this.emit('end');
@@ -63,9 +71,9 @@ gulp.task('sass', function () {
   .pipe(sourcemaps.init({loadMaps: true}))
 
   // Autoprefix properties
-  .pipe(autoprefixer({
+  .pipe(postcss([autoprefixer({
     browsers: ['last 2 versions', '> 5%']
-  }))
+  }) ]))
 
   // Write final .map file
   .pipe(sourcemaps.write())
@@ -85,7 +93,7 @@ gulp.task('sass', function () {
   }))
 
   // Filtering stream to only css files
-  .pipe(filter('sass/**/*.css'))
+  .pipe(filter(sassPath + '/**/*.css'))
 
   .pipe(browserSync.reload({stream:true}));
 });
@@ -95,8 +103,8 @@ gulp.task('sass', function () {
 // Compile JavaScript
 //
 gulp.task('js', function () {
-  return gulp.src('scripts/**/*.js')
-  .pipe(gulp.dest('scripts'))
+  return gulp.src(jsPath + '/**/*.js')
+  .pipe(gulp.dest(jsPath))
 
   // Notify to say the task has complete
   .pipe(notify({
@@ -110,7 +118,7 @@ gulp.task('js', function () {
 // Compress images
 //
 gulp.task('images', function() {
-  gulp.src('images/*')
+  gulp.src(imgPath + '/*')
 
   .pipe(cache(images({
     optimizationLevel: 4,
@@ -118,7 +126,7 @@ gulp.task('images', function() {
     interlaced: true
   })))
 
-  .pipe(gulp.dest('images/min/'))
+  .pipe(gulp.dest(imgPath + '/min/'))
 
   // Notify to say the task has complete
   .pipe(notify({
@@ -137,54 +145,29 @@ gulp.task('drush', shell.task([
 
 
 //
-// Run BrowserSync
-//
-gulp.task('browser-sync', function() {
-
-  // Watch files
-  var files = [
-    'styles/main.css',
-    'scripts/**/*.js',
-    'images/**/*',
-    'templates/**/*.php'
-  ];
-
-  // Initialize BrowserSync
-  browserSync.init(files, {
-    // BrowserSync with a php server
-    proxy: "trf.dev",
-    notify: true,
-    open: false
-  });
-});
-
-
-//
 // Compile JSDoc
 //
-// @todo Currently this isn't working after upgrading to JSDoc3, which was
-// necessary because of a fatal bug in JSDoc. Investigate and fix.
 
 gulp.task('jsdoc', function (cb) {
-//  return gulp.src('scripts/*.js')
+  var jsdocConfig = require('./jsdocConfig.json');
+  gulp.src(['README.md', jsPath + '/**/*.js'], {read: false})
 
-//  .pipe(jsdoc(cb))
-
-//  .pipe(jsdoc.generator('./documentation/jsdoc'))
+  .pipe(jsdoc(jsdocConfig, cb))
 
   // Notify to say the task has complete
-//  .pipe(notify({
-//    message: 'JSDoc update complete',
-//    onLast: true
-//  }))
+  .pipe(notify({
+  message: 'JSDoc update complete',
+    onLast: true
+  }))
 });
 
 
 //
 // Compile SassDoc
 //
+
 gulp.task('sassdoc', function () {
-  return gulp.src('sass/**/*.scss')
+  return gulp.src(sassPath + '/**/*.scss')
 
   .pipe(sassdoc({
     dest: './documentation/sassdoc'
@@ -201,8 +184,11 @@ gulp.task('sassdoc', function () {
 //
 // Compile SC5 Styleguide
 //
+
 gulp.task('styleguide:generate', function() {
-  return gulp.src(['sass/**/*.scss'])
+
+  // Get the Sass
+  return gulp.src([sassPath + '/**/*.scss'])
 
   .pipe(styleguide.generate({
       title: 'Titanium Rings Forever style guide',
@@ -216,7 +202,10 @@ gulp.task('styleguide:generate', function() {
 });
 
 gulp.task('styleguide:applystyles', function() {
-  return gulp.src([cssPath + '/main.css'])
+  return gulp.src([sassPath + '/styles.scss'])
+
+    .pipe(bulkSass())
+    .pipe(sass({ importer: moduleImporter() }))
 
     .pipe(sass({
       errLogToConsole: true
@@ -234,16 +223,41 @@ gulp.task('styleguide:applystyles', function() {
 });
 
 gulp.task('styleguide-watch', ['styleguide'], function() {
-  gulp.watch(['sass/**/*.scss'], ['styleguide']);
+  gulp.watch([sassPath + '/**/*.scss'], ['styleguide']);
 });
 
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
+
+//
+// Run BrowserSync
+//
+
+gulp.task('browser-sync', function() {
+
+  // Watch files
+  var files = [
+    cssPath + '/styles.css',
+    jsPath + '/**/*.js',
+    imgPath + '/**/*',
+    'templates/**/*.php'
+  ];
+
+  // Initialize BrowserSync
+  browserSync.init(files, {
+    proxy: "trf.dev",
+    notify: true,
+    open: false
+  });
+});
+
+
 //
 // Default task to be run with `gulp`
 //
-gulp.task('default', ['sassdoc', 'styleguide', 'sass', 'jsdoc', 'js', 'images', 'browser-sync'], function () {
-  gulp.watch("sass/**/*.scss", ['sassdoc', 'styleguide', 'sass']);
-  gulp.watch("scripts/**/*.js", ['jsdoc', 'js']);
-  gulp.watch('images/*' , ['images']);
+
+gulp.task('default', ['sassdoc', 'styleguide', 'sass', 'jsdoc', 'js', 'images'], function () {
+  gulp.watch(sassPath + '/**/*.scss', ['sassdoc', 'styleguide', 'sass']);
+  gulp.watch(jsPath + '/**/*.js', ['jsdoc', 'js']);
+  gulp.watch(imgPath + '/*' , ['images']);
 });
