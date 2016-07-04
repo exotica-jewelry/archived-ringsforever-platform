@@ -2778,6 +2778,7 @@ ol.inline.commerce-checkout-progress li.visited {
 
 .current-search-item {
   position: relative;
+  margin-top: -0.5rem;
   height: 4rem; }
 
 #region-breadcrumb .pseudo-breadcrumb {
