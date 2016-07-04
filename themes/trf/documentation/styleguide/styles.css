@@ -2351,20 +2351,30 @@ body div.tabs ul.tabs li {
 .page-checkout form .checkout-back:focus {
   text-decoration: none; }
 
-.page-checkout form fieldset legend {
+.page-checkout form fieldset legend,
+.page-checkout #commerce-checkout-form-checkout fieldset legend,
+.page-checkout #commerce-checkout-form-review fieldset legend {
   border-bottom-color: #111; }
 
-.page-checkout form .form-select.state {
+.page-checkout form .form-select.state,
+.page-checkout #commerce-checkout-form-checkout .form-select.state,
+.page-checkout #commerce-checkout-form-review .form-select.state {
   max-width: 280px; }
 
-.page-checkout form .commerce-responsive-table .views-row .field-content {
+.page-checkout form .commerce-responsive-table .views-row .field-content,
+.page-checkout #commerce-checkout-form-checkout .commerce-responsive-table .views-row .field-content,
+.page-checkout #commerce-checkout-form-review .commerce-responsive-table .views-row .field-content {
   font-size: 18px;
   font-size: 1.125rem; }
 
-.page-checkout form .field-name-commerce-order-total .field-items {
+.page-checkout form .field-name-commerce-order-total .field-items,
+.page-checkout #commerce-checkout-form-checkout .field-name-commerce-order-total .field-items,
+.page-checkout #commerce-checkout-form-review .field-name-commerce-order-total .field-items {
   background-color: #fff; }
 
-.page-checkout form .commerce-customer-profile-copy .placeholder {
+.page-checkout form .commerce-customer-profile-copy .placeholder,
+.page-checkout #commerce-checkout-form-checkout .commerce-customer-profile-copy .placeholder,
+.page-checkout #commerce-checkout-form-review .commerce-customer-profile-copy .placeholder {
   font-weight: 700;
   font-style: normal;
   font-family: "Roboto", Helvetica, Arial, sans-serif;

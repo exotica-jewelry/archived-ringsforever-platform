@@ -2,7 +2,9 @@
 // Form items (for instance, for line items and addresses)
 //
 
-.page-checkout form {
+.page-checkout form,
+.page-checkout #commerce-checkout-form-checkout,
+.page-checkout #commerce-checkout-form-review {
 
   // Section headers
   fieldset legend {
