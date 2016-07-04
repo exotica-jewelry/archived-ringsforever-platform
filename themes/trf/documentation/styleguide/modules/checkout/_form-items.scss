@@ -26,6 +26,19 @@
     background-color: $white;
   }
 
+  // Email address
+  .account {
+
+    // Hiding 'account information' label since they won't create an account
+    legend {
+      display: none;
+    }
+
+    label {
+      float: none;
+    }
+  }
+
   // Are billing and shipping addresses the same?
   .commerce-customer-profile-copy {
     .placeholder {
@@ -33,6 +46,19 @@
       font-style: normal;
       font-family: $fontDefault;
       color: $blue_verydark;
+    }
+  }
+
+  // Payment options
+  .commerce_payment {
+    margin-top: $padding;
+
+    label {
+      width: auto;
+    }
+
+    .commerce-credit-card-expiration select {
+      padding: 0.25rem 2rem 0.25rem 0.5rem;
     }
   }
 }

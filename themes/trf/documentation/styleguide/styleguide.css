@@ -2372,6 +2372,16 @@ body div.tabs ul.tabs li {
 .page-checkout #commerce-checkout-form-review .field-name-commerce-order-total .field-items {
   background-color: #fff; }
 
+.page-checkout form .account legend,
+.page-checkout #commerce-checkout-form-checkout .account legend,
+.page-checkout #commerce-checkout-form-review .account legend {
+  display: none; }
+
+.page-checkout form .account label,
+.page-checkout #commerce-checkout-form-checkout .account label,
+.page-checkout #commerce-checkout-form-review .account label {
+  float: none; }
+
 .page-checkout form .commerce-customer-profile-copy .placeholder,
 .page-checkout #commerce-checkout-form-checkout .commerce-customer-profile-copy .placeholder,
 .page-checkout #commerce-checkout-form-review .commerce-customer-profile-copy .placeholder {
@@ -2379,6 +2389,24 @@ body div.tabs ul.tabs li {
   font-style: normal;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: #0474cd; }
+
+.page-checkout form .commerce_payment,
+.page-checkout #commerce-checkout-form-checkout .commerce_payment,
+.page-checkout #commerce-checkout-form-review .commerce_payment {
+  margin-top: 1rem; }
+
+.page-checkout form .commerce_payment label,
+.page-checkout #commerce-checkout-form-checkout .commerce_payment label,
+.page-checkout #commerce-checkout-form-review .commerce_payment label {
+  width: auto; }
+
+.page-checkout form .commerce_payment .commerce-credit-card-expiration select,
+.page-checkout #commerce-checkout-form-checkout .commerce_payment .commerce-credit-card-expiration select,
+.page-checkout #commerce-checkout-form-review .commerce_payment .commerce-credit-card-expiration select {
+  padding: 0.25rem 2rem 0.25rem 0.5rem; }
+
+.page-checkout .region-inner {
+  padding-bottom: 2rem; }
 
 .block-commerce-checkout-progress {
   padding-top: 0.6rem;
