@@ -6,7 +6,7 @@
 function trf_preprocess_html(&$vars) {
 
   // Adding Google fonts
-  drupal_add_css('//fonts.googleapis.com/css?family=Lora:400italic|Roboto:500,300,700,900', array(
+  drupal_add_css('//brick.a.ssl.fastly.net/Lora:400i/Roboto:500,300,700,900', array(
     'type' => 'external',
     'scope' => 'header',
     'weight' => '-1'
