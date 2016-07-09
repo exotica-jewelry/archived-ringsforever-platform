@@ -69,6 +69,31 @@ function trf_site_images_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'image__default__file_field_imagezoom';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'imagezoom_zoom_type' => 'window',
+    'imagezoom_display_style' => '',
+    'imagezoom_zoom_style' => '',
+  );
+  $export['image__default__file_field_imagezoom'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__default__file_field_imagezoom_gallery';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'imagezoom_zoom_type' => 'window',
+    'imagezoom_display_style' => '',
+    'imagezoom_zoom_style' => '',
+    'imagezoom_thumb_style' => '',
+  );
+  $export['image__default__file_field_imagezoom_gallery'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'image__default__file_field_picture_sizes_formatter';
   $file_display->weight = -49;
   $file_display->status = FALSE;
