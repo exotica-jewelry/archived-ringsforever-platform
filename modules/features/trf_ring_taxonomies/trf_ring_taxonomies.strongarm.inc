@@ -129,5 +129,35 @@ function trf_ring_taxonomies_strongarm() {
   $strongarm->value = FALSE;
   $export['taxonomy_menu_voc_name_brand'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'tvi_vocab_brand';
+  $strongarm->value = array(
+    'is_default' => FALSE,
+    'type' => 'vocab',
+    'xid' => 'brand',
+    'status' => 1,
+    'view_name' => 'taxonomy_products',
+    'display' => 'page_keywords',
+    'pass_arguments' => 0,
+  );
+  $export['tvi_vocab_brand'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'tvi_vocab_color';
+  $strongarm->value = array(
+    'is_default' => TRUE,
+    'type' => 'vocab',
+    'xid' => 'color',
+    'status' => 1,
+    'view_name' => 'taxonomy_products',
+    'display' => 'page_colors',
+    'pass_arguments' => 0,
+  );
+  $export['tvi_vocab_color'] = $strongarm;
+
   return $export;
 }
