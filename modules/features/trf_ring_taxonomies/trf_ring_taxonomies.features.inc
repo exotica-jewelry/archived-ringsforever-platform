@@ -76,13 +76,13 @@ function trf_ring_taxonomies_strongarm_alter(&$data) {
       'visible' => TRUE,
     ); /* WAS: '' */
     $data['field_bundle_settings_taxonomy_term__collection']->value['extra_fields']['form']['description'] = array(
-      'weight' => 3,
+      'weight' => 4,
     ); /* WAS: '' */
     $data['field_bundle_settings_taxonomy_term__collection']->value['extra_fields']['form']['name'] = array(
       'weight' => 0,
     ); /* WAS: '' */
     $data['field_bundle_settings_taxonomy_term__collection']->value['extra_fields']['form']['path'] = array(
-      'weight' => 5,
+      'weight' => 6,
     ); /* WAS: '' */
     $data['field_bundle_settings_taxonomy_term__collection']->value['view_modes']['add_to_cart_form'] = array(
       'custom_settings' => TRUE,

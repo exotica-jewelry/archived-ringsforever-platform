@@ -100,14 +100,10 @@ function trf_ring_taxonomies_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_cat_title',
-        1 => 'field_cat_featured_rings',
-        2 => 'description',
       ),
     ),
     'fields' => array(
       'field_cat_title' => 'ds_content',
-      'field_cat_featured_rings' => 'ds_content',
-      'description' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
