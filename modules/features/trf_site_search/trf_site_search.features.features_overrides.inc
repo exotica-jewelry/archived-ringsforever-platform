@@ -98,9 +98,6 @@ function trf_site_search_features_override_default_overrides() {
     'weight' => 0,
     'settings' => array(),
   );
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_ranges_alter|settings|fields|field_product:commerce_price:amount_decimal|description"] = '';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_ranges_alter|settings|fields|field_product:commerce_price:amount_decimal|name"] = 'Product variations » Price » Amount (decimal)';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_ranges_alter|settings|fields|field_product:commerce_price:amount_decimal|type"] = 'decimal';
   $overrides["search_api_index.product_display.options|datasource"] = array(
     'bundles' => array(),
   );

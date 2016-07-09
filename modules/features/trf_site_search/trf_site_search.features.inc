@@ -108,9 +108,6 @@ function trf_site_search_default_search_api_index_alter(&$data) {
       'weight' => 0,
       'settings' => array(),
     ); /* WAS: '' */
-    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['description'] = ''; /* WAS: '' */
-    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['name'] = 'Product variations » Price » Amount (decimal)'; /* WAS: '' */
-    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['type'] = 'decimal'; /* WAS: '' */
     $data['product_display']->options['datasource'] = array(
       'bundles' => array(),
     ); /* WAS: '' */
