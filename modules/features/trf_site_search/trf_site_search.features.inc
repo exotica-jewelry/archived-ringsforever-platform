@@ -1247,3 +1247,51 @@ function trf_site_search_default_search_api_sort_alter(&$data) {
     $data['product_display__title_field']->weight = -98; /* WAS: 30 */
   }
 }
+
+/**
+ * Implements hook_default_search_api_server().
+ */
+function trf_site_search_default_search_api_server() {
+  $items = array();
+  $items['frontend'] = entity_import('search_api_server', '{
+    "name" : "Frontend",
+    "machine_name" : "frontend",
+    "description" : "",
+    "class" : "search_api_db_service",
+    "options" : {
+      "database" : "default:default",
+      "min_chars" : "3",
+      "partial_matches" : 0,
+      "indexes" : []
+    },
+    "enabled" : "1",
+    "rdf_mapping" : []
+  }');
+  $items['solr'] = entity_import('search_api_server', '{
+    "name" : "Solr",
+    "machine_name" : "solr",
+    "description" : "Apache Solr search server.",
+    "class" : "search_api_solr_service",
+    "options" : {
+      "clean_ids" : true,
+      "site_hash" : true,
+      "scheme" : "http",
+      "host" : "solr.internal",
+      "port" : "8080",
+      "path" : "\\/solr",
+      "http_user" : "",
+      "http_pass" : "",
+      "excerpt" : 0,
+      "retrieve_data" : 0,
+      "highlight_data" : 0,
+      "skip_schema_check" : 0,
+      "solr_version" : "",
+      "http_method" : "AUTO",
+      "log_query" : 0,
+      "log_response" : 0
+    },
+    "enabled" : "1",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
