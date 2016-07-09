@@ -48,6 +48,24 @@ function trf_site_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'coffee_settings_menus';
+  $strongarm->value = array(
+    'main-menu' => 'main-menu',
+    'management' => 'management',
+    'user-menu' => 'user-menu',
+    'menu-social-connection' => 0,
+    'features' => 0,
+    'menu-footer-navigation' => 0,
+    'navigation' => 0,
+    'menu-payment-methods' => 0,
+    'secondary-navigation' => 0,
+    'menu-user-menu' => 0,
+  );
+  $export['coffee_settings_menus'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_default_timezone';
   $strongarm->value = 'America/Phoenix';
   $export['date_default_timezone'] = $strongarm;
