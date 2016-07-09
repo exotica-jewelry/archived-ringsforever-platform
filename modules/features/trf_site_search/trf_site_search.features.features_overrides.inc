@@ -106,10 +106,24 @@ function trf_site_search_features_override_default_overrides() {
   );
   $overrides["search_api_index.product_display.options|fields|field_color"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_color:name"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_gemstones_bool"] = array(
+    'type' => 'boolean',
+  );
+  $overrides["search_api_index.product_display.options|fields|field_gender"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_gender:name"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_product:field_ring_width:name"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_product:field_storage_capacity:name"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_product:field_top_size:name"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_product_type:name"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_ring_elements:name"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_ring_elements_primary:name"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_ring_name"] = array(
+    'type' => 'text',
+  );
+  $overrides["search_api_index.product_display.options|fields|field_sku_master"] = array(
+    'type' => 'text',
+    'boost' => '0.0',
+  );
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_1"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_10"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_11"]["DELETED"] = TRUE;
@@ -123,6 +137,9 @@ function trf_site_search_features_override_default_overrides() {
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_9"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_multi_aggregation_1"] = array(
     'type' => 'list<string>',
+  );
+  $overrides["search_api_index.product_display.options|fields|sticky"] = array(
+    'type' => 'boolean',
   );
   $overrides["search_api_index.product_display.options|processors"] = array(
     'search_api_case_ignore' => array(
@@ -1193,10 +1210,16 @@ function trf_site_search_features_override_default_overrides() {
   $overrides["search_api_index.product_display.server"] = 'solr';
 
   // Exported overrides for: search_api_sort
+  $overrides["search_api_sort.product_display__created.default_order"] = 'desc';
+  $overrides["search_api_sort.product_display__created.default_sort"] = 1;
+  $overrides["search_api_sort.product_display__created.default_sort_no_terms"] = 1;
   $overrides["search_api_sort.product_display__created.rdf_mapping"] = array();
+  $overrides["search_api_sort.product_display__created.weight"] = -100;
   $overrides["search_api_sort.product_display__field_product_commerce_price_amount_decimal.options|field_name"] = 'Product variations » Price » Amount (decimal) (Min)';
   $overrides["search_api_sort.product_display__field_product_commerce_price_amount_decimal.rdf_mapping"] = array();
+  $overrides["search_api_sort.product_display__field_product_commerce_price_amount_decimal.weight"] = -99;
   $overrides["search_api_sort.product_display__title_field.rdf_mapping"] = array();
+  $overrides["search_api_sort.product_display__title_field.weight"] = -98;
 
  return $overrides;
 }

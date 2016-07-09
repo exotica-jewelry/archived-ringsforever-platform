@@ -86,8 +86,8 @@ function trf_site_search_default_fe_block_settings() {
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => 'products
-titanium-rings/collections
-titanium-rings/collections/*',
+titanium-rings
+titanium-rings/*',
     'roles' => array(),
     'themes' => array(
       'commerce_kickstart_theme' => array(
@@ -121,8 +121,8 @@ titanium-rings/collections/*',
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => 'products
-titanium-rings/collections
-titanium-rings/collections/*',
+titanium-rings
+titanium-rings/*',
     'roles' => array(),
     'themes' => array(
       'commerce_kickstart_theme' => array(
@@ -156,8 +156,8 @@ titanium-rings/collections/*',
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => 'products
-titanium-rings/collections
-titanium-rings/collections/*',
+titanium-rings
+titanium-rings/*',
     'roles' => array(),
     'themes' => array(
       'commerce_kickstart_theme' => array(
@@ -224,8 +224,8 @@ titanium-rings/collections/*',
     'module' => 'facetapi',
     'node_types' => array(),
     'pages' => 'products
-titanium-rings/collections
-titanium-rings/collections/*',
+titanium-rings
+titanium-rings/*',
     'roles' => array(),
     'themes' => array(
       'commerce_kickstart_theme' => array(
@@ -291,7 +291,9 @@ titanium-rings/collections/*',
     'delta' => 'search-sorts',
     'module' => 'search_api_sorts',
     'node_types' => array(),
-    'pages' => 'products',
+    'pages' => 'products
+products/*
+taxonomy/term/*',
     'roles' => array(),
     'themes' => array(
       'commerce_kickstart_theme' => array(

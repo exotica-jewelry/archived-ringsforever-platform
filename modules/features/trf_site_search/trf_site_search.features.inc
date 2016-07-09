@@ -114,8 +114,21 @@ function trf_site_search_default_search_api_index_alter(&$data) {
     $data['product_display']->options['datasource'] = array(
       'bundles' => array(),
     ); /* WAS: '' */
+    $data['product_display']->options['fields']['field_gemstones_bool'] = array(
+      'type' => 'boolean',
+    ); /* WAS: '' */
+    $data['product_display']->options['fields']['field_ring_name'] = array(
+      'type' => 'text',
+    ); /* WAS: '' */
+    $data['product_display']->options['fields']['field_sku_master'] = array(
+      'type' => 'text',
+      'boost' => '0.0',
+    ); /* WAS: '' */
     $data['product_display']->options['fields']['search_api_multi_aggregation_1'] = array(
       'type' => 'list<string>',
+    ); /* WAS: '' */
+    $data['product_display']->options['fields']['sticky'] = array(
+      'type' => 'boolean',
     ); /* WAS: '' */
     $data['product_display']->options['processors'] = array(
       'search_api_case_ignore' => array(
@@ -1191,7 +1204,11 @@ function trf_site_search_default_search_api_index_alter(&$data) {
     unset($data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_8']);
     unset($data['product_display']->options['fields']['field_color']);
     unset($data['product_display']->options['fields']['field_color:name']);
+    unset($data['product_display']->options['fields']['field_gender']);
+    unset($data['product_display']->options['fields']['field_gender:name']);
     unset($data['product_display']->options['fields']['field_product:field_ring_width:name']);
+    unset($data['product_display']->options['fields']['field_product:field_storage_capacity:name']);
+    unset($data['product_display']->options['fields']['field_product:field_top_size:name']);
     unset($data['product_display']->options['fields']['field_product_type:name']);
     unset($data['product_display']->options['fields']['field_ring_elements:name']);
     unset($data['product_display']->options['fields']['field_ring_elements_primary:name']);
@@ -1214,13 +1231,19 @@ function trf_site_search_default_search_api_index_alter(&$data) {
  */
 function trf_site_search_default_search_api_sort_alter(&$data) {
   if (isset($data['product_display__created'])) {
+    $data['product_display__created']->default_order = 'desc'; /* WAS: 'asc' */
+    $data['product_display__created']->default_sort = 1; /* WAS: 0 */
+    $data['product_display__created']->default_sort_no_terms = 1; /* WAS: 0 */
     $data['product_display__created']->rdf_mapping = array(); /* WAS: '' */
+    $data['product_display__created']->weight = -100; /* WAS: 20 */
   }
   if (isset($data['product_display__field_product_commerce_price_amount_decimal'])) {
     $data['product_display__field_product_commerce_price_amount_decimal']->options['field_name'] = 'Product variations » Price » Amount (decimal) (Min)'; /* WAS: 'Product » Price » Amount (decimal)' */
     $data['product_display__field_product_commerce_price_amount_decimal']->rdf_mapping = array(); /* WAS: '' */
+    $data['product_display__field_product_commerce_price_amount_decimal']->weight = -99; /* WAS: 0 */
   }
   if (isset($data['product_display__title_field'])) {
     $data['product_display__title_field']->rdf_mapping = array(); /* WAS: '' */
+    $data['product_display__title_field']->weight = -98; /* WAS: 30 */
   }
 }
