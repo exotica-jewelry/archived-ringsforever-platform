@@ -133,7 +133,7 @@ projects[redirect][version] = "1.0-rc3"
 
 projects[redis][version] = "3.12"
 
-projects[search_api_solr][version] = "1.10"
+projects[search_api_solr][version] = "1.11"
 
 projects[searchapimultiaggregate][version] = "1.2"
 
