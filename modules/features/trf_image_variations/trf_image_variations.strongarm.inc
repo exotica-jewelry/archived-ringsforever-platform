@@ -16,13 +16,9 @@ function trf_image_variations_strongarm() {
   $strongarm->name = 'locale_custom_strings_en';
   $strongarm->value = array(
     '' => array(
-
-      # Since we can't stop the filename errors from happening
-      # when a ring is updated, we change the error message to
-      # something benign, but include the filename in case a real
-      # error like this ever does occurr.
+      'item' => 'ring',
+      'items' => 'rings',
       'The specified file %file could not be copied, because no file by that name exists. Please check that you supplied the correct filename.' => 'File %file updated.',
-
       'The title is used as a tool tip when the user hovers the mouse over the image.' => 'This text is used as an image caption on ring pages, as well as a tooltip when a visitor hovers their mouse over any image.',
     ),
   );
