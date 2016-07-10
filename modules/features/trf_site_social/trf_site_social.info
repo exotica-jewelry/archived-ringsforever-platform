@@ -1,0 +1,15 @@
+name = TRF site social
+description = Settings for social media on the site.
+core = 7.x
+package = TRF Site
+version = 7.x-0.1
+dependencies[] = ctools
+dependencies[] = ds
+dependencies[] = fe_block
+features[ctools][] = ds:ds:1
+features[ds_fields][] = addthis_buttons
+features[fe_block_boxes][] = addthis_buttons
+features[fe_block_boxes][] = addthis_script
+features[fe_block_settings][] = block-addthis_buttons
+features[fe_block_settings][] = block-addthis_script
+features[features_api][] = api:2
