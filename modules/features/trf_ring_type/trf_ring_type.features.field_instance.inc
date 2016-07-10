@@ -278,7 +278,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 31,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -342,7 +342,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 29,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -411,7 +411,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 38,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -530,7 +530,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 40,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -708,7 +708,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 39,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -1025,7 +1025,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 33,
       ),
       'product_list' => array(
         'label' => 'above',
@@ -1103,7 +1103,7 @@ function trf_ring_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 30,
       ),
       'product_list' => array(
         'label' => 'above',
