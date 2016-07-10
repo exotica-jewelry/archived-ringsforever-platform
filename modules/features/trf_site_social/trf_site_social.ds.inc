@@ -21,7 +21,7 @@ function trf_site_social_ds_custom_fields_info() {
   );
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
-    'block' => 'block|10',
+    'block' => 'block|9',
     'block_render' => '1',
   );
   $export['addthis_buttons'] = $ds_field;
