@@ -62,6 +62,8 @@ projects[elements][version] = "1.4"
 
 projects[entity_embed][version] = "1.0-alpha4"
 
+projects[entityqueue][version] = "1.1"
+
 projects[environment_indicator][version] = "2.8"
 
 projects[escape_admin][version] = "1.2"
