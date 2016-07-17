@@ -123,6 +123,8 @@ projects[linkit][version] = "3.5"
 
 projects[mailcontrol][version] = "1.0"
 
+projects[menu_trail_by_path][version] = "2.1"
+
 projects[migrate_d2d][version] = "2.1"
 
 projects[picture][version] = "2.13"
