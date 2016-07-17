@@ -13,6 +13,25 @@ function trf_site_paths_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'crumbs_show_current_page';
+  $strongarm->value = 0;
+  $export['crumbs_show_current_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'crumbs_weights';
+  $strongarm->value = array(
+    'crumbs.home_title' => 0,
+    'taxonomy.termReference.field_blog_category.node.blog_post' => 1,
+    'taxonomy.termReference.field_collection.node.*' => 2,
+    '*' => 3,
+  );
+  $export['crumbs_weights'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'globalredirect_settings';
   $strongarm->value = array(
     'trailing_zero' => 2,
