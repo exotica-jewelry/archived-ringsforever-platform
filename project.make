@@ -156,7 +156,7 @@ projects[views_date_format_sql][version] = "3.3"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "libraries"
 libraries[ckeditor][download][type] = "file"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.9/ckeditor_4.5.9_standard.zip"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.10/ckeditor_4.5.10_standard.zip"
 libraries[ckeditor][destination] = "libraries"
 
 libraries[elevatezoom][directory_name] = "elevatezoom"
