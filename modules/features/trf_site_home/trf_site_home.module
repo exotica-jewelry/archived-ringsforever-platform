@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the TRF site home feature.
  */
+
+include_once 'trf_site_home.features.inc';
