@@ -2257,6 +2257,15 @@ body div.tabs ul.tabs li {
   background-color: #54b2fc;
   text-decoration: none; }
 
+.cart-empty-page {
+  margin: 0 0.75rem; }
+
+.cart-empty-page a {
+  font-weight: bold; }
+
+.cart-empty-page a:hover, .cart-empty-page a:active, .cart-empty-page a:focus {
+  text-decoration: underline; }
+
 .page-cart .views-row-1 .views-field .views-label {
   background-color: #0474cd; }
 

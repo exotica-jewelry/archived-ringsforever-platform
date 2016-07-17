@@ -568,6 +568,12 @@ a.pseudo-class-focus {
   text-decoration: none;
 }
 
+.cart-empty-page a.pseudo-class-hover,
+.cart-empty-page a.pseudo-class-active,
+.cart-empty-page a.pseudo-class-focus {
+  text-decoration: underline;
+}
+
 .page-cart .commerce-line-item-views-form .commerce-line-item-actions #edit-checkout.pseudo-class-hover,
 .page-cart .commerce-line-item-views-form .commerce-line-item-actions #edit-checkout.pseudo-class-active,
 .page-cart .commerce-line-item-views-form .commerce-line-item-actions #edit-checkout.pseudo-class-focus {

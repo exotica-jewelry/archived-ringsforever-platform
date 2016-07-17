@@ -43,3 +43,13 @@ function trf_form_contact_site_form_alter(&$form, &$form_state) {
   $site_name = $GLOBALS['conf']['site_name'];
   drupal_set_title('Contact ' . $site_name);
 }
+
+/**
+ * Customize the empty cart message on the shopping cart page.
+ *
+ * Implements theme_commerce_cart_empty_block()
+ * @see commerce_cart.module lines 790-795.
+ */
+function trf_commerce_cart_empty_page() {
+  return '<div class="cart-empty-page"><p>Your shopping cart is empty.</p><p><a href="/products" title="View all titanium wedding rings">Browse our complete catalog of titanium wedding rings.</a></p></div>';
+}
