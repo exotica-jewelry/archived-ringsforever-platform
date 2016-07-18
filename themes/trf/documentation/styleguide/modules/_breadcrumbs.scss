@@ -13,11 +13,16 @@
   border-bottom-right-radius: 0;
 
   a {
+    display: inline-block;
     color: $blue_verydark;
 
     @include is-on {
       color: $blue;
       text-decoration: none;
+    }
+
+    &::first-letter {
+      text-transform: uppercase;
     }
   }
 

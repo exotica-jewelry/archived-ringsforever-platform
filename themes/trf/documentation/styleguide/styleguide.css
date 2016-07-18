@@ -1451,11 +1451,15 @@ body div.tabs ul.tabs li {
   border-bottom-right-radius: 0; }
 
 .breadcrumb a {
+  display: inline-block;
   color: #0474cd; }
 
 .breadcrumb a:hover, .breadcrumb a:active, .breadcrumb a:focus {
   color: #54b2fc;
   text-decoration: none; }
+
+.breadcrumb a::first-letter {
+  text-transform: uppercase; }
 
 .front .breadcrumb {
   display: none; }
