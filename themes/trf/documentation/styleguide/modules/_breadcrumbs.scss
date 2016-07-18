@@ -20,4 +20,8 @@
       text-decoration: none;
     }
   }
+
+  .front & {
+    display: none;
+  }
 }

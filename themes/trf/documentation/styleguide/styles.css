@@ -1457,6 +1457,9 @@ body div.tabs ul.tabs li {
   color: #54b2fc;
   text-decoration: none; }
 
+.front .breadcrumb {
+  display: none; }
+
 .editablefield-hover-link {
   top: 0;
   right: 0;
