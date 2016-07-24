@@ -3,13 +3,13 @@
 //
 
 %pager__item {
-  position: relative;
   margin: 0 ($padding / 2);
   padding: ($padding / 2) $padding;
   background-color: transparent;
   border: ($line-width / 2) solid $white;
   border-radius: ($padding * 2);
   font-weight: $bold;
+  white-space: nowrap;
 }
 
 %pager__link {
@@ -25,6 +25,11 @@
   margin: (2 * $padding) 0;
   @include font-size(18px);
 
+  li {
+    display: inline-block;
+    margin: $padding 0;
+  }
+
   .pager-current,
   .pager-item a,
   .pager-previous a,
@@ -39,8 +44,10 @@
   }
 
   .pager-first,
-  .pager-last {
+  .pager-last,
+  .pager-ellipsis {
     margin: 0 ($padding / 2);
     font-weight: $bold;
+    white-space: nowrap;
   }
 }
