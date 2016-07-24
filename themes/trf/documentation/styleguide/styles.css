@@ -1417,6 +1417,7 @@ h1#page-title {
 .item-list.item-list.item-list .pager .pager-item a,
 .item-list.item-list.item-list .pager .pager-previous a,
 .item-list.item-list.item-list .pager .pager-next a {
+  float: none;
   margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   background-color: transparent;
@@ -1455,6 +1456,9 @@ h1#page-title {
   margin: 0 0.5rem;
   font-weight: 700;
   white-space: nowrap; }
+
+.item-list.item-list.item-list .pager .pager-ellipsis {
+  color: #fff; }
 
 .skip-link.visually-hidden.focusable:focus {
   position: absolute !important;

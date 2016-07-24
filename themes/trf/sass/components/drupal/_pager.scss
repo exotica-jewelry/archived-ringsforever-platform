@@ -3,6 +3,7 @@
 //
 
 %pager__item {
+  float: none;
   margin: 0 ($padding / 2);
   padding: ($padding / 2) $padding;
   background-color: transparent;
@@ -49,5 +50,9 @@
     margin: 0 ($padding / 2);
     font-weight: $bold;
     white-space: nowrap;
+  }
+
+  .pager-ellipsis {
+    color: $white;
   }
 }
