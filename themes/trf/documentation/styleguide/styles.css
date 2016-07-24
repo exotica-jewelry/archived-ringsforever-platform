@@ -1413,6 +1413,43 @@ h1#page-title {
   background-color: rgba(100, 0, 0, 0.2);
   border-color: #a00; }
 
+.item-list.item-list.item-list .pager .pager-current,
+.item-list.item-list.item-list .pager .pager-item a,
+.item-list.item-list.item-list .pager .pager-previous a,
+.item-list.item-list.item-list .pager .pager-next a {
+  position: relative;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 2rem;
+  font-weight: 700; }
+
+.item-list.item-list.item-list .pager .pager-item a,
+.item-list.item-list.item-list .pager .pager-previous a,
+.item-list.item-list.item-list .pager .pager-next a {
+  background-color: #fff; }
+
+.item-list.item-list.item-list .pager .pager-item a:hover,
+.item-list.item-list.item-list .pager .pager-previous a:hover,
+.item-list.item-list.item-list .pager .pager-next a:hover, .item-list.item-list.item-list .pager .pager-item a:active,
+.item-list.item-list.item-list .pager .pager-previous a:active,
+.item-list.item-list.item-list .pager .pager-next a:active, .item-list.item-list.item-list .pager .pager-item a:focus,
+.item-list.item-list.item-list .pager .pager-previous a:focus,
+.item-list.item-list.item-list .pager .pager-next a:focus {
+  background-color: #0474cd;
+  color: #fff; }
+
+.item-list.item-list.item-list .pager {
+  margin: 2rem 0;
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+.item-list.item-list.item-list .pager .pager-first,
+.item-list.item-list.item-list .pager .pager-last {
+  margin: 0 0.5rem;
+  font-weight: 700; }
+
 .skip-link.visually-hidden.focusable:focus {
   position: absolute !important;
   width: 100%;

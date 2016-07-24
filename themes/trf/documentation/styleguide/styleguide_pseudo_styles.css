@@ -298,6 +298,19 @@ a.pseudo-class-focus {
   background-color: #a00;
 }
 
+.item-list.item-list.item-list .pager .pager-item a.pseudo-class-hover,
+.item-list.item-list.item-list .pager .pager-previous a.pseudo-class-hover,
+.item-list.item-list.item-list .pager .pager-next a.pseudo-class-hover,
+.item-list.item-list.item-list .pager .pager-item a.pseudo-class-active,
+.item-list.item-list.item-list .pager .pager-previous a.pseudo-class-active,
+.item-list.item-list.item-list .pager .pager-next a.pseudo-class-active,
+.item-list.item-list.item-list .pager .pager-item a.pseudo-class-focus,
+.item-list.item-list.item-list .pager .pager-previous a.pseudo-class-focus,
+.item-list.item-list.item-list .pager .pager-next a.pseudo-class-focus {
+  background-color: #0474cd;
+  color: #fff;
+}
+
 .skip-link.visually-hidden.focusable.pseudo-class-focus {
   position: absolute !important;
   width: 100%;
