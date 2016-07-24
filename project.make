@@ -24,6 +24,8 @@ defaults[projects][subdir] = contrib
 ; Contrib modules.
 ; ================
 
+projects[a11y_titles][version] = "1.0-beta1"
+
 projects[auto_entitylabel][version] = "1.3"
 
 projects[autocomplete_deluxe][version] = "2.1"
