@@ -1450,6 +1450,11 @@ h1#page-title {
   display: inline-block;
   margin: 1rem 0; }
 
+.item-list.item-list.item-list .pager .pager-item,
+.item-list.item-list.item-list .pager .pager-previous,
+.item-list.item-list.item-list .pager .pager-nex {
+  float: none; }
+
 .item-list.item-list.item-list .pager .pager-first,
 .item-list.item-list.item-list .pager .pager-last,
 .item-list.item-list.item-list .pager .pager-ellipsis {
@@ -1458,7 +1463,7 @@ h1#page-title {
   white-space: nowrap; }
 
 .item-list.item-list.item-list .pager .pager-ellipsis {
-  color: #fff; }
+  color: #54b2fc; }
 
 .skip-link.visually-hidden.focusable:focus {
   position: absolute !important;

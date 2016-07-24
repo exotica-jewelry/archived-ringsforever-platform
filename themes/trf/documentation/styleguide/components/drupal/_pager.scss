@@ -44,6 +44,12 @@
     @extend %pager__link;
   }
 
+  .pager-item,
+  .pager-previous,
+  .pager-nex {
+    float: none;
+  }
+
   .pager-first,
   .pager-last,
   .pager-ellipsis {
@@ -53,6 +59,6 @@
   }
 
   .pager-ellipsis {
-    color: $white;
+    color: $blue;
   }
 }
