@@ -10,7 +10,7 @@
 }
 
 .home-free__intro {
-  margin-bottom: $padding;
+  margin-bottom: 0;
   @include font-size(28px);
   font-weight: $thin;
   text-align: center;
@@ -23,7 +23,7 @@
 
 .home-free__item {
   display: inline-block;
-  margin: 0 $padding;
+  margin: $padding;
   list-style-type: none;
   border-radius: $border-radius;
 }

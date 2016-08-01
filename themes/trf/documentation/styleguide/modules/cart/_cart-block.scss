@@ -21,6 +21,13 @@
 
       // Empty cart message
       .view-empty {
+
+        // At small widths, simply hide an empty cart.
+        display: none;
+        @include mq(smallish) {
+          display: block;
+        }
+
         padding-right: $padding;
 
         p {

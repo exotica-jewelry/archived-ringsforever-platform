@@ -1,0 +1,76 @@
+//
+// PRIMARY NAVIGATION
+//
+// Collections, "all rings"
+//
+
+.navigation .primary-menu.inline {
+  @include clearfix;
+  float: none;
+  margin: 1em 0 0 0;
+  padding: 0;
+  position: relative;
+  top: ($padding * 1.5);
+  background-color: transparent;
+  font-family: $fontDefault;
+
+  ul {
+    margin: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      a {
+        display: block;
+        margin-right: $padding;
+        padding: 0;
+        font-family: $fontDefault;
+        font-weight: $thin;
+        @include font-size(18px);
+        background-color: transparent;
+        color: $black;
+        border: 0;
+        @include a-border-bottom();
+
+        @include is-on {
+          color: $white;
+          background-color: transparent;
+        }
+
+        &.active,
+        &.active-trail {
+          background-color: transparent;
+          color: $white;
+
+          @include is-on {
+            color: $white;
+          }
+        }
+      }
+
+      &.first a {
+        border-left: none;
+        border-radius: 0;
+      }
+
+      &.last a {
+        padding: 0;
+        font-weight: $normal;
+        border-right: none;
+        border-radius: 0;
+        color: $blue_dark;
+        background-color: transparent;
+
+        @include is-on {
+          color: $white;
+        }
+
+        &.active,
+        &.active-trail {
+          color: $white;
+        }
+      }
+    }
+  }
+}

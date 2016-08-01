@@ -184,7 +184,7 @@
       display: block;
       position: relative;
       margin-bottom: ($padding * -0.5);
-      padding: ($padding / 2) $padding $padding $padding;
+      padding: ($padding / 4) ($padding / 2) ($padding / 2);
       font-family: $fontDefault;
       font-weight: $normal;
       color: $white;
@@ -196,6 +196,10 @@
       @include is-on {
         background-color: $blue_dark;
       }
+
+        @include mq(smallish) {
+          padding: ($padding / 2) $padding $padding;
+        }
     }
   }
 }
