@@ -21,6 +21,10 @@
     }
   }
 
+  .last-line {
+    display: none;
+  }
+
   // The word "Menu"
   .toggle-help {
     top: 0;
@@ -37,25 +41,5 @@
       color: $white;
       background-color: $blue_verydark;
     }
-  }
-}
-
-// Menu
-.responsive-layout-mobile .navigation {
-  padding: 0 $padding;
-  background-color: $blue_verylight;
-
-  // Hide menu titles
-  h2 {
-    display: none;
-  }
-
-  .second-menu.inline {
-    top: 0;
-    margin-top: (2 * $padding);
-  }
-
-  .second-menu.inline ul li.first a {
-    margin-left: 0;
   }
 }

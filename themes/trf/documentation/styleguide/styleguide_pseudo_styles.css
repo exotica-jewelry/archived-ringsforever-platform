@@ -559,26 +559,11 @@ a.pseudo-class-focus {
   background-color: #0474cd;
 }
 
-.navigation .primary-menu.inline ul li a.pseudo-class-hover:after,
-.navigation .primary-menu.inline ul li a.pseudo-class-active:after,
-.navigation .primary-menu.inline ul li a.pseudo-class-focus:after {
-  width: 100%;
-}
-
-.navigation .primary-menu.inline ul li a.active.pseudo-class-hover:after,
-.navigation .primary-menu.inline ul li a.active.pseudo-class-active:after,
-.navigation .primary-menu.inline ul li a.active.pseudo-class-focus:after,
-.navigation .primary-menu.inline ul li a.active-trail.pseudo-class-hover:after,
-.navigation .primary-menu.inline ul li a.active-trail.pseudo-class-active:after,
-.navigation .primary-menu.inline ul li a.active-trail.pseudo-class-focus:after {
-  width: 0;
-}
-
 .navigation .primary-menu.inline ul li a.pseudo-class-hover,
 .navigation .primary-menu.inline ul li a.pseudo-class-active,
 .navigation .primary-menu.inline ul li a.pseudo-class-focus {
   color: #fff;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navigation .primary-menu.inline ul li a.active.pseudo-class-hover,
@@ -594,30 +579,14 @@ a.pseudo-class-focus {
 .navigation .primary-menu.inline ul li.last a.pseudo-class-active,
 .navigation .primary-menu.inline ul li.last a.pseudo-class-focus {
   color: #fff;
-}
-
-.navigation .second-menu.inline ul li a.pseudo-class-hover:after,
-.navigation .second-menu.inline ul li a.pseudo-class-active:after,
-.navigation .second-menu.inline ul li a.pseudo-class-focus:after {
-  width: 100%;
-  left: 0;
-}
-
-.navigation .second-menu.inline ul li a.active.pseudo-class-hover:after,
-.navigation .second-menu.inline ul li a.active.pseudo-class-active:after,
-.navigation .second-menu.inline ul li a.active.pseudo-class-focus:after,
-.navigation .second-menu.inline ul li a.active-trail.pseudo-class-hover:after,
-.navigation .second-menu.inline ul li a.active-trail.pseudo-class-active:after,
-.navigation .second-menu.inline ul li a.active-trail.pseudo-class-focus:after {
-  width: 0;
-  left: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navigation .second-menu.inline ul li a.pseudo-class-hover,
 .navigation .second-menu.inline ul li a.pseudo-class-active,
 .navigation .second-menu.inline ul li a.pseudo-class-focus {
   color: #0488f0;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .navigation .second-menu.inline ul li a.active.pseudo-class-hover,
@@ -633,6 +602,7 @@ a.pseudo-class-focus {
 .navigation .second-menu.inline ul li.last a.pseudo-class-active,
 .navigation .second-menu.inline ul li.last a.pseudo-class-focus {
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #block-menu-menu-social-connection .content ul.menu li.pseudo-class-hover,

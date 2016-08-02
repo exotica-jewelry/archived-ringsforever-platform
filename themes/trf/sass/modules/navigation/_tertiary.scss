@@ -6,6 +6,14 @@
 
 .block-menu-tertiary-navigation {
 
+  ul.menu {
+    text-align: right;
+
+    @include mq(smallish) {
+      text-align: left;
+    }
+  }
+
   ul.menu li.collapsed,
   ul.menu li.leaf {
     list-style-type: none;

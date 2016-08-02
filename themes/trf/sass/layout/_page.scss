@@ -12,11 +12,28 @@
   text-shadow: none;
 }
 
-// Preface area
+// Preface area (used for cart and tertiary menu)
 
 .zone-preface {
+  margin-top: ($padding * -3);
   margin-bottom: $padding;
+  margin-left: ($padding * 7);
   padding-top: $padding;
+
+  @include mq(smallish) {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+// Menu area
+
+.zone-menu {
+  margin-top: ($padding * 3);
+
+  @include mq(smallish) {
+    margin-top: 0;
+  }
 }
 
 // Content area

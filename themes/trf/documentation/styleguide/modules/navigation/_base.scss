@@ -1,0 +1,19 @@
+//
+// BASE MENU STYLES
+//
+// These apply to all "navigation" class menus
+
+.navigation {
+  padding: 0 0 ($padding * 2);
+  background-color: $blue_verylight;
+
+  @include mq(smallish) {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  // Ensure menu titles are hidden
+  h2 {
+    display: none;
+  }
+}

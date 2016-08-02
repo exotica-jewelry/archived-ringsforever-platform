@@ -2,6 +2,17 @@
 // Site-wide search
 //
 
+#block-views-exp-display-products-page {
+  float: none !important;
+  padding-top: 0;
+
+  .views-exposed-widgets {
+    float: none !important;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
 #views-exposed-form-display-products-page {
 
   .form-submit {
