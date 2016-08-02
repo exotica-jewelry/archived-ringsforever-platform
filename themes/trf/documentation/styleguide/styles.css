@@ -1592,6 +1592,7 @@ body div.tabs ul.tabs li {
   padding: 0; }
 
 .featured-categories__item .field-name-field-cat-featured-rings .container-24 {
+  margin: 0 !important;
   padding-left: 0 !important;
   width: auto !important; }
 
