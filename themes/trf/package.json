@@ -15,7 +15,8 @@
   ],
   "license": "GPL-2.0",
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer": "^6.4.0",
+    "beepbeep": "^1.2.0",
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.2",
@@ -23,17 +24,16 @@
     "gulp-imagemin": "^3.0.1",
     "gulp-jsdoc3": "^0.3.0",
     "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^2.3.2",
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-shell": "^0.5.2",
     "gulp-size": "^2.0.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "kss": "^2.0.2",
-    "node-sass": "^3.4.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "kss": "^3.0.0-beta.14",
     "sass-module-importer": "^1.2.1",
-    "sassdoc": "^2.1.9",
-    "sc5-styleguide": "^1.0.0"
+    "sassdoc": "^2.1.20"
   }
 }

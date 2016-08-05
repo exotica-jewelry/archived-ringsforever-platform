@@ -1,41 +1,56 @@
-var gulp = require("gulp");
+var gulp = require("gulp"),
 
 // Path variables
-var urlPath = 'http://www.titaniumringsforever.com';
-var themePath = '/sites/all/themes/trf/';
-var cssPath = 'css';
-var sassPath = 'sass';
-var jsPath = 'js';
-var imgPath = 'images';
-var styleguidePath = 'documentation/styleguide';
+urlPath = 'http://www.titaniumringsforever.com',
+themePath = '/sites/all/themes/trf/',
+cssPath = 'css',
+sassPath = 'sass',
+jsPath = 'js',
+imgPath = 'images',
+styleguidePath = 'documentation/styleguide',
 
 // Sass
-var sass = require("gulp-sass");
-var bulkSass = require('gulp-sass-bulk-import');
-var moduleImporter = require('sass-module-importer');
+sass = require("gulp-sass"),
+bulkSass = require('gulp-sass-bulk-import'),
+moduleImporter = require('sass-module-importer'),
 
 // Preprocess plugins
-var postcss = require('gulp-postcss');
-var filter = require('gulp-filter');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('autoprefixer');
+postcss = require('gulp-postcss'),
+filter = require('gulp-filter'),
+sourcemaps = require('gulp-sourcemaps'),
+autoprefixer = require('autoprefixer'),
 
 // Images
-var images = require('gulp-imagemin');
+images = require('gulp-imagemin'),
 
 // Documentation
-var sassdoc = require('sassdoc');
-var jsdoc = require("gulp-jsdoc3");
-var styleguide = require('sc5-styleguide');
+sassdoc = require('sassdoc'),
+jsdoc = require("gulp-jsdoc3"),
+kss = require('kss'),
 
 // Gulp plugins
-var cache = require('gulp-cache');
-var notify = require("gulp-notify");
-var shell = require('gulp-shell');
-var size = require('gulp-size');
-var rename = require('gulp-rename');
-var browserSync = require("browser-sync");
-var reload = browserSync.reload;
+beep = require('beepbeep'),
+cache = require('gulp-cache'),
+notify = require("gulp-notify"),
+shell = require('gulp-shell'),
+size = require('gulp-size'),
+plumber = require('gulp-plumber'),
+rename = require('gulp-rename'),
+browserSync = require("browser-sync"),
+reload = browserSync.reload;
+
+
+//
+// Error handling
+//
+
+function errorAlert(error){
+  beep();
+  notify.onError({
+    title: 'Gulp error'
+  })(error);
+  this.emit("end");
+};
 
 
 //
@@ -51,31 +66,23 @@ gulp.task('sass', function () {
   // Import Sass from Bower and Node modules
   .pipe(sass({ importer: moduleImporter() }))
 
+  // Catch any Sass errors and prevent them from crashing gulp
+  .pipe(plumber({errorHandler: errorAlert}))
+
   // Convert Sass into CSS
+  .pipe(sourcemaps.init())
   .pipe(sass({
     includePaths: ['sass'],
     sourcemap: true,
-    sourceComments: 'normal',
-    onError: function(err) {
-      return notify().write(err);
-    }
+    sourceComments: 'normal'
   }))
-
-  // Catch any Sass errors and prevent them from crashing gulp
-  .on('error', function (error) {
-    console.error(error);
-    this.emit('end');
-  })
-
-  // Load existing internal sourcemap
-  .pipe(sourcemaps.init({loadMaps: true}))
 
   // Autoprefix properties
   .pipe(postcss([autoprefixer({
     browsers: ['last 2 versions', '> 5%']
   }) ]))
 
-  // Write final .map file
+  // Write sourcemap
   .pipe(sourcemaps.write())
 
   // Save the CSS
@@ -86,13 +93,13 @@ gulp.task('sass', function () {
     gzip: true
   }))
 
-  // Notify to say the task has complete
+  // Notify to say the task has completed
   .pipe(notify({
     message: 'Sass compiling complete',
     onLast: true
   }))
 
-  // Filtering stream to only css files
+  // Filtering stream to only CSS files
   .pipe(filter(sassPath + '/**/*.css'))
 
   .pipe(browserSync.reload({stream:true}));
@@ -102,21 +109,17 @@ gulp.task('sass', function () {
 //
 // Compile JavaScript
 //
+
 gulp.task('js', function () {
   return gulp.src(jsPath + '/**/*.js')
   .pipe(gulp.dest(jsPath))
-
-  // Notify to say the task has complete
-  .pipe(notify({
-    message: 'JavaScript compiling complete',
-    onLast: true
-  }))
 });
 
 
 //
 // Compress images
 //
+
 gulp.task('images', function() {
   gulp.src(imgPath + '/*')
 
@@ -127,18 +130,13 @@ gulp.task('images', function() {
   })))
 
   .pipe(gulp.dest(imgPath + '/min/'))
-
-  // Notify to say the task has complete
-  .pipe(notify({
-    message: 'Image compression complete',
-    onLast: true
-  }))
 });
 
 
 //
 // Clear the theme registry with drush
 //
+
 gulp.task('drush', shell.task([
   'drush cache-clear theme-registry'
 ]));
@@ -153,12 +151,6 @@ gulp.task('jsdoc', function (cb) {
   gulp.src(['README.md', jsPath + '/**/*.js'], {read: false})
 
   .pipe(jsdoc(jsdocConfig, cb))
-
-  // Notify to say the task has complete
-  .pipe(notify({
-  message: 'JSDoc update complete',
-    onLast: true
-  }))
 });
 
 
@@ -168,65 +160,42 @@ gulp.task('jsdoc', function (cb) {
 
 gulp.task('sassdoc', function () {
   return gulp.src(sassPath + '/**/*.scss')
+  .pipe(bulkSass())
+  .pipe(plumber({errorHandler: errorAlert}))
 
   .pipe(sassdoc({
     dest: './documentation/sassdoc'
   }))
-
-  // Notify to say the task has complete
-  .pipe(notify({
-    message: 'SassDoc update complete',
-    onLast: true
-  }))
 });
 
 
 //
-// Compile SC5 Styleguide
+// Compile KSS styleguide
 //
 
-gulp.task('styleguide:generate', function() {
+gulp.task('styleguide', function(){
+  return kss({
 
-  // Get the Sass
-  return gulp.src([sassPath + '/**/*.scss'])
+    source: sassPath,
+    destination: styleguidePath,
 
-  .pipe(styleguide.generate({
-      title: 'Titanium Rings Forever style guide',
-      server: false,
-      rootPath: styleguidePath,
-      appRoot: themePath + styleguidePath,
-      overviewPath: 'documentation/styleguide.md'
-    }))
+    // CSS and JS paths are relative to the generated style guide.
+    css: [
+      '//brick.a.ssl.fastly.net/Lora:400i/Roboto:500,300,700,900',
+      '../../' + cssPath + '/styles.css'
+    ],
+    js: [
+      '../../' + jsPath + '/fastclick.min.js',
+      '../../' + jsPath + '/jquery.tooltipster.min.js',
+      '../../' + jsPath + '/trf.js'
+    ],
 
-  .pipe(gulp.dest(styleguidePath))
+    homepage: 'documentation/styleguide.md',
+    title: 'Titanium Rings Forever style guide',
+    rootPath: styleguidePath,
+    appRoot: themePath + styleguidePath,
+  });
 });
-
-gulp.task('styleguide:applystyles', function() {
-  return gulp.src([sassPath + '/styles.scss'])
-
-    .pipe(bulkSass())
-    .pipe(sass({ importer: moduleImporter() }))
-
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-
-    .pipe(styleguide.applyStyles())
-
-    .pipe(gulp.dest(styleguidePath))
-
-  // Notify to say the task has complete
-  .pipe(notify({
-    message: 'Styleguide update complete',
-    onLast: true
-  }))
-});
-
-gulp.task('styleguide-watch', ['styleguide'], function() {
-  gulp.watch([sassPath + '/**/*.scss'], ['styleguide']);
-});
-
-gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
 
 //
