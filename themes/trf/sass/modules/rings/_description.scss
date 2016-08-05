@@ -1,0 +1,14 @@
+//
+// Ring description
+//
+
+.page-node.node-type-rings {
+
+  .field-name-field-description {
+    line-height: 1.25;
+
+    @include mq(smallish) {
+      line-height: 1.5;
+    }
+  }
+}

@@ -7,15 +7,21 @@
   // Wrapper around image zoom and thumbnails
   .commerce-product-field-field-images {
     position: relative;
-    padding-right: ($padding * 4);
-    padding-bottom: ($padding * 2);
-    min-height: $imagestyle-product_full;
     @include clearfix;
+
+    @include mq(smallish) {
+      padding-right: ($padding * 4);
+      padding-bottom: ($padding * 2);
+      min-height: $imagestyle-product_full;
+    }
 
     // Zoom image
     > figure {
-      width: $imagestyle-product_full;
-      float: right;
+
+      @include mq(smallish) {
+        width: $imagestyle-product_full;
+        float: right;
+      }
     }
 
     // Zoom image caption
@@ -27,7 +33,12 @@
 
   // Thumbnail wrapper
   #imagezoom-thumb-wrapper {
-    width: $imagestyle-product_thumbnail;
+    margin: $padding 0;
+
+    @include mq(smallish) {
+      margin: 0;
+      width: $imagestyle-product_thumbnail;
+    }
   }
   .imagezoom-thumbs {
     margin: 0;

@@ -4,6 +4,26 @@
 
 .page-node.node-type-rings {
 
+  .ds-left {
+    float: none;
+    width: 100%;
+
+    @include mq(smallish) {
+      float: left;
+      width: 66.6%;
+    }
+  }
+
+  .ds-right {
+    float: none;
+    width: 100%;
+
+    @include mq(smallish) {
+      float: left;
+      width: 33.3%;
+    }
+  }
+
   .ds-footer {
     padding-top: $padding;
   }

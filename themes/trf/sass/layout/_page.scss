@@ -63,6 +63,9 @@
 }
 
 .region-content-inner {
-  padding-left: $padding;
-  padding-right: $padding;
+
+  @include mq(smallish) {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
 }

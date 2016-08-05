@@ -4,14 +4,19 @@
 
 %page-title {
   @extend %header;
-  margin-top: (2 * $padding);
-  @include font-size(60px);
-  font-weight: $thin;
-  letter-spacing: -0.1rem;
-  word-spacing: 0.5rem;
+  margin-top: $padding;
+  font-weight: $normal;
 
   // unset Omega styles
   text-transform: none;
+
+  @include mq(smallish) {
+    margin-top: (2 * $padding);
+    @include font-size(60px);
+    letter-spacing: -0.1rem;
+    word-spacing: 0.5rem;
+    font-weight: $thin;
+  }
 }
 
 %page-title--product-list {
