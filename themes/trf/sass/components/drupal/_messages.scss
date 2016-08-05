@@ -4,7 +4,7 @@
 // markup:
 // <div class="messages">.messages</div>
 //
-// Styleguide 4.1.0
+// Style guide: components.drupal-messages
 
 .messages.messages {
   padding: $padding $padding $padding (2 * $padding);
@@ -32,7 +32,7 @@
 // markup:
 // <div class="messages messages--status">.messages--status</div>
 //
-// Styleguide 4.1.1
+// Style guide: components.drupal-messages.success
 
 .status.status,
 .messages--status {
@@ -46,7 +46,7 @@
 // markup:
 // <div class="messages messages--warning">.messages--warning</div>
 //
-// Styleguide 4.1.2
+// Style guide: components.drupal-messages.warning
 
 .warning.warning,
 .messages--warning {
@@ -60,7 +60,7 @@
 // markup:
 // <div class="messages messages--error">.messages--error</div>
 //
-// Styleguide 4.1.3
+// Style guide: components.drupal-messages.error
 
 .error.error,
 .messages--error {

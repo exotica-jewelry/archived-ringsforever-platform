@@ -2,7 +2,6 @@
 // Functions
 //
 // Documented with SassDoc.
-// styleguide:ignore:start
 //
 
 /// Calculate rem with fallback pixels.
@@ -115,5 +114,3 @@
   }
   @return $string;
 }
-
-// styleguide:ignore:end

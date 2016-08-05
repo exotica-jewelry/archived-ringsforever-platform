@@ -1,6 +1,6 @@
 // Headers
 //
-// Styleguide 2.1.0
+// Style guide: base.type.headers
 
 %header {
   font-family: $fontDefault;
@@ -10,7 +10,7 @@
 // markup:
 // <main><h1>H1 header</h1></main>
 //
-// Styleguide 2.1.1
+// Style guide: base.type.headers.h1
 
 %h1 {
   @extend %header;
@@ -31,7 +31,7 @@
 // markup:
 // <h2>H2 header</h2>
 //
-// Styleguide 2.1.2
+// Style guide: base.type.headers.h2
 
 %h2 {
   @extend %header;
@@ -47,7 +47,7 @@
 // markup:
 // <h3>H3 header</h3>
 //
-// Styleguide 2.1.3
+// Style guide: base.type.headers.h3
 
 %h3 {
   @extend %header;
@@ -61,7 +61,7 @@
 // markup:
 // <h4>H4 header</h4>
 //
-// Styleguide 2.1.4
+// Style guide: base.type.headers.h4
 
 %h4 {
   @extend %header;
@@ -76,7 +76,7 @@
 // markup:
 // <h5>H5 header</h5>
 //
-// Styleguide 2.1.5
+// Style guide: base.type.headers.h5
 
 %h5 {
   @extend %header;
@@ -88,7 +88,7 @@
 // markup:
 // <h6>H6 header</h6>
 //
-// Styleguide 2.1.6
+// Style guide: base.type.headers.h6
 
 %h6 {
   @extend %header;

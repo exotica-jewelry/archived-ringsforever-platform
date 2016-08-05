@@ -1,6 +1,6 @@
 // Colors
 //
-// Styleguide 1.1.0
+// Style guide: variables.colors
 
 // Main colors
 //
@@ -10,7 +10,7 @@
 // markup:
 // <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
 //
-// Styleguide 1.1.1
+// Style guide: variables.colors.main
 
 $black: #111;
 $white: #fff;
@@ -40,7 +40,7 @@ $colors: (
 // markup:
 // <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
 //
-// Styleguide 1.1.2
+// Style guide: variables.colors.minor
 
 $red: #a00;
 $yellow: #ee0;

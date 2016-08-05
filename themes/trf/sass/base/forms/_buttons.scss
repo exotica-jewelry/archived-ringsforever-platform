@@ -1,13 +1,13 @@
 // Buttons
 //
-// Styleguide 3.2.0
+// Style guide: base.buttons
 
 // Standard button
 //
 // markup:
 // <button>Button</button>
 //
-// Styleguide 3.2.1
+// Style guide: base.buttons.standard
 %button {
   display: block;
   border: none;
@@ -57,7 +57,7 @@ button,
 // markup:
 // <button class="button--inline">Button</button>
 //
-// Styleguide 3.2.2
+// Style guide: base.buttons.inline
 
 .button--inline {
   @extend %button;
@@ -71,7 +71,7 @@ button,
 // markup:
 // <button class="button--cta">Button</button>
 //
-// Styleguide 3.2.3
+// Style guide: base.buttons.cta
 
 .button--cta {
   @extend %button;
@@ -95,7 +95,7 @@ button,
 // markup:
 // <button class="button--ghost">Button</button>
 //
-// Styleguide 3.2.4
+// Style guide: base.buttons.ghost
 .button--ghost {
   @extend %button;
   display: inline-block;
@@ -124,7 +124,7 @@ button,
 // markup:
 // <button class="button--tag">Button</button>
 //
-// Styleguide 3.2.5
+// Style guide: base.buttons.tag
 
 .button--tag {
   @extend %button;

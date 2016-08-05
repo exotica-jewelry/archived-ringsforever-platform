@@ -1,6 +1,6 @@
 // Fonts
 //
-// Styleguide 1.2.0
+// Style guide: variables.fonts
 
 // Font families
 //
@@ -8,10 +8,9 @@
 // $fontHighlight - Highlight (emphasis) font
 //
 // markup:
-// <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400italic|Roboto:500,300,700,900" media="all" />
 // <div style="font-family: {$modifiers};">{$modifiers}</div>
 //
-// Styleguide 1.2.1
+// Style guide: variables.fonts.families
 
 $fontDefault: 'Roboto', Helvetica, Arial, sans-serif;
 $fontHighlight: 'Lora', Georgia, Times, 'Times New Roman', serif;
@@ -29,7 +28,7 @@ $fontHighlight: 'Lora', Georgia, Times, 'Times New Roman', serif;
 // <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:500,300,700,900" media="all" />
 // <div style="font-family: $fontDefault; font-weight: {$modifiers};">{$modifiers}</div>
 //
-// Styleguide 1.2.2
+// Style guide: variables.fonts.weights
 
 $thin: 300;
 $normal: 500;
