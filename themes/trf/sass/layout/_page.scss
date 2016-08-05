@@ -24,6 +24,10 @@
     margin-top: 0;
     margin-left: 0;
   }
+
+  &.container-24 .grid-8 {
+    width: auto;
+  }
 }
 
 // Menu area
@@ -48,6 +52,10 @@
       rgba($white_off, 0.4),
       transparent
     );
+}
+
+.container-24 .grid-24 {
+  width: 100% !important; // Overriding Omega
 }
 
 .region-content {

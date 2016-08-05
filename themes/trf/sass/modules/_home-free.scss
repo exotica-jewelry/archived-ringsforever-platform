@@ -6,32 +6,57 @@
   margin: 0 auto;
   padding: $padding;
   background-color: $white-off;
-  border-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
 }
 
 .home-free__intro {
-  margin-bottom: 0;
-  @include font-size(28px);
-  font-weight: $thin;
-  text-align: center;
+  display: inline-block;
+  width: 40%;
+  margin: $padding $padding $padding 0;
+  @include font-size(16px);
+  font-weight: $normal;
+  text-align: right;
+  vertical-align: top;
+
+  @include mq(smallish) {
+    display: block;
+    width: auto;
+    margin: 0;
+    @include font-size(28px);
+    font-weight: $thin;
+    text-align: center;
+  }
 }
 
 .home-free__list {
+  display: inline-block;
+  width: 50%;
   margin: 0;
-  text-align: center;
+  text-align: left;
+
+  @include mq(smallish) {
+    display: block;
+    width: auto;
+    text-align: center;
+  }
 }
 
 .home-free__item {
   display: inline-block;
-  margin: $padding;
+  margin: ($padding / 2);
   list-style-type: none;
   border-radius: $border-radius;
+
+  @include mq(smallish) {
+    margin: $padding;
+  }
 }
 
 .home-free__link {
   display: block;
-  padding: $padding;
-  @include font-size(24px);
+  padding: ($padding / 4) ($padding / 2);
+  @include font-size(18px);
   font-weight: $normal;
   text-align: center;
   border-radius: $border-radius;
@@ -41,5 +66,10 @@
   @include is-on {
     background-color: $white;
     @include card(0);
+  }
+
+  @include mq(smallish) {
+    padding: $padding;
+    @include font-size(24px);
   }
 }

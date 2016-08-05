@@ -5,11 +5,10 @@
 .block-shopping-cart-block {
   .content {
     position: relative;
-    margin-right: $padding;
+    margin: $padding ($padding / 2) 0;
     background-color: $white;
     background-position: 5px ($padding / 2);
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    border-radius: $border-radius;
     @include card(1);
     @include i-ringbox-empty(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $blue_verydark);
 

@@ -16,22 +16,27 @@
 
   ul.menu li.collapsed,
   ul.menu li.leaf {
+    display: inline-block;
+    margin: 0;
+    padding-right: 0;
     list-style-type: none;
     list-style-image: none;
-    display: inline-block;
     font-family: $fontDefault;
+
+    @include mq(smallish) {
+      margin: 0 ($padding / 2);
+    }
 
     a {
       display: block;
       position: relative;
-      margin-bottom: ($padding * -0.5);
+      margin: 0 0 ($padding * -0.5);
       padding: ($padding / 4) ($padding / 2) ($padding / 2);
       font-family: $fontDefault;
       font-weight: $normal;
       color: $white;
       background-color: $blue;
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
+      border-radius: $border-radius;
       @include a-slidehover("up");
 
       @include is-on {
@@ -39,6 +44,7 @@
       }
 
         @include mq(smallish) {
+          margin: $padding 0 ($padding * -0.5);
           padding: ($padding / 2) $padding $padding;
         }
     }
