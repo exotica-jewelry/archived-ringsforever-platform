@@ -9,16 +9,15 @@
 
   ul.menu li,
   .section-footer .region-footer-first ul.menu li.expanded {
+    max-width: 100%;
+    padding-right: 0;
     @include font-size(14px);
     margin-bottom: ($padding / 4);
     font-family: $fontDefault;
 
     @include mq(mediumish) {
       max-width: 175px;
-    }
-
-    &:last-of-type {
-      padding-right: 0;
+      padding-right: ($padding * 2);
     }
 
     .nolink {
@@ -27,8 +26,11 @@
       padding: ($padding / 4) ($padding / 2);
       color: $white;
       background-color: $blue_verydark;
-      border-radius: $border-radius;
       @include card(1);
+
+      @include mq(mediumish) {
+        border-radius: $border-radius;
+      }
     }
 
     a {
