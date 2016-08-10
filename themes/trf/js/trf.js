@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function() {
     jQuery(this).addClass('is-clicked');
   });
 
+  // Move explanatory width block to just below width dropdown
+  jQuery('.page-node .field-name-ring-width').insertAfter('.form-item-attributes-field-ring-width');
+
   // Display message when add-to-cart button is clicked
   jQuery('.field-type-commerce-product-reference form.commerce-add-to-cart .form-submit').click(function(){
     jQuery(this).after('<p class="is-loading">Adding this ring to your cart...</p>');

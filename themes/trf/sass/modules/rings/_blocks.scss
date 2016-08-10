@@ -30,6 +30,11 @@
     margin-bottom: $padding;
   }
 
+  // Width explanation
+  .field-name-ring-width {
+    @extend %ring-block-field;
+  }
+
   // Colors note
   .field-name-ring-colors {
     @extend %ring-block-field;

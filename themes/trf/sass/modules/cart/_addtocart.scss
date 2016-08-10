@@ -20,7 +20,7 @@
     .form-submit {
       display: block;
       width: 90%;
-      margin: $padding 0 0 0;
+      margin: $padding 0 ($padding * 2);
       padding: ($padding / 2) $padding;
       background-color: $blue;
       background-image: none;

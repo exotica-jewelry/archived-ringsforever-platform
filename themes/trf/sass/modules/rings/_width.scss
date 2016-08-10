@@ -10,4 +10,7 @@
   .field-type-commerce-product-reference form.commerce-add-to-cart label::after {
     content: "";
   }
+  .form-item-attributes-field-ring-width {
+    padding-bottom: 0 !important;
+  }
 }
