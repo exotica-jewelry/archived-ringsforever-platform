@@ -60,5 +60,14 @@ Because sizing equipment used by jewelers can vary a lot, once you place an orde
 
   $export['ring_sizing'] = $fe_block_boxes;
 
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Ring pages: Width';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'ring_width';
+  $fe_block_boxes->body = '<p>Select your desired width for this ring.</p>
+';
+
+  $export['ring_width'] = $fe_block_boxes;
+
   return $export;
 }

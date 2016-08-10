@@ -103,7 +103,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '32',
+            'weight' => '33',
             'visible' => FALSE,
           ),
           'featured' => array(
@@ -129,7 +129,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '34',
+            'weight' => '35',
             'visible' => FALSE,
           ),
           'featured' => array(
@@ -155,7 +155,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '35',
+            'weight' => '36',
             'visible' => FALSE,
           ),
           'featured' => array(
@@ -181,7 +181,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '36',
+            'weight' => '37',
             'visible' => FALSE,
           ),
           'featured' => array(
@@ -259,7 +259,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '16',
+            'weight' => '17',
             'visible' => TRUE,
           ),
           'featured' => array(
@@ -285,7 +285,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '15',
+            'weight' => '16',
             'visible' => TRUE,
           ),
           'featured' => array(
@@ -321,7 +321,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '37',
+            'weight' => '38',
             'visible' => FALSE,
           ),
           'teaser' => array(

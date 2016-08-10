@@ -52,8 +52,13 @@ function trf_ring_type_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
+    'ring_width' => array(
+      'weight' => '11',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'similar_rings_colors' => array(
-      'weight' => '20',
+      'weight' => '21',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -64,7 +69,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'similar_rings_elements' => array(
-      'weight' => '18',
+      'weight' => '19',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -75,7 +80,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'ring_colors' => array(
-      'weight' => '11',
+      'weight' => '12',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -97,7 +102,7 @@ function trf_ring_type_ds_field_settings_info() {
       'format' => 'default',
     ),
     'ring_gemstones_add' => array(
-      'weight' => '14',
+      'weight' => '15',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -121,7 +126,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'ring_gemstones_other' => array(
-      'weight' => '13',
+      'weight' => '14',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -138,7 +143,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'ring_similar_rings_header' => array(
-      'weight' => '17',
+      'weight' => '18',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -154,7 +159,7 @@ function trf_ring_type_ds_field_settings_info() {
       ),
     ),
     'ring_sizing' => array(
-      'weight' => '12',
+      'weight' => '13',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -298,6 +303,22 @@ function trf_ring_type_ds_custom_fields_info() {
     'block_render' => '1',
   );
   $export['ring_sizing'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'ring_width';
+  $ds_field->label = 'Ring: Width';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+    'commerce_product' => 'commerce_product',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'block|11',
+    'block_render' => '1',
+  );
+  $export['ring_width'] = $ds_field;
 
   return $export;
 }
@@ -450,18 +471,19 @@ function trf_ring_type_ds_layout_settings_info() {
         8 => 'product:commerce_price',
         9 => 'ring_free',
         10 => 'field_product',
-        11 => 'ring_colors',
-        12 => 'ring_sizing',
-        13 => 'ring_gemstones_other',
-        14 => 'ring_gemstones_add',
-        15 => 'product:field_ring_width',
-        16 => 'product:field_color',
+        11 => 'ring_width',
+        12 => 'ring_colors',
+        13 => 'ring_sizing',
+        14 => 'ring_gemstones_other',
+        15 => 'ring_gemstones_add',
+        16 => 'product:field_ring_width',
+        17 => 'product:field_color',
       ),
       'footer' => array(
-        17 => 'ring_similar_rings_header',
-        18 => 'similar_rings_elements',
-        19 => 'field_related_rings',
-        20 => 'similar_rings_colors',
+        18 => 'ring_similar_rings_header',
+        19 => 'similar_rings_elements',
+        20 => 'field_related_rings',
+        21 => 'similar_rings_colors',
       ),
     ),
     'fields' => array(
@@ -476,6 +498,7 @@ function trf_ring_type_ds_layout_settings_info() {
       'product:commerce_price' => 'right',
       'ring_free' => 'right',
       'field_product' => 'right',
+      'ring_width' => 'right',
       'ring_colors' => 'right',
       'ring_sizing' => 'right',
       'ring_gemstones_other' => 'right',
