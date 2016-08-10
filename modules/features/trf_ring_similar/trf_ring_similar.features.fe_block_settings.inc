@@ -14,6 +14,7 @@ function trf_ring_similar_default_fe_block_settings() {
 
   $export['views-similar_rings-sr'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'similar_rings-sr',
     'module' => 'views',
@@ -46,6 +47,7 @@ function trf_ring_similar_default_fe_block_settings() {
 
   $export['views-similar_rings-sr_collections'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'similar_rings-sr_collections',
     'module' => 'views',
@@ -78,6 +80,7 @@ function trf_ring_similar_default_fe_block_settings() {
 
   $export['views-similar_rings-sr_colors'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'similar_rings-sr_colors',
     'module' => 'views',
@@ -110,6 +113,7 @@ function trf_ring_similar_default_fe_block_settings() {
 
   $export['views-similar_rings-sr_elements'] = array(
     'cache' => 4,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'similar_rings-sr_elements',
     'module' => 'views',
