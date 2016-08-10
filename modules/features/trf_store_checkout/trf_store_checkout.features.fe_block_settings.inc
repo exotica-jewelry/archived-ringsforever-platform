@@ -110,7 +110,7 @@ checkout/*',
         'weight' => 33,
       ),
     ),
-    'title' => '<none>',
+    'title' => 'Shopping cart',
     'visibility' => 0,
   );
 
