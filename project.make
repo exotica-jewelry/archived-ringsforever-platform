@@ -58,7 +58,7 @@ projects[diff][version] = "3.2"
 
 projects[ds][version] = "2.14"
 
-projects[ds_extra_layouts][version] = "1.1"
+projects[ds_extra_layouts][version] = "1.2"
 
 projects[elements][version] = "1.4"
 
