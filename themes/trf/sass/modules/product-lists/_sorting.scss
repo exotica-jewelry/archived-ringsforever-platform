@@ -2,10 +2,22 @@
 // Display sorting options
 //
 
-.block-search-api-sorts .content ul.search-api-sorts li a {
-  background-color: $grey;
+.block-search-api-sorts {
+  margin-top: $padding;
+  padding-top: $padding;
+  border-top: $blue_dark $line-width solid;
 
-  @include is-on {
-    background-color: $blue;
+  @include mq(smallish) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .content ul.search-api-sorts li a {
+    background-color: $grey;
+
+    @include is-on {
+      background-color: $blue;
+    }
   }
 }

@@ -40,8 +40,12 @@
 
   // Price slider
   &:first-of-type {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-top: $padding;
+    margin-bottom: ($padding * 2);
+
+    @include mq(mediumish) {
+      margin-top: ($padding * 3);
+    }
   }
 
   #search-api-ranges-block-slider-view-form-field-productcommerce-priceamount-decimal {
