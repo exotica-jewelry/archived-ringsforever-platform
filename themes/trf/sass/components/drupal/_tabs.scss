@@ -3,17 +3,29 @@
 //
 
 body div.tabs {
-  position: absolute;
-  top: 0;
-  left: 100%; // positioned just to the right of the main content area
+
+  @include mq(mediumish) {
+    position: absolute;
+    top: 0;
+    left: 100%; // positioned just to the right of the main content area
+  }
 
   ul.tabs {
-    width: 150px;
+    margin: $padding 0;
 
-    li {
-      width: 100%;
-      margin: 0 !important;
-      padding: ($padding / 3) !important;
+    @include mq(mediumish) {
+      width: 150px;
+      margin: 0;
+      padding: 0;
     }
-  }
+
+      li {
+
+        @include mq(mediumish) {
+          width: 100%;
+          margin: 0 !important;
+          padding: ($padding / 3) !important;
+        }
+      }
+    }
 }
