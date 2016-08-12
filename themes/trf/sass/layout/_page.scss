@@ -42,9 +42,11 @@
 
 // Content area
 
-.zone-content {
+.zone-content-wrapper .zone-content {
+  margin-bottom: 0;
   background-color: $blue_verylight;
-  border-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
   @include card(1);
   background-image:
     radial-gradient(
@@ -52,22 +54,16 @@
       rgba($white_off, 0.4),
       transparent
     );
-}
 
-.container-24 .grid-24 {
-  width: 100% !important; // Overriding Omega
+  @include mq(mediumish) {
+    margin-bottom: ($padding * 4);
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
 }
 
 .region-content {
   position: relative;
-}
-
-.region-content-inner {
-
-  @include mq(smallish) {
-    padding-left: $padding;
-    padding-right: $padding;
-  }
 }
 
 // Footer area
