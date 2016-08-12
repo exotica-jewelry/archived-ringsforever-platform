@@ -66,6 +66,13 @@
   position: relative;
 }
 
+.region-content-inner {
+
+  @include mq(mediumish) {
+    padding: 0 $padding;
+  }
+}
+
 // Footer area
 
 .zone-footer-wrapper {
