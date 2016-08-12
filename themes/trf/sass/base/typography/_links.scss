@@ -12,7 +12,7 @@
 // Style guide: base.type.links
 
 %link {
-  color: $blue;
+  color: $blue_dark;
   transition: $transition;
   text-decoration: none;
 
@@ -27,24 +27,24 @@
   }
 }
 
-%link-basic {
+%link--basic {
   padding: 0;
   background-color: inherit;
-  color: $blue;
+  color: $blue_dark;
   border-radius: 0;
   border-bottom: 1px $blue dotted;
 
   &:visited {
-    color: $blue_light;
+    color: $blue_dark;
   }
 
   @include is-on {
-    color: $blue_light;
-    border-bottom-color: $black;
+    color: $blue_verydark;
+    border-bottom: 0;
   }
 }
 
-%link-highlight {
+%link--highlight {
   padding: 0.1rem 0.35rem;
   box-decoration-break: clone;
   border-radius: 5px;
@@ -78,7 +78,7 @@ a[href^=tel] {
   ol,
   dl {
     a {
-      @extend %link-highlight;
+      @extend %link--highlight;
     }
   }
 }

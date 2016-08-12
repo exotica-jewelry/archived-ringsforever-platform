@@ -13,15 +13,9 @@
     @include font-size(16px);
 
     a {
+      @extend %link--basic;
       font-weight: $bold;
-      text-decoration: underline;
       margin-left: ($padding / 2);
-      color: $blue_dark;
-
-      @include is-on {
-        text-decoration: none;
-        color: $blue_verydark;
-      }
     }
   }
 

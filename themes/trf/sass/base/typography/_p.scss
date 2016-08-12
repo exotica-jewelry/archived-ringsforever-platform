@@ -14,5 +14,17 @@
 
 p {
   margin: 0 0 2rem 0;
-  @include font-size(20px);
+  @include font-size(16px);
+
+  @include mq(smallish) {
+    @include font-size(18px);
+  }
+
+  @include mq(mediumish) {
+    @include font-size(20px);
+  }
+
+  a {
+    @extend %link--basic;
+  }
 }
