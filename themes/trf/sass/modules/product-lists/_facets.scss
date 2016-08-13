@@ -3,18 +3,21 @@
 //
 
 .region-sidebar-first .block-facetapi {
-  margin: 0 0.25rem 1rem 0;
+  margin: 0 ($padding / 4) $padding 0;
   padding: 0;
   border-top: none;
 
   // Section titles
   .block-title {
     @extend %header;
-    margin-bottom: 0.5rem;
+    margin-bottom: ($padding / 2);
     padding-bottom: 0;
-    @include font-size(28px);
+    @include font-size(18px);
     font-weight: $thin;
-    border-bottom: 1px $black dotted;
+
+    @include mq(mediumish) {
+      @include font-size(24px);
+    }
   }
 
   // Checkbox-link facets and Search API aggregate facets (e.g. keywords)
@@ -41,7 +44,7 @@
   // Price slider
   &:first-of-type {
     margin-top: $padding;
-    margin-bottom: ($padding * 2);
+    margin-bottom: $padding;
 
     @include mq(mediumish) {
       margin-top: ($padding * 3);
@@ -98,7 +101,6 @@
 
   // Colors
   &.field_product_field_color {
-    margin-bottom: 1.5rem;
 
     ul.facetapi-commerce-search-api-fancy {
       margin-bottom: 0;
