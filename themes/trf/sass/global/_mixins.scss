@@ -126,6 +126,7 @@
 /// @author Scott Kellum
 ///
 /// @group Utilities
+
 @mixin ir($imageURL) {
   background-image: url($imageURL);
   background-repeat: no-repeat;
@@ -142,6 +143,7 @@
 /// @author Ivan Boothe
 ///
 /// @group Utilities
+
 @mixin svg-ir($imagesource) {
   background-image: svg-url($imagesource);
   background-repeat: no-repeat;
@@ -161,6 +163,7 @@
 /// @requires {function} bottom-shadow
 ///
 /// @group Utilities
+
 @mixin card($depth) {
   @if $depth < 1 {
     box-shadow: none;
@@ -179,6 +182,7 @@
 /// @author Ivan Boothe
 ///
 /// @group Utilities
+
 @mixin descenders($stroke: 2px) {
   text-shadow:
     ($stroke * -1) ($stroke * -1) 0 color(content_bg),
@@ -246,4 +250,56 @@
     display: table;
     clear: both;
   }
+}
+
+/// Arrows.
+///
+/// @link https://gist.github.com/bpainter/1085320
+/// @author Bermon Painter
+///
+/// @param {Direction} $direction - Triangle direction: top, left, right, bottom, top-left, top-right, bottom-left, bottom-right
+/// @param {Color} $color [currentColor] - Triangle color: hex, rgb or rbga
+/// @param {Length} $size [1em] - Triangle size: px or em
+///
+/// @example
+// .element {
+//   @include arrow(top, #000, 50px);
+// }
+///
+/// @group Utilities
+
+@mixin arrow($direction, $color: currentColor, $size: 1em){
+    display: block;
+    height: 0;
+    width: 0;
+
+    @if $direction == 'top' {
+        border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $color;
+    } @else if $direction == 'right' {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+      border-left: $size solid $color;
+    } @else if $direction == 'bottom' {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+    } @else if $direction == 'left' {
+        border-top: $size solid transparent;
+      border-right: $size solid $color;
+      border-bottom: $size solid transparent;
+    } @else if $direction == 'top-left' {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+    } @else if $direction == 'top-right' {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+    } @else if $direction == 'bottom-left' {
+        border-bottom: $size solid $color;
+        border-right: $size solid transparent;
+    } @else if $direction == 'bottom-right' {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+    }
 }
