@@ -15,7 +15,7 @@ function trf_preprocess_html(&$vars) {
   // Adding theme scripts
 
     // fastclick.js
-    drupal_add_js(drupal_get_path('theme', 'trf') . '/js/fastclick.min.js', array(
+    drupal_add_js(drupal_get_path('theme', 'trf') . '/js/fastclick.js', array(
       'scope' => 'header',
       'weight' => '5'
     ));
