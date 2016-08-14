@@ -20,11 +20,15 @@
 
   // Title
   .ctools-collapsible-handle {
+
+    @include is-on {
+      color: $blue_verydark;
+    }
   }
 
   // Content wrapper
   .ctools-collapsible-content {
-    padding-top: $padding;
+    padding: $padding 0;
     border-top: 1px $black dotted;
   }
 }

@@ -7,6 +7,14 @@
   padding: 0;
   border-top: none;
 
+  &:first-of-type {
+    margin-top: $padding;
+
+    @include mq(mediumish) {
+      margin-top: ($padding * 3.5);
+    }
+  }
+
   // Section titles
   .block-title {
     @extend %header;
@@ -34,24 +42,19 @@
     font-weight: $normal; // Needs an override since these are <a> elements.
     padding-left: ($padding / 10);
     color: $black;
+    border-bottom: 1px $black dotted;
 
     @include is-on {
       text-decoration: none;
-      border-bottom: 1px $black solid;
+      color: $blue_verydark;
+      border-bottom: 1px $blue_verydark dotted;
     }
   }
 
   // Price slider
-  &:first-of-type {
-    margin-top: $padding;
-    margin-bottom: $padding;
-
-    @include mq(mediumish) {
-      margin-top: ($padding * 3);
-    }
-  }
-
   #search-api-ranges-block-slider-view-form-field-productcommerce-priceamount-decimal {
+    position: relative;
+
     .text-range {
       margin-bottom: 1rem;
       @include font-size(14px);

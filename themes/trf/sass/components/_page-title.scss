@@ -24,14 +24,18 @@
   position: relative;
   left: 2px;
   margin-left: 0;
-  margin-bottom: $padding;
-  @include font-size(42px);
+  margin-bottom: ($padding * 2);
+  @include font-size(28px);
   font-weight: $normal;
   line-height: 1em;
   text-shadow: none;
   color: $black;
   border-bottom: 1px $black solid;
   @include descenders;
+
+  @include mq(smallish) {
+    @include font-size(42px);
+  }
 }
 
 h1#page-title {
