@@ -21,7 +21,7 @@
 
 %page-title--product-list {
   @extend %page-title;
-  top: -10px;
+  position: relative;
   left: 2px;
   margin-left: 0;
   margin-bottom: $padding;
