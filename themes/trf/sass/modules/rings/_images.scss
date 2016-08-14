@@ -48,11 +48,20 @@
 
   // Thumbnails
   .imagezoom-thumb {
-    margin-top: $padding;
+    display: inline-block;
+    margin-right: $padding;
     margin-left: 0;
+    width: $imagestyle-product_thumbnail;
+
+    @include mq(smallish) {
+      margin-top: $padding;
+      margin-right: 0;
+    }
 
     &:first-of-type {
-      margin-top: 0;
+      @include mq(smallish) {
+        margin-top: 0;
+      }
     }
   }
 

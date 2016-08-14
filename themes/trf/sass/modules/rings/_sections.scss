@@ -7,6 +7,7 @@
   .ds-left {
     float: none;
     width: 100%;
+    padding-bottom: $padding;
 
     @include mq(smallish) {
       float: left;

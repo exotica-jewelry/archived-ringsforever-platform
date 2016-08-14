@@ -6,6 +6,7 @@
 
 %otherrings {
   @include clearfix;
+  text-align: center;
 
   .more-link > a {
     font-weight: $bold;
@@ -17,8 +18,9 @@
   @extend %header;
   margin-bottom: $padding;
   @include font-size(24px);
-  line-height: 1.5;
+  line-height: 1.25;
   font-weight: $thin;
+  text-align: left;
   border-bottom: 1px $black solid;
 }
 
