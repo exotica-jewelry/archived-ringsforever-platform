@@ -41,6 +41,14 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
 }
 
 /*
+ * Fix overlapping fieldset legends
+ */
+
+legend {
+  min-height: 2em;
+}
+
+/*
  * IMAGE ENTITIES
  */
 
