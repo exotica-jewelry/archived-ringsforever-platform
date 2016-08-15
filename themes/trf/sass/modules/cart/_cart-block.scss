@@ -3,29 +3,23 @@
 //
 
 .block-shopping-cart-block {
-  z-index: 5000;
   margin: 0;
-
-  @include mq(smallish) {
-    z-index: 0;
-  }
 
   .content {
     position: relative;
-    margin: ($padding / 8) 0 0;
-    background-color: transparent;
-    @include i-ringbox-empty(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $blue_verydark);
+    margin: 0 0 $padding;
+    padding: 0;
+    background-color: $white;
+    border-radius: $border-radius;
+    @include card(1);
+    @include i-ringbox-empty(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
 
     .has-items & {
-      @include i-ringbox(25px, ($padding-px / 2), ($padding-px / 2), ($padding * 2.5), $blue_verydark);
+      @include i-ringbox(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
     }
 
     @include mq(smallish) {
       margin: $padding ($padding / 2) 0;
-      background-color: $white;
-      background-position: 5px ($padding / 2);
-      border-radius: $border-radius;
-      @include card(1);
     }
 
     .view-shopping-cart {
@@ -39,7 +33,7 @@
         }
 
         p {
-          padding-top: ($padding / 4);
+          padding-top: ($padding / 5);
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $thin;
@@ -52,7 +46,7 @@
 
         // "1 item"
         .line-item-quantity {
-          padding-top: ($padding / 4);
+          padding-top: ($padding / 5);
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $normal;
@@ -61,11 +55,14 @@
 
         // total
         .line-item-total {
-          padding-top: ($padding / 4);
-          padding-left: $padding;
+          padding: ($padding / 5) ($padding / 4) 0;
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $thin;
+
+          @include mq(smallish) {
+            padding: ($padding / 5) $padding 0;
+          }
         }
 
         ul.links {
@@ -74,6 +71,10 @@
           background-color: transparent;
           @include font-size(16px);
 
+          @include mq(smallish) {
+            width: auto;
+          }
+
           // view cart
           .line-item-summary-view-cart a {
           }
@@ -81,14 +82,18 @@
           // checkout
           .line-item-summary-checkout a {
             display: block;
-            margin-top: ($padding / 5);
+            padding: 0 ($padding / 2);
             font-family: $fontDefault;
             font-weight: $normal;
-            color: $blue_dark;
-            @include heart-click($initial_color: $blue_dark);
+            line-height: 2.15;
+            color: $white;
+            background-color: $blue_verydark;
+            border-radius: $border-radius;
+            @include heart-click;
 
             @include is-on {
               color: $red;
+              background-color: $blue;
               text-decoration: none;
             }
 
@@ -97,16 +102,9 @@
               right: ($padding * -1);
               margin-top: ($padding / 2 * -1);
               padding: ($padding * 2/3) $padding ($padding * 2) $padding;
-              color: $white;
-              background-color: $blue_verydark;
-              border-top-left-radius: $border-radius;
-              border-top-right-radius: $border-radius;
+              border-bottom-left-radius: 0;
               @include a-slidehover("up");
               @include card(1);
-
-              @include is-on {
-                background-color: $blue;
-              }
             }
           }
         }

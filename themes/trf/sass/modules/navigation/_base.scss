@@ -4,10 +4,12 @@
 // This applies to the <nav> elements containing menus.
 
 .navigation {
-  padding: 0 0 ($padding * 2);
+  margin-bottom: $padding;
+  padding-bottom: $padding;
   background-color: $blue_verylight;
 
   @include mq(smallish) {
+    margin: 0;
     padding: 0;
     background-color: transparent;
   }

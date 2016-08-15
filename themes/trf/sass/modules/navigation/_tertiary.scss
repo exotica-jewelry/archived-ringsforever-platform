@@ -17,7 +17,7 @@
   ul.menu li.collapsed,
   ul.menu li.leaf {
     display: inline-block;
-    margin: 0;
+    margin: 0 ($padding / 4);
     padding-right: 0;
     list-style-type: none;
     list-style-image: none;
@@ -43,10 +43,10 @@
         background-color: $blue_dark;
       }
 
-        @include mq(smallish) {
-          margin: $padding 0 ($padding * -0.5);
-          padding: ($padding / 2) $padding $padding;
-        }
+      @include mq(smallish) {
+        margin: $padding 0 ($padding * -0.5);
+        padding: ($padding / 2) $padding $padding;
+      }
     }
   }
 }

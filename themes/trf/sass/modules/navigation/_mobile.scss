@@ -6,19 +6,26 @@
 
 // Toggle button
 .menu-toggle {
+  top: 100%; // positions at the bottom of .section-header
+  left: 0;
   background-color: $blue_verydark;
   border-radius: $border-radius;
 
-  .line {
-    border-bottom-color: $white;
+  @include is-on {
+    background-color: $blue_verydark;
   }
 
-  @include is-on {
-    background-color: $white;
+  .line {
+    margin: 6px auto;
+    border-bottom-color: $white;
 
-    .line {
-      border-bottom-color: $blue_verydark;
+    @include is-on {
+      border-bottom-color: $white;
     }
+  }
+
+  .first-line {
+    padding-top: 2px;
   }
 
   .last-line {
@@ -29,8 +36,9 @@
   .toggle-help {
     top: 0;
     left: 40px;
-    padding: 0 ($padding / 2);
+    padding: 0 ($padding / 4);
     font-family: $fontDefault;
+    @include font-size(14px);
     font-variant: normal;
     line-height: 36px;
     color: $blue_verydark;
