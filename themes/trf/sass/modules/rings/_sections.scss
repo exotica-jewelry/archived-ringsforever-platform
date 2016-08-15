@@ -4,6 +4,10 @@
 
 .page-node.node-type-rings {
 
+  .ds-header {
+    position: relative;
+  }
+
   .ds-left {
     float: none;
     width: $imagestyle-product_full;
@@ -23,11 +27,15 @@
     width: $imagestyle-product_full;
     max-width: 100%;
     margin: 0 auto;
+    padding-top: $padding;
+    border-top: 3px $white solid;
 
     @include mq(smallish) {
       float: left;
       width: 33.3%;
-      margin: 0;
+      margin: ($padding * 5) 0 0;
+      padding: 0;
+      border-top-width: 0;
     }
   }
 

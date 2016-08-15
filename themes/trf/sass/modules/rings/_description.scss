@@ -10,5 +10,9 @@
     @include mq(smallish) {
       line-height: 1.5;
     }
+
+    p {
+      margin-bottom: $padding;
+    }
   }
 }

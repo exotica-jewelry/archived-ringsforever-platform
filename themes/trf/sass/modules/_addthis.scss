@@ -3,7 +3,7 @@
 //
 
 .field-name-addthis-buttons {
-  margin: ($padding * -1) 0 $padding;
+  margin: $padding 0;
   height: 2.75pc; // size of AddThis buttons; included to prevent reflow
 
   .at-share-tbx-element .at-share-btn {

@@ -2,13 +2,26 @@
 // Price
 //
 
-.page-node.node-type-rings {
+.page-node.node-type-rings .field-commerce-price {
+  display: inline-block;
+  float: right;
+  margin: 0 0 $padding $padding;
 
-  // Price
+  @include mq(smallish) {
+    position: absolute;
+    display: block;
+    float: none;
+    top: 100%;
+    right: 0;
+    width: 33.3%; // .ds-right width
+    margin: ($padding * 2) 0 0;
+  }
+
   .field-name-commerce-price {
-    margin: ($padding * -0.5) 0 0 0;
-    @include font-size(48px);
+    margin: 0;
     font-family: $fontDefault;
+    @include font-size(48px);
+    line-height: 1;
     font-weight: $thin;
   }
 }
