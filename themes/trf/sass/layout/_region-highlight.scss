@@ -1,0 +1,13 @@
+//
+// Highlight area
+//
+// Note: This region has the machine name "breadcrumb" from its original Omega
+// base theme. Because Omega doesn't actually render breadcrumbs in this region,
+// the display name has been changed for clarity.
+//
+
+.region-breadcrumb,
+#region-breadcrumb {
+  position: static;
+  margin: 0;
+}

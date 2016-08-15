@@ -3,10 +3,17 @@
 //
 
 .block-shopping-cart-block {
-  margin: 0;
+  margin: 0 $padding 0 0 !important;
+
+  @include mq(smallish) {
+    position: absolute;
+    height: ($padding * 3);
+    top: 100%;
+    right: ($padding * 2);
+    margin: ($padding * -2.25) 0 0 0 !important;
+  }
 
   .content {
-    position: relative;
     margin: 0 0 $padding;
     padding: 0;
     background-color: $white;
@@ -14,12 +21,12 @@
     @include card(1);
     @include i-ringbox-empty(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
 
-    .has-items & {
-      @include i-ringbox(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
+    @include mq(smallish) {
+      margin: 0;
     }
 
-    @include mq(smallish) {
-      margin: $padding ($padding / 2) 0;
+    .has-items & {
+      @include i-ringbox(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
     }
 
     .view-shopping-cart {
@@ -98,11 +105,13 @@
             }
 
             @include mq(smallish) {
-              position: relative;
-              right: ($padding * -1);
-              margin-top: ($padding / 2 * -1);
-              padding: ($padding * 2/3) $padding ($padding * 2) $padding;
+              height: ($padding * 4);
+              margin-top: ($padding * -0.5);
+              margin-right: ($padding * -1);
+              padding: 0 $padding;
+              line-height: ($padding * 3);
               border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0;
               @include a-slidehover("up");
               @include card(1);
             }

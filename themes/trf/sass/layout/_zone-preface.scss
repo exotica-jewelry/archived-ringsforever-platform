@@ -4,6 +4,7 @@
 
 .zone-preface {
   @include clearfix;
+  position: relative;
   margin: 0 0 0 ($padding * 7);
   padding: 0;
   min-height: 2rem;
