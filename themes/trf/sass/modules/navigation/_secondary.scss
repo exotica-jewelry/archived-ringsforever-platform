@@ -25,12 +25,12 @@
       }
 
       @include mq(smallish) {
-        @include a-border-bottom($blue, 3px, center);
+        @include a-border-bottom($white, 3px, center);
       }
 
       &.active,
       &.active-trail {
-        color: $blue_dark;
+        color: $white;
       }
     }
   }
