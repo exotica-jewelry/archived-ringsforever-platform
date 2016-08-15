@@ -30,7 +30,7 @@ function trf_site_images_default_breakpoints() {
   $breakpoint->api_version = 1;
   $breakpoint->machine_name = 'breakpoints.theme.trf.narrow';
   $breakpoint->name = 'narrow';
-  $breakpoint->breakpoint = '(min-width: 560px)';
+  $breakpoint->breakpoint = '(min-width: 740px)';
   $breakpoint->source = 'trf';
   $breakpoint->source_type = 'theme';
   $breakpoint->status = 1;
@@ -60,7 +60,7 @@ function trf_site_images_default_breakpoints() {
   $breakpoint->api_version = 1;
   $breakpoint->machine_name = 'breakpoints.theme.trf.wide';
   $breakpoint->name = 'wide';
-  $breakpoint->breakpoint = '(min-width: 851px)';
+  $breakpoint->breakpoint = '(min-width: 980px)';
   $breakpoint->source = 'trf';
   $breakpoint->source_type = 'theme';
   $breakpoint->status = 1;

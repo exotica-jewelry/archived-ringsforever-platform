@@ -13,6 +13,17 @@ function trf_site_images_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'breakpoints_multipliers';
+  $strongarm->value = array(
+    '1x' => '1x',
+    '1.5x' => '1.5x',
+    '2x' => '2x',
+  );
+  $export['breakpoints_multipliers'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_file__image';
   $strongarm->value = array(
     'view_modes' => array(
