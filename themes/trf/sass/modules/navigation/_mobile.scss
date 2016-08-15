@@ -10,6 +10,7 @@
   left: 0;
   background-color: $blue_verydark;
   border-radius: $border-radius;
+  z-index: 100; // places menu on top of highlight region
 
   @include is-on {
     background-color: $blue_verydark;
