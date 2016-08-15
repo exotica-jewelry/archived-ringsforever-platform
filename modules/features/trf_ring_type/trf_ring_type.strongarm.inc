@@ -207,7 +207,7 @@ function trf_ring_type_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '8',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'featured' => array(
@@ -233,7 +233,7 @@ function trf_ring_type_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => TRUE,
           ),
           'featured' => array(
@@ -366,6 +366,7 @@ function trf_ring_type_strongarm() {
   $strongarm->name = 'node_options_rings';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_rings'] = $strongarm;
 

@@ -48,7 +48,7 @@ function trf_ring_type_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'addthis_buttons' => array(
-      'weight' => '2',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -457,18 +457,18 @@ function trf_ring_type_ds_layout_settings_info() {
     'regions' => array(
       'header' => array(
         0 => 'title_field',
-        1 => 'field_description',
-        2 => 'addthis_buttons',
+        1 => 'product:commerce_price',
+        2 => 'field_description',
+        3 => 'addthis_buttons',
       ),
       'left' => array(
-        3 => 'product:field_images',
-        4 => 'field_ring_elements_primary',
-        5 => 'field_ring_elements',
-        6 => 'field_collection',
-        7 => 'field_color',
+        4 => 'product:field_images',
+        5 => 'field_ring_elements_primary',
+        6 => 'field_ring_elements',
+        7 => 'field_collection',
+        8 => 'field_color',
       ),
       'right' => array(
-        8 => 'product:commerce_price',
         9 => 'ring_free',
         10 => 'field_product',
         11 => 'ring_width',
@@ -488,6 +488,7 @@ function trf_ring_type_ds_layout_settings_info() {
     ),
     'fields' => array(
       'title_field' => 'header',
+      'product:commerce_price' => 'header',
       'field_description' => 'header',
       'addthis_buttons' => 'header',
       'product:field_images' => 'left',
@@ -495,7 +496,6 @@ function trf_ring_type_ds_layout_settings_info() {
       'field_ring_elements' => 'left',
       'field_collection' => 'left',
       'field_color' => 'left',
-      'product:commerce_price' => 'right',
       'ring_free' => 'right',
       'field_product' => 'right',
       'ring_width' => 'right',
