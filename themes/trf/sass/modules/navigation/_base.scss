@@ -1,7 +1,7 @@
 //
 // BASE MENU STYLES
 //
-// These apply to all "navigation" class menus
+// This applies to the <nav> elements containing menus.
 
 .navigation {
   padding: 0 0 ($padding * 2);
@@ -11,9 +11,104 @@
     padding: 0;
     background-color: transparent;
   }
+}
 
-  // Ensure menu titles are hidden
-  h2 {
-    display: none;
+// Main navigation styles, for top menus
+%navigation--main {
+  @include clearfix;
+  margin: ($padding / 2) 0;
+  font-family: $fontDefault;
+
+  @include mq(smallish) {
+    position: relative;
+  }
+
+  .menu__title {
+    display: inline-block;
+    content: "Popular »";
+    padding: $padding $padding 0;
+    font-family: $fontDefault;
+    @include font-size(16px);
+    font-weight: $bold;
+    font-variant: none;
+    color: $black;
+
+    @include mq(smallish) {
+      margin-right: $padding;
+      padding: 0;
+    }
+  }
+
+  .menu {
+    margin: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      &.first {
+        a {
+          border-left: none;
+          border-radius: 0;
+        }
+      }
+
+      &.last {
+        a {
+          border-right: none;
+          border-radius: 0;
+          color: $blue_dark;
+
+          @include is-on {
+            color: $white;
+          }
+
+          @include mq(smallish) {
+
+            @include is-on {
+              background-color: transparent;
+            }
+          }
+
+          &.active,
+          &.active-trail {
+            color: $white;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        padding: 0 $padding;
+        font-family: $fontDefault;
+        color: $black;
+        border: 0;
+
+        @include mq(smallish) {
+          display: inline-block;
+          margin-right: $padding;
+          padding: 0;
+        }
+
+        @include is-on {
+          background-color: rgba(0,0,0,0.5);
+        }
+
+        @include mq(smallish) {
+          @include is-on {
+            background-color: transparent;
+          }
+        }
+
+        &.active,
+        &.active-trail {
+          background-color: transparent;
+
+          @include is-on {
+            color: $white;
+          }
+        }
+      }
+    }
   }
 }

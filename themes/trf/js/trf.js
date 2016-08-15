@@ -88,12 +88,12 @@ document.addEventListener("DOMContentLoaded", function() {
   */
 
   // Main menu
-  jQuery('.main-menu a').tooltipster({
+  jQuery('.navigation--primary a').tooltipster({
     position: 'bottom'
   });
 
   // Secondary menu
-  jQuery('.secondary-menu a').tooltipster({
+  jQuery('.navigation--secondary a').tooltipster({
   });
 
   // Cart block

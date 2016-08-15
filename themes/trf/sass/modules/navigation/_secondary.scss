@@ -4,119 +4,34 @@
 // Popular themes, "all themes"
 //
 
-.navigation .second-menu.inline {
-  @include clearfix;
-  float: none;
-  margin: $padding 0;
-  padding: 0;
-  font-family: $fontDefault;
+.navigation--secondary {
+  @extend %navigation--main;
 
-  @include mq(smallish) {
-    position: relative;
-    top: ($padding * -2);
-    margin-top: 0;
-  }
+  .menu li {
 
-  ul {
-    margin: 0;
+    &.last a {
 
-    li {
-      margin: 0;
-      padding: 0;
-
-      a {
-        display: block;
-        padding: 0 $padding;
-        @include font-size(16px);
-        font-family: $fontDefault;
-        font-weight: $normal;
-        color: $black;
-        background-color: transparent;
-        border: 0;
-
-        @include is-on {
-          color: $blue_dark;
-          background-color: rgba(0,0,0,0.25);
-        }
-
-        @include mq(smallish) {
-          margin-right: $padding;
-          padding: 0 ($padding / 2);
-          @include a-border-bottom($blue, 3px, center);
-
-          @include is-on {
-            background-color: transparent;
-          }
-        }
-
-        &.active,
-        &.active-trail {
-          background-color: transparent;
-          color: $blue_dark;
-
-          @include is-on {
-            color: $white;
-          }
-        }
-      }
-
-      &.first {
-        margin-top: ($padding / 2);
-
-        @include mq(smallish) {
-          margin-top: 0;
-        }
-      }
-
-      &.first a {
-        border-left: none;
-        border-radius: 0;
-
-        @include mq(smallish) {
-          margin-left: ($padding / 2);
-        }
-      }
-
-      &.last a {
-        padding: 0 $padding;
-        border-right: none;
-        border-radius: 0;
-        color: $blue_dark;
-
-        &:after {
-          background-color: $white;
-        }
-
-        @include is-on {
-          color: $white;
-          background-color: rgba(0,0,0,0.5);
-        }
-
-        @include mq(smallish) {
-          padding: 0 ($padding / 2);
-
-          @include is-on {
-            background-color: transparent;
-          }
-        }
-
-        &.active,
-        &.active-trail {
-          color: $white;
-        }
+      &::after {
+        background-color: $white;
       }
     }
-  }
 
-  .links::before {
-    content: "Popular »";
-    padding: 0 $padding;
-    @include font-size(16px);
-    font-weight: $bold;
-    color: $black;
+    a {
+      @include font-size(16px);
+      font-weight: $normal;
 
-    @include mq(smallish) {
-      padding: 0;
+      @include is-on {
+        color: $white;
+      }
+
+      @include mq(smallish) {
+        @include a-border-bottom($blue, 3px, center);
+      }
+
+      &.active,
+      &.active-trail {
+        color: $blue_dark;
+      }
     }
   }
 }
