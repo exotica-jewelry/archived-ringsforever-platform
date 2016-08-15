@@ -43,6 +43,16 @@
     }
   }
 
+  // Wrapper when only one image exists
+  .commerce-product-field-field-images--single {
+
+    @include mq(mediumish) {
+      width: $imagestyle-product_full;
+      margin: 0 auto;
+      padding-right: 0;
+    }
+  }
+
   // Zoomed image overlay
   .zoomContainer {
     opacity: 0;
