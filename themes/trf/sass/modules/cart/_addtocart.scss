@@ -19,7 +19,7 @@
 
     .form-submit {
       display: block;
-      width: 90%;
+      width: 100%;
       margin: $padding 0 ($padding * 2);
       padding: ($padding / 2) $padding;
       background-color: $blue;
@@ -35,6 +35,10 @@
       @include is-on {
         @include card(0);
         @include i-heart(($padding-px * 2), ($padding-px / 2), $color: $red);
+      }
+
+      @include mq(smallish) {
+        width: 90%;
       }
 
       &:hover,

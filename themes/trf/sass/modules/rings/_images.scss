@@ -10,9 +10,16 @@
     @include clearfix;
 
     @include mq(smallish) {
+      width: $imagestyle-product_full;
+      margin: 0 auto;
+      min-height: $imagestyle-product_full;
+    }
+
+    @include mq(mediumish) {
+      width: auto;
+      margin: 0;
       padding-right: ($padding * 4);
       padding-bottom: ($padding * 2);
-      min-height: $imagestyle-product_full;
     }
 
     // Zoom image
@@ -26,19 +33,34 @@
 
     // Zoom image caption
     .image__caption {
+      margin-bottom: $padding;
       text-align: right;
       font-style: italic;
+
+      @include mq(mediumish) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Zoomed image overlay
+  .zoomContainer {
+    opacity: 0;
+
+    @include mq(smallish) {
+      opacity: 1;
     }
   }
 
   // Thumbnail wrapper
   #imagezoom-thumb-wrapper {
-    margin: $padding 0;
+    margin: $padding 0 0 0;
 
-    @include mq(smallish) {
+    @include mq(mediumish) {
       margin: 0;
       width: $imagestyle-product_thumbnail;
     }
+
   }
   .imagezoom-thumbs {
     margin: 0;
@@ -49,20 +71,17 @@
   // Thumbnails
   .imagezoom-thumb {
     display: inline-block;
-    margin-right: $padding;
-    margin-left: 0;
+    margin: 0 ($padding / 2) ($padding / 2) 0;
     width: $imagestyle-product_thumbnail;
 
-    @include mq(smallish) {
-      margin-top: $padding;
-      margin-right: 0;
+    @include mq(mediumish) {
+      margin: $padding 0 0 0;
     }
 
     &:first-of-type {
-      @include mq(smallish) {
+      @include mq(mediumish) {
         margin-top: 0;
       }
     }
   }
-
 }
