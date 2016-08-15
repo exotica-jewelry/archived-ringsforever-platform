@@ -1,0 +1,34 @@
+//
+// Content area
+//
+
+.zone-content-wrapper .zone-content {
+  margin-bottom: 0;
+  background-color: $blue_verylight;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  @include card(1);
+  background-image:
+    radial-gradient(
+      at top left,
+      rgba($white_off, 0.4),
+      transparent
+    );
+
+  @include mq(mediumish) {
+    margin-bottom: ($padding * 4);
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+.region-content {
+  position: relative;
+}
+
+.region-content-inner {
+
+  @include mq(mediumish) {
+    padding: 0 $padding;
+  }
+}

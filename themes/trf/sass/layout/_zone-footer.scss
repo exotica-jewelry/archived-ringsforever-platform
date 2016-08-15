@@ -1,0 +1,15 @@
+//
+// Footer area
+//
+
+.zone-footer-wrapper {
+  padding-top: 0;
+
+  @include mq(mediumish) {
+    padding-top: ($padding * 2);
+  }
+}
+
+.region-footer-second {
+  margin: 0;
+}
