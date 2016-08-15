@@ -17,7 +17,7 @@ regions[user_second] = User Bar Second
 
 regions[branding] = Branding
 regions[menu] = Menu
-regions[breadcrumb] = Breadcrumb
+regions[breadcrumb] = Highlight
 
 regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
