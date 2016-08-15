@@ -2,14 +2,22 @@
 // Site-wide search
 //
 
-#block-views-exp-display-products-page {
-  float: none !important;
+.page #block-views-exp-display-products-page {
+  float: none;
   padding-top: 0;
 
   .views-exposed-widgets {
-    float: none !important;
+    float: none;
     margin: 0 auto;
     width: 90%;
+
+    @include mq(mediumish) {
+      float: right;
+      margin: 0;
+      width: ($logo-width / 2);
+      // Set top to half of logo height minus half of search box height.
+      top: (($logo-height / 2) - (36px / 2));
+    }
   }
 }
 
