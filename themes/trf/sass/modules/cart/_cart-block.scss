@@ -17,16 +17,22 @@
     margin: 0 0 $padding;
     padding: 0;
     background-color: $white;
+    background-image: none;
     border-radius: $border-radius;
     @include card(1);
-    @include i-ringbox-empty(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
+
+    @include mq(tinyish) {
+      @include i-ringbox-empty(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
+    }
 
     @include mq(smallish) {
       margin: 0;
     }
 
     .has-items & {
-      @include i-ringbox(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
+      @include mq(tinyish) {
+        @include i-ringbox(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
+      }
     }
 
     .view-shopping-cart {
@@ -54,10 +60,15 @@
         // "1 item"
         .line-item-quantity {
           padding-top: ($padding / 5);
+          padding-left: ($padding / 4);
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $normal;
           color: $black;
+
+          @include mq(tinyish) {
+            padding-left: 0;
+          }
         }
 
         // total
@@ -66,6 +77,10 @@
           @include font-size(14px);
           font-family: $fontDefault;
           font-weight: $thin;
+
+          @include mq(tinyish) {
+            padding: ($padding / 5) ($padding / 2) 0;
+          }
 
           @include mq(smallish) {
             padding: ($padding / 5) $padding 0;
