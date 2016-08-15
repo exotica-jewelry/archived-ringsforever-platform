@@ -15,7 +15,7 @@
       transparent
     );
 
-  @include mq(mediumish) {
+  @include mq(smallish) {
     margin-bottom: ($padding * 4);
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
@@ -28,7 +28,7 @@
 
 .region-content-inner {
 
-  @include mq(mediumish) {
+  @include mq(smallish) {
     padding: 0 $padding;
   }
 }

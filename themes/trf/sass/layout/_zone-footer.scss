@@ -5,7 +5,7 @@
 .zone-footer-wrapper {
   padding-top: 0;
 
-  @include mq(mediumish) {
+  @include mq(smallish) {
     padding-top: ($padding * 2);
   }
 }
