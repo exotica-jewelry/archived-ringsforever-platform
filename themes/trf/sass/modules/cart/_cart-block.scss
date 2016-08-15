@@ -39,18 +39,24 @@
 
       // Empty cart message
       .view-empty {
-        padding-right: $padding;
+        padding: 0 ($padding / 2);
 
-        @include mq(smallish) {
-          display: block;
+        @include mq(tinyish) {
+          padding: 0 $padding 0 0;
         }
 
         p {
-          padding-top: ($padding / 5);
-          @include font-size(14px);
+          margin-bottom: 0;
           font-family: $fontDefault;
+          @include font-size(12px);
+          line-height: 3;
           font-weight: $thin;
           color: $blue_verydark;
+
+          @include mq(tinyish) {
+            @include font-size(14px);
+            line-height: 2.5;
+          }
         }
       }
 
