@@ -4,6 +4,11 @@
 
 .block-current-search {
   margin-top: $padding;
+  padding: 0 $padding;
+
+  @include mq(smallish) {
+    padding: 0;
+  }
 }
 
 // Title, e.g. "There are 7 titanium rings"
@@ -22,11 +27,12 @@
   margin-top: ($padding * -0.5);
   height: ($padding * 4);
 }
+
 #region-breadcrumb .pseudo-breadcrumb {
   position: absolute;
   top: 0;
   left: 0;
-  right: ($padding * -0.5);
+  right: 0;
   z-index: 1;
   margin: 0;
   padding-bottom: ($padding / 2);
