@@ -261,10 +261,10 @@
 /// @param {Color} $color [currentColor] - Triangle color: hex, rgb or rbga
 /// @param {Length} $size [1em] - Triangle size: px or em
 ///
-/// @example
-// .element {
-//   @include arrow(top, #000, 50px);
-// }
+/// @example scss - Sass
+/// .element {
+///   @include arrow(top, #000, 50px);
+/// }
 ///
 /// @group Utilities
 
