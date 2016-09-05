@@ -7,7 +7,9 @@ cssPath = 'css',
 sassPath = 'sass',
 jsPath = 'js',
 imgPath = 'images',
-styleguidePath = 'documentation/styleguide',
+docPath = '/documentation',
+sassDocPath = '/sassdoc',
+styleguidePath = '/styleguide',
 
 // Sass
 sass = require("gulp-sass"),
@@ -164,7 +166,7 @@ gulp.task('sassdoc', function () {
   .pipe(plumber({errorHandler: errorAlert}))
 
   .pipe(sassdoc({
-    dest: './documentation/sassdoc'
+    dest: '.' + docPath + sassDocPath
   }))
 });
 
@@ -177,7 +179,7 @@ gulp.task('styleguide', function(){
   return kss({
 
     source: sassPath,
-    destination: styleguidePath,
+    destination: '.' + docPath + styleguidePath,
 
     // CSS and JS paths are relative to the generated style guide.
     css: [
@@ -190,10 +192,8 @@ gulp.task('styleguide', function(){
       '../../' + jsPath + '/trf.js'
     ],
 
-    homepage: 'documentation/styleguide.md',
-    title: 'Titanium Rings Forever style guide',
-    rootPath: styleguidePath,
-    appRoot: themePath + styleguidePath,
+    homepage: '..' + docPath + '/styleguide.md',
+    title: 'Titanium Rings Forever style guide'
   });
 });
 

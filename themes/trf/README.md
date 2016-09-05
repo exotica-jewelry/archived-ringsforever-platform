@@ -39,7 +39,7 @@ documentation syntax, when adding new code.**
 Documentation is critical to keeping this theme maintainable. Please do not plan
 to "do it later". Do it now, as you write your code.
 
-### [Style Guide (SC5)](/sites/all/themes/trf/documentation/styleguide/)
+### [Style Guide (KSS)](/sites/all/themes/trf/documentation/styleguide/)
 
 Documents the assorted designs, components, styles and markup patterns defined
 by the TRF site. You'll probably want to start here. Generated automatically
@@ -73,6 +73,11 @@ These standards are specifically designed to align with the
 [Drupal coding standards](https://www.drupal.org/coding-standards).
 
 ### Standards for writing Sass files
+
+A [Sass Lint](https://github.com/sasstools/sass-lint) file is included in the
+theme to enforce the following standards. Sass Lint has
+[integrations](https://github.com/sasstools/sass-lint#ide-integration) for many
+text editors and IDEs.
 
 * For class names, use SMACSS principles and BEM syntax, with styles broken into
 componentized Sass partials. Note this often means altering default Drupal

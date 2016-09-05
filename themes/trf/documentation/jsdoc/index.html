@@ -114,7 +114,7 @@ developers working together in the future, this approach could be revised.</p>
 documentation syntax, when adding new code.</strong></p>
 <p>Documentation is critical to keeping this theme maintainable. Please do not plan
 to &quot;do it later&quot;. Do it now, as you write your code.</p>
-<h3><a href="/sites/all/themes/trf/documentation/styleguide/">Style Guide (SC5)</a></h3><p>Documents the assorted designs, components, styles and markup patterns defined
+<h3><a href="/sites/all/themes/trf/documentation/styleguide/">Style Guide (KSS)</a></h3><p>Documents the assorted designs, components, styles and markup patterns defined
 by the TRF site. You'll probably want to start here. Generated automatically
 using the default <code>gulp</code> task using comments in the Sass files.</p>
 <h3><a href="/sites/all/themes/trf/documentation/sassdoc/">SassDoc</a></h3><p>Documents Sass breakpoints, functions and mixins, which are not included in a
@@ -135,7 +135,11 @@ can't be broken across lines.</li>
 </ul>
 <p>These standards are specifically designed to align with the
 <a href="https://www.drupal.org/coding-standards">Drupal coding standards</a>.</p>
-<h3>Standards for writing Sass files</h3><ul>
+<h3>Standards for writing Sass files</h3><p>A <a href="https://github.com/sasstools/sass-lint">Sass Lint</a> file is included in the
+theme to enforce the following standards. Sass Lint has
+<a href="https://github.com/sasstools/sass-lint#ide-integration">integrations</a> for many
+text editors and IDEs.</p>
+<ul>
 <li>For class names, use SMACSS principles and BEM syntax, with styles broken into
 componentized Sass partials. Note this often means altering default Drupal
 templates or views to insert the appropriate class names.</li>
