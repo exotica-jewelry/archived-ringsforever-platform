@@ -59,7 +59,7 @@
 ///   a {
 ///     text-decoration: none;
 ///
-///      @include hover-state {
+///      @include is-on {
 ///        text-decoration: underline;
 ///      }
 ///    }
