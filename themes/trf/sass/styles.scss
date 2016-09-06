@@ -13,11 +13,11 @@
 // Imports
 //
 // Via Bower + sass-module-importer
-@import "sass-mq";
+@import 'sass-mq';
 // Via Bower alone
-@import "../bower_components/motion-ui/motion-ui.scss";
+@import '../bower_components/motion-ui/motion-ui.scss';
 // Via vendor folder
-@import "global/vendor/*";
+@import 'global/vendor/*';
 
 // Variables
 //
@@ -26,21 +26,21 @@
 // Weight: -1
 //
 // Style guide: variables
-@import "global/variables/breakpoints";
-@import "global/variables/colors";
-@import "global/variables/fonts";
-@import "global/variables/patterns";
-@import "global/variables/icons";
-@import "global/variables/sizes";
-@import "global/animations";
+@import 'global/variables/breakpoints';
+@import 'global/variables/colors';
+@import 'global/variables/fonts';
+@import 'global/variables/patterns';
+@import 'global/variables/icons';
+@import 'global/variables/sizes';
+@import 'global/animations';
 
 // Functions, mixins and third-party libraries
 //
 // Sass helper files. These are documented by SassDoc, and not included in the
 // style guide.
-@import "global/functions";
-@import "global/mixins";
-@import "global/animations";
+@import 'global/functions';
+@import 'global/mixins';
+@import 'global/animations';
 
 // Base defaults
 //
@@ -50,20 +50,20 @@
 // to an HTML element, these styles will be the ones displayed.
 //
 // Style guide: base
-@import "base/html";
+@import 'base/html';
 // Form elements
 //
 // Style guide: base.form
-@import "base/forms/*";
+@import 'base/forms/*';
 // Typography
 //
 // Style guide: base.type
-@import "base/typography/*";
+@import 'base/typography/*';
 
 // Layout
 //
 // These structural styles are not included in the styleguide.
-@import "layout/*";
+@import 'layout/*';
 
 // Components
 //
@@ -74,7 +74,7 @@
 // Weight: 1
 //
 // Style guide: components
-@import "components/*";
+@import 'components/*';
 
 // Modules
 //
@@ -85,4 +85,4 @@
 // Weight: 2
 //
 // Style guide: modules
-@import "modules/*";
+@import 'modules/*';

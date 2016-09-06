@@ -13,17 +13,17 @@ input[type="search"],
 textarea {
   display: block;
   background: none;
-  border: 1px solid $blue_light;
+  border: 1px solid $blue-light;
   background-color: $white;
   width: 100%;
   padding: ($padding / 4);
   appearance: none;
   box-shadow: none;
   border-radius: none;
-  transition: $transition_short;
+  transition: $transition-short;
   @include font-size(18px);
-  color: $blue_verydark;
-  font-family: $fontDefault;
+  color: $blue-verydark;
+  font-family: $font-default;
   font-weight: $thin;
 
   @include is-on {
@@ -32,7 +32,7 @@ textarea {
   }
 
   &::selection {
-    background: $blue_verydark;
+    background: $blue-verydark;
   }
 }
 

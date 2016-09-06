@@ -18,6 +18,10 @@ rules:
     - 'mq'
     # Active link helper
     - 'is-on'
+    # Motion UI
+    - 'mui-animation'
+    # Fonts
+    - 'font-size'
 
   # Line Spacing
   one-declaration-per-line: 1
@@ -36,14 +40,12 @@ rules:
   no-duplicate-properties: 1
   no-empty-rulesets: 0
   no-extends: 0
-  no-ids: 2
+  no-ids: 0
   no-important: 1
   no-invalid-hex: 2
   no-mergeable-selectors: 1
   no-misspelled-properties: 2
-  no-qualifying-elements:
-  - 1
-  - allow-element-with-attribute: true
+  no-qualifying-elements: 0
   no-trailing-whitespace: 2
   no-trailing-zero: 2
   no-transition-all: 0
@@ -70,7 +72,9 @@ rules:
   placeholder-name-format:
   - 1
   - convention: 'hyphenatedbem'
-  variable-name-format: 1
+  variable-name-format:
+  - 1
+  - convention: 'hyphenatedbem'
 
   # Style Guide
   attribute-quotes: 2
@@ -81,7 +85,7 @@ rules:
   - 1
   - convention: 'none'
   brace-style: 1
-  clean-import-paths: 1
+  clean-import-paths: 0
   empty-args: 2
   hex-length: 1
   hex-notation: 1

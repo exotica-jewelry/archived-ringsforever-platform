@@ -24,7 +24,7 @@
   // Cancel checkout buttons
   .checkout-cancel,
   .checkout-back {
-    font-family: $fontDefault;
+    font-family: $font-default;
 
     @include is-on {
       text-decoration: none;

@@ -38,7 +38,7 @@ input[type="radio"] + label:before {
 }
 
 input[type="radio"]:checked + label {
-  color: $blue_verydark;
+  color: $blue-verydark;
 }
 
 input[type="radio"]:checked + label:before {

@@ -6,7 +6,7 @@
 
   // Table header
   .views-row-1 .views-field .views-label {
-    background-color: $blue_verydark;
+    background-color: $blue-verydark;
   }
 
   // Line items
@@ -16,7 +16,7 @@
 
   // Ring name
   .views-field-line-item-title .field-content {
-    font-family: $fontHighlight;
+    font-family: $font-highlight;
     font-style: italic;
   }
 
@@ -34,7 +34,7 @@
 
   // Remove item
   .commerce-line-item-views-form input.delete-line-item {
-    font-family: $fontDefault;
+    font-family: $font-default;
     font-weight: $normal;
   }
 
@@ -59,7 +59,7 @@
       position: absolute;
       left: 0;
       margin: (0.75 * $padding) (2 * $padding);
-      font-family: $fontDefault;
+      font-family: $font-default;
     }
 
     // Checkout

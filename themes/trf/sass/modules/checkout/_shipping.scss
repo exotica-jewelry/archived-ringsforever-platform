@@ -19,7 +19,7 @@
 
       .option {
         background-color: transparent;
-        color: $blue_verydark;
+        color: $blue-verydark;
       }
     }
 
@@ -41,8 +41,8 @@
       right: 0;
       margin: $padding 0;
       padding: ($padding * 2) ($padding * 4);
-      background-color: $blue_verylight;
-      border: $blue_verydark ($line-width / 2) solid;
+      background-color: $blue-verylight;
+      border: $blue-verydark ($line-width / 2) solid;
       border-radius: $border-radius;
     }
   }

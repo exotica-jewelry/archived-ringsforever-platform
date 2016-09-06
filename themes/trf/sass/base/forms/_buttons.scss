@@ -14,19 +14,19 @@
   background: $blue;
   width: 100%;
   padding: 0.7rem;
-  margin: 0 0 1rem;
+  margin: 0 0 $padding;
   cursor: pointer;
   color: $white;
-  font-family: $fontDefault !important;
+  font-family: $font-default !important;
   @include font-size(18px);
   font-weight: $thin;
   letter-spacing: 1px;
-  transition: $transition_short;
+  transition: $transition-short;
   user-select: none;
   @include card(1);
 
   @include is-on {
-    background: $blue_dark;
+    background: $blue-dark;
     color: $white;
     outline: 0;
     @include a-grow;
@@ -84,7 +84,7 @@ button,
 
   @include is-on {
     background: $white;
-    color: $blue_dark;
+    color: $blue-dark;
     outline: 0;
     border: 1px $grey solid;
   }
@@ -102,19 +102,19 @@ button,
   width: auto;
   padding: 0.5rem 1.5rem;
   border-radius: 40px;
-  background: rgba($blue_dark, 0.25);
-  color: $blue_dark;
+  background: rgba($blue-dark, 0.25);
+  color: $blue-dark;
   font-weight: $normal;
   letter-spacing: 1px;
 
   @include mq(mediumish) {
-    border: 2px solid $blue_dark;
+    border: 2px solid $blue-dark;
     background: none;
   }
 
   @include is-on {
-    background: rgba($blue_dark, 0.25);
-    color: $blue_dark;
+    background: rgba($blue-dark, 0.25);
+    color: $blue-dark;
     outline: 0;
   }
 }
@@ -141,7 +141,7 @@ button,
   @include is-on {
     @include a-grow($scale: 1, $duration: 0);
     background: $white;
-    color: $blue_dark;
+    color: $blue-dark;
     outline: 0;
     border: 1px $grey solid;
   }

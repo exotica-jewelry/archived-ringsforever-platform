@@ -31,14 +31,14 @@
   // Checkbox-link facets and Search API aggregate facets (e.g. keywords)
   .facetapi-checkbox,
   .facetapi-facetapi-links {
-    font-family: $fontDefault;
+    font-family: $font-default;
     font-weight: $normal;
     color: $black;
   }
 
   .facetapi-checkbox.facetapi-inactive,
   .facetapi-facetapi-links .facetapi-inactive {
-    font-family: $fontDefault;
+    font-family: $font-default;
     font-weight: $normal; // Needs an override since these are <a> elements.
     padding-left: ($padding / 10);
     color: $black;
@@ -46,8 +46,8 @@
 
     @include is-on {
       text-decoration: none;
-      color: $blue_verydark;
-      border-bottom: 1px $blue_verydark dotted;
+      color: $blue-verydark;
+      border-bottom: 1px $blue-verydark dotted;
     }
   }
 
@@ -119,7 +119,7 @@
         // span element (colored box)
         .commerce-search-api-fancy-attributes-color {
           border: 3px solid #fff;
-          transition: $transition_long;
+          transition: $transition-long;
 
           @include is-on {
             border-color: transparent;
@@ -135,8 +135,8 @@
 
     // "Show more"/"Show fewer" link
     .facetapi-limit-link {
-      font-family: $fontDefault;
-      color: $blue_dark;
+      font-family: $font-default;
+      color: $blue-dark;
       font-style: italic;
       text-decoration: underline;
 

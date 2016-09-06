@@ -17,7 +17,7 @@
   background-color: $white;
 
   @include is-on {
-    background-color: $blue_verydark;
+    background-color: $blue-verydark;
     color: $white;
   }
 }

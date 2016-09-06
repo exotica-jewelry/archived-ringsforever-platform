@@ -7,11 +7,11 @@
 
   .form-text {
     top: 1px;
-    border-color: $blue_verydark;
+    border-color: $blue-verydark;
     border-width: ($line-width / 2);
     border-radius: $border-radius;
-    font-family: $fontDefault;
+    font-family: $font-default;
     font-weight: $thin;
-    color: $blue_verydark;
+    color: $blue-verydark;
   }
 }

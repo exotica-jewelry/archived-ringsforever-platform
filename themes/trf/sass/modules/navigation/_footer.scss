@@ -13,7 +13,7 @@
     padding-right: 0;
     @include font-size(14px);
     margin-bottom: ($padding / 4);
-    font-family: $fontDefault;
+    font-family: $font-default;
 
     @include mq(smallish) {
       max-width: 175px;
@@ -25,7 +25,7 @@
       width: 100%;
       padding: ($padding / 4) ($padding / 2);
       color: $white;
-      background-color: $blue_verydark;
+      background-color: $blue-verydark;
       @include card(1);
 
       @include mq(smallish) {
@@ -40,7 +40,7 @@
 
       @include is-on {
         color: $black !important;
-        background-color: $blue_verylight;
+        background-color: $blue-verylight;
         text-decoration: none !important;
       }
     }

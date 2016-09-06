@@ -22,7 +22,7 @@
     @include card(1);
 
     @include mq(tinyish) {
-      @include i-ringbox-empty(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
+      @include i-ringbox-empty(25px, 5px, 5px, ($padding * 2.5), $blue-verydark);
     }
 
     @include mq(smallish) {
@@ -31,7 +31,7 @@
 
     .has-items & {
       @include mq(tinyish) {
-        @include i-ringbox(25px, 5px, 5px, ($padding * 2.5), $blue_verydark);
+        @include i-ringbox(25px, 5px, 5px, ($padding * 2.5), $blue-verydark);
       }
     }
 
@@ -47,11 +47,11 @@
 
         p {
           margin-bottom: 0;
-          font-family: $fontDefault;
+          font-family: $font-default;
           @include font-size(12px);
           line-height: 3;
           font-weight: $thin;
-          color: $blue_verydark;
+          color: $blue-verydark;
 
           @include mq(tinyish) {
             @include font-size(14px);
@@ -68,7 +68,7 @@
           padding-top: ($padding / 5);
           padding-left: ($padding / 4);
           @include font-size(14px);
-          font-family: $fontDefault;
+          font-family: $font-default;
           font-weight: $normal;
           color: $black;
 
@@ -81,7 +81,7 @@
         .line-item-total {
           padding: ($padding / 5) ($padding / 4) 0;
           @include font-size(14px);
-          font-family: $fontDefault;
+          font-family: $font-default;
           font-weight: $thin;
 
           @include mq(tinyish) {
@@ -111,11 +111,11 @@
           .line-item-summary-checkout a {
             display: block;
             padding: 0 ($padding / 2);
-            font-family: $fontDefault;
+            font-family: $font-default;
             font-weight: $normal;
             line-height: 2.15;
             color: $white;
-            background-color: $blue_verydark;
+            background-color: $blue-verydark;
             border-radius: $border-radius;
             @include heart-click;
 

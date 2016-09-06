@@ -4,16 +4,16 @@
 
 // Font families
 //
-// $fontDefault - Default (body) font
-// $fontHighlight - Highlight (emphasis) font
+// $font-default - Default (body) font
+// $font-highlight - Highlight (emphasis) font
 //
 // markup:
 // <div style="font-family: {$modifiers};">{$modifiers}</div>
 //
 // Style guide: variables.fonts.families
 
-$fontDefault: 'Roboto', Helvetica, Arial, sans-serif;
-$fontHighlight: 'Lora', Georgia, Times, 'Times New Roman', serif;
+$font-default: 'Roboto', Helvetica, Arial, sans-serif;
+$font-highlight: 'Lora', Georgia, Times, 'Times New Roman', serif;
 
 // Font weights
 //
@@ -25,8 +25,8 @@ $fontHighlight: 'Lora', Georgia, Times, 'Times New Roman', serif;
 // $ultra-bold - Ultra bold
 //
 // markup:
-// <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:500,300,700,900" media="all" />
-// <div style="font-family: $fontDefault; font-weight: {$modifiers};">{$modifiers}</div>
+// <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lora:400i/Roboto:500,300,700,900" media="all" />
+// <div style="font-family: $font-default; font-weight: {$modifiers};">{$modifiers}</div>
 //
 // Style guide: variables.fonts.weights
 

@@ -3,18 +3,18 @@
 //
 
 // Transition durations
-$t_s: 0.3s;
-$t_m: 0.5s;
-$t_l: 0.75s;
+$t-s: 0.3s;
+$t-m: 0.5s;
+$t-l: 0.75s;
 
 // Transition defaults
-$transition: all $t_m ease;
-$transition_short: all $t_s ease;
-$transition_long: all $t_l ease;
+$transition: all $t-m ease;
+$transition-short: all $t-s ease;
+$transition-long: all $t-l ease;
 
 // Motion UI default
 %mui {
-  animation-duration: $t_s;
+  animation-duration: $t-s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -30,7 +30,7 @@ $transition_long: all $t_l ease;
 ///
 /// @group Animations
 
-@mixin a-grow($scale: 1.05, $duration: $t_s) {
+@mixin a-grow($scale: 1.05, $duration: $t-s) {
   @include no-scale-flash;
   transform: scale($scale);
   transition: transform $duration linear;
@@ -55,11 +55,11 @@ $transition_long: all $t_l ease;
     transform: scale3d(1, 1, 1);
   }
 
-50% {
+  50% {
     transform: scale3d(1.1, 1.1, 1.1);
   }
 
-100% {
+  100% {
     transform: scale3d(1, 1, 1);
   }
 }
@@ -76,7 +76,7 @@ $transition_long: all $t_l ease;
 
 @mixin a-zoomfade($zoom: 2.5) {
   @extend %mui;
-  animation-duration: $t_l;
+  animation-duration: $t-l;
   @include mui-animation(zoom(1, $zoom), fade(1, 0));
 }
 
@@ -92,27 +92,27 @@ $transition_long: all $t_l ease;
 ///
 /// @group Animations
 
-@mixin a-slidehover($direction: "up", $distance: ($padding / 4), $duration: $t_s) {
+@mixin a-slidehover($direction: 'up', $distance: ($padding / 4), $duration: $t-s) {
 
   $x: 0;
   $y: 0;
 
-  @if $direction == "up" {
+  @if $direction == 'up' {
     $x: 0;
     $y: -1 * $distance;
   }
 
-  @if $direction == "down" {
+  @if $direction == 'down' {
     $x: 0;
     $y: $distance;
   }
 
-  @if $direction == "right" {
+  @if $direction == 'right' {
     $x: $distance;
     $y: 0;
   }
 
-  @if $direction == "left" {
+  @if $direction == 'left' {
     $x: -1 * $distance;
     $y: 0;
   }
@@ -140,18 +140,18 @@ $transition_long: all $t_l ease;
 ///
 /// @group Animations
 
-@mixin a-border-bottom($color: $white, $height: 1px, $starting_point: 'left', $duration: $t_s) {
+@mixin a-border-bottom($color: $white, $height: 1px, $starting-point: 'left', $duration: $t-s) {
 
-  &:after {
+  &::after {
     clear: both;
     display: block;
-    content: "";
+    content: '';
     position: relative;
     width: 0;
-    @if $starting_point == "left" {
+    @if $starting-point == 'left' {
       left: 0;
-    } @else if $starting_point == "center" {
-      left: 50%
+    } @else if $starting-point == 'center' {
+      left: 50%;
     }
     height: $height;
     border-radius: $border-radius;
@@ -162,9 +162,9 @@ $transition_long: all $t_l ease;
   }
 
   @include is-on {
-    &:after {
+    &::after {
       width: 100%;
-      @if $starting_point == "center" {
+      @if $starting-point == 'center' {
         left: 0;
       }
     }
@@ -173,7 +173,7 @@ $transition_long: all $t_l ease;
   &.active,
   &.active-trail {
 
-    &:after {
+    &::after {
       background-color: $color;
       width: 100%;
       left: 0;
@@ -181,9 +181,9 @@ $transition_long: all $t_l ease;
 
     @include is-on {
 
-      &:after {
+      &::after {
         width: 0;
-        @if $starting_point == "center" {
+        @if $starting-point == 'center' {
           left: 50%;
         }
       }
@@ -218,7 +218,7 @@ $transition_long: all $t_l ease;
     height: ($padding / 2);
     border-radius: 50%;
     font-size: ($size / 3);
-    animation: loading $t_l infinite linear;
+    animation: loading $t-l infinite linear;
     transform: translateZ(0);
   }
 }
@@ -228,24 +228,31 @@ $transition_long: all $t_l ease;
   100% {
     box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
   }
+
   12.5% {
     box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
   }
+
   25% {
     box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
   }
+
   37.5% {
     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 0, 2em 2em 0 0.2em, 0 3em 0 0, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
   }
+
   50% {
     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0 0 -1em, -2em -2em 0 -1em;
   }
+
   62.5% {
     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
   }
+
   75% {
     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0 0 0.2em, -2em -2em 0 0;
   }
+
   87.5% {
     box-shadow: 0 -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0 0 0, -2em -2em 0 0.2em;
   }

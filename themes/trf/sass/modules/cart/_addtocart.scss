@@ -25,7 +25,7 @@
       background-color: $blue;
       background-image: none;
       @include font-size(24px);
-      font-family: $fontDefault;
+      font-family: $font-default;
       font-weight: $thin;
       border-radius: $border-radius;
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
@@ -43,7 +43,7 @@
 
       &:hover,
       &:focus {
-        background-color: $blue_dark;
+        background-color: $blue-dark;
       }
 
       &:active {

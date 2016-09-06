@@ -21,7 +21,7 @@
     padding-right: 0;
     list-style-type: none;
     list-style-image: none;
-    font-family: $fontDefault;
+    font-family: $font-default;
 
     @include mq(smallish) {
       margin: 0 ($padding / 2);
@@ -32,7 +32,7 @@
       position: relative;
       margin: 0 0 ($padding * -0.5);
       padding: ($padding / 4) ($padding / 2) ($padding / 2);
-      font-family: $fontDefault;
+      font-family: $font-default;
       font-weight: $normal;
       color: $white;
       background-color: $blue;
@@ -40,7 +40,7 @@
       @include a-slidehover("up");
 
       @include is-on {
-        background-color: $blue_dark;
+        background-color: $blue-dark;
       }
 
       @include mq(smallish) {

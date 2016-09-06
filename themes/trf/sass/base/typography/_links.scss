@@ -12,34 +12,34 @@
 // Style guide: base.type.links
 
 %link {
-  color: $blue_dark;
+  color: $blue-dark;
   transition: $transition;
   text-decoration: none;
 
   &:visited {
-    color: $blue_verydark;
+    color: $blue-verydark;
     text-decoration: none;
     outline: 0;
   }
 
   @include is-on {
-    color: $blue_verydark;
+    color: $blue-verydark;
   }
 }
 
 %link--basic {
   padding: 0;
   background-color: inherit;
-  color: $blue_dark;
+  color: $blue-dark;
   border-radius: 0;
   border-bottom: 1px $blue dotted;
 
   &:visited {
-    color: $blue_dark;
+    color: $blue-dark;
   }
 
   @include is-on {
-    color: $blue_verydark;
+    color: $blue-verydark;
     border-bottom: 0;
   }
 }

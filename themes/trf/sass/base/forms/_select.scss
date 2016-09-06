@@ -12,13 +12,13 @@ select {
   background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6-6-6 1.41-1.42z"/></svg>'); // chevron-down.svg
   background-repeat: no-repeat;
   background-position: 97.5% 50%;
-  background-color: $white_off;
-  color: $blue_verydark;
-  font-family: $fontDefault;
+  background-color: $white-off;
+  color: $blue-verydark;
+  font-family: $font-default;
   @include font-size(16px);
   box-shadow: none;
-  border-radius: none;
-  transition: $transition_short;
+  border-radius: 0;
+  transition: $transition-short;
   appearance: none;
   -webkit-appearance: none;
 

@@ -12,7 +12,7 @@
   .added-product-title {
     @include font-size(16px);
     line-height: 1;
-    font-family: $fontHighlight;
+    font-family: $font-highlight;
     font-style: italic;
     text-transform: none;
     text-align: left;
@@ -95,7 +95,7 @@
     width: 100%;
 
     @include mq(tinyish) {
-      width: ($imagestyle-product_thumbnail + 2px);
+      width: ($imagestyle__product-thumbnail + 2px);
     }
 
     @include mq(smallish) {
@@ -110,7 +110,7 @@
     text-align: center;
 
     @include mq(tinyish) {
-      width: ($imagestyle-product_thumbnail + 2px);
+      width: ($imagestyle__product-thumbnail + 2px);
       text-align: left;
     }
   }

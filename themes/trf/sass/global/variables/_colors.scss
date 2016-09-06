@@ -14,23 +14,23 @@
 
 $black: #111;
 $white: #fff;
-$white_off: #eeeefe;
+$white-off: #eeeefe;
 $grey: #777;
 
 $blue: #54b2fc;
-$blue_light: lighten($blue, 13%);
-$blue_verylight: lighten($blue, 20%);
-$blue_dark: darken($blue, 18%);
-$blue_verydark: darken($blue, 25%);
+$blue-light: lighten($blue, 13%);
+$blue-verylight: lighten($blue, 20%);
+$blue-dark: darken($blue, 18%);
+$blue-verydark: darken($blue, 25%);
 
 // Color map
 //
 // @todo Move other color values into this map and update styleguide.
 
 $colors: (
-  content_bg: $blue_verylight,
-  page_bg: $blue_light,
-  highlight_bg: $blue,
+  content-bg: $blue-verylight,
+  page-bg: $blue-light,
+  highlight-bg: $blue,
 );
 
 // Minor colors

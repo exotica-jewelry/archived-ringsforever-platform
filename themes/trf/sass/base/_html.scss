@@ -2,18 +2,18 @@
 // Basic styles for <html>
 //
 
-html, body {
+html,
+body {
   width: 100%;
-  background: color(page_bg);
+  background: color(page-bg);
 }
 
 %visuallyhidden {
-  margin: -1px;
-  padding: 0;
+  position: absolute;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
-  clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
-  position: absolute;
 }

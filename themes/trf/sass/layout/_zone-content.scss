@@ -4,14 +4,14 @@
 
 .zone-content-wrapper .zone-content {
   margin-bottom: 0;
-  background-color: $blue_verylight;
+  background-color: $blue-verylight;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   @include card(1);
   background-image:
     radial-gradient(
       at top left,
-      rgba($white_off, 0.4),
+      rgba($white-off, 0.4),
       transparent
     );
 

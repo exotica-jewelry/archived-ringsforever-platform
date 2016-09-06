@@ -10,9 +10,9 @@
     @include clearfix;
 
     @include mq(smallish) {
-      width: $imagestyle-product_full;
+      width: $imagestyle__product-full;
       margin: 0 auto;
-      min-height: $imagestyle-product_full;
+      min-height: $imagestyle__product-full;
     }
 
     @include mq(mediumish) {
@@ -26,7 +26,7 @@
     > figure {
 
       @include mq(smallish) {
-        width: $imagestyle-product_full;
+        width: $imagestyle__product-full;
         float: right;
       }
     }
@@ -47,7 +47,7 @@
   .commerce-product-field-field-images--single {
 
     @include mq(mediumish) {
-      width: $imagestyle-product_full;
+      width: $imagestyle__product-full;
       margin: 0 auto;
       padding-right: 0;
     }
@@ -68,7 +68,7 @@
 
     @include mq(mediumish) {
       margin: 0;
-      width: $imagestyle-product_thumbnail;
+      width: $imagestyle__product-thumbnail;
     }
 
   }
@@ -82,7 +82,7 @@
   .imagezoom-thumb {
     display: inline-block;
     margin: 0 ($padding / 2) ($padding / 2) 0;
-    width: $imagestyle-product_thumbnail;
+    width: $imagestyle__product-thumbnail;
 
     @include mq(mediumish) {
       margin: $padding 0 0 0;

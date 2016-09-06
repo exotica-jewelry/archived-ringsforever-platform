@@ -4,12 +4,12 @@
 // Documented with SassDoc.
 //
 
-/// Use calculateRem to insert pixel and rem font-size values.
+/// Use calculate-rem to insert pixel and rem font-size values.
 ///
 /// @link http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
 /// @author Fiona Chan
 ///
-/// @requires calculateRem
+/// @requires calculate-rem
 ///
 /// @param {font-size} $size - Font size in pixels
 ///
@@ -27,7 +27,7 @@
 
 @mixin font-size($size) {
   font-size: $size;
-  font-size: calculateRem($size);
+  font-size: calculate-rem($size);
 }
 
 /// Removes inline-block padding bug.
@@ -114,21 +114,21 @@
 /// @group Utilities
 
 @mixin disabled {
-  &[disabled="disabled"] {
+  &[disabled='disabled'] {
     @content;
   }
 }
 
 /// Image replacement.
 ///
-/// @param {String} $imageURL - location of the image to use
+/// @param {String} $image-url - location of the image to use
 ///
 /// @author Scott Kellum
 ///
 /// @group Utilities
 
-@mixin ir($imageURL) {
-  background-image: url($imageURL);
+@mixin ir($image-url) {
+  background-image: url($image-url);
   background-repeat: no-repeat;
   text-indent: 100%;
   white-space: nowrap;
@@ -137,15 +137,15 @@
 
 /// Image replacement for embedded SVGs.
 ///
-/// @param {String} $imagesource - full SVG source of the image
+/// @param {String} $image-source - full SVG source of the image
 /// @requires svg-url
 ///
 /// @author Ivan Boothe
 ///
 /// @group Utilities
 
-@mixin svg-ir($imagesource) {
-  background-image: svg-url($imagesource);
+@mixin svg-ir($image-source) {
+  background-image: svg-url($image-source);
   background-repeat: no-repeat;
   text-indent: 100%;
   white-space: nowrap;
@@ -168,7 +168,7 @@
   @if $depth < 1 {
     box-shadow: none;
   } @else if $depth > 5 {
-    @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+    @warn 'Invalid $depth `#{$depth}` for mixin `card`.';
   } @else {
     box-shadow: bottom-shadow($depth), top-shadow($depth);
   }
@@ -180,15 +180,14 @@
 /// @param {Number} $stroke - stroke size (in the format 1px)
 ///
 /// @author Ivan Boothe
-///
 /// @group Utilities
 
 @mixin descenders($stroke: 2px) {
   text-shadow:
-    ($stroke * -1) ($stroke * -1) 0 color(content_bg),
-    $stroke ($stroke * -1) 0 color(content_bg),
-    ($stroke * -1) $stroke 0 color(content_bg),
-    $stroke $stroke 0 color(content_bg);
+    ($stroke * -1) ($stroke * -1) 0 color(content-bg),
+    $stroke ($stroke * -1) 0 color(content-bg),
+    ($stroke * -1) $stroke 0 color(content-bg),
+    $stroke $stroke 0 color(content-bg);
 }
 
 /// Removes flash when scaling in Webkit. Note this needs to be placed on the
@@ -245,8 +244,8 @@
 /// @group Utilities
 
 @mixin clearfix {
-  &:after {
-    content: "";
+  &::after {
+    content: '';
     display: table;
     clear: both;
   }
@@ -268,38 +267,38 @@
 ///
 /// @group Utilities
 
-@mixin arrow($direction, $color: currentColor, $size: 1em){
-    display: block;
-    height: 0;
-    width: 0;
+@mixin arrow($direction, $color: currentColor, $size: 1em) {
+  display: block;
+  height: 0;
+  width: 0;
 
-    @if $direction == 'top' {
-        border-left: $size solid transparent;
-      border-right: $size solid transparent;
-      border-bottom: $size solid $color;
-    } @else if $direction == 'right' {
-        border-top: $size solid transparent;
-        border-bottom: $size solid transparent;
-      border-left: $size solid $color;
-    } @else if $direction == 'bottom' {
-        border-top: $size solid $color;
-        border-right: $size solid transparent;
-        border-left: $size solid transparent;
-    } @else if $direction == 'left' {
-        border-top: $size solid transparent;
-      border-right: $size solid $color;
-      border-bottom: $size solid transparent;
-    } @else if $direction == 'top-left' {
-        border-top: $size solid $color;
-        border-right: $size solid transparent;
-    } @else if $direction == 'top-right' {
-        border-top: $size solid $color;
-        border-left: $size solid transparent;
-    } @else if $direction == 'bottom-left' {
-        border-bottom: $size solid $color;
-        border-right: $size solid transparent;
-    } @else if $direction == 'bottom-right' {
-        border-bottom: $size solid $color;
-        border-left: $size solid transparent;
-    }
+  @if $direction == 'top' {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $direction == 'right' {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if $direction == 'bottom' {
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+  } @else if $direction == 'left' {
+    border-top: $size solid transparent;
+    border-right: $size solid $color;
+    border-bottom: $size solid transparent;
+  } @else if $direction == 'top-left' {
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+  } @else if $direction == 'top-right' {
+    border-top: $size solid $color;
+    border-left: $size solid transparent;
+  } @else if $direction == 'bottom-left' {
+    border-bottom: $size solid $color;
+    border-right: $size solid transparent;
+  } @else if $direction == 'bottom-right' {
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+  }
 }
