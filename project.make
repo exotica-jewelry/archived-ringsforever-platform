@@ -40,7 +40,7 @@ projects[cer][version] = "3.0-alpha7"
 
 projects[charts][version] = "2.0-rc1"
 
-projects[ckeditor][version] = "1.17"
+projects[ckeditor][version] = "1.x-dev"
 
 projects[coffee][version] = "2.2"
 
@@ -54,6 +54,8 @@ projects[commerce_responsive_ui][version] = "1.x-dev"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-fixes_cart_redirect_checkout-2641754_7.patch"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-remove_commas_from_classes-2687007-2.patch"
 
+projects[dialog][version] = "2.0-alpha9"
+
 projects[diff][version] = "3.2"
 
 projects[ds][version] = "2.14"
@@ -62,7 +64,7 @@ projects[ds_extra_layouts][version] = "1.2"
 
 projects[elements][version] = "1.4"
 
-projects[entity_embed][version] = "1.0-alpha4"
+projects[entity_embed][version] = "2.0-alpha3"
 
 projects[entityqueue][version] = "1.1"
 
@@ -162,8 +164,20 @@ projects[views_date_format_sql][version] = "3.3"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "libraries"
 libraries[ckeditor][download][type] = "file"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.10/ckeditor_4.5.10_standard.zip"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.11/ckeditor_4.5.11_standard.zip"
 libraries[ckeditor][destination] = "libraries"
+
+libraries[ckeditor_lineutils][directory_name] = "ckeditor/plugins/lineutils"
+libraries[ckeditor_lineutils][type] = "libraries"
+libraries[ckeditor_lineutils][download][type] = "file"
+libraries[ckeditor_lineutils][download][url] = "http://download.ckeditor.com/lineutils/releases/lineutils_4.5.11.zip"
+libraries[ckeditor_lineutils][destination] = "libraries"
+
+libraries[ckeditor_widget][directory_name] = "ckeditor/plugins/widget"
+libraries[ckeditor_widget][type] = "libraries"
+libraries[ckeditor_widget][download][type] = "file"
+libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.5.11.zip"
+libraries[ckeditor_widget][destination] = "libraries"
 
 libraries[elevatezoom][directory_name] = "elevatezoom"
 libraries[elevatezoom][type] = "libraries"
