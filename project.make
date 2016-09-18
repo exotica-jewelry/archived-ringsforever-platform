@@ -41,6 +41,10 @@ projects[cer][version] = "3.0-alpha7"
 projects[charts][version] = "2.0-rc1"
 
 projects[ckeditor][version] = "1.x-dev"
+; Can be switched to a full version once the latest release is later than
+; 19 June 2016.
+
+projects[ckeditor_image2][version] = "1.1"
 
 projects[coffee][version] = "2.2"
 
@@ -115,9 +119,13 @@ projects[imagezoom][patch][] = "https://www.drupal.org/files/issues/imagezoom-im
 
 projects[imce][version] = "1.10"
 
-projects[imce_tools][version] = "1.2"
+projects[imce_mkdir][version] = "1.0"
 
 projects[imce_plupload][version] = "2.0"
+
+projects[imce_rename][version] = "1.3"
+
+projects[imce_tools][version] = "1.2"
 
 projects[job_scheduler][version] = "2.0-alpha3"
 
@@ -177,6 +185,18 @@ libraries[ckeditor_widget][directory_name] = "contrib/ckeditor/plugins/widget"
 libraries[ckeditor_widget][type] = "libraries"
 libraries[ckeditor_widget][download][type] = "file"
 libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.5.11.zip"
+libraries[ckeditor_widget][destination] = "modules"
+
+libraries[ckeditor_widget][directory_name] = "contrib/ckeditor/plugins/dialogui"
+libraries[ckeditor_widget][type] = "libraries"
+libraries[ckeditor_widget][download][type] = "file"
+libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/dialogui/releases/dialogui_4.5.11.zip"
+libraries[ckeditor_widget][destination] = "modules"
+
+libraries[ckeditor_widget][directory_name] = "contrib/ckeditor/plugins/image2"
+libraries[ckeditor_widget][type] = "libraries"
+libraries[ckeditor_widget][download][type] = "file"
+libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/image2/releases/image2_4.5.11.zip"
 libraries[ckeditor_widget][destination] = "modules"
 
 libraries[elevatezoom][directory_name] = "elevatezoom"
