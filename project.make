@@ -161,7 +161,7 @@ libraries[predis][destination] = "libraries"
 ; EXPERIMENTAL CKEDITOR IMAGE AND ENTITY INTEGRATION
 ;
 
-; projects[ckeditor][version] = "1.x-dev"
+projects[ckeditor][version] = "1.x-dev"
 ; Can be switched to a full version once the latest release is later than
 ; 19 June 2016.
 
@@ -185,11 +185,11 @@ libraries[predis][destination] = "libraries"
 
 ; projects[plupload][version] = "1.7"
 
-; libraries[ckeditor][directory_name] = "ckeditor"
-; libraries[ckeditor][type] = "libraries"
-; libraries[ckeditor][download][type] = "file"
-; libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.11/ckeditor_4.5.11_standard.zip"
-; libraries[ckeditor][destination] = "libraries"
+libraries[ckeditor][directory_name] = "ckeditor"
+libraries[ckeditor][type] = "libraries"
+libraries[ckeditor][download][type] = "file"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.11/ckeditor_4.5.11_standard.zip"
+libraries[ckeditor][destination] = "libraries"
 
 ; libraries[ckeditor_lineutils][directory_name] = "contrib/ckeditor/plugins/lineutils"
 ; libraries[ckeditor_lineutils][type] = "libraries"
