@@ -9,6 +9,7 @@
 //
 // Style guide: base.buttons.standard
 %button {
+  @include card(1);
   display: block;
   border: none;
   background: $blue;
@@ -23,13 +24,12 @@
   letter-spacing: 1px;
   transition: $transition-short;
   user-select: none;
-  @include card(1);
 
   @include is-on {
+    @include a-grow;
     background: $blue-dark;
     color: $white;
     outline: 0;
-    @include a-grow;
   }
 
   &:active {
@@ -37,9 +37,9 @@
   }
 
   @include disabled {
+    @include card(0);
     background-color: $white;
     color: $grey;
-    @include card(0);
 
     @include is-on {
       @include a-grow(1);
@@ -59,6 +59,7 @@ button,
 //
 // Style guide: base.buttons.inline
 
+%button--inline,
 .button--inline {
   @extend %button;
   display: inline-block;
@@ -73,13 +74,14 @@ button,
 //
 // Style guide: base.buttons.cta
 
+%button--cta,
 .button--cta {
   @extend %button;
   display: inline-block;
   width: auto;
   padding: 0.25rem 1rem;
   font-weight: $normal;
-  border-radius: $border_radius;
+  border-radius: $border-radius;
   border: 1px $blue solid;
 
   @include is-on {
@@ -96,6 +98,8 @@ button,
 // <button class="button--ghost">Button</button>
 //
 // Style guide: base.buttons.ghost
+
+%button--ghost,
 .button--ghost {
   @extend %button;
   display: inline-block;
@@ -126,17 +130,18 @@ button,
 //
 // Style guide: base.buttons.tag
 
+%button--tag,
 .button--tag {
   @extend %button;
+  @include card(0);
   display: inline-block;
   width: auto;
   margin: 0 ($padding / 3);
   padding: ($padding / 6) ($padding / 2);
   @include font-size(14px);
   font-weight: $normal;
-  border-radius: $border_radius;
+  border-radius: $border-radius;
   border: 1px $blue solid;
-  @include card(0);
 
   @include is-on {
     @include a-grow($scale: 1, $duration: 0);

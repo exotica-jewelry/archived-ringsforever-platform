@@ -18,10 +18,14 @@ rules:
     - 'mq'
     # Active link helper
     - 'is-on'
+    # Disabled state
+    - 'disabled'
     # Motion UI
     - 'mui-animation'
     # Fonts
     - 'font-size'
+    # Arrows
+    - 'arrow'
 
   # Line Spacing
   one-declaration-per-line: 1
@@ -95,11 +99,11 @@ rules:
   - include: true
   nesting-depth:
   - 1
-  - max-depth: 2
+  - max-depth: 3
   property-sort-order: 0
   pseudo-element: 2
   quotes: 1
-  shorthand-values: 1
+  shorthand-values: 0
   url-quotes: 2
   variable-for-property: 0
   zero-unit: 2

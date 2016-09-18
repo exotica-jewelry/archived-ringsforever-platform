@@ -36,7 +36,7 @@
 
 .status.status,
 .messages--status {
-  background-color: rgba(0,100,0,0.2);
+  background-color: rgba(0, 100, 0, 0.2);
   border-color: #583;
 }
 
@@ -50,7 +50,7 @@
 
 .warning.warning,
 .messages--warning {
-  background-color: rgba(200,175,0,0.2);
+  background-color: rgba(200, 175, 0, 0.2);
   border-color: #fbb900;
 }
 
@@ -64,6 +64,6 @@
 
 .error.error,
 .messages--error {
-  background-color: rgba(100,0,0,0.2);
+  background-color: rgba(100, 0, 0, 0.2);
   border-color: $red;
 }

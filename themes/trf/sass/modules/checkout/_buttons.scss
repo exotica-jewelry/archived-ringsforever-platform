@@ -11,7 +11,7 @@
 
   // Continue checkout button
   .checkout-continue.checkout-continue.checkout-continue {
-    @extend .button--inline;
+    @extend %button--inline;
     @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2));
 
     @include is-on {

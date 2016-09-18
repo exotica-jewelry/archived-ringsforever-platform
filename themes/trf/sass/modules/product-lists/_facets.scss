@@ -94,10 +94,10 @@
     }
 
     .form-submit {
+      @extend %button--tag;
       position: absolute;
       bottom: 2px;
       right: 0;
-      @extend .button--tag;
       padding: ($padding / 3) ($padding / 2);
     }
   }

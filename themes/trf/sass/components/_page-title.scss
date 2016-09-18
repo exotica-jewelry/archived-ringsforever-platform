@@ -21,6 +21,7 @@
 
 %page-title--product-list {
   @extend %page-title;
+  @include descenders;
   position: relative;
   left: 2px;
   margin-left: 0;
@@ -31,7 +32,6 @@
   text-shadow: none;
   color: $black;
   border-bottom: 1px $black solid;
-  @include descenders;
 
   @include mq(smallish) {
     @include font-size(42px);

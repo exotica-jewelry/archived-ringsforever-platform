@@ -21,12 +21,12 @@
     }
 
     .nolink {
+      @include card(1);
       display: block;
       width: 100%;
       padding: ($padding / 4) ($padding / 2);
       color: $white;
       background-color: $blue-verydark;
-      @include card(1);
 
       @include mq(smallish) {
         border-radius: $border-radius;

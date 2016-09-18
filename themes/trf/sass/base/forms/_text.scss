@@ -6,10 +6,10 @@
 //
 // Style guide: base.form.textinput
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"],
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
 textarea {
   display: block;
   background: none;
@@ -37,5 +37,5 @@ textarea {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
 }

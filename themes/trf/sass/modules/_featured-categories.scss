@@ -13,13 +13,13 @@ $featured-categories__item-width: $imagestyle__product-medium;
   }
 
   .taxonomy-term {
+    @include card(0);
     position: relative;
     padding: $padding 0 0 0;
     cursor: pointer;
     background-color: $white;
     border-radius: $border-radius;
     transition: $transition;
-    @include card(0);
 
     @include is-on {
       @include card(1);

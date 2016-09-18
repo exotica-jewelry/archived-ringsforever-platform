@@ -64,10 +64,10 @@
 
     // Checkout
     #edit-checkout {
+      @extend %button--inline;
+      @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2));
       position: absolute;
       right: 0;
-      @extend .button--inline;
-      @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2));
 
       @include is-on {
         @include card(0);

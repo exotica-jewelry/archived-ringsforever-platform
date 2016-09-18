@@ -6,8 +6,8 @@
 
   // Wrapper around image zoom and thumbnails
   .commerce-product-field-field-images {
-    position: relative;
     @include clearfix;
+    position: relative;
 
     @include mq(smallish) {
       width: $imagestyle__product-full;
@@ -70,8 +70,8 @@
       margin: 0;
       width: $imagestyle__product-thumbnail;
     }
-
   }
+
   .imagezoom-thumbs {
     margin: 0;
     padding: 0;

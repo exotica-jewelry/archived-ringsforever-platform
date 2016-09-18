@@ -18,6 +18,8 @@
     }
 
     .form-submit {
+      @include card(1);
+      @include i-heart(($padding-px * 2), ($padding-px / 2));
       display: block;
       width: 100%;
       margin: $padding 0 ($padding * 2);
@@ -29,8 +31,6 @@
       font-weight: $thin;
       border-radius: $border-radius;
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-      @include card(1);
-      @include i-heart(($padding-px * 2), ($padding-px / 2));
 
       @include is-on {
         @include card(0);

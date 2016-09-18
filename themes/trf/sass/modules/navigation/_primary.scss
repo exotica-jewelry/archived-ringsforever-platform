@@ -26,9 +26,9 @@
       }
 
       @include mq(smallish) {
+        @include a-border-bottom;
         padding: 0;
         @include font-size(16px);
-        @include a-border-bottom();
       }
 
       @include mq(mediumish) {

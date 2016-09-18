@@ -49,9 +49,9 @@
     .field-name-field-images img {
       width: $imagestyle__product-medium--mobile;
 
-        @include mq(smallish) {
-          width: $imagestyle__product-medium;
-        }
+      @include mq(smallish) {
+        width: $imagestyle__product-medium;
+      }
     }
 
     // Title header

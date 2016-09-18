@@ -40,7 +40,7 @@
 
   @include is-on {
     color: $blue-verydark;
-    border-bottom: 0;
+    border-bottom: none;
   }
 }
 
@@ -64,10 +64,10 @@ a {
   @extend %link;
 }
 
-a[href^=mailto] {
+a[href^='mailto'] {
 }
 
-a[href^=tel] {
+a[href^='tel'] {
   color: inherit;
   border-bottom: 1px $blue dotted;
 }

@@ -14,12 +14,12 @@
   }
 
   .content {
+    @include card(1);
     margin: 0 0 $padding;
     padding: 0;
     background-color: $white;
     background-image: none;
     border-radius: $border-radius;
-    @include card(1);
 
     @include mq(tinyish) {
       @include i-ringbox-empty(25px, 5px, 5px, ($padding * 2.5), $blue-verydark);

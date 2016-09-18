@@ -8,8 +8,6 @@
 .skip-link.visually-hidden.focusable:focus {
   position: absolute !important;
   width: 100%;
-  // height: $header-height-sm;
-  // line-height: $header-height-sm;
   background-color: $white;
   text-align: center;
   z-index: 100000;

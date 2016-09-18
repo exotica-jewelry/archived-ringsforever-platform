@@ -54,8 +54,8 @@
     }
 
     &.checkout a {
-      text-decoration: none;
       @include heart-click;
+      text-decoration: none;
 
       @include is-on {
         @include card(0);
@@ -63,8 +63,8 @@
     }
 
     &.continue {
-      font-weight: $normal;
       @include card(0);
+      font-weight: $normal;
     }
   }
 

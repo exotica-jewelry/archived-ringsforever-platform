@@ -54,6 +54,7 @@
 }
 
 .home-free__link {
+  @include card(1);
   display: block;
   padding: ($padding / 4) ($padding / 2);
   @include font-size(18px);
@@ -61,11 +62,10 @@
   text-align: center;
   border-radius: $border-radius;
   background-color: rgba($blue-dark, 0.1);
-  @include card(1);
 
   @include is-on {
-    background-color: $white;
     @include card(0);
+    background-color: $white;
   }
 
   @include mq(smallish) {

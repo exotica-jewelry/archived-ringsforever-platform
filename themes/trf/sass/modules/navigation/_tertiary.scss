@@ -28,6 +28,7 @@
     }
 
     a {
+      @include a-slidehover('up');
       display: block;
       position: relative;
       margin: 0 0 ($padding * -0.5);
@@ -37,7 +38,6 @@
       color: $white;
       background-color: $blue;
       border-radius: $border-radius;
-      @include a-slidehover("up");
 
       @include is-on {
         background-color: $blue-dark;

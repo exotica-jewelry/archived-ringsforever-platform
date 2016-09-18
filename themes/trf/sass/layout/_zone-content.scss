@@ -3,11 +3,11 @@
 //
 
 .zone-content-wrapper .zone-content {
+  @include card(1);
   margin-bottom: 0;
   background-color: $blue-verylight;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
-  @include card(1);
   background-image:
     radial-gradient(
       at top left,
