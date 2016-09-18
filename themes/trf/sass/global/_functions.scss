@@ -71,10 +71,12 @@
   @return 0 $primary-offset $blur $color;
 }
 
-///  Create an optimized SVG URL for embedding.
+/// Create an optimized SVG URL for embedding.
 ///
-///  @link http://codepen.io/tigt/post/optimizing-svgs-in-data-uris
-///  @author Jakob Eriksen
+/// @requires str-replace
+///
+/// @link http://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+/// @author Jakob Eriksen
 ///
 /// @group Utilities
 
@@ -102,10 +104,10 @@
   @return url("data:image/svg+xml,#{$encoded}");
 }
 
-///  Replace characters in a string.
+/// Replace characters in a string.
 ///
-///  @link http://codepen.io/Tigt/blog/optimizing-svgs-in-data-uris
-///  @author Jakob Eriksen
+/// @link http://codepen.io/Tigt/blog/optimizing-svgs-in-data-uris
+/// @author Jakob Eriksen
 ///
 /// @group Utilities
 @function str-replace($string, $search, $replace: '') {
