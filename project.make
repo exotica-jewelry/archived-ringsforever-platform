@@ -153,7 +153,7 @@ projects[tvi][version] = "1.0-beta6"
 
 projects[typogrify][version] = "1.0-rc10"
 
-projects[views_data_export][version] = "3.0-beta9"
+projects[views_data_export][version] = "3.0"
 
 projects[views_date_format_sql][version] = "3.3"
 
