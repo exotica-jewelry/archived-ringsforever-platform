@@ -218,3 +218,5 @@ libraries[predis][destination] = "libraries"
 ; libraries[plupload][download][type] = "file"
 ; libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
 ; libraries[plupload][destination] = "libraries"
+
+projects[table_element][version] = "1.0-beta5"
