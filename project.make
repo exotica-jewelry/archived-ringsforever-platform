@@ -129,6 +129,8 @@ projects[searchapimultiaggregate][version] = "1.2"
 
 projects[stringoverrides][version] = "1.8"
 
+projects[table_element][version] = "1.0-beta5"
+
 projects[transliteration][version] = "3.2"
 
 projects[tvi][version] = "1.0-beta6"
@@ -218,5 +220,3 @@ libraries[predis][destination] = "libraries"
 ; libraries[plupload][download][type] = "file"
 ; libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
 ; libraries[plupload][destination] = "libraries"
-
-projects[table_element][version] = "1.0-beta5"
