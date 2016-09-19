@@ -172,6 +172,7 @@ projects[ckeditor_image2][version] = "1.1"
 ; projects[entity_embed][version] = "2.0-alpha3"
 
 projects[imce][version] = "1.10"
+projects[imce][patch][] = "https://www.drupal.org/files/issues/imce-n2357871-12.patch"
 
 projects[imce_mkdir][version] = "1.0"
 
