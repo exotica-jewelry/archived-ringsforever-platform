@@ -170,6 +170,7 @@ projects[ckeditor_image2][version] = "1.1"
 projects[dialog][version] = "2.0-alpha9"
 
 projects[entity_embed][version] = "2.0-alpha3"
+projects[entity_embed][patch][] = "https://www.drupal.org/files/issues/add_view_mode_alter_option.patch"
 
 projects[imce][version] = "1.10"
 projects[imce][patch][] = "https://www.drupal.org/files/issues/imce-n2357871-12.patch"
