@@ -171,7 +171,7 @@ projects[ckeditor_image2][version] = "1.1"
 
 ; projects[entity_embed][version] = "2.0-alpha3"
 
-; projects[imce][version] = "1.10"
+projects[imce][version] = "1.10"
 
 ; projects[imce_mkdir][version] = "1.0"
 
@@ -214,6 +214,12 @@ libraries[ckeditor_image2][type] = "libraries"
 libraries[ckeditor_image2][download][type] = "file"
 libraries[ckeditor_image2][download][url] = "http://download.ckeditor.com/image2/releases/image2_4.5.11.zip"
 libraries[ckeditor_image2][destination] = "libraries"
+
+libraries[ckeditor_autogrow][directory_name] = "ckeditor/plugins/autogrow"
+libraries[ckeditor_autogrow][type] = "libraries"
+libraries[ckeditor_autogrow][download][type] = "file"
+libraries[ckeditor_autogrow][download][url] = "http://download.ckeditor.com/autogrow/releases/autogrow_4.5.11.zip"
+libraries[ckeditor_autogrow][destination] = "libraries"
 
 ; libraries[plupload][directory_name] = "plupload"
 ; libraries[plupload][type] = "libraries"
