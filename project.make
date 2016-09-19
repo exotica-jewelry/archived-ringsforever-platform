@@ -113,6 +113,8 @@ projects[jquery_update][version] = "2.7"
 
 projects[linkit][version] = "3.5"
 
+projects[linkit_picker][version] = "3.0-rc2"
+
 projects[mailcontrol][version] = "1.0"
 
 projects[menu_trail_by_path][version] = "2.1"
