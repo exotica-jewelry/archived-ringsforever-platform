@@ -133,11 +133,11 @@ projects[table_element][version] = "1.0-beta5"
 
 projects[transliteration][version] = "3.2"
 
-projects[tvi][version] = "1.0-beta6"
+projects[tvi][version] = "1.0"
 
 projects[typogrify][version] = "1.0-rc10"
 
-projects[views_data_export][version] = "3.0"
+projects[views_data_export][version] = "3.1"
 
 projects[views_date_format_sql][version] = "3.3"
 
