@@ -141,10 +141,6 @@ projects[views_data_export][version] = "3.1"
 
 projects[views_date_format_sql][version] = "3.3"
 
-; TEMPORARY
-
-projects[module_missing_message_fixer][version] = "1.1"
-
 ; =======
 ; Libraries.
 ; =======
