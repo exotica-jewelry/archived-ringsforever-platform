@@ -20,13 +20,6 @@ function trf_site_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'backup_migrate_destination_id';
-  $strongarm->value = 'manual';
-  $export['backup_migrate_destination_id'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'backup_migrate_profile_id';
   $strongarm->value = 'default';
   $export['backup_migrate_profile_id'] = $strongarm;
