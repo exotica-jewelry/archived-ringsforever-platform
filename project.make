@@ -185,7 +185,6 @@ projects[imce_tools][version] = "1.2"
 ; projects[picture][version] = "2.13"
 
 projects[plupload][version] = "1.7"
-projects[plupload][patch][] = "https://www.drupal.org/files/issues/plupload-1_5_8-rm_examples-text-1903850-26.patch"
 
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "libraries"
