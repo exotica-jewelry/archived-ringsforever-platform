@@ -1,0 +1,7 @@
+name = TRF entity embed customizations
+description = Alterations to the Entity Embed module.
+core = 7.x
+package = Exotica Jewelry
+version = 7.x-1.0
+project = trf_entity_embed
+dependencies[] = entity_embed
