@@ -19,7 +19,7 @@ function trf_site_images_default_breakpoints() {
   $breakpoint->source = 'trf';
   $breakpoint->source_type = 'theme';
   $breakpoint->status = 1;
-  $breakpoint->weight = 3;
+  $breakpoint->weight = 0;
   $breakpoint->multipliers = array(
     '1x' => '1x',
   );
@@ -34,7 +34,7 @@ function trf_site_images_default_breakpoints() {
   $breakpoint->source = 'trf';
   $breakpoint->source_type = 'theme';
   $breakpoint->status = 1;
-  $breakpoint->weight = 2;
+  $breakpoint->weight = 1;
   $breakpoint->multipliers = array(
     '1x' => '1x',
   );
@@ -49,7 +49,7 @@ function trf_site_images_default_breakpoints() {
   $breakpoint->source = 'trf';
   $breakpoint->source_type = 'theme';
   $breakpoint->status = 1;
-  $breakpoint->weight = 0;
+  $breakpoint->weight = 3;
   $breakpoint->multipliers = array(
     '1x' => '1x',
   );
@@ -64,7 +64,7 @@ function trf_site_images_default_breakpoints() {
   $breakpoint->source = 'trf';
   $breakpoint->source_type = 'theme';
   $breakpoint->status = 1;
-  $breakpoint->weight = 1;
+  $breakpoint->weight = 2;
   $breakpoint->multipliers = array(
     '1x' => '1x',
   );

@@ -19,5 +19,23 @@ function trf_site_images_user_default_permissions() {
     'module' => 'breakpoints',
   );
 
+  // Exported permission: 'administer embed buttons'.
+  $permissions['administer embed buttons'] = array(
+    'name' => 'administer embed buttons',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'entity_embed',
+  );
+
+  // Exported permission: 'administer lazyloader'.
+  $permissions['administer lazyloader'] = array(
+    'name' => 'administer lazyloader',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'lazyloader',
+  );
+
   return $permissions;
 }
