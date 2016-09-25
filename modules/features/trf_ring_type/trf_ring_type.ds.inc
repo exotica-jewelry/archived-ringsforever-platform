@@ -537,6 +537,15 @@ function trf_ring_type_ds_view_modes_info() {
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'embedded';
+  $ds_view_mode->label = 'Embedded';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['embedded'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
   $ds_view_mode->view_mode = 'featured';
   $ds_view_mode->label = 'Featured';
   $ds_view_mode->entities = array(

@@ -30,6 +30,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'ds_taxonomy_separator',
         'weight' => 4,
       ),
+      'embedded' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'featured' => array(
         'label' => 'inline',
         'settings' => array(),
@@ -107,6 +113,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'ds_taxonomy_separator',
         'weight' => 11,
       ),
+      'embedded' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'featured' => array(
         'label' => 'inline',
         'settings' => array(),
@@ -181,6 +193,12 @@ function trf_ring_type_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 2,
+      ),
+      'embedded' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -268,6 +286,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 20,
       ),
+      'embedded' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'featured' => array(
         'label' => 'above',
         'settings' => array(),
@@ -331,6 +355,12 @@ function trf_ring_type_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 22,
+      ),
+      'embedded' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'featured' => array(
         'label' => 'above',
@@ -400,6 +430,12 @@ function trf_ring_type_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'embedded' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'featured' => array(
         'label' => 'above',
@@ -520,6 +556,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'embedded' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'featured' => array(
         'label' => 'above',
         'settings' => array(),
@@ -591,6 +633,12 @@ function trf_ring_type_field_default_field_instances() {
         ),
         'type' => 'commerce_cart_add_to_cart_form',
         'weight' => 3,
+      ),
+      'embedded' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -698,6 +746,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'embedded' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'featured' => array(
         'label' => 'above',
         'settings' => array(),
@@ -768,6 +822,12 @@ function trf_ring_type_field_default_field_instances() {
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 12,
+      ),
+      'embedded' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'featured' => array(
         'label' => 'above',
@@ -858,6 +918,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'ds_taxonomy_separator',
         'weight' => 6,
       ),
+      'embedded' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'featured' => array(
         'label' => 'inline',
         'settings' => array(),
@@ -939,6 +1005,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 9,
       ),
+      'embedded' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'featured' => array(
         'label' => 'inline',
         'settings' => array(),
@@ -1014,6 +1086,12 @@ function trf_ring_type_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 19,
+      ),
+      'embedded' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'featured' => array(
         'label' => 'above',
@@ -1093,6 +1171,12 @@ function trf_ring_type_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'embedded' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'featured' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1170,6 +1254,20 @@ function trf_ring_type_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 0,
+      ),
+      'embedded' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'conditions' => array(),
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'featured' => array(
         'label' => 'hidden',
