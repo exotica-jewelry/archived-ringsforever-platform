@@ -16,7 +16,7 @@ function trf_site_text_filter_default_formats() {
     'name' => 'Commerce Order Message',
     'cache' => 1,
     'status' => 1,
-    'weight' => 0,
+    'weight' => -8,
     'filters' => array(
       'filter_html' => array(
         'weight' => 1,
@@ -36,51 +36,51 @@ function trf_site_text_filter_default_formats() {
     'name' => 'Filtered HTML',
     'cache' => 0,
     'status' => 1,
-    'weight' => 0,
+    'weight' => -10,
     'filters' => array(
-      'picture' => array(
-        'weight' => -49,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'entity_embed' => array(
-        'weight' => -48,
+        'weight' => -50,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_align' => array(
-        'weight' => -47,
+        'weight' => -49,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_url' => array(
-        'weight' => -46,
+        'weight' => -48,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_html' => array(
-        'weight' => -44,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <h3> <h4> <h5> <drupal-entity>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <h3> <h4> <h5> <div> <figure> <figcaption> <drupal-entity data-*>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
       ),
       'filter_autop' => array(
-        'weight' => -43,
+        'weight' => -46,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => -42,
+        'weight' => -45,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'lazyloader_filter' => array(
+        'weight' => -44,
         'status' => 1,
         'settings' => array(),
       ),
       'typogrify' => array(
-        'weight' => -41,
+        'weight' => -43,
         'status' => 1,
         'settings' => array(
           'smartypants_enabled' => 1,
@@ -151,42 +151,42 @@ function trf_site_text_filter_default_formats() {
     'name' => 'Full HTML',
     'cache' => 0,
     'status' => 1,
-    'weight' => 1,
+    'weight' => -9,
     'filters' => array(
-      'picture' => array(
+      'entity_embed' => array(
         'weight' => -50,
         'status' => 1,
         'settings' => array(),
       ),
-      'entity_embed' => array(
+      'filter_align' => array(
         'weight' => -49,
         'status' => 1,
         'settings' => array(),
       ),
-      'filter_align' => array(
-        'weight' => -48,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'filter_url' => array(
-        'weight' => -47,
+        'weight' => -48,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_autop' => array(
-        'weight' => -46,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_htmlcorrector' => array(
+        'weight' => -46,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'lazyloader_filter' => array(
         'weight' => -45,
         'status' => 1,
         'settings' => array(),
       ),
       'typogrify' => array(
-        'weight' => -42,
+        'weight' => -44,
         'status' => 1,
         'settings' => array(
           'smartypants_enabled' => 1,
@@ -257,7 +257,7 @@ function trf_site_text_filter_default_formats() {
     'name' => 'Plain text',
     'cache' => 1,
     'status' => 1,
-    'weight' => 10,
+    'weight' => -7,
     'filters' => array(
       'filter_html_escape' => array(
         'weight' => 0,

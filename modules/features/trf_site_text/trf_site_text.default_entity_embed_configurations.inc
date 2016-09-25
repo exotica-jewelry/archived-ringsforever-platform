@@ -15,12 +15,12 @@ function trf_site_text_default_entity_embed_configuration() {
   $configuration->api_version = 1;
   $configuration->admin_title = 'Ring';
   $configuration->name = 'ring';
-  $configuration->button_label = 'Embed ring';
+  $configuration->button_label = 'Ring';
   $configuration->entity_type = 'node';
   $configuration->entity_type_bundles = array(
     'rings' => 'rings',
   );
-  $configuration->button_icon_fid = 0;
+  $configuration->button_icon_fid = 3234;
   $export['ring'] = $configuration;
 
   return $export;
