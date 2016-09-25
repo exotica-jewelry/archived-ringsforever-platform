@@ -182,7 +182,7 @@ projects[imce_rename][version] = "1.3"
 
 projects[imce_tools][version] = "1.2"
 
-; projects[picture][version] = "2.13"
+projects[picture][version] = "2.13"
 
 projects[plupload][version] = "1.7"
 
