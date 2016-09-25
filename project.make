@@ -176,7 +176,7 @@ projects[imce][patch][] = "https://www.drupal.org/files/issues/imce-n2357871-12.
 
 projects[imce_mkdir][version] = "1.0"
 
-; projects[imce_plupload][version] = "2.0"
+projects[imce_plupload][version] = "2.0"
 
 projects[imce_rename][version] = "1.3"
 
@@ -184,7 +184,7 @@ projects[imce_tools][version] = "1.2"
 
 ; projects[picture][version] = "2.13"
 
-; projects[plupload][version] = "1.7"
+projects[plupload][version] = "1.7"
 
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "libraries"
@@ -222,8 +222,8 @@ libraries[ckeditor_autogrow][download][type] = "file"
 libraries[ckeditor_autogrow][download][url] = "http://download.ckeditor.com/autogrow/releases/autogrow_4.5.11.zip"
 libraries[ckeditor_autogrow][destination] = "libraries"
 
-; libraries[plupload][directory_name] = "plupload"
-; libraries[plupload][type] = "libraries"
-; libraries[plupload][download][type] = "file"
-; libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
-; libraries[plupload][destination] = "libraries"
+libraries[plupload][directory_name] = "plupload"
+libraries[plupload][type] = "libraries"
+libraries[plupload][download][type] = "file"
+libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
+libraries[plupload][destination] = "libraries"
