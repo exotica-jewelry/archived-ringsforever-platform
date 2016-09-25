@@ -132,6 +132,10 @@ projects[job_scheduler][version] = "2.0-alpha3"
 
 projects[jquery_update][version] = "2.7"
 
+projects[lazyloader][version] = "1.4"
+
+projects[lazyloader_filter][version] = "1.4"
+
 projects[linkit][version] = "3.5"
 
 projects[mailcontrol][version] = "1.0"
