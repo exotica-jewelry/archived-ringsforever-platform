@@ -40,6 +40,12 @@ projects[cer][version] = "3.0-alpha7"
 
 projects[charts][version] = "2.0-rc1"
 
+projects[ckeditor][version] = "1.x-dev"
+; Can be switched to a full version once the latest release is later than
+; 19 June 2016.
+
+projects[ckeditor_image2][version] = "1.1"
+
 projects[coffee][version] = "2.2"
 
 projects[colorbox_node][version] = "3.5"
@@ -52,6 +58,8 @@ projects[commerce_responsive_ui][version] = "1.x-dev"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-fixes_cart_redirect_checkout-2641754_7.patch"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-remove_commas_from_classes-2687007-2.patch"
 
+projects[dialog][version] = "2.0-alpha9"
+
 projects[diff][version] = "3.2"
 
 projects[ds][version] = "2.14"
@@ -59,6 +67,8 @@ projects[ds][version] = "2.14"
 projects[ds_extra_layouts][version] = "1.2"
 
 projects[elements][version] = "1.4"
+
+projects[entity_embed][version] = "2.0-alpha3"
 
 projects[entityqueue][version] = "1.1"
 
@@ -107,6 +117,17 @@ projects[imageapi_optimize][patch][] = "https://www.drupal.org/files/issues/imag
 projects[imagezoom][version] = "2.0-beta2"
 projects[imagezoom][patch][] = "https://www.drupal.org/files/issues/imagezoom-image_thumbnails_are-2623896-2.patch"
 
+projects[imce][version] = "1.10"
+projects[imce][patch][] = "https://www.drupal.org/files/issues/imce-n2357871-12.patch"
+
+projects[imce_mkdir][version] = "1.0"
+
+projects[imce_plupload][version] = "2.0"
+
+projects[imce_rename][version] = "1.3"
+
+projects[imce_tools][version] = "1.2"
+
 projects[job_scheduler][version] = "2.0-alpha3"
 
 projects[jquery_update][version] = "2.7"
@@ -118,6 +139,8 @@ projects[mailcontrol][version] = "1.0"
 projects[menu_trail_by_path][version] = "2.1"
 
 projects[migrate_d2d][version] = "2.1"
+
+projects[plupload][version] = "1.7"
 
 projects[redirect][version] = "1.0-rc3"
 
@@ -144,47 +167,6 @@ projects[views_date_format_sql][version] = "3.3"
 ; =======
 ; Libraries.
 ; =======
-
-libraries[elevatezoom][directory_name] = "elevatezoom"
-libraries[elevatezoom][type] = "libraries"
-libraries[elevatezoom][download][type] = "git"
-libraries[elevatezoom][download][url] = "https://github.com/elevateweb/elevatezoom.git"
-libraries[elevatezoom][destination] = "libraries"
-
-libraries[predis][directory_name] = "predis"
-libraries[predis][type] = "libraries"
-libraries[predis][download][type] = "file"
-libraries[predis][download][url] = "https://github.com/nrk/predis/archive/v1.1.1.tar.gz"
-libraries[predis][destination] = "libraries"
-
-;
-; EXPERIMENTAL CKEDITOR IMAGE AND ENTITY INTEGRATION
-;
-
-projects[ckeditor][version] = "1.x-dev"
-; Can be switched to a full version once the latest release is later than
-; 19 June 2016.
-
-projects[ckeditor_image2][version] = "1.1"
-
-projects[dialog][version] = "2.0-alpha9"
-
-projects[entity_embed][version] = "2.0-alpha3"
-
-projects[imce][version] = "1.10"
-projects[imce][patch][] = "https://www.drupal.org/files/issues/imce-n2357871-12.patch"
-
-projects[imce_mkdir][version] = "1.0"
-
-projects[imce_plupload][version] = "2.0"
-
-projects[imce_rename][version] = "1.3"
-
-projects[imce_tools][version] = "1.2"
-
-projects[picture][version] = "2.13"
-
-projects[plupload][version] = "1.7"
 
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "libraries"
@@ -222,8 +204,20 @@ libraries[ckeditor_autogrow][download][type] = "file"
 libraries[ckeditor_autogrow][download][url] = "http://download.ckeditor.com/autogrow/releases/autogrow_4.5.11.zip"
 libraries[ckeditor_autogrow][destination] = "libraries"
 
+libraries[elevatezoom][directory_name] = "elevatezoom"
+libraries[elevatezoom][type] = "libraries"
+libraries[elevatezoom][download][type] = "git"
+libraries[elevatezoom][download][url] = "https://github.com/elevateweb/elevatezoom.git"
+libraries[elevatezoom][destination] = "libraries"
+
 libraries[plupload][directory_name] = "plupload"
 libraries[plupload][type] = "libraries"
 libraries[plupload][download][type] = "file"
 libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
 libraries[plupload][destination] = "libraries"
+
+libraries[predis][directory_name] = "predis"
+libraries[predis][type] = "libraries"
+libraries[predis][download][type] = "file"
+libraries[predis][download][url] = "https://github.com/nrk/predis/archive/v1.1.1.tar.gz"
+libraries[predis][destination] = "libraries"
