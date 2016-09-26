@@ -217,7 +217,10 @@ libraries[elevatezoom][destination] = "libraries"
 libraries[plupload][directory_name] = "plupload"
 libraries[plupload][type] = "libraries"
 libraries[plupload][download][type] = "file"
-libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
+; libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
+; Fork of project without examples folder.
+; @see https://www.drupal.org/node/1903850
+libraries[plupload][download][url] = "https://github.com/dw72/plupload/archive/no-examples.zip"
 libraries[plupload][destination] = "libraries"
 
 libraries[predis][directory_name] = "predis"
