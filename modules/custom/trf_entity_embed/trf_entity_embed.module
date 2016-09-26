@@ -4,6 +4,8 @@
  *
  * Implements hook_default_entity_embed_configuration_alter().
  */
+
+/*
 function trf_entity_embed_default_entity_embed_configuration_alter(&$configurations) {
   // Alter the configuration of a button with the name 'ring'.
   if (!empty($configurations['ring'])) {
@@ -15,6 +17,7 @@ function trf_entity_embed_default_entity_embed_configuration_alter(&$configurati
     }
   }
 }
+*/
 
 /**
  * Implements hook_form_FORM_ID_alter().
