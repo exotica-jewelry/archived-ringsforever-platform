@@ -55,8 +55,21 @@ function trf_site_text_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
-      'filter_html' => array(
+      'image_resize_filter' => array(
         'weight' => -47,
+        'status' => 1,
+        'settings' => array(
+          'link' => 0,
+          'link_class' => '',
+          'link_rel' => '',
+          'image_locations' => array(
+            'local' => 'local',
+            'remote' => 0,
+          ),
+        ),
+      ),
+      'filter_html' => array(
+        'weight' => -46,
         'status' => 1,
         'settings' => array(
           'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <h3> <h4> <h5> <div> <figure> <figcaption> <drupal-entity data-*>',
@@ -65,22 +78,22 @@ function trf_site_text_filter_default_formats() {
         ),
       ),
       'filter_autop' => array(
-        'weight' => -46,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_htmlcorrector' => array(
         'weight' => -45,
         'status' => 1,
         'settings' => array(),
       ),
-      'lazyloader_filter' => array(
+      'filter_htmlcorrector' => array(
         'weight' => -44,
         'status' => 1,
         'settings' => array(),
       ),
-      'typogrify' => array(
+      'lazyloader_filter' => array(
         'weight' => -43,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'typogrify' => array(
+        'weight' => -42,
         'status' => 1,
         'settings' => array(
           'smartypants_enabled' => 1,
@@ -170,23 +183,36 @@ function trf_site_text_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
-      'filter_autop' => array(
+      'image_resize_filter' => array(
         'weight' => -47,
         'status' => 1,
-        'settings' => array(),
+        'settings' => array(
+          'link' => 0,
+          'link_class' => '',
+          'link_rel' => '',
+          'image_locations' => array(
+            'local' => 'local',
+            'remote' => 0,
+          ),
+        ),
       ),
-      'filter_htmlcorrector' => array(
+      'filter_autop' => array(
         'weight' => -46,
         'status' => 1,
         'settings' => array(),
       ),
-      'lazyloader_filter' => array(
+      'filter_htmlcorrector' => array(
         'weight' => -45,
         'status' => 1,
         'settings' => array(),
       ),
-      'typogrify' => array(
+      'lazyloader_filter' => array(
         'weight' => -44,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'typogrify' => array(
+        'weight' => -43,
         'status' => 1,
         'settings' => array(
           'smartypants_enabled' => 1,
