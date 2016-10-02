@@ -107,6 +107,8 @@ projects[hierarchical_select][version] = "3.0-beta7"
 
 projects[icon_tabs][version] = "1.5"
 
+projects[image_resize_filter][version] = "1.16"
+
 projects[imagecache_actions][version] = "1.7"
 
 projects[imageapi_optimize][version] = "1.2"
