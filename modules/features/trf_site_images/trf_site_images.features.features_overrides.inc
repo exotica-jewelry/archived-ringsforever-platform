@@ -11,10 +11,17 @@ function trf_site_images_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
+  // Exported overrides for: field_instance
+  $overrides["field_instance.file-image-field_file_image_title_text.display|caption_only|settings|field_multiple_limit_order"] = 0;
+  $overrides["field_instance.file-image-field_file_image_title_text.display|full|settings|field_multiple_limit_order"] = 0;
+
   // Exported overrides for: file_type
   $overrides["file_type.image.disabled"] = FALSE;
 
   // Exported overrides for: image
+  $overrides["image.frontpage_block.effects|0|data|height"] = 215;
+  $overrides["image.frontpage_block.effects|0|data|width"] = 215;
+  $overrides["image.frontpage_block.label"] = 'frontpage_block';
   $overrides["image.product_full.effects|0|data|height"] = '';
   $overrides["image.product_full.effects|0|data|upscale"] = 0;
   $overrides["image.product_full.effects|0|data|width"] = 416;

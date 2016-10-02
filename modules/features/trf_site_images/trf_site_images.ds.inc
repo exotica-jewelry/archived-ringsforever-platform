@@ -80,21 +80,3 @@ function trf_site_images_ds_layout_settings_info() {
 
   return $export;
 }
-
-/**
- * Implements hook_ds_view_modes_info().
- */
-function trf_site_images_ds_view_modes_info() {
-  $export = array();
-
-  $ds_view_mode = new stdClass();
-  $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'caption_only';
-  $ds_view_mode->label = 'Caption only';
-  $ds_view_mode->entities = array(
-    'file' => 'file',
-  );
-  $export['caption_only'] = $ds_view_mode;
-
-  return $export;
-}

@@ -29,6 +29,16 @@ function trf_site_images_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_field_default_field_instances_alter().
+ */
+function trf_site_images_field_default_field_instances_alter(&$data) {
+  if (isset($data['file-image-field_file_image_title_text'])) {
+    $data['file-image-field_file_image_title_text']['display']['caption_only']['settings']['field_multiple_limit_order'] = 0; /* WAS: '' */
+    $data['file-image-field_file_image_title_text']['display']['full']['settings']['field_multiple_limit_order'] = 0; /* WAS: '' */
+  }
+}
+
+/**
  * Implements hook_file_default_types_alter().
  */
 function trf_site_images_file_default_types_alter(&$data) {
@@ -41,6 +51,23 @@ function trf_site_images_file_default_types_alter(&$data) {
  * Implements hook_image_styles_alter().
  */
 function trf_site_images_image_styles_alter(&$data) {
+  if (isset($data['frontpage_block'])) {
+
+  if (!isset($data['frontpage_block']['storage']) || $data['frontpage_block']['storage'] == IMAGE_STORAGE_DEFAULT) {
+    $data['frontpage_block']['effects'] = array_values($data['frontpage_block']['effects']);
+    $data['frontpage_block']['effects'][0]['data']['height'] = 215;
+  }
+
+  if (!isset($data['frontpage_block']['storage']) || $data['frontpage_block']['storage'] == IMAGE_STORAGE_DEFAULT) {
+    $data['frontpage_block']['effects'] = array_values($data['frontpage_block']['effects']);
+    $data['frontpage_block']['effects'][0]['data']['width'] = 215;
+  }
+
+  if (!isset($data['frontpage_block']['storage']) || $data['frontpage_block']['storage'] == IMAGE_STORAGE_DEFAULT) {
+    $data['frontpage_block']['effects'] = array_values($data['frontpage_block']['effects']);
+    $data['frontpage_block']['label'] = 'frontpage_block';
+  }
+  }
   if (isset($data['product_full'])) {
 
   if (!isset($data['product_full']['storage']) || $data['product_full']['storage'] == IMAGE_STORAGE_DEFAULT) {
