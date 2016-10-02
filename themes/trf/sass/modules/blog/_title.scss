@@ -1,0 +1,24 @@
+//
+// Node title
+//
+
+.node-type-blog-post {
+
+  h1#page-title {
+    @extend %page-title;
+    margin-left: 0;
+    margin-bottom: $padding;
+    padding-bottom: $padding;
+    @include font-size(36px);
+    font-weight: $thin;
+    border-bottom: 1px $black solid;
+
+    @include mq(smallish) {
+      @include font-size(48px);
+    }
+
+    @include mq(mediumish) {
+      @include font-size(60px);
+    }
+  }
+}
