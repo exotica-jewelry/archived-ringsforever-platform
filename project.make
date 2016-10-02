@@ -87,9 +87,7 @@ projects[ffc][patch][] = "https://www.drupal.org/files/issues/ffc-allow-multiple
 
 projects[field_formatter_settings][version] = "1.1"
 
-projects[field_multiple_limit][download][branch] = "7.x-1.x"
-projects[field_multiple_limit][download][revision] = "6bbcd72"
-projects[field_multiple_limit][patch][] = "https://www.drupal.org/files/field_multiple_limit-ignore_missing_cardinality-1958614-1.patch"
+projects[field_multiple_limit][version] = "1.0-alpha5"
 
 projects[field_validation][version] = "2.6"
 
