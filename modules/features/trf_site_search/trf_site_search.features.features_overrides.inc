@@ -21,10 +21,14 @@ function trf_site_search_features_override_default_overrides() {
   $overrides["search_api_index.product_display.options|additional fields"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|data_alter_callbacks|commerce_search_api_alter_product_status|settings"] = array();
   $overrides["search_api_index.product_display.options|data_alter_callbacks|commerce_search_api_product_display_filter|settings"] = array();
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_10|description"] = 'A Fulltext aggregation of the following fields: Tags » Name.';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_10|fields|0"] = 'field_tags:name';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_10|name"] = 'Tags name (Fulltext)';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_11"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_10"] = array(
+    'name' => 'Tags name (Fulltext)',
+    'type' => 'fulltext',
+    'fields' => array(
+      0 => 'field_tags:name',
+    ),
+    'description' => 'A Fulltext aggregation of the following fields: Tags » Name.',
+  );
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_1|description"] = 'A Fulltext aggregation of the following fields: Title.';
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_2|description"] = 'A Fulltext aggregation of the following fields: Brand » Name.';
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_3|description"] = 'A Fulltext aggregation of the following fields: Category » Name.';
@@ -117,8 +121,6 @@ function trf_site_search_features_override_default_overrides() {
     'boost' => '0.0',
   );
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_1"]["DELETED"] = TRUE;
-  $overrides["search_api_index.product_display.options|fields|search_api_aggregation_10"]["DELETED"] = TRUE;
-  $overrides["search_api_index.product_display.options|fields|search_api_aggregation_11"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_2"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_3"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_4"]["DELETED"] = TRUE;

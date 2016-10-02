@@ -35,9 +35,14 @@ function trf_site_search_default_search_api_index_alter(&$data) {
   if (isset($data['product_display'])) {
     $data['product_display']->options['data_alter_callbacks']['commerce_search_api_alter_product_status']['settings'] = array(); /* WAS: '' */
     $data['product_display']->options['data_alter_callbacks']['commerce_search_api_product_display_filter']['settings'] = array(); /* WAS: '' */
-    $data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_10']['description'] = 'A Fulltext aggregation of the following fields: Tags » Name.'; /* WAS: 'Name property of Category as fulltext' */
-    $data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_10']['fields'][0] = 'field_tags:name'; /* WAS: 'field_blog_category:name' */
-    $data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_10']['name'] = 'Tags name (Fulltext)'; /* WAS: 'Category name (Fulltext)' */
+    $data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_10'] = array(
+      'name' => 'Tags name (Fulltext)',
+      'type' => 'fulltext',
+      'fields' => array(
+        0 => 'field_tags:name',
+      ),
+      'description' => 'A Fulltext aggregation of the following fields: Tags » Name.',
+    ); /* WAS: '' */
     $data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_1']['description'] = 'A Fulltext aggregation of the following fields: Title.'; /* WAS: 'A Fulltext aggregation of the title field.' */
     $data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_2']['description'] = 'A Fulltext aggregation of the following fields: Brand » Name.'; /* WAS: 'Name property of Brand as fulltext' */
     $data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_3']['description'] = 'A Fulltext aggregation of the following fields: Category » Name.'; /* WAS: 'Name property of Category as fulltext' */
@@ -100,6 +105,9 @@ function trf_site_search_default_search_api_index_alter(&$data) {
       'weight' => 0,
       'settings' => array(),
     ); /* WAS: '' */
+    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['description'] = ''; /* WAS: '' */
+    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['name'] = 'Product variations » Price » Amount (decimal)'; /* WAS: '' */
+    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['type'] = 'decimal'; /* WAS: '' */
     $data['product_display']->options['datasource'] = array(
       'bundles' => array(),
     ); /* WAS: '' */
@@ -1190,7 +1198,6 @@ function trf_site_search_default_search_api_index_alter(&$data) {
     $data['product_display']->rdf_mapping = array(); /* WAS: '' */
     $data['product_display']->server = 'solr'; /* WAS: 'frontend' */
     unset($data['product_display']->options['additional fields']);
-    unset($data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_11']);
     unset($data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_6']);
     unset($data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_7']);
     unset($data['product_display']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['settings']['fields']['search_api_aggregation_8']);
@@ -1205,8 +1212,6 @@ function trf_site_search_default_search_api_index_alter(&$data) {
     unset($data['product_display']->options['fields']['field_ring_elements:name']);
     unset($data['product_display']->options['fields']['field_ring_elements_primary:name']);
     unset($data['product_display']->options['fields']['search_api_aggregation_1']);
-    unset($data['product_display']->options['fields']['search_api_aggregation_10']);
-    unset($data['product_display']->options['fields']['search_api_aggregation_11']);
     unset($data['product_display']->options['fields']['search_api_aggregation_2']);
     unset($data['product_display']->options['fields']['search_api_aggregation_3']);
     unset($data['product_display']->options['fields']['search_api_aggregation_4']);
