@@ -24,42 +24,46 @@ function trf_site_text_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function trf_site_text_filter_default_formats_alter(&$data) {
   if (isset($data['filtered_html'])) {
-    $data['filtered_html']['filters']['filter_autop']['weight'] = -45; /* WAS: -46 */
-    $data['filtered_html']['filters']['filter_htmlcorrector']['weight'] = -44; /* WAS: -45 */
-    $data['filtered_html']['filters']['filter_html']['weight'] = -46; /* WAS: -47 */
-    $data['filtered_html']['filters']['image_resize_filter'] = array(
+    $data['filtered_html']['filters']['filter_autop']['weight'] = -44; /* WAS: -45 */
+    $data['filtered_html']['filters']['filter_htmlcorrector']['weight'] = -43; /* WAS: -44 */
+    $data['filtered_html']['filters']['filter_html']['weight'] = -45; /* WAS: -46 */
+    $data['filtered_html']['filters']['filter_url']['weight'] = -47; /* WAS: -48 */
+    $data['filtered_html']['filters']['image_resize_filter']['weight'] = -46; /* WAS: -47 */
+    $data['filtered_html']['filters']['lazyloader_filter']['weight'] = -42; /* WAS: -43 */
+    $data['filtered_html']['filters']['pathologic'] = array(
       'settings' => array(
-        'image_locations' => array(
-          'local' => 'local',
-          'remote' => 0,
+        'local_paths' => '',
+        'local_settings' => array(
+          'local_paths' => '',
+          'protocol_style' => 'full',
         ),
-        'link' => 0,
-        'link_class' => '',
-        'link_rel' => '',
+        'protocol_style' => 'full',
+        'settings_source' => 'global',
       ),
       'status' => 1,
-      'weight' => -47,
+      'weight' => -48,
     ); /* WAS: '' */
-    $data['filtered_html']['filters']['lazyloader_filter']['weight'] = -43; /* WAS: -44 */
-    $data['filtered_html']['filters']['typogrify']['weight'] = -42; /* WAS: -43 */
+    $data['filtered_html']['filters']['typogrify']['weight'] = -41; /* WAS: -42 */
   }
   if (isset($data['full_html'])) {
-    $data['full_html']['filters']['filter_autop']['weight'] = -46; /* WAS: -47 */
-    $data['full_html']['filters']['filter_htmlcorrector']['weight'] = -45; /* WAS: -46 */
-    $data['full_html']['filters']['image_resize_filter'] = array(
+    $data['full_html']['filters']['filter_autop']['weight'] = -45; /* WAS: -46 */
+    $data['full_html']['filters']['filter_htmlcorrector']['weight'] = -44; /* WAS: -45 */
+    $data['full_html']['filters']['filter_url']['weight'] = -47; /* WAS: -48 */
+    $data['full_html']['filters']['image_resize_filter']['weight'] = -46; /* WAS: -47 */
+    $data['full_html']['filters']['lazyloader_filter']['weight'] = -43; /* WAS: -44 */
+    $data['full_html']['filters']['pathologic'] = array(
       'settings' => array(
-        'image_locations' => array(
-          'local' => 'local',
-          'remote' => 0,
+        'local_paths' => '',
+        'local_settings' => array(
+          'local_paths' => '',
+          'protocol_style' => 'full',
         ),
-        'link' => 0,
-        'link_class' => '',
-        'link_rel' => '',
+        'protocol_style' => 'full',
+        'settings_source' => 'global',
       ),
       'status' => 1,
-      'weight' => -47,
+      'weight' => -48,
     ); /* WAS: '' */
-    $data['full_html']['filters']['lazyloader_filter']['weight'] = -44; /* WAS: -45 */
-    $data['full_html']['filters']['typogrify']['weight'] = -43; /* WAS: -44 */
+    $data['full_html']['filters']['typogrify']['weight'] = -42; /* WAS: -43 */
   }
 }

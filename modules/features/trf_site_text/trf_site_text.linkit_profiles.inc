@@ -87,12 +87,10 @@ function trf_site_text_default_linkit_profiles() {
     'entity:taxonomy_term' => array(
       'result_description' => '',
       'bundles' => array(
-        'blog_category' => 'blog_category',
         'brand' => 'brand',
         'category' => 'category',
         'collection' => 'collection',
         'color' => 'color',
-        'tags' => 0,
         'bag_size' => 0,
         'gender' => 0,
         'hat_size' => 0,
@@ -170,7 +168,7 @@ function trf_site_text_default_linkit_profiles() {
       'result_description' => '',
     ),
     'insert_plugin' => array(
-      'url_method' => '2',
+      'url_method' => '3',
     ),
     'attribute_plugins' => array(
       'accesskey' => array(
