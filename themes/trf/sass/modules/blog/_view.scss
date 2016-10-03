@@ -1,0 +1,42 @@
+//
+// Blog view
+//
+
+.page-blog .region-content  {
+
+  .view-content .views-row {
+    border: none;
+
+    .node-blog-post {
+      border: $line-width $white solid;
+      padding: $padding;
+
+      .field-name-title-field {
+        @extend %page-title;
+        margin: 0 0 $padding;
+        @include font-size(40px);
+
+        a {
+          color: $black;
+
+          @include is-on {
+            color: $blue-dark;
+          }
+        }
+      }
+
+      .links.node-links {
+        margin: 0 0 $padding;
+        padding: 0;
+
+        .links {
+          margin-left: 0;
+
+          a {
+            @extend %button--inline;
+          }
+        }
+      }
+    }
+  }
+}
