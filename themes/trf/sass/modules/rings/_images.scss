@@ -24,22 +24,22 @@
 
     // Zoom image
     > figure {
+      margin-bottom: $padding;
 
       @include mq(smallish) {
         width: $imagestyle__product-full;
         float: right;
       }
-    }
-
-    // Zoom image caption
-    .image__caption {
-      margin-bottom: $padding;
-      text-align: right;
-      font-style: italic;
 
       @include mq(mediumish) {
         margin-bottom: 0;
       }
+    }
+
+    // Zoom image caption
+    .image__caption {
+      text-align: right;
+      font-style: italic;
     }
   }
 
