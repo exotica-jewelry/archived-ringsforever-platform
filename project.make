@@ -144,6 +144,8 @@ projects[menu_trail_by_path][version] = "2.1"
 
 projects[migrate_d2d][version] = "2.1"
 
+projects[pathologic][version] = "3.1"
+
 projects[plupload][version] = "1.7"
 
 projects[redirect][version] = "1.0-rc3"
