@@ -23,9 +23,9 @@ function trf_site_paths_strongarm() {
   $strongarm->name = 'crumbs_weights';
   $strongarm->value = array(
     'crumbs.home_title' => 0,
-    'taxonomy.termReference.field_blog_category.node.blog_post' => 1,
-    'taxonomy.termReference.field_ring_elements_primary.node.*' => 2,
-    'taxonomy.termReference.field_collection.node.*' => 3,
+    'taxonomy.termReference.field_ring_elements_primary.node.*' => 1,
+    'taxonomy.termReference.field_collection.node.*' => 2,
+    'path' => 3,
     '*' => 4,
   );
   $export['crumbs_weights'] = $strongarm;
