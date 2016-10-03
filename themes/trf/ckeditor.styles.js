@@ -17,7 +17,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             // "Format" drop-down list in the toolbar, maintaining the same features.
 
             { name : 'Text'		, element : 'p' },
-            { name: 'Text (br)', element: 'p', styles: { 'clear': 'both' } },
+            { name: 'Text (br)', element: 'p', attributes: { 'class': 'ckeditor-clear' } },
             // { name : 'Heading 1'		, element : 'h1' },
             // { name : 'Heading 2'		, element : 'h2' },
             { name : 'Subheading'		, element : 'h3' },
