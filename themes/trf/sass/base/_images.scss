@@ -4,4 +4,12 @@
 
 figure {
   display: inline-block;
+
+  > figcaption {
+    @include font-size(16px);
+
+    a {
+      font-weight: bold;
+    }
+  }
 }
