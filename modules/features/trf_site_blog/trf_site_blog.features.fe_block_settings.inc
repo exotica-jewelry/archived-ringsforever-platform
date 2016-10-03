@@ -12,6 +12,39 @@ function trf_site_blog_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-blog_contact'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'machine_name' => 'blog_contact',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => 'blog/*',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => 0,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
   $export['views-blog-block'] = array(
     'cache' => -1,
     'css_class' => '',

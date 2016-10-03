@@ -52,9 +52,39 @@ function trf_site_blog_field_default_field_instances_alter(&$data) {
 }
 
 /**
+ * Implements hook_node_info_alter().
+ */
+function trf_site_blog_node_info_alter(&$data) {
+  if (isset($data['blog_post'])) {
+    $data['blog_post']['description'] = 'Write a <em>blog post</em> and it will show up at the bottom of the home page, along with the blog page.'; /* WAS: 'Use <em>blog post</em> to write regular content.' */
+  }
+}
+
+/**
  * Implements hook_strongarm_alter().
  */
 function trf_site_blog_strongarm_alter(&$data) {
+  if (isset($data['comment_anonymous_blog_post'])) {
+    unset($data['comment_anonymous_blog_post']);
+  }
+  if (isset($data['comment_blog_post'])) {
+    unset($data['comment_blog_post']);
+  }
+  if (isset($data['comment_default_mode_blog_post'])) {
+    unset($data['comment_default_mode_blog_post']);
+  }
+  if (isset($data['comment_default_per_page_blog_post'])) {
+    unset($data['comment_default_per_page_blog_post']);
+  }
+  if (isset($data['comment_form_location_blog_post'])) {
+    unset($data['comment_form_location_blog_post']);
+  }
+  if (isset($data['comment_preview_blog_post'])) {
+    unset($data['comment_preview_blog_post']);
+  }
+  if (isset($data['comment_subject_field_blog_post'])) {
+    unset($data['comment_subject_field_blog_post']);
+  }
   if (isset($data['field_bundle_settings_node__blog_post'])) {
     $data['field_bundle_settings_node__blog_post']->value['view_modes']['colorbox'] = array(
       'custom_settings' => FALSE,
@@ -81,5 +111,14 @@ function trf_site_blog_strongarm_alter(&$data) {
   }
   if (isset($data['node_submitted_blog_post'])) {
     $data['node_submitted_blog_post']->value = 0; /* WAS: 1 */
+  }
+}
+
+/**
+ * Implements hook_views_default_views_alter().
+ */
+function trf_site_blog_views_default_views_alter(&$data) {
+  if (isset($data['blog'])) {
+    $data['blog']->display['default']->display_options['title'] = 'As the lathe turns: Chris & Sandy’s blog on titanium rings'; /* WAS: 'Blog' */
   }
 }
