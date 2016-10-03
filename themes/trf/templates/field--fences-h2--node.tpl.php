@@ -20,7 +20,7 @@
 
 <?php foreach ($items as $delta => $item): ?>
   <header>
-    <?php if ($variables['element']['#field_name'] == 'title_field') { ?>
+    <?php if ($variables['element']['#field_name'] == 'title_field' && $variables['element']['#view_mode'] == 'full') { ?>
       <h1 class="<?php print $classes; ?>"<?php print $attributes; ?>>
         <?php print render($item); ?>
       </h1>
