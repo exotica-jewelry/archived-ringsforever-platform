@@ -148,6 +148,8 @@ projects[pathologic][version] = "3.1"
 
 projects[plupload][version] = "1.7"
 
+projects[prlp][version] = "1.3"
+
 projects[redirect][version] = "1.0-rc3"
 
 projects[redis][version] = "3.12"
