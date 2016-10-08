@@ -11,7 +11,6 @@
   text-shadow: none;
 }
 
-
 /*
  * Accommodate escape_admin link
  */
@@ -46,6 +45,16 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
 
 legend {
   min-height: 2em;
+}
+
+/*
+ * CKEditor toolbar fixes
+ */
+
+.cke_panel_frame,
+.cke_format,
+.cke_styles {
+  background-color: #fff !important;
 }
 
 /*
@@ -128,13 +137,13 @@ legend {
   padding: 1em 1em 0 !important;
 }
 
-.node-rings-form .ief-form > .fieldset-wrapper:before,
-.node-rings-form .ief-form > .fieldset-wrapper:after {
-  content: " ";
+.node-rings-form .ief-form > .fieldset-wrapper::before,
+.node-rings-form .ief-form > .fieldset-wrapper::after {
+  content: ' ';
   display: table;
 }
 
-.node-rings-form .ief-form > .fieldset-wrapper:after {
+.node-rings-form .ief-form > .fieldset-wrapper::after {
   clear: both;
 }
 
@@ -222,7 +231,7 @@ legend {
  * going down the rabbit hole.
  */
 
-.node-rings-form .field-name-field-related-rings .ief-entity-operations input[value="Edit"] {
+.node-rings-form .field-name-field-related-rings .ief-entity-operations input[value='Edit'] {
   display: none;
 }
 

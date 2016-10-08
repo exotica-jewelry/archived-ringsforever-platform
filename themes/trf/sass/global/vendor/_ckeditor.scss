@@ -6,3 +6,13 @@
 .ckeditor-clear {
   clear: both;
 }
+
+//
+// Tweaks for the CKEditor editing area.
+//
+
+.cke_editable {
+  margin: 0;
+  padding: 1rem;
+  background-color: #fff;
+}
