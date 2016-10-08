@@ -19,6 +19,15 @@ function trf_site_text_user_default_permissions() {
     'module' => 'filter',
   );
 
+  // Exported permission: 'administer fitvids'.
+  $permissions['administer fitvids'] = array(
+    'name' => 'administer fitvids',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'fitvids',
+  );
+
   // Exported permission: 'use text format filtered_html'.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',

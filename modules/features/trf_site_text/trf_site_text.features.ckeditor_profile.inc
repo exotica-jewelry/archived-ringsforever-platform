@@ -14,7 +14,7 @@ function trf_site_text_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'linkit\',\'Unlink\',\'IMCE\',\'Image\',\'ring\']
+    [\'PasteFromWord\',\'Styles\',\'Bold\',\'Italic\',\'-\',\'RemoveFormat\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'linkit\',\'Unlink\',\'-\',\'IMCE\',\'Image\',\'ring\',\'video_filter\',\'HorizontalRule\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -29,7 +29,7 @@ function trf_site_text_ckeditor_profile_defaults() {
         'extraAllowedContent' => '',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
-        'font_format' => 'p;div;pre;address;h1;h2;h3;h4;h5;h6',
+        'font_format' => 'p;h3;h4;h5;pre;div',
         'custom_formatting' => 'f',
         'formatting' => array(
           'custom_formatting_options' => array(
@@ -41,10 +41,10 @@ function trf_site_text_ckeditor_profile_defaults() {
             'pre_indent' => 0,
           ),
         ),
-        'css_mode' => 'none',
-        'css_path' => '',
-        'css_style' => 'theme',
-        'styles_path' => '',
+        'css_mode' => 'self',
+        'css_path' => '%t/css/styles.css',
+        'css_style' => 'self',
+        'styles_path' => '%t/ckeditor.styles.js',
         'filebrowser' => 'none',
         'filebrowser_image' => '',
         'filebrowser_flash' => '',
@@ -54,7 +54,8 @@ function trf_site_text_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'config.autoGrow_maxHeight = 600;
+config.autoGrow_onStartup = true;',
         'loadPlugins' => array(
           'autogrow' => array(
             'name' => 'autogrow',
@@ -77,7 +78,7 @@ function trf_site_text_ckeditor_profile_defaults() {
             'default' => 'f',
             'buttons' => array(
               'ring' => array(
-                'label' => 'Rings',
+                'label' => 'Ring',
                 'icon' => 'entity.png',
               ),
               'node' => array(
@@ -117,6 +118,17 @@ function trf_site_text_ckeditor_profile_defaults() {
               'linkit' => array(
                 'label' => 'Linkit',
                 'icon' => 'icons/linkit.png',
+              ),
+            ),
+          ),
+          'video_filter' => array(
+            'name' => 'video_filter',
+            'desc' => 'Plugin to directly embed videos with the video filter module.',
+            'path' => '%base_path%sites/all/modules/contrib/video_filter/editors/ckeditor/',
+            'buttons' => array(
+              'video_filter' => array(
+                'label' => 'Video filter',
+                'icon' => 'video_filter.png',
               ),
             ),
           ),
@@ -141,11 +153,11 @@ function trf_site_text_ckeditor_profile_defaults() {
     [\'Source\'],
     [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
     [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
-    [\'IMCE\',\'button_name\',\'ring\',\'Table\',\'HorizontalRule\',\'SpecialChar\'],
+    [\'IMCE\',\'button_name\',\'ring\',\'video_filter\',\'Table\',\'HorizontalRule\',\'SpecialChar\'],
     [\'Maximize\',\'ShowBlocks\'],
     \'/\',
-    [\'Format\'],
-    [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'RemoveFormat\'],
+    [\'Styles\'],
+    [\'Bold\',\'Italic\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\'],
     [\'linkit\',\'Unlink\',\'Anchor\']
@@ -163,7 +175,7 @@ function trf_site_text_ckeditor_profile_defaults() {
         'extraAllowedContent' => '',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
-        'font_format' => 'p;div;pre;address;h1;h2;h3;h4;h5;h6',
+        'font_format' => 'p;h3;h4;h5;pre;div',
         'custom_formatting' => 'f',
         'formatting' => array(
           'custom_formatting_options' => array(
@@ -175,10 +187,10 @@ function trf_site_text_ckeditor_profile_defaults() {
             'pre_indent' => 0,
           ),
         ),
-        'css_mode' => 'none',
-        'css_path' => '',
-        'css_style' => 'theme',
-        'styles_path' => '',
+        'css_mode' => 'self',
+        'css_path' => '%t/css/styles.css',
+        'css_style' => 'self',
+        'styles_path' => '%t/ckeditor.styles.js',
         'filebrowser' => 'none',
         'filebrowser_image' => '',
         'filebrowser_flash' => '',
@@ -188,7 +200,8 @@ function trf_site_text_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'config.autoGrow_maxHeight = 600;
+config.autoGrow_onStartup = true;',
         'loadPlugins' => array(
           'autogrow' => array(
             'name' => 'autogrow',
@@ -211,7 +224,7 @@ function trf_site_text_ckeditor_profile_defaults() {
             'default' => 'f',
             'buttons' => array(
               'ring' => array(
-                'label' => 'Rings',
+                'label' => 'Ring',
                 'icon' => 'entity.png',
               ),
               'node' => array(
@@ -251,6 +264,17 @@ function trf_site_text_ckeditor_profile_defaults() {
               'linkit' => array(
                 'label' => 'Linkit',
                 'icon' => 'icons/linkit.png',
+              ),
+            ),
+          ),
+          'video_filter' => array(
+            'name' => 'video_filter',
+            'desc' => 'Plugin to directly embed videos with the video filter module.',
+            'path' => '%base_path%sites/all/modules/contrib/video_filter/editors/ckeditor/',
+            'buttons' => array(
+              'video_filter' => array(
+                'label' => 'Video filter',
+                'icon' => 'video_filter.png',
               ),
             ),
           ),
