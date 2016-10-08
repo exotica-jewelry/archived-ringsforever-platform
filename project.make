@@ -99,6 +99,8 @@ projects[filefield_paths][version] = "1.0"
 
 projects[filefield_sources][version] = "1.10"
 
+projects[fitvids][version] = "1.17"
+
 projects[globalredirect][version] = "1.5"
 
 projects[hide_submit][version] = "2.4"
@@ -168,6 +170,8 @@ projects[tvi][version] = "1.0"
 
 projects[typogrify][version] = "1.0-rc10"
 
+projects[video_filter][version] = "3.4"
+
 projects[views_data_export][version] = "3.1"
 
 projects[views_date_format_sql][version] = "3.3"
@@ -217,6 +221,12 @@ libraries[elevatezoom][type] = "libraries"
 libraries[elevatezoom][download][type] = "git"
 libraries[elevatezoom][download][url] = "https://github.com/elevateweb/elevatezoom.git"
 libraries[elevatezoom][destination] = "libraries"
+
+libraries[fitvids][directory_name] = "fitvids"
+libraries[fitvids][type] = "libraries"
+libraries[fitvids][download][type] = "file"
+libraries[fitvids][download][url] = "https://raw.github.com/davatron5000/FitVids.js/master/jquery.fitvids.js"
+libraries[fitvids][destination] = "libraries"
 
 libraries[plupload][directory_name] = "plupload"
 libraries[plupload][type] = "libraries"
