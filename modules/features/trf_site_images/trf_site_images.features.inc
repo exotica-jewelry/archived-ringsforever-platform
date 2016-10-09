@@ -45,6 +45,11 @@ function trf_site_images_image_styles_alter(&$data) {
 
   if (!isset($data['product_full']['storage']) || $data['product_full']['storage'] == IMAGE_STORAGE_DEFAULT) {
     $data['product_full']['effects'] = array_values($data['product_full']['effects']);
+    $data['product_full']['effects'][0]['data']['#imageinfo_cache_effect_callback'] = 'image_scale_effect';
+  }
+
+  if (!isset($data['product_full']['storage']) || $data['product_full']['storage'] == IMAGE_STORAGE_DEFAULT) {
+    $data['product_full']['effects'] = array_values($data['product_full']['effects']);
     $data['product_full']['effects'][0]['data']['height'] = '';
   }
 
@@ -72,6 +77,7 @@ function trf_site_images_image_styles_alter(&$data) {
     $data['product_full']['effects'] = array_values($data['product_full']['effects']);
     $data['product_full']['effects'][1] = array(
       'data' => array(
+        '#imageinfo_cache_effect_callback' => 'canvasactions_definecanvas_effect',
         'RGB' => array(
           'HEX' => '#ffffff',
         ),
@@ -98,6 +104,11 @@ function trf_site_images_image_styles_alter(&$data) {
 
   if (!isset($data['product_medium']['storage']) || $data['product_medium']['storage'] == IMAGE_STORAGE_DEFAULT) {
     $data['product_medium']['effects'] = array_values($data['product_medium']['effects']);
+    $data['product_medium']['effects'][0]['data']['#imageinfo_cache_effect_callback'] = 'image_scale_effect';
+  }
+
+  if (!isset($data['product_medium']['storage']) || $data['product_medium']['storage'] == IMAGE_STORAGE_DEFAULT) {
+    $data['product_medium']['effects'] = array_values($data['product_medium']['effects']);
     $data['product_medium']['effects'][0]['data']['height'] = '';
   }
 
@@ -120,6 +131,7 @@ function trf_site_images_image_styles_alter(&$data) {
     $data['product_medium']['effects'] = array_values($data['product_medium']['effects']);
     $data['product_medium']['effects'][1] = array(
       'data' => array(
+        '#imageinfo_cache_effect_callback' => 'canvasactions_definecanvas_effect',
         'RGB' => array(
           'HEX' => '#ffffff',
         ),
@@ -146,6 +158,11 @@ function trf_site_images_image_styles_alter(&$data) {
 
   if (!isset($data['product_thumbnail']['storage']) || $data['product_thumbnail']['storage'] == IMAGE_STORAGE_DEFAULT) {
     $data['product_thumbnail']['effects'] = array_values($data['product_thumbnail']['effects']);
+    $data['product_thumbnail']['effects'][0]['data']['#imageinfo_cache_effect_callback'] = 'image_scale_effect';
+  }
+
+  if (!isset($data['product_thumbnail']['storage']) || $data['product_thumbnail']['storage'] == IMAGE_STORAGE_DEFAULT) {
+    $data['product_thumbnail']['effects'] = array_values($data['product_thumbnail']['effects']);
     $data['product_thumbnail']['effects'][0]['data']['height'] = '';
   }
 
@@ -168,6 +185,7 @@ function trf_site_images_image_styles_alter(&$data) {
     $data['product_thumbnail']['effects'] = array_values($data['product_thumbnail']['effects']);
     $data['product_thumbnail']['effects'][1] = array(
       'data' => array(
+        '#imageinfo_cache_effect_callback' => 'canvasactions_definecanvas_effect',
         'RGB' => array(
           'HEX' => '#ffffff',
         ),

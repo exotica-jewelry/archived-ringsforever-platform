@@ -225,6 +225,49 @@ function trf_site_images_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_disable_on_demand_generation';
+  $strongarm->value = 0;
+  $export['imageinfo_cache_disable_on_demand_generation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_image';
+  $strongarm->value = array(
+    'blog_full' => 'blog_full',
+    'blog_medium' => 'blog_medium',
+    'product_full' => 'product_full',
+    'product_medium' => 'product_medium',
+    'product_thumbnail' => 'product_thumbnail',
+  );
+  $export['imageinfo_cache_field_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_images';
+  $strongarm->value = array(
+    'product_full' => 'product_full',
+  );
+  $export['imageinfo_cache_field_images'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_getimagesize';
+  $strongarm->value = 0;
+  $export['imageinfo_cache_getimagesize'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_use_httprl';
+  $strongarm->value = 1;
+  $export['imageinfo_cache_use_httprl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'image_jpeg_quality';
   $strongarm->value = '75';
   $export['image_jpeg_quality'] = $strongarm;
