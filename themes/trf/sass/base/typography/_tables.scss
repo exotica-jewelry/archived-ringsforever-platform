@@ -1,0 +1,82 @@
+// Tables
+//
+// markup:
+// <table>
+//   <tr>
+//     <td>
+//       <p>Lorem</p>
+//     </td>
+//     <td>
+//       <p>Ipsum dolor sit amet.</p>
+//     </td>
+//     <td>
+//       <p>Consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra iaculis.</p>
+//     </td>
+//   </tr>
+//   <tr>
+//     <td>
+//       <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+//     </td>
+//     <td>
+//       <p>In adipiscing.</p>
+//     </td>
+//     <td>
+//       <p>Pulvinar eros, vitae dictum elit cursus a.</p>
+//     </td>
+//   </tr>
+//   <tr>
+//     <td>
+//       <p>Praesent a hendrerit urna.</p>
+//     </td>
+//     <td>
+//       <p>Maecenas neque libero, viverra in neque at, posuere tempor metus. Vestibulum neque nisi, malesuada sed ipsum varius, bibendum ornare nisl.</p>
+//     </td>
+//     <td>
+//       <p>Aliquam adipiscing vehicula varius. Morbi a interdum lacus. Integer luctus lobortis magna, nec vulputate augue blandit ac.</p>
+//     </td>
+//   </tr>
+// </table>
+//
+// Style guide: base.type.table
+
+table {
+  margin: 0 0 ($padding * 2) 0;
+  padding: 0;
+}
+
+thead,
+tbody,
+tfoot {
+  margin: 0;
+  padding: 0;
+}
+
+tr {
+  margin: 0;
+  padding: 0;
+
+  &:last-of-type {
+    td {
+      padding-bottom: 0;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+td {
+  margin: 0;
+  padding: ($padding / 2);
+  vertical-align: top;
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
