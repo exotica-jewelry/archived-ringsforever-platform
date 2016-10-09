@@ -4,11 +4,62 @@
 // Facebook, Twitter, etc.
 //
 
-#block-menu-menu-social-connection .content ul.menu li {
+#section-footer #block-menu-menu-social-connection {
+  @include card(1);
+  background-color: $blue-verylight;
+  border-radius: $border-radius;
 
-  @include is-on {
-    color: $black;
-    background-color: $blue-verylight;
-    border-radius: $border-radius;
+  h2 {
+    @include card(1);
+    margin: 0 0 $padding;
+    padding: ($padding / 4) ($padding / 2) ($padding / 4) ($padding * 1.5);
+    font-family: $font-default;
+    font-weight: $bold;
+    @include font-size(20px);
+    color: $white;
+    background-image: none;
+    background-color: $blue-verydark;
+
+    @include mq(smallish) {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+  }
+
+  .content ul.menu li {
+    margin: $padding 0;
+    padding: 0;
+
+    @include is-on {
+      background-color: transparent;
+    }
+
+    a {
+      height: auto;
+      margin: 0 $padding;
+      padding: ($padding / 2) $padding ($padding / 2) ($padding * 2.5);
+      font-family: $font-default;
+      font-weight: $thin;
+      @include font-size(18px);
+      color: $black;
+      border-bottom: none;
+      border-radius: $padding;
+
+      @include is-on {
+        color: $black;
+        background-color: $white;
+      }
+
+      &.facebook {
+        @include i-facebook($blue-verydark);
+      }
+
+      &.twitter {
+        @include i-twitter($blue-verydark);
+      }
+
+      &.pinterest {
+        @include i-pinterest($blue-verydark);
+      }
+    }
   }
 }
