@@ -1,5 +1,5 @@
 //
-// Logo image at the top of the page
+// Logo image at the top of the site
 //
 
 .page .zone-branding .region-branding .logo-img {
@@ -11,5 +11,9 @@
   @include mq(mediumish) {
     float: left;
     margin: 0;
+  }
+
+  a {
+    display: inline-block;
   }
 }
