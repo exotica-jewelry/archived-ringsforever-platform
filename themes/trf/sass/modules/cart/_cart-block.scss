@@ -112,6 +112,7 @@
             display: block;
             padding: 0 ($padding / 2);
             font-family: $font-default;
+            @include font-size(16px);
             font-weight: $normal;
             line-height: 2.15;
             color: $white;
