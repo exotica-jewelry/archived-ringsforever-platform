@@ -10,6 +10,7 @@ projects[commerce_kickstart][type] = core
 ; Patches against Drupal core.
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-111.patch"
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-remove_double_underscore_from_css_filter-1109854-43.patch"
+projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-2289493-3-image_get_info-filesize-D7.patch"
 
 ; Patches against Commerce Kickstart modules.
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
