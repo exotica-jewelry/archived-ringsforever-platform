@@ -2,8 +2,22 @@
 // Progress bar at the top of checkout pages
 //
 
+.page-checkout .region-inner {
+  padding-bottom: 0;
+}
+
+.page-checkout .zone-menu-wrapper {
+  display: none;
+}
+
+.page-checkout .region-breadcrumb-inner {
+  margin-top: $padding;
+  margin-bottom: ($padding * -1);
+}
+
 .block-commerce-checkout-progress {
   padding-top: (0.6 * $padding);
+  padding-bottom: $padding;
   background-color: $white;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
