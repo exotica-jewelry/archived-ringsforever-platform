@@ -111,10 +111,12 @@ projects[icon_tabs][version] = "1.5"
 
 projects[image_resize_filter][version] = "1.16"
 
-projects[imagecache_actions][version] = "1.7"
-
 projects[imageapi_optimize][version] = "1.2"
 projects[imageapi_optimize][patch][] = "https://www.drupal.org/files/issues/imageapi_optimize-add-resmushit-service-2458453-25.patch"
+
+projects[imagecache_actions][version] = "1.7"
+
+projects[imageinfo_cache][version] = "3.5"
 
 projects[imagezoom][version] = "2.0-beta2"
 projects[imagezoom][patch][] = "https://www.drupal.org/files/issues/imagezoom-image_thumbnails_are-2623896-2.patch"
