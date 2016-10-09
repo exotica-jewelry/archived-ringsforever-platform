@@ -26,6 +26,10 @@
   position: relative;
   margin-top: ($padding * -0.5);
   height: ($padding * 4);
+
+  a {
+    border-bottom: none;
+  }
 }
 
 #region-breadcrumb .pseudo-breadcrumb {
