@@ -26,6 +26,23 @@
 
     .search-api-sort-active {
       @include font-size(14px);
+      background-color: $white;
+      color: $black;
+
+      @include is-on {
+        .active-sort {
+          transform: rotate(180deg);
+          transform-origin: bottom center;
+        }
+      }
+
+      .active-sort.active-sort.active-sort {
+        border: none;
+
+        @include is-on {
+          background-color: transparent;
+        }
+      }
     }
   }
 }
