@@ -60,7 +60,10 @@ function errorAlert(error){
 //
 
 gulp.task('sass', function () {
-  return gulp.src(sassPath + '/styles.scss')
+  return gulp.src([
+    sassPath + '/styles.scss',
+    sassPath + '/styleguide.scss'
+  ])
 
   // Get Sass inside folders ("folder/*" syntax")
   .pipe(bulkSass())
@@ -183,13 +186,21 @@ gulp.task('styleguide', function(){
 
     // CSS and JS paths are relative to the generated style guide.
     css: [
+      // Fonts
       '//brick.a.ssl.fastly.net/Lora:400i/Roboto:500,300,700,900',
-      '../../' + cssPath + '/styles.css'
+      // Compiled theme CSS
+      '../../' + cssPath + '/styles.css',
+      // Styleguide-specific CSS
+      '../../' + cssPath + '/styleguide.css'
     ],
     js: [
+      // Theme JS
       '../../' + jsPath + '/fastclick.min.js',
       '../../' + jsPath + '/jquery.tooltipster.min.js',
-      '../../' + jsPath + '/trf.js'
+      '../../' + jsPath + '/trf.js',
+      // Styleguide-specific JS
+      '../../' + jsPath + '/styleguide_slideout.min.js',
+      '../../' + jsPath + '/styleguide.js'
     ],
 
     homepage: '..' + docPath + '/styleguide.md',

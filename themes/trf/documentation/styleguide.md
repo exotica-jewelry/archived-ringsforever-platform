@@ -4,18 +4,20 @@ This page documents style components, variables, and base markup defined by the
 theme and its base theme.
 
 The content below is generated from code comments in the project&rsquo;s Sass
-files and processed using
-[SC5 Style Guide Generator](https://www.npmjs.com/package/sc5-styleguide), which
-runs on [kss-node](https://github.com/kss-node/kss-node), which itself uses
-[Knyle Style Sheets (KSS)](https://github.com/kneath/kss).
+files and processed using [kss-node](https://github.com/kss-node/kss-node),
+which uses [Knyle Style Sheets (KSS)](https://github.com/kneath/kss).
 
-The styleguide sections are defined in `sass/styles.scss`.
+The styleguide sections are defined in `sass/style.scss`.
 
 Note that [per the KSS documentation](http://warpspire.com/kss/syntax/), "not
 every CSS rule should be documented." Only rules that describe visual UI
 elements are documented in the styleguide. Therefore, there is not (and does not
-need to be) a 1:1 correspondence between the style guide sections and the Sass
+need to be) a 1:1 correspondence between the Styleguide sections and the Sass
 folders and partials.
+
+**For documentation of Sass breakpoints, functions and mixins in this theme and
+its parent theme,
+[see this theme's SassDoc](/themes/trf/documentation/sassdoc/index.html).**
 
 ## Also see
 

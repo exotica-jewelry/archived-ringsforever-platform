@@ -39,19 +39,19 @@ documentation syntax, when adding new code.**
 Documentation is critical to keeping this theme maintainable. Please do not plan
 to "do it later". Do it now, as you write your code.
 
-### [Style Guide (KSS)](/sites/all/themes/trf/documentation/styleguide/)
+### [Style Guide (KSS)](/sites/all/themes/trf/documentation/styleguide/index.html)
 
 Documents the assorted designs, components, styles and markup patterns defined
 by the TRF site. You'll probably want to start here. Generated automatically
 using the default `gulp` task using comments in the Sass files.
 
-### [SassDoc](/sites/all/themes/trf/documentation/sassdoc/)
+### [SassDoc](/sites/all/themes/trf/documentation/sassdoc/index.html)
 
 Documents Sass breakpoints, functions and mixins, which are not included in a
 style guide. Generated automatically using the default `gulp` task using
 comments in the Sass files.
 
-### [JSDoc](/sites/all/themes/trf/documentation/jsdoc/)
+### [JSDoc](/sites/all/themes/trf/documentation/jsdoc/index.html)
 
 Documents custom JavaScript on the TRF site.
 
