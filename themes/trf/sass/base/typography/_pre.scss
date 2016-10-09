@@ -9,5 +9,7 @@
 // Style guide: base.type.preformatted
 
 pre {
+  font-family: $font-monospace;
+  @include font-size(16px);
   white-space: pre-wrap;
 }
