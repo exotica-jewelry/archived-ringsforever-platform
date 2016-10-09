@@ -13,11 +13,19 @@
     border-top: none;
   }
 
-  .content ul.search-api-sorts li a {
-    background-color: $grey;
+  .content ul.search-api-sorts li {
 
-    @include is-on {
-      background-color: $blue;
+    a {
+      @include font-size(14px);
+      background-color: $grey;
+
+      @include is-on {
+        background-color: $blue;
+      }
+    }
+
+    .search-api-sort-active {
+      @include font-size(14px);
     }
   }
 }
