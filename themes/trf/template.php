@@ -34,7 +34,7 @@ function trf_preprocess_html(&$vars) {
 }
 
 /**
- * Retitle the contact page.
+ * Alter the contact page.
  *
  * Implements hook_form_FORM_ID_alter()
  * @see https://drupal.org/node/853266#comment-4609888
@@ -42,6 +42,7 @@ function trf_preprocess_html(&$vars) {
 function trf_form_contact_site_form_alter(&$form, &$form_state) {
   $site_name = $GLOBALS['conf']['site_name'];
   drupal_set_title('Contact Chris & Sandy');
+  $form['mail']['#title'] = t('Your email address');
 }
 
 /**
