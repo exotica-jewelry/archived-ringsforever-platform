@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TRF site analytics feature.
+ */
+
+include_once 'trf_site_analytics.features.inc';
