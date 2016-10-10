@@ -55,6 +55,8 @@ projects[colorbox_node][version] = "3.5"
 
 projects[commerce_feeds][version] = "1.4"
 
+projects[commerce_google_analytics][version] = "2.0"
+
 projects[commerce_reports][version] = "4.0-beta3"
 
 projects[commerce_responsive_ui][version] = "1.x-dev"
@@ -104,7 +106,13 @@ projects[filefield_sources][version] = "1.10"
 
 projects[fitvids][version] = "1.17"
 
+projects[ga_push][version] = "1.1"
+
 projects[globalredirect][version] = "1.5"
+
+projects[google_analytics][version] = "2.3"
+
+projects[google_analytics_reports][version] = "3.1"
 
 projects[hide_submit][version] = "2.4"
 
