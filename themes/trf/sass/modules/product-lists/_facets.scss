@@ -51,6 +51,11 @@
     }
   }
 
+  .facetapi-active.facetapi-active {
+    background-position: left center;
+    border-bottom: none;
+  }
+
   // Price slider
   #search-api-ranges-block-slider-view-form-field-productcommerce-priceamount-decimal {
     position: relative;
