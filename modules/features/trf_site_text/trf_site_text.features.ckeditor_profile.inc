@@ -54,7 +54,7 @@ function trf_site_text_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => 'config.autoGrow_maxHeight = 600;
+        'js_conf' => 'config.autoGrow_maxHeight = 400;
 config.autoGrow_onStartup = true;',
         'loadPlugins' => array(
           'autogrow' => array(
@@ -200,7 +200,7 @@ config.autoGrow_onStartup = true;',
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => 'config.autoGrow_maxHeight = 600;
+        'js_conf' => 'config.autoGrow_maxHeight = 400;
 config.autoGrow_onStartup = true;',
         'loadPlugins' => array(
           'autogrow' => array(
