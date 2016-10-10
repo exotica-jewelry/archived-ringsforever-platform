@@ -15,6 +15,7 @@ function trf_site_analytics_user_default_permissions() {
     'name' => 'access google analytics reports',
     'roles' => array(
       'administrator' => 'administrator',
+      'store manager' => 'store manager',
     ),
     'module' => 'google_analytics_reports',
   );
@@ -42,6 +43,7 @@ function trf_site_analytics_user_default_permissions() {
     'name' => 'administer google analytics',
     'roles' => array(
       'administrator' => 'administrator',
+      'store manager' => 'store manager',
     ),
     'module' => 'googleanalytics',
   );
