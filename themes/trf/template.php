@@ -41,7 +41,7 @@ function trf_preprocess_html(&$vars) {
  */
 function trf_form_contact_site_form_alter(&$form, &$form_state) {
   $site_name = $GLOBALS['conf']['site_name'];
-  drupal_set_title('Contact ' . $site_name);
+  drupal_set_title('Contact Chris & Sandy');
 }
 
 /**
