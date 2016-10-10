@@ -1,0 +1,23 @@
+//
+// Testimonial nodes
+//
+
+.node-testimonial {
+
+  .field-name-title-field {
+    @extend %h4;
+    margin-bottom: 0;
+  }
+
+  .field-name-field-testimonial-date {
+    @extend %h5;
+    margin: $padding 0;
+  }
+
+  .field-name-body {
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
