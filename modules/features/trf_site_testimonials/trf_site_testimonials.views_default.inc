@@ -15,7 +15,7 @@ function trf_site_testimonials_views_default_views() {
   $view->description = 'Display of all testimonials.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'testimonials';
+  $view->human_name = 'Testimonials';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
