@@ -1,0 +1,30 @@
+//
+// Contact form, provided by the core contact module
+//
+
+.page-contact .region-content {
+
+  .content {
+
+    h3 {
+      margin-bottom: 0;
+      padding-bottom: $padding;
+      border-bottom: 1px $black solid;
+    }
+  }
+
+  .form-actions {
+    padding-top: $padding;
+  }
+
+  .form-submit {
+    @extend %button--inline;
+    @include i-email($white-off, $left: 3px);
+    padding-top: $padding;
+    padding-bottom: $padding;
+
+    @include is-on {
+      @include i-email($white, $left: 3px);
+    }
+  }
+}
