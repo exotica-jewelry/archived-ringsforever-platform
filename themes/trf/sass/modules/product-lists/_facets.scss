@@ -40,9 +40,10 @@
   .facetapi-facetapi-links .facetapi-inactive {
     font-family: $font-default;
     @include font-size(14px);
-    font-weight: $normal; // Needs an override since these are <a> elements.
+    font-weight: $normal;
     padding-left: ($padding / 10);
     color: $black;
+    border-bottom: none;
 
     @include is-on {
       text-decoration: none;
