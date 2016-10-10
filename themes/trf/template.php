@@ -40,8 +40,7 @@ function trf_preprocess_html(&$vars) {
  * @see https://drupal.org/node/853266#comment-4609888
  */
 function trf_form_contact_site_form_alter(&$form, &$form_state) {
-  $site_name = $GLOBALS['conf']['site_name'];
-  drupal_set_title('Contact Chris & Sandy');
+  drupal_set_title('Contact Chris and Sandy Boothe');
   $form['mail']['#title'] = t('Your email address');
 }
 
