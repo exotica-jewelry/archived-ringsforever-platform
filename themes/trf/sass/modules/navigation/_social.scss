@@ -49,6 +49,10 @@
         background-color: $white;
       }
 
+      &.contact {
+        @include i-email($blue-verydark);
+      }
+
       &.facebook {
         @include i-facebook($blue-verydark);
       }
