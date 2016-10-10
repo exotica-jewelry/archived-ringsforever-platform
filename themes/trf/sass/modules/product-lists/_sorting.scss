@@ -32,12 +32,12 @@
       @include is-on {
         .active-sort {
           transform: rotate(180deg);
-          transform-origin: bottom center;
         }
       }
 
       .active-sort.active-sort.active-sort {
         border: none;
+        transform-origin: 50% 90%;
 
         @include is-on {
           background-color: transparent;
