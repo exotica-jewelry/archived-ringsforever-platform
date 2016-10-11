@@ -360,5 +360,19 @@ example.org';
   $strongarm->value = 0;
   $export['metatag_token_sanitize'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'schemaorg_ui_type_blog_post';
+  $strongarm->value = 'BlogPosting';
+  $export['schemaorg_ui_type_blog_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'schemaorg_ui_type_rings';
+  $strongarm->value = 'Product';
+  $export['schemaorg_ui_type_rings'] = $strongarm;
+
   return $export;
 }
