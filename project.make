@@ -131,6 +131,8 @@ projects[imageapi_optimize][patch][] = "https://www.drupal.org/files/issues/imag
 
 projects[imagecache_actions][version] = "1.7"
 
+projects[imagecache_token][version] = "1.0-rc2"
+
 projects[imageinfo_cache][version] = "3.5"
 
 projects[imagezoom][version] = "2.0-beta2"
