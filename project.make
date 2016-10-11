@@ -187,8 +187,6 @@ projects[searchapimultiaggregate][version] = "1.2"
 
 projects[seo_checklist][version] = "4.1"
 
-projects[seowatcher][version] = "1.0-beta1"
-
 projects[stringoverrides][version] = "1.8"
 
 projects[table_element][version] = "1.0-beta5"
