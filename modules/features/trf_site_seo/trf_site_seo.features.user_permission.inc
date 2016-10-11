@@ -37,5 +37,23 @@ function trf_site_seo_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit seo_checklist checklistapi checklist'.
+  $permissions['edit seo_checklist checklistapi checklist'] = array(
+    'name' => 'edit seo_checklist checklistapi checklist',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'checklistapi',
+  );
+
+  // Exported permission: 'view seo_checklist checklistapi checklist'.
+  $permissions['view seo_checklist checklistapi checklist'] = array(
+    'name' => 'view seo_checklist checklistapi checklist',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'checklistapi',
+  );
+
   return $permissions;
 }

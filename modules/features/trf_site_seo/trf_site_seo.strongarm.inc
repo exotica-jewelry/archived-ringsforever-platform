@@ -13,6 +13,125 @@ function trf_site_seo_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'checklistapi_checklist_seo_checklist';
+  $strongarm->value = array(
+    '#changed' => 1476174140,
+    '#changed_by' => '1',
+    '#completed_items' => 20,
+    'add_to_google_places' => 0,
+    'add_verifications' => 0,
+    'authenticate_with_bing' => 0,
+    'authenticate_with_google' => 0,
+    'authenticate_with_google_analytics' => 0,
+    'check_links' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'configure_contact_google_analytics' => 0,
+    'configure_metatag' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'configure_metatags_quick' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'configure_microdata' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'configure_pathauto' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'create_google_analytics_analytics' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'download_internet_marketing_whitepapers' => 0,
+    'enable_clean_urls' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'get_google_account' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'get_windows_live_id' => 0,
+    'input_google_analytics_code' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_admin_menu' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_contact_google_analytics' => 0,
+    'install_context_keywords' => 0,
+    'install_drush' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_ga_tokenizer' => 0,
+    'install_globalredirect' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_google_analytics' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_htmlpurifier' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_metatag' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_metatags_quick' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_microdata' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_module_filter' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_pathauto' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_read_more' => 0,
+    'install_redirect' => array(
+      '#completed' => 1476174140,
+      '#uid' => '1',
+    ),
+    'install_scheduler' => 0,
+    'install_search404' => 0,
+    'install_security_review' => 0,
+    'install_seo_checker' => 0,
+    'install_site_map' => 0,
+    'install_site_verify' => 0,
+    'install_xmlsitemap' => 0,
+    'link_to_volacci' => 0,
+    'mollom_spam_prevention' => 0,
+    'read_drupal_6_seo_book' => 0,
+    'send_feedback' => 0,
+    'submit_xml_sitemap_to_bing' => 0,
+    'submit_xml_sitemap_to_google' => 0,
+    'validate_html' => 0,
+    'volacci_automatr' => 0,
+    'watch_drupalize_me_video' => 0,
+  );
+  $export['checklistapi_checklist_seo_checklist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'linkchecker_action_status_code_301';
   $strongarm->value = '3';
   $export['linkchecker_action_status_code_301'] = $strongarm;
