@@ -43,6 +43,8 @@ projects[cer][version] = "3.0-alpha7"
 
 projects[charts][version] = "2.0-rc1"
 
+projects[checklistapi][version] = "1.2"
+
 projects[ckeditor][version] = "1.x-dev"
 ; Can be switched to a full version once the latest release is later than
 ; 19 June 2016.
