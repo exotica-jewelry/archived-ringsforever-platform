@@ -181,9 +181,13 @@ projects[redis][version] = "3.12"
 
 projects[schemaorg][version] = "1.0-rc1"
 
+projects[search404][version] = "1.4"
+
 projects[search_api_solr][version] = "1.11"
 
 projects[searchapimultiaggregate][version] = "1.2"
+
+projects[seo_checker][version] = "1.8"
 
 projects[seo_checklist][version] = "4.1"
 
