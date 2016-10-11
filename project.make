@@ -203,9 +203,9 @@ projects[views_data_export][version] = "3.1"
 
 projects[views_date_format_sql][version] = "3.3"
 
-; =======
+; ==========
 ; Libraries.
-; =======
+; ==========
 
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "libraries"
