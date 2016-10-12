@@ -12,6 +12,11 @@
 //
 
 .cke_editable {
-  margin: 1rem;
+  margin: 0;
+  padding: 0;
   background-color: #fff;
+}
+
+.cke_contents {
+  padding: 1rem;
 }
