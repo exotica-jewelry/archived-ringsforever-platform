@@ -44,4 +44,8 @@ $colors: (
 // Style guide: variables.colors.minor
 
 $red: #a00;
-$yellow: #ee0;
+$red-rgba: ($red, 0.2);
+$yellow: #fbb900;
+$yellow-rgba: ($yellow, 0.2);
+$green: rgb(0, 100, 0);
+$green-rgba: ($green, 0.2);

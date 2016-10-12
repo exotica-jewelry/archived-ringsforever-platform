@@ -14,7 +14,8 @@
   border-radius: $border-radius;
   box-shadow: none;
   color: $black;
-  background-position: 0.25rem 50%;
+  background-position: 0 0;
+  background-size: 2rem;
 
   em {
     color: $black;
@@ -36,8 +37,8 @@
 
 .status.status,
 .messages--status {
-  background-color: rgba(0, 100, 0, 0.2);
-  border-color: #583;
+  background-color: $green-rgba;
+  border-color: $green;
 }
 
 //
@@ -50,8 +51,8 @@
 
 .warning.warning,
 .messages--warning {
-  background-color: rgba(200, 175, 0, 0.2);
-  border-color: #fbb900;
+  background-color: $yellow-rgba;
+  border-color: $yellow;
 }
 
 //
@@ -64,7 +65,7 @@
 
 .error.error,
 .messages--error {
-  background-color: rgba(100, 0, 0, 0.2);
+  background-color: $red-rgba;
   border-color: $red;
 }
 
