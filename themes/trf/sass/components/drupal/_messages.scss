@@ -67,3 +67,24 @@
   background-color: rgba(100, 0, 0, 0.2);
   border-color: $red;
 }
+
+//
+// Tweak for SEO Checker results
+//
+
+.seo-check-results {
+  margin: 0 0 $padding;
+  padding: $padding $padding ($padding / 4);
+  @include font-size(14px);
+  text-transform: uppercase;
+  background-color: $white-rgba;
+  border-radius: $border-radius;
+
+  th {
+    padding-left: 0;
+  }
+
+  td {
+    padding-left: ($padding / 2);
+  }
+}
