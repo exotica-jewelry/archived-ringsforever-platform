@@ -10,7 +10,7 @@
   padding: $padding $padding $padding (2 * $padding);
   margin: $padding;
   @include font-size(16px);
-  text-shadow: 1px 1px 0 $white;
+  text-shadow: 1px 1px 0 $white-rgba;
   background-color: transparent;
   background-image: none;
   border: 5px solid $black;
@@ -41,7 +41,7 @@
 //
 // Style guide: components.drupal-messages.success
 
-.status.status,
+.status.status.status,
 .messages--status {
   @include i-check(auto, $top: 0, $color: $green);
   @extend %message--icon;
@@ -57,7 +57,7 @@
 //
 // Style guide: components.drupal-messages.warning
 
-.warning.warning,
+.warning.warning.warning,
 .messages--warning {
   @include i-exclamation(auto, $top: 0, $color: $yellow);
   @extend %message--icon;
@@ -73,7 +73,7 @@
 //
 // Style guide: components.drupal-messages.error
 
-.error.error,
+.error.error.error,
 .messages--error {
   @include i-x(auto, $top: 0, $color: $red);
   @extend %message--icon;
@@ -98,6 +98,6 @@
   }
 
   td {
-    padding: ($padding / 4);
+    padding: ($padding / 4) !important;
   }
 }
