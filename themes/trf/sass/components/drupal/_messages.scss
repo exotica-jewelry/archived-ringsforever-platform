@@ -14,8 +14,6 @@
   border-radius: $border-radius;
   box-shadow: none;
   color: $black;
-  background-position: 0 0;
-  background-size: 2rem;
 
   em {
     color: $black;
@@ -37,6 +35,7 @@
 
 .status.status,
 .messages--status {
+  @include i-check(2rem, $top: 0, $color: $green);
   background-color: $green-rgba;
   border-color: $green;
 }
@@ -51,6 +50,7 @@
 
 .warning.warning,
 .messages--warning {
+  @include i-exclamation(2rem, $top: 0, $color: $yellow);
   background-color: $yellow-rgba;
   border-color: $yellow;
 }
@@ -65,6 +65,7 @@
 
 .error.error,
 .messages--error {
+  @include i-x(2rem, $top: 0, $color: $red);
   background-color: $red-rgba;
   border-color: $red;
 }
