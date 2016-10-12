@@ -10,6 +10,9 @@
   padding: $padding $padding $padding (2 * $padding);
   margin: $padding;
   @include font-size(16px);
+  text-shadow: 1px 1px 0 $white;
+  background-color: transparent;
+  background-image: none;
   border: 5px solid $black;
   border-radius: $border-radius;
   box-shadow: none;
@@ -27,7 +30,7 @@
 
 %message--icon {
   background-size: auto 100%;
-  background-position: 100% 50%;
+  background-position: 100% 50% !important;
 }
 
 //
@@ -40,7 +43,7 @@
 
 .status.status,
 .messages--status {
-  @include i-check(auto, $top: 0);
+  @include i-check(auto, $top: 0, $color: $green);
   @extend %message--icon;
   background-color: $green-rgba !important;
   border-color: $green;
@@ -56,7 +59,7 @@
 
 .warning.warning,
 .messages--warning {
-  @include i-exclamation(auto, $top: 0);
+  @include i-exclamation(auto, $top: 0, $color: $yellow);
   @extend %message--icon;
   background-color: $yellow-rgba !important;
   border-color: $yellow;
@@ -72,7 +75,7 @@
 
 .error.error,
 .messages--error {
-  @include i-x(auto, $top: 0);
+  @include i-x(auto, $top: 0, $color: $red);
   @extend %message--icon;
   background-color: $red-rgba !important;
   border-color: $red;
