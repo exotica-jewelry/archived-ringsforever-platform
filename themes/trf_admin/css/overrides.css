@@ -58,6 +58,20 @@ legend {
 }
 
 /*
+ * Tweaks for the CKEditor editing area.
+ */
+
+.cke_editable {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.cke_contents {
+  padding: 1rem;
+}
+
+/*
  * IMAGE ENTITIES
  */
 
