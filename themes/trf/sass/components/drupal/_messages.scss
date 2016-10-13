@@ -29,8 +29,8 @@
 }
 
 %message--icon {
-  background-size: auto 100%;
-  background-position: 100% 50% !important;
+  background-size: 2rem;
+  background-position: 1px 1px !important;
 }
 
 //
@@ -43,7 +43,7 @@
 
 .status.status.status,
 .messages--status {
-  @include i-check(auto, $top: 0, $color: $green);
+  @include i-check(2rem, $top: 0, $color: $green);
   @extend %message--icon;
   background-color: $green-rgba !important;
   border-color: $green;
@@ -59,7 +59,7 @@
 
 .warning.warning.warning,
 .messages--warning {
-  @include i-exclamation(auto, $top: 0, $color: $yellow);
+  @include i-exclamation(2rem, $top: 0, $color: $yellow);
   @extend %message--icon;
   background-color: $yellow-rgba !important;
   border-color: $yellow;
@@ -75,7 +75,7 @@
 
 .error.error.error,
 .messages--error {
-  @include i-x(auto, $top: 0, $color: $red);
+  @include i-x(2rem, $top: 0, $color: $red);
   @extend %message--icon;
   background-color: $red-rgba !important;
   border-color: $red;
