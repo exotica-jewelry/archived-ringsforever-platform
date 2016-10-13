@@ -10,6 +10,24 @@
 function trf_site_seo_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access broken links report'.
+  $permissions['access broken links report'] = array(
+    'name' => 'access broken links report',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
+  // Exported permission: 'access own broken links report'.
+  $permissions['access own broken links report'] = array(
+    'name' => 'access own broken links report',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
   // Exported permission: 'administer linkchecker'.
   $permissions['administer linkchecker'] = array(
     'name' => 'administer linkchecker',
@@ -28,6 +46,33 @@ function trf_site_seo_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'administer seo_checker configuration'.
+  $permissions['administer seo_checker configuration'] = array(
+    'name' => 'administer seo_checker configuration',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'seo_checker',
+  );
+
+  // Exported permission: 'allow seo check failures'.
+  $permissions['allow seo check failures'] = array(
+    'name' => 'allow seo check failures',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'seo_checker',
+  );
+
+  // Exported permission: 'edit link settings'.
+  $permissions['edit link settings'] = array(
+    'name' => 'edit link settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'linkchecker',
+  );
+
   // Exported permission: 'edit meta tags'.
   $permissions['edit meta tags'] = array(
     'name' => 'edit meta tags',
@@ -44,6 +89,15 @@ function trf_site_seo_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'checklistapi',
+  );
+
+  // Exported permission: 'skip seo checks'.
+  $permissions['skip seo checks'] = array(
+    'name' => 'skip seo checks',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'seo_checker',
   );
 
   // Exported permission: 'view seo_checklist checklistapi checklist'.
