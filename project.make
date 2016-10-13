@@ -207,6 +207,8 @@ projects[views_data_export][version] = "3.1"
 
 projects[views_date_format_sql][version] = "3.3"
 
+projects[xmlsitemap][version] = "2.3"
+
 ; ==========
 ; Libraries.
 ; ==========
