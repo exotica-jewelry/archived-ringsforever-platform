@@ -27,6 +27,13 @@ function trf_site_blog_field_default_field_instances_alter(&$data) {
     $data['node-blog_post-body']['display']['teaser']['settings']['field_multiple_limit_offset'] = 0; /* WAS: '' */
     $data['node-blog_post-body']['display']['teaser']['settings']['field_multiple_limit_order'] = 0; /* WAS: '' */
     $data['node-blog_post-body']['display']['teaser']['weight'] = 2; /* WAS: 1 */
+    $data['node-blog_post-body']['ds_extras_field_template'] = ''; /* WAS: '' */
+    $data['node-blog_post-body']['fences_wrapper'] = 'div_div_div'; /* WAS: '' */
+    $data['node-blog_post-body']['settings']['linkit'] = array(
+      'button_text' => 'Search',
+      'enable' => 0,
+      'profile' => '',
+    ); /* WAS: '' */
   }
   if (isset($data['node-blog_post-field_blog_category'])) {
     unset($data['node-blog_post-field_blog_category']);
@@ -48,15 +55,14 @@ function trf_site_blog_field_default_field_instances_alter(&$data) {
     $data['node-blog_post-title_field']['display']['teaser']['settings']['title_link'] = 'content'; /* WAS: '' */
     $data['node-blog_post-title_field']['display']['teaser']['settings']['title_style'] = '_none'; /* WAS: '' */
     $data['node-blog_post-title_field']['display']['teaser']['type'] = 'title_linked'; /* WAS: 'hidden' */
-  }
-}
-
-/**
- * Implements hook_node_info_alter().
- */
-function trf_site_blog_node_info_alter(&$data) {
-  if (isset($data['blog_post'])) {
-    $data['blog_post']['description'] = 'Write a <em>blog post</em> and it will show up at the bottom of the home page, along with the blog page.'; /* WAS: 'Use <em>blog post</em> to write regular content.' */
+    $data['node-blog_post-title_field']['ds_extras_field_template'] = ''; /* WAS: '' */
+    $data['node-blog_post-title_field']['required'] = 1; /* WAS: TRUE */
+    $data['node-blog_post-title_field']['settings']['linkit'] = array(
+      'button_text' => 'Search',
+      'enable' => 0,
+      'profile' => '',
+    ); /* WAS: '' */
+    $data['node-blog_post-title_field']['widget']['active'] = 1; /* WAS: '' */
   }
 }
 

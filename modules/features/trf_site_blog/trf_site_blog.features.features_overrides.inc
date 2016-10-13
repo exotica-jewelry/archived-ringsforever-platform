@@ -21,6 +21,13 @@ function trf_site_blog_features_override_default_overrides() {
   $overrides["field_instance.node-blog_post-body.display|teaser|settings|field_multiple_limit_offset"] = 0;
   $overrides["field_instance.node-blog_post-body.display|teaser|settings|field_multiple_limit_order"] = 0;
   $overrides["field_instance.node-blog_post-body.display|teaser|weight"] = 2;
+  $overrides["field_instance.node-blog_post-body.ds_extras_field_template"] = '';
+  $overrides["field_instance.node-blog_post-body.fences_wrapper"] = 'div_div_div';
+  $overrides["field_instance.node-blog_post-body.settings|linkit"] = array(
+    'button_text' => 'Search',
+    'enable' => 0,
+    'profile' => '',
+  );
   $overrides["field_instance.node-blog_post-field_blog_category.node-blog_post-field_blog_category"]["DELETED"] = TRUE;
   $overrides["field_instance.node-blog_post-field_image.node-blog_post-field_image"]["DELETED"] = TRUE;
   $overrides["field_instance.node-blog_post-field_tags.node-blog_post-field_tags"]["DELETED"] = TRUE;
@@ -34,9 +41,14 @@ function trf_site_blog_features_override_default_overrides() {
   $overrides["field_instance.node-blog_post-title_field.display|teaser|settings|title_link"] = 'content';
   $overrides["field_instance.node-blog_post-title_field.display|teaser|settings|title_style"] = '_none';
   $overrides["field_instance.node-blog_post-title_field.display|teaser|type"] = 'title_linked';
-
-  // Exported overrides for: node
-  $overrides["node.blog_post.description"] = 'Write a <em>blog post</em> and it will show up at the bottom of the home page, along with the blog page.';
+  $overrides["field_instance.node-blog_post-title_field.ds_extras_field_template"] = '';
+  $overrides["field_instance.node-blog_post-title_field.required"] = 1;
+  $overrides["field_instance.node-blog_post-title_field.settings|linkit"] = array(
+    'button_text' => 'Search',
+    'enable' => 0,
+    'profile' => '',
+  );
+  $overrides["field_instance.node-blog_post-title_field.widget|active"] = 1;
 
   // Exported overrides for: variable
   $overrides["variable.comment_anonymous_blog_post.comment_anonymous_blog_post"]["DELETED"] = TRUE;
