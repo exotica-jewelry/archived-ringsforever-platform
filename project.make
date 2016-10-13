@@ -120,6 +120,8 @@ projects[hide_submit][version] = "2.4"
 
 projects[hierarchical_select][version] = "3.0-beta7"
 
+projects[html5_tools][version] = "1.3"
+
 projects[httprl][version] = "1.14"
 
 projects[icon_tabs][version] = "1.5"
