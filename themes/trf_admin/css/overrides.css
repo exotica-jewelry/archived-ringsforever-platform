@@ -67,7 +67,8 @@ legend {
   background-color: #fff;
 }
 
-.cke_contents {
+.cke_contents,
+.cke_contents.cke_reset {
   padding: 1rem;
 }
 
