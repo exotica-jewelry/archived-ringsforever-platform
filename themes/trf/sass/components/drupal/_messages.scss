@@ -42,8 +42,8 @@
 
 .status.status.status,
 .messages--status {
-  @include i-check(2rem, $top: 0, $color: $green);
   @extend %message--icon;
+  @include i-check(2rem, 0.5rem, 0, $color: $green);
   padding-left: ($padding * 3);
   background-color: $green-rgba !important;
   border-color: $green;
@@ -59,8 +59,8 @@
 
 .warning.warning.warning,
 .messages--warning {
-  @include i-exclamation(2rem, $top: 0, $color: $yellow);
   @extend %message--icon;
+  @include i-exclamation(2rem, 0.5rem, 0, $color: $yellow);
   padding-left: ($padding * 3);
   background-color: $yellow-rgba !important;
   border-color: $yellow;
@@ -76,8 +76,8 @@
 
 .error.error.error,
 .messages--error {
-  @include i-x(2rem, $top: 0, $color: $red);
   @extend %message--icon;
+  @include i-x(2rem, 0.5rem, 0, $color: $red);
   padding-left: ($padding * 3);
   background-color: $red-rgba !important;
   border-color: $red;
