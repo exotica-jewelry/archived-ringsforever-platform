@@ -7,7 +7,7 @@
 // Style guide: components.drupal-messages
 
 .messages.messages {
-  padding: $padding $padding $padding (2 * $padding);
+  padding: $padding $padding $padding (3 * $padding);
   margin: $padding;
   @include font-size(16px);
   text-shadow: 1px 1px 0 $white-rgba;
@@ -29,7 +29,7 @@
 
 %message--icon {
   background-size: 2rem;
-  background-position: 1px 1px !important;
+  background-position: 1px 50% !important;
 }
 
 //
