@@ -116,6 +116,8 @@ projects[google_analytics][version] = "2.3"
 
 projects[google_analytics_reports][version] = "3.1"
 
+projects[hide_php_fatal_error][version] = "1.0"
+
 projects[hide_submit][version] = "2.4"
 
 projects[hierarchical_select][version] = "3.0-beta7"
@@ -171,6 +173,8 @@ projects[metatag][version] = "1.17"
 
 projects[migrate_d2d][version] = "2.1"
 
+projects[paranoia][version] = "1.6"
+
 projects[pathologic][version] = "3.1"
 
 projects[plupload][version] = "1.7"
@@ -182,6 +186,8 @@ projects[redirect][version] = "1.0-rc3"
 projects[redis][version] = "3.12"
 
 projects[schemaorg][version] = "1.0-rc1"
+
+projects[seckit][version] = "1.9"
 
 projects[search404][version] = "1.4"
 
