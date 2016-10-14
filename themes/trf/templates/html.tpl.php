@@ -4,6 +4,8 @@
  *
  * Copies most of the template from sites/all/modules/html5_tools/html.tpl.php
  *
+ * Adds favicon markup directly.
+ *
  *
  *
  * @file
@@ -59,6 +61,12 @@
 <head<?php print $rdf_profile?>>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/sites/all/themes/trf/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/sites/all/themes/trf/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/fsites/all/themes/trf/favicons/avicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/sites/all/themes/trf/favicons/manifest.json">
+  <link rel="mask-icon" href="/sites/all/themes/trf/favicons/safari-pinned-tab.svg" color="#54b2fc">
+  <meta name="theme-color" content="#54b2fc">
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
