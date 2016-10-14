@@ -70,6 +70,11 @@ a[href^='mailto'] {
 a[href^='tel'] {
   color: inherit;
   border-bottom: 1px $blue dotted;
+
+  &::before {
+    content: '\260e';
+    margin-right: 0.5em;
+  }
 }
 
 .field-node--body {
