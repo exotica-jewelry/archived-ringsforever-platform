@@ -167,6 +167,11 @@ function trf_ring_type_ds_field_settings_info() {
         'conditions' => array(),
       ),
     ),
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
     'field_related_rings' => array(
       'formatter_settings' => array(
         'ft' => array(
