@@ -181,8 +181,6 @@ projects[redirect][version] = "1.0-rc3"
 
 projects[redis][version] = "3.12"
 
-projects[robotstxt][version] = "1.3"
-
 projects[schemaorg][version] = "1.0-rc1"
 
 projects[search404][version] = "1.4"
