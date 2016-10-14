@@ -19,6 +19,7 @@ projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart
 projects[rules][patch][] = "http://cgit.drupalcode.org/rules/patch/?id=b79bbb97dbc0e9bd0fa20c17bfaf62dc8f9bf7b7"
 projects[token][patch][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
 projects[views][patch][] = "https://www.drupal.org/files/issues/views-row-class-underscores-1371118-33.patch"
+projects[views][patch][] = "https://www.drupal.org/files/issues/2329259_views_remove_php_access.patch"
 
 ; Drush make allows a default sub directory for all contributed projects.
 defaults[projects][subdir] = contrib
