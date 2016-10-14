@@ -19,7 +19,8 @@ function trf_site_blog_default_fe_block_settings() {
     'machine_name' => 'blog_contact',
     'module' => 'block',
     'node_types' => array(),
-    'pages' => 'blog/*',
+    'pages' => 'blog/*
+about/testimonials/*',
     'roles' => array(),
     'themes' => array(
       'commerce_kickstart_theme' => array(

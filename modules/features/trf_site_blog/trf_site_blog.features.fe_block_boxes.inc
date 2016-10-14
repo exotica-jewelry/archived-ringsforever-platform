@@ -11,7 +11,7 @@ function trf_site_blog_default_fe_block_boxes() {
   $export = array();
 
   $fe_block_boxes = new stdClass();
-  $fe_block_boxes->info = 'Blog contact CTA';
+  $fe_block_boxes->info = 'Contact us CTA';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'blog_contact';
   $fe_block_boxes->body = '<hr />
