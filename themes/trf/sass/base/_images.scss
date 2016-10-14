@@ -14,3 +14,21 @@ figure {
     }
   }
 }
+
+.align-right,
+.align-left {
+  display: block;
+  margin: $padding 0;
+}
+
+.align-right {
+  @include mq(smallish) {
+    margin: 0 0 $padding $padding;
+  }
+}
+
+.align-left {
+  @include mq(smallish) {
+    margin: 0 $padding $padding 0;
+  }
+}
