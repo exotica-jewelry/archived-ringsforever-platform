@@ -15,9 +15,9 @@ function trf_site_seo_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'checklistapi_checklist_seo_checklist';
   $strongarm->value = array(
-    '#changed' => 1476394758,
+    '#changed' => 1476402294,
     '#changed_by' => '1',
-    '#completed_items' => 24,
+    '#completed_items' => 26,
     'add_to_google_places' => 0,
     'add_verifications' => 0,
     'authenticate_with_bing' => 0,
@@ -128,14 +128,20 @@ function trf_site_seo_strongarm() {
       '#completed' => 1476394758,
       '#uid' => '1',
     ),
-    'install_xmlsitemap' => 0,
+    'install_xmlsitemap' => array(
+      '#completed' => 1476402014,
+      '#uid' => '1',
+    ),
     'link_to_volacci' => 0,
     'mollom_spam_prevention' => 0,
     'read_drupal_6_seo_book' => 0,
     'send_feedback' => 0,
     'submit_xml_sitemap_to_bing' => 0,
     'submit_xml_sitemap_to_google' => 0,
-    'validate_html' => 0,
+    'validate_html' => array(
+      '#completed' => 1476402294,
+      '#uid' => '1',
+    ),
     'volacci_automatr' => 0,
     'watch_drupalize_me_video' => 0,
   );

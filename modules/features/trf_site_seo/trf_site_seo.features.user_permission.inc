@@ -15,6 +15,7 @@ function trf_site_seo_user_default_permissions() {
     'name' => 'access broken links report',
     'roles' => array(
       'administrator' => 'administrator',
+      'store manager' => 'store manager',
     ),
     'module' => 'linkchecker',
   );
@@ -24,6 +25,7 @@ function trf_site_seo_user_default_permissions() {
     'name' => 'access own broken links report',
     'roles' => array(
       'administrator' => 'administrator',
+      'store manager' => 'store manager',
     ),
     'module' => 'linkchecker',
   );
@@ -60,6 +62,7 @@ function trf_site_seo_user_default_permissions() {
     'name' => 'allow seo check failures',
     'roles' => array(
       'administrator' => 'administrator',
+      'store manager' => 'store manager',
     ),
     'module' => 'seo_checker',
   );
@@ -69,6 +72,7 @@ function trf_site_seo_user_default_permissions() {
     'name' => 'edit link settings',
     'roles' => array(
       'administrator' => 'administrator',
+      'store manager' => 'store manager',
     ),
     'module' => 'linkchecker',
   );
