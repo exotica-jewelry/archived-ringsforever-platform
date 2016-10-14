@@ -66,6 +66,8 @@ projects[commerce_responsive_ui][version] = "1.x-dev"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-fixes_cart_redirect_checkout-2641754_7.patch"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-remove_commas_from_classes-2687007-2.patch"
 
+projects[content_access][version] = "1.2-beta2"
+
 projects[dialog][version] = "2.0-alpha9"
 
 projects[diff][version] = "3.2"
@@ -203,6 +205,8 @@ projects[seo_checklist][version] = "4.1"
 projects[stringoverrides][version] = "1.8"
 
 projects[table_element][version] = "1.0-beta5"
+
+projects[taxonomy_access][version] = "1.0"
 
 projects[transliteration][version] = "3.2"
 
