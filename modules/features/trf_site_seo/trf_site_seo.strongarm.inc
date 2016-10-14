@@ -278,18 +278,6 @@ example.org';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'linkchecker_ignore_response_codes';
-  $strongarm->value = '200
-206
-302
-304
-401
-403';
-  $export['linkchecker_ignore_response_codes'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'linkchecker_impersonate_user';
   $strongarm->value = 'admin';
   $export['linkchecker_impersonate_user'] = $strongarm;
@@ -713,13 +701,6 @@ example.org';
   $strongarm->name = 'xmlsitemap_frontpage_priority';
   $strongarm->value = '1.0';
   $export['xmlsitemap_frontpage_priority'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_generated_last';
-  $strongarm->value = 1476400515;
-  $export['xmlsitemap_generated_last'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
