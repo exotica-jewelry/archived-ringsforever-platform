@@ -67,6 +67,7 @@
   <link rel="manifest" href="/sites/all/themes/trf/favicons/manifest.json">
   <link rel="mask-icon" href="/sites/all/themes/trf/favicons/safari-pinned-tab.svg" color="#54b2fc">
   <meta name="theme-color" content="#54b2fc">
+  <meta name="format-detection" content="telephone=no">
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
