@@ -149,7 +149,7 @@ function trf_ring_taxonomies_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'tvi_vocab_color';
   $strongarm->value = array(
-    'is_default' => TRUE,
+    'is_default' => FALSE,
     'type' => 'vocab',
     'xid' => 'color',
     'status' => 1,
