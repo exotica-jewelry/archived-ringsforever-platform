@@ -32,8 +32,7 @@ $conf['error_level'] = 2;
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 
-# Include local settings. Required.
-
+# Include local settings -- required
 $local_settings = dirname(__FILE__) . '/settings.local.php';
 if (file_exists($local_settings)) {
   require_once($local_settings);
