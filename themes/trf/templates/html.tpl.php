@@ -15,11 +15,6 @@
  *   an empty string to allow for simple print statement in the template file.
  * - $rdf_profile: The rdf profile string if the rdf module is enabled, if not it is
  *   an empty string to allow for simple print statement in the template file.
- * - $html5shiv: An IE conditional comment for browsers below IE9, This already
- *   contains the conditional comment tag, so you only need to print the variable.
- *   The file contains the html5shiv, innerShiv, an a modified version of
- *   Drupal.ajax.prototype.commands.insert to process html5 elements added on the
- *   page via drupal ajax.
  * - $html_attributes: String of attributes for the html element. It can be
  *   manipulated through the variable $html_attributes_array from preprocess
  *   functions.
@@ -66,7 +61,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <?php print $html5shiv; ?>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body<?php print $attributes;?>>
   <div id="skip-link">
