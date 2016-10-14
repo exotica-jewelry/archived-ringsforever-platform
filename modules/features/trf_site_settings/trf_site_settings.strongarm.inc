@@ -66,6 +66,13 @@ function trf_site_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_html5_tools_iso8601';
+  $strongarm->value = 'c';
+  $export['date_format_html5_tools_iso8601'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'environment_indicator_favicon_overlay';
   $strongarm->value = 1;
   $export['environment_indicator_favicon_overlay'] = $strongarm;
@@ -122,6 +129,90 @@ function trf_site_settings_strongarm() {
   $strongarm->name = 'file_temporary_path';
   $strongarm->value = '/tmp';
   $export['file_temporary_path'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_add_chrome_frame_header';
+  $strongarm->value = 1;
+  $export['html5_tools_add_chrome_frame_header'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_contact_forms';
+  $strongarm->value = 1;
+  $export['html5_tools_override_contact_forms'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_doctype';
+  $strongarm->value = 1;
+  $export['html5_tools_override_doctype'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_meta_tags';
+  $strongarm->value = 1;
+  $export['html5_tools_override_meta_tags'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_script_tags';
+  $strongarm->value = 1;
+  $export['html5_tools_override_script_tags'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_search_block_form';
+  $strongarm->value = 1;
+  $export['html5_tools_override_search_block_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_search_form';
+  $strongarm->value = 1;
+  $export['html5_tools_override_search_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_style_tags';
+  $strongarm->value = 1;
+  $export['html5_tools_override_style_tags'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_submitted';
+  $strongarm->value = 1;
+  $export['html5_tools_override_submitted'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_system_site_information_form';
+  $strongarm->value = 1;
+  $export['html5_tools_override_system_site_information_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_user_register_form';
+  $strongarm->value = 1;
+  $export['html5_tools_override_user_register_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'html5_tools_override_views_field_rewrite_elements';
+  $strongarm->value = 1;
+  $export['html5_tools_override_views_field_rewrite_elements'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
