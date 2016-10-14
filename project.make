@@ -206,7 +206,7 @@ projects[stringoverrides][version] = "1.8"
 
 projects[table_element][version] = "1.0-beta5"
 
-projects[taxonomy_access][version] = "1.0"
+projects[tac_lite][version] = "1.2"
 
 projects[transliteration][version] = "3.2"
 
