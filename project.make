@@ -176,6 +176,8 @@ projects[migrate_d2d][version] = "2.1"
 
 projects[paranoia][version] = "1.6"
 
+projects[path_redirect_import][version] = "1.0-rc4"
+
 projects[pathologic][version] = "3.1"
 
 projects[plupload][version] = "1.7"
