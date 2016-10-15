@@ -1,0 +1,16 @@
+//
+// Unpublished nodes
+//
+
+.node-unpublished {
+  background-color: $red-rgba;
+
+  &::before {
+    @extend %h1;
+    display: block;
+    padding-top: $padding;
+    content: 'Unpublished';
+    color: $red;
+    text-align: center;
+  }
+}
