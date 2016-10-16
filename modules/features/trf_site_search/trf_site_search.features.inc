@@ -23,8 +23,8 @@ function trf_site_search_current_search_default_items_alter(&$data) {
   if (isset($data['kickstart_search'])) {
     $data['kickstart_search']->settings['items']['active_items']['keys_link'] = 1; /* WAS: '' */
     $data['kickstart_search']->settings['items']['active_items']['keys_param'] = ''; /* WAS: '' */
-    $data['kickstart_search']->settings['items']['results']['text'] = 'There is <em>[facetapi_results:result-count]</em> titanium ring'; /* WAS: 'There is <em>[facetapi_results:result-count]</em> search result' */
-    $data['kickstart_search']->settings['items']['results']['text_plural'] = 'There are <em>[facetapi_results:result-count]</em> titanium rings'; /* WAS: 'There are <em>[facetapi_results:result-count]</em> search results' */
+    $data['kickstart_search']->settings['items']['results']['text'] = 'Displaying <em>[facetapi_results:result-count]</em> titanium ring'; /* WAS: 'There is <em>[facetapi_results:result-count]</em> search result' */
+    $data['kickstart_search']->settings['items']['results']['text_plural'] = 'Displaying <em>[facetapi_results:result-count]</em> titanium rings'; /* WAS: 'There are <em>[facetapi_results:result-count]</em> search results' */
   }
 }
 
@@ -105,6 +105,9 @@ function trf_site_search_default_search_api_index_alter(&$data) {
       'weight' => 0,
       'settings' => array(),
     ); /* WAS: '' */
+    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['description'] = ''; /* WAS: '' */
+    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['name'] = 'Product variations » Price » Amount (decimal)'; /* WAS: '' */
+    $data['product_display']->options['data_alter_callbacks']['search_api_ranges_alter']['settings']['fields']['field_product:commerce_price:amount_decimal']['type'] = 'decimal'; /* WAS: '' */
     $data['product_display']->options['datasource'] = array(
       'bundles' => array(),
     ); /* WAS: '' */

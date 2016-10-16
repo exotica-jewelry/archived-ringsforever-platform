@@ -14,8 +14,8 @@ function trf_site_search_features_override_default_overrides() {
   // Exported overrides for: current_search
   $overrides["current_search.kickstart_search.settings|items|active_items|keys_link"] = 1;
   $overrides["current_search.kickstart_search.settings|items|active_items|keys_param"] = '';
-  $overrides["current_search.kickstart_search.settings|items|results|text"] = 'There is <em>[facetapi_results:result-count]</em> titanium ring';
-  $overrides["current_search.kickstart_search.settings|items|results|text_plural"] = 'There are <em>[facetapi_results:result-count]</em> titanium rings';
+  $overrides["current_search.kickstart_search.settings|items|results|text"] = 'Displaying <em>[facetapi_results:result-count]</em> titanium ring';
+  $overrides["current_search.kickstart_search.settings|items|results|text_plural"] = 'Displaying <em>[facetapi_results:result-count]</em> titanium rings';
 
   // Exported overrides for: search_api_index
   $overrides["search_api_index.product_display.options|additional fields"]["DELETED"] = TRUE;
