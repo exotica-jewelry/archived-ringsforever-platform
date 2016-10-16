@@ -70,6 +70,8 @@ projects[dialog][version] = "2.0-alpha9"
 
 projects[diff][version] = "3.2"
 
+projects[disqus][version] = "1.12"
+
 projects[ds][version] = "2.14"
 
 projects[ds_extra_layouts][version] = "1.2"
