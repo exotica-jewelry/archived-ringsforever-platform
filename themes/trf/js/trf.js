@@ -21,12 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Remove image titles when they appear in home page featured ring blocks.
   jQuery('.field-name-field-cat-featured-rings img').attr('title', '');
 
-  // Remove image thumbnails when only one exists.
-  var img_thumb = jQuery(".page-node.node-type-rings .commerce-product-field-field-images .imagezoom-thumb");
-  if (img_thumb.length == 1) {
-    jQuery('body').addClass('product-image--single');
-  };
-
 /**
  * Shopping cart manipulations
  * @function external: "jQuery.fn".tooltipster

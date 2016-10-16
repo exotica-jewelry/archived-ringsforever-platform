@@ -53,7 +53,7 @@
   }
 
   // Thumbnail wrapper
-  #imagezoom-thumb-wrapper {
+  .imagezoom-thumbs-wrapper {
     margin: $padding 0 0 0;
 
     @include mq(mediumish) {
@@ -84,7 +84,7 @@
       }
     }
 
-    > a {
+    .imagezoom-thumb__link {
       display: block;
       border-bottom: 3px transparent solid;
 
