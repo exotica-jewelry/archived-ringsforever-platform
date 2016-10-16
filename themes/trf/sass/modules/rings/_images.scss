@@ -23,8 +23,7 @@
     }
 
     // Zoom image
-    > .imagezoom-image,
-    > figure {
+    .imagezoom {
       margin-bottom: $padding;
 
       @include mq(smallish) {
@@ -38,7 +37,7 @@
     }
 
     // Zoom image caption
-    .image__caption {
+    .imagezoom__caption {
       text-align: right;
       font-style: italic;
     }
