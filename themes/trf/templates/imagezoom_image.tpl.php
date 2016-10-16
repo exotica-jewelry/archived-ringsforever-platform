@@ -1,6 +1,6 @@
 <?php /*
  *
- * Overrides sites/all/modules/imagezoom/imagezoom_image.tpl.php
+ * Overrides sites/all/modules/imagezoom/theme/imagezoom_image.tpl.php
  *
  * @file
  * Template for an Image Zoom image.
