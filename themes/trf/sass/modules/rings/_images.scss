@@ -43,16 +43,6 @@
     }
   }
 
-  // Wrapper when only one image exists
-  .commerce-product-field-field-images--single {
-
-    @include mq(mediumish) {
-      width: $imagestyle__product-full;
-      margin: 0 auto;
-      padding-right: 0;
-    }
-  }
-
   // Zoomed image overlay
   .zoomContainer {
     opacity: 0;
@@ -93,5 +83,22 @@
         margin-top: 0;
       }
     }
+  }
+}
+
+// When only one image exists, make the main image full width and hide
+// the thumbnails.
+.page-node.node-type-rings.product-image--single {
+
+  .commerce-product-field-field-images {
+    @include mq(mediumish) {
+      width: $imagestyle__product-full;
+      margin: 0 auto;
+      padding-right: 0;
+    }
+  }
+
+  #imagezoom-thumb-wrapper {
+    @extend %visuallyhidden;
   }
 }

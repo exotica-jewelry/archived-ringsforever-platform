@@ -10,7 +10,7 @@ if ('addEventListener' in document) {
 document.addEventListener('DOMContentLoaded', function() {
 
   // Add captions to images with zoom set, based on their title attribute.
-  var add_ring_captions = function() {
+  function addRingCaptions() {
     var images = document.querySelectorAll('.imagezoom-image'),
     L = images.length,
     fig = document.createElement('figure'),
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  add_ring_captions();
+  addRingCaptions();
 
 /**
  * The jQuery plugin namespace.
@@ -48,8 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Remove image thumbnails when only one exists.
   var img_thumb = jQuery(".page-node.node-type-rings .commerce-product-field-field-images .imagezoom-thumb");
   if (img_thumb.length == 1) {
-    jQuery('#imagezoom-thumb-wrapper').remove();
-    jQuery('.page-node.node-type-rings .commerce-product-field-field-images').addClass('commerce-product-field-field-images--single');
+    jQuery('body').addClass('product-image--single');
   };
 
 /**
