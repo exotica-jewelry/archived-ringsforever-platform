@@ -84,6 +84,15 @@
         margin-top: 0;
       }
     }
+
+    > a {
+      display: block;
+      border-bottom: 3px transparent solid;
+
+      &.zoomGalleryActive {
+        border-color: $blue-verydark;
+      }
+    }
   }
 }
 
