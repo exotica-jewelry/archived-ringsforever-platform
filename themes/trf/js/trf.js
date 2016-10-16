@@ -10,24 +10,28 @@ if ('addEventListener' in document) {
 document.addEventListener('DOMContentLoaded', function() {
 
   // Add captions to images with zoom set, based on their title attribute.
-  var images = document.querySelectorAll('.imagezoom-image'),
-  L = images.length,
-  fig = document.createElement('figure'),
-  who,
-  temp
-  while(L) {
-    temp = fig.cloneNode(false);
-    who = images[--L];
-    caption = who.getAttribute("title");
-    if (caption) {
-      who.parentNode.insertBefore(temp, who);
-      content = document.createElement('figcaption');
-      content.className = 'image__caption';
-      content.innerHTML = caption;
-      temp.appendChild(who);
-      temp.appendChild(content);
+  var add_ring_captions = function() {
+    var images = document.querySelectorAll('.imagezoom-image'),
+    L = images.length,
+    fig = document.createElement('figure'),
+    who,
+    temp
+    while(L) {
+      temp = fig.cloneNode(false);
+      who = images[--L];
+      caption = who.getAttribute("title");
+      if (caption) {
+        who.parentNode.insertBefore(temp, who);
+        content = document.createElement('figcaption');
+        content.className = 'image__caption';
+        content.innerHTML = caption;
+        temp.appendChild(who);
+        temp.appendChild(content);
+      }
     }
-  }
+  };
+
+  add_ring_captions();
 
 /**
  * The jQuery plugin namespace.
