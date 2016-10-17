@@ -20,17 +20,17 @@ $conf['file_public_path'] = 'sites/default/files';
 # $conf['file_temporary_path'] = '/app/tmp';
 
 # Set caching
-$conf['cache'] = FALSE;
-$conf['block_cache'] = FALSE;
-$conf['preprocess_css'] = FALSE;
-$conf['preprocess_js'] = FALSE;
-$conf['page_compression'] = FALSE;
+$conf['cache'] = TRUE;
+$conf['block_cache'] = TRUE;
+$conf['preprocess_css'] = TRUE;
+$conf['preprocess_js'] = TRUE;
+$conf['page_compression'] = TRUE;
 
 # Set error display
 # 0 = log only; 1 = hard errors; 2 = all warnings
-$conf['error_level'] = 2;
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
+$conf['error_level'] = 0;
+ini_set('display_errors', FALSE);
+ini_set('display_startup_errors', FALSE);
 
 # Include local settings -- required
 $local_settings = dirname(__FILE__) . '/settings.local.php';
