@@ -280,6 +280,12 @@ libraries[fitvids][download][type] = "file"
 libraries[fitvids][download][url] = "https://raw.github.com/davatron5000/FitVids.js/master/jquery.fitvids.js"
 libraries[fitvids][destination] = "libraries"
 
+libraries[fitvids][directory_name] = "fontfaceobserver"
+libraries[fitvids][type] = "libraries"
+libraries[fitvids][download][type] = "git"
+libraries[fitvids][download][url] = "https://github.com/bramstein/fontfaceobserver.git"
+libraries[fitvids][destination] = "libraries"
+
 libraries[plupload][directory_name] = "plupload"
 libraries[plupload][type] = "libraries"
 libraries[plupload][download][type] = "file"
