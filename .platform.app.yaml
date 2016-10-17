@@ -36,12 +36,13 @@ relationships:
 
 # The configuration of app when it is exposed to the web.
 web:
-    locations:
-      '/':
-          # The public directory of the app, relative to its root.
-          root: ''
-          # The front-controller script to send non-static requests to.
-          passthru: '/index.php'
+    # Document root
+    document_root: "/"
+
+    # Whether to forward disallowed and missing resources from this
+    # location to the application.
+    # (Can be true, false or a URI path string.)
+    passthru: "/index.php"
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
