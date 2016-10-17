@@ -26,6 +26,9 @@ $conf['preprocess_css'] = TRUE;
 $conf['preprocess_js'] = TRUE;
 $conf['page_compression'] = TRUE;
 
+# Fast404 pass-throughs for AdvAgg
+$conf['fast_404_string_whitelisting'][] = '/advagg_';
+
 # Set error display
 # 0 = log only; 1 = hard errors; 2 = all warnings
 $conf['error_level'] = 0;
