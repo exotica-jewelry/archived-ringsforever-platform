@@ -18,6 +18,7 @@
     a {
       @include font-size(14px);
       background-color: $grey;
+      border-bottom: none;
 
       @include is-on {
         background-color: $blue;
