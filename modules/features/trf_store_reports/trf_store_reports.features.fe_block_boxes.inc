@@ -14,7 +14,9 @@ function trf_store_reports_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Commerce Reports link';
   $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'commerce_reports_link';
-  $fe_block_boxes->body = '<p><strong><a href="/admin/commerce/reports">View the complete sales reports dashboard &raquo;</a></strong></p>
+  $fe_block_boxes->body = '<p><strong><a href="/admin/commerce/reports">View the complete sales reports dashboard »</a></strong></p>
+
+<p><strong><a href="/admin/reports/google-analytics-reports/summary">View a summary of site statistics from Google Analytics »</a></strong></p>
 ';
 
   $export['commerce_reports_link'] = $fe_block_boxes;

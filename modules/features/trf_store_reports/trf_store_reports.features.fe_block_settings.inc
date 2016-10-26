@@ -19,7 +19,8 @@ function trf_store_reports_default_fe_block_settings() {
     'machine_name' => 'commerce_reports_link',
     'module' => 'block',
     'node_types' => array(),
-    'pages' => 'admin/commerce/orders',
+    'pages' => 'admin/commerce/orders
+admin/commerce/orders/list',
     'roles' => array(
       'administrator' => 3,
       'store manager' => 4,
