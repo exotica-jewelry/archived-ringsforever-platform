@@ -54,7 +54,7 @@ projects[ckeditor][version] = "1.x-dev"
 
 projects[ckeditor_image2][version] = "1.1"
 
-projects[coffee][version] = "2.2"
+projects[coffee][version] = "2.3"
 
 projects[colorbox_node][version] = "3.5"
 
