@@ -227,19 +227,5 @@ user/*/*';
   $strongarm->value = '0';
   $export['googleanalytics_visibility_roles'] = $strongarm;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'google_analytics_reports_metadata_etag';
-  $strongarm->value = '"5UzhPBbT3Qfa1T9ueKk6ag4a7oo/xqw7DdQNLgE3Aas76tLyOawDF-Q"';
-  $export['google_analytics_reports_metadata_etag'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'google_analytics_reports_metadata_last_time';
-  $strongarm->value = 1476130378;
-  $export['google_analytics_reports_metadata_last_time'] = $strongarm;
-
   return $export;
 }
