@@ -29,7 +29,7 @@ defaults[projects][subdir] = contrib
 
 projects[a11y_titles][version] = "1.0-beta1"
 
-projects[advagg][version] = "2.18"
+projects[advagg][version] = "2.19"
 
 projects[auto_entitylabel][version] = "1.3"
 
@@ -67,7 +67,7 @@ projects[commerce_responsive_ui][version] = "1.x-dev"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-fixes_cart_redirect_checkout-2641754_7.patch"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-remove_commas_from_classes-2687007-2.patch"
 
-projects[dialog][version] = "2.0-alpha9"
+projects[dialog][version] = "2.0-beta1"
 
 projects[diff][version] = "3.2"
 
@@ -93,7 +93,7 @@ projects[fast_404][version] = "1.5"
 
 projects[features_extra][version] = "1.0"
 
-projects[feeds][version] = "2.0-beta2"
+projects[feeds][version] = "2.0-beta3"
 
 projects[feeds_tamper][version] = "1.1"
 
@@ -175,9 +175,9 @@ projects[linkit][version] = "3.5"
 
 projects[mailcontrol][version] = "1.0"
 
-projects[menu_trail_by_path][version] = "2.1"
+projects[menu_trail_by_path][version] = "3.2"
 
-projects[metatag][version] = "1.17"
+projects[metatag][version] = "1.18"
 
 projects[migrate_d2d][version] = "2.1"
 
@@ -193,7 +193,7 @@ projects[prlp][version] = "1.3"
 
 projects[redirect][version] = "1.0-rc3"
 
-projects[redis][version] = "3.12"
+projects[redis][version] = "3.13"
 
 projects[schemaorg][version] = "1.0-rc1"
 
