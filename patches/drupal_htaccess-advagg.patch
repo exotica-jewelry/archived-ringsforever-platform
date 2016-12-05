@@ -1,8 +1,8 @@
 diff --git a/.htaccess b/.htaccess
-index 4654035..80f40ba 100644
+index 4654035..795ef6b 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -152,3 +152,42 @@ DirectoryIndex index.php index.html index.htm
+@@ -152,3 +152,41 @@ DirectoryIndex index.php index.html index.htm
    # Disable content sniffing, since it's an attack vector.
    Header always set X-Content-Type-Options nosniff
  </IfModule>
