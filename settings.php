@@ -30,6 +30,9 @@ $conf['page_compression'] = TRUE;
 $conf['404_fast_paths_exclude'] = '/\/(?:styles|advagg_(cs|j)s)\//';
 $conf['fast_404_string_whitelisting'][] = '/advagg_';
 
+# Disabling AdvAgg expires notices
+$conf['advagg_skip_far_future_check'] = TRUE;
+
 # Set error display
 # 0 = log only; 1 = hard errors; 2 = all warnings
 $conf['error_level'] = 0;
