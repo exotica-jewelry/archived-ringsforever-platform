@@ -45,7 +45,7 @@ function trf_site_settings_default_environment_indicator_environment() {
   $environment->api_version = 1;
   $environment->machine = 'staging_platform';
   $environment->name = 'Staging: Platform.sh';
-  $environment->regexurl = '^(dev|master)-[\\w.-]+\\.us.platform.sh';
+  $environment->regexurl = 'www---staging-5em2ouy-44icmnpta2qxy.us.platform.sh/';
   $environment->settings = array(
     'color' => '#fff104',
     'text_color' => '#000000',
