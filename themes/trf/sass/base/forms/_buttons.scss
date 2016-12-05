@@ -1,45 +1,54 @@
 // Buttons
 //
-// Styleguide 3.2.0
+// Style guide: base.buttons
 
 // Standard button
 //
 // markup:
 // <button>Button</button>
 //
-// Styleguide 3.2.1
+// Style guide: base.buttons.standard
 %button {
+  @include card(1);
   display: block;
   border: none;
   background: $blue;
   width: 100%;
   padding: 0.7rem;
-  margin: 0 0 1rem;
+  margin: 0 0 $padding;
   cursor: pointer;
   color: $white;
-  font-family: $fontDefault;
+  font-family: $font-default !important;
   @include font-size(18px);
   font-weight: $thin;
   letter-spacing: 1px;
-  transition: $transition_short;
+  transition: $transition-short;
   user-select: none;
-  @include card(1);
 
   @include is-on {
-    background: $blue_dark;
+    @include a-grow;
+    background: $blue-dark;
     color: $white;
     outline: 0;
-    @include grow;
   }
 
   &:active {
     @include card(0);
   }
+
+  @include disabled {
+    @include card(0);
+    background-color: $white;
+    color: $grey;
+
+    @include is-on {
+      @include a-grow(1);
+    }
+  }
 }
 
 button,
-.button,
-input[type="submit"] {
+.button {
   @extend %button;
 }
 
@@ -48,8 +57,9 @@ input[type="submit"] {
 // markup:
 // <button class="button--inline">Button</button>
 //
-// Styleguide 3.2.2
+// Style guide: base.buttons.inline
 
+%button--inline,
 .button--inline {
   @extend %button;
   display: inline-block;
@@ -62,20 +72,21 @@ input[type="submit"] {
 // markup:
 // <button class="button--cta">Button</button>
 //
-// Styleguide 3.2.3
+// Style guide: base.buttons.cta
 
+%button--cta,
 .button--cta {
   @extend %button;
   display: inline-block;
   width: auto;
   padding: 0.25rem 1rem;
   font-weight: $normal;
-  border-radius: $border_radius;
+  border-radius: $border-radius;
   border: 1px $blue solid;
 
   @include is-on {
     background: $white;
-    color: $blue_dark;
+    color: $blue-dark;
     outline: 0;
     border: 1px $grey solid;
   }
@@ -86,26 +97,28 @@ input[type="submit"] {
 // markup:
 // <button class="button--ghost">Button</button>
 //
-// Styleguide 3.2.4
+// Style guide: base.buttons.ghost
+
+%button--ghost,
 .button--ghost {
   @extend %button;
   display: inline-block;
   width: auto;
   padding: 0.5rem 1.5rem;
   border-radius: 40px;
-  background: rgba($blue_dark, 0.25);
-  color: $blue_dark;
+  background: rgba($blue-dark, 0.25);
+  color: $blue-dark;
   font-weight: $normal;
   letter-spacing: 1px;
 
   @include mq(mediumish) {
-    border: 2px solid $blue_dark;
+    border: 2px solid $blue-dark;
     background: none;
   }
 
   @include is-on {
-    background: rgba($blue_dark, 0.25);
-    color: $blue_dark;
+    background: rgba($blue-dark, 0.25);
+    color: $blue-dark;
     outline: 0;
   }
 }
@@ -115,24 +128,25 @@ input[type="submit"] {
 // markup:
 // <button class="button--tag">Button</button>
 //
-// Styleguide 3.2.5
+// Style guide: base.buttons.tag
 
+%button--tag,
 .button--tag {
   @extend %button;
+  @include card(0);
   display: inline-block;
   width: auto;
   margin: 0 ($padding / 3);
   padding: ($padding / 6) ($padding / 2);
   @include font-size(14px);
   font-weight: $normal;
-  border-radius: $border_radius;
+  border-radius: $border-radius;
   border: 1px $blue solid;
-  @include card(0);
 
   @include is-on {
-    @include grow($scale: 1, $duration: 0);
+    @include a-grow($scale: 1, $duration: 0);
     background: $white;
-    color: $blue_dark;
+    color: $blue-dark;
     outline: 0;
     border: 1px $grey solid;
   }

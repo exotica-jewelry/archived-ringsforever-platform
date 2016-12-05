@@ -1,0 +1,17 @@
+//
+// FOOTER 2 MENU
+//
+// Forms of payment.
+//
+
+.zone-footer2-wrapper {
+  background-color: $blue-verydark;
+}
+
+#block-menu-menu-payment-methods {
+  @include card(1);
+
+  ul.menu li a {
+    border-bottom: none;
+  }
+}

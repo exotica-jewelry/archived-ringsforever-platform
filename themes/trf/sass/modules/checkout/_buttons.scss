@@ -1,0 +1,33 @@
+//
+// Checkout page buttons and action links
+//
+
+.page-checkout form {
+
+  // Button wrapper
+  fieldset.checkout-buttons .fieldset-wrapper {
+    margin: 0 0 $padding 0;
+  }
+
+  // Continue checkout button
+  .checkout-continue.checkout-continue.checkout-continue {
+    @extend %button--inline;
+    @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2));
+
+    @include is-on {
+      @include card(0);
+      @include a-grow(1);
+      @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2), $color: $red);
+    }
+  }
+
+  // Cancel checkout buttons
+  .checkout-cancel,
+  .checkout-back {
+    font-family: $font-default;
+
+    @include is-on {
+      text-decoration: none;
+    }
+  }
+}

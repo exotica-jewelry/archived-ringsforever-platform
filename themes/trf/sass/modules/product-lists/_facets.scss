@@ -3,48 +3,63 @@
 //
 
 .region-sidebar-first .block-facetapi {
-  margin: 0 0.25rem 1rem 0;
+  margin: 0 ($padding / 4) $padding 0;
   padding: 0;
   border-top: none;
+
+  &:first-of-type {
+    margin-top: $padding;
+
+    @include mq(mediumish) {
+      margin-top: ($padding * 3.5);
+    }
+  }
 
   // Section titles
   .block-title {
     @extend %header;
-    margin-bottom: 0.5rem;
+    margin-bottom: ($padding / 2);
     padding-bottom: 0;
-    @include font-size(28px);
+    @include font-size(18px);
     font-weight: $thin;
-    border-bottom: 1px $black dotted;
+
+    @include mq(mediumish) {
+      @include font-size(24px);
+    }
   }
 
   // Checkbox-link facets and Search API aggregate facets (e.g. keywords)
   .facetapi-checkbox,
   .facetapi-facetapi-links {
-    font-family: $fontDefault;
+    font-family: $font-default;
     font-weight: $normal;
     color: $black;
   }
 
   .facetapi-checkbox.facetapi-inactive,
   .facetapi-facetapi-links .facetapi-inactive {
-    font-family: $fontDefault;
-    font-weight: $normal; // Needs an override since these are <a> elements.
+    font-family: $font-default;
+    @include font-size(14px);
+    font-weight: $normal;
     padding-left: ($padding / 10);
     color: $black;
+    border-bottom: none;
 
     @include is-on {
       text-decoration: none;
-      border-bottom: 1px $black solid;
+      color: $blue-verydark;
     }
   }
 
-  // Price slider
-  &:first-of-type {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+  .facetapi-active.facetapi-active {
+    background-position: left center;
+    border-bottom: none;
   }
 
+  // Price slider
   #search-api-ranges-block-slider-view-form-field-productcommerce-priceamount-decimal {
+    position: relative;
+
     .text-range {
       margin-bottom: 1rem;
       @include font-size(14px);
@@ -84,17 +99,16 @@
     }
 
     .form-submit {
+      @extend %button--tag;
       position: absolute;
       bottom: 2px;
       right: 0;
-      @extend .button--tag;
       padding: ($padding / 3) ($padding / 2);
     }
   }
 
   // Colors
   &.field_product_field_color {
-    margin-bottom: 1.5rem;
 
     ul.facetapi-commerce-search-api-fancy {
       margin-bottom: 0;
@@ -110,7 +124,7 @@
         // span element (colored box)
         .commerce-search-api-fancy-attributes-color {
           border: 3px solid #fff;
-          transition: $transition_long;
+          transition: $transition-long;
 
           @include is-on {
             border-color: transparent;
@@ -126,8 +140,8 @@
 
     // "Show more"/"Show fewer" link
     .facetapi-limit-link {
-      font-family: $fontDefault;
-      color: $blue_dark;
+      font-family: $font-default;
+      color: $blue-dark;
       font-style: italic;
       text-decoration: underline;
 

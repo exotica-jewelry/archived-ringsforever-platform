@@ -1,0 +1,58 @@
+//
+// Add to cart area styles
+//
+
+.page-node {
+
+  // Add to cart area
+  .field-type-commerce-product-reference form.commerce-add-to-cart,
+  .field-name-field-product {
+    padding: 0;
+    background-image: none;
+  }
+
+  // Add to cart button
+  .field-type-commerce-product-reference form.commerce-add-to-cart {
+    .form-actions {
+      position: relative;
+    }
+
+    .form-submit {
+      @include card(1);
+      @include i-heart(($padding-px * 2), ($padding-px / 2));
+      display: block;
+      width: 100%;
+      margin: $padding 0 ($padding * 2);
+      padding: ($padding / 2) $padding;
+      background-color: $blue;
+      background-image: none;
+      @include font-size(24px);
+      font-family: $font-default;
+      font-weight: $thin;
+      border-radius: $border-radius;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+
+      @include is-on {
+        @include card(0);
+        @include i-heart(($padding-px * 2), ($padding-px / 2), $color: $red);
+      }
+
+      @include mq(smallish) {
+        width: 90%;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $blue-dark;
+      }
+
+      &:active {
+        text-shadow: none;
+      }
+
+      @include disabled {
+        @include a-zoomfade(1.25);
+      }
+    }
+  }
+}

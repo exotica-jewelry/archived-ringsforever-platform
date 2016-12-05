@@ -1,0 +1,14 @@
+name = TRF site contact
+description = Contact form, block and permissions.
+core = 7.x
+package = TRF Site
+version = 7.x-1.0
+dependencies[] = contact
+dependencies[] = fe_block
+dependencies[] = features
+features[fe_block_boxes][] = contact_intro
+features[fe_block_settings][] = block-contact_intro
+features[features_api][] = api:2
+features[user_permission][] = access site-wide contact form
+features[user_permission][] = access user contact forms
+features[user_permission][] = administer contact forms

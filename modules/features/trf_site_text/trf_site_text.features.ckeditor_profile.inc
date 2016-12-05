@@ -9,38 +9,12 @@
  */
 function trf_site_text_ckeditor_profile_defaults() {
   $data = array(
-    'CKEditor Global Profile' => array(
-      'name' => 'CKEditor Global Profile',
-      'settings' => array(
-        'skin' => 'moono',
-        'ckeditor_path' => '//cdn.ckeditor.com/4.4.3/full-all',
-        'ckeditor_local_path' => '',
-        'ckeditor_plugins_path' => '%m/plugins',
-        'ckeditor_plugins_local_path' => '',
-        'ckfinder_path' => '%m/ckfinder',
-        'ckfinder_local_path' => '',
-        'ckeditor_aggregate' => 'f',
-        'toolbar_wizard' => 't',
-        'loadPlugins' => array(),
-      ),
-      'input_formats' => array(),
-    ),
-    'Full' => array(
-      'name' => 'Full',
+    'Basic' => array(
+      'name' => 'Basic',
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'RemoveFormat\',\'-\',\'BulletedList\',\'NumberedList\',\'Outdent\',\'Indent\',\'Blockquote\'],
-    [\'Copy\',\'Cut\',\'PasteFromWord\'],
-    [\'linkit\',\'Unlink\',\'Anchor\'],
-    [\'ring\',\'Image\',\'IMCE\',\'MediaEmbed\',\'node\'],
-    \'/\',
-    [\'Subscript\',\'Superscript\',\'-\',\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'HorizontalRule\'],
-    [\'Table\'],
-    [\'SpecialChar\'],
-    [\'Find\',\'Replace\',\'-\',\'SpellChecker\',\'Scayt\'],
-    [\'ShowBlocks\',\'DrupalBreak\'],
-    [\'Source\']
+    [\'PasteFromWord\',\'Styles\',\'Bold\',\'Italic\',\'-\',\'RemoveFormat\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'linkit\',\'Unlink\',\'-\',\'IMCE\',\'Image\',\'ring\',\'video_filter\',\'HorizontalRule\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -51,7 +25,7 @@ function trf_site_text_ckeditor_profile_defaults() {
         'lang' => 'en',
         'auto_lang' => 't',
         'language_direction' => 'default',
-        'allowed_content' => 't',
+        'allowed_content' => 'f',
         'extraAllowedContent' => '',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
@@ -67,25 +41,26 @@ function trf_site_text_ckeditor_profile_defaults() {
             'pre_indent' => 0,
           ),
         ),
-        'css_mode' => 'none',
-        'css_path' => '',
-        'css_style' => 'theme',
-        'styles_path' => '',
-        'filebrowser' => 'imce',
+        'css_mode' => 'self',
+        'css_path' => '%t/css/styles.css',
+        'css_style' => 'self',
+        'styles_path' => '%t/ckeditor.styles.js',
+        'filebrowser' => 'none',
         'filebrowser_image' => '',
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
         'UserFilesAbsolutePath' => '%d%b%f/',
         'forcePasteAsPlainText' => 'f',
         'html_entities' => 'f',
-        'scayt_autoStartup' => 't',
+        'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'config.autoGrow_maxHeight = 400;
+config.autoGrow_onStartup = true;',
         'loadPlugins' => array(
           'autogrow' => array(
             'name' => 'autogrow',
-            'desc' => 'Auto Grow plugin. See <a href="http://ckeditor.com/addon/autogrow">addon page</a> for more details.',
-            'path' => '//cdn.ckeditor.com/4.4.3/full-all/plugins/autogrow/',
+            'desc' => 'Auto Grow plugin',
+            'path' => '%editor_path%/plugins/autogrow/',
             'buttons' => FALSE,
             'default' => 'f',
           ),
@@ -96,18 +71,6 @@ function trf_site_text_ckeditor_profile_defaults() {
             'buttons' => FALSE,
             'default' => 'f',
           ),
-          'drupalbreaks' => array(
-            'name' => 'drupalbreaks',
-            'desc' => 'Plugin for inserting Drupal teaser and page breaks.',
-            'path' => '%plugin_dir%drupalbreaks/',
-            'buttons' => array(
-              'DrupalBreak' => array(
-                'label' => 'DrupalBreak',
-                'icon' => 'images/drupalbreak.png',
-              ),
-            ),
-            'default' => 't',
-          ),
           'drupalentity' => array(
             'name' => 'drupalentity',
             'desc' => 'Plugin for embedding entities',
@@ -115,26 +78,25 @@ function trf_site_text_ckeditor_profile_defaults() {
             'default' => 'f',
             'buttons' => array(
               'ring' => array(
-                'label' => 'Embed ring',
+                'label' => 'Ring',
                 'icon' => 'entity.png',
               ),
               'node' => array(
-                'label' => 'Embed content',
+                'label' => 'Content',
                 'icon' => 'entity.png',
               ),
             ),
           ),
           'image2' => array(
             'name' => 'image2',
-            'desc' => 'Enhanced Image plugin. See <a href="http://ckeditor.com/addon/image2">addon page</a> for more details.',
-            'path' => '//cdn.ckeditor.com/4.4.3/full-all/plugins/image2/',
+            'path' => '%base_path%sites/all/libraries/ckeditor/plugins/image2/',
+            'desc' => 'Plugin for the Enhanced Image widget for CKEditor. See <a href="http://ckeditor.com/addon/image2">addon page</a> for more details.',
             'buttons' => array(
-              'Enhanced Image' => array(
+              'button_name' => array(
                 'icon' => 'icons/image.png',
-                'label' => 'Insert Enhanced Image',
+                'label' => 'Image',
               ),
             ),
-            'default' => 't',
           ),
           'imce' => array(
             'name' => 'imce',
@@ -159,42 +121,46 @@ function trf_site_text_ckeditor_profile_defaults() {
               ),
             ),
           ),
-          'mediaembed' => array(
-            'name' => 'mediaembed',
-            'desc' => 'Plugin for embedding HTML snippets',
-            'path' => '%plugin_dir%mediaembed/',
+          'video_filter' => array(
+            'name' => 'video_filter',
+            'desc' => 'Plugin to directly embed videos with the video filter module.',
+            'path' => '%base_path%sites/all/modules/contrib/video_filter/editors/ckeditor/',
             'buttons' => array(
-              'MediaEmbed' => array(
-                'label' => 'MediaEmbed',
-                'icon' => 'images/icon.png',
+              'video_filter' => array(
+                'label' => 'Video filter',
+                'icon' => 'video_filter.png',
               ),
             ),
-            'default' => 'f',
-          ),
-          'tableresize' => array(
-            'name' => 'tableresize',
-            'desc' => 'Table Resize plugin. See <a href="http://ckeditor.com/addon/tableresize">addon page</a> for more details.',
-            'path' => '//cdn.ckeditor.com/4.4.3/full-all/plugins/tableresize/',
-            'buttons' => FALSE,
-            'default' => 't',
           ),
         ),
       ),
       'input_formats' => array(
-        'full_html' => 'Full HTML',
+        'filtered_html' => 'Filtered HTML',
       ),
     ),
-    'Standard' => array(
-      'name' => 'Standard',
+    'CKEditor Global Profile' => array(
+      'name' => 'CKEditor Global Profile',
+      'settings' => array(
+        'ckeditor_path' => '%l/ckeditor',
+      ),
+      'input_formats' => array(),
+    ),
+    'Full' => array(
+      'name' => 'Full',
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'RemoveFormat\',\'-\',\'BulletedList\',\'NumberedList\',\'Blockquote\'],
-    [\'PasteFromWord\'],
-    [\'linkit\',\'Unlink\',\'Anchor\'],
-    [\'ring\',\'Image\',\'IMCE\',\'MediaEmbed\',\'node\'],
-    [\'SpellChecker\',\'Scayt\'],
-    [\'Source\']
+    [\'Source\'],
+    [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
+    [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
+    [\'IMCE\',\'button_name\',\'ring\',\'video_filter\',\'Table\',\'HorizontalRule\',\'SpecialChar\'],
+    [\'Maximize\',\'ShowBlocks\'],
+    \'/\',
+    [\'Styles\'],
+    [\'Bold\',\'Italic\',\'-\',\'RemoveFormat\'],
+    [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\'],
+    [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\'],
+    [\'linkit\',\'Unlink\',\'Anchor\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -205,11 +171,11 @@ function trf_site_text_ckeditor_profile_defaults() {
         'lang' => 'en',
         'auto_lang' => 't',
         'language_direction' => 'default',
-        'allowed_content' => 't',
+        'allowed_content' => 'f',
         'extraAllowedContent' => '',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
-        'font_format' => 'p;h3;h4;h5',
+        'font_format' => 'p;h3;h4;h5;pre;div',
         'custom_formatting' => 'f',
         'formatting' => array(
           'custom_formatting_options' => array(
@@ -221,25 +187,33 @@ function trf_site_text_ckeditor_profile_defaults() {
             'pre_indent' => 0,
           ),
         ),
-        'css_mode' => 'theme',
-        'css_path' => '',
-        'css_style' => 'default',
-        'styles_path' => '',
-        'filebrowser' => 'imce',
+        'css_mode' => 'self',
+        'css_path' => '%t/css/styles.css',
+        'css_style' => 'self',
+        'styles_path' => '%t/ckeditor.styles.js',
+        'filebrowser' => 'none',
         'filebrowser_image' => '',
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
         'UserFilesAbsolutePath' => '%d%b%f/',
-        'forcePasteAsPlainText' => 't',
-        'html_entities' => 't',
-        'scayt_autoStartup' => 't',
+        'forcePasteAsPlainText' => 'f',
+        'html_entities' => 'f',
+        'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'config.autoGrow_maxHeight = 400;
+config.autoGrow_onStartup = true;',
         'loadPlugins' => array(
           'autogrow' => array(
             'name' => 'autogrow',
-            'desc' => 'Auto Grow plugin. See <a href="http://ckeditor.com/addon/autogrow">addon page</a> for more details.',
-            'path' => '//cdn.ckeditor.com/4.4.3/full-all/plugins/autogrow/',
+            'desc' => 'Auto Grow plugin',
+            'path' => '%editor_path%/plugins/autogrow/',
+            'buttons' => FALSE,
+            'default' => 'f',
+          ),
+          'counter' => array(
+            'name' => 'counter',
+            'desc' => 'Plugin to count symbols, symbols without blanks and words',
+            'path' => '%plugin_dir%counter/',
             'buttons' => FALSE,
             'default' => 'f',
           ),
@@ -250,12 +224,23 @@ function trf_site_text_ckeditor_profile_defaults() {
             'default' => 'f',
             'buttons' => array(
               'ring' => array(
-                'label' => 'Embed ring',
+                'label' => 'Ring',
                 'icon' => 'entity.png',
               ),
               'node' => array(
-                'label' => 'Embed content',
+                'label' => 'Content',
                 'icon' => 'entity.png',
+              ),
+            ),
+          ),
+          'image2' => array(
+            'name' => 'image2',
+            'path' => '%base_path%sites/all/libraries/ckeditor/plugins/image2/',
+            'desc' => 'Plugin for the Enhanced Image widget for CKEditor. See <a href="http://ckeditor.com/addon/image2">addon page</a> for more details.',
+            'buttons' => array(
+              'button_name' => array(
+                'icon' => 'icons/image.png',
+                'label' => 'Image',
               ),
             ),
           ),
@@ -282,22 +267,21 @@ function trf_site_text_ckeditor_profile_defaults() {
               ),
             ),
           ),
-          'mediaembed' => array(
-            'name' => 'mediaembed',
-            'desc' => 'Plugin for embedding HTML snippets',
-            'path' => '%plugin_dir%mediaembed/',
+          'video_filter' => array(
+            'name' => 'video_filter',
+            'desc' => 'Plugin to directly embed videos with the video filter module.',
+            'path' => '%base_path%sites/all/modules/contrib/video_filter/editors/ckeditor/',
             'buttons' => array(
-              'MediaEmbed' => array(
-                'label' => 'MediaEmbed',
-                'icon' => 'images/icon.png',
+              'video_filter' => array(
+                'label' => 'Video filter',
+                'icon' => 'video_filter.png',
               ),
             ),
-            'default' => 'f',
           ),
         ),
       ),
       'input_formats' => array(
-        'filtered_html' => 'Filtered HTML',
+        'full_html' => 'Full HTML',
       ),
     ),
   );

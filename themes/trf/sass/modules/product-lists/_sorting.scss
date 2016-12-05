@@ -2,10 +2,48 @@
 // Display sorting options
 //
 
-.block-search-api-sorts .content ul.search-api-sorts li a {
-  background-color: $grey;
+.block-search-api-sorts {
+  margin-top: $padding;
+  padding-top: $padding;
+  border-top: $white 1px solid;
 
-  @include is-on {
-    background-color: $blue;
+  @include mq(smallish) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .content ul.search-api-sorts li {
+
+    a {
+      @include font-size(14px);
+      background-color: $grey;
+      border-bottom: none;
+
+      @include is-on {
+        background-color: $blue;
+      }
+    }
+
+    .search-api-sort-active {
+      @include font-size(14px);
+      background-color: $white;
+      color: $black;
+
+      @include is-on {
+        .active-sort {
+          transform: rotate(180deg);
+        }
+      }
+
+      .active-sort.active-sort.active-sort {
+        border: none;
+        transform-origin: 50% 80%;
+
+        @include is-on {
+          background-color: transparent;
+        }
+      }
+    }
   }
 }

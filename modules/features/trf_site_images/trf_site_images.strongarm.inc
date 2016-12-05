@@ -13,6 +13,26 @@ function trf_site_images_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'breakpoints_multipliers';
+  $strongarm->value = array(
+    '1x' => '1x',
+    '1.5x' => '1.5x',
+    '2x' => '2x',
+  );
+  $export['breakpoints_multipliers'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'default_entity_embed';
+  $strongarm->value = array(
+    'node' => TRUE,
+  );
+  $export['default_entity_embed'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_file__image';
   $strongarm->value = array(
     'view_modes' => array(
@@ -205,6 +225,49 @@ function trf_site_images_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_disable_on_demand_generation';
+  $strongarm->value = 0;
+  $export['imageinfo_cache_disable_on_demand_generation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_image';
+  $strongarm->value = array(
+    'blog_full' => 'blog_full',
+    'blog_medium' => 'blog_medium',
+    'product_full' => 'product_full',
+    'product_medium' => 'product_medium',
+    'product_thumbnail' => 'product_thumbnail',
+  );
+  $export['imageinfo_cache_field_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_images';
+  $strongarm->value = array(
+    'product_full' => 'product_full',
+  );
+  $export['imageinfo_cache_field_images'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_getimagesize';
+  $strongarm->value = 0;
+  $export['imageinfo_cache_getimagesize'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_use_httprl';
+  $strongarm->value = 1;
+  $export['imageinfo_cache_use_httprl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'image_jpeg_quality';
   $strongarm->value = '75';
   $export['image_jpeg_quality'] = $strongarm;
@@ -222,6 +285,7 @@ function trf_site_images_strongarm() {
   $strongarm->name = 'imce_custom_content';
   $strongarm->value = array(
     'imce_file_path_content' => 1,
+    'imce_mkdir_content' => 1,
     'imce_search_content' => 1,
   );
   $export['imce_custom_content'] = $strongarm;
@@ -246,48 +310,38 @@ function trf_site_images_strongarm() {
           'subnav' => 1,
           'browse' => 1,
           'upload' => 1,
-          'thumb' => 1,
+          'thumb' => 0,
           'delete' => 1,
           'resize' => 1,
+          'mkdir' => 1,
+          'rmdir' => 1,
+          'rename' => 1,
+          'rename_folder' => 1,
         ),
         1 => array(
           'name' => '.',
           'subnav' => 1,
           'browse' => 1,
           'upload' => 1,
-          'thumb' => 1,
+          'thumb' => 0,
           'delete' => 1,
           'resize' => 1,
+          'mkdir' => 1,
+          'rmdir' => 1,
+          'rename' => 1,
+          'rename_folder' => 1,
         ),
       ),
-      'thumbnails' => array(
-        0 => array(
-          'name' => 'Small',
-          'dimensions' => '90x90',
-          'prefix' => 'small_',
-          'suffix' => '',
-        ),
-        1 => array(
-          'name' => 'Medium',
-          'dimensions' => '120x120',
-          'prefix' => 'medium_',
-          'suffix' => '',
-        ),
-        2 => array(
-          'name' => 'Large',
-          'dimensions' => '180x180',
-          'prefix' => 'large_',
-          'suffix' => '',
-        ),
-      ),
+      'thumbnails' => array(),
+      'mkdirnum' => '0',
     ),
     2 => array(
-      'name' => 'Standard profile',
+      'name' => 'Site editor',
       'usertab' => 0,
-      'filesize' => '0',
+      'filesize' => '12',
       'quota' => '0',
       'tuquota' => '0',
-      'extensions' => 'gif png jpg jpeg',
+      'extensions' => '*',
       'dimensions' => '1200x1200',
       'filenum' => '0',
       'directories' => array(
@@ -296,31 +350,30 @@ function trf_site_images_strongarm() {
           'subnav' => 1,
           'browse' => 1,
           'upload' => 1,
-          'thumb' => 1,
+          'thumb' => 0,
           'delete' => 1,
           'resize' => 1,
-        ),
-      ),
-      'thumbnails' => array(
-        0 => array(
-          'name' => 'Small',
-          'dimensions' => '90x90',
-          'prefix' => 'small_',
-          'suffix' => '',
+          'mkdir' => 1,
+          'rmdir' => 0,
+          'rename' => 1,
+          'rename_folder' => 1,
         ),
         1 => array(
-          'name' => 'Medium',
-          'dimensions' => '120x120',
-          'prefix' => 'medium_',
-          'suffix' => '',
-        ),
-        2 => array(
-          'name' => 'Large',
-          'dimensions' => '180x180',
-          'prefix' => 'large_',
-          'suffix' => '',
+          'name' => '.',
+          'subnav' => 0,
+          'browse' => 0,
+          'upload' => 0,
+          'thumb' => 0,
+          'delete' => 0,
+          'resize' => 0,
+          'mkdir' => 0,
+          'rmdir' => 0,
+          'rename' => 0,
+          'rename_folder' => 0,
         ),
       ),
+      'thumbnails' => array(),
+      'mkdirnum' => '2',
     ),
   );
   $export['imce_profiles'] = $strongarm;
@@ -387,6 +440,51 @@ function trf_site_images_strongarm() {
   $strongarm->name = 'imce_settings_thumb_method';
   $strongarm->value = 'scale_and_crop';
   $export['imce_settings_thumb_method'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'lazyloader_distance';
+  $strongarm->value = '250';
+  $export['lazyloader_distance'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'lazyloader_enabled';
+  $strongarm->value = 1;
+  $export['lazyloader_enabled'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'lazyloader_exclude_option';
+  $strongarm->value = 'exclude';
+  $export['lazyloader_exclude_option'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'lazyloader_icon';
+  $strongarm->value = '0';
+  $export['lazyloader_icon'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'lazyloader_paths';
+  $strongarm->value = 'media/*/format-form
+admin/*
+node/add/*
+node/*/edit';
+  $export['lazyloader_paths'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'lazyloader_placeholder';
+  $strongarm->value = '';
+  $export['lazyloader_placeholder'] = $strongarm;
 
   return $export;
 }

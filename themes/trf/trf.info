@@ -1,7 +1,7 @@
 name = Titanium Rings Forever
 description = A subtheme of Commerce Kickstart Theme with customizations.
 core = 7.x
-version = "7.x-0.1"
+version = "7.x-1.0"
 base theme  = commerce_kickstart_theme
 
 ; REQUIRED CORE REGIONS
@@ -17,7 +17,7 @@ regions[user_second] = User Bar Second
 
 regions[branding] = Branding
 regions[menu] = Menu
-regions[breadcrumb] = Breadcrumb
+regions[breadcrumb] = Highlight
 
 regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
@@ -64,12 +64,12 @@ settings[alpha_css][styles.css] = 'styles.css'
 ; Rather than doing this through Omega settings, this is done in template.php.
 
 ; BREAKPOINTS
-; Also see sass/global/vendor/_mq.scss for mixins with mq().
+; Set to match sass-mq breakpoints in sass/global/variables/_breakpoints.scss
 
-breakpoints[tv] = only screen and (min-width: 3456px)
-breakpoints[wide] = (min-width: 851px)
-breakpoints[narrow] = (min-width: 560px)
 breakpoints[mobile] = (min-width: 0px)
+breakpoints[narrow] = (min-width: 740px)
+breakpoints[wide] = (min-width: 980px)
+breakpoints[tv] = only screen and (min-width: 3456px)
 
 ; THEME SETTINGS (DEFAULTS)
 

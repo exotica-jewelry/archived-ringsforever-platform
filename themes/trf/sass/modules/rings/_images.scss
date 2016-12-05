@@ -6,29 +6,62 @@
 
   // Wrapper around image zoom and thumbnails
   .commerce-product-field-field-images {
-    position: relative;
-    padding-right: ($padding * 4);
-    padding-bottom: ($padding * 2);
-    min-height: $imagestyle-product_full;
     @include clearfix;
+    position: relative;
+
+    @include mq(smallish) {
+      width: $imagestyle__product-full;
+      margin: 0 auto;
+      min-height: $imagestyle__product-full;
+    }
+
+    @include mq(mediumish) {
+      width: auto;
+      margin: 0;
+      padding-right: ($padding * 4);
+      padding-bottom: ($padding * 2);
+    }
 
     // Zoom image
-    > figure {
-      width: $imagestyle-product_full;
-      float: right;
+    .imagezoom {
+      margin-bottom: $padding;
+
+      @include mq(smallish) {
+        width: $imagestyle__product-full;
+        float: right;
+      }
+
+      @include mq(mediumish) {
+        margin-bottom: 0;
+      }
     }
 
     // Zoom image caption
-    .image__caption {
+    .imagezoom__caption {
       text-align: right;
       font-style: italic;
     }
   }
 
-  // Thumbnail wrapper
-  #imagezoom-thumb-wrapper {
-    width: $imagestyle-product_thumbnail;
+  // Zoomed image overlay
+  .zoomContainer {
+    opacity: 0;
+
+    @include mq(smallish) {
+      opacity: 1;
+    }
   }
+
+  // Thumbnail wrapper
+  .imagezoom-thumbs-wrapper {
+    margin: $padding 0 0 0;
+
+    @include mq(mediumish) {
+      margin: 0;
+      width: $imagestyle__product-thumbnail;
+    }
+  }
+
   .imagezoom-thumbs {
     margin: 0;
     padding: 0;
@@ -37,12 +70,44 @@
 
   // Thumbnails
   .imagezoom-thumb {
-    margin-top: $padding;
-    margin-left: 0;
+    display: inline-block;
+    margin: 0 ($padding / 2) ($padding / 2) 0;
+    width: $imagestyle__product-thumbnail;
+
+    @include mq(mediumish) {
+      margin: $padding 0 0 0;
+    }
 
     &:first-of-type {
-      margin-top: 0;
+      @include mq(mediumish) {
+        margin-top: 0;
+      }
+    }
+
+    .imagezoom-thumb__link {
+      display: block;
+      border-bottom: 3px transparent solid;
+
+      &.zoomGalleryActive {
+        border-color: $blue-verydark;
+      }
+    }
+  }
+}
+
+// When only one image exists, make the main image full width and hide
+// the thumbnails.
+.page-node.node-type-rings.product-image--single {
+
+  .commerce-product-field-field-images {
+    @include mq(mediumish) {
+      width: $imagestyle__product-full;
+      margin: 0 auto;
+      padding-right: 0;
     }
   }
 
+  #imagezoom-thumb-wrapper {
+    @extend %visuallyhidden;
+  }
 }

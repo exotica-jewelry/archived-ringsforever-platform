@@ -4,9 +4,14 @@
 # to be processed by Platform.sh.
 
 "http://{default}/":
-    type: upstream
-    upstream: "php:php"
+    type: redirect
+    to: "http://www.{default}/"
 
 "http://www.{default}/":
-    type: redirect
-    to: "http://{default}/"
+    type: upstream
+    upstream: "php:php"
+    cache:
+        enabled: true
+        headers: [ "Accept", "Accept-Language", "X-Language-Locale" ]
+        cookies: ["*"]
+        default_ttl: 60

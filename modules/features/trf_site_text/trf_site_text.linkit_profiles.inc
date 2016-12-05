@@ -87,19 +87,17 @@ function trf_site_text_default_linkit_profiles() {
     'entity:taxonomy_term' => array(
       'result_description' => '',
       'bundles' => array(
-        'blog_category' => 'blog_category',
+        'brand' => 'brand',
         'category' => 'category',
         'collection' => 'collection',
         'color' => 'color',
-        'elements' => 'elements',
-        'tags' => 0,
         'bag_size' => 0,
-        'brand' => 0,
         'gender' => 0,
         'hat_size' => 0,
         'shoe_size' => 0,
         'storage_capacity' => 0,
         'top_size' => 0,
+        'elements' => 0,
         'width' => 0,
       ),
       'group_by_bundle' => 1,
@@ -123,16 +121,17 @@ function trf_site_text_default_linkit_profiles() {
         'payleap_cof' => 0,
         'commerce_payment_example' => 0,
         'paypal_ec' => 0,
+        'paypal_wps' => 0,
       ),
       'group_by_bundle' => 0,
     ),
     'entity:commerce_product' => array(
       'result_description' => '',
       'bundles' => array(
+        'rings' => 'rings',
         'bags_cases' => 0,
         'drinks' => 0,
         'hats' => 0,
-        'rings' => 0,
         'shoes' => 0,
         'storage_devices' => 0,
         'tops' => 0,
@@ -169,13 +168,9 @@ function trf_site_text_default_linkit_profiles() {
       'result_description' => '',
     ),
     'insert_plugin' => array(
-      'url_method' => '2',
+      'url_method' => '3',
     ),
     'attribute_plugins' => array(
-      'id' => array(
-        'enabled' => 0,
-        'weight' => '-10',
-      ),
       'accesskey' => array(
         'enabled' => 0,
         'weight' => '-10',
@@ -188,15 +183,20 @@ function trf_site_text_default_linkit_profiles() {
         'enabled' => 0,
         'weight' => '-10',
       ),
-      'title' => array(
-        'enabled' => 0,
-        'weight' => '-10',
-      ),
       'rel' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
+      'id' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'title' => array(
+        'enabled' => 1,
+        'weight' => '-10',
+      ),
     ),
+    'imce' => 1,
     'autocomplete' => array(
       'charLimit' => '3',
       'wait' => '350',

@@ -1,0 +1,8 @@
+name = Sort Shipping by Price
+description = Sorts shipping by price.
+package = Commerce (contrib)
+dependencies[] = commerce
+core = 7.x
+
+; Author: Matt Glaman
+; Link: https://glamanate.com/blog/sort-drupal-commerce-shipping-services

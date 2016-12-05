@@ -15,7 +15,8 @@ function trf_ring_type_default_cer() {
     "cer_enabled" : { "und" : [ { "value" : "1" } ] },
     "cer_weight" : { "und" : [ { "value" : "0" } ] },
     "cer_left" : { "und" : [ { "path" : "node:rings:field_related_rings" } ] },
-    "cer_right" : { "und" : [ { "path" : "node:rings:field_related_rings" } ] }
+    "cer_right" : { "und" : [ { "path" : "node:rings:field_related_rings" } ] },
+    "rdf_mapping" : []
   }');
   return $items;
 }

@@ -1,15 +1,13 @@
 # Overview
 
-This page documents the assorted designs, components, styles and markup patterns
-defined by the TRF site. You can view the hierarchy of components using the
-tabbed menu above, or search the full text of style definitions.
+This page documents style components, variables, and base markup defined by the
+theme and its base theme.
 
 The content below is generated from code comments in the project&rsquo;s Sass
-files and processed using
-[SC5 Style Guide Generator](https://www.npmjs.com/package/sc5-styleguide), which
-runs on [kss-node](https://github.com/kss-node/kss-node), which itself uses
-[Knyle Style Sheets (KSS)](https://github.com/kneath/kss). The styleguide
-sections are defined in `sass/main.scss`.
+files and processed using [kss-node](https://github.com/kss-node/kss-node),
+which uses [Knyle Style Sheets (KSS)](https://github.com/kneath/kss).
+
+The styleguide sections are defined in `sass/style.scss`.
 
 Note that [per the KSS documentation](http://warpspire.com/kss/syntax/), "not
 every CSS rule should be documented." Only rules that describe visual UI
@@ -17,10 +15,15 @@ elements are documented in the styleguide. Therefore, there is not (and does not
 need to be) a 1:1 correspondence between the Styleguide sections and the Sass
 folders and partials.
 
+**For documentation of Sass breakpoints, functions and mixins in this theme and
+its parent theme,
+[see this theme's SassDoc](/themes/trf/documentation/sassdoc/index.html).**
+
 ## Also see
 
-- The theme's **[README file](/sites/all/themes/trf/README.md)** (markdown) outlines
-the general approach to developing with this theme, gives installation
+- The theme's
+**[README file](https://github.com/rootwork/ringsforever/blob/master/themes/trf/README.md)**
+outlines the general approach to developing with this theme, gives installation
 instructions, and lists coding standards.
 - Documentation of the theme's **Sass breakpoints, functions and
 mixins**:
@@ -30,14 +33,11 @@ mixins**:
 
 ## Resources
 
-- [KSS documentation syntax](http://warpspire.com/kss/syntax/).
-- [SC5-specific additional syntax for complex markup](https://www.npmjs.com/package/sc5-styleguide#documenting-syntax),
-including creating "ignore" blocks (useful for SassDoc) and including wrappers
-around necessary components.
-- [kss-node documentation on the style guide's template](https://github.com/kss-node/kss-node/wiki/Creating-Custom-Templates)
-&#8212; our template (the source of this information) is located at
-`documentation/styleguide.md`, and default SC5 styles are used to format the
-documentation.
+- [KSS syntax](https://github.com/kss-node/kss/blob/spec/SPEC.md), including
+annotations specific to KSS-node.
+- [KSS-node documentation](https://github.com/kss-node/kss-node/wiki) &#8212;
+our styleguide home page (the source of this information) is located at
+`documentation/styleguide.md`.
 
 ## Updating this documentation
 

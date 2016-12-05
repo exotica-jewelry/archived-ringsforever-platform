@@ -2,33 +2,52 @@
 // Ring categories featured on the home page
 //
 
+$featured-categories__item-width: $imagestyle__product-medium;
+
 .featured-categories {
   padding-top: 2em;
   text-align: center;
 
+  * {
+    box-sizing: border-box;
+  }
+
   .taxonomy-term {
-    padding: $padding;
+    @include card(0);
+    position: relative;
+    padding: $padding 0 0 0;
     cursor: pointer;
-    border: 1px $white-off solid;
+    background-color: $white;
     border-radius: $border-radius;
     transition: $transition;
 
     @include is-on {
-      background-color: $white-off;
-      border-color: transparent;
+      @include card(1);
+      background-color: $blue;
+
+      .featured-categories__title {
+        color: $white;
+      }
+
+      .taxonomy-term-description {
+        opacity: 1;
+      }
     }
   }
 }
 
 .featured-categories__title {
   margin-bottom: $padding;
+  padding: 0 $padding ($padding / 4) $padding;
   @include font-size(24px);
   font-weight: $thin;
+  text-transform: capitalize;
+  transition: $transition;
 }
 
 .featured-categories__item {
   margin: 0 $padding $padding $padding;
-  width: ($imagestyle-product_medium + (2 * $padding-px) + (2px));
+  width: $featured-categories__item-width;
   display: inline-block;
   text-align: center;
   vertical-align: top;
@@ -42,18 +61,38 @@
     }
 
     .container-24 {
+      margin: 0 !important;
       padding-left: 0 !important;
       width: auto !important;
     }
+
+    .field-name-field-images > img {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+
+  .links.node-links {
+    display: none;
   }
 
   .taxonomy-term-description {
+    position: absolute;
+    bottom: 0;
     margin: 0;
+    padding: ($padding / 4) $padding;
+    width: $featured-categories__item-width;
     text-align: left;
+    color: $white;
+    background-color: rgba($black, 0.5);
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    transition: $transition;
+    opacity: 0;
 
     p {
-      margin-bottom: $padding;
-      @include font-size(18px);
+      @include font-size(16px);
+      line-height: 1.25;
 
       &:last-of-type {
         margin-bottom: 0;

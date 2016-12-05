@@ -1,0 +1,34 @@
+//
+// CTools collapsible blocks
+//
+
+.ctools-collapsible-container {
+
+  // Dropdown arrow
+  .ctools-toggle {
+    border: none;
+    margin-top: ($padding / 4);
+    margin-right: ($padding / 2);
+    @include arrow(bottom, $size: ($padding / 2));
+
+    &.ctools-toggle-collapsed {
+      margin-top: ($padding / 8);
+      margin-right: ($padding / 4);
+      @include arrow(right, $size: ($padding / 2));
+    }
+  }
+
+  // Title
+  .ctools-collapsible-handle {
+
+    @include is-on {
+      color: $blue-verydark;
+    }
+  }
+
+  // Content wrapper
+  .ctools-collapsible-content {
+    padding: $padding 0;
+    border-top: 1px $black dotted;
+  }
+}

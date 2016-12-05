@@ -10,9 +10,21 @@
 // Aliquam adipiscing vehicula varius. Morbi a interdum lacus. Integer luctus
 // lobortis magna, nec vulputate augue blandit ac.</p>
 //
-// Styleguide 2.2.0
+// Style guide: base.type.paragraph
 
 p {
-  margin: 0 0 2rem 0;
-  @include font-size(20px);
+  margin: 0 0 ($padding * 2) 0;
+  @include font-size(16px);
+
+  @include mq(smallish) {
+    @include font-size(18px);
+  }
+
+  @include mq(mediumish) {
+    @include font-size(20px);
+  }
+
+  a {
+    @extend %link--basic;
+  }
 }

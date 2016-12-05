@@ -74,6 +74,15 @@ function trf_ring_type_strongarm() {
       'colorbox' => array(
         'custom_settings' => FALSE,
       ),
+      'embedded' => array(
+        'custom_settings' => TRUE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -103,11 +112,15 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '30',
+            'weight' => '33',
             'visible' => FALSE,
           ),
           'featured' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'embedded' => array(
+            'weight' => '15',
             'visible' => FALSE,
           ),
         ),
@@ -129,10 +142,14 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '32',
+            'weight' => '35',
             'visible' => FALSE,
           ),
           'featured' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'embedded' => array(
             'weight' => '19',
             'visible' => FALSE,
           ),
@@ -155,11 +172,15 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '33',
+            'weight' => '36',
             'visible' => FALSE,
           ),
           'featured' => array(
             'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'embedded' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -181,11 +202,15 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '34',
+            'weight' => '37',
             'visible' => FALSE,
           ),
           'featured' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'embedded' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
@@ -207,12 +232,16 @@ function trf_ring_type_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '8',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'featured' => array(
             'weight' => '1',
             'visible' => FALSE,
+          ),
+          'embedded' => array(
+            'weight' => '2',
+            'visible' => TRUE,
           ),
         ),
         'product:field_images' => array(
@@ -233,11 +262,15 @@ function trf_ring_type_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '2',
+            'weight' => '4',
             'visible' => TRUE,
           ),
           'featured' => array(
             'weight' => '7',
+            'visible' => TRUE,
+          ),
+          'embedded' => array(
+            'weight' => '0',
             'visible' => TRUE,
           ),
         ),
@@ -259,11 +292,15 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '16',
+            'weight' => '17',
             'visible' => TRUE,
           ),
           'featured' => array(
             'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'embedded' => array(
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
@@ -285,11 +322,15 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '15',
+            'weight' => '16',
             'visible' => TRUE,
           ),
           'featured' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'embedded' => array(
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),
@@ -314,6 +355,10 @@ function trf_ring_type_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'embedded' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
         ),
         'product:field_title_parent' => array(
           'default' => array(
@@ -321,7 +366,7 @@ function trf_ring_type_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '35',
+            'weight' => '38',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -338,6 +383,10 @@ function trf_ring_type_strongarm() {
           ),
           'featured' => array(
             'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'embedded' => array(
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
@@ -366,6 +415,7 @@ function trf_ring_type_strongarm() {
   $strongarm->name = 'node_options_rings';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_rings'] = $strongarm;
 
@@ -389,6 +439,21 @@ function trf_ring_type_strongarm() {
   $strongarm->name = 'pathauto_node_rings_pattern';
   $strongarm->value = '[node:field-product-type]/[node:field-ring-elements-primary:name]/[node:field-ring-name]';
   $export['pathauto_node_rings_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'title_commerce_product';
+  $strongarm->value = array(
+    'auto_attach' => array(
+      'title' => 'title',
+    ),
+    'hide_label' => array(
+      'entity' => 'entity',
+      'page' => 0,
+    ),
+  );
+  $export['title_commerce_product'] = $strongarm;
 
   return $export;
 }

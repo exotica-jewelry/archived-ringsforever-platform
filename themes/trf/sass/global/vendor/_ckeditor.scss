@@ -1,0 +1,22 @@
+//
+// CKEditor custom styles, applied in `ckeditor.styles.js` in the
+// theme directory.
+//
+
+.ckeditor-clear {
+  clear: both;
+}
+
+//
+// Tweaks for the CKEditor editing area.
+//
+
+.cke_editable {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.cke_contents {
+  padding: 1rem;
+}

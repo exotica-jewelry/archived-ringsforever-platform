@@ -1,0 +1,193 @@
+//
+// Confirmation modal when an item is added to the cart
+//
+
+.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation.commerce-add-to-cart-confirmation {
+  top: ($padding * -12);
+  width: 70%;
+  margin-left: -35% !important;
+  padding-bottom: $padding;
+
+  // Title
+  .added-product-title {
+    @include font-size(16px);
+    line-height: 1;
+    font-family: $font-highlight;
+    font-style: italic;
+    text-transform: none;
+    text-align: left;
+
+    @include mq(smallish) {
+      line-height: 1.25;
+      text-align: center;
+    }
+  }
+
+  // Button wrapper
+  .button-wrapper {
+    background-color: transparent;
+    padding: 0 $padding;
+
+    @include mq(smallish) {
+      background-color: $white;
+      padding: ($padding * 2.25) $padding 0;
+    }
+  }
+
+  // Close button
+  .commerce-add-to-cart-confirmation-close {
+    top: ($padding / 2);
+    right: ($padding / 2);
+  }
+
+  // Buttons
+  .button {
+    width: 90%;
+    @include font-size(16px);
+
+    @include is-on {
+      @include a-grow(1);
+    }
+
+    @include mq(tinyish) {
+      @include font-size(18px);
+    }
+
+    &.checkout a {
+      @include heart-click;
+      text-decoration: none;
+
+      @include is-on {
+        @include card(0);
+      }
+    }
+
+    &.continue {
+      @include card(0);
+      font-weight: $normal;
+    }
+  }
+
+  // Item area
+  .view-confirm-message-product-display {
+
+    @include mq(smallish) {
+      width: 55%;
+    }
+  }
+
+  .view-content {
+    width: 100%;
+    padding: 0;
+
+    @include mq(tinyish) {
+      width: 90%;
+      padding: ($padding / 2) 0 0 $padding;
+    }
+
+    @include mq(smallish) {
+      padding-left: ($padding * 1.5);
+    }
+  }
+
+  .views-field-commerce-product {
+    display: inline-block;
+    width: 100%;
+
+    @include mq(tinyish) {
+      width: ($imagestyle__product-thumbnail + 2px);
+    }
+
+    @include mq(smallish) {
+      display: block;
+      width: auto;
+    }
+  }
+
+  // Ring image
+  .field-name-field-images {
+    width: 100%;
+    text-align: center;
+
+    @include mq(tinyish) {
+      width: ($imagestyle__product-thumbnail + 2px);
+      text-align: left;
+    }
+  }
+
+  // Ring name
+  .field-name-title-field {
+    margin-right: 0;
+
+    @include mq(tinyish) {
+      margin-right: $padding;
+    }
+
+    h5 {
+      margin: 0;
+      @include font-size(16px);
+      font-weight: $normal;
+      text-align: center;
+
+      @include mq(tinyish) {
+        text-align: left;
+      }
+
+      @include mq(smallish) {
+        margin: 0 $padding $padding 0;
+        @include font-size(20px);
+        font-weight: $bold;
+      }
+    }
+  }
+
+  // Cart total
+  .views-field-commerce-total {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    vertical-align: top;
+
+    @include mq(tinyish) {
+      width: 80px;
+      margin: 0 0 0 ($padding / 2);
+      text-align: left;
+    }
+
+    @include mq(smallish) {
+      display: inline;
+      width: auto;
+      margin: $padding 0 0 0;
+    }
+
+    .views-label-commerce-total,
+    .field-content {
+      padding-top: 0;
+      @include font-size(16px);
+
+      @include mq(smallish) {
+        float: left;
+        @include font-size(18px);
+      }
+    }
+
+    .views-label-commerce-total {
+      float: none;
+      font-weight: $bold;
+
+      @include mq(smallish) {
+        float: left;
+        font-weight: $normal;
+      }
+    }
+
+    .field-content {
+      float: none;
+
+      @include mq(smallish) {
+        float: left;
+      }
+    }
+  }
+}

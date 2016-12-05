@@ -4,6 +4,41 @@
 
 .page-node.node-type-rings {
 
+  .ds-header {
+    position: relative;
+  }
+
+  .ds-left {
+    float: none;
+    width: $imagestyle__product-full;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: $padding;
+
+    @include mq(smallish) {
+      float: left;
+      width: 66.6%;
+      margin: 0;
+    }
+  }
+
+  .ds-right {
+    float: none;
+    width: $imagestyle__product-full;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: $padding;
+    border-top: 3px $white solid;
+
+    @include mq(smallish) {
+      float: left;
+      width: 33.3%;
+      margin: ($padding * 5) 0 0;
+      padding: 0;
+      border-top-width: 0;
+    }
+  }
+
   .ds-footer {
     padding-top: $padding;
   }

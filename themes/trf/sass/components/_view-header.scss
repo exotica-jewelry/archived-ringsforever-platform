@@ -1,0 +1,10 @@
+//
+// Overriding Commerce Kickstart Theme's view header styling
+//
+
+.view-collection-products .view-header .view-collection-products,
+.view-collection-products .view-header .collection-terms,
+.view-collection-taxonomy-term .view-header .view-collection-products,
+.view-collection-taxonomy-term .view-header .collection-terms {
+  padding-top: 0;
+}

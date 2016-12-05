@@ -27,6 +27,49 @@ function trf_user_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'prlp_confirmation_message_existing_users';
+  $strongarm->value = 'Your new password has been saved.';
+  $export['prlp_confirmation_message_existing_users'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'prlp_confirmation_message_new_users';
+  $strongarm->value = 'Thank you for setting your password, the registration process has completed.';
+  $export['prlp_confirmation_message_new_users'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'prlp_destination';
+  $strongarm->value = 'user/%uid/edit';
+  $export['prlp_destination'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'prlp_hidden_account_fields';
+  $strongarm->value = 'mail';
+  $export['prlp_hidden_account_fields'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'prlp_hidden_fields';
+  $strongarm->value = 'signature_settings
+picture';
+  $export['prlp_hidden_fields'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'prlp_password_required';
+  $strongarm->value = 1;
+  $export['prlp_password_required'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_admin_role';
   $strongarm->value = '3';
   $export['user_admin_role'] = $strongarm;

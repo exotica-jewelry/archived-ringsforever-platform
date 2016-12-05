@@ -1,0 +1,54 @@
+//
+// MOBILE MENU
+//
+// Appears at smaller widths
+//
+
+// Toggle button
+.menu-toggle {
+  top: 100%; // positions at the bottom of .section-header
+  left: 0;
+  background-color: $blue-verydark;
+  border-radius: $border-radius;
+  z-index: 100; // places menu on top of highlight region
+
+  @include is-on {
+    background-color: $blue-verydark;
+  }
+
+  .line {
+    margin: 6px auto;
+    border-bottom-color: $white;
+
+    @include is-on {
+      border-bottom-color: $white;
+    }
+  }
+
+  .first-line {
+    padding-top: 2px;
+  }
+
+  .last-line {
+    display: none;
+  }
+
+  // The word "Menu"
+  .toggle-help {
+    top: 0;
+    left: 40px;
+    padding: 0 ($padding / 4);
+    font-family: $font-default;
+    @include font-size(14px);
+    font-variant: normal;
+    line-height: 36px;
+    color: $blue-verydark;
+    background-color: $white;
+    border-radius: $border-radius;
+
+    @include is-on {
+      color: $white;
+      background-color: $blue-verydark;
+    }
+  }
+}

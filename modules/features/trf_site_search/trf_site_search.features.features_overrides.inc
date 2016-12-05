@@ -14,30 +14,33 @@ function trf_site_search_features_override_default_overrides() {
   // Exported overrides for: current_search
   $overrides["current_search.kickstart_search.settings|items|active_items|keys_link"] = 1;
   $overrides["current_search.kickstart_search.settings|items|active_items|keys_param"] = '';
-  $overrides["current_search.kickstart_search.settings|items|results|text"] = 'There is <em>[facetapi_results:result-count]</em> titanium ring';
-  $overrides["current_search.kickstart_search.settings|items|results|text_plural"] = 'There are <em>[facetapi_results:result-count]</em> titanium rings';
+  $overrides["current_search.kickstart_search.settings|items|results|text"] = 'Displaying <em>[facetapi_results:result-count]</em> titanium ring';
+  $overrides["current_search.kickstart_search.settings|items|results|text_plural"] = 'Displaying <em>[facetapi_results:result-count]</em> titanium rings';
 
   // Exported overrides for: search_api_index
   $overrides["search_api_index.product_display.options|additional fields"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|data_alter_callbacks|commerce_search_api_alter_product_status|settings"] = array();
   $overrides["search_api_index.product_display.options|data_alter_callbacks|commerce_search_api_product_display_filter|settings"] = array();
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_10|description"] = 'A Fulltext aggregation of the following fields: Tags » Name.';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_10|fields|0"] = 'field_tags:name';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_10|name"] = 'Tags name (Fulltext)';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_11"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_10"] = array(
+    'name' => 'Tags name (Fulltext)',
+    'type' => 'fulltext',
+    'fields' => array(
+      0 => 'field_tags:name',
+    ),
+    'description' => 'A Fulltext aggregation of the following fields: Tags » Name.',
+  );
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_1|description"] = 'A Fulltext aggregation of the following fields: Title.';
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_2|description"] = 'A Fulltext aggregation of the following fields: Brand » Name.';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_2|fields|0"] = 'field_brand:name';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_2|name"] = 'Brand name (Fulltext)';
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_3|description"] = 'A Fulltext aggregation of the following fields: Category » Name.';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_3|fields|0"] = 'field_category:name';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_3|name"] = 'Category name (Fulltext)';
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_4|description"] = 'A Fulltext aggregation of the following fields: Collection » Name.';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_4|fields|0"] = 'field_collection:name';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_4|name"] = 'Collection name (Fulltext)';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_5|description"] = 'A Fulltext aggregation of the following fields: Gender » Name.';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_5|fields|0"] = 'field_gender:name';
-  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_5|name"] = 'Gender name (Fulltext)';
+  $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_5"] = array(
+    'name' => 'Gender name (Fulltext)',
+    'type' => 'fulltext',
+    'fields' => array(
+      0 => 'field_gender:name',
+    ),
+    'description' => 'A Fulltext aggregation of the following fields: Gender » Name.',
+  );
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_6"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_7"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields|search_api_aggregation_8"]["DELETED"] = TRUE;
@@ -106,23 +109,40 @@ function trf_site_search_features_override_default_overrides() {
   );
   $overrides["search_api_index.product_display.options|fields|field_color"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_color:name"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_gemstones_bool"] = array(
+    'type' => 'boolean',
+  );
+  $overrides["search_api_index.product_display.options|fields|field_gender"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_gender:name"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_product:field_ring_width:name"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_product:field_storage_capacity:name"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_product:field_top_size:name"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_product_type:name"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_ring_elements:name"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|field_ring_elements_primary:name"]["DELETED"] = TRUE;
+  $overrides["search_api_index.product_display.options|fields|field_ring_name"] = array(
+    'type' => 'text',
+  );
+  $overrides["search_api_index.product_display.options|fields|field_sku_master"] = array(
+    'type' => 'text',
+    'boost' => '0.0',
+  );
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_1"]["DELETED"] = TRUE;
-  $overrides["search_api_index.product_display.options|fields|search_api_aggregation_10"]["DELETED"] = TRUE;
-  $overrides["search_api_index.product_display.options|fields|search_api_aggregation_11"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_2"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_3"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_4"]["DELETED"] = TRUE;
-  $overrides["search_api_index.product_display.options|fields|search_api_aggregation_5"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_6"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_7"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_8"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_aggregation_9"]["DELETED"] = TRUE;
   $overrides["search_api_index.product_display.options|fields|search_api_multi_aggregation_1"] = array(
     'type' => 'list<string>',
+  );
+  $overrides["search_api_index.product_display.options|fields|sticky"] = array(
+    'type' => 'boolean',
+  );
+  $overrides["search_api_index.product_display.options|fields|title"] = array(
+    'type' => 'text',
   );
   $overrides["search_api_index.product_display.options|processors"] = array(
     'search_api_case_ignore' => array(
@@ -1193,10 +1213,17 @@ function trf_site_search_features_override_default_overrides() {
   $overrides["search_api_index.product_display.server"] = 'solr';
 
   // Exported overrides for: search_api_sort
+  $overrides["search_api_sort.product_display__created.default_order"] = 'desc';
+  $overrides["search_api_sort.product_display__created.default_sort"] = 1;
+  $overrides["search_api_sort.product_display__created.default_sort_no_terms"] = 1;
   $overrides["search_api_sort.product_display__created.rdf_mapping"] = array();
+  $overrides["search_api_sort.product_display__created.weight"] = -100;
   $overrides["search_api_sort.product_display__field_product_commerce_price_amount_decimal.options|field_name"] = 'Product variations » Price » Amount (decimal) (Min)';
   $overrides["search_api_sort.product_display__field_product_commerce_price_amount_decimal.rdf_mapping"] = array();
+  $overrides["search_api_sort.product_display__field_product_commerce_price_amount_decimal.weight"] = -99;
+  $overrides["search_api_sort.product_display__title_field.name"] = 'Name';
   $overrides["search_api_sort.product_display__title_field.rdf_mapping"] = array();
+  $overrides["search_api_sort.product_display__title_field.weight"] = -98;
 
  return $overrides;
 }

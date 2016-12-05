@@ -15,7 +15,7 @@
       font-weight: $bold;
 
       &:visited {
-        color: $blue_dark;
+        color: $blue-dark;
       }
     }
   }
@@ -28,6 +28,11 @@
     @extend %ring-block-field;
     margin-top: ($padding * -0.5);
     margin-bottom: $padding;
+  }
+
+  // Width explanation
+  .field-name-ring-width {
+    @extend %ring-block-field;
   }
 
   // Colors note

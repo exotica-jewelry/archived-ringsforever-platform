@@ -1,0 +1,259 @@
+//
+// Transitions and animations
+//
+
+// Transition durations
+$t-s: 0.3s;
+$t-m: 0.5s;
+$t-l: 0.75s;
+
+// Transition defaults
+$transition: all $t-m ease;
+$transition-short: all $t-s ease;
+$transition-long: all $t-l ease;
+
+// Motion UI default
+%mui {
+  animation-duration: $t-s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/// Animation: Grow
+///
+/// Provides a small scale-up effect.
+///
+/// @param {Number} $scale - scale amount (1 = 100%)
+/// @param {String} $duration - duration of transition (in the format 0.1s)
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-grow($scale: 1.05, $duration: $t-s) {
+  @include no-scale-flash;
+  transform: scale($scale);
+  transition: transform $duration linear;
+}
+
+/// Animation: Pulse
+///
+/// Provides a pulsing or heartbeat effect.
+///
+/// @param {String} $duration - duration of one pulse (in the format 1s)
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-pulse($duration: 1s) {
+  animation: pulse $duration infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/// Animation: Zoom and fade
+///
+/// Enlarges and fades, Tumblr-style.
+///
+/// @param {Number} $zoom - amount of zoom; 1 = no zoom
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-zoomfade($zoom: 2.5) {
+  @extend %mui;
+  animation-duration: $t-l;
+  @include mui-animation(zoom(1, $zoom), fade(1, 0));
+}
+
+/// Animation: Slide on hover
+///
+/// Slides an item on hover.
+///
+/// @param {String} $direction - direction of slide: up, down, left, right
+/// @param {Length} $distance - distance of slide
+/// @param {String} $duration - duration of transition (in the format 0.1s)
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-slidehover($direction: 'up', $distance: ($padding / 4), $duration: $t-s) {
+
+  $x: 0;
+  $y: 0;
+
+  @if $direction == 'up' {
+    $x: 0;
+    $y: -1 * $distance;
+  }
+
+  @if $direction == 'down' {
+    $x: 0;
+    $y: $distance;
+  }
+
+  @if $direction == 'right' {
+    $x: $distance;
+    $y: 0;
+  }
+
+  @if $direction == 'left' {
+    $x: -1 * $distance;
+    $y: 0;
+  }
+
+  transition-property: transform;
+  transition-timing-function: ease;
+  transition-duration: $duration;
+
+  @include is-on {
+    transform: translate($x, $y);
+  }
+
+}
+
+/// Animation: Bottom border
+///
+/// Creates a moving bottom border.
+///
+/// @param {Color} $color - color
+/// @param {Length} $height - height
+/// @param {String} $starting_point - the starting point, of: left, center
+/// @param {Length of time} $duration - duration of animation
+///
+/// @author Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-border-bottom($color: $white, $height: 1px, $starting-point: 'left', $duration: $t-s) {
+
+  &::after {
+    clear: both;
+    display: block;
+    content: '';
+    position: relative;
+    width: 0;
+    @if $starting-point == 'left' {
+      left: 0;
+    } @else if $starting-point == 'center' {
+      left: 50%;
+    }
+    height: $height;
+    border-radius: $border-radius;
+    background-color: $color;
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: $duration;
+  }
+
+  @include is-on {
+    &::after {
+      width: 100%;
+      @if $starting-point == 'center' {
+        left: 0;
+      }
+    }
+  }
+
+  &.active,
+  &.active-trail {
+
+    &::after {
+      background-color: $color;
+      width: 100%;
+      left: 0;
+    }
+
+    @include is-on {
+
+      &::after {
+        width: 0;
+        @if $starting-point == 'center' {
+          left: 50%;
+        }
+      }
+    }
+  }
+}
+
+/// Animation: Loading
+///
+/// Loading animation.
+///
+/// @param {Color} $color - color
+/// @param {Length} $size - size
+///
+/// @link http://projects.lukehaas.me/css-loaders/
+/// @author Luke Haas, Ivan Boothe
+///
+/// @group Animations
+
+@mixin a-loading($color: $white, $size: $padding) {
+  position: relative;
+  padding-left: (($size * 2) + $padding);
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: $size;
+    color: $color;
+    width: ($padding / 2);
+    height: ($padding / 2);
+    border-radius: 50%;
+    font-size: ($size / 3);
+    animation: loading $t-l infinite linear;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 0, 2em 2em 0 0.2em, 0 3em 0 0, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+
+  75% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0 0 0.2em, -2em -2em 0 0;
+  }
+
+  87.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0 0 0, -2em -2em 0 0.2em;
+  }
+}

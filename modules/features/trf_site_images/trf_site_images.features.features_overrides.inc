@@ -15,6 +15,7 @@ function trf_site_images_features_override_default_overrides() {
   $overrides["file_type.image.disabled"] = FALSE;
 
   // Exported overrides for: image
+  $overrides["image.product_full.effects|0|data|#imageinfo_cache_effect_callback"] = 'image_scale_effect';
   $overrides["image.product_full.effects|0|data|height"] = '';
   $overrides["image.product_full.effects|0|data|upscale"] = 0;
   $overrides["image.product_full.effects|0|data|width"] = 416;
@@ -22,6 +23,7 @@ function trf_site_images_features_override_default_overrides() {
   $overrides["image.product_full.effects|0|weight"] = 2;
   $overrides["image.product_full.effects|1"] = array(
     'data' => array(
+      '#imageinfo_cache_effect_callback' => 'canvasactions_definecanvas_effect',
       'RGB' => array(
         'HEX' => '#ffffff',
       ),
@@ -42,12 +44,14 @@ function trf_site_images_features_override_default_overrides() {
     'name' => 'canvasactions_definecanvas',
     'weight' => 2,
   );
+  $overrides["image.product_medium.effects|0|data|#imageinfo_cache_effect_callback"] = 'image_scale_effect';
   $overrides["image.product_medium.effects|0|data|height"] = '';
   $overrides["image.product_medium.effects|0|data|upscale"] = 0;
   $overrides["image.product_medium.effects|0|data|width"] = 215;
   $overrides["image.product_medium.effects|0|name"] = 'image_scale';
   $overrides["image.product_medium.effects|1"] = array(
     'data' => array(
+      '#imageinfo_cache_effect_callback' => 'canvasactions_definecanvas_effect',
       'RGB' => array(
         'HEX' => '#ffffff',
       ),
@@ -68,12 +72,14 @@ function trf_site_images_features_override_default_overrides() {
     'name' => 'canvasactions_definecanvas',
     'weight' => 3,
   );
+  $overrides["image.product_thumbnail.effects|0|data|#imageinfo_cache_effect_callback"] = 'image_scale_effect';
   $overrides["image.product_thumbnail.effects|0|data|height"] = '';
   $overrides["image.product_thumbnail.effects|0|data|upscale"] = 0;
   $overrides["image.product_thumbnail.effects|0|name"] = 'image_scale';
   $overrides["image.product_thumbnail.effects|0|weight"] = 2;
   $overrides["image.product_thumbnail.effects|1"] = array(
     'data' => array(
+      '#imageinfo_cache_effect_callback' => 'canvasactions_definecanvas_effect',
       'RGB' => array(
         'HEX' => '#ffffff',
       ),

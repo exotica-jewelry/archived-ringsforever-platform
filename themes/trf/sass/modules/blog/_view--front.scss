@@ -1,0 +1,46 @@
+//
+// Blog view on the home page
+//
+
+.front {
+
+  .node {
+    margin: 0;
+    padding: 0;
+  }
+
+  .view-frontpage {
+    margin: $padding;
+
+    .page-title {
+      @extend %page-title;
+      @include descenders;
+      border-bottom: 1px $black solid;
+    }
+
+    .field-name-title-field {
+      @extend %page-title;
+      margin: 0 0 $padding;
+      @include font-size(40px);
+
+      a {
+        @include is-on {
+          color: $blue-verydark;
+        }
+      }
+    }
+
+    .links.node-links {
+      margin: 0 0 $padding;
+      padding: 0;
+
+      .links {
+        margin-left: 0;
+
+        a {
+          @extend %button--inline;
+        }
+      }
+    }
+  }
+}

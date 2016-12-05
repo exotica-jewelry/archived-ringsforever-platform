@@ -1,7 +1,19 @@
 //
-// Logo image at the top of the page
+// Logo image at the top of the site
 //
 
-.zone-branding .region-branding .logo-img {
-  width: 600px;
+.page .zone-branding .region-branding .logo-img {
+  width: 100%;
+  max-width: $logo__width;
+  float: none;
+  margin: 0 auto;
+
+  @include mq(mediumish) {
+    float: left;
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+  }
 }

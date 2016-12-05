@@ -1,0 +1,37 @@
+//
+// SECONDARY NAVIGATION
+//
+// Popular themes, "all themes"
+//
+
+.navigation--secondary {
+  @extend %navigation--main;
+
+  .menu li {
+
+    &.last a {
+
+      &::after {
+        background-color: $white;
+      }
+    }
+
+    a {
+      @include font-size(16px);
+      font-weight: $normal;
+
+      @include is-on {
+        color: $white;
+      }
+
+      @include mq(smallish) {
+        @include a-border-bottom($white, 3px, center);
+      }
+
+      &.active,
+      &.active-trail {
+        color: $white;
+      }
+    }
+  }
+}

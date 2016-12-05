@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TRF site testimonials feature.
+ */
+
+include_once 'trf_site_testimonials.features.inc';

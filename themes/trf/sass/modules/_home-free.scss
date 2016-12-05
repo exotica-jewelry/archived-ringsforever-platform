@@ -3,43 +3,74 @@
 //
 
 .home-free {
-  margin: 0 auto;
+  margin: 0 -10px 0;
   padding: $padding;
   background-color: $white-off;
-  border-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
 }
 
 .home-free__intro {
-  margin-bottom: $padding;
-  @include font-size(28px);
-  font-weight: $thin;
-  text-align: center;
+  display: inline-block;
+  width: 40%;
+  margin: $padding $padding $padding 0;
+  @include font-size(16px);
+  font-weight: $normal;
+  text-align: right;
+  vertical-align: top;
+
+  @include mq(smallish) {
+    display: block;
+    width: auto;
+    margin: 0;
+    @include font-size(28px);
+    font-weight: $thin;
+    text-align: center;
+  }
 }
 
 .home-free__list {
+  display: inline-block;
+  width: 50%;
   margin: 0;
-  text-align: center;
+  text-align: left;
+
+  @include mq(smallish) {
+    display: block;
+    width: auto;
+    text-align: center;
+  }
 }
 
 .home-free__item {
   display: inline-block;
-  margin: 0 $padding;
+  margin: ($padding / 2);
   list-style-type: none;
   border-radius: $border-radius;
+
+  @include mq(smallish) {
+    margin: $padding;
+  }
 }
 
 .home-free__link {
+  @include card(1);
   display: block;
-  padding: $padding;
-  @include font-size(24px);
+  padding: ($padding / 4) ($padding / 2);
+  @include font-size(18px);
   font-weight: $normal;
   text-align: center;
+  background-color: rgba($blue-dark, 0.1);
+  border-bottom: none;
   border-radius: $border-radius;
-  background-color: rgba($blue_dark, 0.1);
-  @include card(1);
 
   @include is-on {
-    background-color: $white;
     @include card(0);
+    background-color: $white;
+  }
+
+  @include mq(smallish) {
+    padding: $padding;
+    @include font-size(24px);
   }
 }

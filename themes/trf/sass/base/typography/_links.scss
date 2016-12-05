@@ -9,42 +9,42 @@
 // <p>In adipiscing pulvinar eros, vitae dictum elit cursus a.</p>
 // </div>
 //
-// Styleguide 3.1.0
+// Style guide: base.type.links
 
 %link {
-  color: $blue;
+  color: $blue-dark;
   transition: $transition;
   text-decoration: none;
 
   &:visited {
-    color: $blue_verydark;
+    color: $blue-verydark;
     text-decoration: none;
     outline: 0;
   }
 
   @include is-on {
-    color: $blue_verydark;
+    color: $blue-verydark;
   }
 }
 
-%link-basic {
+%link--basic {
   padding: 0;
   background-color: inherit;
-  color: $blue;
+  color: $blue-dark;
   border-radius: 0;
   border-bottom: 1px $blue dotted;
 
   &:visited {
-    color: $blue_light;
+    color: $blue-dark;
   }
 
   @include is-on {
-    color: $blue_light;
-    border-bottom-color: $black;
+    color: $blue-verydark;
+    border-bottom: none;
   }
 }
 
-%link-highlight {
+%link--highlight {
   padding: 0.1rem 0.35rem;
   box-decoration-break: clone;
   border-radius: 5px;
@@ -64,12 +64,17 @@ a {
   @extend %link;
 }
 
-a[href^=mailto] {
+a[href^='mailto'] {
 }
 
-a[href^=tel] {
+a[href^='tel'] {
   color: inherit;
   border-bottom: 1px $blue dotted;
+
+  &::before {
+    content: '\260e';
+    margin: 0 ($padding / 4);
+  }
 }
 
 .field-node--body {
@@ -78,7 +83,7 @@ a[href^=tel] {
   ol,
   dl {
     a {
-      @extend %link-highlight;
+      @extend %link--highlight;
     }
   }
 }

@@ -1,0 +1,49 @@
+//
+// FOOTER NAVIGATION
+//
+// Our story, how to order, etc.
+//
+
+.section-footer .region-footer-first {
+  margin-left: 0;
+
+  ul.menu li,
+  .section-footer .region-footer-first ul.menu li.expanded {
+    max-width: 100%;
+    padding-right: 0;
+    @include font-size(14px);
+    margin-bottom: ($padding / 4);
+    font-family: $font-default;
+
+    @include mq(smallish) {
+      max-width: 175px;
+      padding-right: ($padding * 2);
+    }
+
+    .nolink {
+      @include card(1);
+      display: block;
+      width: 100%;
+      padding: ($padding / 4) ($padding / 2);
+      color: $white;
+      background-color: $blue-verydark;
+
+      @include mq(smallish) {
+        border-radius: $border-radius;
+      }
+    }
+
+    a {
+      display: block;
+      padding: ($padding / 4) ($padding / 2);
+      border-bottom: none;
+      border-radius: $border-radius;
+
+      @include is-on {
+        color: $black !important;
+        background-color: $blue-verylight;
+        text-decoration: none !important;
+      }
+    }
+  }
+}

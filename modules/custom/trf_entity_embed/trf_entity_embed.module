@@ -1,0 +1,61 @@
+<?php
+/**
+ * Store the custom button image.
+ *
+ * Implements hook_default_entity_embed_configuration_alter().
+ */
+
+/*
+function trf_entity_embed_default_entity_embed_configuration_alter(&$configurations) {
+  // Alter the configuration of a button with the name 'ring'.
+  if (!empty($configurations['ring'])) {
+    $uri = file_build_uri('images/wedding-rings.png');
+    $file = file_uri_to_object($uri, TRUE);
+
+    if ($file) {
+      $configurations['ring']->button_icon_fid = $file->fid;
+    }
+  }
+}
+*/
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function trf_entity_embed_form_entity_embed_dialog_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_state['step'] == 'embed') {
+    switch ($form['attributes']['entity_embed_dialog_form']['#default_value']) {
+
+      // Provide better help text on embedding forms.
+
+      case 'select':
+        $form['attributes']['entity_embed_dialog_form'] = array(
+          '#title' => 'Ring name',
+          '#description' => t('Type the name of the ring and select one from the suggestions.'),
+        );
+      break;
+
+      case 'embed':
+        $form['entity'] = array(
+          '#title' => t('Selected ring'),
+        );
+      break;
+
+      // Restrict available view modes for the entity being embedded.
+
+      case 'entityreference:entityreference_entity_view':
+        $form['attributes']['entity_embed_dialog_form']['view_mode']['#options'] = array(
+          'teaser' => 'Teaser',
+          'preview' => 'Preview',
+        );
+      break;
+
+      case 'file_entity:file_rendered':
+        $form['attributes']['entity_embed_dialog_form']['file_view_mode']['#options'] = array(
+          'teaser' => 'Teaser',
+          'preview' => 'Preview',
+        );
+      break;
+    }
+  }
+}

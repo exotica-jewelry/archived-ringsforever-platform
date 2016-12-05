@@ -1,70 +1,93 @@
-var gulp = require("gulp");
+var gulp = require("gulp"),
 
 // Path variables
-var urlPath = 'http://www.titaniumringsforever.com';
-var themePath = '/sites/all/themes/trf/';
-var cssPath = 'css';
-var styleguidePath = 'documentation/styleguide';
+urlPath = 'http://www.titaniumringsforever.com',
+themePath = '/sites/all/themes/trf/',
+cssPath = 'css',
+sassPath = 'sass',
+jsPath = 'js',
+imgPath = 'images',
+docPath = '/documentation',
+sassDocPath = '/sassdoc',
+styleguidePath = '/styleguide',
 
 // Sass
-var sass = require("gulp-sass");
-var bulkSass = require('gulp-sass-bulk-import');
+sass = require("gulp-sass"),
+bulkSass = require('gulp-sass-bulk-import'),
+moduleImporter = require('sass-module-importer'),
 
 // Preprocess plugins
-var autoprefixer = require('gulp-autoprefixer');
-var filter = require('gulp-filter')
-var sourcemaps = require('gulp-sourcemaps');
+postcss = require('gulp-postcss'),
+filter = require('gulp-filter'),
+sourcemaps = require('gulp-sourcemaps'),
+autoprefixer = require('autoprefixer'),
 
 // Images
-var images = require('gulp-imagemin');
+images = require('gulp-imagemin'),
 
 // Documentation
-var sassdoc = require('sassdoc');
-var jsdoc = require("gulp-jsdoc3");
-var styleguide = require('sc5-styleguide');
+sassdoc = require('sassdoc'),
+jsdoc = require("gulp-jsdoc3"),
+kss = require('kss'),
 
 // Gulp plugins
-var cache = require('gulp-cache');
-var notify = require("gulp-notify");
-var shell = require('gulp-shell');
-var size = require('gulp-size');
-var rename = require('gulp-rename');
-var browserSync = require("browser-sync");
-var reload = browserSync.reload;
+beep = require('beepbeep'),
+cache = require('gulp-cache'),
+notify = require("gulp-notify"),
+shell = require('gulp-shell'),
+size = require('gulp-size'),
+plumber = require('gulp-plumber'),
+rename = require('gulp-rename'),
+browserSync = require("browser-sync"),
+reload = browserSync.reload;
+
+
+//
+// Error handling
+//
+
+function errorAlert(error){
+  beep();
+  notify.onError({
+    title: 'Gulp error'
+  })(error);
+  this.emit("end");
+};
+
 
 //
 // Compile Sass
 //
-gulp.task('sass', function () {
-  return gulp.src('sass/styles.scss')
 
+gulp.task('sass', function () {
+  return gulp.src([
+    sassPath + '/styles.scss',
+    sassPath + '/styleguide.scss'
+  ])
+
+  // Get Sass inside folders ("folder/*" syntax")
   .pipe(bulkSass())
 
-  // Convert sass into css
+  // Import Sass from Bower and Node modules
+  .pipe(sass({ importer: moduleImporter() }))
+
+  // Catch any Sass errors and prevent them from crashing gulp
+  .pipe(plumber({errorHandler: errorAlert}))
+
+  // Convert Sass into CSS
+  .pipe(sourcemaps.init())
   .pipe(sass({
     includePaths: ['sass'],
     sourcemap: true,
-    sourceComments: 'normal',
-    onError: function(err) {
-      return notify().write(err);
-    }
+    sourceComments: 'normal'
   }))
-
-  // Catch any SCSS errors and prevent them from crashing gulp
-  .on('error', function (error) {
-    console.error(error);
-    this.emit('end');
-  })
-
-  // Load existing internal sourcemap
-  .pipe(sourcemaps.init({loadMaps: true}))
 
   // Autoprefix properties
-  .pipe(autoprefixer({
+  .pipe(postcss([autoprefixer({
     browsers: ['last 2 versions', '> 5%']
-  }))
+  }) ]))
 
-  // Write final .map file
+  // Write sourcemap
   .pipe(sourcemaps.write())
 
   // Save the CSS
@@ -75,14 +98,14 @@ gulp.task('sass', function () {
     gzip: true
   }))
 
-  // Notify to say the task has complete
+  // Notify to say the task has completed
   .pipe(notify({
     message: 'Sass compiling complete',
     onLast: true
   }))
 
-  // Filtering stream to only css files
-  .pipe(filter('sass/**/*.css'))
+  // Filtering stream to only CSS files
+  .pipe(filter(sassPath + '/**/*.css'))
 
   .pipe(browserSync.reload({stream:true}));
 });
@@ -91,23 +114,19 @@ gulp.task('sass', function () {
 //
 // Compile JavaScript
 //
-gulp.task('js', function () {
-  return gulp.src('scripts/**/*.js')
-  .pipe(gulp.dest('scripts'))
 
-  // Notify to say the task has complete
-  .pipe(notify({
-    message: 'JavaScript compiling complete',
-    onLast: true
-  }))
+gulp.task('js', function () {
+  return gulp.src(jsPath + '/**/*.js')
+  .pipe(gulp.dest(jsPath))
 });
 
 
 //
 // Compress images
 //
+
 gulp.task('images', function() {
-  gulp.src('images/*')
+  gulp.src(imgPath + '/*')
 
   .pipe(cache(images({
     optimizationLevel: 4,
@@ -115,40 +134,97 @@ gulp.task('images', function() {
     interlaced: true
   })))
 
-  .pipe(gulp.dest('images/min/'))
-
-  // Notify to say the task has complete
-  .pipe(notify({
-    message: 'Image compression complete',
-    onLast: true
-  }))
+  .pipe(gulp.dest(imgPath + '/min/'))
 });
 
 
 //
 // Clear the theme registry with drush
 //
+
 gulp.task('drush', shell.task([
   'drush cache-clear theme-registry'
 ]));
 
 
 //
+// Compile JSDoc
+//
+
+gulp.task('jsdoc', function (cb) {
+  var jsdocConfig = require('./jsdocConfig.json');
+  gulp.src(['README.md', jsPath + '/**/*.js'], {read: false})
+
+  .pipe(jsdoc(jsdocConfig, cb))
+});
+
+
+//
+// Compile SassDoc
+//
+
+gulp.task('sassdoc', function () {
+  return gulp.src(sassPath + '/**/*.scss')
+  .pipe(bulkSass())
+  .pipe(plumber({errorHandler: errorAlert}))
+
+  .pipe(sassdoc({
+    dest: '.' + docPath + sassDocPath
+  }))
+});
+
+
+//
+// Compile KSS styleguide
+//
+
+gulp.task('styleguide', function(){
+  return kss({
+
+    source: sassPath,
+    destination: '.' + docPath + styleguidePath,
+
+    // CSS and JS paths are relative to the generated style guide.
+    css: [
+      // Fonts
+      '//brick.a.ssl.fastly.net/Lora:400i/Roboto:500,300,700,900',
+      // Compiled theme CSS
+      '../../' + cssPath + '/styles.css',
+      // Styleguide-specific CSS
+      '../../' + cssPath + '/styleguide.css'
+    ],
+    js: [
+      // Theme JS
+      '../../' + jsPath + '/fastclick.min.js',
+      '../../' + jsPath + '/jquery.tooltipster.min.js',
+      '../../' + jsPath + '/trf.js',
+      // Styleguide-specific JS
+      '../../' + jsPath + '/styleguide_slideout.min.js',
+      '../../' + jsPath + '/styleguide.js'
+    ],
+
+    homepage: '..' + docPath + '/styleguide.md',
+    title: 'Titanium Rings Forever style guide'
+  });
+});
+
+
+//
 // Run BrowserSync
 //
+
 gulp.task('browser-sync', function() {
 
   // Watch files
   var files = [
-    'styles/main.css',
-    'scripts/**/*.js',
-    'images/**/*',
+    cssPath + '/styles.css',
+    jsPath + '/**/*.js',
+    imgPath + '/**/*',
     'templates/**/*.php'
   ];
 
   // Initialize BrowserSync
   browserSync.init(files, {
-    // BrowserSync with a php server
     proxy: "trf.dev",
     notify: true,
     open: false
@@ -157,90 +233,11 @@ gulp.task('browser-sync', function() {
 
 
 //
-// Compile JSDoc
-//
-// @todo Currently this isn't working after upgrading to JSDoc3, which was
-// necessary because of a fatal bug in JSDoc. Investigate and fix.
-
-gulp.task('jsdoc', function (cb) {
-//  return gulp.src('scripts/*.js')
-
-//  .pipe(jsdoc(cb))
-
-//  .pipe(jsdoc.generator('./documentation/jsdoc'))
-
-  // Notify to say the task has complete
-//  .pipe(notify({
-//    message: 'JSDoc update complete',
-//    onLast: true
-//  }))
-});
-
-
-//
-// Compile SassDoc
-//
-gulp.task('sassdoc', function () {
-  return gulp.src('sass/**/*.scss')
-
-  .pipe(sassdoc({
-    dest: './documentation/sassdoc'
-  }))
-
-  // Notify to say the task has complete
-  .pipe(notify({
-    message: 'SassDoc update complete',
-    onLast: true
-  }))
-});
-
-
-//
-// Compile SC5 Styleguide
-//
-gulp.task('styleguide:generate', function() {
-  return gulp.src(['sass/**/*.scss'])
-
-  .pipe(styleguide.generate({
-      title: 'Titanium Rings Forever style guide',
-      server: false,
-      rootPath: styleguidePath,
-      appRoot: themePath + styleguidePath,
-      overviewPath: 'documentation/styleguide.md'
-    }))
-
-  .pipe(gulp.dest(styleguidePath))
-});
-
-gulp.task('styleguide:applystyles', function() {
-  return gulp.src([cssPath + '/main.css'])
-
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-
-    .pipe(styleguide.applyStyles())
-
-    .pipe(gulp.dest(styleguidePath))
-
-  // Notify to say the task has complete
-  .pipe(notify({
-    message: 'Styleguide update complete',
-    onLast: true
-  }))
-});
-
-gulp.task('styleguide-watch', ['styleguide'], function() {
-  gulp.watch(['sass/**/*.scss'], ['styleguide']);
-});
-
-gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
-
-//
 // Default task to be run with `gulp`
 //
-gulp.task('default', ['sassdoc', 'styleguide', 'sass', 'jsdoc', 'js', 'images', 'browser-sync'], function () {
-  gulp.watch("sass/**/*.scss", ['sassdoc', 'styleguide', 'sass']);
-  gulp.watch("scripts/**/*.js", ['jsdoc', 'js']);
-  gulp.watch('images/*' , ['images']);
+
+gulp.task('default', ['sassdoc', 'styleguide', 'sass', 'jsdoc', 'js', 'images'], function () {
+  gulp.watch(sassPath + '/**/*.scss', ['sassdoc', 'styleguide', 'sass']);
+  gulp.watch(jsPath + '/**/*.js', ['jsdoc', 'js']);
+  gulp.watch(imgPath + '/*' , ['images']);
 });

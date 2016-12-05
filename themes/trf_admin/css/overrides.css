@@ -11,7 +11,6 @@
   text-shadow: none;
 }
 
-
 /*
  * Accommodate escape_admin link
  */
@@ -38,6 +37,39 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
 .toolbar .toolbar-icon-escape-admin::before {
   width: 16px;
   background-position: 0 47%;
+}
+
+/*
+ * Fix overlapping fieldset legends
+ */
+
+legend {
+  min-height: 2em;
+}
+
+/*
+ * CKEditor toolbar fixes
+ */
+
+.cke_panel_frame,
+.cke_format,
+.cke_styles {
+  background-color: #fff !important;
+}
+
+/*
+ * Tweaks for the CKEditor editing area.
+ */
+
+.cke_editable {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.cke_contents,
+.cke_contents.cke_reset {
+  padding: 1rem;
 }
 
 /*
@@ -120,13 +152,13 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
   padding: 1em 1em 0 !important;
 }
 
-.node-rings-form .ief-form > .fieldset-wrapper:before,
-.node-rings-form .ief-form > .fieldset-wrapper:after {
-  content: " ";
+.node-rings-form .ief-form > .fieldset-wrapper::before,
+.node-rings-form .ief-form > .fieldset-wrapper::after {
+  content: ' ';
   display: table;
 }
 
-.node-rings-form .ief-form > .fieldset-wrapper:after {
+.node-rings-form .ief-form > .fieldset-wrapper::after {
   clear: both;
 }
 
@@ -214,7 +246,7 @@ body.toolbar #toolbar-home .toolbar-icon-escape-admin:focus {
  * going down the rabbit hole.
  */
 
-.node-rings-form .field-name-field-related-rings .ief-entity-operations input[value="Edit"] {
+.node-rings-form .field-name-field-related-rings .ief-entity-operations input[value='Edit'] {
   display: none;
 }
 

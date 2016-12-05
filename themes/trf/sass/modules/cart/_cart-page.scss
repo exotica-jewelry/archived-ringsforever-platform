@@ -1,0 +1,86 @@
+//
+// Shopping cart page and first step of checkout process
+//
+
+.page-cart {
+
+  // Table header
+  .views-row-1 .views-field .views-label {
+    background-color: $blue-verydark;
+  }
+
+  // Line items
+  .view-commerce-cart-form-responsive .views-field .field-content {
+    @include font-size(18px);
+  }
+
+  // Ring name
+  .views-field-line-item-title .field-content {
+    font-family: $font-highlight;
+    font-style: italic;
+  }
+
+  // Quantity
+  .views-field-edit-quantity {
+
+    .form-item {
+      margin-top: 0;
+    }
+
+    .form-text {
+      width: auto;
+    }
+  }
+
+  // Remove item
+  .commerce-line-item-views-form input.delete-line-item {
+    font-family: $font-default;
+    font-weight: $normal;
+  }
+
+  // Order total
+  .field-name-commerce-order-total .field-items {
+    min-width: ($padding * 17.5);
+    width: ($padding * 17.5);
+    background-color: $white;
+  }
+
+  // Action buttons
+  .commerce-line-item-views-form .commerce-line-item-actions {
+    position: relative;
+    margin: 0;
+    clear: both;
+    float: right;
+    width: ($padding * 17.5);
+    height: ($padding * 4);
+
+    // Update cart
+    #edit-submit {
+      position: absolute;
+      left: 0;
+      margin: (0.75 * $padding) (2 * $padding);
+      font-family: $font-default;
+    }
+
+    // Checkout
+    #edit-checkout {
+      @extend %button--inline;
+      @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2));
+      position: absolute;
+      right: 0;
+
+      @include is-on {
+        @include card(0);
+        @include i-heart($padding-px, ($padding-px / 2), $pad: ($padding-px * 2), $color: $red);
+      }
+
+      @include disabled {
+        @include a-zoomfade(1.25);
+      }
+    }
+  }
+
+  .is-loading {
+    @extend %is-loading--inline;
+  }
+}

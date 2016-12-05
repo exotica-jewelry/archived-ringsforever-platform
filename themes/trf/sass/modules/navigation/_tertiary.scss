@@ -1,0 +1,53 @@
+//
+// TERTIARY NAVIGATION
+//
+// Blog, contact, about
+//
+
+.block-menu-tertiary-navigation {
+
+  ul.menu {
+    text-align: right;
+
+    @include mq(smallish) {
+      text-align: left;
+    }
+  }
+
+  ul.menu li.collapsed,
+  ul.menu li.leaf {
+    display: inline-block;
+    margin: 0 ($padding / 4);
+    padding-right: 0;
+    list-style-type: none;
+    list-style-image: none;
+    font-family: $font-default;
+
+    @include mq(smallish) {
+      margin: 0 ($padding / 2);
+    }
+
+    a {
+      @include a-slidehover('up');
+      display: block;
+      position: relative;
+      margin: 0 0 ($padding * -1);
+      padding: ($padding / 4) ($padding / 2) $padding;
+      font-family: $font-default;
+      @include font-size(16px);
+      font-weight: $normal;
+      color: $white;
+      background-color: $blue;
+      border-radius: $border-radius;
+
+      @include is-on {
+        background-color: $blue-dark;
+      }
+
+      @include mq(smallish) {
+        margin: $padding 0 ($padding * -1);
+        padding: ($padding / 2) $padding ($padding * 1.5);
+      }
+    }
+  }
+}

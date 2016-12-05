@@ -2,7 +2,6 @@
 // Sizes
 //
 // Documented with SassDoc.
-// styleguide:ignore:start
 //
 
 /// Standard padding
@@ -29,14 +28,15 @@ $icon-size: 36px;
 /// Image style sizes
 ///
 /// @group Sizes
-$imagestyle-ring_feature: 325px;
-$imagestyle-product_thumbnail: 110px;
-$imagestyle-product_medium: 215px;
-$imagestyle-product_full: 416px;
+$imagestyle__ring-feature: 325px;
+$imagestyle__product-thumbnail: 110px;
+$imagestyle__product-medium: 215px;
+$imagestyle__product-medium--mobile: 150px;
+$imagestyle__product-full: 416px;
+$logo__width: 600px;
+$logo__height: 126px;
 
 /// Commerce top bar size
 ///
 /// @group Sizes
 $topbar-size: 59px;
-
-// styleguide:ignore:end

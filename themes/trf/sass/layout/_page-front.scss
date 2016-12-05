@@ -1,0 +1,17 @@
+//
+// Front page layout
+//
+
+.front {
+
+  // Layout
+  .zone-content {
+    padding-top: 0;
+    margin-bottom: (2 * $padding);
+  }
+
+  // Nodes
+  .node {
+    border: none;
+  }
+}

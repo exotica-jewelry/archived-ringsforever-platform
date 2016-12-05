@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TRF store checkout feature.
+ */
+
+include_once 'trf_store_checkout.features.inc';

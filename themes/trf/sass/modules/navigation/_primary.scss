@@ -1,0 +1,44 @@
+//
+// PRIMARY NAVIGATION
+//
+// Collections, "all rings"
+//
+
+.navigation--primary {
+  @extend %navigation--main;
+
+  .menu li {
+
+    &.last a {
+      font-weight: $normal;
+
+      @include mq(smallish) {
+        padding: 0;
+      }
+    }
+
+    a {
+      @include font-size(18px);
+      font-weight: $thin;
+
+      @include is-on {
+        color: $white;
+      }
+
+      @include mq(smallish) {
+        @include a-border-bottom;
+        padding: 0;
+        @include font-size(16px);
+      }
+
+      @include mq(mediumish) {
+        @include font-size(18px);
+      }
+
+      &.active,
+      &.active-trail {
+        color: $white;
+      }
+    }
+  }
+}

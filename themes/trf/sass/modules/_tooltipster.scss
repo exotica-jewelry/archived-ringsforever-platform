@@ -3,10 +3,14 @@
 //
 
 .tooltipster-default {
+  border: none;
   background-color: rgba($black, 0.9);
 
   .tooltipster-content {
-    font-family: $fontDefault;
+    font-family: $font-default;
+    @include font-size(14px);
+    font-weight: $normal;
+    text-align: center;
   }
 }
 

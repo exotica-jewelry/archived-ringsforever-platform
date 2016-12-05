@@ -1,0 +1,64 @@
+//
+// Pager at the bottom of multi-page views
+//
+
+%pager__item {
+  float: none;
+  margin: 0 ($padding / 2);
+  padding: ($padding / 2) $padding;
+  background-color: transparent;
+  border: ($line-width / 2) solid $white;
+  border-radius: ($padding * 2);
+  font-weight: $bold;
+  white-space: nowrap;
+}
+
+%pager__link {
+  background-color: $white;
+
+  @include is-on {
+    background-color: $blue-verydark;
+    color: $white;
+  }
+}
+
+.item-list.item-list.item-list .pager {
+  margin: (2 * $padding) 0;
+  @include font-size(18px);
+
+  li {
+    display: inline-block;
+    margin: $padding 0;
+  }
+
+  .pager-current,
+  .pager-item a,
+  .pager-previous a,
+  .pager-next a {
+    @extend %pager__item;
+  }
+
+  .pager-item a,
+  .pager-previous a,
+  .pager-next a {
+    @extend %pager__link;
+  }
+
+  .pager-item,
+  .pager-previous,
+  .pager-next {
+    float: none;
+  }
+
+  .pager-first,
+  .pager-last,
+  .pager-ellipsis {
+    margin: 0 ($padding / 2);
+    font-weight: $bold;
+    white-space: nowrap;
+  }
+
+  .pager-ellipsis {
+    color: $blue;
+  }
+}

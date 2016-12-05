@@ -1,0 +1,39 @@
+//
+// Images and captioned images
+//
+
+figure {
+  display: inline-block;
+
+  > figcaption {
+    @include font-size(18px);
+
+    a {
+      @extend %link--basic;
+      font-weight: bold;
+    }
+  }
+}
+
+// Floated styles, applying to both <img> and <figure> elements.
+
+.align-right,
+.align-left {
+  display: block;
+  margin: $padding 0;
+  float: none;
+}
+
+.align-right {
+  @include mq(smallish) {
+    margin: 0 0 $padding $padding;
+    float: right;
+  }
+}
+
+.align-left {
+  @include mq(smallish) {
+    margin: 0 $padding $padding 0;
+    float: left;
+  }
+}

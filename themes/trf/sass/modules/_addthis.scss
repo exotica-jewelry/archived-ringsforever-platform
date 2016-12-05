@@ -1,0 +1,16 @@
+//
+// AddThis social sharing buttons
+//
+
+.field-name-addthis-buttons {
+  margin: $padding 0;
+  height: 2.75pc; // size of AddThis buttons; included to prevent reflow
+
+  .at-share-tbx-element .at-share-btn {
+    margin-right: ($padding / 2);
+
+    @include mq(smallish) {
+      margin-right: $padding;
+    }
+  }
+}

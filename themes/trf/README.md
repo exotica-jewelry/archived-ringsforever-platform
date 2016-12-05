@@ -11,9 +11,10 @@ First, you will need to install Node.js and Gulp; ample documentation exists
 online to guide you.
 
 To compile the Sass into updated CSS, from the command line, `cd` into the theme
-directory and run `npm install` to fetch all dependencies. Then, run `gulp` to
-start watching and compiling. The default gulp task will update documentation as
-necessary, as well as minify images and scripts, and auto-prefix CSS rulesets.
+directory and run `npm install` and `bower install` to fetch all dependencies.
+Then, run `gulp` to start watching and compiling. The default gulp task will
+update documentation as necessary, as well as minify images and scripts, and
+auto-prefix CSS rulesets.
 
 ## Version control
 
@@ -38,19 +39,19 @@ documentation syntax, when adding new code.**
 Documentation is critical to keeping this theme maintainable. Please do not plan
 to "do it later". Do it now, as you write your code.
 
-### [Style Guide (SC5)](/sites/all/themes/trf/documentation/styleguide/)
+### [Style Guide (KSS)](/sites/all/themes/trf/documentation/styleguide/index.html)
 
 Documents the assorted designs, components, styles and markup patterns defined
 by the TRF site. You'll probably want to start here. Generated automatically
 using the default `gulp` task using comments in the Sass files.
 
-### [SassDoc](/sites/all/themes/trf/documentation/sassdoc/)
+### [SassDoc](/sites/all/themes/trf/documentation/sassdoc/index.html)
 
 Documents Sass breakpoints, functions and mixins, which are not included in a
 style guide. Generated automatically using the default `gulp` task using
 comments in the Sass files.
 
-### [JSDoc](/sites/all/themes/trf/documentation/jsdoc/)
+### [JSDoc](/sites/all/themes/trf/documentation/jsdoc/index.html)
 
 Documents custom JavaScript on the TRF site.
 
@@ -72,6 +73,11 @@ These standards are specifically designed to align with the
 [Drupal coding standards](https://www.drupal.org/coding-standards).
 
 ### Standards for writing Sass files
+
+A [Sass Lint](https://github.com/sasstools/sass-lint) file is included in the
+theme to enforce the following standards. Sass Lint has
+[integrations](https://github.com/sasstools/sass-lint#ide-integration) for many
+text editors and IDEs.
 
 * For class names, use SMACSS principles and BEM syntax, with styles broken into
 componentized Sass partials. Note this often means altering default Drupal

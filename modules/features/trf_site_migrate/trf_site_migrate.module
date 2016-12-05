@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TRF site migrate feature.
+ */
+
+include_once 'trf_site_migrate.features.inc';

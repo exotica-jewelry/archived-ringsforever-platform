@@ -6,41 +6,47 @@
 
 %otherrings {
   @include clearfix;
+  text-align: center;
+
+  .more-link > a {
+    font-weight: $bold;
+    color: $blue-verydark;
+  }
 }
 
 %otherrings__label {
   @extend %header;
   margin-bottom: $padding;
   @include font-size(24px);
-  line-height: 1.5;
+  line-height: 1.25;
   font-weight: $thin;
+  text-align: left;
   border-bottom: 1px $black solid;
 }
 
 %otherrings__items {
   @include clearfix;
-  @include no-block-padding;
 }
 
 %otherrings__item {
   display: inline-block;
-  width: $imagestyle-product_thumbnail;
+  width: $imagestyle__product-thumbnail;
   margin-right: $padding;
 
   @include is-on {
-    background-color: rgba($blue_dark, 0.2);
+    background-color: rgba($blue-dark, 0.2);
 
     .container-24.prefix-1 .commerce-product-field-field-images a {
       box-shadow: 0 0 10px $blue;
     }
 
     .container-24.prefix-1 .field-name-field-ring-name a {
-      color: $blue_verydark;
+      color: $blue-verydark;
     }
   }
 
   .container-24.prefix-1 {
-    width: $imagestyle-product_thumbnail;
+    width: $imagestyle__product-thumbnail;
     padding-left: 0;
     text-align: center;
 
@@ -51,7 +57,7 @@
 
       a {
         display: block;
-        width: $imagestyle-product_thumbnail;
+        width: $imagestyle__product-thumbnail;
       }
     }
 
@@ -61,7 +67,7 @@
       a {
         @include font-size(14px);
         font-weight: $bold;
-        color: $blue_dark;
+        color: $blue-dark;
       }
     }
 
@@ -109,5 +115,4 @@
 .field-name-field-related-rings,
 .field-name-field-related-rings__items {
   display: inline-block;
-  @include no-block-padding;
 }

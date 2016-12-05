@@ -12,6 +12,43 @@ function trf_ring_taxonomies_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'taxonomy_term|brand|featured';
+  $ds_fieldsetting->entity_type = 'taxonomy_term';
+  $ds_fieldsetting->bundle = 'brand';
+  $ds_fieldsetting->view_mode = 'featured';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => 'featured-categories__title',
+        'ft' => array(),
+        'conditions' => array(),
+      ),
+    ),
+  );
+  $export['taxonomy_term|brand|featured'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'taxonomy_term|collection|add_to_cart_form';
+  $ds_fieldsetting->entity_type = 'taxonomy_term';
+  $ds_fieldsetting->bundle = 'collection';
+  $ds_fieldsetting->view_mode = 'add_to_cart_form';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['taxonomy_term|collection|add_to_cart_form'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'taxonomy_term|collection|featured';
   $ds_fieldsetting->entity_type = 'taxonomy_term';
   $ds_fieldsetting->bundle = 'collection';
@@ -58,6 +95,99 @@ function trf_ring_taxonomies_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'taxonomy_term|brand|featured';
+  $ds_layout->entity_type = 'taxonomy_term';
+  $ds_layout->bundle = 'brand';
+  $ds_layout->view_mode = 'featured';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_cat_featured_rings',
+        2 => 'description',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_cat_featured_rings' => 'ds_content',
+      'description' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => 'content',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['taxonomy_term|brand|featured'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'taxonomy_term|collection|add_to_cart_form';
+  $ds_layout->entity_type = 'taxonomy_term';
+  $ds_layout->bundle = 'collection';
+  $ds_layout->view_mode = 'add_to_cart_form';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['taxonomy_term|collection|add_to_cart_form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'taxonomy_term|collection|default';
+  $ds_layout->entity_type = 'taxonomy_term';
+  $ds_layout->bundle = 'collection';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_cat_title',
+        1 => 'description',
+      ),
+    ),
+    'fields' => array(
+      'field_cat_title' => 'ds_content',
+      'description' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['taxonomy_term|collection|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'taxonomy_term|collection|featured';
   $ds_layout->entity_type = 'taxonomy_term';
   $ds_layout->bundle = 'collection';
@@ -100,14 +230,10 @@ function trf_ring_taxonomies_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_cat_title',
-        1 => 'field_cat_featured_rings',
-        2 => 'description',
       ),
     ),
     'fields' => array(
       'field_cat_title' => 'ds_content',
-      'field_cat_featured_rings' => 'ds_content',
-      'description' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

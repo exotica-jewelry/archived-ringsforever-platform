@@ -1,76 +1,89 @@
 @charset 'utf-8';
 
+// @file
+// The major stylesheet for this theme.
 //
+// We categorize our components by creating headings in this file. Note that per
+// the KSS documentation, "not every CSS rule should be documented." Only rules
+// that describe visual UI elements are documented in the styleguide. Therefore,
+// there is not (and does not need to be) a 1:1 correspondence between the
+// style guide sections and the Sass folders and partials.
+
+
 // Imports
 //
+// Via Bower + sass-module-importer
+@import 'sass-mq';
+// Via Bower alone
+@import '../bower_components/motion-ui/motion-ui.scss';
+// Via vendor folder
+@import 'global/vendor/*';
 
-// Utils
-@import "global/vendor/*";
-@import "global/variables/colors";
-@import "global/variables/fonts";
-@import "global/variables/patterns";
-@import "global/variables/icons";
-@import "global/variables/sizes";
-@import "global/variables/transitions";
-@import "global/functions";
-@import "global/mixins";
-
-// Base
-@import "base/html";
-@import "base/forms/*";
-@import "base/typography/*";
-
-// Layout
-@import "layout/*";
-
-// Components
-@import "components/*";
-
-// Modules
-@import "modules/*";
-
+// Variables
 //
-// SC5 Styleguide section definitions
+// Things like base colors, sizes and typography.
 //
-// Note that per the KSS documentation (which SC5 Styleguide is based on), "not
-// every CSS rule should be documented." Only rules that describe visual UI
-// elements are documented in the styleguide. Therefore, there is not (and does
-// not need to be) a 1:1 correspondence between the Styleguide sections and the
-// Sass folders and partials.
+// Weight: -1
 //
+// Style guide: variables
+@import 'global/variables/breakpoints';
+@import 'global/variables/colors';
+@import 'global/variables/fonts';
+@import 'global/variables/patterns';
+@import 'global/variables/icons';
+@import 'global/variables/sizes';
+@import 'global/animations';
 
-// Colors, backgrounds, fonts
+// Functions, mixins and third-party libraries
 //
-// This section describes base colors, patterns and typography. Everything in
-// this section is simply a variable, used elsewhere in Sass files for styles.
-//
-// Styleguide 1.0
+// Sass helper files. These are documented by SassDoc, and not included in the
+// style guide.
+@import 'global/functions';
+@import 'global/mixins';
+@import 'global/animations';
 
+// Base defaults
+//
+// These are the default styles applied to HTML elements.
+//
+// Component classes can override these styles, but if no class applies a style
+// to an HTML element, these styles will be the ones displayed.
+//
+// Style guide: base
+@import 'base/html';
+@import 'base/images';
+// Form elements
+//
+// Style guide: base.form
+@import 'base/forms/*';
 // Typography
 //
-// Unlike the "Colors, background, fonts" section, which holds only variables,
-// this section defines specific styles used in the site.
-//
-// <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:500,300,700,900" media="all" />
-//
-// Styleguide 2.0
+// Style guide: base.type
+@import 'base/typography/*';
 
-// Buttons, forms, links
+// Layout
 //
-// Form elements, buttons (submit and other) as well as generic hyperlinks.
-//
-// Styleguide 3.0
+// These structural styles are not included in the styleguide.
+@import 'layout/*';
 
 // Components
 //
-// Building blocks (elements in BEM; molecules in atomic design) used in
-// modules.
+// Design components are reusable designs that can be applied using just the CSS
+// class names specified in the component. (Elements in BEM; molecules in atomic
+// design.)
 //
-// Styleguide 4.0
+// Weight: 1
+//
+// Style guide: components
+@import 'components/*';
 
 // Modules
 //
-// Re-useable design items (blocks in BEM; organisms in atomic design) used
-// throughout the site. Unrelated to Drupal modules.
+// Design modules are components constructed into specific items, such as a
+// product listing or a cart display. (Blocks in BEM; organisms in atomic
+// design.) Unrelated to Drupal modules.
 //
-// Styleguide 5.0
+// Weight: 2
+//
+// Style guide: modules
+@import 'modules/*';

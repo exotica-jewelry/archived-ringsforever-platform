@@ -1,0 +1,85 @@
+//
+// Form items (for instance, for line items and addresses)
+//
+
+.page-checkout form,
+.page-checkout #commerce-checkout-form-checkout,
+.page-checkout #commerce-checkout-form-review {
+
+  // Section headers
+  fieldset legend {
+    border-bottom-color: $black;
+  }
+
+  // State dropdowns
+  .form-select.state {
+    max-width: 280px;
+  }
+
+  // Line items
+  .commerce-responsive-table .views-row .field-content {
+    @include font-size(18px);
+  }
+
+  // Total
+  .field-name-commerce-order-total .field-items {
+    background-color: $white;
+  }
+
+  // Email address
+  .account {
+
+    // Hiding 'account information' label since they won't create an account
+    legend {
+      display: none;
+    }
+
+    label {
+      float: none;
+    }
+  }
+
+  // Are billing and shipping addresses the same?
+  .commerce-customer-profile-copy {
+    .placeholder {
+      font-weight: $bold;
+      font-style: normal;
+      font-family: $font-default;
+      color: $blue-verydark;
+    }
+  }
+
+  // Payment options
+  .commerce_payment {
+    margin-top: $padding;
+
+    label {
+      width: auto;
+    }
+
+    // Wrapper for credit card icons
+    .commerce-paypal-icons {
+      margin: ($padding / 4) 0;
+
+      .label {
+        padding-left: ($padding * 2.25);
+      }
+    }
+
+    // Icon images
+    .commerce-paypal-icon {
+      position: static;
+      top: 0;
+      padding-bottom: 6px;
+    }
+
+    .commerce-credit-card-expiration select {
+      padding: 0.25rem 2rem 0.25rem 0.5rem;
+    }
+  }
+
+  // Payment option help text
+  #payment-details {
+    font-weight: $bold;
+  }
+}
