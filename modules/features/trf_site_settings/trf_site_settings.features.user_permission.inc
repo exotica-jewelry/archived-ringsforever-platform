@@ -28,6 +28,20 @@ function trf_site_settings_user_default_permissions() {
     'module' => 'environment_indicator',
   );
 
+  // Exported permission: 'access environment indicator development'.
+  $permissions['access environment indicator development'] = array(
+    'name' => 'access environment indicator development',
+    'roles' => array(),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator development_platform'.
+  $permissions['access environment indicator development_platform'] = array(
+    'name' => 'access environment indicator development_platform',
+    'roles' => array(),
+    'module' => 'environment_indicator',
+  );
+
   // Exported permission: 'access environment indicator live'.
   $permissions['access environment indicator live'] = array(
     'name' => 'access environment indicator live',
