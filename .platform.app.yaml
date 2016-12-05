@@ -19,7 +19,7 @@ access:
 dependencies:
     php:
         "drush/drush": "8.1.8"
-        "sqmk/pecl-jsmin": "2.0.1"
+        "linkorb/jsmin-php": "1.0.0"
 
 # Additional extensions
 runtime:
