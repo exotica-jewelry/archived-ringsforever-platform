@@ -20,19 +20,6 @@ dependencies:
     php:
         "drush/drush": "8.1.8"
 
-hooks:
-  deploy: |
-    if [ $PLATFORM_BRANCH = "master" ]; then
-      # Use Drush to disable the Devel module on the Master environment.
-      ### drush dis devel -y
-    else
-      # Use Drush to enable the Devel module on other environments.
-      ### drush en devel -y
-      # Sanitize your database and get rid of sensitive information from Master environment.
-      drush -y sql-sanitize --sanitize-email=user_%uid@example.com --sanitize-password=password
-    fi
-    drush -y updatedb
-
 # Additional extensions
 runtime:
     extensions:
