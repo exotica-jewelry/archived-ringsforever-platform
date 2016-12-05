@@ -11,7 +11,6 @@ projects[commerce_kickstart][type] = core
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-www.patch"
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-feedburner.patch"
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-111.patch"
-projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-remove_double_underscore_from_css_filter-1109854-43.patch"
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-2289493-3-image_get_info-filesize-D7.patch"
 
 ; Patches against Commerce Kickstart modules.
