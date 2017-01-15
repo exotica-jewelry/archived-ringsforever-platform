@@ -35,13 +35,6 @@ function trf_site_settings_user_default_permissions() {
     'module' => 'environment_indicator',
   );
 
-  // Exported permission: 'access environment indicator development_platform'.
-  $permissions['access environment indicator development_platform'] = array(
-    'name' => 'access environment indicator development_platform',
-    'roles' => array(),
-    'module' => 'environment_indicator',
-  );
-
   // Exported permission: 'access environment indicator live'.
   $permissions['access environment indicator live'] = array(
     'name' => 'access environment indicator live',
@@ -72,6 +65,51 @@ function trf_site_settings_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'exclude from message filtering'.
+  $permissions['exclude from message filtering'] = array(
+    'name' => 'exclude from message filtering',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'disable_messages',
+  );
+
+  // Exported permission: 'view error messages'.
+  $permissions['view error messages'] = array(
+    'name' => 'view error messages',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'store manager' => 'store manager',
+    ),
+    'module' => 'disable_messages',
+  );
+
+  // Exported permission: 'view status messages'.
+  $permissions['view status messages'] = array(
+    'name' => 'view status messages',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'store manager' => 'store manager',
+    ),
+    'module' => 'disable_messages',
+  );
+
+  // Exported permission: 'view warning messages'.
+  $permissions['view warning messages'] = array(
+    'name' => 'view warning messages',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'store manager' => 'store manager',
+    ),
+    'module' => 'disable_messages',
   );
 
   return $permissions;

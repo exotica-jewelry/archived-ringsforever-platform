@@ -13,7 +13,6 @@ function trf_site_settings_features_override_default_overrides() {
 
   // Exported overrides for: environment_indicator_environment
   $overrides["environment_indicator_environment.default_environment.disabled"] = FALSE;
-  $overrides["environment_indicator_environment.staging_platform.regexurl"] = 'www---staging-5em2ouy-44icmnpta2qxy.us.platform.sh/';
 
  return $overrides;
 }

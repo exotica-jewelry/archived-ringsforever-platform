@@ -73,6 +73,71 @@ function trf_site_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_debug_visible_div';
+  $strongarm->value = 0;
+  $export['disable_messages_debug_visible_div'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_enable';
+  $strongarm->value = 1;
+  $export['disable_messages_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_enable_debug';
+  $strongarm->value = 0;
+  $export['disable_messages_enable_debug'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_exclude_users';
+  $strongarm->value = '1';
+  $export['disable_messages_exclude_users'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_filter_by_page';
+  $strongarm->value = '0';
+  $export['disable_messages_filter_by_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_ignore_case';
+  $strongarm->value = 1;
+  $export['disable_messages_ignore_case'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_ignore_patterns';
+  $strongarm->value = 'There are security updates available.*';
+  $export['disable_messages_ignore_patterns'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_ignore_regex';
+  $strongarm->value = array(
+    0 => '/^There are security updates available.*$/i',
+  );
+  $export['disable_messages_ignore_regex'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disable_messages_page_filter_paths';
+  $strongarm->value = '';
+  $export['disable_messages_page_filter_paths'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'environment_indicator_favicon_overlay';
   $strongarm->value = 1;
   $export['environment_indicator_favicon_overlay'] = $strongarm;

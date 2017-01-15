@@ -26,7 +26,4 @@ function trf_site_settings_default_environment_indicator_environment_alter(&$dat
   if (isset($data['default_environment'])) {
     $data['default_environment']->disabled = FALSE; /* WAS: '' */
   }
-  if (isset($data['staging_platform'])) {
-    $data['staging_platform']->regexurl = 'www---staging-5em2ouy-44icmnpta2qxy.us.platform.sh/'; /* WAS: '^(dev|master)-[\\w.-]+\\.us.platform.sh' */
-  }
 }
