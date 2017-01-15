@@ -72,6 +72,8 @@ projects[dialog][version] = "2.0-beta1"
 
 projects[diff][version] = "3.3"
 
+projects[disable_messages][version] = "1.1"
+
 projects[disqus][version] = "1.12"
 
 projects[ds][version] = "2.14"
