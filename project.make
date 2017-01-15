@@ -34,7 +34,7 @@ projects[advagg][version] = "2.19"
 
 projects[auto_entitylabel][version] = "1.3"
 
-projects[autocomplete_deluxe][version] = "2.1"
+projects[autocomplete_deluxe][version] = "2.2"
 
 projects[backup_migrate][version] = "3.1"
 
