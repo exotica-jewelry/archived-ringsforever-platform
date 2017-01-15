@@ -30,7 +30,7 @@ defaults[projects][subdir] = contrib
 
 projects[a11y_titles][version] = "1.0-beta1"
 
-projects[advagg][version] = "2.19"
+projects[advagg][version] = "2.20"
 
 projects[auto_entitylabel][version] = "1.3"
 
@@ -70,7 +70,7 @@ projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues
 
 projects[dialog][version] = "2.0-beta1"
 
-projects[diff][version] = "3.2"
+projects[diff][version] = "3.3"
 
 projects[disqus][version] = "1.12"
 
@@ -178,7 +178,7 @@ projects[mailcontrol][version] = "1.0"
 
 projects[menu_trail_by_path][version] = "3.2"
 
-projects[metatag][version] = "1.18"
+projects[metatag][version] = "1.19"
 
 projects[migrate_d2d][version] = "2.1"
 
@@ -194,7 +194,7 @@ projects[prlp][version] = "1.3"
 
 projects[redirect][version] = "1.0-rc3"
 
-projects[redis][version] = "3.13"
+projects[redis][version] = "3.15"
 
 projects[schemaorg][version] = "1.0-rc1"
 
