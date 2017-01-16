@@ -54,9 +54,7 @@ function trf_ring_type_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Ring pages: Sizing';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'ring_sizing';
-  $fe_block_boxes->body = 'We\'re committed to a <a class="colorbox-node" href="/sizing-resizing-our-guarantee">guaranteed perfect fit</a> for your titanium wedding ring.
-
-Because sizing equipment used by jewelers can vary a lot, once you place an order we\'ll <a class="colorbox-node" href="/where-do-i-select-my-ring-size">mail finger sizers to you</a> in order to ensure your ring fits perfectly.';
+  $fe_block_boxes->body = '<p>We\'re committed to a <a class="colorbox-node" href="/sizing-resizing-our-guarantee">guaranteed perfect fit</a> for your titanium wedding ring. Because sizing equipment used by jewelers can vary a lot, once you place an order we\'ll <a class="colorbox-node" href="/where-do-i-select-my-ring-size">mail finger sizers to you</a> in order to ensure your ring fits perfectly.</p>';
 
   $export['ring_sizing'] = $fe_block_boxes;
 
@@ -64,8 +62,7 @@ Because sizing equipment used by jewelers can vary a lot, once you place an orde
   $fe_block_boxes->info = 'Ring pages: Width';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'ring_width';
-  $fe_block_boxes->body = '<p>Select your desired width for this ring.</p>
-';
+  $fe_block_boxes->body = '<p>Select your desired width for this ring.</p>';
 
   $export['ring_width'] = $fe_block_boxes;
 
