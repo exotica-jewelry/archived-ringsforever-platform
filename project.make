@@ -180,7 +180,7 @@ projects[mailcontrol][version] = "1.0"
 
 projects[menu_trail_by_path][version] = "3.2"
 
-projects[metatag][version] = "1.19"
+projects[metatag][version] = "1.20"
 
 projects[migrate_d2d][version] = "2.1"
 
