@@ -131,7 +131,7 @@ projects[hide_php_fatal_error][version] = "1.0"
 
 projects[hide_submit][version] = "2.4"
 
-projects[hierarchical_select][version] = "3.0-beta7"
+projects[hierarchical_select][version] = "3.0-beta8"
 
 projects[html5_tools][version] = "1.3"
 
@@ -178,13 +178,13 @@ projects[linkit][version] = "3.5"
 
 projects[mailcontrol][version] = "1.0"
 
-projects[menu_trail_by_path][version] = "3.2"
+projects[menu_trail_by_path][version] = "3.3"
 
-projects[metatag][version] = "1.20"
+projects[metatag][version] = "1.21"
 
 projects[migrate_d2d][version] = "2.1"
 
-projects[paranoia][version] = "1.6"
+projects[paranoia][version] = "1.7"
 
 projects[path_redirect_import][version] = "1.0-rc4"
 
@@ -204,7 +204,7 @@ projects[seckit][version] = "1.9"
 
 projects[search404][version] = "1.4"
 
-projects[search_api_solr][version] = "1.11"
+projects[search_api_solr][version] = "1.12"
 
 projects[searchapimultiaggregate][version] = "1.2"
 
