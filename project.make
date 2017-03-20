@@ -30,7 +30,7 @@ defaults[projects][subdir] = contrib
 
 projects[a11y_titles][version] = "1.0-beta1"
 
-projects[advagg][version] = "2.20"
+projects[advagg][version] = "2.21"
 
 projects[auto_entitylabel][version] = "1.3"
 
