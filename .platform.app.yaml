@@ -54,21 +54,6 @@ mounts:
     "/private": "shared:files/private"
     "/drush-backups": "shared:files/drush-backups"
 
-# The hooks that will be triggered when the package is deployed.
-hooks:
-    # Build hooks can modify the application files on disk but not access any services like databases.
-    # Lines 62-67: Install Brotli
-    build: |
-      git clone --recursive --depth=1 https://github.com/kjdev/php-ext-brotli.git
-      cd php-ext-brotli
-      phpize
-      ./configure
-      make
-      make install
-    # Deploy hooks can access services but the file system is now read-only.
-    # deploy: |
-    # app/console --env=prod cache:clear
-
 # The configuration of scheduled execution.
 crons:
     drupal:
