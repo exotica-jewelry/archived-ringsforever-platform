@@ -18,7 +18,7 @@ access:
 # The build-time dependencies of the app.
 dependencies:
     php:
-        "drush/drush": "8.1.8"
+        "drush/drush": "8.1.10"
 
 # Additional extensions
 runtime:
