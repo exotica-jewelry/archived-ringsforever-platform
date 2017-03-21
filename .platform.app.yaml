@@ -9,7 +9,7 @@ type: "php:5.6"
 
 # Configuration of the build of the application.
 build:
-    flavor: drupal
+    flavor: none
 
 # Configuration of server access.
 access:
