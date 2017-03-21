@@ -64,7 +64,7 @@ hooks:
       phpize
       ./configure
       make
-      make test
+      make install
     # Deploy hooks can access services but the file system is now read-only.
     # deploy: |
     # app/console --env=prod cache:clear
