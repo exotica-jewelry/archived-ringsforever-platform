@@ -9,7 +9,7 @@ type: "php:5.6"
 
 # Configuration of the build of the application.
 build:
-    flavor: none
+    flavor: drupal
 
 # Configuration of server access.
 access:
@@ -52,7 +52,6 @@ hooks:
     # Build hooks can modify the application files on disk but not access any services like databases.
     build: |
       export PHP_INI_SCAN_DIR=":$(pwd)"
-      composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
     # Deploy hooks can access services but the file system is now read-only.
     # deploy: |
     #  app/console --env=prod cache:clear
