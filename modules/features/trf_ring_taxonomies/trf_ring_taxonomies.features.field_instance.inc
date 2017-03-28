@@ -38,6 +38,7 @@ function trf_ring_taxonomies_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
           'field_multiple_limit_order' => 0,
           'links' => 0,
+          'use_content_language' => TRUE,
           'view_mode' => 'featured',
         ),
         'type' => 'entityreference_entity_view',
