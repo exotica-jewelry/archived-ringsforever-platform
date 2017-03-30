@@ -58,6 +58,15 @@ function trf_site_settings_user_default_permissions() {
     'module' => 'environment_indicator',
   );
 
+  // Exported permission: 'administer blockify'.
+  $permissions['administer blockify'] = array(
+    'name' => 'administer blockify',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'blockify',
+  );
+
   // Exported permission: 'administer environment indicator settings'.
   $permissions['administer environment indicator settings'] = array(
     'name' => 'administer environment indicator settings',

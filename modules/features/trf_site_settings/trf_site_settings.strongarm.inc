@@ -34,6 +34,23 @@ function trf_site_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'blockify_blocks';
+  $strongarm->value = array(
+    'blockify-logo' => 'blockify-logo',
+    'blockify-site-name' => 'blockify-site-name',
+    'blockify-site-slogan' => 'blockify-site-slogan',
+    'blockify-page-title' => 'blockify-page-title',
+    'blockify-tabs' => 'blockify-tabs',
+    'blockify-messages' => 'blockify-messages',
+    'blockify-actions' => 'blockify-actions',
+    'blockify-feed-icons' => 'blockify-feed-icons',
+    'blockify-breadcrumb' => 0,
+  );
+  $export['blockify_blocks'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'clean_url';
   $strongarm->value = '1';
   $export['clean_url'] = $strongarm;
