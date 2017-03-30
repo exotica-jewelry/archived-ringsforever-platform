@@ -3,8 +3,12 @@
 //
 
 .block-blockify-site-slogan {
-  margin: 0 0 $padding;
+  margin: $padding 0;
   @include font-size(14px);
+
+  @include mq(tinyish) {
+    margin: 0 0 $padding;
+  }
 
   .site-slogan {
 
