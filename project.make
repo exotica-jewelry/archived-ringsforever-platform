@@ -40,6 +40,8 @@ projects[backup_migrate][version] = "3.1"
 
 projects[block_class][version] = "2.3"
 
+projects[blockify][version] = "1.2"
+
 projects[breakpoints][version] = "1.4"
 
 projects[cer][version] = "3.0-alpha7"
