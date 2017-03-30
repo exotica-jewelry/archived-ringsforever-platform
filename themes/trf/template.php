@@ -53,3 +53,34 @@ function trf_form_contact_site_form_alter(&$form, &$form_state) {
 function trf_commerce_cart_empty_page() {
   return '<div class="cart-empty-page"><p>Your shopping cart is empty.</p><p><a href="/products" title="View all titanium wedding rings">Browse our complete catalog of titanium wedding rings.</a></p></div>';
 }
+
+/**
+ * (Blockify) Returns the rendered logo.
+ *
+ * @ingroup themeable
+ */
+function trf_blockify_logo($variables) {
+  $site_name = filter_xss_admin(variable_get('site_name', 'Drupal'));
+
+  // Strip the base_path from the beginning of the logo path.
+  $path = preg_replace('|^' . base_path() . '|', '', $variables['logo_path']);
+
+  $image = array(
+    '#theme' => 'image',
+    '#path' => $path,
+    '#attributes' => array('class' => 'logo-img'),
+    '#alt' => t('!site_name', array(
+      '!site_name' => $site_name,
+    ))
+  );
+
+  return l(render($image), '<front>', array(
+    'html' => TRUE,
+    'attributes' => array(
+      'rel' => 'home',
+      'title' => t('Return to the !site_name home page', array(
+        '!site_name' => $site_name,
+      )),
+    ),
+  ));
+}
