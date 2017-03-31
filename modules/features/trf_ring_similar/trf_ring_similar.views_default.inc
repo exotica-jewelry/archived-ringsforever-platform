@@ -40,7 +40,7 @@ function trf_ring_similar_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Field: Content: Rendered Node */
+  /* Field: Content: Rendered Content */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
@@ -169,7 +169,7 @@ function trf_ring_similar_views_default_views() {
   $handler->display->display_options['fields']['field_cat_title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_cat_title']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_cat_title']['type'] = 'text_plain';
-  /* Field: Content: Rendered Node */
+  /* Field: Content: Rendered Content */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
