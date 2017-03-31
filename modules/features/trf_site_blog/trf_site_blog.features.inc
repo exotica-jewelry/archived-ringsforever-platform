@@ -45,6 +45,7 @@ function trf_site_blog_field_default_field_instances_alter(&$data) {
     unset($data['node-blog_post-field_tags']);
   }
   if (isset($data['node-blog_post-title_field'])) {
+    $data['node-blog_post-title_field']['display']['default']['label'] = 'hidden'; /* WAS: 'above' */
     $data['node-blog_post-title_field']['display']['teaser']['label'] = 'hidden'; /* WAS: 'above' */
     $data['node-blog_post-title_field']['display']['teaser']['module'] = 'title'; /* WAS: '' */
     $data['node-blog_post-title_field']['display']['teaser']['settings']['conditions'] = array(); /* WAS: '' */

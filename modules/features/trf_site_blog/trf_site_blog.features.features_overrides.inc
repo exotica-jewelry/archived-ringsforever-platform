@@ -31,6 +31,7 @@ function trf_site_blog_features_override_default_overrides() {
   $overrides["field_instance.node-blog_post-field_blog_category.node-blog_post-field_blog_category"]["DELETED"] = TRUE;
   $overrides["field_instance.node-blog_post-field_image.node-blog_post-field_image"]["DELETED"] = TRUE;
   $overrides["field_instance.node-blog_post-field_tags.node-blog_post-field_tags"]["DELETED"] = TRUE;
+  $overrides["field_instance.node-blog_post-title_field.display|default|label"] = 'hidden';
   $overrides["field_instance.node-blog_post-title_field.display|teaser|label"] = 'hidden';
   $overrides["field_instance.node-blog_post-title_field.display|teaser|module"] = 'title';
   $overrides["field_instance.node-blog_post-title_field.display|teaser|settings|conditions"] = array();
