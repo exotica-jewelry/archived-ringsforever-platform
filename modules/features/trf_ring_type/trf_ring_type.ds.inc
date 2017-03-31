@@ -167,11 +167,6 @@ function trf_ring_type_ds_field_settings_info() {
         'conditions' => array(),
       ),
     ),
-    'title_field' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'field_related_rings' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -494,38 +489,36 @@ function trf_ring_type_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'header' => array(
-        0 => 'title_field',
-        1 => 'product:commerce_price',
-        2 => 'field_description',
-        3 => 'addthis_buttons',
+        0 => 'product:commerce_price',
+        1 => 'field_description',
+        2 => 'addthis_buttons',
       ),
       'left' => array(
-        4 => 'product:field_images',
-        5 => 'field_ring_elements_primary',
-        6 => 'field_ring_elements',
-        7 => 'field_collection',
-        8 => 'field_color',
+        3 => 'product:field_images',
+        4 => 'field_ring_elements_primary',
+        5 => 'field_ring_elements',
+        6 => 'field_collection',
+        7 => 'field_color',
       ),
       'right' => array(
-        9 => 'ring_free',
-        10 => 'field_product',
-        11 => 'ring_width',
-        12 => 'ring_colors',
-        13 => 'ring_sizing',
-        14 => 'ring_gemstones_other',
-        15 => 'ring_gemstones_add',
-        16 => 'product:field_ring_width',
-        17 => 'product:field_color',
+        8 => 'ring_free',
+        9 => 'field_product',
+        10 => 'ring_width',
+        11 => 'ring_colors',
+        12 => 'ring_sizing',
+        13 => 'ring_gemstones_other',
+        14 => 'ring_gemstones_add',
+        15 => 'product:field_ring_width',
+        16 => 'product:field_color',
       ),
       'footer' => array(
-        18 => 'ring_similar_rings_header',
-        19 => 'similar_rings_elements',
-        20 => 'field_related_rings',
-        21 => 'similar_rings_colors',
+        17 => 'ring_similar_rings_header',
+        18 => 'similar_rings_elements',
+        19 => 'field_related_rings',
+        20 => 'similar_rings_colors',
       ),
     ),
     'fields' => array(
-      'title_field' => 'header',
       'product:commerce_price' => 'header',
       'field_description' => 'header',
       'addthis_buttons' => 'header',

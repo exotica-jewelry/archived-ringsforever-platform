@@ -32,7 +32,7 @@ function trf_ring_type_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => 0,
+        'weight' => -10,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -65,7 +65,7 @@ function trf_ring_type_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => 0,
+        'weight' => -9,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -98,7 +98,7 @@ function trf_ring_type_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => 0,
+        'weight' => -8,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -131,7 +131,7 @@ function trf_ring_type_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => 0,
+        'weight' => -7,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -164,7 +164,7 @@ function trf_ring_type_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => 0,
+        'weight' => -6,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -197,7 +197,7 @@ function trf_ring_type_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => 0,
+        'weight' => -5,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -230,7 +230,7 @@ function trf_ring_type_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => 0,
+        'weight' => -4,
       ),
       'trf_admin' => array(
         'region' => '',
