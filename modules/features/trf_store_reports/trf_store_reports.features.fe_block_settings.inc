@@ -36,7 +36,7 @@ admin/commerce/orders/list',
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => -33,
+        'weight' => -48,
       ),
       'trf_admin' => array(
         'region' => 'content',
