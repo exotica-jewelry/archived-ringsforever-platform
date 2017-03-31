@@ -25,6 +25,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'format_handlers' => array(
             0 => 'address',
           ),
@@ -40,6 +41,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'format_handlers' => array(
             0 => 'address',
           ),
@@ -55,6 +57,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'format_handlers' => array(
             0 => 'address',
           ),
@@ -113,6 +116,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'format_handlers' => array(
             0 => 'address',
           ),
@@ -128,6 +132,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'format_handlers' => array(
             0 => 'address',
           ),
@@ -143,6 +148,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'format_handlers' => array(
             0 => 'address',
           ),
@@ -205,6 +211,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -261,6 +268,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -317,6 +325,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -373,6 +382,7 @@ function trf_store_checkout_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
