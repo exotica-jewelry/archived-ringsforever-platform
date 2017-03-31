@@ -32,7 +32,7 @@ function trf_ring_catalog_default_fe_block_settings() {
         'region' => 'branding',
         'status' => 1,
         'theme' => 'trf',
-        'weight' => -43,
+        'weight' => -54,
       ),
       'trf_admin' => array(
         'region' => '',
