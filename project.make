@@ -15,7 +15,7 @@ projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ign
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-2289493-3-image_get_info-filesize-D7.patch"
 
 ; Patches against Commerce Kickstart core.
-projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/2831133-Undefined_index_path_in_commerce_kickstart_menus_menu_breadcrumb_alter.patch"
+; projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/2831133-Undefined_index_path_in_commerce_kickstart_menus_menu_breadcrumb_alter.patch"
 
 ; Patches against Commerce Kickstart modules.
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
