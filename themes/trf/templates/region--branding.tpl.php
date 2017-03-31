@@ -1,4 +1,4 @@
-<?php /* /Overrides profiles/commerce_kickstart/themes/commerce_kickstart_theme/templates/region--branding.tpl.php */ ?>
+<?php /* Overrides profiles/commerce_kickstart/themes/commerce_kickstart_theme/templates/region--branding.tpl.php */ ?>
 <div<?php print $attributes; ?>>
   <div<?php print $content_attributes; ?>>
 

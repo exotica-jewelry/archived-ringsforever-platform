@@ -84,3 +84,20 @@ function trf_blockify_logo($variables) {
     ),
   ));
 }
+
+/**
+ * (Blockify) Returns the rendered page title.
+ *
+ * @ingroup themeable
+ */
+function trf_blockify_page_title($variables) {
+  if ($variables['page_title'] !== '') {
+    $title_attributes_array = array(
+      'class' => array('title page-title'),
+      'id' => array('page_title'),
+    );
+    $title_attributes = drupal_attributes($title_attributes_array);
+
+    return '<h1' . $title_attributes . '>' . $variables['page_title'] . '</h1>';
+  }
+}

@@ -1,4 +1,4 @@
-<?php /* /Overrides profiles/commerce_kickstart/themes/contrib/omega/omega_kickstart/templates/field--fences-h2--node.tpl.php */ ?>
+<?php /* Overrides profiles/commerce_kickstart/themes/contrib/omega/omega_kickstart/templates/field--fences-h2--node.tpl.php */ ?>
 <?php
 /**
  * @file field--fences-h2.tpl.php
