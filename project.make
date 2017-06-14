@@ -16,9 +16,8 @@ projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/dru
 
 ; Patches against Commerce Kickstart modules.
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
-projects[rules][patch][] = "http://cgit.drupalcode.org/rules/patch/?id=b79bbb97dbc0e9bd0fa20c17bfaf62dc8f9bf7b7"
+projects[rules][patch][] = "https://www.drupal.org/files/issues/2406863_rules-7-x-2.10-configurable_rules_stampede_protection-126.patch"
 projects[token][patch][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
-projects[views][patch][] = "https://www.drupal.org/files/issues/views-row-class-underscores-1371118-33.patch"
 projects[views][patch][] = "https://www.drupal.org/files/issues/2329259_views_remove_php_access.patch"
 
 ; Drush make allows a default sub directory for all contributed projects.
@@ -30,9 +29,9 @@ defaults[projects][subdir] = contrib
 
 projects[a11y_titles][version] = "1.0-beta1"
 
-projects[advagg][version] = "2.21"
+projects[advagg][version] = "2.24"
 
-projects[auto_entitylabel][version] = "1.3"
+projects[auto_entitylabel][version] = "1.4"
 
 projects[autocomplete_deluxe][version] = "2.2"
 
@@ -42,7 +41,7 @@ projects[block_class][version] = "2.3"
 
 projects[breakpoints][version] = "1.4"
 
-projects[cer][version] = "3.0-alpha7"
+projects[cer][version] = "3.0-beta1"
 
 projects[charts][version] = "2.0-rc1"
 
@@ -109,7 +108,7 @@ projects[field_multiple_limit][version] = "1.0-alpha5"
 
 projects[field_validation][version] = "2.6"
 
-projects[file_entity][version] = "2.0-beta3"
+projects[file_entity][version] = "2.1"
 
 projects[file_entity_inline][version] = "1.0-beta1"
 
@@ -150,11 +149,9 @@ projects[imagecache_token][version] = "1.0-rc2"
 
 projects[imageinfo_cache][version] = "3.5"
 
-projects[imagezoom][version] = "2.0-beta2"
-projects[imagezoom][patch][] = "https://www.drupal.org/files/issues/imagezoom-image_thumbnails_are-2623896-2.patch"
+projects[imagezoom][version] = "2.0"
 
-projects[imce][version] = "1.10"
-projects[imce][patch][] = "https://www.drupal.org/files/issues/imce-n2357871-12.patch"
+projects[imce][version] = "1.11"
 
 projects[imce_mkdir][version] = "1.0"
 
@@ -226,7 +223,7 @@ projects[typogrify][version] = "1.0-rc10"
 
 projects[video_filter][version] = "3.4"
 
-projects[views_data_export][version] = "3.1"
+projects[views_data_export][version] = "3.2"
 
 projects[views_date_format_sql][version] = "3.3"
 
@@ -272,11 +269,11 @@ libraries[ckeditor_autogrow][download][type] = "file"
 libraries[ckeditor_autogrow][download][url] = "http://download.ckeditor.com/autogrow/releases/autogrow_4.5.11.zip"
 libraries[ckeditor_autogrow][destination] = "libraries"
 
-libraries[elevatezoom][directory_name] = "elevatezoom"
-libraries[elevatezoom][type] = "libraries"
-libraries[elevatezoom][download][type] = "git"
-libraries[elevatezoom][download][url] = "https://github.com/elevateweb/elevatezoom.git"
-libraries[elevatezoom][destination] = "libraries"
+; libraries[elevatezoom][directory_name] = "elevatezoom"
+; libraries[elevatezoom][type] = "libraries"
+; libraries[elevatezoom][download][type] = "git"
+; libraries[elevatezoom][download][url] = "https://github.com/elevateweb/elevatezoom.git"
+; libraries[elevatezoom][destination] = "libraries"
 
 libraries[fitvids][directory_name] = "fitvids"
 libraries[fitvids][type] = "libraries"
