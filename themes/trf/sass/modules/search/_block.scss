@@ -2,6 +2,47 @@
 // Search block at the top of every page
 //
 
+.page #block-views-exp-display-products-page {
+  float: none;
+  padding-top: 1em;
+  clear: both;
+
+  @include mq(mediumish) {
+    position: absolute;
+    right: 0;
+    padding-top: 0;
+    clear: none;
+  }
+
+  .views-exposed-widgets {
+    float: none;
+    margin: 0 auto;
+    width: 90%;
+
+    @include mq(mediumish) {
+      float: right;
+      margin: 0;
+      width: ($logo__width / 2);
+      // Set top to half of logo height minus half of search box height.
+      top: (($logo__height / 2) - (36px / 2));
+    }
+  }
+}
+
+#views-exposed-form-display-products-page {
+
+  .form-submit {
+    width: auto;
+    padding: 5px 8px;
+    font-size: inherit;
+    @include card(0);
+
+    @include is-on {
+      @include a-grow(1, 0);
+    }
+  }
+}
+
 .block .form-item-search-api-views-fulltext,
 #block-views-exp-display-products-page .form-item-search-api-views-fulltext {
 
