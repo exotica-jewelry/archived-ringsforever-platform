@@ -39,6 +39,9 @@ $conf['error_level'] = 0;
 ini_set('display_errors', FALSE);
 ini_set('display_startup_errors', FALSE);
 
+# Allow Drupal to preserve double underscores (BEM syntax)
+$conf['allow_css_double_underscores'] = TRUE;
+
 # Include local settings -- required
 $local_settings = dirname(__FILE__) . '/settings.local.php';
 if (file_exists($local_settings)) {
