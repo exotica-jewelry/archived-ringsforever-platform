@@ -8,7 +8,7 @@
 
 .messages.messages {
   padding: $padding $padding $padding (3 * $padding);
-  margin: $padding;
+  margin: $padding 0;
   @include font-size(16px);
   text-shadow: 1px 1px 0 $white-rgba;
   background-image: none;
@@ -19,6 +19,13 @@
 
   em {
     color: $black;
+  }
+
+  // Code, file and line number snippets.
+  .placeholder {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   a {

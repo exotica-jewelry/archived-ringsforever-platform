@@ -302,3 +302,64 @@
     border-left: $size solid transparent;
   }
 }
+
+
+/// Visually hidden
+///
+/// Make an element visually hidden, but accessible to screen readers.
+///
+/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+///
+/// @author John Albin Wilkins
+
+@mixin visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+/// Visually hidden off
+///
+/// Turns off the visually-hidden effect.
+///
+/// @author John Albin Wilkins
+
+@mixin visually-hidden--off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: visible;
+}
+
+.visually-hidden--off {
+  @include visually-hidden--off;
+}
+
+/// Visually hidden focusable
+///
+/// Makes an element visually hidden by default, but visible when receiving focus.
+///
+/// @author John Albin Wilkins
+
+@mixin visually-hidden--focusable {
+  @include visually-hidden;
+
+  &:active,
+  &:focus {
+    @include visually-hidden--off;
+  }
+}
+
+.visually-hidden--focusable {
+  @include visually-hidden--focusable;
+}

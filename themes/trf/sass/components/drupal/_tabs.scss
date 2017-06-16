@@ -1,17 +1,24 @@
 //
-// Drupal's "local action" (view, edit, etc.) tabs
+// Drupal's "local action" (view, edit, etc.) tabs, using the Icon Tabs module.
 //
 
-body div.tabs {
+#block-icon-tabs-icon-tabs {
+  position: relative;
 
   @include mq(mediumish) {
     position: absolute;
+  }
+}
+
+.block-icon-tabs {
+
+  @include mq(mediumish) {
     top: 0;
     left: 100%; // positioned just to the right of the main content area
   }
 
-  ul.tabs {
-    margin: $padding 0;
+  .tabs {
+    margin: $padding 0 0;
 
     @include mq(mediumish) {
       width: 150px;

@@ -1,0 +1,25 @@
+//
+// The site slogan appears under the main menus, above the content.
+//
+
+.block-blockify-site-slogan {
+  margin: $padding 0;
+  @include font-size(14px);
+
+  @include mq(tinyish) {
+    margin: 0 0 $padding;
+  }
+
+  .site-slogan {
+
+    &::before {
+      content: "\27A4";
+      padding-right: ($padding / 3);
+    }
+  }
+
+  @include mq(mediumish) {
+    margin: $padding 0 0;
+    @include font-size(16px);
+  }
+}

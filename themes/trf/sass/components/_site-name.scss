@@ -1,0 +1,8 @@
+//
+// The site name (not the page name) included in the source for accessibility
+// and then hidden.
+//
+
+.block-blockify-site-name {
+  @include visually-hidden;
+}

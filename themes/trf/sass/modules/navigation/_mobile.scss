@@ -6,14 +6,21 @@
 
 // Toggle button
 .menu-toggle {
-  top: 100%; // positions at the bottom of .section-header
-  left: 0;
+  position: static;
   background-color: $blue-verydark;
   border-radius: $border-radius;
   z-index: 100; // places menu on top of highlight region
+  width: 100%;
 
   @include is-on {
     background-color: $blue-verydark;
+  }
+
+  @include mq(tinyish) {
+    position: absolute;
+    top: 100%; // positions at the bottom of .section-header
+    left: 0;
+    width: 36px;
   }
 
   .line {
@@ -26,7 +33,11 @@
   }
 
   .first-line {
-    padding-top: 2px;
+    padding-top: ($padding / 2);
+
+    @include mq(tinyish) {
+      padding-top: 2px;
+    }
   }
 
   .last-line {
@@ -36,7 +47,7 @@
   // The word "Menu"
   .toggle-help {
     top: 0;
-    left: 40px;
+    left: 0;
     padding: 0 ($padding / 4);
     font-family: $font-default;
     @include font-size(14px);
@@ -49,6 +60,10 @@
     @include is-on {
       color: $white;
       background-color: $blue-verydark;
+    }
+
+    @include mq(tinyish) {
+      left: 40px;
     }
   }
 }

@@ -14,6 +14,9 @@ projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-feedburner.patc
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-111.patch"
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-2289493-3-image_get_info-filesize-D7.patch"
 
+; Patches against Commerce Kickstart core.
+; projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/2831133-Undefined_index_path_in_commerce_kickstart_menus_menu_breadcrumb_alter.patch"
+
 ; Patches against Commerce Kickstart modules.
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
 projects[rules][patch][] = "https://www.drupal.org/files/issues/2406863_rules-7-x-2.10-configurable_rules_stampede_protection-126.patch"
@@ -38,6 +41,8 @@ projects[autocomplete_deluxe][version] = "2.2"
 projects[backup_migrate][version] = "3.1"
 
 projects[block_class][version] = "2.3"
+
+projects[blockify][version] = "1.2"
 
 projects[breakpoints][version] = "1.4"
 

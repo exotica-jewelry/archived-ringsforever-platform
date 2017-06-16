@@ -1,4 +1,4 @@
-<?php /* /Overrides profiles/commerce_kickstart/themes/commerce_kickstart_theme/templates/region--menu.tpl.php */ ?>
+<?php /* Overrides profiles/commerce_kickstart/themes/commerce_kickstart_theme/templates/region--menu.tpl.php */ ?>
 <div<?php print $attributes; ?>>
   <div<?php print $content_attributes; ?>>
     <?php if ($main_menu || $secondary_menu): ?>

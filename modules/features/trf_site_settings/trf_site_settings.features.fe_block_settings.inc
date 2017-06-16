@@ -1,23 +1,23 @@
 <?php
 /**
  * @file
- * trf_ring_type.features.fe_block_settings.inc
+ * trf_site_settings.features.fe_block_settings.inc
  */
 
 /**
  * Implements hook_default_fe_block_settings().
  */
-function trf_ring_type_default_fe_block_settings() {
+function trf_site_settings_default_fe_block_settings() {
   $export = array();
 
   $export['version'] = '2.0';
 
-  $export['block-ring_colors'] = array(
+  $export['blockify-blockify-actions'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'ring_colors',
-    'module' => 'block',
+    'delta' => 'blockify-actions',
+    'module' => 'blockify',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -29,10 +29,10 @@ function trf_ring_type_default_fe_block_settings() {
         'weight' => 0,
       ),
       'trf' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'preface_first',
+        'status' => 1,
         'theme' => 'trf',
-        'weight' => -10,
+        'weight' => -54,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -45,12 +45,12 @@ function trf_ring_type_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['block-ring_free'] = array(
-    'cache' => -1,
+  $export['blockify-blockify-feed-icons'] = array(
+    'cache' => 4,
     'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'ring_free',
-    'module' => 'block',
+    'delta' => 'blockify-feed-icons',
+    'module' => 'blockify',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -62,10 +62,10 @@ function trf_ring_type_default_fe_block_settings() {
         'weight' => 0,
       ),
       'trf' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content',
+        'status' => 1,
         'theme' => 'trf',
-        'weight' => -9,
+        'weight' => -44,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -78,12 +78,12 @@ function trf_ring_type_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['block-ring_gemstones_add'] = array(
-    'cache' => -1,
+  $export['blockify-blockify-logo'] = array(
+    'cache' => 8,
     'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'ring_gemstones_add',
-    'module' => 'block',
+    'delta' => 'blockify-logo',
+    'module' => 'blockify',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -95,76 +95,10 @@ function trf_ring_type_default_fe_block_settings() {
         'weight' => 0,
       ),
       'trf' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'branding',
+        'status' => 1,
         'theme' => 'trf',
-        'weight' => -8,
-      ),
-      'trf_admin' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'trf_admin',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Gemstones',
-    'visibility' => 0,
-  );
-
-  $export['block-ring_gemstones_other'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'machine_name' => 'ring_gemstones_other',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'commerce_kickstart_theme' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'commerce_kickstart_theme',
-        'weight' => 0,
-      ),
-      'trf' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'trf',
-        'weight' => -7,
-      ),
-      'trf_admin' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'trf_admin',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Gemstones',
-    'visibility' => 0,
-  );
-
-  $export['block-ring_similar_header'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'machine_name' => 'ring_similar_header',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'commerce_kickstart_theme' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'commerce_kickstart_theme',
-        'weight' => 0,
-      ),
-      'trf' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'trf',
-        'weight' => -6,
+        'weight' => -55,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -177,12 +111,12 @@ function trf_ring_type_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['block-ring_sizing'] = array(
+  $export['blockify-blockify-messages'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'ring_sizing',
-    'module' => 'block',
+    'delta' => 'blockify-messages',
+    'module' => 'blockify',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -194,10 +128,10 @@ function trf_ring_type_default_fe_block_settings() {
         'weight' => 0,
       ),
       'trf' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content',
+        'status' => 1,
         'theme' => 'trf',
-        'weight' => -5,
+        'weight' => -53,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -206,16 +140,115 @@ function trf_ring_type_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Where do I select my ring size?',
+    'title' => '',
     'visibility' => 0,
   );
 
-  $export['block-ring_width'] = array(
+  $export['blockify-blockify-page-title'] = array(
+    'cache' => 4,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'blockify-page-title',
+    'module' => 'blockify',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => -54,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['blockify-blockify-site-name'] = array(
+    'cache' => 8,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'blockify-site-name',
+    'module' => 'blockify',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => 'branding',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => -56,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['blockify-blockify-site-slogan'] = array(
+    'cache' => 8,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'blockify-site-slogan',
+    'module' => 'blockify',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => 'menu',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => -56,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['blockify-blockify-tabs'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'ring_width',
-    'module' => 'block',
+    'delta' => 'blockify-tabs',
+    'module' => 'blockify',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -230,7 +263,7 @@ function trf_ring_type_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'trf',
-        'weight' => -4,
+        'weight' => -44,
       ),
       'trf_admin' => array(
         'region' => '',

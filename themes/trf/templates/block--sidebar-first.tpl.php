@@ -1,4 +1,4 @@
-<?php /* /Overrides profiles/commerce_kickstart/themes/contrib/omega/omega/templates/block.tpl.php */ ?>
+<?php /* Overrides profiles/commerce_kickstart/themes/contrib/omega/omega/templates/block.tpl.php */ ?>
 <?php $tag = $block->subject ? 'section' : 'div'; ?>
 <<?php print $tag; ?><?php print $attributes; ?>>
   <div class="block-inner clearfix">

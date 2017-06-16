@@ -483,7 +483,7 @@ node/*/edit';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'lazyloader_placeholder';
-  $strongarm->value = '';
+  $strongarm->value = 'sites/all/themes/lazyloader-image-placeholder.png';
   $export['lazyloader_placeholder'] = $strongarm;
 
   return $export;

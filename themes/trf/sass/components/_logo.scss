@@ -2,9 +2,10 @@
 // Logo image at the top of the site
 //
 
-.page .zone-branding .region-branding .logo-img {
+.block-blockify-logo {
   width: 100%;
   max-width: $logo__width;
+  max-height: $logo__height;
   float: none;
   margin: 0 auto;
 
@@ -13,7 +14,13 @@
     margin: 0;
   }
 
-  a {
-    display: inline-block;
+  .logo-img {
+    width: 100%;
+    float: none;
+    margin: 0;
+
+    a {
+      display: inline-block;
+    }
   }
 }

@@ -17,11 +17,15 @@
   ul.menu li.collapsed,
   ul.menu li.leaf {
     display: inline-block;
-    margin: 0 ($padding / 4);
+    margin: 0 ($padding / 10);
     padding-right: 0;
     list-style-type: none;
     list-style-image: none;
     font-family: $font-default;
+
+    @include mq(tinyish) {
+      margin: 0 ($padding / 4);
+    }
 
     @include mq(smallish) {
       margin: 0 ($padding / 2);
@@ -32,16 +36,22 @@
       display: block;
       position: relative;
       margin: 0 0 ($padding * -1);
-      padding: ($padding / 4) ($padding / 2) $padding;
+      padding: ($padding / 2) ($padding / 2) ($padding * 1.5);
       font-family: $font-default;
-      @include font-size(16px);
-      font-weight: $normal;
+      @include font-size(12px);
+      font-weight: $thin;
       color: $white;
       background-color: $blue;
       border-radius: $border-radius;
 
       @include is-on {
         background-color: $blue-dark;
+      }
+
+      @include mq(tinyish) {
+        padding: ($padding / 4) ($padding / 2) $padding;
+        @include font-size(16px);
+        font-weight: $normal;
       }
 
       @include mq(smallish) {
