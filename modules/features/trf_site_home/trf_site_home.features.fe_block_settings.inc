@@ -45,5 +45,104 @@ function trf_site_home_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['blockify-blockify-logo'] = array(
+    'cache' => 8,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'blockify-logo',
+    'module' => 'blockify',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf',
+        'weight' => -55,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['blockify-blockify-site-name'] = array(
+    'cache' => 8,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'blockify-site-name',
+    'module' => 'blockify',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf',
+        'weight' => -55,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['blockify-blockify-site-slogan'] = array(
+    'cache' => 8,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'blockify-site-slogan',
+    'module' => 'blockify',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'commerce_kickstart_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'commerce_kickstart_theme',
+        'weight' => 0,
+      ),
+      'trf' => array(
+        'region' => 'menu',
+        'status' => 1,
+        'theme' => 'trf',
+        'weight' => -55,
+      ),
+      'trf_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'trf_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }
