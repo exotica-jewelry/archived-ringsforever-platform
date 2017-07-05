@@ -9,7 +9,7 @@
 
 "https://www.{default}/":
     type: upstream
-    upstream: "app:http"
+    upstream: "php:php"
     cache:
         enabled: true
         headers: [ "Accept", "Accept-Language", "X-Language-Locale" ]
