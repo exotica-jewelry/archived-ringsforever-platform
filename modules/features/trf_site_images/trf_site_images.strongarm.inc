@@ -219,7 +219,7 @@ function trf_site_images_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'imageapi_optimize_toolkit';
-  $strongarm->value = 'gd';
+  $strongarm->value = 'imageinfo_cache';
   $export['imageapi_optimize_toolkit'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -276,7 +276,7 @@ function trf_site_images_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'image_toolkit';
-  $strongarm->value = 'gd';
+  $strongarm->value = 'imageapi_optimize';
   $export['image_toolkit'] = $strongarm;
 
   $strongarm = new stdClass();
