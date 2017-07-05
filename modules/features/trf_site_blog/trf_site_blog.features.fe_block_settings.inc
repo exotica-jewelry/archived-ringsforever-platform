@@ -33,7 +33,7 @@ about/testimonials/*',
         'region' => 'content',
         'status' => 1,
         'theme' => 'trf',
-        'weight' => -46,
+        'weight' => -52,
       ),
       'trf_admin' => array(
         'region' => '',

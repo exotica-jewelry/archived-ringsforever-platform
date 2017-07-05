@@ -17,10 +17,6 @@ function trf_site_comments_features_override_default_overrides() {
       'weight' => 1002,
       'visible' => FALSE,
     ),
-    'default' => array(
-      'weight' => 1002,
-      'visible' => TRUE,
-    ),
   );
 
  return $overrides;

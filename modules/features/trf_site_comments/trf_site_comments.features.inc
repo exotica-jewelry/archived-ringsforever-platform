@@ -23,10 +23,6 @@ function trf_site_comments_strongarm_alter(&$data) {
         'weight' => 1002,
         'visible' => FALSE,
       ),
-      'default' => array(
-        'weight' => 1002,
-        'visible' => TRUE,
-      ),
     ); /* WAS: '' */
   }
 }
