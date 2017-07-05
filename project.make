@@ -32,7 +32,7 @@ defaults[projects][subdir] = contrib
 
 projects[a11y_titles][version] = "1.0-beta1"
 
-projects[advagg][version] = "2.24"
+projects[advagg][version] = "2.25"
 
 projects[auto_entitylabel][version] = "1.4"
 
@@ -52,9 +52,7 @@ projects[charts][version] = "2.0-rc1"
 
 projects[checklistapi][version] = "1.2"
 
-projects[ckeditor][version] = "1.x-dev"
-; Can be switched to a full version once the latest release is later than
-; 19 June 2016.
+projects[ckeditor][version] = "1.18"
 
 projects[ckeditor_image2][version] = "1.1"
 
@@ -113,7 +111,7 @@ projects[field_multiple_limit][version] = "1.0-alpha5"
 
 projects[field_validation][version] = "2.6"
 
-projects[file_entity][version] = "2.1"
+projects[file_entity][version] = "2.3"
 
 projects[file_entity_inline][version] = "1.0-beta1"
 
@@ -145,8 +143,7 @@ projects[icon_tabs][version] = "1.5"
 
 projects[image_resize_filter][version] = "1.16"
 
-projects[imageapi_optimize][version] = "1.2"
-projects[imageapi_optimize][patch][] = "https://www.drupal.org/files/issues/imageapi_optimize-add-resmushit-service-2458453-25.patch"
+projects[imageapi_optimize][version] = "1.3"
 
 projects[imagecache_actions][version] = "1.7"
 
@@ -182,7 +179,7 @@ projects[mailcontrol][version] = "1.0"
 
 projects[menu_trail_by_path][version] = "3.3"
 
-projects[metatag][version] = "1.21"
+projects[metatag][version] = "1.22"
 
 projects[migrate_d2d][version] = "2.1"
 
@@ -204,7 +201,7 @@ projects[schemaorg][version] = "1.0-rc1"
 
 projects[seckit][version] = "1.9"
 
-projects[search404][version] = "1.4"
+projects[search404][version] = "1.5"
 
 projects[search_api_solr][version] = "1.12"
 
