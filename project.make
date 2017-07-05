@@ -238,7 +238,7 @@ projects[xmlsitemap][version] = "2.3"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "libraries"
 libraries[ckeditor][download][type] = "file"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.11/ckeditor_4.5.11_standard.zip"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.7.1/ckeditor_4.7.1_standard.zip"
 libraries[ckeditor][destination] = "libraries"
 
 libraries[ckeditor_lineutils][directory_name] = "ckeditor/plugins/lineutils"
