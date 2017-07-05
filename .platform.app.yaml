@@ -20,7 +20,7 @@ dependencies:
     php:
         "drush/drush": "8.1.8"
 
-# Additional extensions
+# Additional extensions.
 runtime:
     extensions:
         - redis
