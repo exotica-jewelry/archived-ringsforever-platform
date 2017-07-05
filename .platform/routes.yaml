@@ -3,13 +3,13 @@
 # Each route describes how an incoming URL is going
 # to be processed by Platform.sh.
 
-"http://{default}/":
+"https://{default}/":
     type: redirect
-    to: "http://www.{default}/"
+    to: "https://www.{default}/"
 
-"http://www.{default}/":
+"https://www.{default}/":
     type: upstream
-    upstream: "php:php"
+    upstream: "app:http"
     cache:
         enabled: true
         headers: [ "Accept", "Accept-Language", "X-Language-Locale" ]
