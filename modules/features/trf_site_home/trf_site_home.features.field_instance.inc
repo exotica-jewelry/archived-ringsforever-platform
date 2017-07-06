@@ -22,7 +22,6 @@ function trf_site_home_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'bypass_access' => FALSE,
           'colorbox_node_classes' => '',
           'colorbox_node_height' => 600,
           'colorbox_node_link' => FALSE,
@@ -30,7 +29,6 @@ function trf_site_home_field_default_field_instances() {
           'conditions' => array(),
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'field_multiple_limit_order' => 0,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
