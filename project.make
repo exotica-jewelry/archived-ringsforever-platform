@@ -32,13 +32,13 @@ defaults[projects][subdir] = contrib
 
 projects[a11y_titles][version] = "1.0-beta1"
 
-projects[advagg][version] = "2.25"
+projects[advagg][version] = "2.30"
 
 projects[auto_entitylabel][version] = "1.4"
 
-projects[autocomplete_deluxe][version] = "2.2"
+projects[autocomplete_deluxe][version] = "2.3"
 
-projects[backup_migrate][version] = "3.1"
+projects[backup_migrate][version] = "3.4"
 
 projects[block_class][version] = "2.3"
 
@@ -88,9 +88,9 @@ projects[entity_embed][version] = "2.0-alpha3"
 
 projects[entitycache][version] = "1.5"
 
-projects[entityqueue][version] = "1.1"
+projects[entityqueue][version] = "1.3"
 
-projects[environment_indicator][version] = "2.8"
+projects[environment_indicator][version] = "2.9"
 
 projects[escape_admin][version] = "1.2"
 
@@ -98,9 +98,9 @@ projects[fast_404][version] = "1.5"
 
 projects[features_extra][version] = "1.0"
 
-projects[feeds][version] = "2.0-beta3"
+projects[feeds][version] = "2.0-beta4"
 
-projects[feeds_tamper][version] = "1.1"
+projects[feeds_tamper][version] = "1.2"
 
 projects[ffc][version] = "1.0-beta2"
 projects[ffc][patch][] = "https://www.drupal.org/files/issues/ffc-allow-multiple-conditions-2215567-2.patch"
@@ -111,7 +111,7 @@ projects[field_multiple_limit][version] = "1.0-alpha5"
 
 projects[field_validation][version] = "2.6"
 
-projects[file_entity][version] = "2.3"
+projects[file_entity][version] = "2.15"
 
 projects[file_entity_inline][version] = "1.0-beta1"
 
@@ -125,7 +125,7 @@ projects[ga_push][version] = "1.1"
 
 projects[globalredirect][version] = "1.5"
 
-projects[google_analytics][version] = "2.3"
+projects[google_analytics][version] = "2.4"
 
 projects[google_analytics_reports][version] = "3.1"
 
@@ -145,13 +145,13 @@ projects[image_resize_filter][version] = "1.16"
 
 projects[imageapi_optimize][version] = "1.3"
 
-projects[imagecache_actions][version] = "1.7"
+projects[imagecache_actions][version] = "1.8"
 
 projects[imagecache_token][version] = "1.0-rc2"
 
 projects[imageinfo_cache][version] = "3.5"
 
-projects[imagezoom][version] = "2.0"
+projects[imagezoom][version] = "2.1"
 
 projects[imce][version] = "1.11"
 
@@ -195,13 +195,13 @@ projects[prlp][version] = "1.3"
 
 projects[redirect][version] = "1.0-rc3"
 
-projects[redis][version] = "3.15"
+projects[redis][version] = "3.17"
 
 projects[schemaorg][version] = "1.0-rc1"
 
 projects[seckit][version] = "1.9"
 
-projects[search404][version] = "1.5"
+projects[search404][version] = "1.6"
 
 projects[search_api_solr][version] = "1.12"
 
