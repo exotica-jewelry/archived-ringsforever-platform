@@ -7,9 +7,9 @@ mysqldb:
     type: mysql:10.2
     disk: 2048
 
-redis:
+rediscache:
    type: redis:3.2
 
-solr:
+solrsearch:
    type: solr:4.10
    disk: 1024
