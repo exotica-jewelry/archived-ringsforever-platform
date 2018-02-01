@@ -205,6 +205,8 @@ projects[search404][version] = "1.6"
 
 projects[search_api_solr][version] = "1.12"
 
+projects[search_api_override][version] = 1.0-rc1
+
 projects[searchapimultiaggregate][version] = "1.2"
 
 projects[seo_checker][version] = "1.8"
