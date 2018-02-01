@@ -35,9 +35,9 @@ $conf['advagg_skip_far_future_check'] = TRUE;
 
 # Set error display
 # 0 = log only; 1 = hard errors; 2 = all warnings
-$conf['error_level'] = 2;
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
+$conf['error_level'] = 0;
+ini_set('display_errors', FALSE);
+ini_set('display_startup_errors', FALSE);
 
 # Allow Drupal to preserve double underscores (BEM syntax)
 $conf['allow_css_double_underscores'] = TRUE;
