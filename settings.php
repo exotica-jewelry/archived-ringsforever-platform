@@ -16,8 +16,8 @@ $conf['anonymous'] = 'Visitor';
 
 # Set file paths
 $conf['file_public_path'] = 'sites/default/files';
-# $conf['file_private_path'] = '/app/private';
-# $conf['file_temporary_path'] = '/app/tmp';
+$conf['file_private_path'] = '/app/private';
+$conf['file_temporary_path'] = '/app/tmp';
 
 # Set caching
 $conf['cache'] = TRUE;
