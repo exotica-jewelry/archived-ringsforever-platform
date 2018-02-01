@@ -47,3 +47,18 @@ $local_settings = dirname(__FILE__) . '/settings.local.php';
 if (file_exists($local_settings)) {
   require_once($local_settings);
 }
+
+if (!empty($_ENV['PLATFORM_RELATIONSHIPS'])) {
+  $relationships = json_decode(base64_decode($_ENV['PLATFORM_RELATIONSHIPS']), TRUE);
+  if (!empty($relationships['redis'])) {
+    $conf['redis_client_host'] = $relationships['redis'][0]['host'];
+    $conf['redis_client_port'] = $relationships['redis'][0]['port'];
+    $conf['redis_client_interface'] = 'Predis';
+    $conf['cache_backends'][]       = 'sites/all/modules/contrib/redis/redis.autoload.inc';
+    $conf['cache_default_class']    = 'Redis_Cache';
+    // The 'cache_form' bin must be assigned to non-volatile storage.
+    $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+    // The 'cache_field' bin must be transactional.
+    $conf['cache_class_cache_field'] = 'DrupalDatabaseCache';
+  }
+}
