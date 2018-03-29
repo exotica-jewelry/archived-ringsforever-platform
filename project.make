@@ -38,7 +38,7 @@ projects[auto_entitylabel][version] = "1.4"
 
 projects[autocomplete_deluxe][version] = "2.3"
 
-projects[backup_migrate][version] = "3.4"
+projects[backup_migrate][version] = "3.5"
 
 projects[block_class][version] = "2.3"
 
@@ -119,7 +119,7 @@ projects[file_entity_inline][version] = "1.0-beta1"
 
 projects[filefield_paths][version] = "1.0"
 
-projects[filefield_sources][version] = "1.10"
+projects[filefield_sources][version] = "1.11"
 
 projects[fitvids][version] = "1.17"
 
