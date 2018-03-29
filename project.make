@@ -1,7 +1,7 @@
 api = 2
 core = 7.x
 
-; Platform indicator module..
+; Platform indicator module.
 projects[platform][version] = 1.4
 
 ; Use Commerce Kickstart as Drupal core.
@@ -306,4 +306,10 @@ libraries[predis][directory_name] = "predis"
 libraries[predis][type] = "libraries"
 libraries[predis][download][type] = "file"
 libraries[predis][download][url] = "https://github.com/nrk/predis/archive/v1.1.1.tar.gz"
+libraries[predis][destination] = "libraries"
+
+libraries[predis][directory_name] = "YUI-CSS-compressor-PHP-port"
+libraries[predis][type] = "libraries"
+libraries[predis][download][type] = "file"
+libraries[predis][download][url] = "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port/archive/master.zip"
 libraries[predis][destination] = "libraries"
