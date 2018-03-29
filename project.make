@@ -11,7 +11,7 @@ projects[commerce_kickstart][type] = core
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-www.patch"
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-advagg.patch"
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-feedburner.patch"
-projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-111.patch"
+projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/2018-03-28/core-ignore_node_module-2482549-38.patch"
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-2289493-3-image_get_info-filesize-D7.patch"
 
 ; Patches against Commerce Kickstart core.
@@ -20,8 +20,8 @@ projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/dru
 ; Patches against Commerce Kickstart modules.
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
 projects[rules][patch][] = "https://www.drupal.org/files/issues/2406863_rules-7-x-2.10-configurable_rules_stampede_protection-126.patch"
-projects[token][patch][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
-projects[views][patch][] = "https://www.drupal.org/files/issues/2329259_views_remove_php_access.patch"
+projects[token][patch][] = "https://www.drupal.org/files/issues/token-filename_without_extension_2106979-20.patch"
+projects[views][patch][] = "https://www.drupal.org/files/issues/views-refine_import_php_permissions-2329259-10.patch"
 
 ; Drush make allows a default sub-directory for all contributed projects.
 defaults[projects][subdir] = contrib
@@ -32,23 +32,23 @@ defaults[projects][subdir] = contrib
 
 projects[a11y_titles][version] = "1.0-beta1"
 
-projects[advagg][version] = "2.30"
+projects[advagg][version] = "2.33"
 
 projects[auto_entitylabel][version] = "1.4"
 
 projects[autocomplete_deluxe][version] = "2.3"
 
-projects[backup_migrate][version] = "3.4"
+projects[backup_migrate][version] = "3.5"
 
 projects[block_class][version] = "2.3"
 
 projects[blockify][version] = "1.2"
 
-projects[breakpoints][version] = "1.4"
+projects[breakpoints][version] = "1.6"
 
 projects[cer][version] = "3.0-beta1"
 
-projects[charts][version] = "2.0-rc1"
+projects[charts][version] = "2.0"
 
 projects[checklistapi][version] = "1.2"
 
@@ -84,13 +84,13 @@ projects[ds][version] = "2.14"
 
 projects[ds_extra_layouts][version] = "1.2"
 
-projects[elements][version] = "1.4"
+projects[elements][version] = "1.5"
 
 projects[entity_embed][version] = "2.0-alpha3"
 
 projects[entitycache][version] = "1.5"
 
-projects[entityqueue][version] = "1.3"
+projects[entityqueue][version] = "1.5"
 
 projects[environment_indicator][version] = "2.9"
 
@@ -113,19 +113,19 @@ projects[field_multiple_limit][version] = "1.0-alpha5"
 
 projects[field_validation][version] = "2.6"
 
-projects[file_entity][version] = "2.15"
+projects[file_entity][version] = "2.16"
 
 projects[file_entity_inline][version] = "1.0-beta1"
 
 projects[filefield_paths][version] = "1.0"
 
-projects[filefield_sources][version] = "1.10"
+projects[filefield_sources][version] = "1.11"
 
 projects[fitvids][version] = "1.17"
 
 projects[ga_push][version] = "1.1"
 
-projects[globalredirect][version] = "1.5"
+projects[globalredirect][version] = "1.6"
 
 projects[google_analytics][version] = "2.4"
 
@@ -147,7 +147,7 @@ projects[image_resize_filter][version] = "1.16"
 
 projects[imageapi_optimize][version] = "1.3"
 
-projects[imagecache_actions][version] = "1.8"
+projects[imagecache_actions][version] = "1.9"
 
 projects[imagecache_token][version] = "1.0-rc2"
 
@@ -165,7 +165,7 @@ projects[imce_rename][version] = "1.3"
 
 projects[imce_tools][version] = "1.2"
 
-projects[job_scheduler][version] = "2.0-alpha3"
+projects[job_scheduler][version] = "2.0"
 
 projects[jquery_update][version] = "2.7"
 
