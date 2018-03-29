@@ -11,7 +11,7 @@ projects[commerce_kickstart][type] = core
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-www.patch"
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-advagg.patch"
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-feedburner.patch"
-projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-111.patch"
+projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/2018-03-28/core-ignore_node_module-2482549-38.patch"
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-2289493-3-image_get_info-filesize-D7.patch"
 
 ; Patches against Commerce Kickstart core.
@@ -20,8 +20,8 @@ projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/dru
 ; Patches against Commerce Kickstart modules.
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
 projects[rules][patch][] = "https://www.drupal.org/files/issues/2406863_rules-7-x-2.10-configurable_rules_stampede_protection-126.patch"
-projects[token][patch][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
-projects[views][patch][] = "https://www.drupal.org/files/issues/2329259_views_remove_php_access.patch"
+projects[token][patch][] = "https://www.drupal.org/files/issues/token-filename_without_extension_2106979-20.patch"
+projects[views][patch][] = "https://www.drupal.org/files/issues/views-refine_import_php_permissions-2329259-10.patch"
 
 ; Drush make allows a default sub-directory for all contributed projects.
 defaults[projects][subdir] = contrib
