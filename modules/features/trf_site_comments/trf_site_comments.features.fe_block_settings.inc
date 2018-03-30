@@ -65,7 +65,7 @@ function trf_site_comments_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'trf',
-        'weight' => 50,
+        'weight' => -45,
       ),
       'trf_admin' => array(
         'region' => '',

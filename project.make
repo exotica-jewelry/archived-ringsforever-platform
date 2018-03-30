@@ -38,7 +38,7 @@ projects[auto_entitylabel][version] = "1.4"
 
 projects[autocomplete_deluxe][version] = "2.3"
 
-projects[backup_migrate][version] = "3.4"
+projects[backup_migrate][version] = "3.5"
 
 projects[block_class][version] = "2.3"
 
@@ -69,6 +69,8 @@ projects[commerce_reports][version] = "4.0-beta3"
 projects[commerce_responsive_ui][version] = "1.x-dev"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-fixes_cart_redirect_checkout-2641754_7.patch"
 projects[commerce_responsive_ui][patch][] = "https://www.drupal.org/files/issues/commerce_responsive_ui-remove_commas_from_classes-2687007-2.patch"
+
+projects[devel][version] = "1.5"
 
 projects[dialog][version] = "2.0-beta1"
 
@@ -117,7 +119,7 @@ projects[file_entity_inline][version] = "1.0-beta1"
 
 projects[filefield_paths][version] = "1.0"
 
-projects[filefield_sources][version] = "1.10"
+projects[filefield_sources][version] = "1.11"
 
 projects[fitvids][version] = "1.17"
 
@@ -213,6 +215,8 @@ projects[seo_checker][version] = "1.8"
 
 projects[seo_checklist][version] = "4.1"
 
+projects[stage_file_proxy] = "1.7"
+
 projects[stringoverrides][version] = "1.8"
 
 projects[table_element][version] = "1.0-beta5"
@@ -273,11 +277,11 @@ libraries[ckeditor_autogrow][download][type] = "file"
 libraries[ckeditor_autogrow][download][url] = "http://download.ckeditor.com/autogrow/releases/autogrow_4.5.11.zip"
 libraries[ckeditor_autogrow][destination] = "libraries"
 
-; libraries[elevatezoom][directory_name] = "elevatezoom"
-; libraries[elevatezoom][type] = "libraries"
-; libraries[elevatezoom][download][type] = "git"
-; libraries[elevatezoom][download][url] = "https://github.com/elevateweb/elevatezoom.git"
-; libraries[elevatezoom][destination] = "libraries"
+libraries[elevatezoom-plus][directory_name] = "elevatezoom-plus"
+libraries[elevatezoom-plus][type] = "libraries"
+libraries[elevatezoom-plus][download][type] = "git"
+libraries[elevatezoom-plus][download][url] = "https://github.com/igorlino/elevatezoom-plus.git"
+libraries[elevatezoom-plus][destination] = "libraries"
 
 libraries[fitvids][directory_name] = "fitvids"
 libraries[fitvids][type] = "libraries"
@@ -306,8 +310,9 @@ libraries[predis][download][type] = "file"
 libraries[predis][download][url] = "https://github.com/nrk/predis/archive/v1.1.1.tar.gz"
 libraries[predis][destination] = "libraries"
 
-libraries[YUI-CSS-compressor-PHP-port][directory_name] = "YUI-CSS-compressor-PHP-port"
-libraries[YUI-CSS-compressor-PHP-port][type] = "libraries"
-libraries[YUI-CSS-compressor-PHP-port][download][type] = "git"
-libraries[YUI-CSS-compressor-PHP-port][download][url] = "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git"
-libraries[YUI-CSS-compressor-PHP-port][destination] = "libraries"
+libraries[yui-css][directory_name] = "YUI-CSS-compressor-PHP-port"
+libraries[yui-css][type] = "libraries"
+libraries[yui-css][download][type] = "file"
+libraries[yui-css][download][url] = "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port/archive/master.zip"
+libraries[yui-css][destination] = "libraries"
+

@@ -62,10 +62,10 @@ function trf_site_settings_default_fe_block_settings() {
         'weight' => 0,
       ),
       'trf' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content',
+        'status' => 1,
         'theme' => 'trf',
-        'weight' => -47,
+        'weight' => -44,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -131,7 +131,7 @@ function trf_site_settings_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'trf',
-        'weight' => -55,
+        'weight' => -53,
       ),
       'trf_admin' => array(
         'region' => '',
@@ -164,7 +164,7 @@ function trf_site_settings_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'trf',
-        'weight' => -56,
+        'weight' => -54,
       ),
       'trf_admin' => array(
         'region' => '',

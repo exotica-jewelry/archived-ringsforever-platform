@@ -32,7 +32,7 @@ function trf_site_home_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'trf',
-        'weight' => -54,
+        'weight' => -51,
       ),
       'trf_admin' => array(
         'region' => '',
