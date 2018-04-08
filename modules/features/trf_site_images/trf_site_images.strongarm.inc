@@ -261,13 +261,6 @@ function trf_site_images_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'imageinfo_cache_use_httprl';
-  $strongarm->value = 1;
-  $export['imageinfo_cache_use_httprl'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'image_jpeg_quality';
   $strongarm->value = '75';
   $export['image_jpeg_quality'] = $strongarm;

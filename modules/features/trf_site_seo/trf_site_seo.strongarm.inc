@@ -179,7 +179,7 @@ function trf_site_seo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'linkchecker_check_library';
-  $strongarm->value = 'httprl';
+  $strongarm->value = 'core';
   $export['linkchecker_check_library'] = $strongarm;
 
   $strongarm = new stdClass();
