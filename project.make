@@ -42,7 +42,7 @@ projects[block_class][version] = "2.3"
 
 projects[blockify][version] = "1.2"
 
-projects[breakpoints][version] = "1.5"
+projects[breakpoints][version] = "1.6"
 
 projects[cer][version] = "3.0-beta1"
 
