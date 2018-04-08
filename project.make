@@ -42,11 +42,11 @@ projects[block_class][version] = "2.3"
 
 projects[blockify][version] = "1.2"
 
-projects[breakpoints][version] = "1.4"
+projects[breakpoints][version] = "1.5"
 
 projects[cer][version] = "3.0-beta1"
 
-projects[charts][version] = "2.0-rc1"
+projects[charts][version] = "2.0"
 
 projects[checklistapi][version] = "1.2"
 
@@ -82,13 +82,13 @@ projects[ds][version] = "2.14"
 
 projects[ds_extra_layouts][version] = "1.2"
 
-projects[elements][version] = "1.4"
+projects[elements][version] = "1.5"
 
 projects[entity_embed][version] = "2.0-alpha3"
 
 projects[entitycache][version] = "1.5"
 
-projects[entityqueue][version] = "1.3"
+projects[entityqueue][version] = "1.5"
 
 projects[environment_indicator][version] = "2.9"
 
@@ -111,7 +111,7 @@ projects[field_multiple_limit][version] = "1.0-alpha5"
 
 projects[field_validation][version] = "2.6"
 
-projects[file_entity][version] = "2.15"
+projects[file_entity][version] = "2.18"
 
 projects[file_entity_inline][version] = "1.0-beta1"
 
@@ -123,7 +123,7 @@ projects[fitvids][version] = "1.17"
 
 projects[ga_push][version] = "1.1"
 
-projects[globalredirect][version] = "1.5"
+projects[globalredirect][version] = "1.6"
 
 projects[google_analytics][version] = "2.4"
 
@@ -143,7 +143,7 @@ projects[image_resize_filter][version] = "1.16"
 
 projects[imageapi_optimize][version] = "1.3"
 
-projects[imagecache_actions][version] = "1.8"
+projects[imagecache_actions][version] = "1.9"
 
 projects[imagecache_token][version] = "1.0-rc2"
 
@@ -161,7 +161,7 @@ projects[imce_rename][version] = "1.3"
 
 projects[imce_tools][version] = "1.2"
 
-projects[job_scheduler][version] = "2.0-alpha3"
+projects[job_scheduler][version] = "2.0"
 
 projects[jquery_update][version] = "2.7"
 
@@ -177,7 +177,7 @@ projects[mailcontrol][version] = "1.0"
 
 projects[menu_trail_by_path][version] = "3.3"
 
-projects[metatag][version] = "1.22"
+projects[metatag][version] = "1.25"
 
 projects[migrate_d2d][version] = "2.1"
 
