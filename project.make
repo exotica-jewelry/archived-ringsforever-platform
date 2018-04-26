@@ -21,7 +21,6 @@ projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/dru
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
 projects[rules][patch][] = "https://www.drupal.org/files/issues/2406863_rules-7-x-2.10-configurable_rules_stampede_protection-126.patch"
 projects[token][patch][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
-projects[views][patch][] = "https://www.drupal.org/files/issues/2329259_views_remove_php_access.patch"
 
 ; Drush make allows a default sub-directory for all contributed projects.
 defaults[projects][subdir] = contrib
