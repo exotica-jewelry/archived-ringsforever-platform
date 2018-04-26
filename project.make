@@ -78,7 +78,7 @@ projects[disable_messages][version] = "1.1"
 
 projects[disqus][version] = "1.12"
 
-projects[ds][version] = "2.14"
+projects[ds][version] = "2.15"
 
 projects[ds_extra_layouts][version] = "1.2"
 
@@ -111,7 +111,7 @@ projects[field_multiple_limit][version] = "1.0-alpha5"
 
 projects[field_validation][version] = "2.6"
 
-projects[file_entity][version] = "2.18"
+projects[file_entity][version] = "2.20"
 
 projects[file_entity_inline][version] = "1.0-beta1"
 
