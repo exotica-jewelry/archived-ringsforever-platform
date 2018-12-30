@@ -6,12 +6,16 @@ projects[platform][version] = 1.4
 
 ; Use Commerce Kickstart as Drupal core.
 projects[commerce_kickstart][type] = core
+; We don't define the version of Commerce Kickstart, it just grabs the latest
+; version upon deployment. So if CK core needs an update, a deploy has to be
+; initiated through an empty git commit or a trivial change in this file.
+; Be sure to check that Drupal and CK patches still apply to new versions.
 
 ; Patches against Drupal core.
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-www.patch"
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-advagg.patch"
 projects[commerce_kickstart][patch][] = "patches/drupal_htaccess-feedburner.patch"
-projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-111.patch"
+projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/ignore_node_module-2482549-27_0.patch"
 projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/drupal-2289493-3-image_get_info-filesize-D7.patch"
 
 ; Patches against Commerce Kickstart core.
@@ -20,7 +24,7 @@ projects[commerce_kickstart][patch][] = "https://www.drupal.org/files/issues/dru
 ; Patches against Commerce Kickstart modules.
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_cart_summary_translation_more_kittehs_1477758_10.patch"
 projects[rules][patch][] = "https://www.drupal.org/files/issues/2406863_rules-7-x-2.10-configurable_rules_stampede_protection-126.patch"
-projects[token][patch][] = "https://www.drupal.org/files/issues/token_filename-without-extension_2106979-12.patch"
+projects[token][patch][] = "https://www.drupal.org/files/issues/token-filename_without_extension_2106979-20.patch"
 
 ; Drush make allows a default sub-directory for all contributed projects.
 defaults[projects][subdir] = contrib
